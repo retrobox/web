@@ -1,0 +1,28 @@
+{
+  "login": "Connexion",
+  "register": "Inscription",
+  "home": "Acceuil",
+  "docs": "Documentation",
+  "community": "Communauté",
+  "buy": "Acheter",
+  "twitter": "Notre compte twitter",
+  "facebook": "Notre page facebook",
+  "github": "Notre organisation github",
+  "discord": "Notre serveur discord",
+  "landing": {
+    "title": "Le retro, pour tous",
+    "sub_title": "Avec retrobox, jouez à vos jeux rétro préférés de façon simple et accessible",
+    "go": "En savoir plus"
+  },
+  "not-found": {
+    "title": "Page non trouvé",
+    "description": "Vous êtes tombé sur la mauvaise page, car elle n'existe pas ou elle a été supprimé."
+  },
+  "about": "A propos",
+  "blog": "Notre blog",
+  "terms-of-use": "Conditions d'utilisations",
+  "get-help": "Obtenir de l'aide",
+  "status": "Status des services",
+  "developers": "Développeurs",
+  "legals": "Mentions légales"
+}

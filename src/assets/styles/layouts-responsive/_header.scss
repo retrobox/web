@@ -1,0 +1,18 @@
+.header-container {
+  .header-content {
+    .header-title-container {
+      margin-left: 0.5em;
+    }
+    .header-nav-container {
+      display: none;
+    }
+  }
+  .header-breadcrum {
+    .container {
+      justify-content: flex-end;
+    }
+    .breadcrum-location {
+      display: none;
+    }
+  }
+}

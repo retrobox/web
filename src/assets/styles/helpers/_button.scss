@@ -1,0 +1,13 @@
+.button {
+  align-items: center;
+  transition: 0.2s background-color;
+
+  .icon {
+    margin-right: 5px;
+    position: relative;
+    top: 0.5px;
+  }
+}
+.button:hover {
+  transition: 0.2s background-color;
+}

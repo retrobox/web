@@ -1,0 +1,12 @@
+.article {
+  flex-wrap: wrap;
+  justify-content: center;
+  .docs-nav {
+    margin-left: 20px;
+    width: 100%;
+    margin-bottom: 2em;
+    nav .nav-item {
+      width: 100%;
+    }
+  }
+}
