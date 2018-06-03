@@ -33,6 +33,18 @@
     .footer-socials {
       margin-top: 2em;
     }
+    .footer-inline-links {
+      ul {
+        margin-left: 0;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        li {
+          margin-bottom: 1em;
+        }
+      }
+    }
   }
 
 }

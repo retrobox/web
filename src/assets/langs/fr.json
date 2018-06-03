@@ -24,7 +24,41 @@
   "landing": {
     "title": "Le retro, pour tous",
     "sub_title": "Avec retrobox, jouez à vos jeux rétro préférés de façon simple et accessible",
-    "go": "En savoir plus"
+    "go": "En savoir plus",
+    "about": {
+      "title": "La console retro, facile",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor ehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    "advantages": {
+      "title":"Plein d'advantages...",
+      "library": {
+        "title": "Une bibliothèque exeptionnelle",
+        "description": "Plus de 25,000 jeux en libre accès disponible gratuitement, découvrez plus de 25,000 jeux installable en quelques cliques grâce à notre bibliothèque"
+      },
+      "easy": {
+        "title": "Une console sans prise de tête",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."
+      },
+      "connected": {
+        "title": "Une console connectée",
+        "description": "Une console connectée, visionnez l’état de votre console à distance et contrôlez la dans les moindres détails (même depuis votre smartphone)"
+      },
+      "flexible": {
+        "title": "Flexible",
+        "description": "Un maximum de possibilité, poussez plus loin le principe de la console portable, branchez la à votre TV et jouez sans problème dans votre canapé"
+      }
+    },
+    "start_now": {
+      "title": "Commence dès maintenant",
+      "kited": {
+        "title": "Version kité",
+        "description": "Tu aime l'électronique, monte ta propre console grâce à cette version et personalise là !"
+      },
+      "non_kited": {
+        "title": "Version préfaite",
+        "description": "Commence l'aventure directement, sans te soucier du coté technique !"
+      }
+    }
   },
   "not-found": {
     "title": "Page non trouvé",

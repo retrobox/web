@@ -16,3 +16,16 @@
 .landing-main .landing-main-content {
   width: 90%;
 }
+
+.landing-columns {
+  .landing-column {
+
+    .landing-column-icon {
+      padding-right: 0;
+    }
+
+    .landing-column-content {
+      margin-right: 0;
+    }
+  }
+}
