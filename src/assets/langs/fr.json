@@ -5,10 +5,22 @@
   "docs": "Documentation",
   "community": "Communauté",
   "buy": "Acheter",
-  "twitter": "Notre compte twitter",
-  "facebook": "Notre page facebook",
-  "github": "Notre organisation github",
-  "discord": "Notre serveur discord",
+  "twitter": {
+    "title": "Notre compte twitter",
+    "link": "http://twitter.com"
+  },
+  "facebook": {
+    "title": "Notre page facebook",
+    "link": "http://facebook.com"
+  },
+  "github": {
+    "title": "Notre organisation github",
+    "link": "http://github.com"
+  },
+  "discord": {
+    "title": "Notre serveur discord",
+    "link": "http://discordapp.com"
+  },
   "landing": {
     "title": "Le retro, pour tous",
     "sub_title": "Avec retrobox, jouez à vos jeux rétro préférés de façon simple et accessible",

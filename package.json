@@ -1,7 +1,7 @@
 {
   "name": "thingmill.retrobox.web",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": " retrobox.tech web site, made with VueJs ",
   "author": "Le_Futuriste <spamfree@matthieubessat.fr>",
   "private": true,
   "scripts": {

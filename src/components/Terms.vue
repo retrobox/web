@@ -2,7 +2,7 @@
   <div>
     <div class="cover-title">
       <div class="cover-title-content container mx-auto">
-        <h1>{{$t('legals')}}</h1>
+        <h1>{{$t('terms-of-use')}}</h1>
       </div>
     </div>
     <div class="container mx-auto">
@@ -15,16 +15,16 @@
 </template>
 
 <script>
-const about = require('../assets/content/legals.md')
+const terms = require('../assets/content/terms.md')
 export default {
-  name: 'Legals',
+  name: 'Terms',
   data () {
     return {
       content: ""
     }
   },
   created () {
-    this.content = about
+    this.content = terms
   }
 }
 </script>

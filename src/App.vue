@@ -29,8 +29,8 @@
           <div class="container mx-auto header-content">
             <div class="header-title-container">
               <a @click="$router.push({name: 'Home'})">
-                    <img src="./assets/img/nav.png" class="header-title-logo">
-                  </a>
+                <img src="./assets/img/nav.png" class="header-title-logo">
+              </a>
             </div>
             <nav class="header-nav-container">
               <div class="nav-item with-link">
@@ -62,28 +62,7 @@
               </ul>
             </div>
             <div class="breadcrum-socials">
-              <ul>                
-                  <li>
-                    <a href="#" :title="$t('facebook')">
-                      <i class="fab fa-facebook-square icon"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" :title="$t('twitter')">
-                      <i class="fab fa-twitter-square icon"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" :title="$t('github')">
-                      <i class="fab fa-github icon"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" :title="$t('discord')">
-                      <i class="fab fa-discord icon"></i>
-                    </a>
-                  </li>
-              </ul>
+              <socials />
             </div>
           </div>
         </div>
@@ -94,93 +73,7 @@
         </scale-transition>
         <section class="landing-section landing-bottom"></section>
       </div>
-      <div class="footer-container">
-        <div class="colored-divider-container">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <div class="flex footer-content container mx-auto">
-          <div class="w-1/3">
-            <div class="footer-logo">
-              <img src="./assets/img/footer.png">
-            </div>
-          </div>
-          <div class="w-1/3">
-            <div class="footer-links">
-              <ul>
-                <li>
-                  <a href="#">{{$t('about')}}</a>
-                </li>
-
-                <li>
-                  <a href="#">{{$t('blog')}}</a>
-                </li>
-
-                <li>
-                  <a href="#">{{$t('terms-of-use')}}</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="w-1/3">
-            <div class="footer-links">
-              <ul>
-                <li>
-                  <a href="#">{{$t('get-help')}}</a>
-                </li>
-
-                <li>
-                  <a href="#">{{$t('status')}}</a>
-                </li>
-
-                <li>
-                  <a href="#">{{$t('developers')}}</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="footer-content-bottom">
-          <div class="container mx-auto">
-
-            <div class="footer-inline-links">
-              <ul>
-                <li class="copyright"><a href="#">© Copyright 2018 Thingmill</a></li>
-                <li><a @click="$router.push({name: 'Legals'})">{{$t('legals')}}</a></li>
-              </ul>
-            </div>
-            <div class="footer-socials">
-              <ul>
-                <li>
-                  <a href="#" :title="$t('facebook')">
-                    <i class="fab fa-facebook-square icon"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" :title="$t('twitter')">
-                    <i class="fab fa-twitter-square icon"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" :title="$t('github')">
-                    <i class="fab fa-github icon"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" :title="$t('discord')">
-                    <i class="fab fa-discord icon"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+      <footer-container />
     </div>
   </fade-transition>
 
@@ -188,8 +81,14 @@
 </template>
 
 <script>
+import Socials from "./components/Socials.vue"
+import Footer from "./components/Footer-container.vue"
 export default {
   name: 'App',
+  components: {
+    "socials": Socials,
+    "footer-container": Footer,
+  },
   data() {
     return {
       show: false
