@@ -33,8 +33,8 @@ export default {
       color: #2c3e50;
       opacity: 0.8;
         display: grid;
-        grid-template-columns: 20% 80%;
-        grid-column-gap: 0.5em;
+        grid-template-columns: 20% 75%;
+        grid-column-gap: 4%;
 
         .not-found-icon {
             display: flex;

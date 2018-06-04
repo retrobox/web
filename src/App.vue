@@ -1,6 +1,5 @@
-<template>
-    <div id="app">
-
+<template xmlns:v-bind="http://www.w3.org/1999/xhtml">
+    <div id="app" v-bind:class="{'no-scroll': $store.state.nav_toggled}">
         <fade-transition v-show="show">
             <div>
                 <header-container/>
@@ -13,19 +12,18 @@
                 <footer-container/>
             </div>
         </fade-transition>
-
     </div>
 </template>
 
 <script>
-    //import Socials from "./components/Socials.vue"
     import Footer from "./components/Footer-container.vue"
     import Header from "./components/Header-container.vue"
+    import Vue from 'vue'
     export default {
         name: 'App',
         components: {
             "footer-container": Footer,
-            "header-container": Header,
+            "header-container": Header
         },
         data() {
             return {
@@ -33,6 +31,8 @@
             }
         },
         created() {
+            Vue.config.lang = this.$cookie.get('locale') || 'en'
+            this.$i18n.locale = Vue.config.lang
             setTimeout(() => {
                 this.show = true
             }, 400)

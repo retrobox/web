@@ -30,5 +30,9 @@ export default new Router({
             name: 'NotFound',
             component: NotFound
         }
-    ]
+    ],
+    scrollBehavior(to, from, savedPosition)
+    {
+        return { x: 0, y: 0 }
+    }
 })

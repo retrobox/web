@@ -14,6 +14,8 @@ $landing-main-section-opacity: 0.6;
   align-items: center;
 
   .landing-main-content {
+    position: relative;
+    top: -1em;
     color: white;
     text-align: center;
     .landing-main-title {

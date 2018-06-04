@@ -1,36 +1,36 @@
 {
-  "actual_lang": "Français",
-  "french": "Français",
-  "french_flag": "Drapeau français",
-  "english": "Anglais",
-  "english_flag": "Drapeau anglais",
-  "login": "Connexion",
-  "register": "Inscription",
-  "home": "Acceuil",
+  "actual_lang": "English",
+  "french": "French",
+  "french_flag": "French flag",
+  "english": "English",
+  "english_flag": "English flag",
+  "login": "Login",
+  "register": "Register",
+  "home": "Home",
   "docs": "Documentation",
-  "community": "Communauté",
-  "buy": "Acheter",
-  "close": "Fermer",
+  "community": "Community",
+  "buy": "Buy",
+  "close": "Close",
   "twitter": {
-    "title": "Notre compte twitter",
+    "title": "Our twitter account",
     "link": "http://twitter.com"
   },
   "facebook": {
-    "title": "Notre page facebook",
+    "title": "Our facebook page",
     "link": "http://facebook.com"
   },
   "github": {
-    "title": "Notre organisation github",
+    "title": "Our github organisation",
     "link": "http://github.com"
   },
   "discord": {
-    "title": "Notre serveur discord",
+    "title": "Our discord guild",
     "link": "http://discordapp.com"
   },
   "landing": {
-    "title": "Le retro, pour tous",
-    "sub_title": "Avec retrobox, jouez à vos jeux rétro préférés de façon simple et accessible",
-    "go": "En savoir plus",
+    "title": "The retro, for everyone",
+    "sub_title": "Avac ratrebex, jeuaz à ves jaux rètre prèfèrès da façen simpra at accassibra",
+    "go": "More",
     "about": {
       "title": "La console retro, facile",
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor ehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."

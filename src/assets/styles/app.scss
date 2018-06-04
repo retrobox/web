@@ -14,6 +14,9 @@
 @import "layouts/_footer.scss";
 @import "layouts/_header.scss";
 @import "layouts/_landing.scss";
+@import "layouts/_locales-selector.scss";
+@import "layouts/_socials.scss";
+@import "layouts/_mobile-nav.scss";
 
 @media (max-width: 700px) {
   @import 'layouts-responsive/_article.scss';
@@ -21,4 +24,5 @@
   @import 'layouts-responsive/_footer.scss';
   @import 'layouts-responsive/_header.scss';
   @import 'layouts-responsive/_landing.scss';
+  @import 'layouts-responsive/_locales-selector.scss';
 }

@@ -11,7 +11,7 @@
         <div class="flex footer-content container mx-auto">
             <div class="w-1/3">
                 <div class="footer-logo">
-                    <img src="../assets/img/footer.png">
+                    <a><img src="../assets/img/footer.png" @click="$router.push({name: 'Home'})" /></a>
                 </div>
             </div>
             <div class="w-1/3">

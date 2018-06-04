@@ -1,10 +1,19 @@
 .header-container {
+  .locale_selection {
+    padding-left: 0.5em;
+  }
+  .desktop {
+    display: none !important;
+  }
+  .mobile {
+    display: flex !important;
+  }
   .header-content {
     .header-title-container {
       margin-left: 0.5em;
     }
     .header-nav-container {
-      display: none;
+      margin-right: 0.8em;
     }
   }
   .header-breadcrum {
@@ -13,6 +22,30 @@
     }
     .breadcrum-location {
       display: none;
+    }
+  }
+  .header-top {
+    .header-top-content {
+      .account {
+        padding-right: 0.8em;
+        a {
+          .icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 0;
+
+          }
+        }
+        a:first-of-type {
+          padding-right: 1em;
+        }
+        a:last-of-type{
+          padding-left: 1em;
+        }
+        .text {
+          display: none;
+        }
+      }
     }
   }
 }
