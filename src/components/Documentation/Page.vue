@@ -8,7 +8,7 @@
       <div v-if="loading == false">
         <div class="cover-title">
           <div class="cover-title-content container mx-auto">
-            <h1>{{$t('docs')}}</h1>
+            <h1>{{title}}</h1>
           </div>
         </div>
         <div class="container mx-auto">
@@ -40,24 +40,40 @@
             return {
               content: "",
               loading: true,
+              title: "",
               items: []
             }
         },
-        created () {
-          this.$store.commit('SET_TITLE', {context: this, key:'docs'})
-          const marked = require("marked");
-          axios.get("https://docs.retrobox.tech/config.json").then((response) => {
-              var locale = response.data.locales.filter((item) => {
-                return item.slug == this.$i18n.locale
-              })[0]
+        methods: {
+          fetchData() {
+            this.loading = true
+            this.$store.commit('SET_TITLE', {context: this, key:'docs'})
+            const marked = require("marked");
+            axios.get("https://docs.retrobox.tech/config.json").then((response) => {
+                var locale = response.data.locales.filter((item) => {
+                  return item.slug == this.$i18n.locale
+                })[0]
 
-              this.items = locale.tree
-              var slug = locale.home.slug
-              axios.get("https://docs.retrobox.tech/content/" + this.$i18n.locale + "/" + slug + ".md").then((response) => {
-                this.content = marked(response.data)
-                this.loading = false
-              })
-          })
+                this.title = locale.tree.filter((item) => {
+                  return item.slug == this.$route.params.slug
+                })[0].name
+                this.$store.commit('SET_TITLE', this.title)
+                this.items = locale.tree
+                axios.get("https://docs.retrobox.tech/content/" + this.$i18n.locale + "/" + this.$route.params.slug + ".md").then((response) => {
+                  this.content = marked(response.data)
+                  this.loading = false
+                })
+
+            })
+          }
+        },
+        watch: {
+          '$route' (to, from) {
+              this.fetchData()
+          }
+        },
+        created () {
+          this.fetchData()
         }
     }
 </script>
