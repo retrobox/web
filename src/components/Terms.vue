@@ -15,7 +15,6 @@
 </template>
 
 <script>
-const terms = require('../assets/content/terms.md')
 export default {
   name: 'Terms',
   data () {
@@ -24,6 +23,7 @@ export default {
     }
   },
   created () {
+    const terms = require('../assets/content/' + this.$i18n.locale + '/terms.md')
     this.content = terms
   }
 }

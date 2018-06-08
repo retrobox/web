@@ -11,6 +11,19 @@
   "community": "Community",
   "buy": "Buy",
   "close": "Close",
+  "newsletter": {
+    "title": "Recevez notre newsletter",
+    "description": "Inscrivez vous pour recevoir les dernières informations...",
+    "form": {
+      "submit": "Valider",
+      "email": "Votre email",
+      "email_error": "Ce que vous avez rentré ne corespond pas à un email",
+      "email_placeholder": "john@example.com"
+    }
+  },
+  "breadcrumb": {
+    "title": "You are here"
+  },
   "twitter": {
     "title": "Our twitter account",
     "link": "http://twitter.com"

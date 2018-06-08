@@ -35,7 +35,7 @@
         <section class="landing-section landing-advantages">
             <div class="landing-advantages-content">
                 <h2 class="landing-advantages-title">
-                    Plein d'advantages...
+                    {{$t('landing.advantages.title')}}
                 </h2>
                 <div class="landing-columns">
                     <div class="landing-column">
@@ -46,10 +46,9 @@
                         </div>
                         <div class="landing-column-content max-w-sm rounded overflow-hidden shadow-lg">
                             <div class="px-6 py-4">
-                                <div class="font-bold text-xl mb-2 title">Une bibliothèque exeptionnelle</div>
+                                <div class="font-bold text-xl mb-2 title">{{$t('landing.advantages.library.title')}}</div>
                                 <p class="text-grey-darker text-base">
-                                    Plus de 25,000 jeux en libre accès disponible gratuitement, découvrez plus de 25,000
-                                    jeux installable en quelques cliques grâce à notre bibliothèque
+                                    {{$t('landing.advantages.library.description')}}
                                 </p>
                             </div>
                         </div>
@@ -177,6 +176,9 @@
         name: 'Home',
         data () {
             return {}
+        },
+        created () {
+          this.$store.commit('SET_TITLE', this.$t('home'))
         }
     }
 </script>

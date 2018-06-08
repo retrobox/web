@@ -15,7 +15,6 @@
 </template>
 
 <script>
-const about = require('../assets/content/legals.md')
 export default {
   name: 'Legals',
   data () {
@@ -24,6 +23,7 @@ export default {
     }
   },
   created () {
+    const about = require('../assets/content/' + this.$i18n.locale + '/terms.md')
     this.content = about
   }
 }

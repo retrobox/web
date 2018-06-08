@@ -127,18 +127,18 @@
                 </nav>
             </div>
         </div>
-        <div class="header-breadcrum">
+        <div class="header-breadcrumb">
             <div class="container mx-auto">
 
-                <div class="breadcrum-location">
-                    Vous êtes ici :
+                <div class="breadcrumb-location">
+                    {{$t('breadcrumb.title')}}
                     <ul>
                         <li class="item">Home</li>
                         <li class="divider">></li>
                         <li class="item">My page</li>
                     </ul>
                 </div>
-                <div class="breadcrum-socials">
+                <div class="breadcrumb-socials">
                     <socials/>
                 </div>
             </div>
