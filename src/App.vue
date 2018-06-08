@@ -35,6 +35,10 @@
                var brower_locale = navigator.languages[0]
             else
                var brower_locale = navigator.language
+
+            if (brower_locale == undefined) {
+              brower_locale = "en"
+            }
             Vue.config.lang = this.$cookie.get('locale') || brower_locale
             this.$i18n.locale = Vue.config.lang
             setTimeout(() => {

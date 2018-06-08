@@ -8,9 +8,15 @@
   "register": "Register",
   "home": "Home",
   "docs": "Documentation",
-  "community": "Community",
   "buy": "Buy",
   "close": "Close",
+  "community": {
+    "title": "Community",
+    "page": {
+      "title": "Rejoignez notre communauté",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut!"
+    }
+  },
   "newsletter": {
     "title": "Recevez notre newsletter",
     "description": "Inscrivez vous pour recevoir les dernières informations...",

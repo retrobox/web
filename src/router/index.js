@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import Home from '@/components/Home'
 import Legals from '@/components/Legals'
 import Terms from '@/components/Terms'
+import Community from '@/components/Community'
+import DocumentationHome from '@/components/Documentation/Home'
 import NotFound from '@/components/NotFound'
 
 Vue.use(Router)
@@ -24,6 +26,16 @@ export default new Router({
             path: '/terms',
             name: 'Terms',
             component: Terms
+        },
+        {
+            path: '/community',
+            name: 'Community',
+            component: Community
+        },
+        {
+            path: '/docs',
+            name: 'DocumentationHome',
+            component: DocumentationHome
         },
         {
             path: '*',

@@ -6,11 +6,13 @@ Vue.use(Vuex)
 export const store = new Vuex.Store({
     state: {
         nav_toggled: false,
-        title: ""
+        title: "",
+        title_context: {}
     },
     mutations: {
         SET_TITLE (state, payload) {
-          state.title = payload + " - Retrobox"
+          state.title = payload.context.$t(payload.key) + " - Retrobox"
+          state.title_context = payload
           document.title = state.title
         },
         TOGGLE_NAV (state) {

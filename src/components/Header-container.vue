@@ -15,19 +15,13 @@
                     <div class="mobile-nav-nav">
                         <ul>
                             <li>
-                                <a href="#">
-                                    {{$t('home')}}
-                                </a>
+                                <a @click="$router.push({name: 'Home'}); $store.commit('TOGGLE_NAV')" href="#">{{$t('home')}}</a>
                             </li>
                             <li>
-                                <a href="#">
-                                    {{$t('docs')}}
-                                </a>
+                                <a @click="$router.push({name: 'DocumentationHome'}); $store.commit('TOGGLE_NAV')" href="#">{{$t('docs')}}</a>
                             </li>
                             <li>
-                                <a href="#">
-                                    {{$t('community')}}
-                                </a>
+                                <a @click="$router.push({name: 'Community'}); $store.commit('TOGGLE_NAV')" href="">{{$t('community.title')}}</a>
                             </li>
                             <li>
                                 <a href="#">
@@ -109,13 +103,13 @@
                 </div>
                 <nav class="header-nav-container desktop">
                     <div class="nav-item with-link">
-                        <a href="#">{{$t('home')}}</a>
+                        <a @click="$router.push({name: 'Home'})" href="#">{{$t('home')}}</a>
                     </div>
                     <div class="nav-item with-link">
-                        <a href="">{{$t('docs')}}</a>
+                        <a @click="$router.push({name: 'DocumentationHome'})" href="#">{{$t('docs')}}</a>
                     </div>
                     <div class="nav-item with-link">
-                        <a href="">{{$t('community')}}</a>
+                        <a @click="$router.push({name: 'Community'})" href="">{{$t('community.title')}}</a>
                     </div>
                     <div class="nav-item with-button">
                         <a href="#"
@@ -128,9 +122,8 @@
             </div>
         </div>
         <div class="header-breadcrumb">
-            <div class="container mx-auto">
-
-                <div class="breadcrumb-location">
+            <div class="container mx-auto header-breadcrumb-flex">
+                <div class="breadcrumb-location desktop">
                     {{$t('breadcrumb.title')}}
                     <ul>
                         <li class="item">Home</li>
@@ -165,6 +158,7 @@
                 this.$cookie.set('locale', locale)
                 this.$i18n.locale = Vue.config.lang
                 this.$modal.hide('locale_selection')
+                this.$store.commit('SET_TITLE', this.$store.state.title_context)
             }
         },
         data() {

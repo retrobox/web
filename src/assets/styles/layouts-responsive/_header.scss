@@ -16,12 +16,9 @@
       margin-right: 0.8em;
     }
   }
-  .header-breadcrum {
-    .container {
-      justify-content: flex-end;
-    }
-    .breadcrum-location {
-      display: none;
+  .header-breadcrumb {
+    .header-breadcrumb-flex {
+        justify-content: flex-end;
     }
   }
   .header-top {

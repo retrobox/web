@@ -178,7 +178,7 @@
             return {}
         },
         created () {
-          this.$store.commit('SET_TITLE', this.$t('home'))
+          this.$store.commit('SET_TITLE',{context: this, key:'home'})
         }
     }
 </script>

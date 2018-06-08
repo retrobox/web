@@ -19,6 +19,7 @@
 @import "layouts/_mobile-nav.scss";
 @import "layouts/_not-found.scss";
 @import "layouts/_newsletter.scss";
+@import "layouts/_community.scss";
 
 @media (max-width: 700px) {
   @import 'layouts-responsive/_article.scss';
@@ -27,4 +28,5 @@
   @import 'layouts-responsive/_header.scss';
   @import 'layouts-responsive/_landing.scss';
   @import 'layouts-responsive/_locales-selector.scss';
+  @import "layouts-responsive/_community.scss";
 }
