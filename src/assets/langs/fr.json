@@ -8,7 +8,13 @@
   "register": "Inscription",
   "home": "Acceuil",
   "docs": "Documentation",
-  "community": "Communauté",
+  "community": {
+    "title": "Communauté",
+    "page": {
+      "title": "Rejoignez notre communauté",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut!"
+    }
+  },
   "buy": "Acheter",
   "close": "Fermer",
   "breadcrumb": {

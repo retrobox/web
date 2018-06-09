@@ -13,13 +13,17 @@
         </div>
         <div class="container mx-auto">
           <div class="article">
-             <div class="docs-nav">
+            <div class="docs-nav">
               <nav>
                 <div class="nav-item">
-                  <a href="#" @click="$router.push({name: 'DocumentationHome'});">{{$t('home')}}</a>
+                  <a href="#" @click="$router.push({name: 'DocumentationHome'})">
+                    {{$t('home')}}
+                  </a>
                 </div>
-                <div class="nav-item" v-for="item in items">
-                  <a href="#" @click="$router.push({name: 'DocumentationPage', params: {slug: item.slug}});">{{item.name}}</a>
+                <div v-for="item in items" v-bind:class="{'active': item.slug == $route.params.slug, 'nav-item': true}">
+                  <a href="#" @click="$router.push({name: 'DocumentationPage', params: {slug: item.slug}})">
+                    {{item.name}}
+                  </a>
                 </div>
               </nav>
             </div>
@@ -62,6 +66,7 @@
                 axios.get("https://docs.retrobox.tech/content/" + this.$i18n.locale + "/" + this.$route.params.slug + ".md").then((response) => {
                   this.content = marked(response.data)
                   this.loading = false
+                  console.log('done');
                 })
 
             })

@@ -22,7 +22,8 @@ export default {
       content: ""
     }
   },
-  created () {
+  created () {  
+    this.$store.commit('SET_TITLE', {context: this, key:'terms'})
     const terms = require('../assets/content/' + this.$i18n.locale + '/terms.md')
     this.content = terms
   }

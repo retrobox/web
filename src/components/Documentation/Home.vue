@@ -15,7 +15,7 @@
           <div class="article">
              <div class="docs-nav">
               <nav>
-                <div class="nav-item">
+                <div class="nav-item active">
                   <a href="#" @click="$router.push({name: 'DocumentationHome'});">{{$t('home')}}</a>
                 </div>
                 <div class="nav-item" v-for="item in items">

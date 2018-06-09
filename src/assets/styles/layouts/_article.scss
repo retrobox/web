@@ -8,18 +8,24 @@
     nav {
       display: flex;
       flex-direction: column;
+      .active {
+        a {
+          color: #3498db;
+          font-weight: bold;
+        }
+      }
       .nav-item {
         padding: 15px;
         width: 15em;
         border-bottom: 1px solid rgba(128, 128, 128, 0.5);
         a {
-          color: #2779bd;
+          color: #2980b9;
           text-decoration: none;
           transition: color 0.1s ease-in-out;
         }
         a:hover {
-          color: #2980b9;
-          transition: color 0.1s ease-in-out;
+          color: #3498db;
+          transition: color  0.1s ease-in-out;
         }
         .sub-nav {
           margin-top: 8px;
@@ -55,6 +61,7 @@
     h4,
     h5 {
       font-weight: bold;
+      line-height: 1.8em;
     }
     h1,
     h2 {

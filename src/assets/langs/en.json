@@ -1,4 +1,4 @@
-{
+  {
   "actual_lang": "English",
   "french": "French",
   "french_flag": "French flag",
@@ -95,5 +95,5 @@
   "get-help": "Obtenir de l'aide",
   "status": "Status des services",
   "developers": "Développeurs",
-  "legals": "Mentions légales"
+  "legals": "Legals"
 }

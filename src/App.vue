@@ -1,4 +1,4 @@
-<template xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<template>
     <div id="app" v-bind:class="{'no-scroll': $store.state.nav_toggled}">
         <fade-transition v-show="show">
             <div>
@@ -31,15 +31,21 @@
             }
         },
         created() {
-            if (navigator.languages != undefined)
-               var brower_locale = navigator.languages[0]
-            else
-               var brower_locale = navigator.language
-
-            if (brower_locale == undefined) {
-              brower_locale = "en"
+            if (this.$cookie.get('locale') == null) {
+              if (navigator.languages != undefined){
+                 var brower_locale = navigator.languages[0]
+              }
+              else{
+                 var brower_locale = navigator.language
+              }
+              Vue.config.lang = brower_locale.substring(0, 2)
+              if (brower_locale == undefined) {
+                brower_locale = 'en'
+              }
+            }else {
+              Vue.config.lang = this.$cookie.get('locale')
             }
-            Vue.config.lang = this.$cookie.get('locale') || brower_locale
+
             this.$i18n.locale = Vue.config.lang
             setTimeout(() => {
                 this.show = true

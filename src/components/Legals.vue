@@ -22,8 +22,9 @@ export default {
       content: ""
     }
   },
-  created () {
-    const about = require('../assets/content/' + this.$i18n.locale + '/terms.md')
+  created () {  
+    this.$store.commit('SET_TITLE', {context: this, key:'legals'})
+    const about = require('../assets/content/' + this.$i18n.locale + '/legals.md')
     this.content = about
   }
 }
