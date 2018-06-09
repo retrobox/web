@@ -5,6 +5,7 @@ import Legals from '@/components/Legals'
 import Terms from '@/components/Terms'
 import Community from '@/components/Community'
 import DocumentationHome from '@/components/Documentation/Home'
+import DocumentationPage from '@/components/Documentation/Page'
 import NotFound from '@/components/NotFound'
 
 Vue.use(Router)
@@ -36,6 +37,11 @@ export default new Router({
             path: '/docs',
             name: 'DocumentationHome',
             component: DocumentationHome
+        },
+        {
+            path: '/docs/:slug',
+            name: 'DocumentationPage',
+            component: DocumentationPage
         },
         {
             path: '*',
