@@ -10,6 +10,14 @@
   "docs": "Documentation",
   "previous": "Précédent",
   "next": "Suivant",
+  "partnership": {
+    "dyjixeu": {
+      "title": "En partenaria avec Dyjix.eu"
+    },
+    "creative-commons": {
+      "title": "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License."
+    }
+  },
   "community": {
     "title": "Communauté",
     "page": {

@@ -16,12 +16,12 @@
             <div class="docs-nav">
               <nav>
                 <div class="nav-item">
-                  <a href="#" @click="$router.push({name: 'DocumentationHome'})">
+                  <a @click="$router.push({name: 'DocumentationHome'})">
                     {{$t('home')}}
                   </a>
                 </div>
                 <div v-for="item in items" v-bind:class="{'active': item.slug == $route.params.slug, 'nav-item': true}">
-                  <a href="#" @click="$router.push({name: 'DocumentationPage', params: {slug: item.slug}})">
+                  <a @click="$router.push({name: 'DocumentationPage', params: {slug: item.slug}})">
                     {{item.name}}
                   </a>
                 </div>
