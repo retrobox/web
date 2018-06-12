@@ -7,7 +7,7 @@
                     {{$t('partnership.dyjixeu.title')}}
                 </div>
                 <div class="partnership-dyjixeu-image">
-                    <img src="http://imageshack.com/a/img921/4936/btfy2l.png" alt="Logo Dyjix.eu">
+                    <img src="../assets/img/dyjixeu.png" alt="Logo Dyjix.eu">
                 </div>
             </a>
 
@@ -16,7 +16,7 @@
                     {{$t('partnership.creative-commons.title')}}
                 </div>
                 <div class="partnership-creative-commons-image">
-                    <img src="https://camo.githubusercontent.com/60543937b5e790e3bca35357ccc1313f4b5f52b3/68747470733a2f2f692e6372656174697665636f6d6d6f6e732e6f72672f6c2f62792d6e632d73612f332e302f38387833312e706e67" alt="Logo Creative Commons">
+                    <img src="../assets/img/creative-commons.png" alt="Logo Creative Commons">
                 </div>
             </a>
         </div>

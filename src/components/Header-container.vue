@@ -3,12 +3,11 @@
         <!-- NAV MOBILE -->
         <scale-transition>
             <div class="mobile-nav-container" v-if="$store.state.nav_toggled">
-
                 <div class="mobile-nav-content">
-
                     <div class="mobile-nav-close">
-                        <div @click="$store.commit('TOGGLE_NAV')" class="button hover:bg-grey-darker font-bold py-3 px-5 cancel-button">
-                            <icon name="times" class="icon" />
+                        <div @click="$store.commit('TOGGLE_NAV')"
+                             class="button hover:bg-grey-darker font-bold py-3 px-5 cancel-button">
+                            <icon name="times" class="icon"/>
                             <span>{{$t('close')}}</span>
                         </div>
                     </div>
@@ -30,9 +29,7 @@
                             </li>
                         </ul>
                     </div>
-
                 </div>
-
             </div>
         </scale-transition>
         <!-- MODAL FOR LOCALE SELECTION -->
@@ -57,7 +54,8 @@
                     </div>
                 </div>
             </div>
-            <div class="button bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 cancel-button" @click="$modal.hide('locale_selection')">
+            <div class="button bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 cancel-button"
+                 @click="$modal.hide('locale_selection')">
                 Fermer
             </div>
         </modal>
@@ -97,7 +95,8 @@
                 </div>
                 <div class="header-nav-container mobile">
                     <button href="#"
-                       class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded button nav-toggle" @click="$store.commit('TOGGLE_NAV')">
+                            class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded button nav-toggle"
+                            @click="$store.commit('TOGGLE_NAV')">
                         <icon name="bars" class="icon"></icon>
                     </button>
                 </div>
@@ -128,7 +127,9 @@
                     <ul>
                         <li class="item">{{$store.state.location.root}}</li>
                         <li class="divider" v-if="$store.state.location.sub_root != undefined">></li>
-                        <li class="item" v-if="$store.state.location.sub_root != undefined">{{$store.state.location.sub_root}}</li>
+                        <li class="item" v-if="$store.state.location.sub_root != undefined">
+                            {{$store.state.location.sub_root}}
+                        </li>
                     </ul>
                 </div>
                 <div class="breadcrumb-socials">
