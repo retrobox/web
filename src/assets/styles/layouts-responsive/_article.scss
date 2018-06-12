@@ -5,8 +5,12 @@
     margin-left: 20px;
     width: 100%;
     margin-bottom: 2em;
-    nav .nav-item {
-      width: 100%;
+    nav {
+      position: relative;
+      top: 0px;
+      .nav-item {
+        width: 100%;
+      }
     }
   }
 }

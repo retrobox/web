@@ -8,6 +8,8 @@
   "register": "Inscription",
   "home": "Acceuil",
   "docs": "Documentation",
+  "previous": "Précédent",
+  "next": "Suivant",
   "community": {
     "title": "Communauté",
     "page": {

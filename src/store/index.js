@@ -12,13 +12,13 @@ export const store = new Vuex.Store({
     mutations: {
         SET_TITLE (state, payload) {
           if (payload.context != undefined && payload.key != undefined) {
-            state.title = payload.context.$t(payload.key) + " - Retrobox"
+            state.title = payload.context.$t(payload.key)
             state.title_context = payload
           }else{
             state.title = payload
           }
 
-          document.title = state.title
+          document.title = state.title + " - Retrobox"
 
         },
         TOGGLE_NAV (state) {

@@ -17,15 +17,25 @@
 <script>
 export default {
   name: 'Terms',
-  data () {
-    return {
-      content: ""
+    data () {
+        return {
+            content: ""
+        }
+    },
+    watch: {
+        '$i18n.locale' () {
+            this.fetchData()
+        }
+    },
+    methods: {
+        fetchData: function() {
+            this.$store.commit('SET_TITLE', {context: this, key:'terms'})
+            const about = require('../assets/content/' + this.$i18n.locale + '/terms.md')
+            this.content = about
+        }
+    },
+    created () {
+        this.fetchData()
     }
-  },
-  created () {  
-    this.$store.commit('SET_TITLE', {context: this, key:'terms'})
-    const terms = require('../assets/content/' + this.$i18n.locale + '/terms.md')
-    this.content = terms
-  }
 }
 </script>

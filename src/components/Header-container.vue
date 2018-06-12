@@ -15,13 +15,13 @@
                     <div class="mobile-nav-nav">
                         <ul>
                             <li>
-                                <a @click="$router.push({name: 'Home'}); $store.commit('TOGGLE_NAV')" href="#">{{$t('home')}}</a>
+                                <a @click="$router.push({name: 'Home'}); $store.commit('TOGGLE_NAV')">{{$t('home')}}</a>
                             </li>
                             <li>
-                                <a @click="$router.push({name: 'DocumentationHome'}); $store.commit('TOGGLE_NAV')" href="#">{{$t('docs')}}</a>
+                                <a @click="$router.push({name: 'DocumentationHome'}); $store.commit('TOGGLE_NAV')">{{$t('docs')}}</a>
                             </li>
                             <li>
-                                <a @click="$router.push({name: 'Community'}); $store.commit('TOGGLE_NAV')" href="">{{$t('community.title')}}</a>
+                                <a @click="$router.push({name: 'Community'}); $store.commit('TOGGLE_NAV')">{{$t('community.title')}}</a>
                             </li>
                             <li>
                                 <a href="#">
@@ -103,13 +103,13 @@
                 </div>
                 <nav class="header-nav-container desktop">
                     <div class="nav-item with-link">
-                        <a @click="$router.push({name: 'Home'})" href="#">{{$t('home')}}</a>
+                        <a @click="$router.push({name: 'Home'})">{{$t('home')}}</a>
                     </div>
                     <div class="nav-item with-link">
-                        <a @click="$router.push({name: 'DocumentationHome'})" href="#">{{$t('docs')}}</a>
+                        <a @click="$router.push({name: 'DocumentationHome'})">{{$t('docs')}}</a>
                     </div>
                     <div class="nav-item with-link">
-                        <a @click="$router.push({name: 'Community'})" href="">{{$t('community.title')}}</a>
+                        <a @click="$router.push({name: 'Community'})">{{$t('community.title')}}</a>
                     </div>
                     <div class="nav-item with-button">
                         <a href="#"

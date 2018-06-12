@@ -16,16 +16,26 @@
 
 <script>
 export default {
-  name: 'Legals',
-  data () {
-    return {
-      content: ""
+    name: 'Legals',
+    data () {
+        return {
+            content: ""
+        }
+    },
+    watch: {
+        '$i18n.locale' () {
+            this.fetchData()
+        }
+    },
+    methods: {
+        fetchData: function() {
+            this.$store.commit('SET_TITLE', {context: this, key:'legals'})
+            const about = require('../assets/content/' + this.$i18n.locale + '/legals.md')
+            this.content = about
+        }
+    },
+    created () {
+        this.fetchData()
     }
-  },
-  created () {  
-    this.$store.commit('SET_TITLE', {context: this, key:'legals'})
-    const about = require('../assets/content/' + this.$i18n.locale + '/legals.md')
-    this.content = about
-  }
 }
 </script>

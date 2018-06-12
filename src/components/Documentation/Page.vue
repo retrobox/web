@@ -27,7 +27,23 @@
                 </div>
               </nav>
             </div>
-            <div class="content" v-html="content">
+            <div class="docs-content">
+              <div class="content doc-page-content" v-html="content">
+              </div>
+              <div class="navigation">
+                <ul class="list-reset flex justify-between">
+                  <li class="mr-3">
+                    <a class="inline-block border border-blue rounded py-2 px-4 bg-blue hover:bg-blue-dark text-white" @click="$router.push({name: 'DocumentationPage', params: {slug: items[actual_index - 1].slug}});" v-if="actual_index > 0">{{$t('previous')}}</a>
+                    <a class="inline-block border border-blue rounded py-2 px-4 bg-blue hover:bg-blue-dark text-white" @click="$router.push({name: 'DocumentationHome'});" v-if="actual_index == 0">{{$t('previous')}}</a>
+                  </li>
+                  <li class="mr-3">
+                  </li>
+                  <li class="mr-3">
+                    <a class="inline-block py-2 px-4 text-grey-light cursor-not-allowed disabled" v-if="actual_index == items.length - 1">{{$t('next')}}</a>
+                    <a class="inline-block border border-blue rounded py-2 px-4 bg-blue hover:bg-blue-dark text-white" @click="$router.push({name: 'DocumentationPage', params: {slug: items[actual_index + 1].slug}});" v-if="actual_index != items.length - 1">{{$t('next')}}</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -45,7 +61,9 @@
               content: "",
               loading: true,
               title: "",
-              items: []
+              items: [],
+              actual_item: {},
+              actual_index: 0
             }
         },
         methods: {
@@ -63,6 +81,11 @@
                 })[0].name
                 this.$store.commit('SET_TITLE', this.title)
                 this.items = locale.tree
+
+                this.actual_item = this.items.filter((item, index) => {
+                  return item.slug == this.$route.params.slug
+                })[0]
+                this.actual_index = this.items.indexOf(this.actual_item)
                 axios.get("https://docs.retrobox.tech/content/" + this.$i18n.locale + "/" + this.$route.params.slug + ".md").then((response) => {
                   this.content = marked(response.data)
                   this.loading = false
@@ -74,6 +97,9 @@
         },
         watch: {
           '$route' (to, from) {
+              this.fetchData()
+          },
+          '$i18n.locale' () {
               this.fetchData()
           }
         },

@@ -42,7 +42,7 @@
                 <div class="footer-links">
                     <ul>
                         <li>
-                            <a href="#">{{$t('about')}}</a>
+                            <a @click="$router.push({name: 'About'})">{{$t('about')}}</a>
                         </li>
 
                         <li>

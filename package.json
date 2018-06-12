@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
+    "netlify": "npm install && npm run build",
     "build": "node build/build.js"
   },
   "dependencies": {

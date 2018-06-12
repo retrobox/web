@@ -1,11 +1,18 @@
 .article {
   display: flex;
   margin-top: 0.1em;
+
+  .docs-content {
+    width: 100%;
+  }
+
   .docs-nav {
     border-top: 1px solid rgba(128, 128, 128, 0.5);
     margin-right: 2em;
     margin-top: 2em;
     nav {
+      position: sticky;
+      top: 10px;
       display: flex;
       flex-direction: column;
       .active {
@@ -51,9 +58,28 @@
     }
   }
 
+  .doc-page-content {
+    .image-header {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      margin-top: 2em;
+      margin-bottom: 1.5em;
+      img {
+        height: 150px;
+      }
+    }
+  }
+
   .content {
     color: #525252;
     line-height: 1.5em;
+
+    h2:first-of-type,
+    h3:first-of-type
+     {
+      margin-top: 0;
+    }
 
     h1,
     h2,
@@ -63,10 +89,11 @@
       font-weight: bold;
       line-height: 1.8em;
     }
+
     h1,
     h2 {
-      margin-top: 2em;
-      margin-bottom: 1.5em;
+      margin-top: 1.8em;
+      margin-bottom: 1.3em;
     }
 
     h3,
@@ -75,5 +102,8 @@
       margin-top: 1em;
       margin-bottom: 0.5em;
     }
+  }
+  .navigation {
+    margin-top: 1.8em;
   }
 }
