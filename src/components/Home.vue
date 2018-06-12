@@ -46,7 +46,8 @@
                         </div>
                         <div class="landing-column-content max-w-sm rounded overflow-hidden shadow-lg">
                             <div class="px-6 py-4">
-                                <div class="font-bold text-xl mb-2 title">{{$t('landing.advantages.library.title')}}</div>
+                                <div class="font-bold text-xl mb-2 title">{{$t('landing.advantages.library.title')}}
+                                </div>
                                 <p class="text-grey-darker text-base">
                                     {{$t('landing.advantages.library.description')}}
                                 </p>
@@ -178,7 +179,10 @@
             return {}
         },
         created () {
-          this.$store.commit('SET_TITLE',{context: this, key:'home'})
+            this.$store.commit('SET_TITLE', {context: this, key: 'home'})
+            this.$store.commit('SET_LOCATION', {
+                root: this.$t('home')
+            })
         }
     }
 </script>

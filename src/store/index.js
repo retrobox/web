@@ -7,7 +7,11 @@ export const store = new Vuex.Store({
     state: {
         nav_toggled: false,
         title: "",
-        title_context: {}
+        title_context: {},
+        location: {
+            root: "",
+            sub_root: ""
+        }
     },
     mutations: {
         SET_TITLE (state, payload) {
@@ -17,9 +21,10 @@ export const store = new Vuex.Store({
           }else{
             state.title = payload
           }
-
           document.title = state.title + " - Retrobox"
-
+        },
+        SET_LOCATION (state, payload) {
+            state.location = payload
         },
         TOGGLE_NAV (state) {
             if (state.nav_toggled) {

@@ -6,7 +6,7 @@
   "english_flag": "Drapeau anglais",
   "login": "Connexion",
   "register": "Inscription",
-  "home": "Acceuil",
+  "home": "Accueil",
   "docs": "Documentation",
   "previous": "Précédent",
   "next": "Suivant",
@@ -28,7 +28,7 @@
   "buy": "Acheter",
   "close": "Fermer",
   "breadcrumb": {
-    "title": "Vous êtes ici"
+    "title": "Vous êtes ici :"
   },
   "newsletter": {
     "title": "Recevez notre newsletter",
@@ -99,7 +99,7 @@
     "title": "Page non trouvé",
     "description": "Vous êtes tombé sur la mauvaise page, car elle n'existe pas ou elle a été supprimé."
   },
-  "about": "A propos",
+  "about": "About",
   "blog": "Notre blog",
   "terms-of-use": "Conditions d'utilisations",
   "get-help": "Obtenir de l'aide",

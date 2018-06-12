@@ -8,7 +8,7 @@
 
   .docs-nav {
     border-top: 1px solid rgba(128, 128, 128, 0.5);
-    margin-right: 2em;
+    margin-right: 2.5em;
     margin-top: 2em;
     nav {
       position: sticky;
@@ -32,7 +32,7 @@
         }
         a:hover {
           color: #3498db;
-          transition: color  0.1s ease-in-out;
+          transition: color 0.1s ease-in-out;
         }
         .sub-nav {
           margin-top: 8px;
@@ -71,15 +71,17 @@
     }
   }
 
+  .docs-content {
+
+    h2:first-of-type,
+    h3:first-of-type {
+      margin-top: 0;
+    }
+  }
+
   .content {
     color: #525252;
     line-height: 1.5em;
-
-    h2:first-of-type,
-    h3:first-of-type
-     {
-      margin-top: 0;
-    }
 
     h1,
     h2,

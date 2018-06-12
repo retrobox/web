@@ -38,7 +38,7 @@
     }
   },
   "breadcrumb": {
-    "title": "You are here"
+    "title": "You are here:"
   },
   "twitter": {
     "title": "Our twitter account",
@@ -96,14 +96,14 @@
     }
   },
   "not-found": {
-    "title": "Page non trouvé",
+    "title": "Not found",
     "description": "Vous êtes tombé sur la mauvaise page, car elle n'existe pas ou elle a été supprimé."
   },
-  "about": "A propos",
-  "blog": "Notre blog",
-  "terms-of-use": "Conditions d'utilisations",
-  "get-help": "Obtenir de l'aide",
-  "status": "Status des services",
-  "developers": "Développeurs",
+  "about": "About",
+  "blog": "Our blog",
+  "terms-of-use": "Terms of use",
+  "get-help": "Get help",
+  "status": "Status of services",
+  "developers": "Developers",
   "legals": "Legals"
 }

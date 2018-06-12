@@ -30,6 +30,9 @@
         methods: {
           fetchData: function() {
               this.$store.commit('SET_TITLE', {context: this, key:'about'})
+              this.$store.commit('SET_LOCATION', {
+                  root: this.$t('about')
+              })
               const about = require('../assets/content/' + this.$i18n.locale + '/about.md')
               this.content = about
           }

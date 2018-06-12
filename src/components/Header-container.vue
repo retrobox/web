@@ -126,9 +126,9 @@
                 <div class="breadcrumb-location desktop">
                     {{$t('breadcrumb.title')}}
                     <ul>
-                        <li class="item">Home</li>
-                        <li class="divider">></li>
-                        <li class="item">My page</li>
+                        <li class="item">{{$store.state.location.root}}</li>
+                        <li class="divider" v-if="$store.state.location.sub_root != undefined">></li>
+                        <li class="item" v-if="$store.state.location.sub_root != undefined">{{$store.state.location.sub_root}}</li>
                     </ul>
                 </div>
                 <div class="breadcrumb-socials">

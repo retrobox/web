@@ -29,7 +29,11 @@ export default {
     },
     methods: {
         fetchData: function() {
-            this.$store.commit('SET_TITLE', {context: this, key:'terms'})
+            this.$store.commit('SET_TITLE', {context: this, key:'terms-of-use'})
+            this.$store.commit('SET_LOCATION', {
+                root: this.$t('home'),
+                sub_root: this.$t('terms-of-use')
+            })
             const about = require('../assets/content/' + this.$i18n.locale + '/terms.md')
             this.content = about
         }
