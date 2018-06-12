@@ -1,0 +1,19 @@
+.partnership-container {
+  .partnership-content {
+    display: flex;
+    flex-direction: column;
+    a:first-of-type {
+      margin-bottom: 1em;
+    }
+    a {
+      display: flex;
+      text-align: center;
+      justify-content: center !important;
+      flex-direction: column !important;
+
+    }
+    .partnership-creative-commons-image {
+      margin-top: 15px;
+    }
+  }
+}

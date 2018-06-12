@@ -4,13 +4,19 @@
   .docs-nav {
     margin-left: 20px;
     width: 100%;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     nav {
       position: relative;
       top: 0px;
       .nav-item {
         width: 100%;
       }
+    }
+  }
+
+  .doc-page-content {
+    .image-header {
+      display: none;
     }
   }
 }

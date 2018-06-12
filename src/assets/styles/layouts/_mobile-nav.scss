@@ -7,8 +7,15 @@
   display: flex;
   justify-content: center;
   text-align: center;
+  .mobile-nav-close {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
   .mobile-nav-close .button {
     color: #ecf0f1;
+    border-radius: 10px;
+    width: 10em;
     margin-top: 1em;
     display: flex;
     justify-content: center;
