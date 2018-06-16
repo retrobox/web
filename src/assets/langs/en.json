@@ -17,13 +17,13 @@
       "title": "In partner ship with Dyjix.eu"
     },
     "creative-commons": {
-      "title": "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License."
+      "title": "This work is licensed under a Creative Commons."
     }
   },
   "community": {
     "title": "Community",
     "page": {
-      "title": "Rejoignez notre communauté",
+      "title": "Join our community",
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut!"
     }
   },
@@ -42,19 +42,19 @@
   },
   "twitter": {
     "title": "Our twitter account",
-    "link": "http://twitter.com"
+    "link": "https://twitter.com/RetroBoxSP"
   },
   "facebook": {
     "title": "Our facebook page",
-    "link": "http://facebook.com"
+    "link": "https://facebook.com/RetroBoxSP"
   },
   "github": {
     "title": "Our github organisation",
-    "link": "http://github.com"
+    "link": "https://github.com/retrobox"
   },
   "discord": {
     "title": "Our discord guild",
-    "link": "http://discordapp.com"
+    "link": "https://discord.gg/TzNNQnP"
   },
   "landing": {
     "title": "The retro, for everyone",
