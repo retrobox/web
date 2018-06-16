@@ -82,7 +82,7 @@ $opacity:0.8;
         // border-bottom-left-radius: 5px;
         // border-bottom-right-radius: 5px;
 
-        opacity: 0.5;
+        opacity: 0.8;
         transition: opacity 0.2s ease-in-out;
       }
     }
@@ -132,7 +132,10 @@ $opacity:0.8;
       align-content: center;
       line-height: 3em;
       .nav-item {
-        margin-left: 1em;
+        margin-left: 2em;
+      }
+      .nav-item:first-of-type {
+        margin-left: 0;
       }
     }
   }
