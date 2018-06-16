@@ -86,6 +86,8 @@
             <div></div>
             <div></div>
         </div>
+        <div class="header-background-back">
+        </div>
         <div class="header-background">
             <div class="container mx-auto header-content">
                 <div class="header-title-container">
