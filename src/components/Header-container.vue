@@ -56,7 +56,7 @@
             </div>
             <div class="button bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 cancel-button"
                  @click="$modal.hide('locale_selection')">
-                Fermer
+                {{$t('close')}}
             </div>
         </modal>
         <!-- HEADER CONTENT -->

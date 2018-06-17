@@ -49,3 +49,28 @@ $opacity: 0.9;
     }
   }
 }
+
+.newsletter-alert-modal {
+
+  .newsletter-alert-container {
+    height: 86%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    .newsletter-alert-content {
+      .newsletter-alert-title {
+        margin-bottom: 1em;
+      }
+      .icon {
+        font-size: 2em;
+        margin-bottom: 0.8em;
+      }
+    }
+
+  }
+  .button {
+    text-align: center;
+  }
+}

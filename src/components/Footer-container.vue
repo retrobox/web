@@ -22,30 +22,7 @@
         </div>
     </div>
     <section class="landing-section landing-bottom"></section>
-    <div class="newsletter-back">
-    </div>
-    <div class="newsletter-container">
-       <div class="newsletter-content container mx-auto">
-         <div class="newsletter-center">
-           <div class="newsletter-title-container">
-             <h2 class="newsletter-title">
-               {{$t('newsletter.title')}}
-             </h2>
-             <div class="newsletter-description">
-                {{$t('newsletter.description')}}
-             </div>
-           </div>
-           <div class="newsletter-form">
-             <div class="newsletter-form-input ">
-               <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight"  type="text" id="email" :title="$t('newsletter.form.email')"  :placeholder="$t('newsletter.form.email_placeholder')">
-             </div>
-             <div class="newsletter-form-button">
-               <button class=" bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded button">{{$t('newsletter.form.submit')}}</button>
-             </div>
-           </div>
-         </div>
-       </div>
-    </div>
+    <newsletter />
     <div class="footer-container">
         <div class="colored-divider-container">
             <div></div>
@@ -117,10 +94,12 @@
 
 <script>
     import Socials from "./Socials.vue"
+    import Newsletter from "./Newsletter.vue"
     export default {
         name: 'Footer-container',
         components: {
-            "socials": Socials
+            "socials": Socials,
+            "newsletter": Newsletter
         },
         data() {
             return {}
