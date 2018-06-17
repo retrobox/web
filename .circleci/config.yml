@@ -1,0 +1,24 @@
+version: 2
+jobs:
+  build:
+    #...
+  deploy:
+    machine:
+      enabled: true
+    steps:
+      - run:
+          name: Deploy Over SSH
+          command: |
+            ssh root@srv01.cluster.thinmill.fr "cd /apps/thingmill.retrobox.web/ && git reset --hard && git pull origin master && npm i && npm run build"
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
