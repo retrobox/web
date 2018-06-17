@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Valentin impsum",
+    "description": "Don't touch it",
+    "image": "https://lorempixel.com/200/200/people/"
+  },
+  {
+    "name": "Matthieu masterum",
+    "description": "Master of the game",
+    "image": "https://lorempixel.com/200/200/people/"
+  },
+  {
+    "name": "Etienne servus",
+    "description": "Servus esse",
+    "image": "https://lorempixel.com/200/200/people/"
+  }
+]

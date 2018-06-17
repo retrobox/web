@@ -102,6 +102,24 @@
   }
 
   .content {
+    .team-mosaic {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      .team-item {
+        margin-right: 2em;
+        .team-item-title {
+          margin-top: 0.3em;
+          margin-bottom: 0.2em;
+          font-size: 1.4em;
+          font-weight: 300;
+        }
+        .team-item-description {
+          font-size: 0.9em;
+        }
+
+      }
+    }
     color: #525252;
     line-height: 1.5em;
 

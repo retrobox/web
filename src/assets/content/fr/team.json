@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Valentin impsum",
+    "description": "Ne sert à rien",
+    "image": "https://lorempixel.com/200/200/people/"
+  },
+  {
+    "name": "Matthieu masterum",
+    "description": "Maître du jeu",
+    "image": "https://lorempixel.com/200/200/people/"
+  },
+  {
+    "name": "Etienne servus",
+    "description": "Servus esse",
+    "image": "https://lorempixel.com/200/200/people/"
+  }
+]
