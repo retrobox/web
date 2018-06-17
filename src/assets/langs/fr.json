@@ -47,7 +47,7 @@
       "description": "Il nous est impossible de valider cet adresse email",
       "missing_description": "Vous n'avez pas fourni d'email",
       "invalid_description": "L'email que vous avez fournis ne corespond pas à un email",
-      "api_description": "L'api ne répond pas comme attendu"
+      "api_description": "L'api n'a pas répondu comme il fallait"
     }
   },
   "twitter": {
@@ -96,11 +96,11 @@
     "start_now": {
       "title": "Commence dès maintenant",
       "kited": {
-        "title": "Version kité",
+        "title": "Version kit",
         "description": "Tu aime l'électronique, monte ta propre console grâce à cette version et personalise là !"
       },
       "non_kited": {
-        "title": "Version préfaite",
+        "title": "Version pré-assemblée",
         "description": "Commence l'aventure directement, sans te soucier du coté technique !"
       }
     }
