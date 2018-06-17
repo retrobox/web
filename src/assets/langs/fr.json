@@ -36,7 +36,6 @@
     "form": {
       "submit": "Valider",
       "email": "Votre email",
-      "email_error": "Ce que vous avez rentré ne corespond pas à un email",
       "email_placeholder": "john@example.com"
     },
     "success": {
