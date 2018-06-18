@@ -116,5 +116,8 @@
   "status": "Status of services",
   "developers": "Developers",
   "legals": "Legals",
-  "our-team-members": "Our team members"
+  "our-team-members": "Our team members",
+  "shop": {
+    "title": "Shop"
+  }
 }

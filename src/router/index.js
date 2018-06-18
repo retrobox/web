@@ -7,6 +7,7 @@ import About from '@/components/About'
 import Community from '@/components/Community'
 import DocumentationHome from '@/components/Documentation/Home'
 import DocumentationPage from '@/components/Documentation/Page'
+import ShopIndex from '@/components/Shop/Index'
 import NotFound from '@/components/NotFound'
 
 Vue.use(Router)
@@ -48,6 +49,11 @@ export default new Router({
             path: '/docs/:slug',
             name: 'DocumentationPage',
             component: DocumentationPage
+        },
+        {
+            path: '/shop',
+            name: 'ShopIndex',
+            component: ShopIndex
         },
         {
             path: '*',

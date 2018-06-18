@@ -1,0 +1,37 @@
+{
+  "category": [
+    {
+      "title": "Nunquam magicae victrix.",
+      "type": "cover",
+      "items": [
+        {
+          "name": "Ecce, primus fuga!",
+          "thumb": "https://static.retrobox.tech/img/composants/RASPBERRY.png",
+          "description": "Misty pestilences lead to the greed.",
+          "price": "66.20"
+        },
+
+        {
+          "name": "Ecce, primus fuga!",
+          "thumb": "https://static.retrobox.tech/img/composants/RASPBERRY.png",
+          "description": "Misty pestilences lead to the greed.",
+          "price": "66.20"
+        },
+        {
+          "name": "Ecce, primus fuga!",
+          "thumb": "https://static.retrobox.tech/img/composants/RASPBERRY.png",
+          "description": "Misty pestilences lead to the greed.",
+          "price": "66.20"
+        }
+      ]
+    },
+    {
+      "title": "Fluctuis observare in piscinam!",
+      "type": "simple"
+    },
+    {
+      "title": "Calcaria, abactus, et detrius.",
+      "type": "simple"
+    }
+  ]
+}

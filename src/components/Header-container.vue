@@ -63,7 +63,7 @@
         <div class="header-top">
             <div class="container mx-auto header-top-content">
                 <div class="locale_selection font-bold py-2 px-4 button" @click="locale_selection()">
-                    <icon name="flag" class="icon"></icon>
+                    <icon name="flag" class="icon" style="margin-right: 8px;"></icon>
                     <span>{{$t('actual_lang')}}</span>
                 </div>
                 <div class="account">

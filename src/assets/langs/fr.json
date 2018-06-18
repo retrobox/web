@@ -116,5 +116,16 @@
   "status": "Status des services",
   "developers": "Développeurs",
   "legals": "Mentions légales",
-  "our-team-members": "Nos membres d'équipe"
+  "our-team-members": "Nos membres d'équipe",
+  "shop": {
+    "title": "Boutique",
+    "cart": {
+      "title": "Panier",
+      "items": "Aucun articles | Un article | {count} articles",
+      "empty": "Panier vide"
+    },
+    "index": {
+      "empty": "Aucun articles disponibles"
+    }
+  }
 }
