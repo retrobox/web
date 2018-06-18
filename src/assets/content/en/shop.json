@@ -6,6 +6,7 @@
       "items": [
         {
           "name": "Ecce, primus fuga!",
+          "slug": "ecce-primus",
           "thumb": "https://static.retrobox.tech/img/composants/RASPBERRY.png",
           "description": "Misty pestilences lead to the greed.",
           "price": "66.20"
@@ -18,6 +19,7 @@
       "items": [
         {
           "name": "Ecce, primus fuga!",
+          "slug": "ecce-primus",
           "thumb": "https://static.retrobox.tech/img/composants/RASPBERRY.png",
           "description": "Misty pestilences lead to the greed.",
           "price": "66.20"
@@ -30,6 +32,7 @@
       "items": [
         {
           "name": "Ecce, primus fuga!",
+          "slug": "ecce-primus",
           "thumb": "https://static.retrobox.tech/img/composants/RASPBERRY.png",
           "description": "Misty pestilences lead to the greed.",
           "price": "66.20"

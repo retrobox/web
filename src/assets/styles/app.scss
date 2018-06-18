@@ -27,7 +27,9 @@
 @media (max-width: 700px) {
   @import 'layouts-responsive/_article.scss';
   @import 'layouts-responsive/_container.scss';
+  @import "layouts-responsive/_buy.scss";
   @import 'layouts-responsive/_footer.scss';
+  @import "layouts-responsive/_newsletter.scss";
   @import 'layouts-responsive/_header.scss';
   @import 'layouts-responsive/_landing.scss';
   @import 'layouts-responsive/_locales-selector.scss';

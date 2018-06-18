@@ -13,16 +13,7 @@
                     </div>
                 </div>
                 <div class="container mx-auto">
-                    <div class="shop-header-container">
-                        <div class="shop-header-cart">
-                            <span class="shop-header-cart-amount">{{ $tc('shop.cart.items', 88, { count: 80 }) }}</span>
-                            <a @click=""
-                               class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded button">
-                                <icon name="shopping-cart" class="icon"></icon>
-                                {{$t('shop.cart.title')}}
-                            </a>
-                        </div>
-                    </div>
+                    <shop-header></shop-header>
                     <div class="shop-index-container">
                         <div class="shop-index-empty-container" v-if="items.length == 0">
                             <div class="shop-index-empty-icon">
@@ -45,7 +36,7 @@
                                             <p class="shop-card-description">{{item.description}}</p>
                                             <div class="shop-card-footer">
                                                 <span class="price">€ {{item.price}}</span>
-                                                <a href="#"
+                                                <a @click="$router.push({name: 'ShopItem', params: {slug:item.slug}})"
                                                    class="button bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded-full">
                                                     <icon name="shopping-cart" class="icon"></icon>
                                                     {{$t('buy')}}
@@ -66,6 +57,7 @@
 <script>
     import axios from "axios"
     import marked from "marked"
+    import Header from "./Header.vue"
     export default {
         name: 'ShopIndex',
         data() {
@@ -78,6 +70,9 @@
             '$i18n.locale' () {
                 this.fetchData()
             }
+        },
+        components: {
+            "shop-header": Header
         },
         methods: {
             fetchData: function () {

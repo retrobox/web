@@ -1,3 +1,4 @@
+//shop header
 .shop-header-container {
   margin-top: 1.5em;
   display: flex;
@@ -7,6 +8,7 @@
   }
 }
 
+//shop index
 .shop-index-container {
   margin-top: 1.5em;
 }
@@ -78,4 +80,9 @@
       @extend .mr-2;
     }
   }
+}
+
+//shop item
+.shop-item-container {
+
 }

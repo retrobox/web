@@ -8,6 +8,7 @@ import Community from '@/components/Community'
 import DocumentationHome from '@/components/Documentation/Home'
 import DocumentationPage from '@/components/Documentation/Page'
 import ShopIndex from '@/components/Shop/Index'
+import ShopItem from '@/components/Shop/Item'
 import NotFound from '@/components/NotFound'
 
 Vue.use(Router)
@@ -54,6 +55,11 @@ export default new Router({
             path: '/shop',
             name: 'ShopIndex',
             component: ShopIndex
+        },
+        {
+            path: '/shop/:slug',
+            name: 'ShopItem',
+            component: ShopItem
         },
         {
             path: '*',

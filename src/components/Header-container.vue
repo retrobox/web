@@ -23,7 +23,7 @@
                                 <a @click="$router.push({name: 'Community'}); $store.commit('TOGGLE_NAV')">{{$t('community.title')}}</a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a @click="$router.push({name: 'ShopItem', params: {slug:'ecce-primus'}}); $store.commit('TOGGLE_NAV')">
                                     {{$t('buy')}}
                                 </a>
                             </li>
@@ -113,7 +113,7 @@
                         <a @click="$router.push({name: 'Community'})">{{$t('community.title')}}</a>
                     </div>
                     <div class="nav-item with-button">
-                        <a href="#"
+                        <a @click="$router.push({name: 'ShopItem', params: {slug:'ecce-primus'}})"
                            class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded button">
                             <icon name="shopping-cart" class="icon"></icon>
                             {{$t('buy')}}
