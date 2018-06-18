@@ -59,15 +59,15 @@
                 <div class="footer-links">
                     <ul>
                         <li>
+                            <a @click="$router.push({name: 'Shop'})">{{$t('shop.title')}}</a>
+                        </li>
+
+                        <li>
+                            <a @click="$router.push({name: 'ContactUs'})">{{$t('contact-us')}}</a>
+                        </li>
+
+                        <li>
                             <a href="#">{{$t('get-help')}}</a>
-                        </li>
-
-                        <li>
-                            <a href="#">{{$t('status')}}</a>
-                        </li>
-
-                        <li>
-                            <a href="#">{{$t('developers')}}</a>
                         </li>
                     </ul>
                 </div>

@@ -27,7 +27,7 @@
                         </div>
                         <div v-if="items.length > 0" class="shop-index-category-mosaic">
                             <div class="shop-index-category" v-for="category in items">
-                                <h3 class="divider shop-index-category-title">{{category.title}}</h3>
+                                <h3 class="dividing shop-index-category-title">{{category.title}}</h3>
                                 <div class="shop-index-category-items">
                                     <div class="shop-card" v-for="item in category.items">
                                         <div class="shop-card-thumb" :style="'background-image: url(' + item.thumb + ')'"></div>

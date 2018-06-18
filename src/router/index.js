@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '@/components/Home'
 import Legals from '@/components/Legals'
 import Terms from '@/components/Terms'
+import ContactUs from '@/components/ContactUs'
 import About from '@/components/About'
 import Community from '@/components/Community'
 import DocumentationHome from '@/components/Documentation/Home'
@@ -30,6 +31,11 @@ export default new Router({
             path: '/terms',
             name: 'Terms',
             component: Terms
+        },
+        {
+            path: '/contact-us',
+            name: 'ContactUs',
+            component: ContactUs
         },
         {
             path: '/about',
