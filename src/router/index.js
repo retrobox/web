@@ -10,6 +10,8 @@ import DocumentationHome from '@/components/Documentation/Home'
 import DocumentationPage from '@/components/Documentation/Page'
 import ShopIndex from '@/components/Shop/Index'
 import ShopItem from '@/components/Shop/Item'
+import BlogIndex from '@/components/Blog/Index'
+import BlogPost from '@/components/Blog/Post'
 import NotFound from '@/components/NotFound'
 
 Vue.use(Router)
@@ -33,7 +35,7 @@ export default new Router({
             component: Terms
         },
         {
-            path: '/contact-us',
+            path: '/contact',
             name: 'ContactUs',
             component: ContactUs
         },
@@ -66,6 +68,16 @@ export default new Router({
             path: '/shop/:slug',
             name: 'ShopItem',
             component: ShopItem
+        },
+        {
+            path: '/blog',
+            name: 'BlogIndex',
+            component: BlogIndex
+        },
+        {
+            path: '/blog/:slug/:id',
+            name: 'BlogPost',
+            component: BlogPost
         },
         {
             path: '*',

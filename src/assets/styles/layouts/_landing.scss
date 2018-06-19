@@ -2,11 +2,11 @@
 Landing main
 **/
 $landing-main-section-height: 70vh;
-$landing-main-section-opacity: 0.6;
+$landing-main-section-opacity: 0.8;
 
 .landing-main {
   margin-top: -$landing-main-section-height;
-  background-color: rgba(64, 115, 158, $landing-main-section-opacity);
+  background-color: rgba(52, 73, 94, $landing-main-section-opacity);
   display: flex;
   width: 100%;
   height: $landing-main-section-height;

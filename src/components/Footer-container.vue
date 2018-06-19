@@ -46,7 +46,7 @@
                         </li>
 
                         <li>
-                            <a href="#">{{$t('blog')}}</a>
+                            <a @click="$router.push({name: 'BlogIndex'})">{{$t('blog.our')}}</a>
                         </li>
 
                         <li>

@@ -110,7 +110,6 @@
     "description": "Vous êtes tombé sur la mauvaise page, car elle n'existe pas ou elle a été supprimé."
   },
   "about": "About",
-  "blog": "Notre blog",
   "terms-of-use": "Conditions d'utilisations",
   "get-help": "Obtenir de l'aide",
   "status": "Status des services",
@@ -128,5 +127,10 @@
       "empty": "Aucun articles disponibles"
     }
   },
-  "contact-us": "Comment nous contacter ?"
+  "contact-us": "Comment nous contacter ?",
+  "blog": {
+    "our": "Notre blog",
+    "title": "Blog",
+    "posts": "Articles"
+  }
 }

@@ -1,4 +1,4 @@
-$opacity:0.8;
+$opacity: 0.8;
 .header-container {
   .mobile {
     display: none !important;
@@ -59,7 +59,9 @@ $opacity:0.8;
   }
   .header-background {
     margin-top: -84px;
-    background-image: linear-gradient(to right, rgba(242, 242, 242, 0.4), rgba(185, 185, 185, 0.5), rgba(119, 119, 119, 0.6), rgba(59, 59, 59, 0.7), rgba(0, 0, 0, $opacity));
+    background-image: linear-gradient(to right, rgba(242, 242, 242, 0.4), rgba(185, 185, 185, 0.5), rgba(119, 119, 119, 0.6), rgba(59, 59, 59, 0.7), rgba(44, 62, 80, $opacity));
+
+    //background-color: rgba(44, 62, 80, 0.6);
   }
   .header-content {
     a {
