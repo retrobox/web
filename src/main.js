@@ -11,6 +11,8 @@ import 'vue-awesome/icons'
 import VModal from 'vue-js-modal'
 import VueCookie from 'vue-cookie'
 
+console.log(process.env);
+
 Vue.use(VModal, {dialog: true})
 Vue.use(VueI18n)
 Vue.component('icon', Icon)

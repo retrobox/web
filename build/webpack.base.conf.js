@@ -31,7 +31,7 @@ module.exports = {
     }
   },
   module: {
-    rules: [    
+    rules: [
       {
         test: /\.md$/,
         use: [

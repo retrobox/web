@@ -83,7 +83,7 @@
                     root: this.$t('docs')
                 })
                 const marked = require("marked");
-                axios.get("https://docs.retrobox.tech/config.json").then((response) => {
+                axios.get(process.env.DOCS_ENDPOINT + "/config.json").then((response) => {
                     var locale = response.data.locales.filter((item) => {
                         return item.slug == this.$i18n.locale
                     })[0]
