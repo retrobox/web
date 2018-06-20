@@ -66,6 +66,22 @@
   }
 
   .doc-page-content {
+    .list {
+      .list-head {
+        font-weight: bold;
+      }
+      .list-row, .list-head {
+        border-bottom: 1px solid #ddd;
+        padding:9px;
+        width: 100%;
+        display: grid;
+      }
+    }
+    .list-73 {
+      .list-row, .list-head {
+        grid-template-columns: 70% 30%;
+      }
+    }
     .image-header {
       display: flex;
       width: 100%;
@@ -73,7 +89,17 @@
       margin-top: 2em;
       margin-bottom: 1.5em;
       img {
+        margin-top: 0;
+        margin-bottom: 0;
         height: 150px;
+      }
+    }
+    .docs-section {
+      display: grid;
+      grid-column-gap: 15px;
+      grid-template-columns: 60% 40%;
+      img {
+        width: 80%;
       }
     }
   }

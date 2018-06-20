@@ -30,6 +30,7 @@
                             </nav>
                         </div>
                         <div class="docs-content">
+                            <a @click="fetchData()">Refresh</a>
                             <div class="content doc-page-content" v-html="content">
                             </div>
                             <div class="navigation">
@@ -102,7 +103,7 @@
                         return item.slug == this.$route.params.slug
                     })[0]
                     this.actual_index = this.items.indexOf(this.actual_item)
-                    axios.get("https://docs.retrobox.tech/content/" + this.$i18n.locale + "/" + this.$route.params.slug + ".md").then((response) => {
+                    axios.get(process.env.DOCS_ENDPOINT + "/content/" + this.$i18n.locale + "/" + this.$route.params.slug + ".md").then((response) => {
                         this.content = marked(response.data)
 
                         setTimeout(() => {
