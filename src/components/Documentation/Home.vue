@@ -24,7 +24,7 @@
                                 </div>
                             </nav>
                         </div>
-                        <div>
+                        <div class="docs-content">
                             <div class="content doc-page-content" v-html="content">
                             </div>
                             <div class="navigation">
