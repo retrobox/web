@@ -1,17 +1,17 @@
 [
   {
-    "name": "Valentin impsum",
-    "description": "Ne sert à rien",
-    "image": "https://lorempixel.com/200/200/people/"
+    "name": "Valentin Derouet",
+    "description": "16 ans, Concepteur électronique, développeur web, aime les pâtes.",
+    "image": "https://static.retrobox.tech/img/about/valentin.png"
   },
   {
-    "name": "Matthieu masterum",
-    "description": "Maître du jeu",
-    "image": "https://lorempixel.com/200/200/people/"
+    "name": "Etienne Chevrollier",
+    "description": "15 ans, photoshopeur, idéaste, et absent quand il ne le faut pas",
+    "image": "https://static.retrobox.tech/img/about/etienne.jpg"
   },
   {
-    "name": "Etienne servus",
-    "description": "Servus esse",
-    "image": "https://lorempixel.com/200/200/people/"
+    "name": "Matthieu Bessat",
+    "description": "15 ans, développeur web full stack, php, js rien ne lui échappe ! ",
+    "image": "https://static.retrobox.tech/img/about/matthieu.jpg"
   }
 ]

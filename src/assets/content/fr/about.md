@@ -1,11 +1,13 @@
-[FR] Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
+### L'équipe & histoire
+Etienne Chevrollier, Matthieu Bessat, Valentin Derouet, sont trois passionnés du retro, de l'informatique et de l'open source. Après plusieurs prototypes plus fou les un que les autres, nous sommes arrivé à quelque chose de fonctionnel, professionnel, à bas prix.<br />
+<br />
+<center>
+<img src="http://static.retrobox.tech/img/about/firstprototype.png" width="30%">
+<img src="http://static.retrobox.tech/img/about/secondprototype.png" width="40%">
+<img src="http://static.retrobox.tech/img/about/RETROBOX2.png" width="40%">
+<img src="http://static.retrobox.tech/img/about/RETROBOX1.png" width="40%">
+</center>
 
+### L'idée
 
-Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. 
-
-
-Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. 
-
-
-Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
- 
+L’idée est apparu en classe de 4e (il y a 3 ans) au collège des Alpes Mancelles situé à Moulins le Carbonnel. Lors d’une discussion entre amis, nous avons imaginé une console de jeu rétro qui pourrait être accessible à tout le monde, avec un bas prix pour que la culture rétro-vidéoludique revienne sur le devant de la scène. Nous sommes donc partis dans l’idée de créer une console, basée sur un Arduino (image à l’appui). Nous nous sommes rendus compte que les performances n’étaient pas suffisantes par rapport à nos attentes. Par la suite nous avons eu une deuxième idée, cette fois ci basée sur un micro-ordinateur nommé Raspberry-Pi Zero (image à l’appui)  qui nous offrait bien plus de possibilités et de flexibilité pour notre projet. C’est à partir de là, que nous avons commencé à développer une console idéale puis commencé à concevoir concrètement cette console. Nous nous sommes concertés autour de plusieurs brainstorming et avait réuni les idées réalisables ou non dans la recherche de la console la plus adaptée à notre public.

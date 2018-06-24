@@ -4,6 +4,14 @@
   padding-bottom: .3em;
 }
 
+.dividing-right {
+  width: 100%;
+  border-bottom: 1px solid rgba(189, 195, 199, 1.0);
+  padding-bottom: .3em;
+  right: 20px;
+  text-align: right;
+}
+
 .article {
 
   display: flex;
@@ -96,7 +104,7 @@
     }
     .docs-section {
       display: grid;
-      grid-column-gap: 15px;
+      grid-column-gap: 40px;
       grid-template-columns: 60% 40%;
       img {
         width: 80%;

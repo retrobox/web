@@ -10,7 +10,7 @@ Le responsable publication est une personne physique ou une personne morale.
 **Hébergeur** : Dyjix.eu – LD MANNETOT 14370 MERY CORBON  
 Crédits : Matthieu Bessat, Etienne Chevrollier  
 
-Thingmill est representé par Valentin Derouet, Matthieu Bessat, Etienne Chevrollier
+Thingmill est representé par Valentin Derouet, Matthieu Bessat, Etienne Chevrollier, entreprise enregistée à la chambre de commerce.
 
 ### 2\. Conditions générales d’utilisation du site et des services proposés.
 

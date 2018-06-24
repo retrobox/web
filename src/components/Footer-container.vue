@@ -10,7 +10,14 @@
                     <img src="../assets/img/dyjixeu.png" alt="Logo Dyjix.eu">
                 </div>
             </a>
-
+                <a class="partnership-lyceealain" href="https://lyceealainalencon.fr/">
+                    <div class="partnership-lyceealain-title">
+                        {{$t('partnership.lyceealain.title')}}
+                    </div>
+                    <div class="partnership-lyceealain-image">
+                        <img src="../assets/img/lyceealain.png" alt="Logo Lycée Alain">
+                  </div>
+                </a>
             <a class="partnership-creative-commons" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
                 <div class="partnership-creative-commons-title">
                     {{$t('partnership.creative-commons.title')}}
