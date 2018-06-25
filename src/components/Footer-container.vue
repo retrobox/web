@@ -18,6 +18,14 @@
                     {{$t('partnership.lyceealain.title')}}
                 </div>
             </a>
+            <a class="partnership-cci partnership-item" href="https://www.portesdenormandie.cci.fr/">
+                <div class="partnership-cci-image partnership-image">
+                  <img src="../assets/img/ccinormandie.jpg" alt="Logo CCI Normandie">
+                </div>
+                <div class="partnership-cci-title partnership-title">
+                    {{$t('partnership.cci.title')}}
+                </div>
+            </a>
             <a class="partnership-creative-commons partnership-item" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
                 <div class="partnership-creative-commons-image partnership-image">
                     <img src="../assets/img/creative-commons.png" alt="Logo Creative Commons">
