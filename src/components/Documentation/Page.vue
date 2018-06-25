@@ -30,7 +30,7 @@
                             </nav>
                         </div>
                         <div class="docs-content">
-                            <a @click="fetchData()">Refresh</a>
+                            <!-- <a @click="fetchData()">Refresh</a> -->
                             <div class="content doc-page-content" v-html="content">
                             </div>
                             <div class="navigation">
