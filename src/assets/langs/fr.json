@@ -12,7 +12,7 @@
   "next": "Suivant",
   "partnership": {
     "dyjixeu": {
-      "title": "En partenaria avec Dyjix.eu"
+      "title": "En partenariat avec :"
     },
     "creative-commons": {
       "title": "This work is licensed under a Creative Commons"
@@ -67,12 +67,12 @@
     "link": "https://discord.gg/TzNNQnP"
   },
   "landing": {
-    "title": "Le retro, pour tous",
-    "sub_title": "Avec retrobox, jouez à vos jeux rétro préférés de façon simple et accessible",
+    "title": "Une console, 20 ans de jeux, 35 ans de technologies",
+    "sub_title": "Avec la Rétrobox, jouez à vos jeux rétro préférés de façon simple et accessible",
     "go": "En savoir plus",
     "about": {
-      "title": "La console retro, facile",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor ehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "title": "Simplicité, Nostalgie, Partage...",
+      "description": "La Retrobox n'est pas une simple console, c'est un moyen de partage avec vos proches. Revivez les moments de votre enfance, de votre adolescence ou même de parents surveillants leur enfant. "
     },
     "advantages": {
       "title":"Plein d'advantages...",

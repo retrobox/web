@@ -108,7 +108,7 @@ Landing columns
         justify-content: center;
         width: 50px;
         height: 50px;
-        background-color: #2c3e50;
+        background-color: #e53935;
         border-radius: 50%;
         padding: 10px 10px 10px 10px;
       }
@@ -122,10 +122,10 @@ Landing columns
       margin-bottom: 20px;
       margin-right: 20px;
       max-width: 23rem;
-      background-color: white;
+      background-color: #455a64;
       padding-top: 5px;
       .title {
-        color: #22292F;
+        color: white;
       }
     }
   }
@@ -168,11 +168,11 @@ landing start **/
 .landing-startnow-content {
   margin-top: 2em;
   .type-kited .landing-column-icon div {
-    background-color: #27ae60;
+    background-color: #0d47a1;
   }
 
   .type-already .landing-column-icon div {
-    background-color: #2980b9;
+    background-color: #ec407a;
   }
 
   .landing-column-footer {
@@ -190,7 +190,7 @@ landing start **/
 }
 
 .landing-startnow-title {
-  color: #2c3e50;
+  color: white;
   text-align: center;
 }
 
