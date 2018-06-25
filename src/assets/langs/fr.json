@@ -12,13 +12,13 @@
   "next": "Suivant",
   "partnership": {
     "dyjixeu": {
-      "title": "En partenariat avec :"
+      "title": "En partenariat avec Dyjix :"
     },
     "lyceealain": {
       "title": "En partenaria avec le Lycée Alain"
     },
     "creative-commons": {
-      "title": "This work is licensed under a Creative Commons"
+      "title": "Ce projet est sous la licence Creative Commons"
     }
   },
   "community": {
@@ -75,25 +75,25 @@
     "go": "En savoir plus",
     "about": {
       "title": "Simplicité, Nostalgie, Partage...",
-      "description": "La Retrobox n'est pas une simple console, c'est un moyen de partage avec vos proches. Revivez les moments de votre enfance, de votre adolescence ou même de parents surveillants leur enfant. "
+      "description": "La Retrobox n'est pas une simple console, c'est un moyen de partage avec vos proches. Revivez les moments de votre enfance, de votre adolescence ou même de parents surveillants leur enfant."
     },
     "advantages": {
       "title":"Plein d'advantages...",
       "library": {
         "title": "Une bibliothèque exeptionnelle",
-        "description": "Plus de 25,000 jeux en libre accès disponible gratuitement, découvrez plus de 25,000 jeux installable en quelques cliques grâce à notre bibliothèque"
+        "description": "Plus de 25,000 jeux en libre accès disponible gratuitement, découvrez plus de 25,000 jeux installables en quelques cliques grâce à notre bibliothèque"
       },
       "easy": {
         "title": "Une console sans prise de tête",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."
+        "description": "Commandez, recevez, montez, apprenez puis jouez !"
       },
       "connected": {
         "title": "Une console connectée",
-        "description": "Une console connectée, visionnez l’état de votre console à distance et contrôlez la dans les moindres détails (même depuis votre smartphone)"
+        "description": "Une console connectée, visionnez l’état de votre console à distance et contrôlez-la dans les moindres détails (même depuis votre smartphone)"
       },
       "flexible": {
         "title": "Flexible",
-        "description": "Un maximum de possibilité, poussez plus loin le principe de la console portable, branchez la à votre TV et jouez sans problème dans votre canapé"
+        "description": "Un maximum de possibilités, poussez plus loin le principe de la console portable, branchez-la à votre TV et jouez sans problème dans votre canapé"
       }
     },
     "start_now": {
