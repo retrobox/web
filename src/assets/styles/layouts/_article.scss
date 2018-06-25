@@ -143,23 +143,30 @@
   }
 
   .content {
-
     .team-mosaic {
+      margin-top: 0.5em;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      justify-content: space-between;
       .team-item {
-        margin-right: 2em;
+        margin-right: 1.5em;
+        text-align: center;
         .team-item-title {
           margin-top: 0.3em;
           margin-bottom: 0.2em;
           font-size: 1.4em;
           font-weight: 300;
         }
+        .team-item-image {
+          width: 10em;
+        }
         .team-item-description {
           font-size: 0.9em;
-        }
+          }
 
+      }
+
+      .team-item:last-of-type{
+       margin-right: 0;
       }
     }
     color: #525252;

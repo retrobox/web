@@ -15,7 +15,7 @@
 
                     <div class="team-mosaic">
                         <div class="team-item" v-for="member in members">
-                            <img :src="member.image" alt="avatar">
+                            <img class="team-item-image" :src="member.image" alt="avatar">
                             <p class="team-item-title">{{member.name}}</p>
                             <p class="team-item-description">{{member.description}}</p>
                         </div>
