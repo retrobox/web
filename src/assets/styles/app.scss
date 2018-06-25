@@ -6,6 +6,8 @@
 @import "helpers/_button.scss";
 @import "helpers/_link.scss";
 
+@import "../../../node_modules/vue-directive-tooltip/css/index.css";
+
 @import "layouts/_article.scss";
 @import "layouts/_body.scss";
 @import "layouts/_buy.scss";
