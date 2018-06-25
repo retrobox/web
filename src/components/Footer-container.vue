@@ -14,7 +14,7 @@
             </a>
             <a class="partnership-cci partnership-item" href="https://www.portesdenormandie.cci.fr/" v-tooltip.top="$t('partnership.cci.title')">
                 <div class="partnership-cci-image partnership-image">
-                  <img src="../assets/img/ccinormandie.jpg" alt="Logo CCI Normandie">
+                  <img src="../assets/img/ccinormandie.png" alt="Logo CCI Normandie">
                 </div>
             </a>
             <a class="partnership-creative-commons partnership-item" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" v-tooltip.top="$t('partnership.creative-commons.title')">
