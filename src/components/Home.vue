@@ -27,7 +27,7 @@
                     </p>
                 </div>
                 <div class="landing-about-pic">
-                    <img src="https://files.lefuturiste.fr/direct/2CC39D20F1F2EC8A4CDA.png">
+                    <img src="http://static.retrobox.tech/img/about/RETROBOX1.png">
                 </div>
             </div>
         </section>
