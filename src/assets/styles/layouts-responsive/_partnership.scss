@@ -2,18 +2,22 @@
   .partnership-content {
     display: flex;
     flex-direction: column;
-    a:first-of-type {
+
+    .partnership-item:first-of-type {
       margin-bottom: 1em;
     }
-    a {
+
+    .partnership-item {
       display: flex;
       text-align: center;
       justify-content: center !important;
       flex-direction: column !important;
+      margin-top: 25px !important;
+      margin-bottom: 15px !important;
 
-    }
-    .partnership-creative-commons-image {
-      margin-top: 15px;
+      .partnership-title {
+        margin-top: 1em;
+      }
     }
   }
 }

@@ -1,40 +1,40 @@
 .partnership-container {
   .partnership-content {
     display: grid;
-    grid-template-columns: 40% 60%;
-    .partnership-dyjixeu {
+    grid-template-columns: 30% 30% 30%;
+    grid-column-gap: 20px;
+    text-align: center;
 
+    .partnership-item {
+      color: #7f8c8d;
+      transition: 0.2s opacity;
+      display: flex;
+      align-items: center;
+
+      .partnership-image {
+        margin-right: 1.5em;
+      }
+    }
+
+    .partnership-dyjixeu {
       .partnership-dyjixeu-image {
         img {
           width: 10em;
-          margin-top: 15px;
         }
       }
     }
+
     .partnership-lyceealain {
-        .partnership-lyceealain-image {
-            img {
-              width: 5em;
-              margin-top: 5px;
-          }
-        }
-      }
-    .partnership-creative-commons {
-      display: flex;
-      flex-direction: row-reverse;
-      align-items: center;
-      .partnership-creative-commons-image {
-        margin-right: 1.5em;
+      .partnership-lyceealain-image {
         img {
-          margin-top: 0;
+          width: 5em;
         }
       }
     }
-    a {
-      color: #7f8c8d;
-      transition: 0.2s opacity;
-    }
-    a:hover {
+
+    .partnership-creative-commons {}
+
+    .partnership-item:hover {
       opacity: 0.8;
       transition: 0.2s opacity;
     }

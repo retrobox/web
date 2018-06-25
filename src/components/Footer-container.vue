@@ -2,28 +2,28 @@
   <div>
     <div class="partnership-container">
         <div class="partnership-content container mx-auto">
-            <a class="partnership-dyjixeu" href="https://dyjix.eu/?ref=retrobox.tech">
-                <div class="partnership-dyjixeu-title">
-                    {{$t('partnership.dyjixeu.title')}}
-                </div>
-                <div class="partnership-dyjixeu-image">
+            <a class="partnership-dyjixeu partnership-item" href="https://dyjix.eu/?ref=retrobox.tech">
+                <div class="partnership-dyjixeu-image partnership-image">
                     <img src="../assets/img/dyjixeu.png" alt="Logo Dyjix.eu">
                 </div>
-            </a>
-                <a class="partnership-lyceealain" href="https://lyceealainalencon.fr/">
-                    <div class="partnership-lyceealain-title">
-                        {{$t('partnership.lyceealain.title')}}
-                    </div>
-                    <div class="partnership-lyceealain-image">
-                        <img src="../assets/img/lyceealain.png" alt="Logo Lycée Alain">
-                  </div>
-                </a>
-            <a class="partnership-creative-commons" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
-                <div class="partnership-creative-commons-title">
-                    {{$t('partnership.creative-commons.title')}}
+                <div class="partnership-dyjixeu-title partnership-title">
+                    {{$t('partnership.dyjixeu.title')}}
                 </div>
-                <div class="partnership-creative-commons-image">
+            </a>
+            <a class="partnership-lyceealain partnership-item" href="https://lyceealainalencon.fr/">
+                <div class="partnership-lyceealain-image partnership-image">
+                  <img src="../assets/img/lyceealain.png" alt="Logo Lycée Alain">
+                </div>
+                <div class="partnership-lyceealain-title partnership-title">
+                    {{$t('partnership.lyceealain.title')}}
+                </div>
+            </a>
+            <a class="partnership-creative-commons partnership-item" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+                <div class="partnership-creative-commons-image partnership-image">
                     <img src="../assets/img/creative-commons.png" alt="Logo Creative Commons">
+                </div>
+                <div class="partnership-creative-commons-title partnership-title">
+                    {{$t('partnership.creative-commons.title')}}
                 </div>
             </a>
         </div>
