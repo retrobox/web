@@ -18,12 +18,12 @@ $opacity: 0.8;
       }
 
       a, .button {
-        color: rgba(34, 47, 62, 0.7) !important;
+        color: #e0e0e0 !important;
         font-weight: 200;
       }
       a:hover, .button:hover {
         transition: color 0.1s ease-in-out;
-        color: rgba(34, 47, 62, 1) !important;
+        color: #9e9e9e !important;
       }
       .locale_selection {
         padding-left: 5px;
@@ -31,7 +31,7 @@ $opacity: 0.8;
       .account {
         a:first-of-type {
           padding-right: 1.2em;
-          border-right: 1px solid rgba(87, 101, 116, 0.5);
+          border-right: 1px solid #e0e0e0;
         }
         a:last-of-type {
           padding-left: 1.2em;
@@ -53,7 +53,7 @@ $opacity: 0.8;
     }
   }
   .header-background-back {
-    background: rgba(236, 240, 241, 0.8) url("../../assets/img/back.jpg");
+    background: #212121 url("../../assets/img/back.jpg");
     background-size: cover;
     height: 84px;
   }
@@ -65,7 +65,7 @@ $opacity: 0.8;
   }
   .header-content {
     a {
-      color: #ecf0f1;
+      color: #e0e0e0;
       text-decoration: none;
     }
     a:hover {
@@ -146,7 +146,7 @@ $opacity: 0.8;
     padding-bottom: 1em;
     width: 100%;
     color: white;
-    background-color: rgba(52, 73, 94, 1);
+    background-color: #212121;
 
     .container {
       justify-content: space-between;
