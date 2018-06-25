@@ -9,6 +9,7 @@ import Icon from 'vue-awesome/components/Icon'
 import {store} from './store'
 import 'vue-awesome/icons'
 import VModal from 'vue-js-modal'
+import Tooltip from 'vue-directive-tooltip';
 import VueCookie from 'vue-cookie'
 
 console.log(process.env);
@@ -18,6 +19,7 @@ Vue.use(VueI18n)
 Vue.component('icon', Icon)
 Vue.use(Transitions)
 Vue.use(VueCookie)
+Vue.use(Tooltip);
 
 Vue.config.productionTip = false
 

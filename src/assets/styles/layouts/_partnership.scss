@@ -1,8 +1,7 @@
 .partnership-container {
   .partnership-content {
     display: grid;
-    grid-template-columns: 30% 30% 30%;
-    grid-column-gap: 20px;
+    grid-template-columns: 25% 25% 25% 25%;
     text-align: center;
 
     .partnership-item {
@@ -10,9 +9,9 @@
       transition: 0.2s opacity;
       display: flex;
       align-items: center;
-
+      display: flex;
+      justify-content: center;
       .partnership-image {
-        margin-right: 1.5em;
       }
     }
 

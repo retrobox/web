@@ -2,36 +2,24 @@
   <div>
     <div class="partnership-container">
         <div class="partnership-content container mx-auto">
-            <a class="partnership-dyjixeu partnership-item" href="https://dyjix.eu/?ref=retrobox.tech">
+            <a class="partnership-dyjixeu partnership-item" href="https://dyjix.eu/?ref=retrobox.tech" v-tooltip.top="$t('partnership.dyjixeu.title')">
                 <div class="partnership-dyjixeu-image partnership-image">
                     <img src="../assets/img/dyjixeu.png" alt="Logo Dyjix.eu">
                 </div>
-                <div class="partnership-dyjixeu-title partnership-title">
-                    {{$t('partnership.dyjixeu.title')}}
-                </div>
             </a>
-            <a class="partnership-lyceealain partnership-item" href="https://lyceealainalencon.fr/">
+            <a class="partnership-lyceealain partnership-item" href="https://lyceealainalencon.fr/" v-tooltip.top="$t('partnership.lyceealain.title')">
                 <div class="partnership-lyceealain-image partnership-image">
                   <img src="../assets/img/lyceealain.png" alt="Logo Lycée Alain">
                 </div>
-                <div class="partnership-lyceealain-title partnership-title">
-                    {{$t('partnership.lyceealain.title')}}
-                </div>
             </a>
-            <a class="partnership-cci partnership-item" href="https://www.portesdenormandie.cci.fr/">
+            <a class="partnership-cci partnership-item" href="https://www.portesdenormandie.cci.fr/" v-tooltip.top="$t('partnership.cci.title')">
                 <div class="partnership-cci-image partnership-image">
                   <img src="../assets/img/ccinormandie.jpg" alt="Logo CCI Normandie">
                 </div>
-                <div class="partnership-cci-title partnership-title">
-                    {{$t('partnership.cci.title')}}
-                </div>
             </a>
-            <a class="partnership-creative-commons partnership-item" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+            <a class="partnership-creative-commons partnership-item" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" v-tooltip.top="$t('partnership.creative-commons.title')">
                 <div class="partnership-creative-commons-image partnership-image">
                     <img src="../assets/img/creative-commons.png" alt="Logo Creative Commons">
-                </div>
-                <div class="partnership-creative-commons-title partnership-title">
-                    {{$t('partnership.creative-commons.title')}}
                 </div>
             </a>
         </div>
