@@ -1,0 +1,23 @@
+.partnership-container {
+  .partnership-content {
+    display: flex;
+    flex-direction: column;
+
+    .partnership-item:first-of-type {
+      margin-bottom: 1em;
+    }
+
+    .partnership-item {
+      display: flex;
+      text-align: center;
+      justify-content: center !important;
+      flex-direction: column !important;
+      margin-top: 25px !important;
+      margin-bottom: 15px !important;
+
+      .partnership-title {
+        margin-top: 1em;
+      }
+    }
+  }
+}

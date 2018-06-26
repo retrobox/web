@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:200,300,400,800');
+@import url('https://use.fontawesome.com/releases/v5.0.13/css/all.css');
+
+@import "extends/_tailwind.scss";
+
+@import "helpers/_button.scss";
+@import "helpers/_link.scss";
+
+@import "../../../node_modules/vue-directive-tooltip/css/index.css";
+
+@import "layouts/_article.scss";
+@import "layouts/_body.scss";
+@import "layouts/_buy.scss";
+@import "layouts/_colored-divider.scss";
+@import "layouts/_cover.scss";
+@import "layouts/_footer.scss";
+@import "layouts/_header.scss";
+@import "layouts/_landing.scss";
+@import "layouts/_locales-selector.scss";
+@import "layouts/_socials.scss";
+@import "layouts/_mobile-nav.scss";
+@import "layouts/_not-found.scss";
+@import "layouts/_newsletter.scss";
+@import "layouts/_community.scss";
+@import "layouts/_loading.scss";
+@import "layouts/_partnership.scss";
+@import "layouts/_shop.scss";
+
+@media (max-width: 700px) {
+  @import 'layouts-responsive/_article.scss';
+  @import 'layouts-responsive/_container.scss';
+  @import "layouts-responsive/_buy.scss";
+  @import 'layouts-responsive/_footer.scss';
+  @import "layouts-responsive/_newsletter.scss";
+  @import 'layouts-responsive/_header.scss';
+  @import 'layouts-responsive/_landing.scss';
+  @import 'layouts-responsive/_locales-selector.scss';
+  @import "layouts-responsive/_community.scss";
+  @import "layouts-responsive/_partnership.scss";
+}

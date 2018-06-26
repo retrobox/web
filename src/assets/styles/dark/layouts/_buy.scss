@@ -1,0 +1,93 @@
+.buy {
+  .buy-nav {
+    //margin-top: 2em;
+    margin-bottom: 1em;
+
+    a {
+      transition: 0.2s color;
+    }
+    a:hover {
+      transition: 0.2s color;
+    }
+  }
+  .buy-content {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 0.5em;
+    // .buy-title {
+    //   margin-bottom: 1em;
+    //   font-size: 1.6em;
+    //   font-weight: lighter;
+    // }
+    .buy-description-container {
+      margin-top: 0.6em;
+      font-weight: 500;
+      font-size: 1em;
+      .buy-description {
+        width: 90%;
+        margin-bottom: 1.2em;
+        line-height: 1.5em;
+        ul {
+          margin-top: 1em;
+          margin-bottom: 2em;
+        }
+      }
+
+      .buy-price {
+        font-size: 2.3em;
+        font-weight: 100;
+        margin-bottom: 0.7em;
+        opacity: 0.8;
+      }
+
+      .buy-actions {
+        .action-buy {
+          padding: 10px 15px 10px 15px;
+          font-size: 1.3em;
+          font-weight: 400;
+          i {
+            margin-right: 1em;
+          }
+        }
+      }
+
+      .buy-ways-container {
+        margin-top: 1.4em;
+        .hint {
+          opacity: 0.8;
+          margin-bottom: 0.2em;
+        }
+        .buy-ways-mosaic {
+          display: flex;
+          width: 60%;
+          font-size: 3.2em;
+          justify-content: space-between;
+          color: #34495e;
+          .buy-way {
+            opacity: 0.5;
+            transition: 0.2s opacity;
+          }
+          .buy-way:hover {
+            transition: 0.2s opacity;
+            opacity: 0.9;
+          }
+        }
+      }
+    }
+    .buy-images-container {
+      .buy-images-mosaic {
+
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+
+        .buy-image-item {
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
