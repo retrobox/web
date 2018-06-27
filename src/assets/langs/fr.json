@@ -123,11 +123,30 @@
   "legals": "Mentions légales",
   "our-team-members": "Nos membres d'équipe",
   "shop": {
+    "item": {
+      "title": "Article",
+      "version": "Version",
+      "price": "Prix"
+    },
     "title": "Boutique",
+    "checkout": "Payer",
     "cart": {
       "title": "Panier",
       "items": "Aucun articles | Un article | {count} articles",
-      "empty": "Panier vide"
+      "empty": "Panier vide",
+      "add": "Ajouter",
+      "remove": "Retirer",
+      "added": {
+        "title": "Article ajouté!",
+        "description": "Un article vient d'être ajouté à votre panier"
+      },
+      "removed": {
+        "title": "Article retiré!",
+        "description": "Un article vient d'être retiré de votre panier"
+      }
+    },
+    "category": {
+      "empty": "Aucun articles dans cette catégorie"
     },
     "index": {
       "empty": "Aucun articles disponibles"

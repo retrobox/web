@@ -158,7 +158,7 @@
             set_locale: function (locale) {
                 Vue.config.lang = locale
                 this.activeLocale = locale
-                this.$cookie.set('locale', locale)
+                this.$cookie.set('locale', locale, { expires: '365D' })
                 this.$i18n.locale = Vue.config.lang
                 this.$modal.hide('locale_selection')
                 this.$store.commit('SET_TITLE', this.$store.state.title_context)

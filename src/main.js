@@ -12,6 +12,8 @@ import VModal from 'vue-js-modal'
 import Tooltip from 'vue-directive-tooltip';
 import VueCookie from 'vue-cookie'
 
+import VueApitator from './apitator'
+
 console.log(process.env);
 
 Vue.use(VModal, {dialog: true})
@@ -22,6 +24,15 @@ Vue.use(VueCookie)
 Vue.use(Tooltip);
 
 Vue.config.productionTip = false
+
+Vue.use(VueApitator, {
+    rootUrl: process.env.API_ENDPOINT,
+    graphQLUrl: process.env.API_ENDPOINT + "/graphql",
+    params: {
+        timeout: 190000
+    }
+});
+
 
 // Create VueI18n instance with options
 const i18n = new VueI18n({
