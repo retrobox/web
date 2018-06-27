@@ -10,15 +10,6 @@ $opacity: 0.9;
   height: 258.6px;
   width: 100%;
   margin-top: -258.6px;
-  // background-image: radial-gradient(
-  //   circle,
-  //   rgba(56, 173, 169, $opacity),
-  //   rgba(47, 168, 163, $opacity),
-  //   rgba(37, 163, 157, $opacity),
-  //   rgba(25, 158, 152, $opacity),
-  //   rgba(7, 153, 146, $opacity)
-  // );
-  // background-image: radial-gradient(circle at 47% 9%,rgba(0, 0, 255, 0.5),rgba(0, 0, 0, 0.5));
   background-color: rgba(44, 62, 80, 0.6);
   .newsletter-content {
     display: flex;
@@ -43,6 +34,15 @@ $opacity: 0.9;
       width: 100%;
       .newsletter-form-input {
         margin-right: 1.1em;
+
+        input {
+          background-color: #FAFAFA;
+          transition: 0.2s box-shadow;
+        }
+        input:focus {
+          box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+          transition: 0.2s box-shadow;
+        }
       }
       .newsletter-form-button button {
         height: 39px;
