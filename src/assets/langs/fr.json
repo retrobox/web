@@ -28,7 +28,7 @@
     "title": "Communauté",
     "page": {
       "title": "Rejoignez notre communauté",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut!"
+      "description": "Venez poser vos questions, partagez vos éxpériences, échangez avec les créateurs de la console !"
     }
   },
   "buy": "Acheter",
@@ -45,7 +45,7 @@
       "email_placeholder": "john@example.com"
     },
     "success": {
-      "title": "Félicitation !",
+      "title": "Félicitations !",
       "description": "Vous vous êtes inscrit à la newsletter"
     },
     "error": {
@@ -77,37 +77,37 @@
     "sub_title": "Avec la Rétrobox, jouez à vos jeux rétro préférés de façon simple et accessible",
     "go": "En savoir plus",
     "about": {
-      "title": "Simplicité, Nostalgie, Partage...",
-      "description": "La Retrobox n'est pas une simple console, c'est un moyen de partage avec vos proches. Revivez les moments de votre enfance, de votre adolescence ou même de parents surveillants leur enfant."
+      "title": "Simplicité, Nostalgie, Modernité ...",
+      "description": "La Retrobox est une console portable permettant d'émuler tout les jeux jusqu'à la PS1, cela n'a jamais étais aussi accessible pour jouer à vos anciens jeux favoris. La console embarque les technologies modernes comme le wifi pour se connecter à votre ordinateur ou votre smartphone et le bluetooth pour connecter un casque ou une manette. La console est dôté d'une sortie HDMI pour jouer même sur votre TV ! Avec ses 8h d'autonomie, des heures et des heures de plaisir dans votre poche"
     },
     "advantages": {
       "title":"Plein d'advantages...",
       "library": {
         "title": "Une bibliothèque exeptionnelle",
-        "description": "Plus de 25,000 jeux en libre accès disponible gratuitement, découvrez plus de 25,000 jeux installables en quelques cliques grâce à notre bibliothèque"
+        "description": "Des dizaines de milliers de jeux développés en 20 ans, des centaines de jeux originaux créés par des fans à portée de clics !"
       },
       "easy": {
-        "title": "Une console sans prise de tête",
-        "description": "Commandez, recevez, montez, apprenez puis jouez !"
+        "title": "Une console personnalisable",
+        "description": "Avez-vous déjà voulu avoir une console unique ? A l'achat choisissez la console qui vous correspond sans suppléments ! "
       },
       "connected": {
         "title": "Une console connectée",
         "description": "Une console connectée, visionnez l’état de votre console à distance et contrôlez-la dans les moindres détails (même depuis votre smartphone)"
       },
       "flexible": {
-        "title": "Flexible",
-        "description": "Un maximum de possibilités, poussez plus loin le principe de la console portable, branchez-la à votre TV et jouez sans problème dans votre canapé"
+        "title": "Une console qui s'adapte",
+        "description": "Un maximum de possibilités, poussez plus loin le principe de la console portable, branchez-la à votre TV et jouez dans votre canapé avec ceux que vous aimez !"
       }
     },
     "start_now": {
       "title": "Commence dès maintenant",
       "kited": {
         "title": "Version kit",
-        "description": "Tu aime l'électronique, monte ta propre console grâce à cette version et personalise là !"
+        "description": "Vous aimez l'électronique et voulez apprendre à souder ? Rien de plus facile, commandez la version kit avec tout ses manuels explicatifs !"
       },
       "non_kited": {
         "title": "Version pré-assemblée",
-        "description": "Commence l'aventure directement, sans te soucier du coté technique !"
+        "description": "Commencez l'aventure directement, sans se soucier du coté technique. Plus qu'à allumez la console ! (soudée par nos soins dans l'Orne)"
       }
     }
   },
