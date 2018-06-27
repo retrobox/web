@@ -12,7 +12,7 @@ $landing-main-section-opacity: 0.8;
   height: $landing-main-section-height;
   justify-content: center;
   align-items: center;
-
+  box-shadow: 1px 1px 8px #000000;
   .landing-main-content {
     position: relative;
     top: -1em;
@@ -54,8 +54,10 @@ Landing about
 .landing-about {
   display: flex;
   justify-content: center;
+  box-shadow: 1px 1px 8px #000000;
   align-items: center;
   background-image: linear-gradient(to right bottom, #82ccdd, #60a6bf, #4181a0, #255e81, #0a3d62);
+
   .landing-about-content {
     color: #ecf0f1;
     margin-top: 6em;
@@ -75,8 +77,8 @@ Landing about
 
     .landing-about-pic {
       img {
-        width: 500px;
-        height: 140px;
+        width: 382px;
+        height: 174px;
       }
     }
   }
@@ -108,13 +110,25 @@ Landing columns
         justify-content: center;
         width: 50px;
         height: 50px;
-        background-color: #e53935;
         border-radius: 50%;
         padding: 10px 10px 10px 10px;
+      }
+      .type-game {
+        background-color: #ff4c4c;
+      }
+      .type-easy {
+        background-color: #ffff4c;
+      }
+      .type-connected {
+        background-color: #4dff4c;
+      }
+      .type-switch {
+        background-color: #4cffff;
       }
       i {
         color: white;
         font-size: 1.5em;
+        filter: drop-shadow(0px 0px 3px rgba(0,0,0,.5));
       }
 
     }
@@ -137,6 +151,7 @@ Landing advantages
 .landing-advantages {
   display: flex;
   justify-content: center;
+  box-shadow: 1px 1px 8px #000000;
   align-items: center;
   background-image: linear-gradient(to right bottom, #6a89cc, #536eb0, #3d5495, #263b7b, #0c2461);
   .landing-advantages-content {
@@ -168,11 +183,11 @@ landing start **/
 .landing-startnow-content {
   margin-top: 2em;
   .type-kited .landing-column-icon div {
-    background-color: #0d47a1;
+    background-color: #4d4cff;
   }
 
   .type-already .landing-column-icon div {
-    background-color: #ec407a;
+    background-color: #ff4cff;
   }
 
   .landing-column-footer {
@@ -196,4 +211,5 @@ landing start **/
 
 .landing-bottom {
   margin-bottom: 2em;
+  box-shadow: 1px 1px 8px #000000;
 }
