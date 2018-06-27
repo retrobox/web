@@ -40,7 +40,7 @@
                 <div class="landing-columns">
                     <div class="landing-column">
                         <div class="landing-column-icon">
-                            <div>
+                            <div class="type-game">
                                 <i class="icon fas fa-gamepad"></i>
                             </div>
                         </div>
@@ -56,7 +56,7 @@
                     </div>
                     <div class="landing-column">
                         <div class="landing-column-icon">
-                            <div>
+                            <div class="type-easy">
                                 <i class="icon fas fa-plug"></i>
                             </div>
                         </div>
@@ -71,7 +71,7 @@
                     </div>
                     <div class="landing-column">
                         <div class="landing-column-icon">
-                            <div>
+                            <div class="type-connected">
                                 <i class="icon fas fa-tachometer-alt"></i>
                             </div>
                         </div>
@@ -87,7 +87,7 @@
                     </div>
                     <div class="landing-column">
                         <div class="landing-column-icon">
-                            <div>
+                            <div class="type-switch">
                                 <i class="icon fas fa-gamepad"></i>
                             </div>
                         </div>
