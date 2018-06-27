@@ -12,6 +12,22 @@
                 <footer-container/>
             </div>
         </fade-transition>
+
+        <modal name="modal_alert" class="alert-modal">
+            <div class="alert-container">
+                <div class="alert-content">
+                    <i class="fas fa-exclamation-circle icon text-red" v-if="$store.state.alert.type == 'error'"></i>
+                    <i class="fas fa-check-circle icon text-green" v-if="$store.state.alert.type == 'success'"></i>
+                    <h3 class="alert-title">{{$store.state.alert.title}}</h3>
+                    <p>{{$store.state.alert.description}}</p>
+                </div>
+            </div>
+
+            <div class="button bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 cancel-button"
+                 @click="$store.commit('REMOVE_ALERT')">
+                {{$t('close')}}
+            </div>
+        </modal>
     </div>
 </template>
 
@@ -29,6 +45,15 @@
             return {
                 show: false
             }
+        },
+        watch: {
+          "$store.state.alert.enabled": function (status) {
+              if(status){
+                this.$modal.show('modal_alert')
+              }else{
+                this.$modal.hide('modal_alert')
+              }
+          }
         },
         created() {
             if (this.$cookie.get('locale') == null) {

@@ -1,12 +1,12 @@
 <template>
     <div>
         <fade-transition group>
-            <div v-if="loading" key="loading">
+            <div v-if="$store.state.loading" key="$store.state.loading">
                 <div class="loading">
                     <icon name="sync" spin scale="3"></icon>
                 </div>
             </div>
-            <div v-if="loading == false" key="loading">
+            <div v-if="$store.state.loading == false" key="$store.state.loading">
                 <div class="cover-title">
                     <div class="cover-title-content container mx-auto">
                         <h1>{{$t('shop.title')}}</h1>
@@ -29,10 +29,16 @@
                             <div class="shop-index-category" v-for="category in items">
                                 <h3 class="dividing shop-index-category-title">{{category.title}}</h3>
                                 <div class="shop-index-category-items">
-                                    <div class="shop-card" v-for="item in category.items">
-                                        <div class="shop-card-thumb" :style="'background-image: url(' + item.thumb + ')'"></div>
+                                    <div class="shop-category-empty" v-if="category.items.length == 0">
+                                      <div>
+                                        <i class="icon far fa-times-circle" />
+                                        <p>{{$t('shop.category.empty')}}</p>
+                                      </div>
+                                    </div>
+                                    <div class="shop-card" v-for="item in category.items" v-if="category.items.length > 0" @click="$router.push({name: 'ShopItem', params: {slug:item.slug}})">
+                                        <div class="shop-card-thumb" :style="'background-image: url(' + item.image + ')'"></div>
                                         <div class="shop-card-content">
-                                            <h4 class="shop-card-title">{{item.name}}</h4>
+                                            <h4 class="shop-card-title">{{item.title}}</h4>
                                             <p class="shop-card-description">{{item.description}}</p>
                                             <div class="shop-card-footer">
                                                 <span class="price">€ {{item.price}}</span>
@@ -62,7 +68,6 @@
         name: 'ShopIndex',
         data() {
             return {
-                loading: true,
                 items: []
             }
         },
@@ -80,8 +85,26 @@
                     root: this.$t('shop.title')
                 })
                 this.$store.commit('SET_TITLE', this.$t('shop.title'))
-                this.items = require('../../assets/content/' + this.$i18n.locale + '/shop.json').category
-                this.loading = false
+                this.$apitator.query(this, {
+                    body: {
+                        query: `query {
+                          getManyShopCategories{
+                            id,
+                            title,
+                            items {
+                              id,
+                              slug,
+                              title,
+                              image,
+                              price,
+                              description_short
+                            }
+                          }
+                        }`
+                    }
+                }).then((response) => {
+                    this.items = response.data.data.getManyShopCategories
+                })
             }
         },
         created() {

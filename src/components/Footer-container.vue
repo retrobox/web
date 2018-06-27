@@ -62,7 +62,7 @@
                 <div class="footer-links">
                     <ul>
                         <li>
-                            <a @click="$router.push({name: 'Shop'})">{{$t('shop.title')}}</a>
+                            <a @click="$router.push({name: 'ShopIndex'})">{{$t('shop.title')}}</a>
                         </li>
 
                         <li>

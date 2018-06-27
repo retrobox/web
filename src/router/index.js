@@ -10,6 +10,7 @@ import DocumentationHome from '@/components/Documentation/Home'
 import DocumentationPage from '@/components/Documentation/Page'
 import ShopIndex from '@/components/Shop/Index'
 import ShopItem from '@/components/Shop/Item'
+import ShopCart from '@/components/Shop/Cart'
 import BlogIndex from '@/components/Blog/Index'
 import BlogPost from '@/components/Blog/Post'
 import NotFound from '@/components/NotFound'
@@ -63,6 +64,11 @@ export default new Router({
             path: '/shop',
             name: 'ShopIndex',
             component: ShopIndex
+        },
+        {
+            path: '/shop/cart',
+            name: 'ShopCart',
+            component: ShopCart
         },
         {
             path: '/shop/:slug',

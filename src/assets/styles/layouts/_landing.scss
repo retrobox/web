@@ -64,21 +64,21 @@ Landing about
     margin-bottom: 6em;
     width: 60%;
     display: grid;
-    grid-template-columns: 70% 200px;
+    grid-template-columns: 58% 1fr;
     grid-column-gap: 3em;
     .landing-about-text {
       line-height: 1.5em;
-
       .landing-about-title {
-
         margin-bottom: 1em;
       }
     }
 
     .landing-about-pic {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       img {
-        width: 200px;
-        height: 90px;
+        width: 60%;
       }
     }
   }
@@ -210,5 +210,5 @@ landing start **/
 
 .landing-bottom {
   margin-bottom: 2em;
-  box-shadow: 1px 1px 8px #000000;
+  box-shadow: 1px 1px 12px #000000;
 }

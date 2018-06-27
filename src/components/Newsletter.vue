@@ -28,22 +28,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <modal name="newsletter_alert" class="newsletter-alert-modal">
-            <div class="newsletter-alert-container">
-                <div class="newsletter-alert-content">
-                    <i class="fas fa-exclamation-circle icon text-red" v-if="!alert.success"></i>
-                    <i class="fas fa-check-circle icon text-green" v-if="alert.success"></i>
-                    <h3 class="newsletter-alert-title">{{alert.title}}</h3>
-                    <p>{{alert.description}}</p>
-                </div>
-            </div>
-
-            <div class="button bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 cancel-button"
-                 @click="$modal.hide('newsletter_alert')">
-                {{$t('close')}}
-            </div>
-        </modal>
+        </div>      
     </div>
 </template>
 
