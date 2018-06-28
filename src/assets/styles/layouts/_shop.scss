@@ -41,7 +41,7 @@
   }
 }
 
-.shop-empty-container {  
+.shop-empty-container {
   background-color: #ecf0f1;
   border-radius: 10px;
   display: flex;
@@ -61,9 +61,9 @@
 }
 
 .shop-index-category-mosaic {
-   margin-bottom: 5em;
+   margin-bottom: 2em;
   .shop-index-category {
-    margin-bottom: 3em;
+    margin-bottom: 2em;
     .shop-index-category-title {
       font-weight: 400;
     }
@@ -73,6 +73,7 @@
       justify-content: center;
       padding-top: 1em;
       padding-bottom: 1em;
+      margin-bottom: 1.5em;
       opacity: 0.7;
 
       div {
@@ -85,12 +86,14 @@
     .shop-index-category-items {
       margin-top: 1.5em;
       display: flex;
+      flex-wrap: wrap;
     }
   }
 }
 
 .shop-card {
   margin-right: 3em;
+  margin-bottom: 1.5em;
   @extend .max-w-sm;
   @extend .rounded;
   @extend .overflow-hidden;
