@@ -23,6 +23,9 @@
                                 <a @click="$router.push({name: 'Community'}); $store.commit('TOGGLE_NAV')">{{$t('community.title')}}</a>
                             </li>
                             <li>
+                                <a @click="$router.push({name: 'ShopIndex'}); $store.commit('TOGGLE_NAV')">{{$t('shop.title')}}</a>
+                            </li>
+                            <li>
                                 <a @click="$router.push({name: 'ShopItem', params: {slug:'ecce-primus'}}); $store.commit('TOGGLE_NAV')">
                                     {{$t('buy')}}
                                 </a>
@@ -79,8 +82,7 @@
             <div></div>
             <div></div>
         </div>
-        <div class="header-background-back">
-        </div>
+        <div class="header-background-back"></div>
         <div class="header-background">
             <div class="container mx-auto header-content">
                 <div class="header-title-container">
@@ -104,6 +106,9 @@
                     </div>
                     <div class="nav-item with-link">
                         <a @click="$router.push({name: 'Community'})">{{$t('community.title')}}</a>
+                    </div>
+                    <div class="nav-item with-link">
+                      <a @click="$router.push({name: 'ShopIndex'})">{{$t('shop.title')}}</a>
                     </div>
                     <div class="nav-item with-button">
                         <a @click="$router.push({name: 'ShopItem', params: {slug:'ecce-primus'}})"
