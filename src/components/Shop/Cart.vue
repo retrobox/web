@@ -40,13 +40,19 @@
                               {{$t('shop.cart.remove')}}
                           </a></div>
                         </div>
+                        <div class="list-row">
+                          <div>{{$t('shop.cart.total')}}</div>
+                          <div></div>
+                          <div>€ {{total}}</div>
+                          <div></div>
+                        </div>
                       </div>
                       <div class="shop-cart-bill-container">
                         <div class="shop-cart-bill-amount">
                            <span>{{ $tc('shop.cart.items', $store.state.cart.length, { count: $store.state.cart.length }) }}</span>
                         </div>
                         <div class="shop-cart-bill-checkout">
-                          <a class="checkout-button bg-blue hover:bg-blue-light text-white font-bold py-4 px-8 rounded inline-flex items-center button">
+                          <a @click="checkout" class="checkout-button bg-blue hover:bg-blue-light text-white font-bold py-4 px-8 rounded inline-flex items-center button">
                               <icon name="shopping-cart" class="icon"></icon>
                               {{$t('shop.checkout')}}
                           </a>
@@ -67,15 +73,14 @@
         name: 'Cart',
         data() {
             return {
-
+                total: 0
             }
         },
         watch: {
-            '$i18n.locale' () {
-                this.fetchData()
-            },
-            '$route.params' () {
-                this.fetchData()
+            '$store.state.cart' () {
+               this.$store.state.cart.forEach((item) => {
+                 this.total = this.total + item.price
+               })
             }
         },
         components: {
@@ -97,9 +102,18 @@
                 description: this.$t('shop.cart.added.description')
               })
             }
+          },
+          checkout: function () {
+            if (this.$cookie.get('user_token') == null) {
+              //call login function
+              this.$modal.show('login_or_register')
+            }
           }
         },
         created() {
+          this.$store.state.cart.forEach((item) => {
+            this.total = this.total + item.price
+          })
           this.$store.commit('SET_LOCATION', {
               root: this.$t('shop.title'),
               sub_root: this.$t('shop.cart.title')

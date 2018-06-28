@@ -183,6 +183,10 @@ export default {
         } else {
           this.item.description_long = marked(this.item.description_long)
           this.$store.commit('SET_TITLE', this.item.title)
+          this.$store.commit('SET_LOCATION', {
+            root: this.$t('shop.title'),
+            sub_root: this.item.title
+          })
         }
       })
     }

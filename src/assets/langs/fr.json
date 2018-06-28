@@ -6,6 +6,7 @@
   "english_flag": "Drapeau anglais",
   "login": "Connexion",
   "register": "Inscription",
+  "login-or-register": "Connectez-vous ou inscrivez-vous",
   "home": "Accueil",
   "docs": "Documentation",
   "previous": "Précédent",
@@ -136,6 +137,7 @@
       "empty": "Panier vide",
       "add": "Ajouter",
       "remove": "Retirer",
+      "total": "Total",
       "added": {
         "title": "Article ajouté!",
         "description": "Un article vient d'être ajouté à votre panier"

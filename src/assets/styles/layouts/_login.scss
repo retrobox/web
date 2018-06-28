@@ -16,3 +16,41 @@
     }
   }
 }
+.login-or-register-modal{
+  .modal-container {
+    height: 86%;
+    .login-or-register-title {
+      padding-top: 1.9em;
+      margin-bottom: 0em;
+      text-align: center;
+    }
+    .login-or-register-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 3.4em;
+    }
+    .login-or-register {
+      display: flex;
+      flex-direction: column;
+      a {
+        font-size: 1.2em !important;
+        border-right: none !important;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        .icon {
+          margin-right: 1em !important;
+        }
+        .text {
+          display: block !important;
+        }
+      }
+      a:last-of-type {
+        margin-top: 2em;
+      }
+    }
+  }
+  .button {
+    text-align: center;
+  }
+}
