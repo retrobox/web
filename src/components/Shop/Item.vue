@@ -180,7 +180,7 @@ export default {
         this.item = response.data.data.getOneShopItem
         if (this.item == null) {
           this.$store.commit('SET_TITLE', this.$t('not-found.title'))
-        }else{
+        } else {
           this.item.description_long = marked(this.item.description_long)
           this.$store.commit('SET_TITLE', this.item.title)
         }

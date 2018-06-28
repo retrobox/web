@@ -1,5 +1,5 @@
 <template>
-    <div id="app" v-bind:class="{'no-scroll': $store.state.nav_toggled}">
+    <div id="app" v-bind:class="{'no-scroll': $store.state.nav_toggled || $store.state.alert.enabled }">
         <fade-transition v-show="show">
             <div>
                 <header-container/>
@@ -13,8 +13,9 @@
             </div>
         </fade-transition>
 
-        <modal name="modal_alert" class="alert-modal">
-            <div class="alert-container">
+        <!-- GENERIC ALERT -->
+        <modal name="modal_alert" class="modal alert-modal">
+            <div class="alert-container modal-container">
                 <div class="alert-content">
                     <i class="fas fa-exclamation-circle icon text-red" v-if="$store.state.alert.type == 'error'"></i>
                     <i class="fas fa-check-circle icon text-green" v-if="$store.state.alert.type == 'success'"></i>

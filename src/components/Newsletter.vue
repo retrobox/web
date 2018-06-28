@@ -22,7 +22,9 @@
                         <div class="newsletter-form-button">
                             <button class=" bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded button"
                                     @click="submit()">
-                                {{$t('newsletter.form.submit')}}
+                                <span v-if="loading == false">{{$t('newsletter.form.submit')}}</span>
+                                <div v-if="loading" class="newsletter-loading">
+                                    <icon name="sync" spin class="icon"></icon> {{$t('loading')}}</div>
                             </button>
                         </div>
                     </div>
@@ -39,38 +41,45 @@
         data() {
             return {
                 email: "",
-                alert: {
-                    enabled: false,
-                    success: false,
-                    title: "",
-                    description: "",
-                    icon: ""
-                }
+                loading: false
             }
         },
         methods: {
             submit: function () {
-                this.alert.title = this.$t('newsletter.error.title')
+                this.loading = true
                 if (this.email != undefined && this.email != "") {
                     axios.post('https://newsletter-api.retrobox.tech/subscribe', {
                         email: this.email
                     }).then((response) => {
-                        this.alert.success = true
-                        this.alert.title = this.$t('newsletter.success.title')
-                        this.alert.description = this.$t('newsletter.success.description')
-                        this.$modal.show('newsletter_alert')
+                        this.$store.commit('ADD_ALERT', {
+                          type: 'success',
+                          title: this.$t('newsletter.success.title'),
+                          description: this.$t('newsletter.success.description')
+                        })
+                            this.loading = false
                     }).catch((error) => {
                         if (error.response) {
-                            this.alert.description = this.$t('newsletter.error.invalid_description')
-                            this.$modal.show('newsletter_alert')
+                            this.$store.commit('ADD_ALERT', {
+                              type: 'error',
+                              title:  this.$t('newsletter.error.title'),
+                              description: this.$t('newsletter.error.invalid_description')
+                            })
                         } else {
-                            this.alert.description = this.$t('newsletter.error.api_description')
-                            this.$modal.show('newsletter_alert')
+                          this.$store.commit('ADD_ALERT', {
+                            type: 'error',
+                            title:  this.$t('newsletter.error.title'),
+                            description: this.$t('newsletter.error.api_description')
+                          })
                         }
+                            this.loading = false
                     })
                 }else{
-                    this.alert.description = this.$t('newsletter.error.missing_description')
-                    this.$modal.show('newsletter_alert')
+                  this.$store.commit('ADD_ALERT', {
+                    type: 'error',
+                    title:  this.$t('newsletter.error.title'),
+                    description: this.$t('newsletter.error.missing_description')
+                  })
+                      this.loading = false
                 }
             }
         }

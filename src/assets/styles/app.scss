@@ -26,17 +26,17 @@
 @import "layouts/_partnership.scss";
 @import "layouts/_shop.scss";
 @import "layouts/_alert.scss";
+@import "layouts/_modal.scss";
+@import "layouts/_login.scss";
 
 @media (max-width: 700px) {
   @import 'layouts-responsive/_article.scss';
   @import 'layouts-responsive/_container.scss';
   @import "layouts-responsive/_buy.scss";
   @import 'layouts-responsive/_footer.scss';
-  @import "layouts-responsive/_newsletter.scss";
   @import 'layouts-responsive/_header.scss';
   @import 'layouts-responsive/_landing.scss';
-  @import 'layouts-responsive/_locales-selector.scss';
   @import "layouts-responsive/_community.scss";
   @import "layouts-responsive/_partnership.scss";
-  @import "layouts-responsive/_alert.scss";
+  @import "layouts-responsive/_modal.scss";
 }

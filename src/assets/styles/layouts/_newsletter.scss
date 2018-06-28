@@ -43,6 +43,12 @@ $opacity: 0.9;
           transition: 0.2s background-color;
         }
       }
+      .newsletter-loading {
+        display: flex;
+        .icon {
+          margin-right: 0.5em;
+        }
+      }
       .newsletter-form-button button {
         height: 39px;
       }

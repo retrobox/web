@@ -67,14 +67,7 @@
                     <span>{{$t('actual_lang')}}</span>
                 </div>
                 <div class="account">
-                    <a href="#">
-                        <icon name="sign-in-alt" class="icon"></icon>
-                        <span class="text">{{$t('login')}}</span>
-                    </a>
-                    <a href="#">
-                        <icon name="pencil-alt" class="icon"></icon>
-                        <span class="text">{{$t('register')}}</span>
-                    </a>
+                    <login />
                 </div>
             </div>
         </div>
@@ -145,11 +138,14 @@
 <script>
     import Vue from 'vue'
     import Socials from "./Socials.vue"
+    import Login from "./Login.vue"
+    import axios from "axios"
 
     export default {
         name: 'Header-container',
         components: {
-            "socials": Socials
+            "socials": Socials,
+            "login": Login
         },
         methods: {
             locale_selection: function () {
