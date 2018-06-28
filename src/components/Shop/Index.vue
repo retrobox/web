@@ -15,11 +15,11 @@
                 <div class="container mx-auto">
                     <shop-header></shop-header>
                     <div class="shop-index-container">
-                        <div class="shop-index-empty-container" v-if="items.length == 0">
-                            <div class="shop-index-empty-icon">
+                        <div class="shop-empty-container" v-if="items.length == 0">
+                            <div class="shop-empty-icon">
                                 <icon name="times-circle" class="icon"></icon>
                             </div>
-                            <div class="shop-index-empty-title">
+                            <div class="shop-empty-title">
                                 <h3>
                                     {{$t('shop.index.empty')}}
                                 </h3>
