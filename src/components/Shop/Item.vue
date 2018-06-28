@@ -23,11 +23,11 @@
           <div class="shop-item-container">
             <div class="buy">
               <ul class="list-reset flex border-b buy-nav" v-if="item.show_version">
-                <li class="-mb-px mr-1">
+                <!-- <li class="-mb-px mr-1">
                   <a class="bg-white inline-block border-l border-t border-r rounded-t py-2 px-4 text-blue-dark font-semibold" href="#">Version kité</a>
-                </li>
-                <li class="mr-1">
-                  <a class="bg-white inline-block py-2 px-4 text-blue hover:text-blue-darker" href="#">Version non kité</a>
+                </li> -->
+                <li class="mr-1" v-for="link in item.category.items" v-bind:class="{'-mb-px': link.id == item.id }">
+                  <a class="bg-white inline-block py-2 px-4 text-blue hover:text-blue-darker" v-bind:class="{'text-blue-dark font-semibold border-l border-t border-r rounded-t': link.id == item.id }" @click="$router.push({name: 'ShopItem', params: {slug:link.slug}})">{{link.version}}</a>
                 </li>
               </ul>
               <div class="buy-content">
@@ -165,8 +165,9 @@ export default {
           		category {
           			id
           			items {
+                  id,
           				title,
-          				id,
+                  slug,
                   version
           			}
           		}
