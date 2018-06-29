@@ -11,8 +11,8 @@ import 'vue-awesome/icons'
 import VModal from 'vue-js-modal'
 import Tooltip from 'vue-directive-tooltip';
 import VueCookie from 'vue-cookie'
-
 import VueApitator from './apitator'
+import VueStripeCheckout from 'vue-stripe-checkout';
 
 console.log(process.env);
 
@@ -23,6 +23,7 @@ Vue.use(Transitions)
 Vue.use(VueCookie)
 Vue.use(Tooltip);
 
+
 Vue.config.productionTip = false
 
 Vue.use(VueApitator, {
@@ -32,9 +33,12 @@ Vue.use(VueApitator, {
         timeout: 190000
     }
 });
+Vue.use(VueStripeCheckout, {
+  key: process.env.STRIPE_PUBLIC,
+  image: 'https://i.imgur.com/sEtYLqg.png',
+  locale: 'auto'
+});
 
-
-// Create VueI18n instance with options
 const i18n = new VueI18n({
     locale: 'fr', // set locale
     messages: {

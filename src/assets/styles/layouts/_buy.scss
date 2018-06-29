@@ -61,11 +61,10 @@
         }
         .buy-ways-mosaic {
           display: flex;
-          width: 60%;
           font-size: 3.2em;
-          justify-content: space-between;
           color: #34495e;
           .buy-way {
+            margin-right: 0.4em;
             opacity: 0.5;
             transition: 0.2s opacity;
           }
@@ -90,4 +89,27 @@
       }
     }
   }
+}
+//on shop buy page an modal to see bigger the images
+.show-image-modal {
+    .modal-container {
+      height: 86%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+
+      .show-image-container {
+        height: 100%;
+        img {
+          height: 100%;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+    .button {
+      text-align: center;
+    }
 }

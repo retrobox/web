@@ -35,8 +35,36 @@
                   <!-- <h3 class="buy-title">Retrobox, console</h3> -->
                   <div class="buy-description" v-html="item.description_long">
                   </div>
+                  <div class="buy-custom-container" v-if="item.category.is_customizable">
+                      <!--custom sd size-->
+                      <div class="buy-custom-type">
+                        <div class="buy-custom-title">{{$t('shop.item.custom.storage')}}</div>
+                        <div class="buy-custom-mosaic storage">
+                          <div class="buy-custom-item"
+                               @click="selectStorage(storage)"
+                               v-bind:class="{'selected': selectedStorage == storage}"
+                               v-for="storage in storages">
+                            {{storage}} Gb
+                          </div>
+                        </div>
+                      </div>
+
+                      <!--custom color-->
+                      <div class="buy-custom-type">
+                        <div class="buy-custom-title">{{$t('shop.item.custom.color')}}</div>
+                        <div class="buy-custom-mosaic button-colors">
+                          <div class="buy-custom-item"
+                               :style="'background-color:' + color.color"
+                               v-for="color in colors"
+                               v-bind:class="{'selected': color.color == selectedColor}"
+                               @click="selectColor(color.color)"
+                               v-tooltip.top="color.name">
+                          </div>
+                        </div>
+                      </div>
+                  </div>
                   <div class="buy-price">
-                    <span>€ {{item.price}}</span>
+                    <span>€ {{price}}</span>
                   </div>
                   <div class="buy-actions">
                     <button class="action-buy bg-blue hover:bg-blue-light text-white font-bold py-2 px-4 rounded inline-flex items-center button" @click="toggleCart(item)">
@@ -57,12 +85,6 @@
                       <div class="buy-way">
                         <i class="fab fa-cc-stripe"></i>
                       </div>
-                      <div class="buy-way">
-                        <i class="fab fa-cc-amazon-pay"></i>
-                      </div>
-                      <div class="buy-way">
-                        <i class="fab fa-cc-paypal"></i>
-                      </div>
                     </div>
                   </div>
 
@@ -70,26 +92,11 @@
                 <div class="buy-images-container">
                   <div class="buy-images-content">
                     <div class="buy-image-main">
-                      <img src="https://cdn.shopify.com/s/files/1/0020/9374/4179/products/storeIMAGE_1024x1024.png?v=1526207947">
+                      <img :src="main[0].url" @click="showImage(main[0].url)" alt="">
                     </div>
                     <div class="buy-images-mosaic">
-                      <div class="buy-image-item">
-                        <img src="https://cdn.shopify.com/s/files/1/0020/9374/4179/products/storeIMAGE_1024x1024.png?v=1526207947">
-                      </div>
-                      <div class="buy-image-item">
-                        <img src="https://cdn.shopify.com/s/files/1/0020/9374/4179/products/weather_1024x1024.png?v=1526207947">
-                      </div>
-                      <div class="buy-image-item">
-                        <img src="https://cdn.shopify.com/s/files/1/0020/9374/4179/products/Fb_2.52.51_PM_1024x1024.png?v=1526207947">
-                      </div>
-                      <div class="buy-image-item">
-                        <img src="https://cdn.shopify.com/s/files/1/0020/9374/4179/products/storeIMAGE_1024x1024.png?v=1526207947">
-                      </div>
-                      <div class="buy-image-item">
-                        <img src="https://cdn.shopify.com/s/files/1/0020/9374/4179/products/weather_1024x1024.png?v=1526207947">
-                      </div>
-                      <div class="buy-image-item">
-                        <img src="https://cdn.shopify.com/s/files/1/0020/9374/4179/products/Fb_2.52.51_PM_1024x1024.png?v=1526207947">
+                      <div class="buy-image-item" v-for="image in not_main" >
+                        <img :src="image.url" @click="showImage(image.url)" alt="">
                       </div>
                     </div>
                   </div>
@@ -101,6 +108,17 @@
       </div>
     </div>
   </fade-transition>
+  <modal name="show_image" class="modal show-image-modal">
+      <div class="modal-container">
+        <div class="show-image-container">
+          <img :src="to_show" alt="">
+        </div>
+      </div>
+      <div class="button bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 cancel-button"
+           @click="$modal.hide('show_image')">
+          {{$t('close')}}
+      </div>
+  </modal>
 </div>
 </template>
 
@@ -113,7 +131,29 @@ export default {
   name: 'ShopIndex',
   data() {
     return {
-      item: {}
+      item: {},
+      //url of image to show in modal
+      to_show: "",
+      selectedStorage: 8,
+      //in gb
+      storages: [
+        8,
+        16,
+        32
+      ],
+      //in hex
+      colors: [
+        {color: "#ff0000", name: this.$t('shop.item.custom.colors.red')},
+        {color: "#ffff00", name: this.$t('shop.item.custom.colors.yellow')},
+        {color: "#00ff00", name: this.$t('shop.item.custom.colors.green')},
+        {color: "#0000ff", name: this.$t('shop.item.custom.colors.blue')},
+        {color: "#9400d3", name: this.$t('shop.item.custom.colors.purple')}
+      ],
+      selectedColor: "#ff0000",
+      main: [],
+      not_main: [],
+      //showed price
+      price: 0
     }
   },
   watch: {
@@ -122,6 +162,14 @@ export default {
     },
     '$route.params' () {
       this.fetchData()
+    },
+    'selectedStorage' () {
+      this.price = this.item.price
+      if (this.selectedStorage == 16) {
+        this.price = this.price + 2.55
+      }if (this.selectedStorage == 32){
+        this.price = this.price + 3.55
+      }
     }
   },
   components: {
@@ -129,7 +177,18 @@ export default {
     "not-found": NotFound
   },
   methods: {
+    showImage: function (url) {
+      this.to_show = url
+      this.$modal.show('show_image')
+    },
+    selectStorage: function (size) {
+      this.selectedStorage = size
+    },
+    selectColor: function (color) {
+      this.selectedColor = color
+    },
     toggleCart: function(item) {
+      item.price = this.price
       this.$store.commit('CART_TOGGLE', item)
       if (this.$store.state.cart[this.$store.state.cart.indexOf(item)] == undefined) {
         this.$store.commit('ADD_ALERT', {
@@ -162,8 +221,13 @@ export default {
           		description_short,
           		version,
               show_version,
+              images {
+                url,
+                is_main
+              },
           		category {
           			id
+                is_customizable
           			items {
                   id,
           				title,
@@ -179,10 +243,19 @@ export default {
         }
       }).then((response) => {
         this.item = response.data.data.getOneShopItem
+
         if (this.item == null) {
           this.$store.commit('SET_TITLE', this.$t('not-found.title'))
         } else {
           this.item.description_long = marked(this.item.description_long)
+          this.not_main = this.item.images.filter((item) => {
+            return item.is_main == false
+          })
+          this.main = this.item.images.filter((item) => {
+            return item.is_main == true
+          })
+          this.price = this.item.price
+
           this.$store.commit('SET_TITLE', this.item.title)
           this.$store.commit('SET_LOCATION', {
             root: this.$t('shop.title'),

@@ -23,7 +23,8 @@ export const store = new Vuex.Store({
       enabled: false
     },
     http_api_error: 0,
-    cart: []
+    cart: [],
+    login_redirect_route: ""
   },
   mutations: {
     SET_TITLE(state, payload) {
@@ -96,8 +97,7 @@ export const store = new Vuex.Store({
       }else{
         state.cart.splice(state.cart.indexOf(payload), 1)
       }
-    },
-
+    }
   },
   plugins: [createPersistedState({key: 'data_persited_vuex', paths: ['cart', 'cart_length']})]
 })

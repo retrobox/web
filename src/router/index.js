@@ -11,6 +11,7 @@ import DocumentationPage from '@/components/Documentation/Page'
 import ShopIndex from '@/components/Shop/Index'
 import ShopItem from '@/components/Shop/Item'
 import ShopCart from '@/components/Shop/Cart'
+import ShopCheckout from '@/components/Shop/Checkout'
 import BlogIndex from '@/components/Blog/Index'
 import BlogPost from '@/components/Blog/Post'
 import NotFound from '@/components/NotFound'
@@ -69,6 +70,11 @@ export default new Router({
             path: '/shop/cart',
             name: 'ShopCart',
             component: ShopCart
+        },
+        {
+            path: '/shop/checkout',
+            name: 'ShopCheckout',
+            component: ShopCheckout
         },
         {
             path: '/shop/:slug',

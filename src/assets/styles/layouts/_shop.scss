@@ -21,6 +21,25 @@
   .shop-cart-list {
     .list-row, .list-head {
       grid-template-columns: 28% 28% 28% 1fr;
+      div {
+          display: flex;
+          align-items: center;
+      }
+    }
+
+    .total {
+        padding-top: 1em;
+        border-bottom: 0;
+    }
+    .shop-cart-actions {
+      display: flex;
+      justify-content: flex-end;
+      a {
+        margin-right: 1em;
+      }
+      a:last-of-type {
+        margin-right: 0;
+      }
     }
   }
   .shop-cart-bill-container {
@@ -135,7 +154,94 @@
 
 }
 
+//shop checkout
+.shop-checkout-container{
+  margin-bottom: 3em;
+
+  .shop-checkout-mosaic {
+    margin-top: 1em;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    display: flex;
+    height: 15em;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #2c3e50;
+    .shop-checkout-item {
+      font-size: 1.2em;
+      margin-right: 3.4em;
+      line-height: 1.5;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: 0.2s opacity;
+      .icon {
+        font-size: 2.2em;
+        margin-bottom: 15px;
+      }
+    }
+    .shop-checkout-item:last-of-type {
+      margin-right: 0;
+    }
+    .shop-checkout-item:hover {
+      cursor: pointer;
+      opacity: 0.8;
+      transition: 0.2s opacity;
+    }
+  }
+}
+
 //shop item
 .shop-item-container {
+  .buy-custom-container {
+    margin-bottom: 1.2em;
+    .buy-custom-type {
+      .buy-custom-title {
+        margin-bottom: 0.9em;
+      }
+      .buy-custom-mosaic {
+          display: flex;
+          margin-left: 0.1em;
+      }
+      .buy-custom-item:hover {
+        cursor: pointer;
+      }
 
+      .buy-custom-mosaic.button-colors {
+        .buy-custom-item {
+          border-radius: 50%;
+          border: 1px solid #B8C2CC;
+          margin-right: 0.5em;
+          width: 2em;
+          height: 2em;
+        }
+      }
+      .buy-custom-mosaic.storage {
+        .buy-custom-item {
+          border-radius: 15px;
+          padding: 8px;
+          margin-right: 0.5em;
+          @extend .bg-grey-light;
+        }
+
+      }
+
+      .buy-custom-item {
+        opacity: 0.7;
+        transition: 0.2s opacity;
+      }
+      .buy-custom-item.selected {
+        opacity: 1;
+      }
+      .buy-custom-item:hover {
+        opacity: 1;
+        transition: 0.2s opacity;
+      }
+
+
+      margin-bottom: 1.5em;
+    }
+  }
 }

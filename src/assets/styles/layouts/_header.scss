@@ -58,6 +58,8 @@ $opacity: 0.8;
     height: 84px;
   }
   .header-background {
+    height: 84px;
+    overflow: hidden;
     margin-top: -84px;
     background-image: linear-gradient(to right, rgba(242, 242, 242, 0.4), rgba(185, 185, 185, 0.5), rgba(119, 119, 119, 0.6), rgba(59, 59, 59, 0.7), rgba(44, 62, 80, $opacity));
 
@@ -97,6 +99,7 @@ $opacity: 0.8;
     display: flex;
     justify-content: space-between;
     .header-title-container {
+      height: 48px;
       display: flex;
       align-items: center;
       .header-title a {

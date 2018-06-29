@@ -27,20 +27,28 @@
                       <div class="shop-cart-list list">
                         <div class="list-head">
                           <div>{{$t('shop.item.title')}}</div>
-                            <div>{{$t('shop.item.version')}}</div>
-                              <div>{{$t('shop.item.price')}}</div>
-                                <div></div>
+                          <div>{{$t('shop.item.version')}}</div>
+                          <div>{{$t('shop.item.price')}}</div>
+                          <div></div>
                         </div>
                         <div class="list-row" v-for="item in $store.state.cart">
                           <div>{{item.title}}</div>
                           <div>{{item.version}}</div>
                           <div>€ {{item.price}}</div>
-                          <div><a @click="toggleCart(item)"
+                          <div class="shop-cart-actions">
+                            <a @click="$router.push({name: 'ShopItem', params: {slug: item.slug}})"
+                               class="bg-grey hover:bg-grey-dark text-white font-bold py-1 px-2 rounded button"
+                                 :title="$t('shop.cart.show')">
+                                <i class="fas fa-eye" />
+                            </a>
+                            <a @click="toggleCart(item)"
+                              :title="$t('shop.cart.remove')"
                              class="bg-grey hover:bg-grey-dark text-white font-bold py-1 px-2 rounded button">
-                              {{$t('shop.cart.remove')}}
+
+                            <i class="fas fa-times" />
                           </a></div>
                         </div>
-                        <div class="list-row">
+                        <div class="list-row total">
                           <div>{{$t('shop.cart.total')}}</div>
                           <div></div>
                           <div>€ {{total}}</div>
@@ -52,9 +60,9 @@
                            <span>{{ $tc('shop.cart.items', $store.state.cart.length, { count: $store.state.cart.length }) }}</span>
                         </div>
                         <div class="shop-cart-bill-checkout">
-                          <a @click="checkout" class="checkout-button bg-blue hover:bg-blue-light text-white font-bold py-4 px-8 rounded inline-flex items-center button">
+                          <a @click="checkout()" class="checkout-button bg-blue hover:bg-blue-light text-white font-bold py-4 px-8 rounded inline-flex items-center button">
                               <icon name="shopping-cart" class="icon"></icon>
-                              {{$t('shop.checkout')}}
+                              {{$t('shop.checkout.title')}}
                           </a>
                         </div>
                       </div>
@@ -81,6 +89,7 @@
                this.$store.state.cart.forEach((item) => {
                  this.total = this.total + item.price
                })
+               this.total = this.total.toFixed(2)
             }
         },
         components: {
@@ -106,7 +115,13 @@
           checkout: function () {
             if (this.$cookie.get('user_token') == null) {
               //call login function
+              var url = this.$router.resolve({
+                name: 'ShopCheckout'
+              }).href;
+              this.$store.state.login_redirect_route = window.location.origin + url
               this.$modal.show('login_or_register')
+            }else{
+              this.$router.push({name: "ShopCheckout"})
             }
           }
         },
@@ -114,6 +129,7 @@
           this.$store.state.cart.forEach((item) => {
             this.total = this.total + item.price
           })
+          this.total = this.total.toFixed(2)
           this.$store.commit('SET_LOCATION', {
               root: this.$t('shop.title'),
               sub_root: this.$t('shop.cart.title')
