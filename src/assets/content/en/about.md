@@ -1,10 +1,13 @@
-[EN] Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
+### The team & history
+Etienne Chevrollier, Matthieu Bessat and Valentin Derouet are three passionate about retro, computer and open source. After several prototypes more crazy than the others, we arrived at something functional, professional, cheap.<br />
+<br />
+<center>
+<img src="http://static.retrobox.tech/img/about/firstprototype.png" width="30%">
+<img src="http://static.retrobox.tech/img/about/secondprototype.png" width="40%">
+<img src="http://static.retrobox.tech/img/about/RETROBOX2.png" width="40%">
+<img src="http://static.retrobox.tech/img/about/RETROBOX1.png" width="40%">
+</center>
 
+### The idea
 
-Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. 
-
-
-Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. 
-
-
-Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, 
+The idea appeared 3 years ago at the middle school of Alpes Mancelles located in Moulins le Carbonnel. During a discussion with friends, we imagined a retro game console that could be accessible to everyone, with a low price for the retro-videogame culture to return to the front of the stage. So we started with the idea of ​​creating a console, based on an Arduino (picture in support). We realized that the performances were not sufficient compared to our expectations. Subsequently we had a second idea, this time based on a microcomputer named Raspberry-Pi Zero (picture in support) that offered us more possibilities and flexibility for our project. From there, we started to develop an ideal console and then began to concretely design this console. We took part in several brainstorming sessions and gathered ideas that could or could not be found in the search for the most suitable console for our audience.

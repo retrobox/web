@@ -30,7 +30,7 @@
     "title": "Community",
     "page": {
       "title": "Join our community",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut!"
+      "description": "Come ask your questions, share your experiences, exchanges with the creators of the console!"
     }
   },
   "newsletter": {
@@ -87,8 +87,8 @@
         "description": "More than 25,000 free games available for free, discover more than 25,000 installable games in just a few clicks thanks to our library"
       },
       "easy": {
-        "title": "A console without a headache",
-        "description": "Order, receive, assemble, learn and play!"
+        "title": "A customizable thing",
+        "description": "Have you ever wanted to have a unique console? With the purchase choose the console which corresponds to you without supplements!"
       },
       "connected": {
         "title": "A connected console",
@@ -115,50 +115,76 @@
     "title": "Not found",
     "description": "You came across the wrong page because it does not exist or it has been deleted."
   },
-  "about": "About",
-  "blog": "Our blog",
-  "terms-of-use": "Terms of use",
-  "get-help": "Get help",
-  "status": "Status of services",
-  "developers": "Developers",
-  "legals": "Legals",
-  "our-team-members": "Our team member",
-  "shop": {
-    "item": {
-      "title": "Article",
-      "version": "Version",
-      "price": "Price"
-    },
-    "title": "Shop",
-    "checkout": "Pay",
-    "cart": {
-      "title": "Panier",
-      "items": "No articles | One article | {count} articles",
-      "empty": "Empty cart",
-      "add": "Add",
-      "remove": "Remove",
-      "total": "Total",
-      "added": {
-        "title": "Article added!",
-        "description": "An item has just been added to your cart"
+"about": "About",
+"terms-of-use": "Conditions of use",
+"get-help": "Need help ?",
+"status": "Status of services",
+"developers": "Developers",
+"legals": "Legals",
+"our-team-members": "Our team members",
+"account": {
+  "title": "My account"
+},
+"shop": {
+  "checkout": {
+    "title": "Pay",
+    "choise": "Choose a payment method...",
+    "pay": "Payer {{amount}}",
+    "paypal": "Paypal",
+    "card": "Credit card"
+  },
+  "item": {
+    "title": "Item",
+    "version": "Version",
+    "price": "Price",
+    "custom": {
+      "colors": {
+        "red": "Red",
+        "yellow": "Yellow",
+        "green": "Green",
+        "blue": "Blue",
+        "purple": "Purple"
       },
-      "removed": {
-        "title": "Article removed!",
-        "description": "An item has just been removed from your cart"
-      }
-    },
-    "category": {
-      "empty": "No articles in this category"
-    },
-    "index": {
-      "empty": "No items available"
+      "color": "Choose your color",
+      "storage": "Size of internal storage"
     }
   },
-  "contact-us": "Contact us",
+  "title": "Shop",
+  "cart": {
+    "title": "Panier",
+    "items": "No article | One item | {count} articles",
+    "empty": "Empty card",
+    "add": "Add",
+    "remove": "Removed",
+    "total": "Total",
+    "show": "Show",
+    "added": {
+      "title": "Article added!",
+      "description": "An item has just been added to your cart"
+    },
+    "removed": {
+      "title": "Article removed!",
+      "description": "An item has just been removed from your cart"
+    }
+  },
+  "category": {
+    "empty": "No articles in this category"
+  },
+  "index": {
+    "empty": "No items available"
+    }
+  },
+  "contact-us": "How to contact us ?",
   "blog": {
     "our": "Our blog",
     "title": "Blog",
     "posts": "Articles"
   },
-  "loading": "Loading"
+  "loading": "Loading",
+  "api": {
+  "error": {
+    "title": "Error while connecting to the API",
+    "description": "Network error: we could not communicate with the API"
+    }
+  }
 }

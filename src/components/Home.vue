@@ -57,7 +57,7 @@
                     <div class="landing-column">
                         <div class="landing-column-icon">
                             <div class="type-easy">
-                                <i class="icon fas fa-plug"></i>
+                                <i class="fas fa-screwdriver"></i>
                             </div>
                         </div>
                         <div class="landing-column-content max-w-sm rounded overflow-hidden shadow-lg">
@@ -134,7 +134,7 @@
                                 <span class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">EUR 60,00</span>
 
                                 <a href="#"
-                                   class="button bg-transparent hover:bg-blue text-blue font-semibold hover:text-white py-2 px-4 border border-blue hover:border-transparent rounded-full">
+                                  class="button bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded-full">
                                     <icon name="shopping-cart" class="icon"></icon>
                                     {{$t('buy')}}
                                 </a>
@@ -159,7 +159,7 @@
                                 <span class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">EUR 60,00</span>
 
                                 <a href="#"
-                                   class="button bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded-full">
+                                   class="button bg-transparent hover:bg-blue text-blue font-semibold hover:text-white py-2 px-4 border border-blue hover:border-transparent rounded-full">
                                     <icon name="shopping-cart" class="icon"></icon>
                                     {{$t('buy')}}
                                 </a>

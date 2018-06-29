@@ -116,7 +116,7 @@
     "title": "Page non trouvé",
     "description": "Vous êtes tombé sur la mauvaise page, car elle n'existe pas ou elle a été supprimé."
   },
-  "about": "About",
+  "about": "A propos",
   "terms-of-use": "Conditions d'utilisations",
   "get-help": "Obtenir de l'aide",
   "status": "Status des services",
@@ -158,7 +158,7 @@
     "title": "Boutique",
     "cart": {
       "title": "Panier",
-      "items": "Aucun articles | Un article | {count} articles",
+      "items": "Aucun article | Un article | {count} articles",
       "empty": "Panier vide",
       "add": "Ajouter",
       "remove": "Retirer",
