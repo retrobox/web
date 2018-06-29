@@ -153,7 +153,7 @@
     "title": "Boutique",
     "cart": {
       "title": "Panier",
-      "items": "Aucun articles | Un article | {count} articles",
+      "items": "Aucun article | Un article | {count} articles",
       "empty": "Panier vide",
       "add": "Ajouter",
       "remove": "Retirer",
