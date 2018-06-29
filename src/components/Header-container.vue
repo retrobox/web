@@ -26,7 +26,7 @@
                                 <a @click="$router.push({name: 'ShopIndex'}); $store.commit('TOGGLE_NAV')">{{$t('shop.title')}}</a>
                             </li>
                             <li>
-                                <a @click="$router.push({name: 'ShopItem', params: {slug:'ecce-primus'}}); $store.commit('TOGGLE_NAV')">
+                                <a @click="$router.push({name: 'ShopItem', params: {slug:'retrobox-console-28'}}); $store.commit('TOGGLE_NAV')">
                                     {{$t('buy')}}
                                 </a>
                             </li>
@@ -111,7 +111,7 @@
                       <a @click="$router.push({name: 'ShopIndex'})">{{$t('shop.title')}}</a>
                     </div>
                     <div class="nav-item with-button">
-                        <a @click="$router.push({name: 'ShopItem', params: {slug:'ecce-primus'}})"
+                        <a @click="$router.push({name: 'ShopItem', params: {slug:'retrobox-console-28'}})"
                            class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded button">
                             <icon name="shopping-cart" class="icon"></icon>
                             {{$t('buy')}}

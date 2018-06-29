@@ -29,7 +29,8 @@
         name: 'ShopCheckout',
         data() {
             return {
-              total: 0
+              total: 0,
+              success: true
             }
         },
         watch: {
@@ -54,18 +55,23 @@
               billingAddress: false,
               panelLabel: this.$t('shop.checkout.pay'),
               token: (token) => {
-                var items = []
-                this.$store.state.cart.forEach((item) => {
-                  this.items.push(item.id)
-                })
+                // var items = []
+                // this.$store.state.cart.forEach((item) => {
+                //   this.items.push(item.id)
+                // })
                 this.$apitator.post(this, "/stripe/execute", {
                   token: token.id,
-                  items: items
+                  items: this.$store.state.cart
                 },{
                   with_auth: true
                 }).then(() => {
                   console.log("stripe: success");
-                }).catch(() => {
+                  //empty the cart
+                  // this.$store.state.cart = []
+                  this.$router.push({name: 'ShopCheckoutSuccess'})
+
+                }).catch((error) => {
+                  console.log(error);
                   console.log("stripe: error");
                 })
               }

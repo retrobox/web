@@ -132,7 +132,12 @@
       "choise": "Choisissez un moyen de payment...",
       "pay": "Payer {{amount}}",
       "paypal": "Paypal",
-      "card": "Carte bancaire"
+      "card": "Carte bancaire",
+      "success": {
+        "title": "Félicitations !",
+        "description": "Votre commande à bien été accepté, nous vous tenons au courant pour la suite !",
+        "thanks": "Merci pour votre commande"
+      }
     },
     "item": {
       "title": "Article",

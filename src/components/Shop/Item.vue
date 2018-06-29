@@ -153,7 +153,8 @@ export default {
       main: [],
       not_main: [],
       //showed price
-      price: 0
+      price: 0,
+      original_price: 0
     }
   },
   watch: {
@@ -164,12 +165,14 @@ export default {
       this.fetchData()
     },
     'selectedStorage' () {
-      this.price = this.item.price
+
+      this.price = this.original_price
       if (this.selectedStorage == 16) {
         this.price = this.price + 2.55
       }if (this.selectedStorage == 32){
         this.price = this.price + 3.55
       }
+      this.price = parseFloat(this.price.toFixed(2))
     }
   },
   components: {
@@ -189,6 +192,12 @@ export default {
     },
     toggleCart: function(item) {
       item.price = this.price
+      if (item.category.is_customizable){
+        item.custom_options = {
+          storage: this.selectedStorage,
+          color: this.selectedColor
+        }
+      }
       this.$store.commit('CART_TOGGLE', item)
       if (this.$store.state.cart[this.$store.state.cart.indexOf(item)] == undefined) {
         this.$store.commit('ADD_ALERT', {
@@ -215,6 +224,7 @@ export default {
           	getOneShopItem(slug: $slug)
           	{
           		id,
+              slug,
           		title,
           		price,
           		description_long,
@@ -255,6 +265,7 @@ export default {
             return item.is_main == true
           })
           this.price = this.item.price
+          this.original_price = this.item.price
 
           this.$store.commit('SET_TITLE', this.item.title)
           this.$store.commit('SET_LOCATION', {

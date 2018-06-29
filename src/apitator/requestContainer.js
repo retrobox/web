@@ -48,39 +48,46 @@ export default class requestContainer {
 
     }
     //
-    post(VueLocal, url, body, params) {
+    post(VueLocal, url, body, _params) {
+      return new Promise((resolve, reject) => {
         VueLocal.$store.commit('SET_LOADING', true)
-        if (params.with_auth == true) {
-            var user_token = JSON.parse(VueLocal.$cookie.get('user_token'))
+        if (_params.with_auth == true) {
+            var user_token = VueLocal.$cookie.get('user_token')
             var headers = {
-                'Authorization': 'Bearer ' + access_token.token
+                'Authorization': 'Bearer ' + user_token
             }
         } else {
             var headers = {}
         }
-        var params = merge(params, this.options.params, {
+        var params = merge(_params, this.options.params, {
             headers: headers
         })
         return axios.post(this.options.rootUrl + url, body, params)
             .then(response => {
-                callback(response)
+                console.log('>>> success requestContainer post request <<<');
                 if (params.loading_persit == false || params.loading_persit == undefined) {
                     VueLocal.$store.commit('SET_LOADING', false)
                 }
+                resolve(response)
             })
             .catch(error => {
+                console.log(error);
                 //add 1 error
                 VueLocal.$store.commit('ADD_HTTP_API_ERROR', 1)
                 if (VueLocal.$store.state.http_api_error > 3) {
                     VueLocal.$store.commit('SET_LOADING', false)
                     VueLocal.$store.commit('ADD_ALERT', {
-                        type: "error",
-                        text: "Erreur pendant la connexion à l'API"
+                        type:  VueLocal.$t('api.error.title'),
+                        text: VueLocal.$t('api.error.description')
                     })
+
+
+                    reject(error)
                 } else {
-                    this.post(VueLocal, url, body, params, callback)
+                    this.post(VueLocal, url, body, _params, callback)
                 }
             })
+          });
     }
 
     query(VueLocal, params) {

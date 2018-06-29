@@ -32,7 +32,7 @@
                           <div></div>
                         </div>
                         <div class="list-row" v-for="item in $store.state.cart">
-                          <div>{{item.title}}</div>
+                          <div>{{item.title}}  <span>&nbsp;</span> <span v-if="item.custom_options != undefined"> ({{item.custom_options.storage}} Gb)</span></div>
                           <div>{{item.version}}</div>
                           <div>€ {{item.price}}</div>
                           <div class="shop-cart-actions">
