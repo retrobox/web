@@ -131,9 +131,9 @@
                             </div>
 
                             <div class="px-6 py-4 landing-column-footer">
-                                <span class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">EUR 60,00</span>
+                                <span class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">EUR 61.99</span>
 
-                                <a href="#"
+                                <a @click="$router.push({name: 'ShopItem', params: {slug: 'retrobox-console-kited'}})"
                                   class="button bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded-full">
                                     <icon name="shopping-cart" class="icon"></icon>
                                     {{$t('buy')}}
@@ -156,9 +156,9 @@
                                 </p>
                             </div>
                             <div class="px-6 py-4 landing-column-footer">
-                                <span class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">EUR 60,00</span>
+                                <span class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">EUR 70.99</span>
 
-                                <a href="#"
+                                <a @click="$router.push({name: 'ShopItem', params: {slug: 'retrobox-console-non_kited'}})"
                                    class="button bg-transparent hover:bg-blue text-blue font-semibold hover:text-white py-2 px-4 border border-blue hover:border-transparent rounded-full">
                                     <icon name="shopping-cart" class="icon"></icon>
                                     {{$t('buy')}}

@@ -26,7 +26,7 @@
                                 <a @click="$router.push({name: 'ShopIndex'}); $store.commit('TOGGLE_NAV')">{{$t('shop.title')}}</a>
                             </li>
                             <li>
-                                <a @click="$router.push({name: 'ShopItem', params: {slug:'retrobox-console-28'}}); $store.commit('TOGGLE_NAV')">
+                                <a @click="$router.push({name: 'ShopItem', params: {slug:'retrobox-console-kited'}}); $store.commit('TOGGLE_NAV')">
                                     {{$t('buy')}}
                                 </a>
                             </li>
