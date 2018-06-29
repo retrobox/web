@@ -1,17 +1,20 @@
 [
   {
-    "name": "Valentin impsum",
-    "description": "Don't touch it",
-    "image": "https://lorempixel.com/200/200/people/"
+    "name": "Valentin Derouet",
+    "description": "16 years old, electronic designer, web developer, he likes pasta.",
+    "image": "https://static.retrobox.tech/img/about/valentin.png",
+    "link": "https://stoneset.me"
   },
   {
-    "name": "Matthieu masterum",
-    "description": "Master of the game",
-    "image": "https://lorempixel.com/200/200/people/"
+    "name": "Etienne Chevrollier",
+    "description": "15 years old, photoshoper, and absent when it is not necessary",
+    "image": "https://static.retrobox.tech/img/about/etienne.jpg",
+    "link": "https://wabfall.me"
   },
   {
-    "name": "Etienne servus",
-    "description": "Servus esse",
-    "image": "https://lorempixel.com/200/200/people/"
+    "name": "Matthieu Bessat",
+    "description": "15 years, full stack web developer, php, js, vuejs nothing escapes him!",
+    "image": "https://static.retrobox.tech/img/about/matthieu.jpg",
+    "link": "https://lefuturiste.fr"
   }
 ]

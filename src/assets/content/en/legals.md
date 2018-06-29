@@ -2,13 +2,13 @@
 
 Under Article 6 of Law No. 2004-575 of 21 June 2004 on confidence in the digital economy, it is clear to users of the site [https://retrobox.tech](https://retrobox.tech/) the identity of the various stakeholders as part of its implementation and monitoring:
 
-**Owner** : Thingmill - E.I.R.L - 1 Badminton Road, HELOUP 61250  
+**Owner** : Thingmill - E.I.R.L - 1 chemin de badoire, Heloup 61250, France  
 **Creator** : [Thingmill](https://thingmill.fr)  
-**Director of the publication** : Valentin Derouet - contact@thingmill.fr  
+**Director of the publication** : Thingmill - contact@thingmill.fr  
 The director of the publication is a natural person or a legal person.  
 **Webmaster** : Matthieu Bessat - contact@lefuturiste.fr  
 **Host** : Dyjix.eu - LD MANNETOT 14370 MERY CORBON  
-Credits: Matthieu Bessat Etienne Chevrollier
+Credits: Matthieu Bessat Etienne Chevrollier, Valentin Derouet
 
 ### 2 \. General conditions of use of the site and services offered.
 
