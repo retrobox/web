@@ -27,7 +27,7 @@
                     </p>
                 </div>
                 <div class="landing-about-pic">
-                    <img src="http://static.retrobox.tech/img/about/RETROBOX1.png">
+                    <img src="https://static.retrobox.tech/img/about/RETROBOX1.png">
                 </div>
             </div>
         </section>

@@ -122,13 +122,33 @@
   "status": "Status of services",
   "developers": "Developers",
   "legals": "Legals",
-  "our-team-members": "Our team members",
+  "our-team-members": "Our team member",
   "shop": {
+    "item": {
+      "title": "Article",
+      "version": "Version",
+      "price": "Price"
+    },
     "title": "Shop",
+    "checkout": "Pay",
     "cart": {
-      "title": "Cart",
-      "items": "No articles | 1 article | {count} articles",
-      "empty": "Empty cart"
+      "title": "Panier",
+      "items": "No articles | One article | {count} articles",
+      "empty": "Empty cart",
+      "add": "Add",
+      "remove": "Remove",
+      "total": "Total",
+      "added": {
+        "title": "Article added!",
+        "description": "An item has just been added to your cart"
+      },
+      "removed": {
+        "title": "Article removed!",
+        "description": "An item has just been removed from your cart"
+      }
+    },
+    "category": {
+      "empty": "No articles in this category"
     },
     "index": {
       "empty": "No items available"
@@ -136,8 +156,9 @@
   },
   "contact-us": "Contact us",
   "blog": {
-    "our": "Notre blog",
+    "our": "Our blog",
     "title": "Blog",
     "posts": "Articles"
-  }
+  },
+  "loading": "Loading"
 }
