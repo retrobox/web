@@ -11,7 +11,7 @@
                     <div v-html="content">
 
                     </div>
-                    <h2>{{$t('our-team-members')}}</h2>
+                    <h2 class="dividing">{{$t('our-team-members')}}</h2>
 
                     <div class="team-mosaic">
                         <div class="team-item" v-for="member in members">
