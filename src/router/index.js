@@ -5,6 +5,7 @@ import Legals from '@/components/Legals'
 import Terms from '@/components/Terms'
 import ContactUs from '@/components/ContactUs'
 import About from '@/components/About'
+import TermsOfSale from '@/components/TermsOfSale'
 import Community from '@/components/Community'
 import DocumentationHome from '@/components/Documentation/Home'
 import DocumentationPage from '@/components/Documentation/Page'
@@ -36,6 +37,11 @@ export default new Router({
             path: '/terms',
             name: 'Terms',
             component: Terms
+        },
+        {
+            path: '/terms-of-sale',
+            name: 'TermsOfSale',
+            component: TermsOfSale
         },
         {
             path: '/contact',

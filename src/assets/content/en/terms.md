@@ -1,5 +1,4 @@
-Welcome to https://retrobox.tech
--------------------------------
+### Welcome to https://retrobox.tech
 
 This work is under the Creative Commons BY-NC-SA license, that is to say that you do not have the right to redistribute the product without authorization, to make modifications for commercial purposes or to attribute the project to you.
 

@@ -70,7 +70,7 @@
                         </li>
 
                         <li>
-                            <a href="#">{{$t('get-help')}}</a>
+                            <a @click="$router.push({name: 'TermsOfSale'})">{{$t('terms-of-sale')}}</a>
                         </li>
                     </ul>
                 </div>
