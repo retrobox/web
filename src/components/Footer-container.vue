@@ -2,11 +2,6 @@
   <div>
     <div class="partnership-container">
         <div class="partnership-content container mx-auto">
-            <a class="partnership-dyjixeu partnership-item" href="https://dyjix.eu/?ref=retrobox.tech" v-tooltip.top="$t('partnership.dyjixeu.title')">
-                <div class="partnership-dyjixeu-image partnership-image">
-                    <img src="../assets/img/dyjixeu.png" alt="Logo Dyjix.eu">
-                </div>
-            </a>
             <a class="partnership-lyceealain partnership-item" href="https://lyceealainalencon.fr/" v-tooltip.top="$t('partnership.lyceealain.title')">
                 <div class="partnership-lyceealain-image partnership-image">
                   <img src="../assets/img/lyceealain.png" alt="Logo Lycée Alain">
