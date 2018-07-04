@@ -59,7 +59,14 @@
 
 <script>
 export default {
-  name: 'Terms'
+  name: 'ContactUs',
+  created () {
+    this.$store.commit('SET_TITLE', {context: this, key:'contact-us'})
+    this.$store.commit('SET_LOCATION', {
+        root: this.$t('home'),
+        sub_root: this.$t('contact-us')
+    })
+  }
 }
 </script>
 
