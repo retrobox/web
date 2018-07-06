@@ -9,14 +9,14 @@
 @import "../../../node_modules/vue-directive-tooltip/css/index.css";
 
 @import "layouts/_article.scss";
+@import "layouts/_header.scss";
+@import "layouts/_locales-selector.scss";
 @import "layouts/_body.scss";
 @import "layouts/_buy.scss";
 @import "layouts/_colored-divider.scss";
 @import "layouts/_cover.scss";
 @import "layouts/_footer.scss";
-@import "layouts/_header.scss";
 @import "layouts/_landing.scss";
-@import "layouts/_locales-selector.scss";
 @import "layouts/_socials.scss";
 @import "layouts/_mobile-nav.scss";
 @import "layouts/_not-found.scss";
@@ -40,5 +40,7 @@
   @import "layouts-responsive/_partnership.scss";
   @import "layouts-responsive/_modal.scss";
   @import "layouts-responsive/_shop.scss";
+  @import "layouts-responsive/_locales-selector.scss";
   @import "layouts-responsive/_login.scss";
+  //qdsdsq
 }

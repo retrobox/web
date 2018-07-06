@@ -11,10 +11,10 @@
         </a>
       </div>
       <div class="account-mobile" v-bind:class="{'account-button': $cookie.get('user_token') != undefined}">
-        <a @click="$modal.show('login_or_register')"
+        <div @click="$modal.show('login_or_register')"
            class="bg-grey hover:bg-gray-dark text-white font-bold py-2 px-4 rounded button">
             {{$t('account.title')}}
-        </a>
+        </div>
       </div>
       <modal name="login" class="modal login-modal">
           <div class="modal-container">

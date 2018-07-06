@@ -1,7 +1,7 @@
 .partnership-container {
   .partnership-content {
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: repeat(3, 33.33%);
     text-align: center;
 
     .partnership-item {
@@ -11,8 +11,6 @@
       align-items: center;
       display: flex;
       justify-content: center;
-      .partnership-image {
-      }
     }
 
     .partnership-lyceealain {

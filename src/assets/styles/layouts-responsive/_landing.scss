@@ -10,11 +10,19 @@
       height: auto;
     }
 }
+
 .landing-advantages .landing-advantages-content {
   width: 90%;
 }
+
 .landing-main .landing-main-content {
   width: 90%;
+  .landing-main-title {
+    font-size: 2em;
+  }
+  .landing-main-subtitle {
+    font-size: 1.2em;
+  }
 }
 
 .landing-columns {

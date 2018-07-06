@@ -49,6 +49,11 @@ $opacity: 0.8;
             margin-right: 0.5em;
           }
         }
+        .account-mobile {
+          a {
+            border-right: 0 !important;
+          }
+        }
       }
     }
   }
