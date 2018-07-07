@@ -87,8 +87,8 @@
                 this.$store.commit('SET_TITLE', this.$t('shop.title'))
                 this.$apitator.query(this, {
                     body: {
-                        query: `query {
-                          getManyShopCategories{
+                        query: `query($locale: String!) {
+                          getManyShopCategories(locale:$locale){
                             id,
                             title,
                             items {
@@ -100,7 +100,10 @@
                               description_short
                             }
                           }
-                        }`
+                        }`,
+                        variables: {
+                          locale: this.$i18n.locale
+                        }
                     }
                 }).then((response) => {
                     this.items = response.data.data.getManyShopCategories
