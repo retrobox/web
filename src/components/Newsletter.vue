@@ -59,11 +59,20 @@
                             this.loading = false
                     }).catch((error) => {
                         if (error.response) {
-                            this.$store.commit('ADD_ALERT', {
-                              type: 'error',
-                              title:  this.$t('newsletter.error.title'),
-                              description: this.$t('newsletter.error.invalid_description')
-                            })
+
+                            if (error.response.data.error.slug) {
+                              this.$store.commit('ADD_ALERT', {
+                                type: 'error',
+                                title:  this.$t('newsletter.error.title'),
+                                description: this.$t('newsletter.error.member_exists')
+                              })
+                            }else{
+                              this.$store.commit('ADD_ALERT', {
+                                type: 'error',
+                                title:  this.$t('newsletter.error.title'),
+                                description: this.$t('newsletter.error.invalid_description')
+                              })
+                            }
                         } else {
                           this.$store.commit('ADD_ALERT', {
                             type: 'error',

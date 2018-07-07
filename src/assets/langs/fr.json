@@ -47,11 +47,12 @@
       "description": "Vous vous êtes inscrit à la newsletter"
     },
     "error": {
-      "title": "Une erreur est survenu",
+      "title": "Une erreur est survenue",
       "description": "Il nous est impossible de valider cet adresse email",
       "missing_description": "Vous n'avez pas fourni d'email",
       "invalid_description": "L'email que vous avez fournis ne corespond pas à un email",
-      "api_description": "L'api n'a pas répondu comme il fallait"
+      "api_description": "L'api n'a pas répondu comme il fallait",
+      "member_exists": "Vous êtes déjà incrit(e) dans notre liste"
     }
   },
   "twitter": {

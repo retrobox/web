@@ -47,7 +47,8 @@
       "description": "We can not validate this email address",
       "missing_description": "You did not provide an email",
       "invalid_description": "The email you provided does not correspond to an email",
-      "api_description": "The API does not respond as expected"
+      "api_description": "The API does not respond as expected",
+      "member_exists": "Vous êtes déjà incrit(e) dans notre liste"
     }
   },
   "breadcrumb": {
