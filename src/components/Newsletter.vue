@@ -48,7 +48,7 @@
             submit: function () {
                 this.loading = true
                 if (this.email != undefined && this.email != "") {
-                    axios.post('https://newsletter-api.retrobox.tech/subscribe', {
+                    axios.post('https://mailchimper.retrobox.tech/subscribe', {
                         email: this.email
                     }).then((response) => {
                         this.$store.commit('ADD_ALERT', {
