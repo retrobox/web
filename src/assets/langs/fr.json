@@ -81,11 +81,11 @@
     },
     "advantages": {
       "title":"Plein d'advantages...",
-      "library": {
+      "game": {
         "title": "Une bibliothèque exeptionnelle",
         "description": "Des dizaines de milliers de jeux développés en 20 ans, des centaines de jeux originaux créés par des fans à portée de clics !"
       },
-      "easy": {
+      "custom": {
         "title": "Une console personnalisable",
         "description": "Avez-vous déjà voulu avoir une console unique ? A l'achat choisissez la console qui vous correspond sans suppléments ! "
       },
@@ -93,9 +93,17 @@
         "title": "Une console connectée",
         "description": "Une console connectée, visionnez l’état de votre console à distance et contrôlez-la dans les moindres détails (même depuis votre smartphone)"
       },
-      "flexible": {
+      "switch": {
         "title": "Une console qui s'adapte",
         "description": "Un maximum de possibilités, poussez plus loin le principe de la console portable, branchez-la à votre TV et jouez dans votre canapé avec ceux que vous aimez !"
+      },
+      "easy": {
+        "title": "Une console accessible",
+        "description": "Ne vous prenez pas la tête avec la configuration, tous a été préparé pour vous !"
+      },
+      "opensource": {
+        "title": "Une console opensource",
+        "description": "La console est opensource c'est à dire que vous pouvez jetter un coup d'oeil au site web, aux schémas ect. pour aucune mauvaises surprises."
       }
     },
     "start_now": {
