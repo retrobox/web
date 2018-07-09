@@ -37,8 +37,12 @@
                         <span class="text">{{$t('account.logout.title')}}</span>
                     </a>
                     <a @click="goToDashboard()">
-                        <icon name="tachometer-alt" class="icon"></icon>
+                        <icon name="user-circle" class="icon"></icon>
                         <span class="text">{{$t('account.dashboard')}}</span>
+                    </a>
+                    <a @click="goToAdminDashboard()">
+                        <icon name="tachometer-alt" class="icon"></icon>
+                        <span class="text">{{$t('account.admin')}}</span>
                     </a>
                   </div>
                   <div v-else>
@@ -64,11 +68,19 @@
 
 <script>
     import axios from 'axios'
+    var jwtDecode = require('jwt-decode');
     export default {
         name: 'Login',
         data() {
             return {
-                is_logout: false
+                is_logout: false,
+                is_admin: false
+            }
+        },
+        created() {
+            var token = $cookie.get('user_token')
+            if(token != undefined){
+                this.is_admin = (jwt_decode(token) == true)
             }
         },
         methods: {
@@ -99,6 +111,16 @@
                 title: this.$i18n.t('account.logout.success.title'),
                 description: this.$i18n.t('account.logout.success.description')
             })
+        },
+        goToDashboard: function () {
+            this.$modal.hide('login_or_register')
+            this.$modal.show('login')
+            window.location = process.env.USER_DASHBOARD_ENDPOINT
+        },
+        goToDashboardAdmin: function () {
+            this.$modal.hide('login_or_register')
+            this.$modal.show('login')
+            window.location = process.env.ADMIN_DASHBOARD_ENDPOINT
         }
       }
     }

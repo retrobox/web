@@ -28,12 +28,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding-top: 3.4em;
+      padding-top: 2.5em;
     }
     .login-or-register {
       display: flex;
       flex-direction: column;
       a {
+        margin-top: 1.5em;
         font-size: 1.2em !important;
         border-right: none !important;
         padding-right: 0 !important;
@@ -45,8 +46,8 @@
           display: block !important;
         }
       }
-      a:last-of-type {
-        margin-top: 2em;
+      a:first-of-type {
+        margin-top: 0;
       }
     }
   }
