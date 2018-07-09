@@ -46,25 +46,25 @@
                         </div>
                         <div class="landing-column-content max-w-sm rounded overflow-hidden shadow-lg">
                             <div class="px-6 py-4">
-                                <div class="font-bold text-xl mb-2 title">{{$t('landing.advantages.library.title')}}
+                                <div class="font-bold text-xl mb-2 title">{{$t('landing.advantages.game.title')}}
                                 </div>
                                 <p class="text-grey-darker text-base">
-                                    {{$t('landing.advantages.library.description')}}
+                                    {{$t('landing.advantages.game.description')}}
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="landing-column">
                         <div class="landing-column-icon">
-                            <div class="type-easy">
+                            <div class="type-custom">
                                 <i class="fas fa-screwdriver"></i>
                             </div>
                         </div>
                         <div class="landing-column-content max-w-sm rounded overflow-hidden shadow-lg">
                             <div class="px-6 py-4">
-                                <div class="font-bold text-xl mb-2 title">{{$t('landing.advantages.easy.title')}}</div>
+                                <div class="font-bold text-xl mb-2 title">{{$t('landing.advantages.custom.title')}}</div>
                                 <p class="text-grey-darker text-base">
-                                    {{$t('landing.advantages.easy.description')}}
+                                    {{$t('landing.advantages.custom.description')}}
                                 </p>
                             </div>
                         </div>
@@ -88,15 +88,47 @@
                     <div class="landing-column">
                         <div class="landing-column-icon">
                             <div class="type-switch">
+                                <i class="icon fas fa-tv"></i>
+                            </div>
+                        </div>
+                        <div class="landing-column-content max-w-sm rounded overflow-hidden shadow-lg">
+                            <div class="px-6 py-4">
+                                <div class="font-bold text-xl mb-2 title">{{$t('landing.advantages.switch.title')}}
+                                </div>
+                                <p class="text-grey-darker text-base">
+                                    {{$t('landing.advantages.switch.description')}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="landing-column">
+                        <div class="landing-column-icon">
+                            <div class="type-easy">
                                 <i class="icon fas fa-gamepad"></i>
                             </div>
                         </div>
                         <div class="landing-column-content max-w-sm rounded overflow-hidden shadow-lg">
                             <div class="px-6 py-4">
-                                <div class="font-bold text-xl mb-2 title">{{$t('landing.advantages.flexible.title')}}
+                                <div class="font-bold text-xl mb-2 title">{{$t('landing.advantages.easy.title')}}
                                 </div>
                                 <p class="text-grey-darker text-base">
-                                    {{$t('landing.advantages.flexible.description')}}
+                                    {{$t('landing.advantages.easy.description')}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="landing-column">
+                        <div class="landing-column-icon">
+                            <div class="type-opensource">
+                                <i class="icon fab fa-osi"></i>
+                            </div>
+                        </div>
+                        <div class="landing-column-content max-w-sm rounded overflow-hidden shadow-lg">
+                            <div class="px-6 py-4">
+                                <div class="font-bold text-xl mb-2 title">{{$t('landing.advantages.opensource.title')}}
+                                </div>
+                                <p class="text-grey-darker text-base">
+                                    {{$t('landing.advantages.opensource.description')}}
                                 </p>
                             </div>
                         </div>

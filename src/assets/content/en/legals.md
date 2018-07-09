@@ -7,7 +7,7 @@ Under Article 6 of Law No. 2004-575 of 21 June 2004 on confidence in the digital
 **Director of the publication** : Thingmill - contact@thingmill.fr  
 The director of the publication is a natural person or a legal person.  
 **Webmaster** : Matthieu Bessat - contact@lefuturiste.fr  
-**Host** : Dyjix.eu - LD MANNETOT 14370 MERY CORBON  
+**Host** : Digital Ocean - www.digitalocean.com  
 Credits: Matthieu Bessat Etienne Chevrollier, Valentin Derouet
 
 ### 2 \. General conditions of use of the site and services offered.
