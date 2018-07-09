@@ -22,7 +22,7 @@
                                     </a>
                                 </div>
                                 <div v-for="item in items"
-                                     v-bind:class="{'active': item.slug == $route.params.slug, 'nav-item': true}">
+                                     v-bind:class="{'active': item.slug == $route.params.slug, 'nav-item': true, 'nav-item-divider':item.is_divider}">
                                     <a @click="$router.push({name: 'DocumentationPage', params: {slug: item.slug}})">
                                         {{item.name}}
                                     </a>
@@ -97,7 +97,13 @@
                         root: this.$t('docs'),
                         sub_root: this.title
                     })
-                    this.items = locale.tree
+                    this.items = locale.tree.map((item) => {
+                      item.is_divider = false
+                      if (item.type == 'divider') {
+                        item.is_divider = true
+                      }
+                      return item
+                    })
 
                     this.actual_item = this.items.filter((item, index) => {
                         return item.slug == this.$route.params.slug

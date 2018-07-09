@@ -59,7 +59,6 @@
                             this.loading = false
                     }).catch((error) => {
                         if (error.response) {
-
                             if (error.response.data.error.slug) {
                               this.$store.commit('ADD_ALERT', {
                                 type: 'error',
@@ -80,7 +79,7 @@
                             description: this.$t('newsletter.error.api_description')
                           })
                         }
-                            this.loading = false
+                        this.loading = false
                     })
                 }else{
                   this.$store.commit('ADD_ALERT', {

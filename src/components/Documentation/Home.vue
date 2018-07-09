@@ -19,7 +19,7 @@
                                 <div class="nav-item active">
                                     <a @click="$router.push({name: 'DocumentationHome'});">{{$t('home')}}</a>
                                 </div>
-                                <div class="nav-item" v-for="item in items">
+                                <div class="nav-item" v-for="item in items" v-bind:class="{'nav-item-divider':item.is_divider}">
                                     <a @click="$router.push({name: 'DocumentationPage', params: {slug: item.slug}});">{{item.name}}</a>
                                 </div>
                             </nav>
@@ -80,8 +80,13 @@
                     var locale = response.data.locales.filter((item) => {
                         return item.slug == this.$i18n.locale
                     })[0]
-
-                    this.items = locale.tree
+                    this.items = locale.tree.map((item) => {
+                      item.is_divider = false
+                      if (item.type == 'divider') {
+                        item.is_divider = true
+                      }
+                      return item
+                    })
                     var slug = locale.home.slug
                     axios.get("https://docs.retrobox.tech/content/" + this.$i18n.locale + "/" + slug + ".md").then((response) => {
                         this.content = marked(response.data)
