@@ -17,6 +17,12 @@ export default {
   name: 'NotFound',
   data() {
     return {}
+  },
+  created() {
+    this.$store.commit('SET_TITLE', {context: this, key: 'not-found.title'})
+    this.$store.commit('SET_LOCATION', {
+        root: this.$t('not-found.title')
+    })
   }
 }
 </script>
