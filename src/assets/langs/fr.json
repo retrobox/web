@@ -122,6 +122,10 @@
     "title": "Page non trouvé",
     "description": "Vous êtes tombé sur la mauvaise page, car elle n'existe pas ou elle a été supprimé."
   },
+  "coming-soon-video": {
+    "title": "Vidéo en Attente",
+    "description": "Bientôt une vidéo présentant en détails la retrobox"
+  },
   "about": "A propos",
   "terms-of-use": "Conditions d'utilisations",
   "terms-of-sale": "Conditions générale de vente",

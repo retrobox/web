@@ -137,12 +137,17 @@
             </div>
         </section>
 
-        <section class="landing-section landing-video">
-            <div class="landing-video-content container mx-auto">
-                <iframe class="landing-video-video" src="https://www.youtube.com/embed/9ZfN87gSjvI" frameborder="0"
-                        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div class="not-found">
+          <div class="not-found-content">
+            <div class="not-found-icon">
+                <icon name="brands/youtube" class="icon" scale="1"></icon>
             </div>
-        </section>
+            <div class="not-found-text">
+              <h2 class="not-found-title">{{$t('coming-soon-video.title')}}</h2>
+              <p class="not-found-description">{{$t('coming-soon-video.description')}}</p>
+            </div>
+          </div>
+        </div>
 
         <section class="landing-section landing-startnow">
             <div class="landing-startnow-content container mx-auto">
