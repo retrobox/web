@@ -121,6 +121,10 @@
     "title": "Not found",
     "description": "You came across the wrong page because it does not exist or it has been deleted."
   },
+  "coming-soon-video": {
+    "title": "Video Coming Soon",
+    "description": "We will create a video"
+  },
 "about": "About",
 "terms-of-use": "Conditions of use",
 "terms-of-sale": "Conditions of sale",
