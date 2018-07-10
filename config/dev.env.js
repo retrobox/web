@@ -8,5 +8,6 @@ module.exports = merge(prodEnv, {
   API_ENDPOINT: '"http://localhost:8000"',
   ADMIN_DASHBOARD_ENDPOINT: '"http://localhost:8101"',
   USER_DASHBOARD_ENDPOINT: '"http://localhost:8102"',
+  MAILCHIMPER_ENDPOINT: '"http://139.59.154.158:55571"',
   STRIPE_PUBLIC: '"pk_test_owe0KjkxRTyq5eJsPqrWYcLC"'
 })
