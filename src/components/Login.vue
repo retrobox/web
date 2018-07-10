@@ -10,7 +10,7 @@
             <span class="text">{{$t('register')}}</span>
         </a>
       </div>
-      <div class="account-mobile" v-bind:class="{'account-button': $cookie.get('user_token') != undefined && !this.is_logout}">
+      <div class="account-mobile" v-bind:class="{'account-button': $cookie.get('user_token') != undefined && !is_logout}">
         <div @click="$modal.show('login_or_register')"
            class="bg-grey hover:bg-gray-dark text-white font-bold py-2 px-4 rounded button">
             {{$t('account.title')}}
@@ -27,7 +27,7 @@
       </modal>
       <modal name="login_or_register" class="modal login-or-register-modal">
           <div class="modal-container">
-            <h3 class="login-or-register-title" v-if="!this.is_logout && $cookie.get('user_token') != undefined">{{$t('account.title')}}</h3>
+            <h3 class="login-or-register-title" v-if="!is_logout && $cookie.get('user_token') != undefined">{{$t('account.title')}}</h3>
             <h3 class="login-or-register-title" v-else>{{$t('login-or-register')}}</h3>
             <div class="login-or-register-container">
               <div class="login-or-register">
@@ -78,50 +78,50 @@
             }
         },
         created() {
-            var token = $cookie.get('user_token')
+            var token = this.$cookie.get('user_token')
             if(token != undefined){
-                this.is_admin = (jwt_decode(token) == true)
+                this.is_admin = (jwtDecode(token) == true)
             }
         },
         methods: {
-        login: function (type) {
-          //where type is 'login' or 'register'
-           this.$modal.hide('login_or_register')
-           this.$modal.show('login')
-           var url = window.location
-           if (this.$store.state.login_redirect_route !== "" && this.$store.state.login_redirect_route !== undefined) {
-              url = this.$store.state.login_redirect_route
-           }
-           this.$cookie.set('login_redirection_url', url)
-           //request the api
-           this.$apitator.get(this, "/account/" + type).then((response) => {
-             window.location = response.data.data.url
-           }).catch(() => {
-             this.$modal.hide('login')
-           })
-        },
-        logout: function () {
-            this.$modal.hide('login_or_register')
-            this.$cookie.delete('user_token')
-            this.is_logout = true
-            //close and refresh the state
-            //add a alert
-            this.$store.commit('ADD_ALERT', {
-                type: "success",
-                title: this.$i18n.t('account.logout.success.title'),
-                description: this.$i18n.t('account.logout.success.description')
-            })
-        },
-        goToDashboard: function () {
-            this.$modal.hide('login_or_register')
-            this.$modal.show('login')
-            window.location = process.env.USER_DASHBOARD_ENDPOINT
-        },
-        goToDashboardAdmin: function () {
-            this.$modal.hide('login_or_register')
-            this.$modal.show('login')
-            window.location = process.env.ADMIN_DASHBOARD_ENDPOINT
+            login: function (type) {
+                //where type is 'login' or 'register'
+                this.$modal.hide('login_or_register')
+                this.$modal.show('login')
+                var url = window.location
+                if (this.$store.state.login_redirect_route !== "" && this.$store.state.login_redirect_route !== undefined) {
+                    url = this.$store.state.login_redirect_route
+                }
+                this.$cookie.set('login_redirection_url', url)
+                //request the api
+                this.$apitator.get(this, "/account/" + type).then((response) => {
+                    window.location = response.data.data.url
+                }).catch(() => {
+                    this.$modal.hide('login')
+                })
+            },
+            logout: function () {
+                this.$modal.hide('login_or_register')
+                this.$cookie.delete('user_token')
+                this.is_logout = true
+                //close and refresh the state
+                //add a alert
+                this.$store.commit('ADD_ALERT', {
+                    type: "success",
+                    title: this.$i18n.t('account.logout.success.title'),
+                    description: this.$i18n.t('account.logout.success.description')
+                })
+            },
+            goToDashboard: function () {
+                this.$modal.hide('login_or_register')
+                this.$modal.show('login')
+                window.location = process.env.USER_DASHBOARD_ENDPOINT
+            },
+            goToAdminDashboard: function () {
+                this.$modal.hide('login_or_register')
+                this.$modal.show('login')
+                window.location = process.env.ADMIN_DASHBOARD_ENDPOINT
+            }
         }
-      }
     }
 </script>

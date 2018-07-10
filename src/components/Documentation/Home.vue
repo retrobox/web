@@ -88,7 +88,7 @@
                       return item
                     })
                     var slug = locale.home.slug
-                    axios.get("https://docs.retrobox.tech/content/" + this.$i18n.locale + "/" + slug + ".md").then((response) => {
+                    axios.get(process.env.DOCS_ENDPOINT + "/content/" + this.$i18n.locale + "/" + slug + ".md").then((response) => {
                         this.content = marked(response.data)
                         this.loading = false
                     })
