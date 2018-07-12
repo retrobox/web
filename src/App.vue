@@ -48,8 +48,8 @@
             }
         },
         watch: {
-          "$store.state.alert.enabled": function (status) {
-              if(status){
+          "$store.state.alert": function (alert) {
+              if(alert.title != ""){
                 this.$modal.show('modal_alert')
               }else{
                 this.$modal.hide('modal_alert')

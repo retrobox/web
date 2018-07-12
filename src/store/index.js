@@ -74,16 +74,15 @@ export const store = new Vuex.Store({
       state.alert = {
         type: payload.type,
         title: payload.title,
-        description: payload.description,
-        enabled: true
+        description: payload.description
       }
     },
+
     REMOVE_ALERT(state) {
       state.alert = {
         type: "",
         title: "",
-        description: "",
-        enabled: false
+        description: ""
       }
     },
 
