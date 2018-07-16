@@ -12,6 +12,8 @@
                 <footer-container/>
             </div>
         </fade-transition>
+        <!-- COOKIE -->
+        <cookie-law theme="retrobox" :buttonText="$t('cookie-law.accept')" :message="$t('cookie-law.message')"/>
 
         <!-- GENERIC ALERT -->
         <modal name="modal_alert" class="modal alert-modal">
@@ -35,12 +37,14 @@
 <script>
     import Footer from "./components/Footer-container.vue"
     import Header from "./components/Header-container.vue"
+    import CookieLaw from 'vue-cookie-law'
     import Vue from 'vue'
     export default {
         name: 'App',
         components: {
             "footer-container": Footer,
-            "header-container": Header
+            "header-container": Header,
+            CookieLaw
         },
         data() {
             return {

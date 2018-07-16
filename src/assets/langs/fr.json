@@ -211,6 +211,10 @@
     "error": {
       "title": "Erreur pendant la connexion à l'API",
       "description": "Erreur réseau : nous n'avons pas pu communiquer avec l'API"
-    }
+      }
+  },
+  "cookie-law": {
+    "message": "Ce site web utilise des cookies pour fonctionner.",
+    "accept": "Compris !"
   }
 }

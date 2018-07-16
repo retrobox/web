@@ -197,5 +197,9 @@
     "title": "Error while connecting to the API",
     "description": "Network error: we could not communicate with the API"
     }
+  },
+  "cookie-law": {
+    "message": "This website uses cookies to ensure you get the best experience on our website.",
+    "accept": "Got It!"
   }
 }
