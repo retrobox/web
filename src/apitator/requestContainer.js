@@ -18,13 +18,13 @@ export default class requestContainer {
             })
             axios.get(this.options.rootUrl + url, params)
                 .then((response) => {
-                    console.log(params)
                     if (params.loading_persit == false || params.loading_persit == undefined) {
                         VueLocal.$store.commit('SET_LOADING', false)
                     }
                     resolve(response)
                 })
                 .catch((error) => {
+                    console.log(error)
                     // console.log(VueLocal.$store.state.http_api_error)
                     //add 1 error
                     VueLocal.$store.commit('ADD_HTTP_API_ERROR')
@@ -64,7 +64,6 @@ export default class requestContainer {
         })
         return axios.post(this.options.rootUrl + url, body, params)
             .then(response => {
-                console.log('>>> success requestContainer post request <<<');
                 if (params.loading_persit == false || params.loading_persit == undefined) {
                     VueLocal.$store.commit('SET_LOADING', false)
                 }
@@ -113,7 +112,7 @@ export default class requestContainer {
                     VueLocal.$store.commit('SET_LOADING', false)
                 })
                 .catch(error => {
-                  console.log("hello");
+                    console.log(error);
                     VueLocal.$store.commit('ADD_HTTP_API_ERROR')
                     if (VueLocal.$store.state.http_api_error > 3) {
                         VueLocal.$store.commit('SET_LOADING', false)
