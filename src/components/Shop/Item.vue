@@ -131,7 +131,9 @@ export default {
   name: 'ShopIndex',
   data() {
     return {
-      item: {},
+      item: {
+        category: {}
+      },
       //url of image to show in modal
       to_show: "",
       selectedStorage: 8,
@@ -150,7 +152,9 @@ export default {
         {color: "#9400d3", name: this.$t('shop.item.custom.colors.purple')}
       ],
       selectedColor: "#ff0000",
-      main: [],
+      main: [
+        {url: ""}
+      ],
       not_main: [],
       //showed price
       price: 0,
@@ -220,7 +224,6 @@ export default {
 
       this.$apitator.get(this, "/shop/item/" + this.$route.params.slug).then((response) => {
         this.item = response.data.data.item
-
         if (this.item == null) {
           this.$store.commit('SET_TITLE', this.$t('not-found.title'))
         } else {
