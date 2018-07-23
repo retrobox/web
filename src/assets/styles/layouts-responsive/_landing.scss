@@ -1,6 +1,9 @@
-
+.landing-main-back {
+  height: 100vh;
+}
 .landing-main {
-
+  margin-top: -100vh;
+  height: 100vh;
   .landing-main-actions {
     display: flex;
     flex-direction: column;
@@ -15,6 +18,7 @@
 .landing-advantages-content {
   width: 90%;
 }
+
 .landing-about .landing-about-content {
   width: 90%;
   grid-template-columns: 100%;
@@ -32,7 +36,8 @@
 .landing-main .landing-main-content {
   width: 90%;
   .landing-main-title {
-    font-size: 2em;
+    margin-top: 0.5em;
+    font-size: 2.5em;
   }
   .landing-main-subtitle {
     font-size: 1.2em;
