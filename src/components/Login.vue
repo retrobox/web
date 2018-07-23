@@ -102,7 +102,7 @@
             },
             logout: function () {
                 this.$modal.hide('login_or_register')
-                this.$cookie.delete('user_token')
+                this.$cookie.delete('user_token', {domain: process.env.COOKIE_DOMAIN})
                 this.is_logout = true
                 //close and refresh the state
                 //add a alert
