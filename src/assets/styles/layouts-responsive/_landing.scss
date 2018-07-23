@@ -4,6 +4,10 @@
 .landing-main {
   margin-top: -100vh;
   height: 100vh;
+  align-items: start;
+  .landing-main-content {
+    margin-top: 3em;
+  }
   .landing-main-actions {
     display: flex;
     flex-direction: column;
