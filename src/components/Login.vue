@@ -40,7 +40,7 @@
                         <icon name="user-circle" class="icon"></icon>
                         <span class="text">{{$t('account.dashboard')}}</span>
                     </a>
-                    <a @click="goToAdminDashboard()">
+                    <a @click="goToAdminDashboard()" v-if="is_admin">
                         <icon name="tachometer-alt" class="icon"></icon>
                         <span class="text">{{$t('account.admin')}}</span>
                     </a>
