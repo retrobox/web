@@ -111,7 +111,7 @@
                         <a @click="$router.push({name: 'ShopIndex'})">{{$t('shop.title')}}</a>
                     </div>
                     <div class="nav-item with-button">
-                        <a @click="$router.push({name: 'ShopItem', params: {slug:'retrobox-console-28'}})"
+                        <a @click="$router.push({name: 'ShopItem', params: {slug:'retrobox-kit'}})"
                            class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded button">
                             <icon name="shopping-cart" class="icon"></icon>
                             {{$t('buy')}}
