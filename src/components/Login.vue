@@ -80,7 +80,7 @@
         created() {
             var token = this.$cookie.get('user_token')
             if(token != undefined){
-                this.is_admin = (jwtDecode(token) == true)
+                this.is_admin = (jwtDecode(token).user.is_admin == true)
             }
         },
         methods: {
