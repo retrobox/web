@@ -222,7 +222,7 @@ export default {
         root: this.$t('shop.title')
       })
 
-      this.$apitator.get(this, "/shop/item/" + this.$route.params.slug).then((response) => {
+      this.$apitator.get(this, "/shop/" + this.$i18n.locale + "/item/" + this.$route.params.slug).then((response) => {
         this.item = response.data.data.item
         if (this.item == null) {
           this.$store.commit('SET_TITLE', this.$t('not-found.title'))
