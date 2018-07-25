@@ -138,15 +138,29 @@
 "legals": "Legals terms",
 "our-team-members": "Our team members",
 "account": {
-  "title": "My account"
+  "title": "My account",
+  "logout": {
+    "title": "Sign Out",
+    "success": {
+      "title": "And voila !",
+      "description": "You have been disconnected"
+    }
+  },
+  "dashboard": "My dashboard",
+  "admin": "Panel admin"
 },
 "shop": {
   "checkout": {
     "title": "Pay",
     "choise": "Choose a payment method...",
-    "pay": "Payer {{amount}}",
+    "pay": "Pay {{amount}}",
     "paypal": "Paypal",
-    "card": "Credit card"
+    "card": "Credit card",
+    "success": {
+      "title": "Congratulations !",
+      "description": "Your order has been accepted, we keep you informed for the future !",
+      "thanks": "Thanks you for your order !"
+    }
   },
   "item": {
     "title": "Item",
