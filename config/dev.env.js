@@ -9,5 +9,6 @@ module.exports = merge(prodEnv, {
   ADMIN_DASHBOARD_ENDPOINT: '"http://localhost:8101"',
   USER_DASHBOARD_ENDPOINT: '"http://localhost:8102"',
   MAILCHIMPER_ENDPOINT: '"http://localhost:55571"',
-  STRIPE_PUBLIC: '"pk_test_owe0KjkxRTyq5eJsPqrWYcLC"'
+  STRIPE_PUBLIC: '"pk_test_owe0KjkxRTyq5eJsPqrWYcLC"',
+  COOKIE_DOMAIN: '"localhost"'
 })

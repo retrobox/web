@@ -7,10 +7,10 @@
                 <p class="landing-main-subtitle">{{$t('landing.sub_title')}}</p>
                 <div class="landing-main-actions">
                     <a href="#go"
-                       class="button bg-transparent hover:bg-blue text-white font-semibold hover:text-white py-2 px-4 border border-white hover:border-transparent rounded-full">
+                       class="landing-main-button-go button">
                         {{$t('landing.go')}}
-                    </a>
-                    <a href="#" class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded-full button">
+                    </a>                  
+                    <a href="#" class="landing-main-button-shop button">
                         <icon name="shopping-cart" class="icon"></icon>
                         {{$t('buy')}}
                     </a>

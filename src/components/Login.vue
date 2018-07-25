@@ -40,7 +40,7 @@
                         <icon name="user-circle" class="icon"></icon>
                         <span class="text">{{$t('account.dashboard')}}</span>
                     </a>
-                    <a @click="goToAdminDashboard()">
+                    <a @click="goToAdminDashboard()" v-if="is_admin">
                         <icon name="tachometer-alt" class="icon"></icon>
                         <span class="text">{{$t('account.admin')}}</span>
                     </a>
@@ -80,7 +80,7 @@
         created() {
             var token = this.$cookie.get('user_token')
             if(token != undefined){
-                this.is_admin = (jwtDecode(token) == true)
+                this.is_admin = (jwtDecode(token).user.is_admin == true)
             }
         },
         methods: {
@@ -102,7 +102,7 @@
             },
             logout: function () {
                 this.$modal.hide('login_or_register')
-                this.$cookie.delete('user_token')
+                this.$cookie.delete('user_token', {domain: process.env.COOKIE_DOMAIN})
                 this.is_logout = true
                 //close and refresh the state
                 //add a alert

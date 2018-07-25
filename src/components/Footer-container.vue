@@ -44,6 +44,10 @@
                         </li>
 
                         <li>
+                            <a href="https://blog.retrobox.tech">{{$t('blog.our')}}</a>
+                        </li>
+
+                        <li>
                             <a @click="$router.push({name: 'Community'})">{{$t('community.title')}}</a>
                         </li>
 

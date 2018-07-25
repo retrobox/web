@@ -131,7 +131,9 @@ export default {
   name: 'ShopIndex',
   data() {
     return {
-      item: {},
+      item: {
+        category: {}
+      },
       //url of image to show in modal
       to_show: "",
       selectedStorage: 8,
@@ -150,7 +152,9 @@ export default {
         {color: "#9400d3", name: this.$t('shop.item.custom.colors.purple')}
       ],
       selectedColor: "#ff0000",
-      main: [],
+      main: [
+        {url: ""}
+      ],
       not_main: [],
       //showed price
       price: 0,
@@ -218,42 +222,8 @@ export default {
         root: this.$t('shop.title')
       })
 
-      this.$apitator.query(this, {
-        body: {
-          query: `query ($slug: String!){
-          	getOneShopItem(slug: $slug)
-          	{
-          		id,
-              slug,
-          		title,
-          		price,
-          		description_long,
-          		description_short,
-          		version,
-              show_version,
-              images {
-                url,
-                is_main
-              },
-          		category {
-          			id
-                is_customizable
-          			items {
-                  id,
-          				title,
-                  slug,
-                  version
-          			}
-          		}
-          	}
-          }`,
-          variables: {
-            slug: this.$route.params.slug
-          }
-        }
-      }).then((response) => {
-        this.item = response.data.data.getOneShopItem
-
+      this.$apitator.get(this, "/shop/" + this.$i18n.locale + "/item/" + this.$route.params.slug).then((response) => {
+        this.item = response.data.data.item
         if (this.item == null) {
           this.$store.commit('SET_TITLE', this.$t('not-found.title'))
         } else {

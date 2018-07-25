@@ -20,9 +20,6 @@
                                 <a @click="$router.push({name: 'DocumentationHome'}); $store.commit('TOGGLE_NAV')">{{$t('docs')}}</a>
                             </li>
                             <li>
-                                <a href="https://blog.retrobox.tech">{{$t('blog.our')}}</a>
-                            </li>
-                            <li>
                                 <a @click="$router.push({name: 'ShopIndex'}); $store.commit('TOGGLE_NAV')">{{$t('shop.title')}}</a>
                             </li>
                             <li>
@@ -103,9 +100,6 @@
                     </div>
                     <div class="nav-item with-link">
                         <a @click="$router.push({name: 'DocumentationHome'})">{{$t('docs')}}</a>
-                    </div>
-                    <div class="nav-item with-link">
-                        <a href="https://blog.retrobox.tech">{{$t('blog.our')}}</a>
                     </div>
                     <div class="nav-item with-link">
                         <a @click="$router.push({name: 'ShopIndex'})">{{$t('shop.title')}}</a>
