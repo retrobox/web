@@ -172,9 +172,9 @@ export default {
 
       this.price = this.original_price
       if (this.selectedStorage == 16) {
-        this.price = this.price + 2.55
+        this.price = this.price + 6
       }if (this.selectedStorage == 32){
-        this.price = this.price + 3.55
+        this.price = this.price + 10
       }
       this.price = parseFloat(this.price.toFixed(2))
     }

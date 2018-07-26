@@ -174,7 +174,7 @@
         "blue": "Blue",
         "purple": "Purple"
       },
-      "color": "Choose your color",
+      "color": "Choose the color of the circuit board",
       "storage": "Size of internal storage"
     }
   },
