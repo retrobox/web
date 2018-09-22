@@ -36,7 +36,7 @@
     "title": "Receive our newsletter",
     "description": "Sign up to receive the latest information ...",
     "form": {
-      "submit": "Ok ?",
+      "submit": "Ok",
       "email": "Your email",
       "email_placeholder": "john@example.com"
     },
@@ -156,6 +156,7 @@
     "pay": "Pay {{amount}}",
     "paypal": "Paypal",
     "card": "Credit card",
+    "wait": "Loading...",
     "success": {
       "title": "Congratulations !",
       "description": "Your order has been accepted, we keep you informed for the future !",
