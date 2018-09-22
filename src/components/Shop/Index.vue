@@ -6,7 +6,7 @@
                     <icon name="sync" spin scale="3"></icon>
                 </div>
             </div>
-            <div v-if="$store.state.loading == false" key="$store.state.loading">
+            <div v-if="$store.state.loading === false" key="$store.state.loading">
                 <div class="cover-title">
                     <div class="cover-title-content container mx-auto">
                         <h1>{{$t('shop.title')}}</h1>
@@ -15,7 +15,7 @@
                 <div class="container mx-auto">
                     <shop-header></shop-header>
                     <div class="shop-index-container">
-                        <div class="shop-empty-container" v-if="items.length == 0">
+                        <div class="shop-empty-container" v-if="items.length === 0">
                             <div class="shop-empty-icon">
                                 <icon name="times-circle" class="icon"></icon>
                             </div>

@@ -126,8 +126,8 @@
                     {{$t('breadcrumb.title')}}
                     <ul>
                         <li class="item">{{$store.state.location.root}}</li>
-                        <li class="divider" v-if="$store.state.location.sub_root != undefined">></li>
-                        <li class="item" v-if="$store.state.location.sub_root != undefined">
+                        <li class="divider" v-if="$store.state.location.sub_root !== undefined">></li>
+                        <li class="item" v-if="$store.state.location.sub_root !== undefined">
                             {{$store.state.location.sub_root}}
                         </li>
                     </ul>
@@ -157,11 +157,11 @@
                 this.$modal.show('locale_selection')
             },
             set_locale: function (locale) {
-                Vue.config.lang = locale
-                this.activeLocale = locale
-                this.$cookie.set('locale', locale, { expires: '365D' })
-                this.$i18n.locale = Vue.config.lang
-                this.$modal.hide('locale_selection')
+                Vue.config.lang = locale;
+                this.activeLocale = locale;
+                this.$cookie.set('locale', locale, { expires: '365D' });
+                this.$i18n.locale = Vue.config.lang;
+                this.$modal.hide('locale_selection');
                 this.$store.commit('SET_TITLE', this.$store.state.title_context)
             }
         },

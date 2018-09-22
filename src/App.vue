@@ -19,8 +19,8 @@
         <modal name="modal_alert" class="modal alert-modal">
             <div class="alert-container modal-container">
                 <div class="alert-content">
-                    <i class="fas fa-exclamation-circle icon text-red" v-if="$store.state.alert.type == 'error'"></i>
-                    <i class="fas fa-check-circle icon text-green" v-if="$store.state.alert.type == 'success'"></i>
+                    <i class="fas fa-exclamation-circle icon text-red" v-if="$store.state.alert.type === 'error'"></i>
+                    <i class="fas fa-check-circle icon text-green" v-if="$store.state.alert.type === 'success'"></i>
                     <h3 class="alert-title">{{$store.state.alert.title}}</h3>
                     <p>{{$store.state.alert.description}}</p>
                 </div>
@@ -53,7 +53,7 @@
         },
         watch: {
           "$store.state.alert": function (alert) {
-              if(alert.title != ""){
+              if(alert.title !== ""){
                 this.$modal.show('modal_alert')
               }else{
                 this.$modal.hide('modal_alert')
@@ -62,21 +62,21 @@
         },
         created() {
             if (this.$cookie.get('locale') == null) {
-              if (navigator.languages != undefined){
+              if (navigator.languages !== undefined){
                  var brower_locale = navigator.languages[0]
               }
               else{
                  var brower_locale = navigator.language
               }
-              Vue.config.lang = brower_locale.substring(0, 2)
-              if (brower_locale == undefined) {
+              Vue.config.lang = brower_locale.substring(0, 2);
+              if (brower_locale === undefined) {
                 brower_locale = 'en'
               }
             }else {
               Vue.config.lang = this.$cookie.get('locale')
             }
 
-            this.$i18n.locale = Vue.config.lang
+            this.$i18n.locale = Vue.config.lang;
             setTimeout(() => {
                 this.show = true
             }, 400)
