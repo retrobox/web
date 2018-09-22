@@ -198,7 +198,7 @@
           "blue": "Bleu",
           "purple": "Violet"
         },
-        "color": "Choisissez votre couleur",
+        "color": "Choisissez la couleur du circuit imprimé",
         "storage": "Taille du stockage interne"
       }
     },
@@ -231,7 +231,6 @@
   },
   "contact-us": "Comment nous contacter ?",
   "blog": {
-    "our": "Notre blog",
     "title": "Blog",
     "posts": "Articles"
   },

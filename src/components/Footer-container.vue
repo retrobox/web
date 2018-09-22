@@ -44,7 +44,7 @@
                         </li>
 
                         <li>
-                            <a href="https://blog.retrobox.tech">{{$t('blog.our')}}</a>
+                            <a href="https://blog.retrobox.tech">{{$t('blog.title')}}</a>
                         </li>
 
                         <li>
@@ -60,6 +60,9 @@
             <div class="w-1/3">
                 <div class="footer-links">
                     <ul>
+                        <li>
+                            <a @click="$router.push({name: 'DocumentationHome'})">{{$t('docs')}}</a>
+                        </li>
                         <li>
                             <a @click="$router.push({name: 'ShopIndex'})">{{$t('shop.title')}}</a>
                         </li>

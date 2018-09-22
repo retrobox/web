@@ -9,8 +9,8 @@
                     <a href="#go"
                        class="landing-main-button-go button">
                         {{$t('landing.go')}}
-                    </a>                  
-                    <a href="#" class="landing-main-button-shop button">
+                    </a>
+                    <a @click="$router.push({name: 'ShopItem', params: {slug: 'retrobox-kit'}})" class="landing-main-button-shop button">
                         <icon name="shopping-cart" class="icon"></icon>
                         {{$t('buy')}}
                     </a>
@@ -195,7 +195,7 @@
                             <div class="px-6 py-4 landing-column-footer">
                                 <span class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">EUR 70.99</span>
 
-                                <a @click="$router.push({name: 'ShopItem', params: {slug: 'retrobox-pre-assemble'}})"
+                                <a @click="$router.push({name: 'ShopItem', params: {slug: 'retrobox-non-kit'}})"
                                    class="button bg-transparent hover:bg-blue text-blue font-semibold hover:text-white py-2 px-4 border border-blue hover:border-transparent rounded-full">
                                     <icon name="shopping-cart" class="icon"></icon>
                                     {{$t('buy')}}
