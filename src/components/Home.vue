@@ -6,14 +6,14 @@
                 <h1 class="landing-main-title">{{$t('landing.title')}}</h1>
                 <p class="landing-main-subtitle">{{$t('landing.sub_title')}}</p>
                 <div class="landing-main-actions">
-                    <a href="#go"
+                    <a @click="goToAbout"
                        class="landing-main-button-go button">
                         {{$t('landing.go')}}
                     </a>
-                    <a @click="$router.push({name: 'ShopItem', params: {slug: 'retrobox-kit'}})" class="landing-main-button-shop button">
+                    <router-link :to="{name:'ShopItem', params: {slug: 'retrobox-kit'}}" class="landing-main-button-shop button">
                         <icon name="shopping-cart" class="icon"></icon>
                         {{$t('buy')}}
-                    </a>
+                    </router-link>
                 </div>
             </div>
         </div>
@@ -214,6 +214,11 @@
         name: 'Home',
         data () {
             return {}
+        },
+        methods: {
+            goToAbout: function () {
+                window.scroll(0, 700)
+            }
         },
         created () {
             this.$store.commit('SET_TITLE', {context: this, key: 'home'})
