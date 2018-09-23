@@ -96,6 +96,7 @@
                         // })
                         this.$apitator.post(this, "/stripe/execute", {
                             token: token.id,
+                            email: token.email,
                             items: this.$store.state.cart
                         }, {
                             with_auth: true
