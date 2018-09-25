@@ -164,7 +164,7 @@
     }
   },
   "shipping_details": {
-    "title": "Vos détails de livraisons",
+    "title": "Your delivery details",
     "form": {
       "first_name": "First name",
       "first_name_placeholder": "John",
