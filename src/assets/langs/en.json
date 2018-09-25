@@ -163,6 +163,31 @@
       "thanks": "Thanks you for your order !"
     }
   },
+  "shipping_details": {
+    "title": "Vos détails de livraisons",
+    "form": {
+      "first_name": "First name",
+      "first_name_placeholder": "John",
+      "last_name": "Last name",
+      "last_name_placeholder": "Doe",
+      "address_first_line": "Adress",
+      "address_first_line_placeholder": "",
+      "address_second_line": "Second line",
+      "address_second_line_placeholder": "",
+      "address_city": "City",
+      "address_city_placeholder": "Tokyo",
+      "address_postal_code": "Postal code",
+      "address_postal_code_placeholder": "27950",
+      "address_country": "Country",
+      "address_country_placeholder": "Japan",
+      "error": {
+        "title": "Error",
+        "description": "Your address is not complete"
+      }
+    },
+    "next": "Next",
+    "previous": "Previous"
+  },
   "item": {
     "title": "Item",
     "version": "Version",
@@ -181,13 +206,15 @@
   },
   "title": "Shop",
   "cart": {
-    "title": "Panier",
+    "title": "Cart",
     "items": "No article | One item | {count} articles",
     "empty": "Empty card",
     "add": "Add",
     "remove": "Removed",
     "total": "Total",
     "show": "Show",
+    "sub_total": "Sub total",
+    "shipping_price": "Shipping price",
     "added": {
       "title": "Article added!",
       "description": "An item has just been added to your cart"
