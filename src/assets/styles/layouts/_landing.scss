@@ -4,9 +4,13 @@ Landing main
 $landing-main-section-height: 70vh;
 $landing-main-section-opacity: 0.8;
 
+.landing-background {
+  background-color: #1e2426;
+}
+
 .landing-main {
   margin-top: -$landing-main-section-height;
-  background-color: rgba(52, 73, 94, $landing-main-section-opacity);
+  background-color: #1e2426;
   display: flex;
   width: 100%;
   height: $landing-main-section-height;
@@ -74,14 +78,10 @@ $landing-main-section-opacity: 0.8;
 .landing-main-back {
   background-size: cover;
   height: $landing-main-section-height;
-  background-image: url(https://i.imgur.com/sb5ORZw.jpg)
+  background-image: url(https://i.imgur.com/sb5ORZw.jpg);
+  clip-path: polygon(100% 0%, 0% 0%, 0% 99%, 100% 92%);
 }
 
-.landing-section {
-  margin-top: 2em;
-  border-top: 1px solid rgba(189, 195, 199, 1.0);
-  width: 100%;
-}
 
 /**
 Landing about
@@ -90,9 +90,53 @@ Landing about
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 1px 1px 8px #000000;
-  background-image: linear-gradient(to right bottom, #82ccdd, #60a6bf, #4181a0, #255e81, #0a3d62);
+  background-color: #1e2426;
+
+
   .landing-about-content {
+    color: #ecf0f1;
+    margin-top: 6em;
+    margin-bottom: 6em;
+    width: 60%;
+    display: grid;
+    grid-template-columns: 58% 1fr;
+    grid-column-gap: 3em;
+
+    .landing-about-text {
+      line-height: 1.5em;
+
+      .landing-about-title {
+        margin-bottom: 1em;
+      }
+    }
+
+    .landing-about-pic {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+.landing-about2 {
+  background-size: cover;
+  height: 400px;
+  background-image: url(https://i.imgur.com/sb5ORZw.jpg);
+  clip-path: polygon(0% 90%, 100% 100%, 100% 10%, 0% 0%);
+}
+
+.landing-about3 {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(69,40,110,1) 0%, rgba(79,37,106,1) 16%, rgba(96,6,83,1) 34%, rgba(255,87,121,1) 70%, rgba(255,144,97,1) 95%);
+  clip-path: polygon(0% 90%, 100% 100%, 100% 10%, 0% 0%);
+  .landing-about-content2 {
+
+
     color: #ecf0f1;
     margin-top: 6em;
     margin-bottom: 6em;
@@ -191,9 +235,7 @@ Landing advantages
 .landing-advantages {
   display: flex;
   justify-content: center;
-  box-shadow: 1px 1px 8px #000000;
   align-items: center;
-  background-image: linear-gradient(to right bottom, #6a89cc, #536eb0, #3d5495, #263b7b, #0c2461);
   .landing-advantages-content {
     text-align: center;
     color: #ecf0f1;
@@ -220,6 +262,12 @@ Landing video
 
 /**
 landing start **/
+.landing-startnow  {
+  margin-top: 2em;
+  border-top: 1px solid #bdc3c7;
+  width: 100%;
+}
+
 .landing-startnow-content {
   margin-top: 2em;
   .type-kited .landing-column-icon div {
@@ -245,7 +293,7 @@ landing start **/
 }
 
 .landing-startnow-title {
-  color: #2c3e50;
+  color: #ffffff;
   text-align: center;
 }
 

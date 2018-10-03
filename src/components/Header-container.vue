@@ -120,23 +120,6 @@
                 </nav>
             </div>
         </div>
-        <div class="header-breadcrumb">
-            <div class="container mx-auto header-breadcrumb-flex">
-                <div class="breadcrumb-location desktop">
-                    {{$t('breadcrumb.title')}}
-                    <ul>
-                        <li class="item">{{$store.state.location.root}}</li>
-                        <li class="divider" v-if="$store.state.location.sub_root !== undefined">></li>
-                        <li class="item" v-if="$store.state.location.sub_root !== undefined">
-                            {{$store.state.location.sub_root}}
-                        </li>
-                    </ul>
-                </div>
-                <div class="breadcrumb-socials">
-                    <socials/>
-                </div>
-            </div>
-        </div>
     </div>
 </template>
 
