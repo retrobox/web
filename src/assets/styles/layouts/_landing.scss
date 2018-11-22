@@ -32,42 +32,8 @@ $landing-main-section-opacity: 0.8;
     }
   }
   .landing-main-actions {
-    .landing-main-button-go {
-      @extend .bg-transparent;
-      &:hover {
-        @extend .bg-blue;
-      }
-      @extend .text-white;
-      @extend .font-semibold;
-      &:hover {
-        @extend .text-white;
-      }
-      @extend .py-4;
-      @extend .px-8;
-      @extend .border;
-      @extend .border-white;
-      &:hover {
-        @extend .border-transparent;
-      }
-      @extend .rounded-full;
-      @extend .text-lg;
-    }
-    .landing-main-button-shop {
-      @extend .bg-blue;
-      &:hover {
-        @extend .bg-blue-dark;
-      }
-      @extend .text-white;
-      @extend .font-bold;
-      @extend .py-4;
-      @extend .px-8;
-      @extend .rounded-full;
-      @extend .button;
-      @extend .text-lg;
-    }
-    margin-top: 4em;
     a {
-      margin-right: 15px;
+      margin-right: 10px;
       text-decoration: none;
     }
   }

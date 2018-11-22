@@ -61,9 +61,6 @@
     padding-top: 2em;
     padding-bottom: 2em;
     box-shadow: 1px 1px 8px #000000;
-    .container {
-      align-items: center;
-    }
     a {
       text-decoration: none;
       color: white;
@@ -93,8 +90,10 @@
 
   }
   .container {
+    align-items: center;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
   }
 }

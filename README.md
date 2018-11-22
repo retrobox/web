@@ -27,7 +27,3 @@ This docker image expose on 80 port.
 run it:
 
 `sudo docker run -d -p 4242:80 --name retrobox.web retrobox/web`
-
-## i18n
-
-To check the i18n files validity you can run : `npm run locales` (only in dev environment)

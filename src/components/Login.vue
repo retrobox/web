@@ -1,6 +1,6 @@
 <template>
     <div>
-      <div class="account account-desktop" v-if="$cookie.get('user_token') === undefined">
+      <div class="account account-desktop" v-if="$cookie.get('user_token') == undefined">
         <a @click="login('login')">
             <icon name="sign-in-alt" class="icon"></icon>
             <span class="text">{{$t('login')}}</span>
@@ -10,7 +10,7 @@
             <span class="text">{{$t('register')}}</span>
         </a>
       </div>
-      <div class="account-mobile" v-bind:class="{'account-button': $cookie.get('user_token') !== undefined && !is_logout}">
+      <div class="account-mobile" v-bind:class="{'account-button': $cookie.get('user_token') != undefined && !is_logout}">
         <div @click="$modal.show('login_or_register')"
            class="bg-grey hover:bg-gray-dark text-white font-bold py-2 px-4 rounded button">
             {{$t('account.title')}}
@@ -27,11 +27,11 @@
       </modal>
       <modal name="login_or_register" class="modal login-or-register-modal">
           <div class="modal-container">
-            <h3 class="login-or-register-title" v-if="!is_logout && $cookie.get('user_token') !== undefined">{{$t('account.title')}}</h3>
+            <h3 class="login-or-register-title" v-if="!is_logout && $cookie.get('user_token') != undefined">{{$t('account.title')}}</h3>
             <h3 class="login-or-register-title" v-else>{{$t('login-or-register')}}</h3>
             <div class="login-or-register-container">
               <div class="login-or-register">
-                  <div v-if="$cookie.get('user_token') !== undefined">
+                  <div v-if="$cookie.get('user_token') != undefined">
                     <a @click="logout()">
                         <icon name="sign-out-alt" class="icon"></icon>
                         <span class="text">{{$t('account.logout.title')}}</span>
@@ -40,7 +40,7 @@
                         <icon name="user-circle" class="icon"></icon>
                         <span class="text">{{$t('account.dashboard')}}</span>
                     </a>
-                    <a @click="goToAdminDashboard()" v-if="is_admin">
+                    <a @click="goToAdminDashboard()">
                         <icon name="tachometer-alt" class="icon"></icon>
                         <span class="text">{{$t('account.admin')}}</span>
                     </a>
@@ -67,7 +67,8 @@
 </template>
 
 <script>
-    const jwtDecode = require('jwt-decode');
+    import axios from 'axios'
+    var jwtDecode = require('jwt-decode');
     export default {
         name: 'Login',
         data() {
@@ -77,21 +78,21 @@
             }
         },
         created() {
-            let token = this.$cookie.get('user_token');
-            if(token !== undefined){
-                this.is_admin = jwtDecode(token).user.is_admin === true;
+            var token = this.$cookie.get('user_token')
+            if(token != undefined){
+                this.is_admin = (jwtDecode(token) == true)
             }
         },
         methods: {
             login: function (type) {
                 //where type is 'login' or 'register'
-                this.$modal.hide('login_or_register');
-                this.$modal.show('login');
-                let url = window.location;
+                this.$modal.hide('login_or_register')
+                this.$modal.show('login')
+                var url = window.location
                 if (this.$store.state.login_redirect_route !== "" && this.$store.state.login_redirect_route !== undefined) {
                     url = this.$store.state.login_redirect_route
                 }
-                this.$cookie.set('login_redirection_url', url);
+                this.$cookie.set('login_redirection_url', url)
                 //request the api
                 this.$apitator.get(this, "/account/" + type).then((response) => {
                     window.location = response.data.data.url
@@ -100,9 +101,9 @@
                 })
             },
             logout: function () {
-                this.$modal.hide('login_or_register');
-                this.$cookie.delete('user_token', {domain: process.env.COOKIE_DOMAIN});
-                this.is_logout = true;
+                this.$modal.hide('login_or_register')
+                this.$cookie.delete('user_token')
+                this.is_logout = true
                 //close and refresh the state
                 //add a alert
                 this.$store.commit('ADD_ALERT', {
@@ -112,13 +113,13 @@
                 })
             },
             goToDashboard: function () {
-                this.$modal.hide('login_or_register');
-                this.$modal.show('login');
+                this.$modal.hide('login_or_register')
+                this.$modal.show('login')
                 window.location = process.env.USER_DASHBOARD_ENDPOINT
             },
             goToAdminDashboard: function () {
-                this.$modal.hide('login_or_register');
-                this.$modal.show('login');
+                this.$modal.hide('login_or_register')
+                this.$modal.show('login')
                 window.location = process.env.ADMIN_DASHBOARD_ENDPOINT
             }
         }

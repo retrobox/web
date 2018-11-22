@@ -14,14 +14,17 @@ import VueCookie from 'vue-cookie'
 import VueApitator from './apitator'
 import VueStripeCheckout from 'vue-stripe-checkout';
 
-Vue.use(VModal, {dialog: true});
-Vue.use(VueI18n);
-Vue.component('icon', Icon);
-Vue.use(Transitions);
-Vue.use(VueCookie);
+console.log(process.env);
+
+Vue.use(VModal, {dialog: true})
+Vue.use(VueI18n)
+Vue.component('icon', Icon)
+Vue.use(Transitions)
+Vue.use(VueCookie)
 Vue.use(Tooltip);
 
-Vue.config.productionTip = false;
+
+Vue.config.productionTip = false
 
 Vue.use(VueApitator, {
     rootUrl: process.env.API_ENDPOINT,
@@ -42,7 +45,7 @@ const i18n = new VueI18n({
         fr: require('./assets/langs/fr.json'),
         en: require('./assets/langs/en.json'),
     }
-});
+})
 
 /* eslint-disable no-new */
 new Vue({
@@ -52,4 +55,4 @@ new Vue({
     template: '<App/>',
     i18n,
     store
-});
+})
