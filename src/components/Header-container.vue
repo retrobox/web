@@ -20,8 +20,8 @@
                                 <a @click="$router.push({name: 'DocumentationHome'}); $store.commit('TOGGLE_NAV')">{{$t('docs')}}</a>
                             </li>
                             <li>
--                                <a href="https://blog.retrobox.tech">{{$t('blog.title')}}</a>
--                            </li>
+                                <a @click="$router.push({name: 'Community'}); $store.commit('TOGGLE_NAV')">{{$t('community.title')}}</a>
+                            </li>
                             <li>
                                 <a @click="$router.push({name: 'ShopIndex'}); $store.commit('TOGGLE_NAV')">{{$t('shop.title')}}</a>
                             </li>
@@ -105,13 +105,13 @@
                         <a @click="$router.push({name: 'DocumentationHome'})">{{$t('docs')}}</a>
                     </div>
                     <div class="nav-item with-link">
-                        <a href="https://blog.retrobox.tech">{{$t('blog.title')}}</a>
+                        <a @click="$router.push({name: 'Community'})">{{$t('community.title')}}</a>
                     </div>
                     <div class="nav-item with-link">
-                        <a @click="$router.push({name: 'ShopIndex'})">{{$t('shop.title')}}</a>
+                      <a @click="$router.push({name: 'ShopIndex'})">{{$t('shop.title')}}</a>
                     </div>
                     <div class="nav-item with-button">
-                        <a @click="$router.push({name: 'ShopItem', params: {slug:'retrobox-kit'}})"
+                        <a @click="$router.push({name: 'ShopItem', params: {slug:'retrobox-console-28'}})"
                            class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded button">
                             <icon name="shopping-cart" class="icon"></icon>
                             {{$t('buy')}}
@@ -120,6 +120,7 @@
                 </nav>
             </div>
         </div>
+        
     </div>
 </template>
 
@@ -140,11 +141,11 @@
                 this.$modal.show('locale_selection')
             },
             set_locale: function (locale) {
-                Vue.config.lang = locale;
-                this.activeLocale = locale;
-                this.$cookie.set('locale', locale, { expires: '365D' });
-                this.$i18n.locale = Vue.config.lang;
-                this.$modal.hide('locale_selection');
+                Vue.config.lang = locale
+                this.activeLocale = locale
+                this.$cookie.set('locale', locale, { expires: '365D' })
+                this.$i18n.locale = Vue.config.lang
+                this.$modal.hide('locale_selection')
                 this.$store.commit('SET_TITLE', this.$store.state.title_context)
             }
         },

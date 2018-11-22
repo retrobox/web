@@ -4,9 +4,6 @@ Landing main
 $landing-main-section-height: 70vh;
 $landing-main-section-opacity: 0.8;
 
-.landing-background {
-  background-color: #1e2426;
-}
 
 .landing-main {
   margin-top: -$landing-main-section-height;
@@ -16,7 +13,6 @@ $landing-main-section-opacity: 0.8;
   height: $landing-main-section-height;
   justify-content: center;
   align-items: center;
-  box-shadow: 1px 1px 8px #000000;
 
   .landing-main-content {
     position: relative;
@@ -26,55 +22,22 @@ $landing-main-section-opacity: 0.8;
     .landing-main-title {
       font-weight: lighter;
       font-size: 3em;
+      text-shadow: 1px 1px 3px black;
     }
     .landing-main-subtitle {
       margin-top: 1em;
       margin-bottom: 2em;
       font-size: 1.3em;
+      text-shadow: 1px 1px 3px black;
     }
   }
   .landing-main-actions {
-    .landing-main-button-go {
-      @extend .bg-transparent;
-      &:hover {
-        @extend .bg-blue;
-      }
-      @extend .text-white;
-      @extend .font-semibold;
-      &:hover {
-        @extend .text-white;
-      }
-      @extend .py-4;
-      @extend .px-8;
-      @extend .border;
-      @extend .border-white;
-      &:hover {
-        @extend .border-transparent;
-      }
-      @extend .rounded-full;
-      @extend .text-lg;
-    }
-    .landing-main-button-shop {
-      @extend .bg-blue;
-      &:hover {
-        @extend .bg-blue-dark;
-      }
-      @extend .text-white;
-      @extend .font-bold;
-      @extend .py-4;
-      @extend .px-8;
-      @extend .rounded-full;
-      @extend .button;
-      @extend .text-lg;
-    }
-    margin-top: 4em;
     a {
-      margin-right: 15px;
+      margin-right: 10px;
       text-decoration: none;
     }
   }
 }
-
 .landing-main-back {
   background-size: cover;
   height: $landing-main-section-height;
@@ -82,6 +45,12 @@ $landing-main-section-opacity: 0.8;
   clip-path: polygon(100% 0%, 0% 0%, 0% 99%, 100% 92%);
 }
 
+
+.landing-startnow  {
+  margin-top: 2em;
+  border-top: 1px solid #bdc3c7;
+  width: 100%;
+}
 
 /**
 Landing about
@@ -120,19 +89,19 @@ Landing about
     }
   }
 }
-.landing-about2 {
+.landing-about3 {
   background-size: cover;
   height: 400px;
   background-image: url(https://i.imgur.com/sb5ORZw.jpg);
   clip-path: polygon(0% 90%, 100% 100%, 100% 10%, 0% 0%);
 }
 
-.landing-about3 {
+.landing-about2 {
   height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(90deg, rgba(69,40,110,1) 0%, rgba(79,37,106,1) 16%, rgba(96,6,83,1) 34%, rgba(255,87,121,1) 70%, rgba(255,144,97,1) 95%);
+  background: linear-gradient(90deg, rgba(147,39,143,1) 0%, rgba(0,169,157,1) 95%);
   clip-path: polygon(0% 90%, 100% 100%, 100% 10%, 0% 0%);
   .landing-about-content2 {
 
@@ -232,10 +201,15 @@ Landing columns
 /**
 Landing advantages
 **/
+.landing-test {
+  background-color: #1e2426;
+}
+
 .landing-advantages {
   display: flex;
   justify-content: center;
   align-items: center;
+  clip-path: polygon(100% 1%, 0% 8%, 0% 100%, 100% 100%);
   .landing-advantages-content {
     text-align: center;
     color: #ecf0f1;
@@ -262,12 +236,6 @@ Landing video
 
 /**
 landing start **/
-.landing-startnow  {
-  margin-top: 2em;
-  border-top: 1px solid #bdc3c7;
-  width: 100%;
-}
-
 .landing-startnow-content {
   margin-top: 2em;
   .type-kited .landing-column-icon div {
