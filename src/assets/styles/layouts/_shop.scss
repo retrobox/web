@@ -126,6 +126,13 @@
     background-position-y: 50%;
     @extend .w-full;
   }
+  .shop-card-thumb:hover {
+    width: 120%;
+    height: 13em;
+    background-size: cover;
+    background-position-y: 50%;
+    @extend .w-full;
+  }
   .shop-card-content {
     width: 18em;
     @extend .px-4;
@@ -147,7 +154,6 @@
         font-weight: 500;
         font-size: 1.5rem;
         @extend .inline-block;
-        @extend .bg-grey-lighter;
         @extend .rounded-full;
         @extend .px-3;
         @extend .py-1;
