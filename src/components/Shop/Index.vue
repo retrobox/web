@@ -27,7 +27,6 @@
                         </div>
                         <div v-if="items.length > 0" class="shop-index-category-mosaic">
                             <div class="shop-index-category" v-for="category in items">
-                                <h3 class="dividing shop-index-category-title">{{category.title}}</h3>
                                 <div class="shop-index-category-items">
                                     <div class="shop-category-empty" v-if="category.items.length == 0">
                                       <div>
