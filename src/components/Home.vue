@@ -6,14 +6,14 @@
                 <h1 class="landing-main-title">{{$t('landing.title')}}</h1>
                 <p class="landing-main-subtitle">{{$t('landing.sub_title')}}</p>
                 <div class="landing-main-actions">
-                    <a href="#go"
-                       class="button bg-transparent hover:bg-blue text-white font-semibold hover:text-white py-2 px-4 border border-white hover:border-transparent rounded-full">
+                    <a @click="goToAbout"
+                       class="landing-main-button-go button">
                         {{$t('landing.go')}}
                     </a>
-                    <a href="#" class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded-full button">
+                    <router-link :to="{name:'ShopItem', params: {slug: 'retrobox-kit'}}" class="landing-main-button-shop button">
                         <icon name="shopping-cart" class="icon"></icon>
                         {{$t('buy')}}
-                    </a>
+                    </router-link>
                 </div>
             </div>
         </div>
@@ -189,7 +189,7 @@
                             <div class="px-6 py-4 landing-column-footer">
                                 <span class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">EUR 61.99</span>
 
-                                <a @click="$router.push({name: 'ShopItem', params: {slug: 'retrobox-console-kited'}})"
+                                <a @click="$router.push({name: 'ShopItem', params: {slug: 'retrobox-kit'}})"
                                   class="button bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded-full">
                                     <icon name="shopping-cart" class="icon"></icon>
                                     {{$t('buy')}}
@@ -214,7 +214,7 @@
                             <div class="px-6 py-4 landing-column-footer">
                                 <span class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">EUR 70.99</span>
 
-                                <a @click="$router.push({name: 'ShopItem', params: {slug: 'retrobox-console-non_kited'}})"
+                                <a @click="$router.push({name: 'ShopItem', params: {slug: 'retrobox-non-kit'}})"
                                    class="button bg-transparent hover:bg-blue text-blue font-semibold hover:text-white py-2 px-4 border border-blue hover:border-transparent rounded-full">
                                     <icon name="shopping-cart" class="icon"></icon>
                                     {{$t('buy')}}
@@ -233,6 +233,11 @@
         name: 'Home',
         data () {
             return {}
+        },
+        methods: {
+            goToAbout: function () {
+                window.scroll(0, 700)
+            }
         },
         created () {
             this.$store.commit('SET_TITLE', {context: this, key: 'home'})

@@ -1,0 +1,14 @@
+.Cookie--retrobox {
+    background: #34495E !important;
+    color: #fff;
+    padding: 1.250em;
+      .Cookie__button {
+        background: #2779bd !important;
+        padding: 0.625em 3.125em;
+        color: #fff;
+        border-radius: 0;
+        &:hover {
+          background: #3490dc !important;
+        }
+    }
+  }

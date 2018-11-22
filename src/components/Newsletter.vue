@@ -46,9 +46,10 @@
         },
         methods: {
             submit: function () {
+                console.log('new request')
                 this.loading = true
                 if (this.email != undefined && this.email != "") {
-                    axios.post('https://mailchimper.retrobox.tech/subscribe', {
+                    axios.post(process.env.MAILCHIMPER_ENDPOINT + '/subscribe', {
                         email: this.email
                     }).then((response) => {
                         this.$store.commit('ADD_ALERT', {
@@ -56,10 +57,12 @@
                           title: this.$t('newsletter.success.title'),
                           description: this.$t('newsletter.success.description')
                         })
-                            this.loading = false
+                        this.loading = false
                     }).catch((error) => {
-                        if (error.response) {
-                            if (error.response.data.error.slug) {
+                        this.loading = false
+                        if (error.response != undefined && error.response.status == 400) {
+                            if (
+                             error.response.data.errors.title == "Member Exists") {
                               this.$store.commit('ADD_ALERT', {
                                 type: 'error',
                                 title:  this.$t('newsletter.error.title'),
@@ -79,7 +82,6 @@
                             description: this.$t('newsletter.error.api_description')
                           })
                         }
-                        this.loading = false
                     })
                 }else{
                   this.$store.commit('ADD_ALERT', {
@@ -87,7 +89,7 @@
                     title:  this.$t('newsletter.error.title'),
                     description: this.$t('newsletter.error.missing_description')
                   })
-                      this.loading = false
+                  this.loading = false
                 }
             }
         }
