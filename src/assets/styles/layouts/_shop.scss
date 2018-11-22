@@ -125,14 +125,19 @@
     background-size: cover;
     background-position-y: 50%;
     @extend .w-full;
+    -webkit-transition: all 1s ease; /* Safari et Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* Internet Explorer 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
   }
   .shop-card-thumb:hover {
-    transition-delay: 1s;
-    width: 120%;
-    height: 120%;
-    background-size: cover;
-    background-position-y: 50%;
-    @extend .w-full;
+    /* L'image est grossie de 25% */
+    -webkit-transform:scale(1.25); /* Safari et Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* Internet Explorer 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
   }
   .shop-card-content {
     width: 18em;
@@ -223,14 +228,16 @@
 
       .buy-custom-mosaic.button-colors {
         .buy-custom-item {
-          border-radius: 50%;
-          border: 0px solid #B8C2CC;
+          border-color: #dae1e7;
+          border-width: 2px;
+          border-style: solid;
           margin-right: 0.5em;
           width: 2em;
           height: 2em;
         }
         .buy-custom-item.selected {
             border: 4px solid #B8C2CC;
+            border-color: #B8C2CC;
         }
       }
       .buy-custom-mosaic.storage {
