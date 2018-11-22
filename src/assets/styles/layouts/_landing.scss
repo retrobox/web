@@ -4,15 +4,15 @@ Landing main
 $landing-main-section-height: 70vh;
 $landing-main-section-opacity: 0.8;
 
+
 .landing-main {
   margin-top: -$landing-main-section-height;
-  background-color: rgba(52, 73, 94, $landing-main-section-opacity);
+  background-color: #1e2426;
   display: flex;
   width: 100%;
   height: $landing-main-section-height;
   justify-content: center;
   align-items: center;
-  box-shadow: 1px 1px 8px #000000;
 
   .landing-main-content {
     position: relative;
@@ -22,11 +22,13 @@ $landing-main-section-opacity: 0.8;
     .landing-main-title {
       font-weight: lighter;
       font-size: 3em;
+      text-shadow: 1px 1px 3px black;
     }
     .landing-main-subtitle {
       margin-top: 1em;
       margin-bottom: 2em;
       font-size: 1.3em;
+      text-shadow: 1px 1px 3px black;
     }
   }
   .landing-main-actions {
@@ -36,16 +38,17 @@ $landing-main-section-opacity: 0.8;
     }
   }
 }
-
 .landing-main-back {
   background-size: cover;
   height: $landing-main-section-height;
-  background-image: url(https://i.imgur.com/sb5ORZw.jpg)
+  background-image: url(https://i.imgur.com/sb5ORZw.jpg);
+  clip-path: polygon(100% 0%, 0% 0%, 0% 99%, 100% 92%);
 }
 
-.landing-section {
+
+.landing-startnow  {
   margin-top: 2em;
-  border-top: 1px solid rgba(189, 195, 199, 1.0);
+  border-top: 1px solid #bdc3c7;
   width: 100%;
 }
 
@@ -56,9 +59,53 @@ Landing about
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 1px 1px 8px #000000;
-  background-image: linear-gradient(to right bottom, #82ccdd, #60a6bf, #4181a0, #255e81, #0a3d62);
+  background-color: #1e2426;
+
+
   .landing-about-content {
+    color: #ecf0f1;
+    margin-top: 6em;
+    margin-bottom: 6em;
+    width: 60%;
+    display: grid;
+    grid-template-columns: 58% 1fr;
+    grid-column-gap: 3em;
+
+    .landing-about-text {
+      line-height: 1.5em;
+
+      .landing-about-title {
+        margin-bottom: 1em;
+      }
+    }
+
+    .landing-about-pic {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+.landing-about3 {
+  background-size: cover;
+  height: 400px;
+  background-image: url(https://i.imgur.com/sb5ORZw.jpg);
+  clip-path: polygon(0% 90%, 100% 100%, 100% 10%, 0% 0%);
+}
+
+.landing-about2 {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(147,39,143,1) 0%, rgba(0,169,157,1) 95%);
+  clip-path: polygon(0% 90%, 100% 100%, 100% 10%, 0% 0%);
+  .landing-about-content2 {
+
+
     color: #ecf0f1;
     margin-top: 6em;
     margin-bottom: 6em;
@@ -154,12 +201,15 @@ Landing columns
 /**
 Landing advantages
 **/
+.landing-test {
+  background-color: #1e2426;
+}
+
 .landing-advantages {
   display: flex;
   justify-content: center;
-  box-shadow: 1px 1px 8px #000000;
   align-items: center;
-  background-image: linear-gradient(to right bottom, #6a89cc, #536eb0, #3d5495, #263b7b, #0c2461);
+  clip-path: polygon(100% 1%, 0% 8%, 0% 100%, 100% 100%);
   .landing-advantages-content {
     text-align: center;
     color: #ecf0f1;
@@ -211,7 +261,7 @@ landing start **/
 }
 
 .landing-startnow-title {
-  color: #2c3e50;
+  color: #ffffff;
   text-align: center;
 }
 

@@ -14,3 +14,4 @@ yarn-error.log*
 *.sln
 start.bat
 package-lock.json
+*.bat
