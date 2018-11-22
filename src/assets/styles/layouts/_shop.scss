@@ -127,8 +127,9 @@
     @extend .w-full;
   }
   .shop-card-thumb:hover {
+    transition-delay: 1s;
     width: 120%;
-    height: 13em;
+    height: 120%;
     background-size: cover;
     background-position-y: 50%;
     @extend .w-full;
@@ -150,7 +151,7 @@
       align-items: center;
       @extend .pt-4;
       .price {
-        color: rgba(34, 47, 62, 0.7);
+        color: #2779BD;
         font-weight: 500;
         font-size: 1.5rem;
         @extend .inline-block;
