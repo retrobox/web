@@ -1,5 +1,5 @@
 <template>
-    <div class="landing-test">
+    <div>
         <div class="landing-main-back"></div>
         <div class="landing-main">
             <div class="landing-main-content">
@@ -20,25 +20,6 @@
 
         <section class="landing-section landing-about" id="go">
             <div class="landing-about-content">
-              <div class="container">
-                <div class="landing-about-text">
-                    <h2 class="landing-about-title">{{$t('landing.about.title')}}</h2>
-                    <p>
-                        {{$t('landing.about.description')}}
-                    </p>
-                 </div>
-                </div>
-                <div class="landing-about-pic">
-                    <img src="https://static.retrobox.tech/img/about/RETROBOX1.png">
-                </div>
-            </div>
-        </section>
-        <section class="landing-section landing-about3" id="go">
-            <div class="landing-about-content2">
-            </div>
-        </section>
-        <section class="landing-section landing-about2" id="go">
-            <div class="landing-about-content2">
                 <div class="landing-about-text">
                     <h2 class="landing-about-title">{{$t('landing.about.title')}}</h2>
                     <p>

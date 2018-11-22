@@ -61,24 +61,22 @@ $opacity: 0.8;
     background: rgba(236, 240, 241, 0.8) url("../../assets/img/back.jpg");
     background-size: cover;
     height: 84px;
-    box-shadow: -1px 2px 10px 3px rgba(0, 0, 0, 0.3) inset;
   }
   .header-background {
     height: 84px;
     overflow: hidden;
     margin-top: -84px;
-    background-image: linear-gradient(to right, rgba(242, 242, 242, 0.2), rgba(185, 185, 185, 0.2), rgba(119, 119, 119, 0.2), rgba(59, 59, 59, 0.2), rgba(44, 62, 80, $opacity));
+    background-image: linear-gradient(to right, rgba(242, 242, 242, 0.4), rgba(185, 185, 185, 0.5), rgba(119, 119, 119, 0.6), rgba(59, 59, 59, 0.7), rgba(44, 62, 80, $opacity));
+
     //background-color: rgba(44, 62, 80, 0.6);
   }
   .header-content {
     a {
-      color: #ffffff;
+      color: #ecf0f1;
       text-decoration: none;
-      font-weight: 500;
     }
     a:hover {
       text-decoration: none;
-      color: rgb(0, 0, 0);
     }
     .with-link {
       a {
@@ -90,9 +88,8 @@ $opacity: 0.8;
         // border-bottom-left-radius: 5px;
         // border-bottom-right-radius: 5px;
 
-        -webkit-transition: background 0.25s linear;
-      	transition: background 0.25s linear;
-      	transition: all 0.5s ease;
+        opacity: 0.8;
+        transition: opacity 0.2s ease-in-out;
       }
     }
     .with-button {
@@ -123,7 +120,6 @@ $opacity: 0.8;
 
       a {
         display: flex;
-        text-shadow: 1px 1px 2px black;
       }
     }
     .header-nav-container {
@@ -159,6 +155,7 @@ $opacity: 0.8;
     width: 100%;
     color: white;
     background-color: rgba(52, 73, 94, 1);
+    box-shadow: 1px 1px 8px #000000;
 
     .container {
       justify-content: space-between;
