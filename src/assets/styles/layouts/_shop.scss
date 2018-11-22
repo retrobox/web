@@ -228,20 +228,19 @@
 
       .buy-custom-mosaic.button-colors {
         .buy-custom-item {
-          border-color: #dae1e7;
-          border-width: 2px;
-          border-style: solid;
           margin-right: 0.5em;
           width: 2em;
           height: 2em;
         }
         .buy-custom-item.selected {
             border: 4px solid #B8C2CC;
-            border-color: #B8C2CC;
         }
       }
       .buy-custom-mosaic.storage {
         .buy-custom-item {
+          border-color: #4a4a4a;
+          border-width: 2px;
+          border-style: solid;
           border-radius: 15px;
           padding: 8px;
           margin-right: 0.5em;
@@ -256,6 +255,7 @@
       }
       .buy-custom-item.selected {
         opacity: 1;
+        border-color: #ffffff;
       }
 
       .buy-custom-item:hover {
