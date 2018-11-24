@@ -70,7 +70,7 @@
                                             <span>€ {{price}}</span>
                                         </div>
                                         <div class="buy-actions">
-                                            <button class="action-buy bg-blue hover:bg-blue-light text-white font-bold py-2 px-4 rounded inline-flex items-center button"
+                                            <button class="action-buy bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded inline-flex items-center button"
                                                     @click="toggleCart(item)">
                                                 <span><i class="fas fa-shopping-cart"></i></span>
                                                 <span v-if="$store.state.cart[this.$store.state.cart.indexOf(item)] == undefined">{{$t('shop.cart.add')}}</span>
@@ -150,13 +150,13 @@
                 ],
                 //in hex
                 colors: [
-                    {color: "#ff0000", name: this.$t('shop.item.custom.colors.red')},
-                    {color: "#ffff00", name: this.$t('shop.item.custom.colors.yellow')},
-                    {color: "#00ff00", name: this.$t('shop.item.custom.colors.green')},
-                    {color: "#0000ff", name: this.$t('shop.item.custom.colors.blue')},
-                    {color: "#9400d3", name: this.$t('shop.item.custom.colors.purple')}
+                    {color: "#ff4c4c", name: this.$t('shop.item.custom.colors.red')},
+                    {color: "#ffff4c", name: this.$t('shop.item.custom.colors.yellow')},
+                    {color: "#4dff4c", name: this.$t('shop.item.custom.colors.green')},
+                    {color: "#4d4cff", name: this.$t('shop.item.custom.colors.blue')},
+                    {color: "#ff4cff", name: this.$t('shop.item.custom.colors.purple')}
                 ],
-                selectedColor: "#ff0000",
+                selectedColor: "#ff4c4c",
                 main: [
                     {url: ""}
                 ],

@@ -231,9 +231,10 @@
           margin-right: 0.5em;
           width: 2em;
           height: 2em;
+          border-radius: 15px;
+          background-image: url('src/assets/img/electronic.png');
         }
         .buy-custom-item.selected {
-            border: 4px solid #B8C2CC;
         }
       }
       .buy-custom-mosaic.storage {
