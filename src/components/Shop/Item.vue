@@ -88,10 +88,10 @@
                                                 <div class="buy-way">
                                                     <i class="fab fa-cc-mastercard"></i>
                                                 </div>
-                                                <div class="shop-card-title">Paiement par carte sécurisé par </div>
-                                                <div class="buy-way">
-                                                    <i class="fab fa-cc-stripe"></i>
-                                                </div>
+                                            </div>
+                                            <div class="shop-card-title">Paiement par carte sécurisé par </div>
+                                            <div class="buy-way">
+                                                <i class="fab fa-cc-stripe"></i>
                                             </div>
                                         </div>
 

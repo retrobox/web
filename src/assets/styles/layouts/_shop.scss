@@ -218,6 +218,8 @@
     .buy-custom-type {
       .buy-custom-title {
         margin-bottom: 0.9em;
+        color: #34495e;
+        font-weight: 500;
       }
       .buy-custom-mosaic {
           display: flex;
@@ -239,7 +241,7 @@
       }
       .buy-custom-mosaic.storage {
         .buy-custom-item {
-          border-color: #4a4a4a;
+          border-color: #34495e;
           border-width: 2px;
           border-style: solid;
           border-radius: 15px;
