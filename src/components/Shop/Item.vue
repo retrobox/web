@@ -60,8 +60,7 @@
                                                          :style="'background-color:' + color.color"
                                                          v-for="color in colors"
                                                          v-bind:class="{'selected': color.color == selectedColor}"
-                                                         @click="selectColor(color.color)"
-                                                         v-tooltip.top="color.name">
+                                                         @click="selectColor(color.color)">
                                                     </div>
                                                 </div>
                                             </div>
