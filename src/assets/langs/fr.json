@@ -207,7 +207,7 @@
       "title": "Panier",
       "items": "Aucun article | Un article | {count} articles",
       "empty": "Panier vide",
-      "add": "Ajouter",
+      "add": "Ajouter Au Panier",
       "remove": "Retirer",
       "total": "Total",
       "show": "Voir",

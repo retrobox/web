@@ -90,12 +90,12 @@
                                                 </div>
                                             </div>
                                             <div class="shop-card-title">Paiement par carte sécurisé par </div>
-                                            <div class="buy-way">
+                                              <div class="buy-ways-mosaic">
+                                                <div class="buy-way">
                                                 <i class="fab fa-cc-stripe"></i>
+                                                </div>
+                                              </div>
                                             </div>
-                                        </div>
-
-                                    </div>
                                     <div class="buy-images-container">
                                         <div class="buy-images-content">
                                             <div class="buy-image-main">
