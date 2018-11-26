@@ -28,8 +28,8 @@
                                     </li> -->
                                     <li class="mr-1" v-for="link in item.category.items"
                                         v-bind:class="{'-mb-px': link.id == item.id }">
-                                        <a class="bg-white inline-block py-2 px-4 text-blue hover:text-blue-darker"
-                                           v-bind:class="{'text-blue-dark font-semibold border-l border-t border-r rounded-t': link.id == item.id }"
+                                        <a class="bg-grey-lighter inline-block py-2 px-4 text-black hover:text-blue-darker rounded"
+                                           v-bind:class="{'text-blue-dark border': link.id == item.id }"
                                            @click="$router.push({name: 'ShopItem', params: {slug:link.slug}})">{{link.version}}</a>
                                     </li>
                                 </ul>
@@ -47,7 +47,7 @@
                                                          @click="selectStorage(storage)"
                                                          v-bind:class="{'selected': selectedStorage == storage}"
                                                          v-for="storage in storages">
-                                                        {{storage}} Gb
+                                                        {{storage}} Go
                                                     </div>
                                                 </div>
                                             </div>
@@ -157,7 +157,8 @@
                     {color: "#ffff4c", name: this.$t('shop.item.custom.colors.yellow')},
                     {color: "#4dff4c", name: this.$t('shop.item.custom.colors.green')},
                     {color: "#4d4cff", name: this.$t('shop.item.custom.colors.blue')},
-                    {color: "#ff4cff", name: this.$t('shop.item.custom.colors.purple')}
+                    {color: "#ffffff", name: this.$t('shop.item.custom.colors.white')},
+                    {color: "#333333", name: this.$t('shop.item.custom.colors.black')}
                 ],
                 selectedColor: "#ff4c4c",
                 main: [
