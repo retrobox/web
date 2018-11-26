@@ -198,8 +198,9 @@
           "blue": "Bleu",
           "purple": "Violet"
         },
-        "color": "Choisissez la couleur du circuit imprimé",
-        "storage": "Taille du stockage interne"
+        "color": "Couleur du circuit imprimé",
+        "storage": "Taille du stockage interne",
+        "model": "Modèle"
       }
     },
     "title": "Boutique",

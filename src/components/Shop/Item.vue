@@ -58,13 +58,17 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <li class="mr-1" v-for="link in item.category.items"
-                                                v-bind:class="{'-mb-px': link.id == item.id }">
-                                                <a class="bg-grey-lighter inline-block py-2 px-4 text-black hover:text-blue-darker rounded"
-                                                   v-bind:class="{'border-blue-dark': link.id == item.id }"
-                                                   @click="$router.push({name: 'ShopItem', params: {slug:link.slug}})">{{link.version}}</a>
-                                            </li>
-                                        </div>
+                                            <div class="buy-custom-type">
+                                              <div class="buy-custom-title">{{$t('shop.item.custom.model')}}</div>
+                                              <div class="buy-custom-mosaic">
+                                                <li class="mr-1" v-for="link in item.category.items"
+                                                  v-bind:class="{'-mb-px': link.id == item.id }">
+                                                  <a class="bg-grey-lighter inline-block py-2 px-4 text-black hover:text-blue-darker rounded"
+                                                    v-bind:class="{'border-blue-dark': link.id == item.id }"
+                                                    @click="$router.push({name: 'ShopItem', params: {slug:link.slug}})">{{link.version}}</a>
+                                                  </li>
+                                                </div>
+                                              </div>
                                         <div class="buy-price">
                                             <span>€ {{price}}</span>
                                         </div>
