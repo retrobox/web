@@ -82,7 +82,7 @@
                                         </div>
                                         <div class="social-sharing" style="margin-top: 1.25em;">
                                           <span>Partager</span>
-                                          <div class="socials share">
+                                          <div class="share">
                                               <ul style="margin-top: 0.50em;">
                                                   <li class="facebook">
                                                       <a :href="$t('facebook').link" :title="$t('facebook').title">
