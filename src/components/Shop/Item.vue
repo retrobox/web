@@ -56,11 +56,11 @@
                                             <div class="buy-custom-type">
                                               <div class="buy-custom-title">{{$t('shop.item.custom.model')}}</div>
                                               <div class="buy-custom-mosaic">
-                                                <ul class="list-reset buy-nav" v-if="item.show_version">
+                                                <ul class="list-reset" v-if="item.show_version">
                                                     <!-- <li class="-mb-px mr-1">
                                                       <a class="bg-white inline-block border-l border-t border-r rounded-t py-2 px-4 text-blue-dark font-semibold" href="#">Version kité</a>
                                                     </li> -->
-                                                <li class="mr-1" v-for="link in item.category.items"
+                                                <li class="mr-1" style="display: inline" v-for="link in item.category.items"
                                                   v-bind:class="{'-mb-px': link.id == item.id }">
                                                   <a class="bg-grey-lighter inline-block py-2 px-4 text-black hover:text-blue-darker rounded"
                                                     v-bind:class="{'border-4 border-blue-dark': link.id == item.id }"
@@ -80,6 +80,9 @@
                                                 <span v-else>{{$t('shop.cart.remove')}}</span>
                                             </button>
                                         </div>
+                                        <div class="social-sharing">
+                                          <span>Partager</span>
+
                                         <div class="buy-ways-container">
                                             <!-- <div class="hint">Nous suportons ces moyens de payements :</div> -->
                                             <div class="buy-ways-mosaic">
