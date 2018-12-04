@@ -80,10 +80,10 @@
                                                 <span v-else>{{$t('shop.cart.remove')}}</span>
                                             </button>
                                         </div>
-                                        <div class="social-sharing">
+                                        <div class="social-sharing" style="margin-top: 1.25em;">
                                           <span>Partager</span>
-                                          <div class="socials">
-                                              <ul>
+                                          <div class="socials share">
+                                              <ul style="margin-top: 0.50em;">
                                                   <li class="facebook">
                                                       <a :href="$t('facebook').link" :title="$t('facebook').title">
                                                           <icon name="brands/facebook" class="icon"></icon>
