@@ -63,7 +63,7 @@
                                                 <li class="mr-1" style="display: inline" v-for="link in item.category.items"
                                                   v-bind:class="{'-mb-px': link.id == item.id }">
                                                   <a class="model"
-                                                    v-bind:class="{'opacity: 1;': link.id == item.id }"
+                                                    v-bind:class="{'selected': link.id == item.id }"
                                                     @click="$router.push({name: 'ShopItem', params: {slug:link.slug}})">{{link.version}}</a>
                                                   </li>
                                                   </ul>

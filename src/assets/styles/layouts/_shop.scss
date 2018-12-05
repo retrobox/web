@@ -279,9 +279,15 @@
   padding: 8px;
   margin-right: 0.5em;
   opacity: 0.6;
+  transition: 0.2s opacity;
+
+  .selected {
+  opacity: 1;
+  }
 }
 .model:hover {
   opacity: 1;
+  transition: 0.2s opacity;
 }
 //shop checkout shop-checkout-thanks
 .buy-advantages{
