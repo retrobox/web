@@ -124,8 +124,8 @@
                                           </div>
                                               <div class="buy-ways-mosaic">
                                                 <div class="buy-way">
-                                                  <img src="../../assets/img/fr.png">
-                                                <div class="buy-ways-title">Assemblé en France</div>
+                                                  <img style="width: 1em;"src="../../assets/img/fr.png">
+                                                <div class="buy-ways-title">Assemblée en France</div>
                                                 </div>
                                               </div>
                                             </div>
