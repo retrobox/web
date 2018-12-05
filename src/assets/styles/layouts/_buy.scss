@@ -68,13 +68,15 @@
 
           .buy-way {
             margin-right: 0.4em;
-            opacity: 0.5;
-            transition: 0.2s opacity;
-            display: inherit;
-          }
-          .buy-way:hover {
-            transition: 0.2s opacity;
             opacity: 0.9;
+            display: inherit;
+            font-size: 1.5em;
+
+            .buy-way-title {
+              padding-left: 1em;
+              font-size: 0.25rem;
+              font-weight: 500;
+            }
           }
         }
       }

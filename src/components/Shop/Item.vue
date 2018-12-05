@@ -113,18 +113,18 @@
                                             <div class="buy-ways-mosaic">
                                                 <div class="buy-way">
                                                     <i class="fas fa-lock"></i>
-                                                    <div class="shop-card-title">Paiement sécurisé par Carte via Stripe, Paypal, Paysafecard </div>
+                                                    <div class="buy-ways-title">Paiement sécurisé par Carte via Stripe, Paypal, Paysafecard </div>
                                                 </div>
                                             </div>
                                           <div class="buy-ways-mosaic">
                                             <div class="buy-way">
                                                 <i class="fas fa-truck"></i>
-                                                <div class="shop-card-title">Livraison suivie sous 10 jours </div>
+                                                <div class="buy-ways-title">Livraison suivie sous 10 jours </div>
                                             </div>
                                           </div>
                                               <div class="buy-ways-mosaic">
                                                 <div class="buy-way">
-                                                <div class="shop-card-title">Assemblé en France</div>
+                                                <div class="buy-ways-title">Assemblé en France</div>
                                                 </div>
                                               </div>
                                             </div>
