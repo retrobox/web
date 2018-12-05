@@ -112,19 +112,20 @@
                                             <!-- <div class="hint">Nous suportons ces moyens de payements :</div> -->
                                             <div class="buy-ways-mosaic">
                                                 <div class="buy-way">
-                                                    <i class="fab fa-cc-paypal"></i>
-                                                </div>
-                                                <div class="buy-way">
-                                                    <i class="fab fa-cc-visa"></i>
-                                                </div>
-                                                <div class="buy-way">
-                                                    <i class="fab fa-cc-mastercard"></i>
+                                                    <i class="fas fa-lock"></i>
+                                                    <div class="shop-card-title">Paiement sécurisé par Carte via Stripe, Paypal, Payesafecard </div>
                                                 </div>
                                             </div>
-                                            <div class="shop-card-title">Paiement par carte sécurisé par </div>
+                                          <div class="buy-ways-mosaic">
+                                            <div class="buy-way">
+                                                <i class="fas fa-truck"></i>
+                                                <div class="shop-card-title">Livraison suivie sous 10 jours </div>
+                                            </div>
+                                          </div>
                                               <div class="buy-ways-mosaic">
                                                 <div class="buy-way">
-                                                <i class="fab fa-cc-stripe"></i>
+                                                <img src="../assets/img/fr.png" :alt="$t('french_flag')">
+                                                <div class="shop-card-title">Assemblé en France</div>
                                                 </div>
                                               </div>
                                             </div>
