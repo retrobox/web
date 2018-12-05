@@ -124,6 +124,7 @@
                                           </div>
                                               <div class="buy-ways-mosaic">
                                                 <div class="buy-way">
+                                                  <img src="../../assets/img/fr.png">
                                                 <div class="buy-ways-title">Assemblé en France</div>
                                                 </div>
                                               </div>
