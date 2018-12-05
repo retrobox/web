@@ -117,6 +117,7 @@
   margin-right: 3em;
   margin-bottom: 1.5em;
   @extend .max-w-sm;
+  @extend .max-h-sm;
   @extend .rounded;
   @extend .overflow-hidden;
   .shop-card-thumb {
@@ -235,7 +236,7 @@
           height: 2em;
           border-radius: 7px;
           border-width: medium;
-          border-color: #0003;
+          border-color: #0000004d;
         }
         .buy-custom-item.selected {
         }

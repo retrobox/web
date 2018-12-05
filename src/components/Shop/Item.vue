@@ -189,11 +189,11 @@
                 //in hex
                 colors: [
                     {color: "#ff4c4c", name: this.$t('shop.item.custom.colors.red')},
-                    {color: "#ffff4c", name: this.$t('shop.item.custom.colors.yellow')},
-                    {color: "#4dff4c", name: this.$t('shop.item.custom.colors.green')},
-                    {color: "#4d4cff", name: this.$t('shop.item.custom.colors.blue')},
+                    {color: "#ffff66", name: this.$t('shop.item.custom.colors.yellow')},
+                    {color: "#68ff66", name: this.$t('shop.item.custom.colors.green')},
+                    {color: "#6666ff", name: this.$t('shop.item.custom.colors.blue')},
                     {color: "#ffffff", name: this.$t('shop.item.custom.colors.white')},
-                    {color: "#333333", name: this.$t('shop.item.custom.colors.black')}
+                    {color: "#4c4c4c", name: this.$t('shop.item.custom.colors.black')}
                 ],
                 selectedColor: "#ff4c4c",
                 main: [
