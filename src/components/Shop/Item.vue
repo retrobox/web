@@ -73,7 +73,9 @@
                                             <span>€ {{price}}</span>
                                         </div>
                                         <div class="buy-actions">
-                                            <button class="action-buy bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded inline-flex items-center button"
+                                          <div class="buy-custom-title">Quantité</div>
+                                          <input type="text" name="qty" id="quantity_wanted" value="1" class="quantity" min="1">
+                                            <button class="action-buy bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded inline-flex items-center button" style="margin-left: 0.4em"
                                                     @click="toggleCart(item)">
                                                 <span><i class="fas fa-shopping-cart"></i></span>
                                                 <span v-if="$store.state.cart[this.$store.state.cart.indexOf(item)] == undefined">{{$t('shop.cart.add')}}</span>

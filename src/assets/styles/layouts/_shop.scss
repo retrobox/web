@@ -289,6 +289,16 @@
   opacity: 1;
   transition: 0.2s opacity;
 }
+.quantity {
+  width: 2.25em;
+  border: 2px solid #34495ecc;
+  border-radius: 10px;
+  height: 2.25em;
+  display: inline-block;
+  padding: .5rem 0.75rem;
+  font-size: 1.25em;
+  margin-top: 0.5em;
+}
 //shop checkout shop-checkout-thanks
 .buy-advantages{
   background: #f1f5f8;
