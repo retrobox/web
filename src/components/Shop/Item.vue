@@ -62,8 +62,8 @@
                                                     </li> -->
                                                 <li class="mr-1" style="display: inline" v-for="link in item.category.items"
                                                   v-bind:class="{'-mb-px': link.id == item.id }">
-                                                  <a class="bg-grey-lighter inline-block py-2 px-4 text-black hover:text-blue-darker rounded"
-                                                    v-bind:class="{'border-4 border-blue-dark': link.id == item.id }"
+                                                  <a style ="border-color: #34495e; border-width: 2px; border-style: solid;border-radius: 15px;padding: 8px; margin-right: 0.5em;"class=""
+                                                    v-bind:class="{'': link.id == item.id }"
                                                     @click="$router.push({name: 'ShopItem', params: {slug:link.slug}})">{{link.version}}</a>
                                                   </li>
                                                   </ul>
@@ -122,7 +122,7 @@
                                                 <div class="buy-ways-title">Livraison suivie sous 10 jours </div>
                                             </div>
                                           </div>
-                                              <div class="buy-ways-mosaic">
+                                              <div class="buy-ways-mosaic" style="padding-bottom: 1em">
                                                 <div class="buy-way">
                                                   <img style="width: 1em;"src="../../assets/img/fr.png">
                                                 <div class="buy-ways-title">Assemblée en France</div>
