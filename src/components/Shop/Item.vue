@@ -113,7 +113,7 @@
                                             <div class="buy-ways-mosaic">
                                                 <div class="buy-way">
                                                     <i class="fas fa-lock"></i>
-                                                    <div class="shop-card-title">Paiement sécurisé par Carte via Stripe, Paypal, Payesafecard </div>
+                                                    <div class="shop-card-title">Paiement sécurisé par Carte via Stripe, Paypal, Paysafecard </div>
                                                 </div>
                                             </div>
                                           <div class="buy-ways-mosaic">

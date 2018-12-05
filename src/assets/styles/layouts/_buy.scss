@@ -61,12 +61,16 @@
         }
         .buy-ways-mosaic {
           display: flex;
-          font-size: 3.2em;
+          font-size: 1.5em;
           color: #34495e;
+          margin-left: 1em;
+          padding-top: 0.75em;
+
           .buy-way {
             margin-right: 0.4em;
             opacity: 0.5;
             transition: 0.2s opacity;
+            display: inherit;
           }
           .buy-way:hover {
             transition: 0.2s opacity;
