@@ -271,7 +271,18 @@
     }
   }
 }
-
+.model {
+  border-color: #34495e;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 15px;
+  padding: 8px;
+  margin-right: 0.5em;
+  opacity: 0.6;
+}
+.model:hover {
+  opacity: 1;
+}
 //shop checkout shop-checkout-thanks
 .buy-advantages{
   background: #f1f5f8;
