@@ -190,6 +190,10 @@
       "title": "Article",
       "version": "Version",
       "price": "Prix",
+      "payments_security_title": "Paiement sécurisé par Carte via Stripe, Paypal, Paysafecard",
+      "shipping_details_title": "Livraison suivie sous 10 jours",
+      "shipping_origin_title": "Assemblée en France",
+      "share": "Partager",
       "custom": {
         "colors": {
           "red": "Rouge",

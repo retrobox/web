@@ -192,6 +192,10 @@
     "title": "Item",
     "version": "Version",
     "price": "Price",
+    "payments_security_title": "Secure payment by Card via Stripe, Paypal, Paysafecard",
+    "shipping_details_title": "Delivery followed within 10 days",
+    "shipping_origin_title": "Assembly in France",
+    "share": "Share",
     "custom": {
       "colors": {
         "red": "Red",

@@ -81,7 +81,7 @@
                                             </button>
                                         </div>
                                         <div class="social-sharing" style="margin-top: 1.25em;">
-                                          <span>Partager</span>
+                                          <span>{{$t('shop.item.share')}}</span>
                                           <div class="share">
                                               <ul style="margin-top: 0.50em;">
                                                   <li class="facebook">
@@ -113,19 +113,19 @@
                                             <div class="buy-ways-mosaic">
                                                 <div class="buy-way">
                                                     <i class="fas fa-lock"></i>
-                                                    <div class="buy-ways-title">Paiement sécurisé par Carte via Stripe, Paypal, Paysafecard </div>
+                                                    <div class="buy-ways-title">{{$t('shop.item.payments_security_title')}}</div>
                                                 </div>
                                             </div>
                                           <div class="buy-ways-mosaic">
                                             <div class="buy-way">
                                                 <i class="fas fa-truck"></i>
-                                                <div class="buy-ways-title">Livraison suivie sous 10 jours </div>
+                                                <div class="buy-ways-title">{{$t('shop.item.shipping_details_title')}}</div>
                                             </div>
                                           </div>
                                               <div class="buy-ways-mosaic" style="padding-bottom: 1em">
                                                 <div class="buy-way">
                                                   <img style="width: 1em;"src="../../assets/img/fr.png">
-                                                <div class="buy-ways-title">Assemblée en France</div>
+                                                <div class="buy-ways-title">{{$t('shop.item.shipping_origin_title')}}</div>
                                                 </div>
                                               </div>
                                             </div>
