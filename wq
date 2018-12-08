@@ -1,0 +1,1216 @@
+[33mcommit db76bea42f7e0dde6c5d83059b82a1f835eed0c8[m[33m ([m[1;36mHEAD -> [m[1;32mnuxt[m[33m, [m[1;31morigin/nuxt[m[33m)[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Sat Dec 8 11:20:39 2018 +0100
+
+    refactor: delete dot file
+
+[33mcommit 148046cb7ad80b080dda41d2f1d33156a7d5a269[m[33m ([m[1;32mmaster[m[33m)[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Sat Dec 8 10:26:23 2018 +0100
+
+    refactor: prepare for nuxt [WIP]
+
+[33mcommit f0a880086ce905adceedfc15ed75e775bd3cfc34[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Mon Dec 3 21:22:11 2018 +0100
+
+    feat(legals) : add legals terms
+    
+    yep, we are registered now !
+
+[33mcommit c3d9b56730a62417a3f6d53e546136b3ef4d95ec[m
+Author: Etienne Chevrollier <etienne.chevrollier@live.fr>
+Date:   Thu Nov 22 18:23:38 2018 +0100
+
+    Revert "Graphic change"
+    
+    This reverts commit 7bb4a613f33954c36ae1635a8bc4adc2f04e8edc.
+
+[33mcommit eb9a47dea762ca4b61e55c5b986ab5f746973868[m
+Author: Etienne Chevrollier <etienne.chevrollier@live.fr>
+Date:   Thu Nov 22 18:23:32 2018 +0100
+
+    Revert "Merge branch 'master' of https://github.com/retrobox/web"
+    
+    This reverts commit 1b3997086e8eec700050a95d16535ff80a6d1442, reversing
+    changes made to 7bb4a613f33954c36ae1635a8bc4adc2f04e8edc.
+
+[33mcommit 1b3997086e8eec700050a95d16535ff80a6d1442[m
+Merge: 7bb4a61 f910813
+Author: Etienne Chevrollier <etienne.chevrollier@live.fr>
+Date:   Thu Nov 22 18:13:14 2018 +0100
+
+    Merge branch 'master' of https://github.com/retrobox/web
+
+[33mcommit 7bb4a613f33954c36ae1635a8bc4adc2f04e8edc[m
+Author: Etienne Chevrollier <etienne.chevrollier@live.fr>
+Date:   Thu Nov 22 18:10:00 2018 +0100
+
+    Graphic change
+
+[33mcommit f910813d3752f690734c70721e603f1f64f80adb[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Tue Sep 25 22:22:55 2018 +0200
+
+    i am seeking x2 :100:
+
+[33mcommit 00ea0c7e00c992068d21a41e5e21ed28c9f2e3d0[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Tue Sep 25 21:30:38 2018 +0200
+
+    feat(shop): Add en locales
+
+[33mcommit 910068ee98b9479ba52ff63ae49e14b9c0fc2382[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Sun Sep 23 22:57:31 2018 +0200
+
+    feat(shop): add email field on stripe execute request
+
+[33mcommit 0f454cb7e9464ceabae74c4b58200153e008514d[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Sat Sep 22 21:15:33 2018 +0200
+
+    add null dir to .gitignore
+
+[33mcommit 6be70c5115033c403e959eb8be3a82951511c0a6[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Sat Sep 22 21:13:44 2018 +0200
+
+    refactor: WIP missing semi columns and type comparisons
+
+[33mcommit 85e01ce3b541a291b8001d372813bdb91ff09160[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Sat Sep 22 21:11:47 2018 +0200
+
+    fix(home): fix 'about' button and scroll behaviour
+
+[33mcommit 52f4310a5bda11387fa37299e023f02484a5cd50[m
+Merge: d644eac f527a22
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Sat Sep 22 21:09:03 2018 +0200
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       src/components/Shop/Item.vue
+
+[33mcommit d644eac61c193f7689ddc06868fc74e06bb9ae26[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Sat Sep 22 21:06:29 2018 +0200
+
+    feat(shop): add paypal payment method
+    feat(shop): shipping details
+    refactor(shop): refactor the payment flow, cart and checkout
+    refactor(shop): refactor the way to compute the price
+    refactor(apitator): WIP
+
+[33mcommit f527a22bc61edcf2aeab8e04d8957431a75fe730[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Fri Jul 27 16:20:04 2018 +0200
+
+    fix(Nav): fix tab issue
+
+[33mcommit 4acc76a49eaf08ce3079f02e58e7050ae1b9c2fd[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Fri Jul 27 16:19:55 2018 +0200
+
+    fix(I18n): change blog title in nav
+
+[33mcommit 7da27d344758391706c2211067e991ccb6527c55[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Fri Jul 27 16:19:02 2018 +0200
+
+    feat(Footer): add a documentation link in footer
+
+[33mcommit db9f540bfb7a9afa74d10e124e6c4c00782db763[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Thu Jul 26 15:53:24 2018 +0200
+
+    add(NavBar): Blog link
+
+[33mcommit 73f441d79736f8e0ad8b7b46ea39ad867fee8204[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Thu Jul 26 15:40:34 2018 +0200
+
+    fix(Langs&Slug): Update slug
+
+[33mcommit 6cbeb3ce5c55b5a49ddb86a3d6997ec8413f0fb1[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Thu Jul 26 00:43:36 2018 +0200
+
+    fix(i18n): add missing locales
+    
+    With "npm run locales" :thumbsup: @lefuturiste
+
+[33mcommit f83d4e9017a8586317df6f72242d3d17661b99d1[m
+Merge: 8e7d411 02b291c
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Thu Jul 26 00:31:48 2018 +0200
+
+    Merge branch 'master' of https://github.com/retrobox/web
+
+[33mcommit 8e7d411eb375e1d2cb2cf0173c8321a70e0f7ccb[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Thu Jul 26 00:31:44 2018 +0200
+
+    fix(Slug): Update shop slug
+
+[33mcommit 02b291c4a2bdb3382a7b647484509823ec39fbb8[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Wed Jul 25 23:16:49 2018 +0200
+
+    fix(Auth): fix only show admin panel link for admin user
+
+[33mcommit 613486eb55b9afcfc4030dae953d1e4d39150750[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Wed Jul 25 18:18:29 2018 +0200
+
+    fix(i18n): rm example key
+
+[33mcommit fae285c371cb551b7cc4271f86e8f334b995eaaf[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Wed Jul 25 18:03:30 2018 +0200
+
+    feat(i18n): add a locale key matcher
+    
+    this is a little command line helper to view what keys are not completed
+    on others locales, run it: npm run locales
+
+[33mcommit 9c853037d157ae86c3dca7602f4cd8f447ece51c[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Wed Jul 25 17:11:06 2018 +0200
+
+    feat(Shop): upgrade api
+
+[33mcommit 9e346cf349a676774ee60ef7b9b0f24bf2696c56[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Tue Jul 24 15:09:17 2018 +0200
+
+    fix(Auth): only show admin panel link for admin user
+
+[33mcommit 4880d1348fd4b02beaf6d47be8d9769b68947115[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Tue Jul 24 00:05:34 2018 +0200
+
+    fix(ShopItem): fix defined vars
+
+[33mcommit c626bdda39a0fab82f9d1679a3a9458902ff0ee3[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Mon Jul 23 10:35:37 2018 +0200
+
+    fix: improve home style (responsive)
+
+[33mcommit 55e9e7d9b818778c16a8bb715891e381b0b6b06a[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Mon Jul 23 10:26:38 2018 +0200
+
+    fix(Auth): fix logout on prod
+
+[33mcommit d66499e4e15f5ee1239edaa10ff695b614609094[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Mon Jul 23 10:14:01 2018 +0200
+
+    feat: move our blog link to footer and change style which are affected
+
+[33mcommit 3de5cf6e7cf47af3099738d40bed4b974dfdf4c2[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Mon Jul 23 10:06:16 2018 +0200
+
+    fix: improve home & header style
+
+[33mcommit 1596da7797503770452d7dc1ee6c381e190d9685[m
+Merge: 95eb0f2 48e40c2
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Fri Jul 20 13:57:46 2018 +0200
+
+    Merge
+
+[33mcommit 95eb0f20eed7bdb72111dc664c40ca2ce782104c[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Fri Jul 20 13:57:30 2018 +0200
+
+    refactor(Apitator): remove useless log and add somes on error
+
+[33mcommit 2189cfa332f345b3a343280a0e04bb88ed31c961[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Fri Jul 20 13:55:33 2018 +0200
+
+    docker: add null folder to .dockerignore
+    this null folder is used by Phpstorm ide extension called discord rich presence
+
+[33mcommit eb4ef5b402c89a67944b5177316f640393f0fd28[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Fri Jul 20 13:53:12 2018 +0200
+
+    refactor(Shop): upgrade API call
+
+[33mcommit 48e40c297b6db9435c51d71801a4f3f6b2b8dbad[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Fri Jul 20 13:29:37 2018 +0200
+
+    fix(langs): Update en
+
+[33mcommit f6b75ae827e228c893dbbc0358b5e85e100bfcd4[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Mon Jul 16 23:29:27 2018 +0200
+
+    feat: add cookie message
+
+[33mcommit e1dc3deb118b27af3be2d4ba1369a434a1d95123[m
+Merge: 3b9e316 73dae0a
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Mon Jul 16 22:14:17 2018 +0200
+
+    merge
+
+[33mcommit 3b9e3164daee64079ab5035f17d720cb0c6a2ab7[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Mon Jul 16 22:05:11 2018 +0200
+
+    refactor(Nav): switch blog and community nav item
+
+[33mcommit 73dae0a38b6bc75db4e93450d9ffedee5811e996[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Sat Jul 14 10:03:33 2018 +0200
+
+    fix(FooterContainer): change blog link
+    
+    internal to blog.retrobox.tech
+
+[33mcommit a88e668acf1e4ee0bf217be36adb6b3bd300bbfa[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Fri Jul 13 12:29:24 2018 +0200
+
+    lel je vais pas redire ce que j'ai changé
+
+[33mcommit 081bf4aabdb918059deadbe7070bac410faf4912[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Thu Jul 12 11:31:10 2018 +0200
+
+    fix(Alert): fix alert behaviour
+
+[33mcommit ea34aaf087e8ca67b094ac673178ac755fe1e337[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Wed Jul 11 21:47:32 2018 +0200
+
+    final fix ?
+
+[33mcommit ea021a4f249a652638210a3d098bf3a257d12510[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Tue Jul 10 16:05:02 2018 +0200
+
+    fix(Newsletter): add env vars
+
+[33mcommit 1bd45d6316810303ee2f3b691a992bfe6bd4618f[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Tue Jul 10 15:56:06 2018 +0200
+
+    fix(NotFound): fix common design with icon in not found and coming soon
+
+[33mcommit 307428bca51574b4b0fb14d2cafc37585c9700ee[m
+Merge: 8bb68a5 145759b
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Tue Jul 10 12:17:10 2018 +0200
+
+    Merge branch 'master' of github.com:retrobox/web
+
+[33mcommit 8bb68a52fe807189715b1a03027f8f3bea0ec68a[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Tue Jul 10 12:17:00 2018 +0200
+
+    fix(Auth): fix modal login behaviour
+
+[33mcommit 145759b57d1c8c1f171c47908c8bc7d9255bf909[m
+Author: Etienne Chevrollier <etienne.chevrollier@live.fr>
+Date:   Tue Jul 10 12:14:19 2018 +0200
+
+    Video Coming Soon
+
+[33mcommit d03ade3aa4bf3d27befa9361a121c791584d6c32[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Mon Jul 9 23:31:55 2018 +0200
+
+    fix(Landing): fix style for mobile in main landing section
+
+[33mcommit 2256801c0727964df5a798c7818dc58e33e0ada6[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Mon Jul 9 23:26:07 2018 +0200
+
+    feat(Login): add admin dash redir & account dash redir
+
+[33mcommit efc108864b71205ed1522c3e431163a5fb384393[m
+Merge: 600ac46 cadda62
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Mon Jul 9 22:36:29 2018 +0200
+
+    Merge branch 'master' of github.com:retrobox/web
+
+[33mcommit 600ac46d105548af7639eb487f573e43b7530a9f[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Mon Jul 9 22:36:06 2018 +0200
+
+    feat(Auth): add logout and go to dashboard button
+
+[33mcommit cadda62d4089d8ff572d1fd0e3ecb2f7364bc242[m
+Author: Etienne Chevrollier <etienne.chevrollier@live.fr>
+Date:   Mon Jul 9 14:37:42 2018 +0200
+
+    Add 2 advantages at landing page
+
+[33mcommit adb07d8afa165233253a0e653e63767fb3da6d8a[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Mon Jul 9 13:43:43 2018 +0200
+
+    fix(Meta tag): Change color and update locales
+
+[33mcommit bccb01bd3611666495babf9bd6c749ab42c4cadf[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Mon Jul 9 13:28:12 2018 +0200
+
+    fix(Newsletter): move to Mailchimper API
+    
+    wip
+
+[33mcommit 1fd409c21abd4ba15125ba51ab108d392e8cda13[m
+Merge: 07550e4 a16d39c
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Sat Jul 7 17:33:15 2018 +0200
+
+    Merge branch 'master' of github.com:retrobox/web
+
+[33mcommit 07550e4dc65f7074a33c6bd9f701d8563354cbd0[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Sat Jul 7 17:32:56 2018 +0200
+
+    feat(Newsletter): add error when member exist + typo fix
+
+[33mcommit a16d39cbd9be2ae47b9ee6d6f75850d938584623[m
+Merge: 24aa605 8be19e5
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Sat Jul 7 11:19:13 2018 +0200
+
+    Merge branch 'master' of https://github.com/retrobox/web
+
+[33mcommit 24aa605c24e578a3be361e1f475d39f841ed7a02[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Sat Jul 7 11:17:27 2018 +0200
+
+    Matthieu m'a dit de faire un commit pour seulement un accent
+
+[33mcommit 8be19e584f37b740d972402274693e2d1ee42b28[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Sat Jul 7 11:09:05 2018 +0200
+
+    feat(ShopIndex): add i18n support
+
+[33mcommit f176cd2254a06bc5d91e55a01cfeecc75ab99956[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Sat Jul 7 01:50:29 2018 +0200
+
+    WIP : Add meta tag
+
+[33mcommit 60fe3ed30323dd1cedb9f1643a4e73698ea28c95[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Sat Jul 7 01:00:42 2018 +0200
+
+    docker(): add docker ignore
+
+[33mcommit 3f160145313701ad11f56f74f06cd3e06e677544[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Sat Jul 7 00:59:57 2018 +0200
+
+    fix(LoginModal,Partnership): Fix design bugs
+
+[33mcommit a9daaaca30c25e6659e4dbbd9858a966c74a7fc7[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Thu Jul 5 14:37:52 2018 +0200
+
+    WIP : Legals terms
+
+[33mcommit 15be1a98711d2920dcc8a9671ea784d4b0b1b893[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Wed Jul 4 21:35:24 2018 +0200
+
+    Goodbye Dyjix.Eu
+
+[33mcommit 9fa15ef7d67d9b5e6a0007918e9e8103e38e5f7e[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Wed Jul 4 17:12:37 2018 +0200
+
+    WIP : Lang update
+
+[33mcommit fe9eb9931618f0f8c797181669eecb84b3984460[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Wed Jul 4 16:49:35 2018 +0200
+
+    Docker file: add npm install & Fix ContactUs title and location
+
+[33mcommit be64dc2da916fec2636de7a51963070fa94931e9[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Wed Jul 4 16:43:11 2018 +0200
+
+    Add terms of sale (wip or not ?)
+
+[33mcommit 8610b6c196862e877226058a45cce5ecde459bbf[m
+Merge: 602d4b8 9a0b1d7
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Wed Jul 4 16:35:14 2018 +0200
+
+    Merge branch 'master' of github.com:retrobox/web
+
+[33mcommit 602d4b8af98d4ae2aeb60c7fb04cf6974385838b[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Wed Jul 4 16:35:00 2018 +0200
+
+    WIP: contact-us adding style
+
+[33mcommit 9a0b1d7b3526c53ec7c95e10b982d12d0f84169b[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Wed Jul 4 16:04:49 2018 +0200
+
+    Matthieu t'as du boulot
+    
+    tkp
+
+[33mcommit c2fb70de954237d4acad1207464be648b278ca49[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Tue Jul 3 22:47:30 2018 +0200
+
+    Adding Docker support!
+
+[33mcommit 6b903c3b5487b27ddb209ba3b06d9d9f3e5263bc[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Mon Jul 2 12:53:37 2018 +0200
+
+    Rotate image & dividing in about page and adding article
+
+[33mcommit 166d44b69cb6fb964a5b1f74a3cba912a5f4d1d3[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Sat Jun 30 00:39:07 2018 +0200
+
+    HTTPS and add Conventions sections, pics and more !
+
+[33mcommit 00e6eb143efda78aebaaac56efd793060c0adf71[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Fri Jun 29 19:21:52 2018 +0200
+
+    landing update slug & price
+
+[33mcommit 7781c9684e6cd13b9abc7525f2ce63062592d9d1[m
+Merge: a84863f 2efa5ea
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Fri Jun 29 18:31:58 2018 +0200
+
+    Merge branch 'master' of github.com:retrobox/web
+
+[33mcommit a84863f5d496a2bb21705ad02943fab0150dfc4f[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Fri Jun 29 18:30:59 2018 +0200
+
+    WIP: pas le temps
+
+[33mcommit 2efa5eaa8640ffe91bcd6edd37d2f3a8d3a6c16c[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Fri Jun 29 16:15:56 2018 +0200
+
+    WIP : Lang and dependency
+
+[33mcommit 054c83cc13cf7df391644f4b218d4e5a647abf13[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Fri Jun 29 14:08:24 2018 +0200
+
+    add , in .env file
+    
+    idiot
+
+[33mcommit 2f1bfa942c0182fbd1860cd88128a9b7e9985ede[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Fri Jun 29 14:07:05 2018 +0200
+
+    Add EN translation and update Stripe-API-Key
+
+[33mcommit cc80adb1800a66e72f3305413e8ea6d94e3c04b2[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Fri Jun 29 13:49:13 2018 +0200
+
+    Remove useless env var & custom style ajustement
+
+[33mcommit 8f59b58b5cf7b48a901db77e32899e8e6821113f[m
+Merge: 306f5cd b1da822
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Fri Jun 29 13:26:11 2018 +0200
+
+    Merge branch 'master' of github.com:retrobox/web
+
+[33mcommit 306f5cdd88b4c647aebdd222fd2acd99b515fa19[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Fri Jun 29 13:25:19 2018 +0200
+
+    Big commit:
+    - add checkout
+    - add stripe checkout
+    - add vue-stripe-checkout
+    - add get request in apitator
+    - add customization system
+    - add dynamic images mosaic from api and image full screen
+    - lots of things
+    /!\ LOCALES IS TO DO (en)
+
+[33mcommit b1da8222a82030d9a28549a5926bdaf15b99d126[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Thu Jun 28 23:45:25 2018 +0200
+
+    Add HTTPS and english translation
+
+[33mcommit 64db59cceb0781fc974119c8e36ff9d3f7b512ad[m
+Author: Etienne Chevrollier <etienne.chevrollier@live.fr>
+Date:   Thu Jun 28 17:12:21 2018 +0200
+
+    BIG RETROBOX
+
+[33mcommit 597b292aa17673ac5e4e3f67d8f03a2400f18423[m
+Author: Etienne Chevrollier <etienne.chevrollier@live.fr>
+Date:   Thu Jun 28 13:15:01 2018 +0200
+
+    Test Social Color Icon
+
+[33mcommit 862ecfe1cc8d502adbd9c2935c5e6b9232b51945[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Thu Jun 28 11:56:03 2018 +0200
+
+    Add version show in item page
+
+[33mcommit 68deac6f04d2dd4986a0c6a2b20746a24ffd186e[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Thu Jun 28 11:10:25 2018 +0200
+
+    Adding login-or-register
+    - Fix: Shop style responsive
+    - Adding total on card
+    - Adding login system for card (WIP)
+
+[33mcommit 56b4be2e7fa3f2b8d881e906ee57a364cc29948a[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Thu Jun 28 09:55:11 2018 +0200
+
+    Adding shop to nav bar
+
+[33mcommit 5ccfed7eca62b03d7a9686872c18a9e0327ea3e9[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Thu Jun 28 09:36:38 2018 +0200
+
+    Shop style ajustement with flex wrap
+
+[33mcommit 2230b20fcba4dc122abef936ad48e8a6ed2d747a[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Thu Jun 28 09:32:37 2018 +0200
+
+    Fix: Shop index empty error on class name
+
+[33mcommit e7a22c2ab4b1aa0d83b228a3999e093cf0204daa[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Thu Jun 28 09:32:19 2018 +0200
+
+    Style unification on alert + login modal with stail and the api
+
+[33mcommit 7020033a805fff64b750faef0b61b14dc610e406[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Wed Jun 27 19:14:06 2018 +0200
+
+    Style ajutement: increase margin between socials icons
+
+[33mcommit 32664c2b062f9d886d84f2408053e6d4fdbc2975[m
+Merge: a06bf9b fcbcb2e
+Author: Etienne Chevrollier <etienne.chevrollier@live.fr>
+Date:   Wed Jun 27 18:16:46 2018 +0200
+
+    Merge branch 'master' of https://github.com/retrobox/web
+
+[33mcommit a06bf9bc4fc403044769aa4820f9e4d1ad302141[m
+Author: Etienne Chevrollier <etienne.chevrollier@live.fr>
+Date:   Wed Jun 27 18:16:43 2018 +0200
+
+    Add Package.lock gitigonore
+
+[33mcommit 1e402ae52f349b746a5b2134608282a120fabcf2[m
+Author: Etienne Chevrollier <etienne.chevrollier@live.fr>
+Date:   Wed Jun 27 18:16:03 2018 +0200
+
+    Dark Update
+
+[33mcommit fcbcb2e7bcc1edb152a0d67d12336a9704f9682c[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Wed Jun 27 17:40:14 2018 +0200
+
+    Update style of newsletter input & landing about section
+    (This is for you Etienne)
+
+[33mcommit f168b76cec7432fc071ef873cb2cf8a9a8a54c98[m
+Merge: 94d9a39 be55f80
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Wed Jun 27 17:20:53 2018 +0200
+
+    Merge branch 'master' of github.com:retrobox/web
+
+[33mcommit 94d9a3978b8c1b9c5e34659bd09a5a7c9f4f9650[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Wed Jun 27 17:20:22 2018 +0200
+
+    Big commit !
+    - Adding apitator API client
+    - Shop is now linked to GraphQL API
+    - Starting uniforming of alert system
+    - Shop Cart sytem complete
+    - Only fr locales
+    - Adding vuex-persistedstate to persit into localstorage the shop cart
+    - Style updating
+    - and more...
+    -
+
+[33mcommit be55f80d04b3cab53b7fdac0dff7e8cc8edcc737[m
+Author: Etienne Chevrollier <etienne.chevrollier@live.fr>
+Date:   Wed Jun 27 16:29:30 2018 +0200
+
+    Adding Different Colors to landing icon
+
+[33mcommit e4f3884b5b2500ffb2d718a432a205c73afb6e39[m
+Author: Etienne Chevrollier <etienne.chevrollier@live.fr>
+Date:   Wed Jun 27 16:28:30 2018 +0200
+
+    Adding Box Shadow
+
+[33mcommit 990a45bd31ed8d37cb0d1f47d477b52b5745582d[m
+Author: Etienne Chevrollier <etienne.chevrollier@live.fr>
+Date:   Wed Jun 27 16:06:09 2018 +0200
+
+    Revert "Merge branch 'master' of https://github.com/retrobox/web"
+    
+    This reverts commit 4fb90d91ea7243abcef2e85fa769755d155d1ff1, reversing
+    changes made to de407c6f8a8e76e65241e1e10e97afa2399a915b.
+
+[33mcommit 4fb90d91ea7243abcef2e85fa769755d155d1ff1[m
+Merge: de407c6 26f1a5d
+Author: Etienne Chevrollier <etienne.chevrollier@live.fr>
+Date:   Wed Jun 27 16:05:46 2018 +0200
+
+    Merge branch 'master' of https://github.com/retrobox/web
+
+[33mcommit de407c6f8a8e76e65241e1e10e97afa2399a915b[m
+Author: Etienne Chevrollier <etienne.chevrollier@live.fr>
+Date:   Wed Jun 27 16:03:10 2018 +0200
+
+    Lang update
+
+[33mcommit 26f1a5de90d99033923361411c2e9e36f8205d85[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Tue Jun 26 20:09:49 2018 +0200
+
+    Update style of about section & add API_ENDPOINT env var
+
+[33mcommit ed577b8bf61ddb8ab3f079ead37366f7994ce558[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Tue Jun 26 11:32:11 2018 +0200
+
+    Move dark CSS in a seperate folder
+    
+    Etienne et github...
+    Mise en place du theme dark dans plusieurs jours.
+
+[33mcommit 29a79eccbd60ca04fbd5de1b823a28b5c2668149[m
+Author: Etienne Chevrollier <etienne.chevrollier@live.fr>
+Date:   Tue Jun 26 11:20:54 2018 +0200
+
+    Dark folder
+
+[33mcommit 343eff6c230c82918907fe280013d47f4e390d14[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Mon Jun 25 23:45:01 2018 +0200
+
+    Slightly less black
+
+[33mcommit 424af9c62139ec68e5304201b4be639cc4eb437d[m
+Author: Etienne Chevrollier <etienne.chevrollier@live.fr>
+Date:   Mon Jun 25 23:38:17 2018 +0200
+
+    A forget white CCI NORM"A"NDIE
+
+[33mcommit 6850521b054f0c489b9bde0b32248d53413dc367[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Mon Jun 25 23:28:02 2018 +0200
+
+    Meh Etienne forget this...
+
+[33mcommit 4e501acbe7b605c86a1993ae924e7701f5d6a99a[m
+Author: Etienne Chevrollier <etienne.chevrollier@live.fr>
+Date:   Mon Jun 25 23:25:46 2018 +0200
+
+    Logo Change
+    
+    (think to change .jpg to .png)
+
+[33mcommit 31b6cc25f358cf37c060810c69f39a495374d853[m
+Merge: 32a163d 12c4c70
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Mon Jun 25 23:13:22 2018 +0200
+
+    Merge branch 'master' of https://github.com/retrobox/web
+
+[33mcommit 32a163d47aa1187ed2dd627cad6ffd4ad817f765[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Mon Jun 25 23:13:18 2018 +0200
+
+    Larger CCI logo
+
+[33mcommit 12c4c706411087508575bb272ae1f6a953664aed[m
+Merge: 59b5d4f d35e53a
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Mon Jun 25 23:10:19 2018 +0200
+
+    Merge branch 'master' of github.com:retrobox/web
+
+[33mcommit 59b5d4f139933e342450f357a578d4da773e507f[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Mon Jun 25 23:09:05 2018 +0200
+
+    Beautify team mosaic in About page
+
+[33mcommit d35e53ac964086d50acb3cbdd31dd77016cb6cb9[m
+Merge: d166e0d 77c8d0c
+Author: Etienne Chevrollier <etienne.chevrollier@live.fr>
+Date:   Mon Jun 25 22:46:55 2018 +0200
+
+    Merge branch 'master' of https://github.com/retrobox/web
+
+[33mcommit 77c8d0c321cccba93165461487ae4be8d9e7c3df[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Mon Jun 25 22:43:42 2018 +0200
+
+    Beautify style of Partnership with added partnership.
+
+[33mcommit d166e0d40598149cd3154626504690613bede676[m
+Author: Etienne Chevrollier <etienne.chevrollier@live.fr>
+Date:   Mon Jun 25 22:37:40 2018 +0200
+
+    Revert "Remove dark theme, ugly"
+    
+    This reverts commit d893ee4da630bac275ea6500ce45ddcf95094806.
+
+[33mcommit efdb31f59eed0c90c9db953a1864902dbcc03aad[m
+Merge: ffbff53 6113db3
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Mon Jun 25 22:23:23 2018 +0200
+
+    Merge branch 'master' of github.com:retrobox/web
+
+[33mcommit ffbff53b36c136c66767e7bd9813f7a71e34798d[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Mon Jun 25 22:23:14 2018 +0200
+
+    adding v tooltips
+
+[33mcommit 6113db33787f64051fd524ced09035c75d086a33[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Mon Jun 25 21:56:04 2018 +0200
+
+    WIP : Add CCI Normandie supporter
+    
+    yay! Another one
+
+[33mcommit f011216ee2215cf7cf7d9b293b0be06c43a7d0c8[m
+Merge: c808f4b cab8560
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Mon Jun 25 21:45:19 2018 +0200
+
+    Merge branch 'master' of https://github.com/retrobox/web
+
+[33mcommit c808f4b531f1830bf3c1d6ec636b222e13847309[m
+Merge: 27fcc55 34f25a0
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Mon Jun 25 21:45:10 2018 +0200
+
+    Merge branch 'master' of https://github.com/retrobox/web
+
+[33mcommit cab85600f54f1f28b6c23d092e84e1ec012df479[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Mon Jun 25 21:44:18 2018 +0200
+
+    Disabling refresh action on documentation page
+
+[33mcommit 27fcc552dd08f7083404d3a1e02c29e21e157316[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Mon Jun 25 21:43:58 2018 +0200
+
+    WIP : Langs and partnership
+
+[33mcommit 34f25a00d18d9404ce3979ca8003eca19d69d3c3[m
+Author: Matthieu Bessat <spamfree@matthieubessat.fr>
+Date:   Mon Jun 25 21:41:12 2018 +0200
+
+    Beautify style of Partnership
+
+[33mcommit d893ee4da630bac275ea6500ce45ddcf95094806[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Mon Jun 25 20:20:31 2018 +0200
+
+    Remove dark theme, ugly
+    
+    Etienne la prochaine fois tu demande avant de faire ça, le site n'est pas prévue pour du dark, c'est moche, je sais pas qui c'est qui ta mis ça en tête, mais là en dark sa passe pas.  le problème de l'interface simplifié n'est pas içi mais dans le placement des objets, on verra ça après
+
+[33mcommit ed70ce823bc6b1392a9fb60b40c64273f51d1380[m
+Merge: 0deb07f 30d7c2a
+Author: Etienne Chevrollier <etienne.chevrollier@live.fr>
+Date:   Mon Jun 25 16:10:06 2018 +0200
+
+    Merge branch 'master' of https://github.com/retrobox/web
+
+[33mcommit 0deb07f319f3b785b3bc11518cfae00efd5b8a15[m
+Author: Etienne Chevrollier <etienne.chevrollier@live.fr>
+Date:   Mon Jun 25 16:07:33 2018 +0200
+
+    Dark Website
+    
+    (for my eyes tonight)
+
+[33mcommit 30d7c2ae825b0ee15f074bdc26287245a3b36e5a[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Mon Jun 25 00:54:06 2018 +0200
+
+    WIP : Local and other stuff
+    
+    Last commit before I go tothe bed :night_with_stars:
+
+[33mcommit 62bdd71741b53e864857b4ac43e115ec5d87eb50[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Sun Jun 24 20:16:01 2018 +0200
+
+    Small fix
+
+[33mcommit 5e71b58ac8ab2e5393cec5732d6d4eb3b90ba1ff[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Wed Jun 20 11:08:53 2018 +0200
+
+    Tmp Reload button & improving docs style
+
+[33mcommit 34ef16712b06c40795caf340b28998bc6319122d[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Wed Jun 20 09:52:03 2018 +0200
+
+    WIP: in dev.env.js variable
+
+[33mcommit 347e537e866d8cf150493e105e68c601a39acb1e[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Tue Jun 19 22:59:15 2018 +0200
+
+    This was my mistake, and I'm sorry
+
+[33mcommit 6a9781b6209acd5bc97bb01b17633521312a869e[m
+Merge: cb1d556 cf208a6
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Tue Jun 19 15:46:49 2018 +0200
+
+    Merge branch 'master' of github.com:retrobox/web
+
+[33mcommit cb1d556ad348c3af6f87e27f242150a81d86ff32[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Tue Jun 19 15:45:52 2018 +0200
+
+    WIP: Lots of things and adding PrerenderSpaPlugin
+
+[33mcommit cf208a6e757af51cc119c96eb78817e93a6290b2[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Mon Jun 18 19:12:28 2018 +0200
+
+    Git auto pull test
+
+[33mcommit 383f26cf109ffc494ce5608e328ba81b54b1ac61[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Mon Jun 18 14:43:40 2018 +0200
+
+    Adding contact us page + fixing divider issue
+
+[33mcommit 580aa7119daef7bd3ad31eb1215d88e1bd4865c5[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Mon Jun 18 14:31:22 2018 +0200
+
+    WIP: Adding shop item design, work for example
+
+[33mcommit 6fcfbd8613cdecc5db388174389107a39e502956[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Mon Jun 18 14:02:54 2018 +0200
+
+    WIP: Adding shop index design
+
+[33mcommit e4430fa0791a72f059ee29541e3817ba5a1d7b47[m
+Merge: 5874d19 8b70965
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Sun Jun 17 22:25:26 2018 +0200
+
+    Merge branch 'master' of github.com:retrobox/web
+
+[33mcommit 5874d19acb80bdc262c90ca333e5f7c394e68b7a[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Sun Jun 17 22:24:57 2018 +0200
+
+    Adding team members (with array shuffle)
+
+[33mcommit 8b70965f8348129fc7a1ddfc665d8dfb38b7c282[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Sun Jun 17 17:14:31 2018 +0200
+
+    Fake legal terms
+    
+    Lorem ipsum
+
+[33mcommit 7df761ea286fcdfd2dd0b2a831cad864ad4ce8ab[m
+Merge: a013a26 57032c8
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Sun Jun 17 16:43:26 2018 +0200
+
+    Merge branch 'master' of github.com:retrobox/web
+
+[33mcommit a013a26b52de56f797f571a2153301cfb0fb653d[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Sun Jun 17 16:43:11 2018 +0200
+
+    WIP: Adding circleci
+
+[33mcommit 57032c818937fa7f86213c1b70576ad60f2a1bd9[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Sun Jun 17 16:12:47 2018 +0200
+
+    Update legals.md
+
+[33mcommit 5e0a3d2ba18fc4d214360acce58b7a656b9ff392[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Sun Jun 17 16:12:02 2018 +0200
+
+    Update legals.md
+
+[33mcommit 98a23dfefbe1a852279dda53a1bdb59c1acf2a90[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Sun Jun 17 16:09:16 2018 +0200
+
+    Update legals.md
+
+[33mcommit c184b9571b6d6e36b6bb9c7006d2500ce3520de6[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Sun Jun 17 15:28:09 2018 +0200
+
+    Newsletter locales update
+
+[33mcommit d9f3b42c5b08e72926cc43ca8de4fb42e9140188[m
+Merge: e2117cc ccd9b96
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Sun Jun 17 15:02:58 2018 +0200
+
+    Merge branch 'master' of github.com:retrobox/web
+
+[33mcommit e2117ccf99f355467df6cb2c404024a3f488c22d[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Sun Jun 17 15:01:43 2018 +0200
+
+    Newsletter background request done.
+
+[33mcommit ccd9b965764ef3c349d1d758c57ba59eb578e86f[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Sat Jun 16 19:57:30 2018 +0200
+
+    Thanks to gtranslate
+
+[33mcommit ed846dad154ee7a835b575f9f320b7a7437a280e[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Sat Jun 16 19:50:59 2018 +0200
+
+    Legal term update (EN)
+
+[33mcommit 5c1ac37a6983cb6a8b233e313c41c2a7955d6040[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Sat Jun 16 19:45:47 2018 +0200
+
+    Legal terms update
+
+[33mcommit 89b9b0547dd1d7de6a6dd353898f3def80846477[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Sat Jun 16 19:07:36 2018 +0200
+
+    Header style improvements
+
+[33mcommit afc72d54925955d9bb694c439feb670d0d1c546b[m
+Merge: a53ddb6 74e7488
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Sat Jun 16 18:54:13 2018 +0200
+
+    Merge branch 'master' of github.com:retrobox/web
+
+[33mcommit a53ddb6a49e9814a1f600c9b5468adfbc6c90817[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Sat Jun 16 18:53:03 2018 +0200
+
+    Header and footer style test
+
+[33mcommit 74e7488ad54b59c97e868d2b88cdd889ad34658e[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Sat Jun 16 18:44:57 2018 +0200
+
+    Add link
+
+[33mcommit f1fd090bef7a1e7d763f8d14e71ceecf8ca86e02[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Sat Jun 16 18:43:17 2018 +0200
+
+    Add link
+
+[33mcommit cdf87cb3b47cfd85efe9b6f171ca4736299c7179[m
+Merge: 994040a 37625c8
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Sat Jun 16 17:06:35 2018 +0200
+
+    Merge branch 'master' of github.com:retrobox/web
+
+[33mcommit 994040a73341d8b3365dc0a08efedbe83723e6bb[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Sat Jun 16 17:04:50 2018 +0200
+
+    Docs style improved and header design editing
+
+[33mcommit 37625c87c6742e49833c88b154b39156d6420ecc[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Sat Jun 16 16:48:44 2018 +0200
+
+    Dependency update
+    
+    Package-lock.json will be affected
+
+[33mcommit 7dcc49f000c03435b4bf8b123a0bdb81a75e8917[m
+Author: WaBFall <etienne.chevrollier@live.fr>
+Date:   Wed Jun 13 21:28:49 2018 +0200
+
+    tktp
+
+[33mcommit a083a809bf28645b2311567de9670e854c8e3e1f[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Tue Jun 12 18:21:44 2018 +0200
+
+    Moved images on local storage
+
+[33mcommit ed0d2e738c4de4547840d7dfd883a3ae31478a30[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Tue Jun 12 17:10:04 2018 +0200
+
+    Breadcrumb update
+
+[33mcommit bbbd4a81971fd85b26dcbc864bf3759c0173e0db[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Tue Jun 12 15:47:01 2018 +0200
+
+    Adding transition in the docs
+
+[33mcommit 8fb9e59ec358531d2efb35f7b2047d7dcb7dcce3[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Tue Jun 12 14:42:29 2018 +0200
+
+    Finalizing partner ship & cc
+
+[33mcommit 0e124738d61ee42df924ad878daf4b9ac07dae24[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Tue Jun 12 09:45:53 2018 +0200
+
+    WIP: Partnership & cc
+
+[33mcommit d1dd6c8065f9719b3507c3951c52688388a4fd17[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Tue Jun 12 09:00:48 2018 +0200
+
+    docs bottom navigation & docs nav sticky
+
+[33mcommit 321fe1591441f26fdba838a5ab7f52e7c7c0ebcf[m
+Merge: 1daed95 8607952
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Sat Jun 9 16:30:29 2018 +0200
+
+    Merge branch 'master' of https://github.com/retrobox/web
+
+[33mcommit 1daed958e49630b04697aa7736596188d2fbc33a[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Sat Jun 9 16:28:32 2018 +0200
+
+    Editing locales & Adding docs nav surbriance & Fix legals/terms locales issues
+
+[33mcommit 8607952a5790a2c1ff2bbf74ab24ed8213a765f9[m
+Merge: 4aca1d0 9b69993
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Sat Jun 9 11:16:28 2018 +0200
+
+    Merge branch 'master' of https://github.com/retrobox/web
+
+[33mcommit 4aca1d0efac759c45c985efd6172531d53ffdd44[m
+Author: Valentin Derouet <thevalentin61@gmail.com>
+Date:   Sat Jun 9 11:16:24 2018 +0200
+
+    Add start.bat in .gitignore
+
+[33mcommit 9b69993fc198d6270936c73ea07f9cb47b562a68[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Fri Jun 8 23:12:14 2018 +0200
+
+    WIP: docs, ça avance bien!
+
+[33mcommit 11ba7c9b3b2a3df2d57c5a2ab4546d2166fece7f[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Fri Jun 8 20:14:38 2018 +0200
+
+    Adding community page & WIP: docs
+
+[33mcommit 75c470f7e53123dcde6e8c071601eb20677034c7[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Fri Jun 8 17:24:16 2018 +0200
+
+    WIP: Add favicons & Add newsletter style
+
+[33mcommit a7be63ccfe9cf0a1db3957e585a26aca5d268ccb[m
+Author: root <root@srv01.cluster.thingmill.fr>
+Date:   Tue Jun 5 15:31:54 2018 -0400
+
+    Fixed dependencies
+
+[33mcommit 2b42815c78bb22ad132ac924999ac9c9bbf1aef8[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Mon Jun 4 21:40:48 2018 +0200
+
+    Adding en & fr flag png
+
+[33mcommit a5532011d556b73fce10d03dce6ab41fbaeabf4e[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Mon Jun 4 21:40:17 2018 +0200
+
+    Moving not found styles from vue components to full scss file
+
+[33mcommit 7784d0cfd252f1f6b2935f90bf1b006e96c252ec[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Mon Jun 4 21:38:49 2018 +0200
+
+    Adding mobile nav & locale selector & scroll behaviour & vuex
+
+[33mcommit d8c3d6a43cd91e4a027b96cc3cfeb3a1457d375f[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Sun Jun 3 18:39:29 2018 +0200
+
+    Header refactoring + langs + responsive
+
+[33mcommit ad86938f36f023db4594cf1bea0265a5bcb82cb7[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Sun Jun 3 17:51:54 2018 +0200
+
+    Adding Terms of use and refactoring
+
+[33mcommit aaa195dbe9d3fa350787ea6755e1c8e1b33d77e1[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Sun May 27 20:15:40 2018 +0200
+
+    remove hoek
+
+[33mcommit cd186da75a339675fb052f70afc7fdf265aced75[m
+Author: Le_Futuriste <spamfree@matthieubessat.fr>
+Date:   Sun May 27 19:59:39 2018 +0200
+
+    Initial commit
