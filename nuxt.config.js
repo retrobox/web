@@ -18,6 +18,10 @@ module.exports = {
     ]
   },
 
+  router: {
+    middleware: 'i18n'
+  },
+
   /*
   ** Customize the progress-bar color
   */
@@ -34,6 +38,8 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/i18n.js',
+    '~/plugins/cookie.js',
   ],
 
   /*
