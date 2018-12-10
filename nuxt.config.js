@@ -25,7 +25,7 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#000' },
 
   /*
   ** Global CSS
@@ -39,7 +39,9 @@ module.exports = {
   */
   plugins: [
     '~/plugins/i18n.js',
-    '~/plugins/cookie.js',
+    {src: '~/plugins/cookie.js', ssr: false},
+    {src: '~/plugins/transition.js', ssr: false},
+    {src: '~/plugins/modal.js', ssr: false}
   ],
 
   /*
