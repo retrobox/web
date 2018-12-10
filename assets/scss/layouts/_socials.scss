@@ -1,0 +1,56 @@
+.socials {
+  ul {
+    display: flex;
+    list-style-type: none;
+    margin-right: 0;
+    font-size: 1.4em;
+    padding: 0;
+
+    li {
+      margin-right: 25px;
+      .icon {
+        width: auto;
+        height: 1.2em;
+        max-width: 100%;
+        max-height: 100%;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        color: white;
+        opacity: 0.8;
+        transition: 0.2s opacity;
+      }
+      a:hover {
+        opacity: 1;
+        transition: 0.2s opacity;
+      }
+    }
+    li:last-of-type {
+      margin-right: 5px;
+    }
+    li {
+      .icon:hover {
+      transition :  0.2s color;
+      transition : 0.2s filter;
+      filter: drop-shadow(0px 0px 5px #ffffff);
+      }
+      .icon {
+        transition :  0.2s color;
+        transition: 0.2s filter;
+      }
+    }
+    li.facebook .icon:hover{
+      color: #4267B2;
+    }
+    li.twitter .icon:hover{
+      color: #1DA1F2;
+    }
+    li.github .icon:hover{
+      color: #24292E;
+    }
+    li.discord .icon:hover{
+      color: #7289da;
+    }
+  }
+}

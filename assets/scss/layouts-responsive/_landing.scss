@@ -1,0 +1,53 @@
+
+.landing-main {
+
+  .landing-main-actions {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      margin-bottom: 0.9em;
+      margin-right: 0;
+    }
+  }
+}
+
+.landing-advantages-content {
+  width: 90%;
+}
+.landing-about .landing-about-content {
+  width: 90%;
+  grid-template-columns: 100%;
+    grid-row-gap: 2em;
+    .landing-about-pic img {
+      width: 100%;
+      height: auto;
+    }
+}
+
+.landing-advantages .landing-advantages-content {
+  width: 90%;
+}
+
+.landing-main .landing-main-content {
+  width: 90%;
+  .landing-main-title {
+    font-size: 2em;
+  }
+  .landing-main-subtitle {
+    font-size: 1.2em;
+  }
+}
+
+.landing-columns {
+  .landing-column {
+
+    .landing-column-icon {
+      padding-right: 0;
+    }
+
+    .landing-column-content {
+      margin-right: 0;
+    }
+  }
+}

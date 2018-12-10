@@ -1,0 +1,222 @@
+.list {
+  .list-head {
+    font-weight: bold;
+  }
+  .list-row, .list-head {
+    display: grid;
+    border-bottom: 1px solid #ddd;
+    padding:9px;
+    width: 100%;
+  }
+}
+.list-73 {
+  .list-row, .list-head {
+    grid-template-columns: 70% 30%;
+  }
+}
+
+.dividing {
+  width: 100%;
+  border-bottom: 1px solid rgba(189, 195, 199, 1.0);
+  padding-bottom: .3em;
+}
+
+.dividing-right {
+  width: 100%;
+  border-bottom: 1px solid rgba(189, 195, 199, 1.0);
+  padding-bottom: .3em;
+  right: 20px;
+  text-align: right;
+}
+
+.article {
+  padding-bottom: 2em;
+
+  display: flex;
+  margin-top: 0.1em;
+
+  .docs-content {
+    width: 100%;
+  }
+
+  .docs-nav {
+    border-top: 1px solid rgba(128, 128, 128, 0.5);
+    margin-right: 2.5em;
+    margin-top: 2em;
+    nav {
+      position: sticky;
+      top: 10px;
+      display: flex;
+      flex-direction: column;
+      .active {
+        a {
+          color: #3498db;
+          font-weight: bold;
+        }
+      }
+
+      .nav-item {
+        padding: 15px;
+        width: 15em;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+        a {
+          color: #2980b9;
+          text-decoration: none;
+          transition: color 0.1s ease-in-out;
+        }
+        a:hover {
+          color: #3498db;
+          transition: color 0.1s ease-in-out;
+        }
+        .sub-nav {
+          margin-top: 8px;
+          padding-top: 10px;
+          border-top: 2px dotted #ecf0f1;
+          li {
+            list-style-type: none;
+            margin-bottom: 5px;
+            a {
+              color: #7f8c8d;
+              transition: color 0.1s ease-in-out;
+            }
+            a:hover {
+              color: #2c3e50;
+              transition: color 0.1s ease-in-out;
+            }
+          }
+        }
+      }
+      :last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+
+
+  .doc-page-content {
+
+    .image-header {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      margin-top: 2em;
+      margin-bottom: 1.5em;
+      img {
+        margin-top: 0;
+        margin-bottom: 0;
+        height: 150px;
+      }
+    }
+    .docs-section {
+      display: grid;
+      grid-column-gap: 40px;
+      grid-template-columns: 60% 40%;
+      img {
+        width: 80%;
+      }
+    }
+  }
+
+  .docs-content {
+    //**markdown docs content
+    img {
+      margin-top: 13px;
+      margin-bottom: 13px;
+    }
+
+    .docs-alert.info {
+      margin-top: 1.5em;
+      margin-bottom: 1.5em;
+      @extend .flex;
+      @extend .items-center;
+      @extend .bg-blue;
+      @extend .text-white;
+      @extend .text-sm;
+      @extend .font-bold;
+      @extend .px-4;
+      @extend .py-3;
+      .icon {
+        margin-right: 15px;
+      }
+    }
+
+
+    h2:first-of-type,
+    h3:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  .content {
+    .team-mosaic {
+      margin-top: 0.5em;
+      display: flex;
+      justify-content: space-between;
+      .team-item {
+        margin-right: 1.5em;
+        text-align: center;
+        .team-item-title {
+          margin-top: 0.3em;
+          margin-bottom: 0.2em;
+          font-size: 1.4em;
+          font-weight: 300;
+        }
+        .team-item-image {
+          width: 10em;
+        }
+        .team-item-description {
+          font-size: 0.9em;
+          }
+
+      }
+
+      .team-item:last-of-type{
+       margin-right: 0;
+      }
+    }
+    color: #525252;
+    line-height: 1.5em;
+
+    a {
+      color: #3498db;
+      transition: 0.2s color;
+    }
+    a:hover {
+      color: #2980b9;
+      transition: 0.2s color;
+    }
+    hr {
+      margin-top: 1.5em;
+      border-bottom: 1px solid #95a5a6;
+      margin-bottom: 1.5em;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-weight: bold;
+      line-height: 1.8em;
+    }
+
+    h1{
+      margin-top: 1.8em;
+      margin-bottom: 1.3em;
+    }
+    h2 {
+      margin-top: 1.3em;
+      margin-bottom: 1em;
+    }
+
+    h3,
+    h4,
+    h5 {
+      margin-top: 1em;
+      margin-bottom: 0.5em;
+    }
+  }
+  .navigation {
+    margin-top: 1.8em;
+  }
+}

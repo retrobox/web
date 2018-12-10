@@ -1,0 +1,36 @@
+.buy {
+  .buy-nav {
+    margin-top: 1.1em;
+  }
+  .buy-content {
+    grid-template-columns: 100%;
+    grid-template-rows: 100% 100%;
+
+    .buy-description-container {
+
+      .buy-ways-container {
+
+        .buy-ways-mosaic {
+          flex-wrap: wrap;
+          width: 100%;
+          justify-content: center;
+          .buy-way {
+            margin-right: .3em;
+          }
+        }
+      }
+    }
+  }
+}
+.show-image-modal {
+    .modal-container {
+      .show-image-container {
+        display: flex;
+        align-items: center;
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
+    }
+}
