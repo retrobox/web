@@ -2,12 +2,14 @@
   <div>
     <Header />
     <nuxt/>
+    <Footer />
   </div>
 </template>
 <script>
   import Header from "../components/Header"
+  import Footer from "../components/Footer"
   export default {
-    components: {Header},
+    components: {Footer, Header},
     mounted () {
       let locale = navigator.language.substring(0, 2);
       if (this.$cookie.get('locale') === undefined || this.$cookie.get('locale') === null) {

@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <i :class="'icon ' + value"></i>
-  </div>
+  <i :class="'icon ' + value"></i>
 </template>
 
 <script>
