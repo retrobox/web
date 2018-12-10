@@ -36,7 +36,7 @@
       </div>
     </div>
     <section class="landing-section landing-bottom"></section>
-    <!--<newsletter />-->
+    <Newsletter />
     <div class="footer-container">
       <div class="colored-divider-container">
         <div></div>
@@ -116,9 +116,10 @@
 <script>
 import Icon from "./Icon"
 import Socials from "./Socials"
+import Newsletter from "./Newsletter"
 export default {
   name: 'Footer',
-  components: {Socials, Icon},
+  components: {Newsletter, Socials, Icon},
   data: () => ({}),
   methods: {}
 }
