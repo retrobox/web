@@ -41,7 +41,8 @@ module.exports = {
     '~/plugins/i18n.js',
     {src: '~/plugins/cookie.js', ssr: false},
     {src: '~/plugins/transition.js', ssr: false},
-    {src: '~/plugins/modal.js', ssr: false}
+    {src: '~/plugins/modal.js', ssr: false},
+    {src: '~/plugins/tooltip.js', ssr: false}
   ],
 
   /*
