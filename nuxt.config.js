@@ -1,3 +1,5 @@
+const marked = require("marked");
+const renderer = new marked.Renderer();
 const pkg = require('./package')
 
 module.exports = {
@@ -7,7 +9,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    title: "Retrobox",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -19,7 +21,10 @@ module.exports = {
   },
 
   router: {
-    middleware: 'i18n'
+    middleware: 'i18n',
+    scrollBehavior: function () {
+      return { x: 0, y: 0 }
+    }
   },
 
   /*
@@ -42,7 +47,8 @@ module.exports = {
     {src: '~/plugins/cookie.js', ssr: false},
     {src: '~/plugins/transition.js', ssr: false},
     {src: '~/plugins/modal.js', ssr: false},
-    {src: '~/plugins/tooltip.js', ssr: false}
+    {src: '~/plugins/scrollTo.js', ssr: false},
+    {src: '~/plugins/tooltip.js'}
   ],
 
   /*
@@ -63,11 +69,23 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    /*
-    ** You can extend webpack config here
-    */
     extend(config, ctx) {
       // Run ESLint on save
+      config.module.rules.push({
+        test: /\.md$/,
+        use: [
+          {
+            loader: "html-loader"
+          },
+          {
+            loader: "markdown-loader",
+            options: {
+              pedantic: true,
+              renderer
+            }
+          }
+        ]
+      });
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
@@ -75,6 +93,18 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
+      }
+    }
+  },
+
+  render: {
+    bundleRenderer: {
+      directives: {
+        wtf: function (el, dir) {
+          console.log(el)
+          console.log(dir)
+          console.log('wtf')
+        }
       }
     }
   }

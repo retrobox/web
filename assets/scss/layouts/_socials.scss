@@ -3,7 +3,7 @@
     display: flex;
     list-style-type: none;
     margin-right: 0;
-    font-size: 1.4em;
+    font-size: 1.6em;
     padding: 0;
 
     li {
@@ -15,11 +15,13 @@
         max-height: 100%;
       }
       a {
-        display: flex;
-        align-items: center;
         color: white;
         opacity: 0.8;
         transition: 0.2s opacity;
+        i {
+          display: flex;
+          align-items: center;
+        }
       }
       a:hover {
         opacity: 1;
@@ -31,13 +33,11 @@
     }
     li {
       .icon:hover {
-      transition :  0.2s color;
-      transition : 0.2s filter;
-      filter: drop-shadow(0px 0px 5px #ffffff);
+        transition: 0.2s filter,color;
+        filter: drop-shadow(0px 0px 5px #ffffff);
       }
       .icon {
-        transition :  0.2s color;
-        transition: 0.2s filter;
+        transition: 0.2s filter,color;
       }
     }
     li.facebook .icon:hover{

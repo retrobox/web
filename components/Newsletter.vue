@@ -32,7 +32,7 @@
                   v-if="loading"
                   class="newsletter-loading">
                   <Icon
-                    name="fas fa-sync"
+                    value="fas fa-sync"
                     spin />
                   {{ $t('loading') }}
                 </div>

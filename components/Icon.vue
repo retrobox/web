@@ -19,7 +19,7 @@ export default {
     spinClass: ''
   }),
   mounted () {
-    this.spinClass = this.spin ? 'fa-spin' : ''
+    this.spinClass = this.spin ? ' fa-spin' : ''
   }
 }
 </script>

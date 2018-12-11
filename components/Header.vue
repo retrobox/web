@@ -114,11 +114,11 @@
     <div class="header-background">
       <div class="container mx-auto header-content">
         <div class="header-title-container">
-          <a @click="$router.push({name: 'Home'})">
+          <nuxt-link to="/">
             <img
               src="../assets/images/nav.png"
               class="header-title-logo">
-          </a>
+          </nuxt-link>
         </div>
         <div class="header-nav-container mobile">
           <button
@@ -129,10 +129,10 @@
         </div>
         <nav class="header-nav-container desktop">
           <div class="nav-item with-link">
-            <a @click="$router.push({name: 'Home'})">{{ $t('home') }}</a>
+            <nuxt-link to="/">{{ $t('home') }}</nuxt-link>
           </div>
           <div class="nav-item with-link">
-            <a @click="$router.push({name: 'DocumentationHome'})">{{ $t('docs') }}</a>
+            <nuxt-link to="/terms">{{ $t('docs') }}</nuxt-link>
           </div>
           <div class="nav-item with-link">
             <a @click="$router.push({name: 'Community'})">{{ $t('community.title') }}</a>
@@ -154,18 +154,18 @@
     <div class="header-breadcrumb">
       <div class="container mx-auto header-breadcrumb-flex">
         <div class="breadcrumb-location desktop">
-          {{ $t('breadcrumb.title') }}
+          <!--{{ $t('breadcrumb.title') }}
           <ul>
             <li class="item">{{ $store.state.location.root }}</li>
             <li
-              v-if="$store.state.location.sub !== undefined"
+              v-if="$store.state.location.sub !== undefined && $store.state.location.sub !== ''"
               class="divider">></li>
             <li
-              v-if="$store.state.location.sub !== undefined"
+              v-if="$store.state.location.sub !== undefined && $store.state.location.sub !== ''"
               class="item">
               {{ $store.state.location.sub }}
             </li>
-          </ul>
+          </ul>-->
         </div>
         <div class="breadcrumb-socials">
           <Socials />

@@ -3,7 +3,8 @@ export const state = () => ({
   titleContext: '',
   displayMobileNav: false,
   location: {
-    root: ''
+    root: '',
+    sub: ''
   },
   isLoading: false,
   loadingType: 'normal',
@@ -20,13 +21,7 @@ export const state = () => ({
 
 export const mutations = {
   SET_TITLE(state, payload) {
-    if (payload.context !== undefined && payload.key !== undefined) {
-      state.title = payload.context.$t(payload.key)
-      state.titleContext = payload
-    } else {
-      state.title = payload
-    }
-    document.title = state.title + " - Retrobox"
+    state.title = payload
   },
   SET_LOCATION(state, payload) {
     state.location = payload

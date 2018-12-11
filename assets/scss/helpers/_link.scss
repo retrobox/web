@@ -4,3 +4,6 @@ a {
 a:hover {
   cursor: pointer;
 }
+a:focus {
+  outline: 0;
+}

@@ -1,6 +1,12 @@
+$landing-main-section-height: 80vh;
+
+.landing-main-back {
+  height: $landing-main-section-height;
+}
 
 .landing-main {
-
+  margin-top: -$landing-main-section-height;
+  height: $landing-main-section-height;
   .landing-main-actions {
     display: flex;
     flex-direction: column;
@@ -9,6 +15,10 @@
       margin-bottom: 0.9em;
       margin-right: 0;
     }
+  }
+
+  .landing-main-actions a:first-of-type {
+    margin-right: 0;
   }
 }
 
@@ -32,6 +42,7 @@
 .landing-main .landing-main-content {
   width: 90%;
   .landing-main-title {
+    margin-top: 1em;
     font-size: 2em;
   }
   .landing-main-subtitle {

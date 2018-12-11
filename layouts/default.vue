@@ -1,7 +1,9 @@
 <template>
   <div>
     <Header />
-    <nuxt/>
+    <transition name="main-transition">
+      <nuxt/>
+    </transition>
     <Footer />
   </div>
 </template>
@@ -10,6 +12,11 @@
   import Footer from "../components/Footer"
   export default {
     components: {Footer, Header},
+    head () {
+      return {
+        titleTemplate: '%s - Retrobox',
+      }
+    },
     mounted () {
       let locale = navigator.language.substring(0, 2);
       if (this.$cookie.get('locale') === undefined || this.$cookie.get('locale') === null) {

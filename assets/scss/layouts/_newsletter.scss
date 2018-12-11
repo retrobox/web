@@ -31,7 +31,6 @@ $opacity: 0.9;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 100%;
       .newsletter-form-input {
         margin-right: 1.1em;
         input {
@@ -46,11 +45,12 @@ $opacity: 0.9;
       .newsletter-loading {
         display: flex;
         .icon {
-          margin-right: 0.5em;
+          margin-right: 1em;
         }
       }
-      .newsletter-form-button button {
-        height: 39px;
+      .newsletter-form-button .button {
+        padding-top: 0.6em;
+        padding-bottom: 0.6em;
       }
     }
   }

@@ -4,34 +4,37 @@
     <div class="partnership-container">
       <div class="partnership-content container mx-auto">
         <a
-          v-tooltip.top="$t('partnership.lyceealain.title')"
           class="partnership-lyceealain partnership-item"
           href="https://lyceealainalencon.fr/">
-          <div class="partnership-lyceealain-image partnership-image">
+          <Tooltip
+            :value="$t('partnership.lyceealain.title')"
+            class="partnership-lyceealain-image partnership-image">
             <img
               src="../assets/images/lyceealain.png"
               alt="Logo Lycée Alain">
-          </div>
+          </Tooltip>
         </a>
         <a
-          v-tooltip.top="$t('partnership.cci.title')"
           class="partnership-cci partnership-item"
           href="https://www.portesdenormandie.cci.fr/">
-          <div class="partnership-cci-image partnership-image">
+          <Tooltip
+            :value="$t('partnership.cci.title')"
+            class="partnership-cci-image partnership-image">
             <img
               src="../assets/images/ccinormandie.png"
               alt="Logo CCI Normandie">
-          </div>
+          </Tooltip>
         </a>
         <a
-          v-tooltip.top="$t('partnership.creative-commons.title')"
           class="partnership-creative-commons partnership-item"
           href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
-          <div class="partnership-creative-commons-image partnership-image">
+          <Tooltip
+            :value="$t('partnership.creative-commons.title')"
+            class="partnership-creative-commons-image partnership-image">
             <img
               src="../assets/images/creative-commons.png"
               alt="Logo Creative Commons">
-          </div>
+          </Tooltip>
         </a>
       </div>
     </div>
@@ -49,26 +52,25 @@
       <div class="flex footer-content container mx-auto">
         <div class="w-1/3">
           <div class="footer-logo">
-            <a>
+            <nuxt-link to="/">
               <img
-                src="../assets/images/footer.png"
-                @click="$router.push({name: 'Home'})" />
-            </a>
+                src="../assets/images/footer.png" />
+            </nuxt-link>
           </div>
         </div>
         <div class="w-1/3">
           <div class="footer-links">
             <ul>
               <li>
-                <a @click="$router.push({name: 'About'})">{{ $t('about') }}</a>
+                <nuxt-link to="/about">{{ $t('about') }}</nuxt-link>
               </li>
 
               <li>
-                <a @click="$router.push({name: 'BlogIndex'})">{{ $t('blog.our') }}</a>
+                <a href="https://blog.retrobox.tech">{{ $t('blog.our') }}</a>
               </li>
 
               <li>
-                <a @click="$router.push({name: 'Terms'})">{{ $t('terms-of-use') }}</a>
+                <nuxt-link to="/terms">{{ $t('terms-of-use') }}</nuxt-link>
               </li>
             </ul>
           </div>
@@ -81,11 +83,11 @@
               </li>
 
               <li>
-                <a @click="$router.push({name: 'ContactUs'})">{{ $t('contact-us') }}</a>
+                <nuxt-link to="/contact-us">{{ $t('contact-us') }}</nuxt-link>
               </li>
 
               <li>
-                <a @click="$router.push({name: 'TermsOfSale'})">{{ $t('terms-of-sale') }}</a>
+                <nuxt-link to="/terms-of-sale">{{ $t('terms-of-sale') }}</nuxt-link>
               </li>
             </ul>
           </div>
@@ -100,7 +102,7 @@
                 <a href="#">© Copyright 2018 Thingmill</a>
               </li>
               <li>
-                <a @click="$router.push({name: 'Legals'})">{{ $t('legals') }}</a>
+                <nuxt-link to="/legals">{{ $t('legals') }}</nuxt-link>
               </li>
             </ul>
           </div>
@@ -117,9 +119,10 @@
 import Icon from "./Icon"
 import Socials from "./Socials"
 import Newsletter from "./Newsletter"
+import Tooltip from "./Tooltip"
 export default {
   name: 'Footer',
-  components: {Newsletter, Socials, Icon},
+  components: {Tooltip, Newsletter, Socials, Icon},
   data: () => ({}),
   methods: {}
 }

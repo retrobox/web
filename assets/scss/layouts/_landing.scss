@@ -1,6 +1,3 @@
-/**
-Landing main
-**/
 $landing-main-section-height: 70vh;
 $landing-main-section-opacity: 0.8;
 
@@ -30,8 +27,46 @@ $landing-main-section-opacity: 0.8;
     }
   }
   .landing-main-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3.5em;
+    .landing-main-button-go {
+      @extend .bg-transparent;
+      &:hover {
+        @extend .bg-blue;
+      }
+      @extend .text-white;
+      @extend .font-semibold;
+      &:hover {
+        @extend .text-white;
+      }
+      @extend .py-4;
+      @extend .px-8;
+      @extend .mr-4;
+      @extend .border;
+      @extend .border-white;
+      &:hover {
+        @extend .border-transparent;
+      }
+      @extend .rounded-full;
+      @extend .text-lg;
+    }
+    .landing-main-button-shop {
+      @extend .bg-blue;
+      &:hover {
+        @extend .bg-blue-dark;
+      }
+      @extend .text-white;
+      @extend .font-bold;
+      @extend .py-4;
+      @extend .px-8;
+      @extend .rounded-full;
+      @extend .button;
+      @extend .text-lg;
+    }
     a {
-      margin-right: 10px;
+      margin-right: 15px;
       text-decoration: none;
     }
   }
@@ -47,6 +82,9 @@ $landing-main-section-opacity: 0.8;
   margin-top: 2em;
   border-top: 1px solid rgba(189, 195, 199, 1.0);
   width: 100%;
+}
+.landing-section-no-border {
+  border: 0;
 }
 
 /**
@@ -114,24 +152,24 @@ Landing columns
         padding: 10px 10px 10px 10px;
       }
 
-    .type-game {
-      background-color: #ff4c4c;
-    }
-    .type-custom {
-      background-color: #ffff4c;
-    }
-    .type-connected {
-      background-color: #4dff4c;
-    }
-    .type-switch {
-      background-color: #4cffff;
-    }
-    .type-easy {
-      background-color: #4d4cff;
-    }
-    .type-opensource {
-      background-color: #ff4cff;
-    }
+      .type-game {
+        background-color: #ff4c4c;
+      }
+      .type-custom {
+        background-color: #ffff4c;
+      }
+      .type-connected {
+        background-color: #4dff4c;
+      }
+      .type-switch {
+        background-color: #4cffff;
+      }
+      .type-easy {
+        background-color: #4d4cff;
+      }
+      .type-opensource {
+        background-color: #ff4cff;
+      }
       i {
         color: white;
         font-size: 1.5em;
