@@ -4,8 +4,8 @@
       <slot />
     </div>
     <div
-      v-else
-      @click="scroll">
+      v-tooltip.top="value"
+      v-else>
       <slot />
     </div>
   </div>
@@ -18,12 +18,6 @@ export default {
     value: {
       type: String,
       default: ''
-    }
-  },
-  methods: {
-    scroll: function () {
-      console.log('scroll')
-      this.$scrollTo('#go')
     }
   }
 }

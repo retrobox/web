@@ -5,6 +5,11 @@ const pkg = require('./package')
 module.exports = {
   mode: 'universal',
 
+  env: {
+    docsEndpoint: 'https://docs.retrobox.tech',
+    apiEndpoint: 'https://api.retrobox.tech'
+  },
+
   /*
   ** Headers of the page
   */
@@ -44,11 +49,12 @@ module.exports = {
   */
   plugins: [
     '~/plugins/i18n.js',
+    '~/plugins/env.js',
     {src: '~/plugins/cookie.js', ssr: false},
     {src: '~/plugins/transition.js', ssr: false},
     {src: '~/plugins/modal.js', ssr: false},
     {src: '~/plugins/scrollTo.js', ssr: false},
-    {src: '~/plugins/tooltip.js'}
+    {src: '~/plugins/tooltip.js', ssr: false}
   ],
 
   /*

@@ -18,17 +18,15 @@
             <div class="mobile-nav-nav">
               <ul>
                 <li>
-                  <a @click="$router.push({name: 'Home'}); $store.commit('TOGGLE_NAV')">
+                  <a @click="mobileNavigate('/')">
                     {{ $t('home') }}
                   </a>
                 </li>
                 <li>
-                  <a @click="$router.push({name: 'DocumentationHome'}); $store.commit('TOGGLE_NAV')">
-                    {{ $t('docs') }}
-                  </a>
+                  <a @click="mobileNavigate('/docs')">{{ $t('docs') }}</a>
                 </li>
                 <li>
-                  <a @click="$router.push({name: 'Community'}); $store.commit('TOGGLE_NAV')">
+                  <a @click="mobileNavigate('/community')">
                     {{ $t('community.title') }}
                   </a>
                 </li>
@@ -132,7 +130,7 @@
             <nuxt-link to="/">{{ $t('home') }}</nuxt-link>
           </div>
           <div class="nav-item with-link">
-            <nuxt-link to="/terms">{{ $t('docs') }}</nuxt-link>
+            <nuxt-link to="/docs">{{ $t('docs') }}</nuxt-link>
           </div>
           <div class="nav-item with-link">
             <a @click="$router.push({name: 'Community'})">{{ $t('community.title') }}</a>
@@ -191,6 +189,10 @@ export default {
       this.$i18n.locale = locale
       this.$modal.hide('localeSelection')
       this.$store.commit('SET_TITLE', this.$store.state.titleContext)
+    },
+    mobileNavigate: function (target) {
+      this.$store.commit('TOGGLE_NAV')
+      this.$router.push(target)
     }
   }
 }

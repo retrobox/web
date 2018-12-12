@@ -3,8 +3,11 @@
   justify-content: center;
   display: flex;
   align-items: center;
-  height: 50vh;
-  margin-top: 2em;
+  height: 45vh;
+  margin-top: 3em;
   opacity: 0.8;
   color: #2c3e50;
+  .icon {
+    font-size: 3em;
+  }
 }
