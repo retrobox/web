@@ -1,5 +1,5 @@
 <template>
-  <i :class="'icon ' + value + spinClass"></i>
+  <i :class="'icon ' + value + customClass"></i>
 </template>
 
 <script>
@@ -13,13 +13,24 @@ export default {
     spin: {
       default: false,
       type: Boolean
+    },
+    'no-margin': {
+      default: false,
+      type: Boolean
     }
   },
   data: () => ({
-    spinClass: ''
+    customClass: ''
   }),
   mounted () {
-    this.spinClass = this.spin ? ' fa-spin' : ''
+    this.customClass = this.spin ? ' fa-spin' : ''
+    this.customClass += this.noMargin ? ' no-margin' : ''
   }
 }
 </script>
+
+<style>
+.no-margin {
+  margin-right: 0 !important;
+}
+</style>
