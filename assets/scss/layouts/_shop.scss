@@ -16,8 +16,6 @@
 
 //shop cart
 .shop-cart-container {
-  margin-top: 2em;
-
   .shop-cart-list {
     .list-row, .list-head {
       grid-template-columns: 28% 28% 28% 1fr;
@@ -76,6 +74,7 @@
   .shop-empty-icon {
     margin-bottom: 1em;
     .icon {
+      font-size: 2em;
       width: 25px;
       height: 25px;
     }
