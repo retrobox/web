@@ -31,12 +31,12 @@
                   </a>
                 </li>
                 <li>
-                  <a @click="$router.push({name: 'ShopIndex'}); $store.commit('TOGGLE_NAV')">
+                  <a @click="mobileNavigate('/shop')">
                     {{ $t('shop.title') }}
                   </a>
                 </li>
                 <li>
-                  <a @click="$router.push({name: 'ShopItem', params: {slug:'retrobox-console-kited'}}); $store.commit('TOGGLE_NAV')">
+                  <a @click="mobileNavigate('/shop')">
                     {{ $t('buy') }}
                   </a>
                 </li>
@@ -133,10 +133,10 @@
             <nuxt-link to="/docs">{{ $t('docs') }}</nuxt-link>
           </div>
           <div class="nav-item with-link">
-            <a @click="$router.push({name: 'Community'})">{{ $t('community.title') }}</a>
+            <nuxt-link to="/community">{{ $t('community.title') }}</nuxt-link>
           </div>
           <div class="nav-item with-link">
-            <a @click="$router.push({name: 'ShopIndex'})">{{ $t('shop.title') }}</a>
+            <nuxt-link to="/shop">{{ $t('shop.title') }}</nuxt-link>
           </div>
           <div class="nav-item with-button">
             <a
