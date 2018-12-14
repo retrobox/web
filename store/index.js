@@ -58,9 +58,9 @@ export const mutations = {
   },
   REMOVE_ALERT(state) {
     state.alert = {
-      type: "",
-      title: "",
-      description: "",
+      type: '',
+      title: '',
+      description: '',
       enabled: false
     }
   },
