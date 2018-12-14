@@ -87,11 +87,16 @@
   export default {
     name: 'DocumentationHome',
     components: {Icon},
+    head () {
+      return {
+        title: this.title
+      }
+    },
     data () {
       return {
-        content: "",
+        content: '',
         loading: true,
-        title: "",
+        title: '',
         items: [],
         actual_item: {},
         actual_index: 0
