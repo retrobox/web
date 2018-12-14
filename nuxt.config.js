@@ -1,13 +1,14 @@
-const marked = require("marked");
+const marked = require('marked')
+const dotenv = require('dotenv')
 const renderer = new marked.Renderer();
-const pkg = require('./package')
+dotenv.config()
 
 module.exports = {
   mode: 'universal',
 
   env: {
-    docsEndpoint: 'https://docs.retrobox.tech',
-    apiEndpoint: 'https://api.retrobox.tech'
+    docsEndpoint: process.env.DOCS_ENDPOINT,
+    apiEndpoint: process.env.API_ENDPOINT
   },
 
   /*
@@ -18,7 +19,7 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { hid: 'description', name: 'description', content: "Retrobox" }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -49,6 +50,7 @@ module.exports = {
   */
   plugins: [
     '~/plugins/i18n.js',
+    '~/plugins/apitator.js',
     '~/plugins/env.js',
     {src: '~/plugins/cookie.js', ssr: false},
     {src: '~/plugins/transition.js', ssr: false},
@@ -62,7 +64,8 @@ module.exports = {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    ['@nuxtjs/dotenv', { systemvars: true }]
   ],
   /*
   ** Axios module configuration
