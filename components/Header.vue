@@ -50,7 +50,9 @@
         name="localeSelection"
         class="locales-modal">
         <div class="locales-container">
-          <div class="flex locales">
+          <div
+            v-show="!localeLoading"
+            class="flex locales">
             <div
               class="w-1/2 h-12 locale"
               @click="setLocale('fr')">
@@ -74,6 +76,13 @@
               <div class="locale-title">
                 {{ $t('english') }}
               </div>
+            </div>
+          </div>
+          <div v-show="localeLoading">
+            <div class="loading">
+              <Icon
+                value="fas fa-sync"
+                spin />
             </div>
           </div>
         </div>
@@ -140,8 +149,7 @@
           </div>
           <div class="nav-item with-button">
             <a
-              class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded button"
-              @click="$router.push({name: 'ShopItem', params: {slug:'retrobox-console-28'}})">
+              class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded button">
               <Icon value="fas fa-shopping-cart" />
               {{ $t('buy') }}
             </a>
@@ -179,16 +187,17 @@ import Socials from "./Socials"
 export default {
   name: 'Header',
   components: {Socials, Icon},
-  data: () => ({}),
+  data: () => ({
+    localeLoading: false
+  }),
   methods: {
     localeSelection: function () {
       this.$modal.show('localeSelection')
     },
     setLocale: function (locale) {
       this.$cookie.set('locale', locale, { expires: '365D' })
-      this.$i18n.locale = locale
-      this.$modal.hide('localeSelection')
-      this.$store.commit('SET_TITLE', this.$store.state.titleContext)
+      this.localeLoading = true
+      window.location.reload()
     },
     mobileNavigate: function (target) {
       this.$store.commit('TOGGLE_NAV')
