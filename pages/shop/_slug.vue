@@ -88,7 +88,7 @@
                     class="action-buy bg-blue hover:bg-blue-light text-white font-bold py-2 px-4 rounded inline-flex items-center button"
                     @click="toggleCart(item)">
                     <span><i class="fas fa-shopping-cart"></i></span>
-                    <span v-if="$store.state.cart[this.$store.state.cart.indexOf(item)] === undefined">{{ $t('shop.cart.add') }}</span>
+                    <span v-if="$store.state.cart.filter(_item => _item.id === item.id).length === 0">{{ $t('shop.cart.add') }}</span>
                     <span v-else>{{ $t('shop.cart.remove') }}</span>
                   </button>
                 </div>
@@ -230,7 +230,7 @@
           }
         }
         this.$store.commit('CART_TOGGLE', item)
-        if (this.$store.state.cart[this.$store.state.cart.indexOf(item)] === undefined) {
+        if (this.$store.state.cart.filter(_item => _item.id === item.id).length === 0) {
           this.$store.commit('ADD_ALERT', {
             type: 'success',
             title: this.$t('shop.cart.removed.title'),

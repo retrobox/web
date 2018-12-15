@@ -69,7 +69,7 @@ export const mutations = {
     }
   },
   CART_TOGGLE(state, payload) {
-    if (state.cart[state.cart.indexOf(payload)] === undefined) {
+    if (state.cart.filter(item => payload.id === item.id).length === 0) {
       state.cart.push(payload)
     } else {
       state.cart.splice(state.cart.indexOf(payload), 1)
