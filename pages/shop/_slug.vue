@@ -173,9 +173,12 @@
     },
     data() {
       return {
-        item: {},
+        item: {
+          show_version: false,
+          category: {}
+        },
         //url of image to show in modal
-        to_show: "",
+        to_show: '',
         selectedStorage: 8,
         //in gb
         storages: [
@@ -196,21 +199,14 @@
         not_main: [],
         //showed price
         price: 0,
-        original_price: 0
+        original_price: 0,
+        storage_prices: []
       }
     },
     watch: {
-      '$route.params'() {
-        this.fetchData()
-      },
       'selectedStorage'() {
-        this.price = this.original_price
-        if (this.selectedStorage === 16) {
-          this.price = this.price + 2.55
-        }
-        if (this.selectedStorage === 32) {
-          this.price = this.price + 3.55
-        }
+        this.price = this.original_price;
+        this.price = this.price + this.storage_prices[this.selectedStorage];
         this.price = parseFloat(this.price.toFixed(2))
       }
     },
@@ -260,6 +256,11 @@
         if (item == null) {
           return {item: null}
         } else {
+          let storage_prices = []
+          if (item.category.is_customizable) {
+            let response = await context.app.apitator.get('/shop/prices')
+            storage_prices = response.data.data.storage_prices;
+          }
           item.description_long = marked(item.description_long)
           let not_main = item.images.filter((item) => {
             return !item.is_main
@@ -274,7 +275,8 @@
             main: main,
             original_price: original_price,
             price: price,
-            not_main: not_main
+            not_main: not_main,
+            storage_prices: storage_prices
           }
         }
       }

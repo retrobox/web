@@ -25,9 +25,12 @@
           flex-wrap: wrap;
       }
     }
-
+    .final {
+      padding: 13px;
+    }
     .total {
-        padding-top: 1em;
+        //padding-top: 1em;
+        padding-bottom: 9px;
         border-bottom: 0;
     }
     .shop-cart-actions {
@@ -62,6 +65,7 @@
 }
 
 .shop-empty-container {
+  margin-top: 0.5em;
   background-color: #ecf0f1;
   border-radius: 10px;
   display: flex;

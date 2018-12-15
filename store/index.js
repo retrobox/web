@@ -16,6 +16,7 @@ export const state = () => ({
     enabled: false
   },
   cart: [],
+  shipping_total_price: 0,
   loginRedirectRoute: ""
 });
 
@@ -34,6 +35,9 @@ export const mutations = {
       document.getElementsByTagName('body')[0].className = "no-scroll"
       state.displayMobileNav = true
     }
+  },
+  SET_SHIPPING_TOTAL_PRICE(state, payload) {
+    state.shipping_total_price = payload
   },
   SET_LOADING(state, payload) {
     state.loading = payload
@@ -67,11 +71,10 @@ export const mutations = {
   CART_TOGGLE(state, payload) {
     if (state.cart[state.cart.indexOf(payload)] === undefined) {
       state.cart.push(payload)
-    }else{
+    } else {
       state.cart.splice(state.cart.indexOf(payload), 1)
     }
   }
 };
 
-export const actions = {
-};
+export const actions = {};
