@@ -154,11 +154,37 @@
       "pay": "Payer {{amount}}",
       "paypal": "Paypal",
       "card": "Carte bancaire",
+      "wait": "Chargement...",
       "success": {
         "title": "Félicitations !",
         "description": "Votre commande à bien été accepté, nous vous tenons au courant pour la suite !",
         "thanks": "Merci pour votre commande"
       }
+    },
+    "shipping_details": {
+      "title": "Vos détails de livraisons",
+      "form": {
+        "first_name": "Prénom",
+        "first_name_placeholder": "John",
+        "last_name": "Nom",
+        "last_name_placeholder": "Doe",
+        "address_first_line": "Adresse",
+        "address_first_line_placeholder": "",
+        "address_second_line": "Seconde ligne (optionelle)",
+        "address_second_line_placeholder": "",
+        "address_city": "Ville",
+        "address_city_placeholder": "Paris",
+        "address_postal_code": "Code postal",
+        "address_postal_code_placeholder": "27950",
+        "address_country": "Pays",
+        "address_country_placeholder": "France",
+        "error": {
+          "title": "Erreur",
+          "description": "Votre adresse n'est pas complète"
+        }
+      },
+      "next": "Suivant",
+      "previous": "Précédent"
     },
     "item": {
       "title": "Article",
@@ -172,7 +198,7 @@
           "blue": "Bleu",
           "purple": "Violet"
         },
-        "color": "Choisissez votre couleur",
+        "color": "Choisissez la couleur du circuit imprimé",
         "storage": "Taille du stockage interne"
       }
     },
@@ -185,6 +211,8 @@
       "remove": "Retirer",
       "total": "Total",
       "show": "Voir",
+      "sub_total": "Sous total",
+      "shipping_price": "Prix de livraison",
       "added": {
         "title": "Article ajouté!",
         "description": "Un article vient d'être ajouté à votre panier"
@@ -203,7 +231,6 @@
   },
   "contact-us": "Comment nous contacter ?",
   "blog": {
-    "our": "Notre blog",
     "title": "Blog",
     "posts": "Articles"
   },
@@ -213,5 +240,9 @@
       "title": "Erreur pendant la connexion à l'API",
       "description": "Erreur réseau : nous n'avons pas pu communiquer avec l'API"
     }
+  },
+  "cookie-law": {
+    "message": "Ce site web utilise des cookies pour fonctionner.",
+    "accept": "Compris !"
   }
 }
