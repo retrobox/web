@@ -66,7 +66,7 @@
               </li>
 
               <li>
-                <a href="https://blog.retrobox.tech">{{ $t('blog.our') }}</a>
+                <a href="https://blog.retrobox.tech">{{ $t('blog.title') }}</a>
               </li>
 
               <li>
