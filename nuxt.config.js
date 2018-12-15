@@ -56,7 +56,8 @@ module.exports = {
     {src: '~/plugins/transition.js', ssr: false},
     {src: '~/plugins/modal.js', ssr: false},
     {src: '~/plugins/scrollTo.js', ssr: false},
-    {src: '~/plugins/tooltip.js', ssr: false}
+    {src: '~/plugins/tooltip.js', ssr: false},
+    {src: '~/plugins/persistedState.js', ssr: false}
   ],
 
   /*
