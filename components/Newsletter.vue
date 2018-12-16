@@ -47,6 +47,7 @@
 
 <script>
 import Icon from "./Icon"
+import Axios from 'axios'
 export default {
   name: 'Newsletter',
   components: {Icon},
@@ -62,48 +63,48 @@ export default {
       setTimeout(() => {
         this.loading = false
       }, 1300)
-      // if (this.email != undefined && this.email != "") {
-      //   axios.post('https://mailchimper.retrobox.tech/subscribe', {
-      //     email: this.email
-      //   }).then((response) => {
-      //     this.$store.commit('ADD_ALERT', {
-      //       type: 'success',
-      //       title: this.$t('newsletter.success.title'),
-      //       description: this.$t('newsletter.success.description')
-      //     })
-      //     this.loading = false
-      //   }).catch((error) => {
-      //     if (error.response) {
-      //       if (error.response.data.error.slug) {
-      //         this.$store.commit('ADD_ALERT', {
-      //           type: 'error',
-      //           title:  this.$t('newsletter.error.title'),
-      //           description: this.$t('newsletter.error.member_exists')
-      //         })
-      //       }else{
-      //         this.$store.commit('ADD_ALERT', {
-      //           type: 'error',
-      //           title:  this.$t('newsletter.error.title'),
-      //           description: this.$t('newsletter.error.invalid_description')
-      //         })
-      //       }
-      //     } else {
-      //       this.$store.commit('ADD_ALERT', {
-      //         type: 'error',
-      //         title:  this.$t('newsletter.error.title'),
-      //         description: this.$t('newsletter.error.api_description')
-      //       })
-      //     }
-      //     this.loading = false
-      //   })
-      // }else{
-      //   this.$store.commit('ADD_ALERT', {
-      //     type: 'error',
-      //     title:  this.$t('newsletter.error.title'),
-      //     description: this.$t('newsletter.error.missing_description')
-      //   })
-      //   this.loading = false
-      // }
+      if (this.email !== undefined && this.email !== '') {
+        Axios.post('https://mailchimper.retrobox.tech/subscribe', {
+          email: this.email
+        }).then(() => {
+          this.$store.commit('ADD_ALERT', {
+            type: 'success',
+            title: this.$t('newsletter.success.title'),
+            description: this.$t('newsletter.success.description')
+          })
+          this.loading = false
+        }).catch(error => {
+          if (error.response) {
+            if (error.response.data.errors.title === 'Member Exists') {
+              this.$store.commit('ADD_ALERT', {
+                type: 'error',
+                title:  this.$t('newsletter.error.title'),
+                description: this.$t('newsletter.error.member_exists')
+              })
+            } else {
+              this.$store.commit('ADD_ALERT', {
+                type: 'error',
+                title:  this.$t('newsletter.error.title'),
+                description: this.$t('newsletter.error.invalid_description')
+              })
+            }
+          } else {
+            this.$store.commit('ADD_ALERT', {
+              type: 'error',
+              title:  this.$t('newsletter.error.title'),
+              description: this.$t('newsletter.error.api_description')
+            })
+          }
+          this.loading = false
+        })
+      }else{
+        this.$store.commit('ADD_ALERT', {
+          type: 'error',
+          title:  this.$t('newsletter.error.title'),
+          description: this.$t('newsletter.error.missing_description')
+        })
+        this.loading = false
+      }
     }
   }
 }
