@@ -94,6 +94,9 @@ export const mutations = {
     } else {
       state.cart.splice(state.cart.indexOf(payload), 1)
     }
+  },
+  EMPTY_CART (state) {
+    state.cart = []
   }
 };
 

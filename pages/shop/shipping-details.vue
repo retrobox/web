@@ -140,26 +140,30 @@
     data() {
       return {
         user: {
-          first_name: "",
-          last_name: "",
-          address_first_line: "",
-          address_second_line: "",
-          address_city: "",
-          address_postal_code: "",
-          address_country: ""
-        },
-        user_id: ""
+          first_name: '',
+          last_name: '',
+          address_first_line: '',
+          address_second_line: '',
+          address_city: '',
+          address_postal_code: '',
+          address_country: ''
+        }
       }
     },
     watch: {},
+    head () {
+      return {
+        title: this.$t('shop.shipping_details.title')
+      }
+    },
     created() {
-      // this.fetchDetails()
+      if (!this.$isServer) {
+        this.fetchDetails()
+      }
     },
     methods: {
       fetchDetails: function () {
-        let token = this.$cookie.get('user_token');
-        this.user_id = jwtDecode(token).user.id;
-        this.$apitator.query(
+        this.$apitator.graphQL(
           `query ($id: String!){
             getOneUser(id: $id) {
               id,
@@ -172,8 +176,9 @@
               address_city,
               address_country
             }
-           }`,
-          {id: this.user_id}
+          }`,
+          {id: this.$store.state.user.id},
+          {withAuth: true}
         ).then((response) => {
           this.user = response.data.data.getOneUser
         })
@@ -199,7 +204,7 @@
               updateUser(user: $user)
             }`, {
               user: {
-                id: this.user_id,
+                id: this.$store.state.user.id,
                 first_name: this.user.first_name,
                 last_name: this.user.last_name,
                 address_first_line: this.user.address_first_line,
@@ -208,9 +213,9 @@
                 address_postal_code: this.user.address_postal_code,
                 address_country: this.user.address_country
               }
-            }).then(() => {
+            }, {withAuth: true}).then(() => {
             //choose pay way
-            this.$router.push({name: 'ShopCheckout'})
+            this.$router.push('/shop/checkout')
           })
         } else {
           this.$store.commit('ADD_ALERT', {

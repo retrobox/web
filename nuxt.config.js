@@ -2,14 +2,12 @@ const marked = require('marked')
 const dotenv = require('dotenv')
 const renderer = new marked.Renderer();
 dotenv.config()
+const env = require('./env').default(process)
 
 module.exports = {
   mode: 'universal',
 
-  env: {
-    docsEndpoint: process.env.DOCS_ENDPOINT,
-    apiEndpoint: process.env.API_ENDPOINT
-  },
+  env: env,
 
   /*
   ** Headers of the page
@@ -51,12 +49,12 @@ module.exports = {
   plugins: [
     '~/plugins/i18n.js',
     '~/plugins/apitator.js',
-    '~/plugins/env.js',
     {src: '~/plugins/cookie.js', ssr: false},
     {src: '~/plugins/transition.js', ssr: false},
     {src: '~/plugins/modal.js', ssr: false},
     {src: '~/plugins/scrollTo.js', ssr: false},
     {src: '~/plugins/tooltip.js', ssr: false},
+    {src: '~/plugins/stripe.js', ssr: false},
     {src: '~/plugins/persistedState.js', ssr: false}
   ],
 
@@ -103,18 +101,6 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
-      }
-    }
-  },
-
-  render: {
-    bundleRenderer: {
-      directives: {
-        wtf: function (el, dir) {
-          console.log(el)
-          console.log(dir)
-          console.log('wtf')
-        }
       }
     }
   }
