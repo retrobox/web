@@ -79,7 +79,7 @@
           <div class="footer-links">
             <ul>
               <li>
-                <a @click="$router.push({name: 'ShopIndex'})">{{ $t('shop.title') }}</a>
+                <nuxt-link to="/shop">{{ $t('shop.title') }}</nuxt-link>
               </li>
 
               <li>
