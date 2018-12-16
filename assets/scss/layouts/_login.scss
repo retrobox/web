@@ -10,7 +10,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      display: flex;
       height: 100%;
       margin-top: 0;
     }
@@ -31,14 +30,18 @@
       padding-top: 2.5em;
     }
     .login-or-register {
-      display: flex;
-      flex-direction: column;
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
       a {
         margin-top: 1.5em;
         font-size: 1.2em !important;
         border-right: none !important;
         padding-right: 0 !important;
         padding-left: 0 !important;
+        justify-content: center;
         .icon {
           margin-right: 1em !important;
         }
