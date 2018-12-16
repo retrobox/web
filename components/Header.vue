@@ -105,7 +105,7 @@
           <span>{{ $t('actual_lang') }}</span>
         </div>
         <div class="account">
-          <!--<login />-->
+          <Login />
         </div>
       </div>
     </div>
@@ -184,9 +184,10 @@
 <script>
 import Icon from "./Icon"
 import Socials from "./Socials"
+import Login from "./Login"
 export default {
   name: 'Header',
-  components: {Socials, Icon},
+  components: {Login, Socials, Icon},
   data: () => ({
     localeLoading: false
   }),
