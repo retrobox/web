@@ -6,6 +6,12 @@ export const state = () => ({
     root: '',
     sub: ''
   },
+  isAuthenticated: false,
+  user: {
+    id: '',
+    username: '',
+    isAdmin: false
+  },
   isLoading: false,
   loadingType: 'normal',
   showRouterView: true,
@@ -20,12 +26,26 @@ export const state = () => ({
   loginRedirectRoute: ""
 });
 
+import jwtDecode from "jwt-decode"
+
 export const mutations = {
   SET_TITLE(state, payload) {
     state.title = payload
   },
   SET_LOCATION(state, payload) {
     state.location = payload
+  },
+  SET_AUTH (state, payload) {
+    state.isAuthenticated = payload
+  },
+  LOAD_USER (state, token) {
+    let user = jwtDecode(token).user
+    state.isAuthenticated = true
+    state.user = {
+      id: user.id,
+      username: user.username,
+      isAdmin: !!user.is_admin
+    }
   },
   TOGGLE_NAV(state) {
     if (state.displayMobileNav) {
