@@ -143,17 +143,11 @@
       </div>
     </section>
 
-    <div class="not-found">
-      <div class="not-found-content">
-        <div class="not-found-icon">
-          <Icon value="fab fa-youtube"/>
-        </div>
-        <div class="not-found-text">
-          <h2 class="not-found-title">{{ $t('coming-soon-video.title') }}</h2>
-          <p class="not-found-description">{{ $t('coming-soon-video.description') }}</p>
-        </div>
-      </div>
-    </div>
+    <Error
+      :title="$t('coming-soon-video.title')"
+      :description="$t('coming-soon-video.description')"
+      icon="fab fa-youtube"
+    />
 
     <section class="landing-section landing-startnow">
       <div class="landing-startnow-content container mx-auto">
@@ -221,9 +215,10 @@
 
 <script>
 import Icon from "../components/Icon"
+import Error from "../components/Error"
 
 export default {
-  components: {Icon},
+  components: {Error, Icon},
   head() {
     return {
       title: this.$t('home')

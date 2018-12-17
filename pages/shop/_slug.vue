@@ -1,17 +1,10 @@
 <template>
   <div>
     <div v-if="item == null">
-      <div class="not-found">
-        <div class="not-found-content">
-          <div class="not-found-icon">
-            <Icon value="fas fa-exclamation-circle" />
-          </div>
-          <div class="not-found-text">
-            <h2 class="not-found-title">{{ $t('not-found.title') }}</h2>
-            <p class="not-found-description">{{ $t('not-found.description') }}</p>
-          </div>
-        </div>
-      </div>
+      <Error
+        :title="$t('not-found.title')"
+        :description="$t('not-found.description')"
+      />
     </div>
     <div v-else>
       <div class="cover-title">
@@ -162,10 +155,11 @@
   import marked from "marked"
   import ShopHeader from "../../components/ShopHeader"
   import Icon from "../../components/Icon"
+  import Error from "../../components/Error"
 
   export default {
     name: 'ShopIndex',
-    components: {Icon, ShopHeader},
+    components: {Error, Icon, ShopHeader},
     head () {
       return {
         title: this.item == null ? 'Not found' : this.item.title
