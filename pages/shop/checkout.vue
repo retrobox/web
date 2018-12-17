@@ -120,10 +120,12 @@
           email: token.email,
           items: this.$store.state.cart
         }, { withAuth: true }).then(() => {
+          this.way = 'stripe';
           console.log("stripe: success");
           this.$store.commit('EMPTY_CART')
           this.$router.push('/shop/checkout-success')
         }).catch((error) => {
+          this.way = 'stripe';
           console.log(error);
           console.log("stripe: error");
         })
