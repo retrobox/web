@@ -83,7 +83,7 @@
               </li>
 
               <li>
-                <nuxt-link to="/contact-us">{{ $t('contact-us') }}</nuxt-link>
+                <nuxt-link to="/contact-us">{{ $t('contact-us.title') }}</nuxt-link>
               </li>
 
               <li>

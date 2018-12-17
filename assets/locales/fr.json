@@ -229,7 +229,9 @@
       "empty": "Aucun articles disponibles"
     }
   },
-  "contact-us": "Comment nous contacter ?",
+  "contact-us": {
+    "title": "Comment nous contacter ?"
+  },
   "blog": {
     "title": "Blog",
     "posts": "Articles"

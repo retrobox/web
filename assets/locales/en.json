@@ -231,7 +231,9 @@
       "empty": "No items available"
     }
   },
-  "contact-us": "How to contact us ?",
+  "contact-us": {
+    "title": "How to contact us ?"
+  },
   "blog": {
     "title": "Blog",
     "posts": "Articles"

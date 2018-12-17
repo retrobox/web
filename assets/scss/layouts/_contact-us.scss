@@ -1,0 +1,24 @@
+.contact-us-container-container {
+  width: 100%;
+}
+
+.contact-us-container {
+  display: grid;
+  grid-template-columns: 49% 49%;
+  grid-column-gap: 1em;
+  width: 100%;
+  .map {
+    width: 100%;
+    iframe {
+      width: 100%;
+      height: 30em;
+    }
+    margin-top: 2em;
+  }
+}
+
+@media (max-width: 700px) {
+  .contact-us-container {
+    display: block;
+  }
+}
