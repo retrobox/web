@@ -64,7 +64,7 @@ export default {
         this.loading = false
       }, 1300)
       if (this.email !== undefined && this.email !== '') {
-        Axios.post('https://mailchimper.retrobox.tech/subscribe', {
+        Axios.post(this.$env.NEWSLETTER_ENDPOINT + '/subscribe', {
           email: this.email
         }).then(() => {
           this.$store.commit('ADD_ALERT', {

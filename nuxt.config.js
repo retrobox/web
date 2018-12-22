@@ -1,5 +1,7 @@
-const dotenv = require('dotenv')
-dotenv.config()
+if (process.env.NODE_ENV !== 'production') {
+  const dotenv = require('dotenv')
+  dotenv.config()
+}
 
 const marked = require('marked')
 const renderer = new marked.Renderer();
@@ -7,24 +9,15 @@ const renderer = new marked.Renderer();
 module.exports = {
   mode: 'universal',
 
-  env: {
-    docsEndpoint: process.env.DOCS_ENDPOINT,
-    apiEndpoint: process.env.API_ENDPOINT,
-    adminDashboardEndpoint: process.env.ADMIN_DASHBOARD_ENDPOINT,
-    userDashboardEndpoint: process.env.USER_DASHBOARD_ENDPOINT,
-    cookieDomain: process.env.COOKIE_DOMAIN,
-    stripePublic: process.env.STRIPE_PUBLIC
-  },
-
   /*
   ** Headers of the page
   */
   head: {
     title: "Retrobox",
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: "Retrobox" }
+      {charset: 'utf-8'},
+      {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+      {hid: 'description', name: 'description', content: "Retrobox"}
     ],
     link: [
       {rel: 'icon', type: 'image/png', href: '/favicon.png'},
@@ -49,14 +42,14 @@ module.exports = {
     middleware: 'i18n',
     scrollBehavior: function () {
       console.log('scroll behaviour debug')
-      return { x: 0, y: 0 }
+      return {x: 0, y: 0}
     }
   },
 
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#000' },
+  loading: {color: '#000'},
 
   /*
   ** Global CSS
@@ -69,7 +62,6 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~/plugins/env.js',
     '~/plugins/i18n.js',
     '~/plugins/apitator.js',
     {src: '~/plugins/cookie.js', ssr: false},
@@ -86,7 +78,18 @@ module.exports = {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    ['nuxt-env', {
+      keys: [
+        'API_ENDPOINT',
+        'DOCS_ENDPOINT',
+        'NEWSLETTER_ENDPOINT',
+        'USER_DASHBOARD_ENDPOINT',
+        'ADMIN_DASHBOARD_ENDPOINT',
+        'COOKIE_DOMAIN',
+        'STRIPE_PUBLIC'
+      ]
+    }]
   ],
   /*
   ** Axios module configuration

@@ -114,7 +114,7 @@
       // this.fetchData()
     },
     async asyncData (context) {
-      let response = await context.$axios.get(context.env.docsEndpoint + '/config.json')
+      let response = await context.$axios.get(context.app.$env.DOCS_ENDPOINT + '/config.json')
       let locale = response.data.locales.filter((item) => {
         return item.slug === context.app.i18n.locale
       })[0]
@@ -129,7 +129,7 @@
         return item.slug === context.params.slug
       })[0]
       let actual_index = items.indexOf(actual_item)
-      response = await context.$axios.get(context.env.docsEndpoint + '/content/' + context.app.i18n.locale + '/' + context.params.slug + '.md');
+      response = await context.$axios.get(context.app.$env.DOCS_ENDPOINT + '/content/' + context.app.i18n.locale + '/' + context.params.slug + '.md');
       return {
         content: marked(response.data),
         loading: false,

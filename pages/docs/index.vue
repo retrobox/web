@@ -89,7 +89,7 @@
       }
     },
     async asyncData (context) {
-      let response = await context.$axios.get(context.env.docsEndpoint + '/config.json')
+      let response = await context.$axios.get(context.app.$env.DOCS_ENDPOINT + '/config.json')
       let locale = response.data.locales.filter((item) => {
         return item.slug === context.app.i18n.locale
       })[0]
@@ -98,7 +98,7 @@
         return item
       })
       let slug = locale.home.slug
-      response = await context.$axios.get(context.env.docsEndpoint + '/content/' + context.app.i18n.locale + '/' + slug + '.md');
+      response = await context.$axios.get(context.app.$env.DOCS_ENDPOINT + '/content/' + context.app.i18n.locale + '/' + slug + '.md');
       return {
         content: marked(response.data),
         loading: false,

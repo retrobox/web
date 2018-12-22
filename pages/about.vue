@@ -9,10 +9,8 @@
       <div class="article pt-4">
         <div class="content">
           <div v-html="content">
-
           </div>
           <h2 class="dividing">{{ $t('our-team-members') }}</h2>
-
           <div class="team-mosaic">
             <div
               v-for="member in members"
