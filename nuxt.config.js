@@ -1,7 +1,5 @@
-if (process.env !== 'NODE_ENV') {
-  const dotenv = require('dotenv')
-  dotenv.config()
-}
+const dotenv = require('dotenv')
+dotenv.config()
 
 const marked = require('marked')
 const renderer = new marked.Renderer();
