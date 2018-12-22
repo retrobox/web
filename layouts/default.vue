@@ -68,6 +68,7 @@
       }
     },
     mounted () {
+      console.log(this.$env)
       // load user
       if (!this.$isServer) {
         if (this.$cookie.get('user_token') !== null) {

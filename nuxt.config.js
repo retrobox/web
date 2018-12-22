@@ -1,13 +1,22 @@
+if (process.env !== 'NODE_ENV') {
+  const dotenv = require('dotenv')
+  dotenv.config()
+}
+
 const marked = require('marked')
-const dotenv = require('dotenv')
 const renderer = new marked.Renderer();
-dotenv.config()
-const env = require('./env').default(process)
 
 module.exports = {
   mode: 'universal',
 
-  env: env,
+  env: {
+    docsEndpoint: process.env.DOCS_ENDPOINT,
+    apiEndpoint: process.env.API_ENDPOINT,
+    adminDashboardEndpoint: process.env.ADMIN_DASHBOARD_ENDPOINT,
+    userDashboardEndpoint: process.env.USER_DASHBOARD_ENDPOINT,
+    cookieDomain: process.env.COOKIE_DOMAIN,
+    stripePublic: process.env.STRIPE_PUBLIC
+  },
 
   /*
   ** Headers of the page
@@ -62,6 +71,7 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/env.js',
     '~/plugins/i18n.js',
     '~/plugins/apitator.js',
     {src: '~/plugins/cookie.js', ssr: false},
@@ -78,8 +88,7 @@ module.exports = {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios',
-    ['@nuxtjs/dotenv', { systemvars: true }]
+    '@nuxtjs/axios'
   ],
   /*
   ** Axios module configuration
