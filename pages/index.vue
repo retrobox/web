@@ -15,7 +15,7 @@
           <a
             href="#"
             class="landing-main-button-shop button">
-            <Icon value="fas fa-shopping-cart" />
+            <Icon value="fas fa-shopping-cart"/>
             {{ $t('buy') }}
           </a>
         </div>
@@ -47,7 +47,7 @@
           <div class="landing-column">
             <div class="landing-column-icon">
               <div class="type-game">
-                <Icon value="fas fa-gamepad" />
+                <Icon value="fas fa-gamepad"/>
               </div>
             </div>
             <div class="landing-column-content max-w-sm rounded overflow-hidden shadow-lg">
@@ -63,7 +63,7 @@
           <div class="landing-column">
             <div class="landing-column-icon">
               <div class="type-custom">
-                <Icon value="fas fa-screwdriver" />
+                <Icon value="fas fa-screwdriver"/>
               </div>
             </div>
             <div class="landing-column-content max-w-sm rounded overflow-hidden shadow-lg">
@@ -78,7 +78,7 @@
           <div class="landing-column">
             <div class="landing-column-icon">
               <div class="type-connected">
-                <Icon value="fas fa-tachometer-alt" />
+                <Icon value="fas fa-tachometer-alt"/>
               </div>
             </div>
             <div class="landing-column-content max-w-sm rounded overflow-hidden shadow-lg">
@@ -94,7 +94,7 @@
           <div class="landing-column">
             <div class="landing-column-icon">
               <div class="type-switch">
-                <Icon value="fas fa-tv" />
+                <Icon value="fas fa-tv"/>
               </div>
             </div>
             <div class="landing-column-content max-w-sm rounded overflow-hidden shadow-lg">
@@ -110,7 +110,7 @@
           <div class="landing-column">
             <div class="landing-column-icon">
               <div class="type-easy">
-                <Icon value="fas fa-gamepad" />
+                <Icon value="fas fa-gamepad"/>
               </div>
             </div>
             <div class="landing-column-content max-w-sm rounded overflow-hidden shadow-lg">
@@ -126,7 +126,7 @@
           <div class="landing-column">
             <div class="landing-column-icon">
               <div class="type-opensource">
-                <Icon value="fab fa-osi" />
+                <Icon value="fab fa-osi"/>
               </div>
             </div>
             <div class="landing-column-content max-w-sm rounded overflow-hidden shadow-lg">
@@ -156,7 +156,7 @@
           <div class="landing-column type-kited">
             <div class="landing-column-icon">
               <div>
-                <Icon value="fas fa-wrench" />
+                <Icon value="fas fa-wrench"/>
               </div>
             </div>
             <div class="landing-column-content max-w-sm rounded overflow-hidden shadow-lg">
@@ -171,19 +171,19 @@
                 <span
                   class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">EUR 61.99</span>
 
-                <nuxt-link
+                <LinkTo
                   class="button bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded-full"
                   to="/shop/retrobox-kit">
                   <Icon value="fas fa-shopping-cart"/>
                   {{ $t('buy') }}
-                </nuxt-link>
+                </LinkTo>
               </div>
             </div>
           </div>
           <div class="landing-column type-already">
             <div class="landing-column-icon">
               <div>
-                <Icon value="fas fa-box-open" />
+                <Icon value="fas fa-box-open"/>
               </div>
             </div>
             <div class="landing-column-content max-w-sm rounded overflow-hidden shadow-lg">
@@ -198,12 +198,12 @@
                 <span
                   class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">EUR 70.99</span>
 
-                <nuxt-link
+                <LinkTo
                   class="button bg-transparent hover:bg-blue text-blue font-semibold hover:text-white py-2 px-4 border border-blue hover:border-transparent rounded-full"
                   to="/shop/retrobox-non-kit">
                   <Icon value="fas fa-shopping-cart"/>
                   {{ $t('buy') }}
-                </nuxt-link>
+                </LinkTo>
               </div>
             </div>
           </div>
@@ -214,20 +214,21 @@
 </template>
 
 <script>
-import Icon from "../components/Icon"
-import Error from "../components/Error"
+  import Icon from "../components/Icon"
+  import Error from "../components/Error"
+  import LinkTo from "../components/LinkTo"
 
-export default {
-  components: {Error, Icon},
-  head() {
-    return {
-      title: this.$t('home')
-    }
-  },
-  methods: {
-    scrollToDescription: function () {
-      this.$scrollTo('#go')
+  export default {
+    components: {LinkTo, Error, Icon},
+    head() {
+      return {
+        title: this.$t('home')
+      }
+    },
+    methods: {
+      scrollToDescription: function () {
+        this.$scrollTo('#go')
+      }
     }
   }
-}
 </script>

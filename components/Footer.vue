@@ -52,25 +52,31 @@
       <div class="flex footer-content container mx-auto">
         <div class="w-1/3">
           <div class="footer-logo">
-            <nuxt-link to="/">
+            <LinkTo>
               <img
                 src="../assets/images/footer.png" />
-            </nuxt-link>
+            </LinkTo>
           </div>
         </div>
         <div class="w-1/3">
           <div class="footer-links">
             <ul>
               <li>
-                <nuxt-link to="/about">{{ $t('about') }}</nuxt-link>
+                <LinkTo to="/about">
+                  {{ $t('about') }}
+                </LinkTo>
               </li>
 
               <li>
-                <a href="https://blog.retrobox.tech">{{ $t('blog.title') }}</a>
+                <a href="https://blog.retrobox.tech">
+                  {{ $t('blog.title') }}
+                </a>
               </li>
 
               <li>
-                <nuxt-link to="/terms">{{ $t('terms-of-use') }}</nuxt-link>
+                <LinkTo to="/terms">
+                  {{ $t('terms-of-use') }}
+                </LinkTo>
               </li>
             </ul>
           </div>
@@ -79,15 +85,21 @@
           <div class="footer-links">
             <ul>
               <li>
-                <nuxt-link to="/shop">{{ $t('shop.title') }}</nuxt-link>
+                <LinkTo to="/shop">
+                  {{ $t('shop.title') }}
+                </LinkTo>
               </li>
 
               <li>
-                <nuxt-link to="/contact-us">{{ $t('contact-us.title') }}</nuxt-link>
+                <LinkTo to="/contact-us">
+                  {{ $t('contact-us.title') }}
+                </LinkTo>
               </li>
 
               <li>
-                <nuxt-link to="/terms-of-sale">{{ $t('terms-of-sale') }}</nuxt-link>
+                <LinkTo to="/terms-of-sale">
+                  {{ $t('terms-of-sale') }}
+                </LinkTo>
               </li>
             </ul>
           </div>
@@ -120,9 +132,10 @@ import Icon from "./Icon"
 import Socials from "./Socials"
 import Newsletter from "./Newsletter"
 import Tooltip from "./Tooltip"
+import LinkTo from "./LinkTo"
 export default {
   name: 'Footer',
-  components: {Tooltip, Newsletter, Socials, Icon},
+  components: {LinkTo, Tooltip, Newsletter, Socials, Icon},
   data: () => ({}),
   methods: {}
 }
