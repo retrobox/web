@@ -12,12 +12,12 @@
             @click="scrollToDescription()">
             {{ $t('landing.go') }}
           </a>
-          <a
-            href="#"
+          <nuxt-link
+            to="/shop/retrobox-kit"
             class="landing-main-button-shop button">
             <Icon value="fas fa-shopping-cart"/>
             {{ $t('buy') }}
-          </a>
+          </nuxt-link>
         </div>
       </div>
     </div>
