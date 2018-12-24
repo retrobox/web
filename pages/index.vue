@@ -38,6 +38,11 @@
       </div>
     </section>
 
+    <section class="landing-divider-background-container">
+      <div class="landing-divider-background-image"></div>
+      <div class="landing-divider-background-filter"></div>
+    </section>
+
     <section class="landing-section landing-advantages landing-section-no-border">
       <div class="landing-advantages-content">
         <h2 class="landing-advantages-title">

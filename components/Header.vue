@@ -158,10 +158,10 @@
         </nav>
       </div>
     </div>
-    <div class="header-breadcrumb">
+    <!--<div class="header-breadcrumb">
       <div class="container mx-auto header-breadcrumb-flex">
         <div class="breadcrumb-location desktop">
-          <!--{{ $t('breadcrumb.title') }}
+          &lt;!&ndash;{{ $t('breadcrumb.title') }}
           <ul>
             <li class="item">{{ $store.state.location.root }}</li>
             <li
@@ -172,13 +172,13 @@
               class="item">
               {{ $store.state.location.sub }}
             </li>
-          </ul>-->
+          </ul>&ndash;&gt;
         </div>
         <div class="breadcrumb-socials">
           <Socials />
         </div>
       </div>
-    </div>
+    </div>-->
   </div>
 </template>
 

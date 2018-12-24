@@ -25,14 +25,24 @@ $landing-main-section-height: 80vh;
 .landing-advantages-content {
   width: 90%;
 }
+
+.landing-about {
+  margin-top: -5.5em;
+  margin-bottom: -5.5em;
+}
+
 .landing-about .landing-about-content {
   width: 90%;
   grid-template-columns: 100%;
-    grid-row-gap: 2em;
-    .landing-about-pic img {
-      width: 100%;
-      height: auto;
-    }
+  grid-row-gap: 2em;
+  .landing-about-pic img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.landing-advantages {
+  margin-top: -6em;
 }
 
 .landing-advantages .landing-advantages-content {

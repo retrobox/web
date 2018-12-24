@@ -1,4 +1,4 @@
-$landing-main-section-height: 70vh;
+$landing-main-section-height: 78vh;
 $landing-main-section-opacity: 0.8;
 
 .landing-main {
@@ -91,6 +91,11 @@ $landing-main-section-opacity: 0.8;
 Landing about
 **/
 .landing-about {
+  clip-path: polygon(100% 0%, 0px 85px, 0px 100%, 100% 90%);
+  margin-top: -4.5em;
+  margin-bottom: -4.5em;
+  padding-top: 4em;
+  padding-bottom: 4em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,6 +124,21 @@ Landing about
         width: 100%;
       }
     }
+  }
+}
+
+$landing-divider-height: 30vh;
+
+.landing-divider-background-container {
+  .landing-divider-background-image {
+    background-size: cover;
+    height: $landing-divider-height;
+    background-image: url(https://i.imgur.com/sb5ORZw.jpg)
+  }
+  .landing-divider-background-filter {
+    height: $landing-divider-height;
+    margin-top: -$landing-divider-height;
+    background-color: rgba(52, 73, 94, $landing-main-section-opacity);
   }
 }
 
@@ -193,6 +213,10 @@ Landing columns
 Landing advantages
 **/
 .landing-advantages {
+  clip-path: polygon(100% 0%, 0px 85px, 0px 100%, 100.00% 100%);
+  padding-top: 4em;
+  margin-top: -6em;
+  margin-bottom: 0;
   display: flex;
   justify-content: center;
   box-shadow: 1px 1px 8px #000000;
