@@ -91,10 +91,10 @@ $landing-main-section-opacity: 0.8;
 Landing about
 **/
 .landing-about {
-  clip-path: polygon(100% 0%, 0px 85px, 0px 100%, 100% 90%);
-  margin-top: -4.5em;
+  clip-path: polygon(100% 0%, 0px 0px, 0px 100%, 100% 90%);
+  margin-top: -.5em;
   margin-bottom: -4.5em;
-  padding-top: 4em;
+  padding-top: 2em;
   padding-bottom: 4em;
   display: flex;
   justify-content: center;
