@@ -17,7 +17,23 @@ module.exports = {
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-      {hid: 'description', name: 'description', content: "Retrobox"}
+      {hid: 'description', name: 'description', content: "Retrobox"},
+      {name: 'msapplication-TileColor', content: '#FF4C4C'},
+      {name: 'msapplication-TileImage', content: '/ms-icon-144x144.png'},
+      {name: 'theme-color', content: '#FF4C4C'},
+      {name: 'author', content: 'Thingmill'},
+      {name: 'description', content: 'RetroBox is the first open-source console, based on a Raspberry-Pi Zero'},
+      {property: 'og:description', content: 'RetroBox is the first open-source console, based on a Raspberry-Pi Zero'},
+      {property: 'og:title', content: 'RetroBox - A diy open-source console'},
+      {property: 'og:type', content: 'website'},
+      {property: 'og:url', content: 'https://www.retrobox.tech/'},
+      {property: 'og:image', content: 'http://static.retrobox.tech/img/logo/logo.png'},
+      {name: 'keywords', content: 'retrobox, retro, box, thingmill, valentin derouet, etienne chevrollier, matthieu bessat, raspberry pi zero, diy, kit, rpi, rétrobox'},
+      {name: 'twitter:card', content: 'summary'},
+      {name: 'twitter:title', content: 'RetroBox - A diy open-source console'},
+      {name: 'twitter:url', content: 'https://www.retrobox.tech/'},
+      {name: 'twitter:description', content: 'RetroBox is the first open-source console, based on a Raspberry-Pi Zero.'},
+      {name: 'twitter:image', content: 'http://static.retrobox.tech/img/logo/logo.png'}
     ],
     link: [
       {rel: 'icon', type: 'image/png', href: '/favicon.png'},
@@ -39,7 +55,7 @@ module.exports = {
   },
 
   router: {
-    middleware: 'i18n',
+    middleware: ['i18n', 'auth'],
     scrollBehavior: function () {
       console.log('scroll behaviour debug')
       return {x: 0, y: 0}
