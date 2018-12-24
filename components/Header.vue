@@ -36,7 +36,7 @@
                   </a>
                 </li>
                 <li>
-                  <a @click="mobileNavigate('/shop')">
+                  <a @click="mobileNavigate('/shop/retrobox-kit')">
                     {{ $t('buy') }}
                   </a>
                 </li>
@@ -148,11 +148,12 @@
             <nuxt-link to="/shop">{{ $t('shop.title') }}</nuxt-link>
           </div>
           <div class="nav-item with-button">
-            <a
+            <nuxt-link
+              to="/shop/retrobox-kit"
               class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded button">
               <Icon value="fas fa-shopping-cart" />
               {{ $t('buy') }}
-            </a>
+            </nuxt-link>
           </div>
         </nav>
       </div>
