@@ -141,7 +141,7 @@
           <div class="nav-item with-link">
             <nuxt-link to="/docs">{{ $t('docs') }}</nuxt-link>
           </div>
-          <div class="nav-item with-link">
+          <div class="nav-item with-link community-link">
             <nuxt-link to="/community">{{ $t('community.title') }}</nuxt-link>
           </div>
           <div class="nav-item with-link">
