@@ -119,7 +119,7 @@
       },
       logout: function () {
         this.$modal.hide('loginOrRegister');
-        this.$cookie.delete('user_token', {domain: process.env.COOKIE_DOMAIN});
+        this.$cookie.delete('user_token', {domain: this.$env.COOKIE_DOMAIN});
         this.is_logout = true;
         this.$store.commit('SET_AUTH', false)
         //close and refresh the state
