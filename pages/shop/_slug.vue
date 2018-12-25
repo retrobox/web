@@ -13,7 +13,7 @@
         </div>
       </div>
       <div class="container mx-auto">
-        <ShopHeader />
+        <ShopHeader/>
         <div class="shop-item-container">
           <div class="buy">
             <ul
@@ -30,7 +30,8 @@
                 <nuxt-link
                   :class="{'text-blue-dark font-semibold border-l border-t border-r rounded-t': link.id === item.id }"
                   :to="'/shop/' + link.slug"
-                  class="bg-white inline-block py-2 px-4 text-blue hover:text-blue-darker">{{ link.version }}</nuxt-link>
+                  class="bg-white inline-block py-2 px-4 text-blue hover:text-blue-darker">{{ link.version }}
+                </nuxt-link>
               </li>
             </ul>
             <div class="buy-content">
@@ -160,9 +161,12 @@
   export default {
     name: 'ShopIndex',
     components: {Error, Icon, ShopHeader},
-    head () {
+    head() {
       return {
-        title: this.item == null ? 'Not found' : this.item.title
+        title: this.item == null ? 'Not found' : this.item.title,
+        meta: [
+          {property: 'og:title', content: this.item == null ? 'Not found' : this.item.title}
+        ]
       }
     },
     data() {
@@ -239,7 +243,7 @@
         }
       }
     },
-    async asyncData (context) {
+    async asyncData(context) {
       let response = await context.app.apitator.get(`/shop/${context.app.i18n.locale}/item/${context.params.slug}`).catch(() => {
         return false
       })

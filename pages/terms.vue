@@ -20,7 +20,10 @@
 export default {
   head() {
     return {
-      title: this.$t('terms-of-use')
+      title: this.$t('terms-of-use'),
+      meta: [
+        {property: 'og:title', content: this.$t('terms-of-use')}
+      ]
     }
   },
   data () {

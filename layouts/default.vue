@@ -56,6 +56,16 @@
     head () {
       return {
         titleTemplate: '%s - Retrobox',
+        meta: [
+          {name: 'description', content: this.$t('description')},
+          {property: 'og:description', content: this.$t('description')},
+          {property: 'og:locale', content: this.$i18n.locale},
+          {property: 'og:locale:alternate', content: 'fr'},
+          {property: 'og:locale:alternate', content: 'en'}
+        ],
+        htmlAttrs: {
+          lang: this.$i18n.locale
+        }
       }
     },
     watch: {
@@ -68,7 +78,6 @@
       }
     },
     mounted () {
-      console.log(this.$env)
       // load user
       if (!this.$isServer) {
         if (this.$cookie.get('user_token') !== null) {

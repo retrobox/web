@@ -14,6 +14,8 @@
   "close": "Close",
   "previous": "Previous",
   "next": "Next",
+  "title": "Retrobox, a diy open-source console",
+  "description": "The RetroBox is an open source DIY console created by young people, replay the games of your childhood!",
   "partnership": {
     "lyceealain": {
       "title": "In partner ship with Lycée Alain"

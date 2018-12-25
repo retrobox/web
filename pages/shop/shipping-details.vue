@@ -163,6 +163,7 @@
     },
     methods: {
       fetchDetails: function () {
+        console.log(this.$apitator.getAuthorizationToken())
         this.$apitator.graphQL(
           `query ($id: String!){
             getOneUser(id: $id) {

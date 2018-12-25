@@ -27,7 +27,10 @@
   export default {
     head() {
       return {
-        title: this.$t('community.page.title')
+        title: this.$t('community.page.title'),
+        meta: [
+          {property: 'og:title', content: this.$t('community.page.title')}
+        ]
       }
     }
   }

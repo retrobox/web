@@ -227,7 +227,11 @@
     components: {LinkTo, Error, Icon},
     head() {
       return {
-        title: this.$t('home')
+        titleTemplate: '%s',
+        title: this.$t('title'),
+        meta: [
+          {property: 'og:title', content: this.$t('title')}
+        ]
       }
     },
     methods: {

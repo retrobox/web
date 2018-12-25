@@ -147,11 +147,9 @@
       checkout: function () {
         if (this.$cookie.get('user_token') == null) {
           //call login function
-          let url = this.$router.resolve({
-            name: 'ShopShippingDetails'
-          }).href;
-          this.$store.state.login_redirect_route = window.location.origin + url;
-          this.$modal.show('login_or_register')
+          let url = this.$router.resolve('/shop/shipping-details').href
+          this.$store.commit('SET_LOGIN_REDIRECT_ROUTE', window.location.origin + url)
+          this.$modal.show('loginOrRegister')
         } else {
           this.$router.push('/shop/shipping-details')
         }

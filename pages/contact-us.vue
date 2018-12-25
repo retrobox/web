@@ -31,7 +31,10 @@
     name: 'ContactUs',
     head () {
       return {
-        title: this.$t('contact-us.title')
+        title: this.$t('contact-us.title'),
+        meta: [
+          {property: 'og:title', content: this.$t('contact-us.title')}
+        ]
       }
     },
     data () {

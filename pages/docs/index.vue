@@ -73,7 +73,10 @@
     components: {Icon},
     head () {
       return {
-        title: this.$t('docs')
+        title: this.$t('docs'),
+        meta: [
+          {property: 'og:title', content: this.$t('docs')}
+        ]
       }
     },
     data() {

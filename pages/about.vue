@@ -34,7 +34,10 @@
   export default {
     head() {
       return {
-        title: this.$t('about')
+        title: this.$t('about'),
+        meta: [
+          {property: 'og:title', content: this.$t('about')}
+        ]
       }
     },
     data () {

@@ -23,7 +23,7 @@ export const state = () => ({
   },
   cart: [],
   shipping_total_price: 0,
-  loginRedirectRoute: ""
+  loginRedirectRoute: ''
 });
 
 import jwtDecode from "jwt-decode"
@@ -97,6 +97,9 @@ export const mutations = {
   },
   EMPTY_CART (state) {
     state.cart = []
+  },
+  SET_LOGIN_REDIRECT_ROUTE (state, payload) {
+    state.loginRedirectRoute = payload
   }
 };
 

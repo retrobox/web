@@ -12,6 +12,8 @@
   "docs": "Documentation",
   "previous": "Précédent",
   "next": "Suivant",
+  "title": "Retrobox, une console diy open-source",
+  "description": "La RetroBox est une console DIY open source créée par des jeunes, rejouez aux jeux de votre enfance !",
   "partnership": {
     "lyceealain": {
       "title": "En partenariat avec le Lycée Alain"
