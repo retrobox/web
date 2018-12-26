@@ -49,6 +49,9 @@ module.exports = {
       {rel: 'icon', type: 'image/png', sizes: '96x96', href: '/android-icon-96x96.png'},
       {rel: 'icon', type: 'image/png', sizes: '192x192', href: '/android-icon-192x192.png'},
       {rel: 'manifest', href: '/manifest.json'}
+    ],
+    script: [
+      {src: '/analytics.js'}
     ]
   },
 
