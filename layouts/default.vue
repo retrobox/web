@@ -1,23 +1,27 @@
 <template>
   <div>
     <Header />
-    <transition name="main-transition">
-      <div
-        v-if="$store.state.isLoading"
-        :key="$store.state.isLoading"
-        class="loading-container">
-        <div class="loading">
-          <Icon
-            value="fas fa-sync"
-            spin />
+    <div class="content-container">
+      <transition
+        name="main-transition">
+        <div
+          v-if="$store.state.isLoading"
+          :key="$store.state.isLoading"
+          class="loading-container">
+          <div class="loading">
+            <Icon
+              value="fas fa-sync"
+              spin />
+          </div>
         </div>
-      </div>
-      <div
-        v-if="$store.state.isLoading === false"
-        :key="$store.state.isLoading">
-        <nuxt/>
-      </div>
-    </transition>
+        <div
+          v-if="$store.state.isLoading === false"
+          :key="$store.state.isLoading">
+          <nuxt/>
+        </div>
+      </transition>
+    </div>
+    <div class="content-container-bottom"></div>
     <Footer />
     <no-ssr>
       <modal
