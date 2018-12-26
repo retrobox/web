@@ -53,12 +53,12 @@
                     <p class="shop-card-description">{{ item.description }}</p>
                     <div class="shop-card-footer">
                       <span class="price">€ {{ item.price }}</span>
-                      <nuxt-link
+                      <LinkTo
                         :to="'/shop/' + item.slug"
                         class="button bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded-full">
                         <Icon value="fas fa-shopping-cart"/>
                         {{ $t('buy') }}
-                      </nuxt-link>
+                      </LinkTo>
                     </div>
                   </div>
                 </div>
@@ -74,9 +74,10 @@
 <script>
   import Icon from "../../components/Icon"
   import ShopHeader from "../../components/ShopHeader"
+  import LinkTo from "../../components/LinkTo"
 
   export default {
-    components: {ShopHeader, Icon},
+    components: {LinkTo, ShopHeader, Icon},
     head() {
       return {
         title: this.$t('shop.title')
