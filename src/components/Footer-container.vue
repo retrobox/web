@@ -77,7 +77,7 @@
 
                 <div class="footer-inline-links">
                     <ul>
-                        <li class="copyright"><a href="#">© Copyright 2018 Thingmill</a></li>
+                        <li class="copyright"><a href="#">© Copyright 2019 Thingmill</a></li>
                         <li><a @click="$router.push({name: 'Legals'})">{{$t('legals')}}</a></li>
                     </ul>
                 </div>
