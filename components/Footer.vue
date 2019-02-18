@@ -111,7 +111,7 @@
           <div class="footer-inline-links">
             <ul>
               <li class="copyright">
-                <a href="#">© Copyright 2018 Thingmill</a>
+                <a href="#">© Copyright 2019 Thingmill</a>
               </li>
               <li>
                 <nuxt-link to="/legals">{{ $t('legals') }}</nuxt-link>
