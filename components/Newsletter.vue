@@ -47,7 +47,6 @@
 
 <script>
 import Icon from "./Icon"
-import Axios from 'axios'
 export default {
   name: 'Newsletter',
   components: {Icon},
@@ -64,7 +63,7 @@ export default {
         this.loading = false
       }, 1300)
       if (this.email !== undefined && this.email !== '') {
-        Axios.post(this.$env.NEWSLETTER_ENDPOINT + '/subscribe', {
+        this.$apitator.post('/newsletter/subscribe', {
           email: this.email
         }).then(() => {
           this.$store.commit('ADD_ALERT', {

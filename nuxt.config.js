@@ -99,7 +99,6 @@ module.exports = {
       keys: [
         'API_ENDPOINT',
         'DOCS_ENDPOINT',
-        'NEWSLETTER_ENDPOINT',
         'USER_DASHBOARD_ENDPOINT',
         'ADMIN_DASHBOARD_ENDPOINT',
         'COOKIE_DOMAIN',
