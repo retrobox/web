@@ -26,8 +26,8 @@
                   <a @click="mobileNavigate('/docs')">{{ $t('docs') }}</a>
                 </li>
                 <li>
-                  <a @click="mobileNavigate('/community')">
-                    {{ $t('community.title') }}
+                  <a @click="mobileNavigate('/download')">
+                    {{ $t('download.title') }}
                   </a>
                 </li>
                 <li>
@@ -141,8 +141,8 @@
           <div class="nav-item with-link">
             <nuxt-link to="/docs">{{ $t('docs') }}</nuxt-link>
           </div>
-          <div class="nav-item with-link community-link">
-            <nuxt-link to="/community">{{ $t('community.title') }}</nuxt-link>
+          <div class="nav-item with-link download-link">
+            <nuxt-link to="/download">{{ $t('download.title') }}</nuxt-link>
           </div>
           <div class="nav-item with-link">
             <nuxt-link to="/shop">{{ $t('shop.title') }}</nuxt-link>

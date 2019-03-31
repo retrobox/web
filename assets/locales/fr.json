@@ -25,11 +25,11 @@
       "title": "Ce projet est sous la licence Creative Commons"
     }
   },
-  "community": {
-    "title": "Communauté",
+  "download": {
+    "title": "Téléchargements",
     "page": {
-      "title": "Rejoignez notre communauté",
-      "description": "Venez poser vos questions, partagez vos éxpériences, échangez avec les créateurs de la console !"
+      "title": "Téléchargez les logiciels de RetroBox",
+      "description": "Vous retrouverez les applications pour contrôlez votre consoel de A à Z !"
     }
   },
   "buy": "Acheter",
