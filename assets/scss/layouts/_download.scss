@@ -10,20 +10,67 @@
     color: #2c3e50;
 
     .download-discord-container {
-        
+
       iframe {
         width: 350px;
       }
     }
+
+    .os-icon {
+      font-size: 3em;
+      display: flex;
+      padding: 0.25em;
+      justify-content: center;
+    }
+
+    .os-text {
+      display: flex;
+    }
+    .win-text {
+     padding-right: 4.5em;
+    }
+    .mac-text {
+      padding-right: 7.5em;
+    }
+
+    .desktop-icon {
+      margin-left: -2em;
+    }
+    .mobile-icon {
+      margin-left: -2em;
+    }
+
+    .win-icon:hover {
+      color: #2779bd;
+      transition: color 0.3s ease-in-out;
+    }
+    .mac-icon:hover {
+      color: #2779bd;
+      transition: color 0.3s ease-in-out;
+    }
+    .lin-icon:hover {
+      color: #2779bd;
+      transition: color 0.3s ease-in-out;
+    }
+    .android-icon:hover {
+      color: #2779bd;
+      transition: color 0.3s ease-in-out;
+    }
+    .ios-icon:hover {
+      color: #2779bd;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .coming-soon {
+      text-align: center;
+    }
+
     .download-title-container {
       display: flex;
       align-items: center;
       justify-content: center;
       justify-content: flex-start;
       padding-right: 2em;
-      div {
-        width: 90%;
-      }
     }
     .download-title {
       font-weight: 200;
