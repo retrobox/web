@@ -18,9 +18,9 @@
           </div>
 
           <div class="os-text">
-            <div class="win-text"><h2>Windows 7/8/10</h2></div>
-            <div class="mac-text"><h2>Mac OS</h2></div>
-            <div class="lin-text"><h2>Linux</h2></div>
+            <div class="win-text"><h2>{{ $t('download.page.os-text.win') }}</h2></div>
+            <div class="mac-text"><h2>{{ $t('download.page.os-text.mac') }}</h2></div>
+            <div class="lin-text"><h2>{{ $t('download.page.os-text.lin') }}</h2></div>
           </div>
 
           <div class="os-icon">
@@ -28,7 +28,7 @@
             <div class="ios-icon os-icon"><i class="fab fa-apple"></i></div>
           </div>
 
-          <div class="coming-soon"><h2>Bientôt sur Android et iOS</h2></div>
+          <div class="coming-soon"><h2>{{ $t('download.page.os-text.coming-soon') }}</h2></div>
 
         </div>
       </div>

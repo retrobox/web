@@ -28,8 +28,14 @@
   "download": {
     "title": "Téléchargements",
     "page": {
-      "title": "Téléchargez les logiciels de RetroBox",
-      "description": "Vous retrouverez les applications pour contrôlez votre consoel de A à Z !"
+      "title": "Téléchargez les logiciels pour la RetroBox",
+      "description": "Toutes les applications pour contrôler votre console de A à Z !",
+      "os-text": {
+        "win": "Windows 7/8/10",
+        "mac": "Mac OS",
+        "lin": "Linux",
+        "coming-soon": "Bientôt sur Android et iOS"
+      }
     }
   },
   "buy": "Acheter",

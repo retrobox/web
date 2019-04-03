@@ -8,6 +8,7 @@
     padding-top: 2em;
     padding-bottom: 2em;
     color: #2c3e50;
+    text-align: center;
 
     .download-discord-container {
 
@@ -27,17 +28,11 @@
       display: flex;
     }
     .win-text {
-     padding-right: 4.5em;
+     padding-right: 3.5em;
+     padding-left: 3em;
     }
-    .mac-text {
-      padding-right: 7.5em;
-    }
-
-    .desktop-icon {
-      margin-left: -2em;
-    }
-    .mobile-icon {
-      margin-left: -2em;
+    .lin-text {
+      padding-left: 7.5em;
     }
 
     .win-icon:hover {
