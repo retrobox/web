@@ -25,6 +25,13 @@
       "title": "Ce projet est sous la licence Creative Commons"
     }
   },
+  "community": {
+    "title": "Notre communauté",
+    "page": {
+      "title": "Rejoignez notre communauté",
+      "description": "Venez poser vos questions, partagez vos éxpériences, échangez avec les créateurs de la console !"
+    }
+  },
   "download": {
     "title": "Téléchargements",
     "page": {
@@ -89,7 +96,7 @@
       "description": "La Retrobox est une console portable permettant d'émuler tout les jeux jusqu'à la PS1, cela n'a jamais étais aussi accessible pour jouer à vos anciens jeux favoris. La console embarque les technologies modernes comme le wifi pour se connecter à votre ordinateur ou votre smartphone et le bluetooth pour connecter un casque ou une manette. La console est dôté d'une sortie HDMI pour jouer même sur votre TV ! Avec ses 8h d'autonomie, des heures et des heures de plaisir dans votre poche"
     },
     "advantages": {
-      "title":"Plein d'advantages...",
+      "title": "Plein d'advantages...",
       "game": {
         "title": "Une bibliothèque exeptionnelle",
         "description": "Des dizaines de milliers de jeux développés en 20 ans, des centaines de jeux originaux créés par des fans à portée de clics !"

@@ -27,6 +27,13 @@
       "title": "This work is licensed under a Creative Commons."
     }
   },
+  "community": {
+    "title": "Our community",
+    "page": {
+      "title": "Join our community",
+      "description": "Come ask your questions, share your experiences, exchanges with the creators of the console!"
+    }
+  },
   "download": {
     "title": "Downloads",
     "page": {

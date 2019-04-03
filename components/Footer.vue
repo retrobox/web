@@ -68,6 +68,12 @@
               </li>
 
               <li>
+                <LinkTo to="/community">
+                  {{ $t('community.title') }}
+                </LinkTo>
+              </li>
+
+              <li>
                 <a href="https://blog.retrobox.tech">
                   {{ $t('blog.title') }}
                 </a>

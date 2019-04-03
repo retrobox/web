@@ -1,0 +1,27 @@
+.community {
+  .community-content {
+    .community-title-container {
+      margin-bottom: 1.2em;
+      padding-right: 0;
+      text-align: center;
+      width: 100%;
+
+      div {
+        justify-content: center;
+        width: 90%;
+        margin: 0 auto;
+      }
+    }
+
+    .community-discord-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      iframe {
+        margin: 0 auto;
+        width: 95%;
+      }
+    }
+  }
+}
