@@ -1,4 +1,4 @@
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== 'production' || process.env.ENV_FILE == 'local') {
   const dotenv = require('dotenv')
   dotenv.config()
 }
