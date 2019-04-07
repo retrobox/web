@@ -10,8 +10,8 @@
   "login-or-register": "Connectez-vous ou inscrivez-vous",
   "home": "Accueil",
   "docs": "Documentation",
-  "previous": "Précédent",
-  "next": "Suivant",
+  "previous": "Chapitre précédent",
+  "next": "Chapitre suivant",
   "title": "Retrobox, une console diy open-source",
   "description": "La RetroBox est une console DIY open source créée par des jeunes, rejouez aux jeux de votre enfance !",
   "partnership": {
