@@ -34,10 +34,10 @@
       "description": "Come ask your questions, share your experiences, exchanges with the creators of the console!"
     }
   },
-  "download": {
+  "downloads": {
     "title": "Downloads",
     "page": {
-      "title": "Download our software !",
+      "title": "downloads our software !",
       "description": "You will find all applications to control your console from A to Z!",
       "os-text": {
         "win": "Windows 7/8/10",
