@@ -9,6 +9,7 @@ Le responsable publication est une personne physique ou une personne morale.
 **Webmaster** : Matthieu Bessat – contact@lefuturiste.fr  
 **Hébergeur** : Digital Ocean - www.digitalocean.com
 **Autres**  : Enregistré dans le R.C.S Alençon sous le n°844 190 363
+
 Crédits : Matthieu Bessat, Etienne Chevrollier, Valentin Derouet
 
 Thingmill est representé par Valentin Derouet, Matthieu Bessat, Etienne Chevrollier, entreprise enregistée à la chambre de commerce.

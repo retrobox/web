@@ -1,4 +1,3 @@
-
 ### VUE D’ENSEMBLE
 
 Ce site web est exploité par Thingmill. Sur ce site, les termes "nous", "notre" et "nos" font référence à Thingmill. Thingmill propose ce site web, y compris toutes les informations, tous les outils et tous les services qui y sont disponibles pour vous, l’utilisateur, sous réserve de votre acceptation de l’ensemble des modalités, conditions, politiques et avis énoncés ici.
@@ -25,7 +24,11 @@ Toute infraction ou violation des présentes Conditions Générales de Vente et 
 
 Nous nous réservons le droit de refuser à tout moment l’accès aux services à toute personne, et ce, pour quelque raison que ce soit.
 
-Vous comprenez que votre contenu (à l’exclusion de vos informations de carte de crédit) pourrait être transféré de manière non chiffrée, et cela sous-entend (a) des transmissions sur divers réseaux; et (b) des changements pour se conformer et s’adapter aux exigences techniques pour la connexion des réseaux ou appareils. Les informations de carte de crédit sont toujours chiffrées pendant la transmission sur les réseaux.
+Vous comprenez que votre contenu (à l’exclusion de vos informations de carte de crédit) pourrait être transféré de manière non chiffrée, et cela sous-entend
+1. des transmissions sur divers réseaux
+2. des changements pour se conformer et s’adapter aux exigences techniques pour la connexion des réseaux ou appareils.
+
+Les informations de carte de crédit sont toujours chiffrées pendant la transmission sur les réseaux.
 
 Vous acceptez de ne pas reproduire, dupliquer, copier, vendre, revendre ou exploiter une quelconque partie du Service ou utilisation du Service, ou un quelconque accès au Service ou contact sur le site web, par le biais duquel le Service est fourni, sans autorisation écrite expresse préalable de notre part.
 
@@ -63,9 +66,7 @@ Nous ne garantissons pas que la qualité de tous les produits, services, informa
 
 Nous nous réservons le droit de refuser toute commande que vous passez auprès de nous. Nous pourrions, à notre seule discrétion, réduire ou annuler les quantités achetées par personne, par foyer ou par commande. Ces restrictions pourraient inclure des commandes passées par ou depuis le même compte client, la même carte de crédit, et/ou des commandes qui utilisent la même adresse de facturation et/ou d’expédition. Dans le cas où nous modifierions une commande ou si nous venions à l’annuler, nous pourrions tenter de vous avertir en vous contactant à l’e-mail et/ou à l’adresse de facturation/au numéro de téléphone fourni au moment où la commande a été passée. Nous nous réservons le droit de limiter ou d’interdire les commandes qui, à notre seul jugement, pourraient sembler provenir de marchands, de revendeurs ou de distributeurs.
 
-Vous acceptez de fournir des informations de commande et de compte à jour, complètes et exactes pour toutes les commandes passées sur notre boutique. Vous vous engagez à mettre à jour rapidement votre compte et vos autres informations, y compris votre adresse e-mail, vos numéros de cartes de crédit et dates d’expiration, pour que nous poussions compléter vos transactions et vous contacter si nécessaire.
-
-Pour plus de détails, veuillez consulter notre Politique de Retour.
+Vous acceptez de fournir des informations de commande et de compte à jour, complètes et exactes pour toutes les commandes passées sur notre boutique. Vous vous engagez à mettre à jour rapidement votre compte et vos autres informations, y compris votre adresse e-mail, vos numéros de cartes de crédit et dates d’expiration, pour que nous puissions compléter vos transactions et vous contacter si nécessaire.
 
 
 #### ARTICLE 7 – OUTILS FACULTATIFS
@@ -90,7 +91,10 @@ Nous ne sommes pas responsables des préjudices ou dommages liés à l’achat o
 
 #### ARTICLE 9 – COMMENTAIRES, SUGGESTIONS ET AUTRES PROPOSITIONS D’UTILISATEURS
 
-Si, à notre demande, vous soumettez des contenus spécifiques (par exemple, pour participer à des concours), ou si sans demande de notre part, vous envoyez des idées créatives, des suggestions, des propositions, des plans ou d’autres éléments, que ce soit en ligne, par e-mail, par courrier, ou autrement (collectivement, "commentaires"), vous nous accordez le droit, en tout temps, et sans restriction, d’éditer, de copier, de publier, de distribuer, de traduire et d’utiliser autrement et dans tout média tout commentaire que vous nous envoyez. Nous ne sommes pas et ne devrons pas être tenus (1) de maintenir la confidentialité des commentaires; (2) de payer une compensation à quiconque pour tout commentaire fourni; (3) de répondre aux commentaires.
+Si, à notre demande, vous soumettez des contenus spécifiques (par exemple, pour participer à des concours), ou si sans demande de notre part, vous envoyez des idées créatives, des suggestions, des propositions, des plans ou d’autres éléments, que ce soit en ligne, par e-mail, par courrier, ou autrement (collectivement, "commentaires"), vous nous accordez le droit, en tout temps, et sans restriction, d’éditer, de copier, de publier, de distribuer, de traduire et d’utiliser autrement et dans tout média tout commentaire que vous nous envoyez. Nous ne sommes pas et ne devrons pas être tenus
+1. de maintenir la confidentialité des commentaires
+2. de payer une compensation à quiconque pour tout commentaire fourni
+3. de répondre aux commentaires.
 
 Nous pourrions, mais n’avons aucune obligation de le faire, surveiller, modifier ou supprimer le contenu que nous estimons, à notre seule discrétion, être illégal, offensant, menaçant, injurieux, diffamatoire, pornographique, obscène ou autrement répréhensible, ou qui enfreint toute propriété intellectuelle ou ces Conditions Générales de Vente et d’Utilisation.
 
@@ -99,7 +103,8 @@ Vous vous engagez à écrire des commentaires qui ne violent pas les droits de t
 
 #### ARTICLE 10 – RENSEIGNEMENTS PERSONNELS
 
-La soumission de vos renseignements personnels sur notre boutique est régie par notre Politique de Confidentialité. Cliquez ici pour consulter notre Politique de Confidentialité.
+La soumission de vos renseignements personnels sur notre boutique est régie par notre Politique de Confidentialité.
+[Cliquez ici](https://retrobox.tech/privacy) pour consulter notre Politique de Confidentialité.
 
 
 #### ARTICLE 11 – ERREURS, INEXACTITUDES ET OMISSIONS
@@ -110,8 +115,18 @@ Nous ne sommes pas tenus de mettre à jour, de modifier ou de clarifier les info
 
 #### ARTICLE 12 – UTILISATIONS INTERDITES
 
-En plus des interdictions énoncées dans les Conditions Générales de Vente et d’Utilisation, il vous est interdit d’utiliser le site ou son contenu: (a) à des fins illégales; (b) pour inciter des tiers à réaliser des actes illégaux ou à y prendre part; (c) pour enfreindre toute ordonnance régionale ou toute loi, règle ou régulation internationale, fédérale, provinciale ou étatique; (d) pour porter atteinte à ou violer nos droits de propriété intellectuelle ou ceux de tierces parties; (e) pour harceler, maltraiter, insulter, blesser, diffamer, calomnier, dénigrer, intimider ou discriminer quiconque en fonction du sexe, de l’orientation sexuelle, de la religion, de l’origine ethnique, de la race, de l’âge, de l’origine nationale, ou d’un handicap; (f) pour soumettre des renseignements faux ou trompeurs; (g) pour téléverser ou transmettre des virus ou tout autre type de code malveillant qui sera ou pourrait être utilisé de manière à compromettre la fonctionnalité ou le fonctionnement du Service ou de tout autre site web associé, indépendant, ou d’Internet; (h) pour recueillir ou suivre les renseignements personnels d’autrui; (i) pour polluposter, hameçonner, détourner un domaine, extorquer des informations, parcourir, explorer ou balayer le web (ou toute autre ressource); (j) à des fins obscènes ou immorales; ou (k) pour porter atteinte ou contourner les mesures de sécurité de notre Service, de tout autre site web, ou d’Internet. Nous nous réservons le droit de résilier votre utilisation du Service ou de tout site web connexe pour avoir enfreint les utilisations interdites.
-
+En plus des interdictions énoncées dans les Conditions Générales de Vente et d’Utilisation, il vous est interdit d’utiliser le site ou son contenu:
+1. à des fins illégales
+2. pour inciter des tiers à réaliser des actes illégaux ou à y prendre part
+3. pour enfreindre toute ordonnance régionale ou toute loi, règle ou régulation internationale, fédérale, provinciale ou étatique
+4. pour porter atteinte à ou violer nos droits de propriété intellectuelle ou ceux de tierces parties
+5. pour harceler, maltraiter, insulter, blesser, diffamer, calomnier, dénigrer, intimider ou discriminer quiconque en fonction du sexe, de l’orientation sexuelle, de la religion, de l’origine ethnique, de la race, de l’âge, de l’origine nationale, ou d’un handicap
+6. pour soumettre des renseignements faux ou trompeurs
+7. pour téléverser ou transmettre des virus ou tout autre type de code malveillant qui sera ou pourrait être utilisé de manière à compromettre la fonctionnalité ou le fonctionnement du Service ou de tout autre site web associé, indépendant, ou d’Internet
+8. pour recueillir ou suivre les renseignements personnels d’autrui
+9. pour polluposter, hameçonner, détourner un domaine, extorquer des informations, parcourir, explorer ou balayer le web (ou toute autre ressource)
+10. à des fins obscènes ou immorales
+11. pour porter atteinte ou contourner les mesures de sécurité de notre Service, de tout autre site web, ou d’Internet. Nous nous réservons le droit de résilier votre utilisation du Service ou de tout site web connexe pour avoir enfreint les utilisations interdites.
 
 #### ARTICLE 13 – EXCLUSION DE GARANTIES ET LIMITATION DE RESPONSABILITÉ
 
@@ -123,17 +138,15 @@ Vous acceptez que de temps à autre, nous puissions supprimer le Service pour de
 
 Vous convenez expressément que votre utilisation du Service, ou votre incapacité à utiliser celui-ci, est à votre seul risque. Le Service ainsi que tous les produits et services qui vous sont fournis par le biais du Service sont (sauf mention expresse du contraire de notre part) fournis "tels quels" et "selon la disponibilité" pour votre utilisation, et ce sans représentation, sans garanties et sans conditions d'aucune sorte, expresses ou implicites, y compris toutes les garanties implicites de commercialisation ou de qualité marchande, d’adaptation à un usage particulier, de durabilité, de titre et d’absence de contrefaçon.
 
-Thingmill, nos directeurs, responsables, employés, sociétés affiliées, agents, contractants, stagiaires, fournisseurs, prestataires de services et concédants ne peuvent en aucun cas être tenus responsables de toute blessure, perte, réclamation, ou de dommages directs, indirects, accessoires, punitifs, spéciaux, ou dommages consécutifs de quelque nature qu’ils soient, incluant mais ne se limitant pas à la perte de profits, de revenus, d’économies, de données, aux coûts de remplacement ou tous dommages similaires, qu’ils soient contractuels, délictuels (même en cas de négligence), de responsabilité stricte ou autre, résultant de votre utilisation de tout service ou produit provenant de ce Service, ou quant à toute autre réclamation liée de quelque manière que ce soit à votre utilisation du Service ou de tout produit, incluant mais ne se limitant à toute erreur ou omission dans tout contenu, ou à toute perte ou tout dommage de toute sorte découlant de l’utilisation du Service ou de tout contenu (ou produit) publié, transmis, ou autrement rendu disponible par le biais du Service, même si vous avez été avertis de la possibilité qu’ils surviennent. Parce que certains États ou certaines juridictions ne permettent pas d’exclure ou de limiter la responsabilité quant aux dommages consécutifs ou accessoires, notre responsabilité sera limitée dans la mesure maximale permise par la loi.
+Thingmill, nos directeurs, responsables, employés, agents, contractants, stagiaires, fournisseurs, prestataires de services et concédants ne peuvent en aucun cas être tenus responsables de toute blessure, perte, réclamation, ou de dommages directs, indirects, accessoires, punitifs, spéciaux, ou dommages consécutifs de quelque nature qu’ils soient, incluant mais ne se limitant pas à la perte de profits, de revenus, d’économies, de données, aux coûts de remplacement ou tous dommages similaires, qu’ils soient contractuels, délictuels (même en cas de négligence), de responsabilité stricte ou autre, résultant de votre utilisation de tout service ou produit provenant de ce Service, ou quant à toute autre réclamation liée de quelque manière que ce soit à votre utilisation du Service ou de tout produit, incluant mais ne se limitant à toute erreur ou omission dans tout contenu, ou à toute perte ou tout dommage de toute sorte découlant de l’utilisation du Service ou de tout contenu (ou produit) publié, transmis, ou autrement rendu disponible par le biais du Service, même si vous avez été avertis de la possibilité qu’ils surviennent. Parce que certains États ou certaines juridictions ne permettent pas d’exclure ou de limiter la responsabilité quant aux dommages consécutifs ou accessoires, notre responsabilité sera limitée dans la mesure maximale permise par la loi.
 
 #### ARTICLE 14 – INDEMNISATION
 
-Vous acceptez d’indemniser, de défendre et de protéger Thingmill, notre société-mère, nos filiales, sociétés affiliées, partenaires, responsables, directeurs, agents, contractants, concédants, prestataires de services, sous-traitants, fournisseurs, stagiaires et employés, quant à toute réclamation ou demande, incluant les honoraires raisonnables d’avocat, faite par toute tierce partie à cause de ou découlant de votre violation de ces Conditions Générales de Vente et d’Utilisation ou des documents auxquels ils font référence, ou de votre violation de toute loi ou des droits d’un tiers.
-
+Vous acceptez d’indemniser, de défendre et de protéger Thingmill, notre société-mère, partenaires, responsables, directeurs, agents, contractants, concédants, prestataires de services, sous-traitants, fournisseurs, stagiaires et employés, quant à toute réclamation ou demande, incluant les honoraires raisonnables d’avocat, faite par toute tierce partie à cause de ou découlant de votre violation de ces Conditions Générales de Vente et d’Utilisation ou des documents auxquels ils font référence, ou de votre violation de toute loi ou des droits d’un tiers.
 
 #### ARTICLE 15 – DISSOCIABILITÉ
 
 Dans le cas où une disposition des présentes Conditions Générales de Vente et d’Utilisation serait jugée comme étant illégale, nulle ou inapplicable, cette disposition pourra néanmoins être appliquée dans la pleine mesure permise par la loi, et la partie non applicable devra être considérée comme étant dissociée de ces Conditions Générales de Vente et d’Utilisation, cette dissociation ne devra pas affecter la validité et l’applicabilité de toutes les autres dispositions restantes.
-
 
 #### ARTICLE 16 – RÉSILIATION
 

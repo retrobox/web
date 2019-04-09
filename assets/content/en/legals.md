@@ -9,6 +9,7 @@ The director of the publication is a natural person or a legal person.
 **Webmaster** : Matthieu Bessat - contact@lefuturiste.fr  
 **Host** : Digital Ocean - www.digitalocean.com
 **Others**  : Registered in the R.C.S Alençon with n°844 190 363  
+
 Credits: Matthieu Bessat Etienne Chevrollier, Valentin Derouet
 
 ### 2 \. General conditions of use of the site and services offered.
