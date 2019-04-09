@@ -1,14 +1,14 @@
 <template>
-  <div class="download">
-    <div class="download-content">
-      <div class="download-title-container">
+  <div class="downloads">
+    <div class="downloads-content">
+      <div class="downloads-title-container">
         <div>
-          <h2 class="download-title">
-            {{ $t('download.page.title') }}
+          <h2 class="downloads-title">
+            {{ $t('downloads.page.title') }}
           </h2>
 
-          <div class="download-description">
-            {{ $t('download.page.description') }}
+          <div class="downloads-description">
+            {{ $t('downloads.page.description') }}
           </div>
 
           <div class="os-icon">
@@ -18,9 +18,9 @@
           </div>
 
           <div class="os-text">
-            <div class="win-text"><h2>{{ $t('download.page.os-text.win') }}</h2></div>
-            <div class="mac-text"><h2>{{ $t('download.page.os-text.mac') }}</h2></div>
-            <div class="lin-text"><h2>{{ $t('download.page.os-text.lin') }}</h2></div>
+            <div class="win-text"><h2>{{ $t('downloads.page.os-text.win') }}</h2></div>
+            <div class="mac-text"><h2>{{ $t('downloads.page.os-text.mac') }}</h2></div>
+            <div class="lin-text"><h2>{{ $t('downloads.page.os-text.lin') }}</h2></div>
           </div>
 
           <div class="os-icon">
@@ -28,7 +28,7 @@
             <div class="ios-icon os-icon"><i class="fab fa-apple"></i></div>
           </div>
 
-          <div class="coming-soon"><h2>{{ $t('download.page.os-text.coming-soon') }}</h2></div>
+          <div class="coming-soon"><h2>{{ $t('downloads.page.os-text.coming-soon') }}</h2></div>
 
         </div>
       </div>
@@ -40,9 +40,9 @@
   export default {
     head() {
       return {
-        title: this.$t('download.page.title'),
+        title: this.$t('downloads.page.title'),
         meta: [
-          {property: 'og:title', content: this.$t('download.page.title')}
+          {property: 'og:title', content: this.$t('downloads.page.title')}
         ]
       }
     }

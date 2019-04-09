@@ -1,7 +1,7 @@
-.download {
+.downloads {
   display: flex;
   justify-content: center;
-  .download-content {
+  .downloads-content {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -10,7 +10,7 @@
     color: #2c3e50;
     text-align: center;
 
-    .download-discord-container {
+    .downloads-discord-container {
 
       iframe {
         width: 350px;
@@ -60,23 +60,23 @@
       text-align: center;
     }
 
-    .download-title-container {
+    .downloads-title-container {
       display: flex;
       align-items: center;
       justify-content: center;
       justify-content: flex-start;
       padding-right: 2em;
     }
-    .download-title {
+    .downloads-title {
       font-weight: 200;
       font-size: 2.3em;
       margin-bottom: 0.8em;
     }
-    .download-description {
+    .downloads-description {
         font-size: 1.1em;
     }
   }
-  .download-discord-container {
+  .downloads-discord-container {
     margin-top: 1em;
   }
 }
