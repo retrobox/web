@@ -14,7 +14,6 @@
 
 <style>
   .go-to-top {
-    cursor: pointer;
     position: fixed;
     border: 1px solid #FAFAFA;
     background-color: #0a3d62;
@@ -33,13 +32,9 @@
   }
 
   .go-to-top.visible {
+    cursor: pointer;
     opacity: 0.75;
     transition: opacity 0.5s;
-  }
-
-  .go-to-top:hover {
-    opacity: 1;
-    transition: opacity 0.2s;
   }
 </style>
 <script>
