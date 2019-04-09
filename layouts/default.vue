@@ -49,14 +49,16 @@
         </div>
       </modal>
     </no-ssr>
+    <GoToTop />
   </div>
 </template>
 <script>
   import Header from "../components/Header"
   import Footer from "../components/Footer"
   import Icon from "../components/Icon"
+  import GoToTop from "../components/GoToTop"
   export default {
-    components: {Icon, Footer, Header},
+    components: {GoToTop, Icon, Footer, Header},
     head () {
       return {
         titleTemplate: '%s - Retrobox',
