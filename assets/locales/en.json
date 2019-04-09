@@ -37,7 +37,7 @@
   "downloads": {
     "title": "Downloads",
     "page": {
-      "title": "downloads our software !",
+      "title": "Downloads our software !",
       "description": "You will find all applications to control your console from A to Z!",
       "os-text": {
         "win": "Windows 7/8/10",
@@ -69,7 +69,7 @@
     }
   },
   "buy": "Buy",
-  "close": "Fermer",
+  "close": "Close",
   "breadcrumb": {
     "title": "You are here:"
   },
@@ -147,6 +147,7 @@
   "about": "About",
   "terms-of-use": "Conditions of use",
   "terms-of-sale": "Conditions of sale",
+  "Privacy": "Privacy",
   "get-help": "Need help ?",
   "status": "Status of services",
   "developers": "Developers",

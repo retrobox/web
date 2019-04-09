@@ -68,6 +68,12 @@
               </li>
 
               <li>
+                <LinkTo to="/shop">
+                  {{ $t('shop.title') }}
+                </LinkTo>
+              </li>
+              
+              <li>
                 <LinkTo to="/community">
                   {{ $t('community.title') }}
                 </LinkTo>
@@ -79,22 +85,13 @@
                 </a>
               </li>
 
-              <li>
-                <LinkTo to="/terms">
-                  {{ $t('terms-of-use') }}
-                </LinkTo>
-              </li>
+
             </ul>
           </div>
         </div>
         <div class="w-1/3">
           <div class="footer-links">
             <ul>
-              <li>
-                <LinkTo to="/shop">
-                  {{ $t('shop.title') }}
-                </LinkTo>
-              </li>
 
               <li>
                 <LinkTo to="/contact-us">
@@ -103,8 +100,20 @@
               </li>
 
               <li>
+                <LinkTo to="/terms">
+                  {{ $t('terms-of-use') }}
+                </LinkTo>
+              </li>
+
+              <li>
                 <LinkTo to="/terms-of-sale">
                   {{ $t('terms-of-sale') }}
+                </LinkTo>
+              </li>
+
+              <li>
+                <LinkTo to="/privacy">
+                  {{ $t('privacy') }}
                 </LinkTo>
               </li>
             </ul>
