@@ -1,183 +1,101 @@
-### Overview
+### CONFIDENTIALITY DECLARATION
 
-This website is operated by Thingmill. On this site, the terms "we", "our" and "our" refer to Thingmill. Thingmill offers this website, including all information, tools and services available to you, the user, subject to your acceptance of all the terms, conditions, policies and notices set forth herein.
+----
 
-By visiting this site and/or by purchasing one of our products, you agree to our "service" and agree to be bound by the following terms and conditions ("general terms of sale", "General conditions of sale and use", "terms"), including additional terms, conditions and policies referred to herein and/or accessible via hyperlink. These terms and conditions of sale and use apply to all users of this site, including but not limited to, users who browse the site, who are sellers, customers, merchants, and/or content contributors.
+#### ARTICLE 1 - PERSONAL INFORMATION COLLECTED
 
-Please read these terms of sale and use carefully before accessing or using our website. By accessing or using any part of this site, you agree to be bound by these terms and conditions of sale and use. If you do not agree to all terms and conditions of this agreement, then you must not access the website or use the services offered therein. If these terms and conditions of sale and use are considered as an offer, the acceptance is expressly limited to these general terms and conditions of sale and use.
+When you make a purchase on our store, as part of our purchase and sale process, we collect personal information that you provide to us, such as your name, address and e-mail address.
 
-All new features and tools that will be added later to this store will also be subject to these terms and conditions of sale and use. You can consult the latest version of the general terms and conditions of sale and use at any time on this page. We reserve the right to update, change or replace any part of these terms and conditions of sale and use by posting updates and/or changes to our website. It is your responsibility to check this page regularly to see if any changes have been made. Your continued use of the website or your access to it after the publication of any change is an acceptance of your share of these changes.
+When you browse our store, we also automatically receive the Internet Protocol (IP) address of your computer, which allows us to get more details about the browser and the operating system you are using.
 
+Email Marketing (if applicable): With your permission, we may send you emails about our store, new products and other updates.
 
-#### ARTICLE 1 - TERMS OF USE OF OUR ONLINE SHOP
 
-By accepting these Terms of Sale and Use, you represent that you have reached the age of majority in your country, state or province of residence, and that you have given us your consent to allow any person of age minor in your charge to use this website.
+#### ARTICLE 2 - CONSENT
 
-The use of our products for any illegal or unauthorized purpose is prohibited, and you must not, in connection with the use of the Service, violate the laws of your jurisdiction (including but not limited to copyright).
+How do you get my consent?
 
-You must not transmit worms, viruses or any other code of a destructive nature.
+When you provide us with your personal information to complete a transaction, check your credit card, place an order, schedule a delivery or return a purchase, we assume that you consent to us collecting your information and using it to this end only.
 
-Any breach or violation of these Terms and Conditions of Sale and Use will result in the immediate termination of your Services.
+If we ask you to provide us with your personal information for any other reason, for marketing purposes, for example, we will ask for your explicit consent directly or we will give you the opportunity to opt out.
 
 
-#### ARTICLE 2 - GENERAL CONDITIONS
+#### How can I withdraw my consent?
 
-We reserve the right to deny access to services to anyone at any time for any reason whatsoever.
+If after having given us your consent, you change your mind and no longer consent to us contacting you, collecting your information or disclosing it, you can notify us by contacting us at contact@thingmill.fr or by mail at :
 
-You understand that your content (excluding your credit card information) may be transferred in an unencrypted manner, and this implies
-1. transmissions on various networks
-2. changes to comply with and adapt to the technical requirements for the connection of networks or devices.
+Thingmill, 1 chemin badoire, Heloup, 61250, France
 
-Credit card information is always encrypted during transmission over networks.
 
-You agree not to reproduce, duplicate, copy, sell, resell or exploit any part of the Service or use of the Service, or any access to the Service or contact on the website, through which the Service is provided, without permission written express prior from us.
+#### ARTICLE 3 - DISCLOSURE
 
-The titles used in this agreement are included for your convenience, and will not limit or affect these Terms.
+We may disclose your personal information if we are required by law to do so or if you violate our Terms and Conditions of Sale and Use.
 
-#### ARTICLE 3 - ACCURACY, COMPLETENESS AND CURRENT INFORMATION
 
-We are not responsible if the information available on this site is not accurate, complete or up-to-date. The content of this site is provided for informational purposes only and should not be your sole source of information for making decisions, without first consulting more accurate, complete and up-to-date sources of information. If you decide to rely on the content on this site, you do so at your own risk.
+#### ARTICLE 4 - SHOP
 
-This site may contain some previous information. This past information, by its nature, is not up-to-date and is provided for informational purposes only. We reserve the right to change the content of this site at any time, but we have no obligation to update the information on our site. You agree that it is your responsibility to monitor changes to our site.
+Our shop is hosted on our servers.
 
+Your data is stored in RetroBox's data storage system and databases.
 
-#### ARTICLE 4 - AMENDMENTS TO SERVICE AND PRICES
+Payment:
 
-The prices of our products are subject to change without notice.
+If you make your purchase through a direct payment gateway, in this case RetroBox will store your credit card information. This information is encrypted in accordance with the data security standard established by the Payment Card Industry (PCI-DSS). Information about your purchase transaction is retained for as long as necessary to finalize your order. Once your order is finalized, the details of the purchase transaction are deleted.
 
-We reserve the right at any time to modify or discontinue the Service (as well as any part or content of the Service) without notice and at any time.
+All direct payment gateways comply with PCI-DSS, which is managed by the PCI Security Standards Board, and is the result of joint efforts by companies such as Visa, MasterCard, American Express, and Discover.
 
-We will not be liable to you or any other third party for any price changes, suspension or discontinuance of the Service.
+The PCI-DSS requirements ensure the secure processing of credit card data by our store and service providers.
 
+For more information, please see the RetroBox Terms of Use [here](/terms).
 
-#### ARTICLE 5 - PRODUCTS OR SERVICES (if applicable)
 
-Certain products or services may be exclusively available online on our website. These products or services may be available in limited quantities and may only be returned or exchanged in accordance with our Return Policy.
+#### ARTICLE 5 - SERVICES PROVIDED BY THIRD PARTIES
 
-We have done our best to display as clearly as possible the colors and images of our products that appear on our shop. We can not guarantee that the display of colors on your computer screen will be accurate.
 
-We reserve the right, but are not obliged to do so, to limit sales of our products or services to any person, and in any geographic area or jurisdiction. We could exercise this right on a case-by-case basis. We reserve the right to limit the quantities of any product or service we offer. All product descriptions and product prices are subject to change at any time without notice, in our sole discretion. We reserve the right to stop offering a product at any time. Any offer of service or product presented on this site is void where the law prohibits it.
+In general, the third-party providers we use will only collect, use and disclose your information to the extent necessary to perform the services they provide to us.
 
-We do not warrant that the quality of any products, services, information, or other merchandise you have obtained or purchased will meet your expectations, nor that any error in the Service will be corrected.
+However, some third-party service providers, such as payment gateways and other payment transaction processors, have their own privacy policies regarding the information we are required to provide to them for your purchase transactions.
 
+With respect to these providers, we recommend that you read their privacy policies carefully so that you understand how they will treat your personal information.
 
-####ARTICLE 6 - ACCURACY OF INVOICING AND ACCOUNT INFORMATION
+It should be remembered that some providers may be located or have facilities located in a different jurisdiction than you or ours. So if you decide to pursue a transaction that requires the services of a third-party provider, your information could then be governed by the laws of the jurisdiction in which that provider is located or those of the jurisdiction in which its facilities are located.
 
-We reserve the right to refuse any order you place with us. We may, in our sole discretion, reduce or cancel the quantities purchased per person, household or order. These restrictions could include orders placed by or from the same customer account, the same credit card, and / or orders that use the same billing and / or shipping address. In the event that we modify an order or cancel it, we may attempt to notify you by contacting you at the email and / or billing address / phone number provided at the time the order has been placed. We reserve the right to limit or prohibit orders that, in our sole judgment, may appear to be from merchants, resellers or distributors.
+For example, if you are located in Canada and your transaction is processed through a US-based payment gateway, your proprietary information that was used to complete the transaction could be disclosed under US law. United States, including the Patriot Act.
 
-You agree to provide up-to-date, complete and accurate order and account information for all orders placed on our store. You agree to promptly update your account and other information, including your email address, credit card numbers and expiration dates, so that we can complete your transactions and contact you if necessary.
+Once you leave the site of our shop or you are redirected to the website or the application of a third party, you are no longer governed by this Privacy Policy or by the General Terms and Conditions of Sale. Use of our website.
 
 
-#### ARTICLE 7 - OPTIONAL TOOLS
+Links
 
-We may provide you with access to third-party tools over which we do not track, control or influence.
+You may have to leave our website by clicking on some links on our site. We do not assume any responsibility for the privacy practices of these other sites and recommend that you read their privacy policies carefully.
 
-You acknowledge and agree that we provide access to such tools "as is" and "as available" without any warranties, representations or conditions of any kind and without any approval. We will have no legal liability resulting from or related to the use of these optional third party tools.
 
-If you use the optional tools offered on the site, you do so at your own risk and at your own discretion, and you should consult the conditions under which these tools are offered by the relevant third party supplier (s).
+#### ARTICLE 6 - SECURITY
 
-We may also, in the future, offer new services and / or new features on our site (including new tools and resources). These new features and services will also be subject to these Terms and Conditions of Sale and Use.
+To protect your personal information, we take reasonable precautions and follow industry best practices to ensure that they are not lost, misappropriated, accessed, disclosed, altered, or destroyed in an inappropriate manner.
 
+If you provide us with your credit card information, they will be encrypted through the use of the SSL security protocol and kept with AES-256 type encryption. Although no method of Internet transmission or electronic storage is 100% secure, we follow all the PCI-DSS requirements and implement additional standards generally recognized by the industry.
+FILES WITNESSES (COOKIES)
 
-#### ARTICLE 8 - THIRD PARTY LINKS
+Here is a list of cookies that we use. We have listed them here so that you have the opportunity to choose whether you want to allow them or not.
 
-Certain content, products and services available through our Service may include material from third parties.
+#### ARTICLE 7 - AGE OF CONSENT
 
-Links from third parties on this site may redirect you to third party websites that are not affiliated with us. We are not required to review or evaluate the content or accuracy of these sites, and we do not warrant or assume any responsibility for any content, website, product, service or other item accessible to or from these third-party sites.
+By using this site, you represent that you are at least the age of majority in your state or province of residence, and that you have given us your consent to allow any dependent minor to use this Website. website.
 
-We are not responsible for any loss or damage related to the purchase or use of any goods, services, resources, content, or any other transaction made in connection with such third party websites. Please read carefully the policies and practices of third parties and make sure you understand them before you engage in any transaction. Complaints, claims, concerns, or questions regarding the products of these third parties must be submitted to these same third parties.
 
+#### ARTICLE 8 - AMENDMENTS TO THIS PRIVACY POLICY
 
-#### ARTICLE 9 - COMMENTS, SUGGESTIONS AND OTHER PROPOSALS FROM USERS
+We reserve the right to modify this Privacy Policy at any time, so please check it frequently. Changes and clarifications will be effective immediately upon posting on the website. If we make any changes to the content of this policy, we will notify you here that it has been updated so that you know what information we collect, how we use it, and under what circumstances we disclose it to you. it is necessary to do it.
 
-If, at our request, you submit specific content (for example, to participate in contests), or if without request from us, you send creative ideas, suggestions, proposals, plans or other elements, whether online, by e-mail, by post, or otherwise (collectively, "comments"), you grant us the right, at any time, and without limitation, to edit, copy, publish, distribute , translate and otherwise use and in any media any comment you send us. We are not and will not have to be held
-1. to maintain the confidentiality of comments
-2. to compensate anyone for any comments provided
-3. to respond to comments.
+If our store is being acquired by or through a merger with another company, your information may be transferred to new owners so that we may continue to sell you products.
 
-We may, but have no obligation to do so, monitor, modify or delete content that we, in our sole discretion, believe to be unlawful, offensive, threatening, abusive, defamatory, pornographic, obscene or otherwise objectionable, or that infringes any intellectual property or these Terms and Conditions of Sale and Use.
+#### QUESTIONS AND CONTACT
 
-You agree to write comments that do not violate the rights of third parties, including copyrights, trademarks, privacy, personality, or other personal or property rights. You further agree that your comments will not contain any illegal, defamatory, offensive or obscene content, nor that they contain any computer viruses or other malware that could in any way affect the operation of the Service. or any other associated website. You may not use a false e-mail address, pretend to be someone you are not, or try to mislead us and / or third parties as to the source of your comments. You are fully responsible for all comments you post as well as their accuracy. We assume no responsibility and disclaim any commitment to any comments that you post or that any other third party publishes.
+If you wish to: access, correct, modify or delete any personal information we have about you, file a complaint, or simply want more information, contact our privacy officer at contact@thingmill.fr or by mail to Thingmill:
 
+[Re: Privacy Standards Officer]
 
+[1 chemin de badoire, Heloup, 61250, France]
 
-#### ARTICLE 10 - PERSONAL INFORMATION
-
-Submitting your personal information to our store is governed by our Privacy Policy.
-[Click here](https://retrobox.tech/privacy) to view our Privacy Policy.
-
-
-#### ARTICLE 11 - ERRORS, INACCURACIES AND OMISSIONS
-
-There may be occasional information on our site or in the Service that may contain typographical errors, inaccuracies or omissions that may relate to product descriptions, prices, promotions, offers, fees shipping, delivery times and availability. We reserve the right to correct any error, inaccuracy, omission, and to change or update information or cancel orders, if any information in the Service or on any other associated website is inaccurate, and , at any time and without notice (including after you have placed your order).
-
-We are under no obligation to update, modify or clarify information in the Service or any other associated website, including but not limited to pricing information, except as required by law. No set date of update or update in the Service or any other associated website should be taken into account to conclude that the information in the Service or any other associated website has been modified or updated.
-
-#### ARTICLE 12 - PROHIBITED USES
-
-In addition to the prohibitions set out in the General Conditions of Sale and Use, you are prohibited from using the site or its contents:
-1. for illegal purposes
-2. to induce third parties to carry out illegal acts or to take part in them
-3. to violate any regional ordinance or any international, federal, provincial or state law, rule or regulation
-4. to infringe or violate our intellectual property rights or those of third parties
-5. to harass, abuse, insult, injure, defame, slander, denigrate, intimidate or discriminate against anyone based on sex, sexual orientation, religion, ethnicity, race, age , national origin, or disability
-6. to submit false or misleading information
-7. to upload or transmit viruses or any other type of malicious code that will be or may be used in a way that compromises the functionality or operation of the Service or any other associated, independent, or Internet site
-8. to collect or track the personal information of others
-9. to spam, phish, hijack a domain, extort information, browse, explore or scan the web (or any other resource)
-10. for obscene or immoral purposes
-11. to violate or circumvent the security measures of our Service, any other website, or the Internet. We reserve the right to terminate your use of the Service or any related website for violating prohibited uses.
-
-#### ARTICLE 13 - EXCLUSION OF WARRANTIES AND LIMITATION OF LIABILITY
-
-We do not warrant or warrant that your use of our Service will be uninterrupted, fast, secure or error-free.
-
-We do not warrant that results that may be obtained through the use of the Service will be accurate or reliable.
-
-You agree that from time to time we may remove the Service for indefinite periods of time or cancel the Service at any time without notice to you.
-
-You expressly agree that your use of the Service, or your inability to use the Service, is at your sole risk. The Service and all products and services provided to you through the Service are (unless expressly stated otherwise by us) provided "as is" and "as available" for your use, without representation, without warranties and without conditions of any kind, express or implied, including all implied warranties of merchantability or merchantability, fitness for a particular purpose, durability, title and non-infringement.
-
-Thingmill, our directors, officers, employees, agents, contractors, trainees, suppliers, service providers and licensors can in no way be held liable for any injury, loss, claim, or for direct, indirect, incidental, punitive, special, incidental or consequential damages. , or consequential damages of any kind, including but not limited to loss of profits, income, savings, data, replacement costs or any similar damages, whether contractual, tortious (even in the case of negligence), strict liability or otherwise, resulting from your use of any service or product from this Service, or any other claim related in any way to your use of the Service or any product , including but not limited to any error or omission in any Content, or any loss or damage of any kind arising from the use of the Service. u any content (or product) published, transmitted, or otherwise made available through the Service, even if you have been warned of the possibility that they will occur. Because some states or jurisdictions do not allow the exclusion or limitation of incidental or consequential damages, our liability will be limited to the fullest extent permitted by law.
-
-#### ARTICLE 14 - INDEMNIFICATION
-
-You agree to indemnify, defend and protect Thingmill, our parent company, partners, officers, directors, agents, contractors, licensors, service providers, subcontractors, suppliers, trainees and employees, with respect to any claim or claim , including reasonable attorney fees, made by any third party because of or arising from your violation of these Terms and Conditions of Sale or the documents to which they refer, or your violation of any law or rights a third.
-
-#### ARTICLE 15 - DISSOCIABILITY
-
-In the event that a provision of these Terms and Conditions of Sale and Use is deemed illegal, void or unenforceable, this provision may nevertheless be applied to the full extent permitted by law, and the non-applicable part shall be considered as being dissociated from these Terms and Conditions of Sale and Use, this dissociation shall not affect the validity and applicability of all other remaining provisions.
-
-#### ARTICLE 16 - TERMINATION
-
-The obligations and liabilities incurred by the parties prior to the termination date will remain in effect after the termination of this agreement for all purposes.
-
-These Terms and Conditions of Sale and Use are effective unless and until terminated by you or not. You may terminate these Terms and Conditions of Sale and Use at any time by notifying us that you no longer wish to use our Services, or when you stop using our site.
-
-If we determine, in our sole discretion, that you are unsuccessful, or if we suspect that you have been unable to comply with the terms of these Terms and Conditions of Sale and Use, we may also terminate this agreement at any time without notice to you in advance and you will remain liable for all amounts owing up to and including the date of termination, and / or we may deny you access to our Services (or any part thereof ).
-
-
-#### ARTICLE 17 - ENTIRE AGREEMENT
-
-Any failure by us to exercise or enforce any right or provision of these Terms and Conditions of Sale and Use should not constitute a waiver of such right or provision.
-
-These Terms and Conditions of Sale or Use or any other policy or operating rule that we publish on this site or in connection with the Service constitute the entire agreement and agreement between you and us and govern your use of the Service, and replace all prior and contemporaneous communications, proposals and agreements, oral or written, between you and us (including, but not limited to, any prior version of the Terms and Conditions of Sale and Use).
-
-Any ambiguity as to the interpretation of these General Conditions of Sale and Use should not be interpreted to the detriment of the writing party.
-
-
-#### ARTICLE 18 - APPLICABLE LAW
-
-These Terms and Conditions of Sale and Use, as well as any other separate agreement through which we provide you Services will be governed by and construed in accordance with the laws in force at Thingmill, 1 chemin de badoire, Heloup, Orne, 61250, France .
-
-
-#### ARTICLE 19 - AMENDMENTS TO THE GENERAL CONDITIONS OF SALE AND USE
-
-You can consult the most recent version of the General Conditions of Sale and Use at any time on this page.
-
-We reserve the right, in our sole discretion, to update, modify or replace any part of these Terms of Sale and Use by posting updates and changes on our site. It is your responsibility to visit our site regularly to see if any changes have been made. Your continued use of or access to our site following the publication of any changes to these Terms and Conditions of Sale and Use constitutes acceptance of those changes.
-
-
-#### ARTICLE 20 - CONTACT INFORMATION
-
-Questions regarding the General Conditions of Sale and Use should be sent to us at contact@thingmill.fr.
+----

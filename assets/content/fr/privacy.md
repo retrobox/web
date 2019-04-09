@@ -1,100 +1,101 @@
-### CONFIDENTIALITY DECLARATION
+### DÉCLARATION DE CONFIDENTIALITÉ
 
 ----
 
-#### ARTICLE 1 - PERSONAL INFORMATION COLLECTED
+#### ARTICLE 1 – RENSEIGNEMENTS PERSONNELS RECUEILLIS
 
-When you make a purchase on our store, as part of our purchase and sale process, we collect personal information that you provide to us, such as your name, address and e-mail address.
+Lorsque vous effectuez un achat sur notre boutique, dans le cadre de notre processus d’achat et de vente, nous recueillons les renseignements personnels que vous nous fournissez, tels que votre nom, votre adresse et votre adresse e-mail.
 
-When you browse our store, we also automatically receive the Internet Protocol (IP) address of your computer, which allows us to get more details about the browser and the operating system you are using.
+Lorsque vous naviguez sur notre boutique, nous recevons également automatiquement l’adresse de protocole Internet (adresse IP) de votre ordinateur, qui nous permet d’obtenir plus de détails au sujet du navigateur et du système d’exploitation que vous utilisez.
 
-Email Marketing (if applicable): With your permission, we may send you emails about our store, new products and other updates.
-
-
-#### ARTICLE 2 - CONSENT
-
-How do you get my consent?
-
-When you provide us with your personal information to complete a transaction, check your credit card, place an order, schedule a delivery or return a purchase, we assume that you consent to us collecting your information and using it to this end only.
-
-If we ask you to provide us with your personal information for any other reason, for marketing purposes, for example, we will ask for your explicit consent directly or we will give you the opportunity to opt out.
+Marketing par e-mail (le cas échéant): Avec votre permission, nous pourrions vous envoyer des e-mails au sujet de notre boutique, de nouveaux produits et d’autres mises à jour.
 
 
-#### How can I withdraw my consent?
+#### ARTICLE 2 - CONSENTEMENT
 
-If after having given us your consent, you change your mind and no longer consent to us contacting you, collecting your information or disclosing it, you can notify us by contacting us at contact@thingmill.fr or by mail at :
+Comment obtenez-vous mon consentement?
 
-Thingmill, 1 chemin badoire, Heloup, 61250, France
+Lorsque vous nous fournissez vos renseignements personnels pour conclure une transaction, vérifier votre carte de crédit, passer une commande, planifier une livraison ou retourner un achat, nous présumons que vous consentez à ce que nous recueillions vos renseignements et à ce que nous les utilisions à cette fin uniquement.
 
-
-#### ARTICLE 3 - DISCLOSURE
-
-We may disclose your personal information if we are required by law to do so or if you violate our Terms and Conditions of Sale and Use.
+Si nous vous demandons de nous fournir vos renseignements personnels pour une autre raison, à des fins de marketing par exemple, nous vous demanderons directement votre consentement explicite, ou nous vous donnerons la possibilité de refuser.
 
 
-#### ARTICLE 4 - SHOP
+#### Comment puis-je retirer mon consentement?
 
-Our shop is hosted on our servers.
+Si après nous avoir donné votre consentement, vous changez d’avis et ne consentez plus à ce que nous puissions vous contacter, recueillir vos renseignements ou les divulguer, vous pouvez nous en aviser en nous contactant à contact@thingmill.fr ou par courrier à:
 
-Your data is stored in RetroBox's data storage system and databases.
-
-Payment:
-
-If you make your purchase through a direct payment gateway, in this case RetroBox will store your credit card information. This information is encrypted in accordance with the data security standard established by the Payment Card Industry (PCI-DSS). Information about your purchase transaction is retained for as long as necessary to finalize your order. Once your order is finalized, the details of the purchase transaction are deleted.
-
-All direct payment gateways comply with PCI-DSS, which is managed by the PCI Security Standards Board, and is the result of joint efforts by companies such as Visa, MasterCard, American Express, and Discover.
-
-The PCI-DSS requirements ensure the secure processing of credit card data by our store and service providers.
-
-For more information, please see the RetroBox Terms of Use [here](/terms).
+Thingmill 1 chemin de badoire, Heloup, 61250, France
 
 
-#### ARTICLE 5 - SERVICES PROVIDED BY THIRD PARTIES
+#### ARTICLE 3 – DIVULGATION
+
+Nous pouvons divulguer vos renseignements personnels si la loi nous oblige à le faire ou si vous violez nos Conditions Générales de Vente et d’Utilisation.
 
 
-In general, the third-party providers we use will only collect, use and disclose your information to the extent necessary to perform the services they provide to us.
+#### ARTICLE 4 – BOUTIQUE
 
-However, some third-party service providers, such as payment gateways and other payment transaction processors, have their own privacy policies regarding the information we are required to provide to them for your purchase transactions.
+Notre boutique est hébergée sur nos serveurs.
 
-With respect to these providers, we recommend that you read their privacy policies carefully so that you understand how they will treat your personal information.
+Vos données sont stockées dans le système de stockage de données et les bases de données de RetroBox.
 
-It should be remembered that some providers may be located or have facilities located in a different jurisdiction than you or ours. So if you decide to pursue a transaction that requires the services of a third-party provider, your information could then be governed by the laws of the jurisdiction in which that provider is located or those of the jurisdiction in which its facilities are located.
+Paiement:
 
-For example, if you are located in Canada and your transaction is processed through a US-based payment gateway, your proprietary information that was used to complete the transaction could be disclosed under US law. United States, including the Patriot Act.
+Si vous réalisez votre achat par le biais d’une passerelle de paiement direct, dans ce cas RetroBox stockera vos renseignements de carte de crédit. Ces renseignements sont chiffrés conformément à la norme de sécurité des données établie par l’industrie des cartes de paiement (norme PCI-DSS). Les renseignements relatifs à votre transaction d’achat sont conservés aussi longtemps que nécessaire pour finaliser votre commande. Une fois votre commande finalisée, les renseignements relatifs à la transaction d’achat sont supprimés.
 
-Once you leave the site of our shop or you are redirected to the website or the application of a third party, you are no longer governed by this Privacy Policy or by the General Terms and Conditions of Sale. Use of our website.
+Toutes les passerelles de paiement direct respectent la norme PCI-DSS, gérée par le conseil des normes de sécurité PCI, qui résulte de l’effort conjoint d’entreprises telles que Visa, MasterCard, American Express et Discover.
 
+Les exigences de la norme PCI-DSS permettent d’assurer le traitement sécurisé des données de cartes de crédit par notre boutique et par ses prestataires de services.
 
-Links
-
-You may have to leave our website by clicking on some links on our site. We do not assume any responsibility for the privacy practices of these other sites and recommend that you read their privacy policies carefully.
-
-
-#### ARTICLE 6 - SECURITY
-
-To protect your personal information, we take reasonable precautions and follow industry best practices to ensure that they are not lost, misappropriated, accessed, disclosed, altered, or destroyed in an inappropriate manner.
-
-If you provide us with your credit card information, they will be encrypted through the use of the SSL security protocol and kept with AES-256 type encryption. Although no method of Internet transmission or electronic storage is 100% secure, we follow all the PCI-DSS requirements and implement additional standards generally recognized by the industry.
-FILES WITNESSES (COOKIES)
-
-Here is a list of cookies that we use. We have listed them here so that you have the opportunity to choose whether you want to allow them or not.
-
-#### ARTICLE 7 - AGE OF CONSENT
-
-By using this site, you represent that you are at least the age of majority in your state or province of residence, and that you have given us your consent to allow any dependent minor to use this Website. website.
+Pour plus d’informations, veuillez consulter les Conditions d’Utilisation de RetroBox [ici](/terms).
 
 
-#### ARTICLE 8 - AMENDMENTS TO THIS PRIVACY POLICY
+#### ARTICLE 5 – SERVICES FOURNIS PAR DES TIERS
 
-We reserve the right to modify this Privacy Policy at any time, so please check it frequently. Changes and clarifications will be effective immediately upon posting on the website. If we make any changes to the content of this policy, we will notify you here that it has been updated so that you know what information we collect, how we use it, and under what circumstances we disclose it to you. it is necessary to do it.
 
-If our store is being acquired by or through a merger with another company, your information may be transferred to new owners so that we may continue to sell you products.
+De manière générale, les fournisseurs tiers que nous utilisons vont uniquement recueillir, utiliser et divulguer vos renseignements dans la mesure du nécessaire pour pouvoir réaliser les services qu’ils nous fournissent.
 
-#### QUESTIONS AND CONTACT
+Cependant, certains tiers fournisseurs de services, comme les passerelles de paiement et autres processeurs de transactions de paiement, possèdent leurs propres politiques de confidentialité quant aux renseignements que nous sommes tenus de leur fournir pour vos transactions d’achat.
 
-If you wish to: access, correct, modify or delete any personal information we have about you, file a complaint, or simply want more information, contact our privacy officer at contact@thingmill.fr or by mail to Thingmill:
+En ce qui concerne ces fournisseurs, nous vous recommandons de lire attentivement leurs politiques de confidentialité pour que vous puissiez comprendre la manière dont ils traiteront vos renseignements personnels.
 
-[Re: Privacy Standards Officer]
+Il ne faut pas oublier que certains fournisseurs peuvent être situés ou avoir des installations situées dans une juridiction différente de la vôtre ou de la nôtre. Donc si vous décidez de poursuivre une transaction qui requiert les services d’un fournisseur tiers, vos renseignements pourraient alors être régis par les lois de la juridiction dans laquelle ce fournisseur se situe ou celles de la juridiction dans laquelle ses installations sont situées.
+
+À titre d’exemple, si vous êtes situé au Canada et que votre transaction est traitée par une passerelle de paiement située aux États-Unis, les renseignements vous appartenant qui ont été utilisés pour conclure la transaction pourraient être divulgués en vertu de la législation des États-Unis, y compris le Patriot Act.
+
+Une fois que vous quittez le site de notre boutique ou que vous êtes redirigé vers le site web ou l’application d’un tiers, vous n’êtes plus régi par la présente Politique de Confidentialité ni par les Conditions Générales de Vente et d’Utilisation de notre site web.
+
+
+Liens
+
+Vous pourriez être amené à quitter notre site web en cliquant sur certains liens présents sur notre site. Nous n’assumons aucune responsabilité quant aux pratiques de confidentialité exercées par ces autres sites et vous recommandons de lire attentivement leurs politiques de confidentialité.
+
+
+#### ARTICLE 6 – SÉCURITÉ
+
+Pour protéger vos données personnelles, nous prenons des précautions raisonnables et suivons les meilleures pratiques de l’industrie pour nous assurer qu’elles ne soient pas perdues, détournées, consultées, divulguées, modifiées ou détruites de manière inappropriée.
+
+Si vous nous fournissez vos informations de carte de crédit, elles seront chiffrées par le biais de l’utilisation du protocole de sécurisation SSL et conservées avec un chiffrement de type AES-256. Bien qu’aucune méthode de transmission sur Internet ou de stockage électronique ne soit sûre à 100 %, nous suivons toutes les exigences de la norme PCI-DSS et mettons en œuvre des normes supplémentaires généralement reconnues par l’industrie.
+FICHIERS TÉMOINS (COOKIES)
+
+Voici une liste de fichiers témoins que nous utilisons. Nous les avons énumérés ici pour que vous ayez la possibilité de choisir si vous souhaitez les autoriser ou non.
+
+#### ARTICLE 7 – ÂGE DE CONSENTEMENT
+
+En utilisant ce site, vous déclarez que vous avez au moins l’âge de la majorité dans votre État ou province de résidence, et que vous nous avez donné votre consentement pour permettre à toute personne d’âge mineur à votre charge d’utiliser ce site web.
+
+
+#### ARTICLE 8 – MODIFICATIONS APPORTÉES À LA PRÉSENTE POLITIQUE DE CONFIDENTIALITÉ
+
+Nous nous réservons le droit de modifier la présente politique de confidentialité à tout moment, donc veuillez s’il vous plait la consulter fréquemment. Les changements et les clarifications prendront effet immédiatement après leur publication sur le site web. Si nous apportons des changements au contenu de cette politique, nous vous aviserons ici qu’elle a été mise à jour, pour que vous sachiez quels renseignements nous recueillons, la manière dont nous les utilisons, et dans quelles circonstances nous les divulguons, s’il y a lieu de le faire.
+
+Si notre boutique fait l’objet d’une acquisition par ou d’une fusion avec une autre entreprise, vos renseignements pourraient être transférés aux nouveaux propriétaires pour que nous puissions continuer à vous vendre des produits.
+
+
+#### QUESTIONS ET COORDONNÉES
+
+Si vous souhaitez: accéder à, corriger, modifier ou supprimer toute information personnelle que nous avons à votre sujet, déposer une plainte, ou si vous souhaitez simplement avoir plus d’informations, contactez notre agent responsable des normes de confidentialité à contact@thingmill.fr ou par courrier à Thingmill :
+
+[Re: Agent des Normes de Confidentialité]
 
 [1 chemin de badoire, Heloup, 61250, France]
 
