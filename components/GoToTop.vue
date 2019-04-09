@@ -50,7 +50,7 @@
     data: () => ({
       show: false
     }),
-    created() {
+    mounted () {
       window.onscroll = () => {
         this.show = document.body.scrollTop > 20 || document.documentElement.scrollTop > 20;
       };

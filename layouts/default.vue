@@ -48,8 +48,8 @@
           {{ $t('close') }}
         </div>
       </modal>
+      <GoToTop />
     </no-ssr>
-    <GoToTop />
   </div>
 </template>
 <script>
