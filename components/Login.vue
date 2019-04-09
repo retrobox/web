@@ -133,12 +133,12 @@
       goToDashboard: function () {
         this.$modal.hide('loginOrRegister');
         this.$modal.show('login');
-        window.location = process.env.USER_DASHBOARD_ENDPOINT
+        window.location = this.$env.USER_DASHBOARD_ENDPOINT
       },
       goToAdminDashboard: function () {
         this.$modal.hide('loginOrRegister');
         this.$modal.show('login');
-        window.location = process.env.ADMIN_DASHBOARD_ENDPOINT
+        window.location = this.$env.ADMIN_DASHBOARD_ENDPOINT
       }
     }
   }
