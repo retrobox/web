@@ -11,13 +11,18 @@
         margin: 0 auto;
       }
     }
-    .downloads-discord-container {
-      width: 100%;
-      display: flex;
+    .os-desktop, .os-mobile {
       justify-content: center;
-      iframe {
-        margin: 0 auto;
-        width: 95%;
+      .os-desktop-item {
+        margin-right: 0;
+        width: 100%;
+      }
+      .os-mobile-item {
+        margin-right: 0;
+        width: 100%;
+      }
+      .os-desktop-item {
+        margin-bottom: 2em;
       }
     }
   }

@@ -1,82 +1,74 @@
 .downloads {
   display: flex;
   justify-content: center;
+  padding-top: 0.5em;
   .downloads-content {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
     padding-top: 2em;
     padding-bottom: 2em;
     color: #2c3e50;
     text-align: center;
+  }
 
-    .downloads-discord-container {
+  .os-desktop, .os-mobile {
 
-      iframe {
-        width: 350px;
+    .os-desktop-item, .os-mobile-item {
+        margin-right: 3em;
+        &:last-of-type {
+          margin-right: 0;
+        }
+    }
+    padding-top: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    .text {
+      font-size: 1.2em;
+    }
+    .icon {
+      font-size: 4em;
+      padding: 0.25em;
+      &:hover {
+        cursor: pointer;
+        color: #2779bd;
+        transition: color 0.3s ease-in-out;
       }
     }
-
-    .os-icon {
-      font-size: 3em;
-      display: flex;
-      padding: 0.25em;
-      justify-content: center;
-    }
-
-    .os-text {
-      display: flex;
-    }
-    .win-text {
-     padding-right: 3.5em;
-     padding-left: 3em;
-    }
-    .lin-text {
-      padding-left: 7.5em;
-    }
-
-    .win-icon:hover {
-      color: #2779bd;
-      transition: color 0.3s ease-in-out;
-    }
-    .mac-icon:hover {
-      color: #2779bd;
-      transition: color 0.3s ease-in-out;
-    }
-    .lin-icon:hover {
-      color: #2779bd;
-      transition: color 0.3s ease-in-out;
-    }
-    .android-icon:hover {
-      color: #2779bd;
-      transition: color 0.3s ease-in-out;
-    }
-    .ios-icon:hover {
-      color: #2779bd;
-      transition: color 0.3s ease-in-out;
-    }
-
-    .coming-soon {
-      text-align: center;
-    }
-
-    .downloads-title-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      justify-content: flex-start;
-      padding-right: 2em;
-    }
-    .downloads-title {
-      font-weight: 200;
-      font-size: 2.3em;
-      margin-bottom: 0.8em;
-    }
-    .downloads-description {
-        font-size: 1.1em;
-    }
   }
-  .downloads-discord-container {
+
+  .os-mobile {
+    margin-top: 1em;
+    justify-content: center;
+    .os-mobile-item {
+      margin-right: 2em;
+    }
+
+  }
+
+  .coming-soon {
+    text-align: center;
+    margin-top: 1.5em;
+  }
+
+  .downloads-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 2em;
+  }
+  .downloads-title {
+    font-weight: 200;
+    font-size: 2.3em;
+    margin-bottom: 0.8em;
+  }
+  .downloads-description {
+    font-size: 1.1em;
+  }
+
+  .downloads-container {
     margin-top: 1em;
   }
+
 }
