@@ -19,6 +19,16 @@
     .image-header {
       display: none;
     }
+
+    .docs-section {
+      display: grid;
+      grid-column-gap: 0;
+      grid-template-columns: 100%;
+      img {
+        margin: 2em auto 0;
+        width: 80%;
+      }
+    }
   }
 
   img {
