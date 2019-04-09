@@ -43,15 +43,23 @@
             <div class="navigation">
               <ul class="list-reset flex justify-between">
                 <li class="mr-3">
-                  <a class="inline-block py-2 px-4 text-grey-light cursor-not-allowed disabled">{{ $t('previous') }}</a>
+                  <a class="inline-block py-2 px-4 text-grey-light cursor-not-allowed disabled">
+                    <Icon
+                      left
+                      value="fas fa-backward" />
+                    {{ $t('previous') }}
+                  </a>
                 </li>
                 <li class="mr-3">
                 </li>
                 <li class="mr-3">
                   <nuxt-link
                     :to="'/docs/' + items[0].slug"
-                    class="inline-block border border-blue rounded py-2 px-4 bg-blue hover:bg-blue-dark text-white">
+                    class="inline-block border flex border-blue rounded py-2 px-4 bg-blue hover:bg-blue-dark text-white">
                     {{ $t('next') }}
+                    <Icon
+                      right
+                      value="fas fa-forward" />
                   </nuxt-link>
                 </li>
               </ul>
