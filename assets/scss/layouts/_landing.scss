@@ -1,9 +1,9 @@
 $landing-main-section-height: 78vh;
-$landing-main-section-opacity: 0.8;
+$landing-main-section-opacity: 0.5;
 
 .landing-main {
   margin-top: -$landing-main-section-height;
-  background-color: rgba(52, 73, 94, $landing-main-section-opacity);
+  background-color: rgba(30, 36, 38, $landing-main-section-opacity);
   display: flex;
   width: 100%;
   height: $landing-main-section-height;
@@ -58,7 +58,7 @@ $landing-main-section-opacity: 0.8;
         @extend .bg-blue-dark;
       }
       @extend .text-white;
-      @extend .font-bold;
+      @extend .font-semibold;
       @extend .py-4;
       @extend .px-8;
       @extend .rounded-full;
@@ -75,12 +75,12 @@ $landing-main-section-opacity: 0.8;
 .landing-main-back {
   background-size: cover;
   height: $landing-main-section-height;
-  background-image: url(https://i.imgur.com/sb5ORZw.jpg)
+  background-image: url(https://i.imgur.com/sb5ORZw.jpg);
 }
 
 .landing-section {
-  margin-top: 2em;
   border-top: 1px solid rgba(189, 195, 199, 1.0);
+  background-color : #1e2426;
   width: 100%;
 }
 .landing-section-no-border {
@@ -100,7 +100,7 @@ Landing about
   justify-content: center;
   align-items: center;
   box-shadow: 1px 1px 8px #000000;
-  background-image: linear-gradient(to right bottom, #82ccdd, #60a6bf, #4181a0, #255e81, #0a3d62);
+  background-color: #1e2426;
   .landing-about-content {
     color: #ecf0f1;
     margin-top: 6em;
@@ -221,7 +221,7 @@ Landing advantages
   justify-content: center;
   box-shadow: 1px 1px 8px #000000;
   align-items: center;
-  background-image: linear-gradient(to right bottom, #6a89cc, #536eb0, #3d5495, #263b7b, #0c2461);
+  background-color: #1e2426;
   .landing-advantages-content {
     text-align: center;
     color: #ecf0f1;
@@ -273,7 +273,7 @@ landing start **/
 }
 
 .landing-startnow-title {
-  color: #2c3e50;
+  color: #ecf0f1;
   text-align: center;
 }
 
