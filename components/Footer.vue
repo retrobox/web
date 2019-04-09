@@ -1,6 +1,5 @@
 <template>
   <div class="footer">
-    <section class="landing-section landing-bottom"></section>
     <div class="partnership-container">
       <div class="partnership-content container mx-auto">
         <a
@@ -38,7 +37,6 @@
         </a>
       </div>
     </div>
-    <section class="landing-section landing-bottom"></section>
     <Newsletter />
     <div class="footer-container">
       <div class="colored-divider-container">

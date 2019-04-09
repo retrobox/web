@@ -19,7 +19,7 @@ $opacity: 0.8;
 
       a, .button {
         color: rgba(34, 47, 62, 0.7) !important;
-        font-weight: 200;
+        font-weight: 400;
       }
       a:hover, .button:hover {
         transition: color 0.1s ease-in-out;
@@ -67,14 +67,15 @@ $opacity: 0.8;
     height: 84px;
     overflow: hidden;
     margin-top: -84px;
-    background-image: linear-gradient(to right, rgba(242, 242, 242, 0.4), rgba(185, 185, 185, 0.5), rgba(119, 119, 119, 0.6), rgba(59, 59, 59, 0.7), rgba(44, 62, 80, $opacity));
+    background-image: linear-gradient(90deg,hsla(0,0%,95%,.2),hsla(0,0%,73%,.2),hsla(0,0%,47%,.2),rgba(59,59,59,.2),rgba(44,62,80,.8));
 
     //background-color: rgba(44, 62, 80, 0.6);
   }
   .header-content {
     a {
-      color: #ecf0f1;
+      color: white;
       text-decoration: none;
+      font-weight: 500;
     }
     a:hover {
       text-decoration: none;
@@ -139,6 +140,7 @@ $opacity: 0.8;
       display: flex;
       align-content: center;
       line-height: 3em;
+
       .nav-item {
         margin-left: 2em;
       }
@@ -167,6 +169,7 @@ $opacity: 0.8;
       display: flex;
       align-items: center;
       color: #ecf0f1;
+      font-weight: 400;
       ul {
         display: flex;
         padding-left: 8px;
