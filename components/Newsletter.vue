@@ -66,6 +66,7 @@ export default {
         this.$apitator.post('/newsletter/subscribe', {
           email: this.email
         }).then(() => {
+          this.email = ''
           this.$store.commit('ADD_ALERT', {
             type: 'success',
             title: this.$t('newsletter.success.title'),
