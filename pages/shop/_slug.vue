@@ -16,24 +16,6 @@
         <ShopHeader/>
         <div class="shop-item-container">
           <div class="buy">
-            <ul
-              v-if="item.show_version"
-              class="list-reset flex border-b buy-nav">
-              <!-- <li class="-mb-px mr-1">
-                <a class="bg-white inline-block border-l border-t border-r rounded-t py-2 px-4 text-blue-dark font-semibold" href="#">Version kité</a>
-              </li> -->
-              <li
-                v-for="link in item.category.items"
-                :key="link.id"
-                :class="{'-mb-px': link.id === item.id }"
-                class="mr-1">
-                <nuxt-link
-                  :class="{'text-blue-dark font-semibold border-l border-t border-r rounded-t': link.id === item.id }"
-                  :to="'/shop/' + link.slug"
-                  class="bg-white inline-block py-2 px-4 text-blue hover:text-blue-darker">{{ link.version }}
-                </nuxt-link>
-              </li>
-            </ul>
             <div class="buy-content">
               <div class="buy-description-container">
                 <!-- <h3 class="buy-title">Retrobox, console</h3> -->
@@ -54,7 +36,7 @@
                         :class="{'selected': selectedStorage === storage}"
                         class="buy-custom-item"
                         @click="selectStorage(storage)">
-                        {{ storage }} Gb
+                        {{ storage }} Go
                       </div>
                     </div>
                   </div>
@@ -74,6 +56,31 @@
                     </div>
                   </div>
                 </div>
+
+                <div class="buy-custom-type">
+                  <div class="buy-custom-title">{{ $t('shop.item.custom.model') }}</div>
+                  <div class="buy-custom-mosaic">
+                    <ul
+                      v-if="item.show_version"
+                      class="">
+                      <!-- <li class="-mb-px mr-1">
+                        <a class="bg-white inline-block border-l border-t border-r rounded-t py-2 px-4 text-blue-dark font-semibold" href="#">Version kité</a>
+                      </li> -->
+                      <li
+                        v-for="link in item.category.items"
+                        :key="link.id"
+                        :class="{'-mb-px': link.id === item.id }"
+                        class="mr-1 model">
+                        <nuxt-link
+                          :class="{'selected': link.id === item.id }"
+                          :to="'/shop/' + link.slug"
+                          class="">{{ link.version }}
+                        </nuxt-link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
                 <div class="buy-price">
                   <span>€ {{ price }}</span>
                 </div>
@@ -186,13 +193,14 @@
         ],
         //in hex
         colors: [
-          {color: "#ff0000", name: this.$t('shop.item.custom.colors.red')},
-          {color: "#ffff00", name: this.$t('shop.item.custom.colors.yellow')},
-          {color: "#00ff00", name: this.$t('shop.item.custom.colors.green')},
-          {color: "#0000ff", name: this.$t('shop.item.custom.colors.blue')},
-          {color: "#9400d3", name: this.$t('shop.item.custom.colors.purple')}
+          {color: "#ff4c4c", name: this.$t('shop.item.custom.colors.red')},
+          {color: "#ffff66", name: this.$t('shop.item.custom.colors.yellow')},
+          {color: "#68ff66", name: this.$t('shop.item.custom.colors.green')},
+          {color: "#6666ff", name: this.$t('shop.item.custom.colors.blue')},
+          {color: "#ffffff", name: this.$t('shop.item.custom.colors.white')},
+          {color: "#4c4c4c", name: this.$t('shop.item.custom.colors.black')}
         ],
-        selectedColor: "#ff0000",
+        selectedColor: "#ff4c4c",
         main: [],
         not_main: [],
         //showed price
