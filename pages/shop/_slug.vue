@@ -54,7 +54,7 @@
                         :class="{'selected': selectedStorage === storage}"
                         class="buy-custom-item"
                         @click="selectStorage(storage)">
-                        {{ storage }} Gb
+                        {{ storage }} GB
                       </div>
                     </div>
                   </div>

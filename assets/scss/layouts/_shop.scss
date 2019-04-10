@@ -219,30 +219,32 @@
       }
 
       .buy-custom-mosaic.button-colors {
-        .buy-custom-item {
-          border-radius: 50%;
-          border: 0px solid #B8C2CC;
-          margin-right: 0.5em;
+        .buy-custom-item {   
+          margin-right: .5em;
           width: 2em;
           height: 2em;
+          border-radius: 7px;
+          border-width: medium;
+          border-color: #0003;
         }
         .buy-custom-item.selected {
-            border: 4px solid #B8C2CC;
+          opacity: 1;
+          transition: opacity .2s;
         }
       }
       .buy-custom-mosaic.storage {
         .buy-custom-item {
+          border: 2px solid #34495e;
           border-radius: 15px;
           padding: 8px;
-          margin-right: 0.5em;
-          @extend .bg-grey-light;
+          margin-right: .5em;
         }
 
       }
 
       .buy-custom-item {
-        opacity: 0.6;
-        transition: 0.2s opacity;
+        opacity: 1;
+          transition: opacity .2s;
       }
       .buy-custom-item.selected {
         opacity: 1;
