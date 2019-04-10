@@ -80,9 +80,10 @@ $landing-main-section-opacity: 0.5;
 
 .landing-section {
   border-top: 1px solid rgba(189, 195, 199, 1.0);
-  background-color : #1e2426;
+  background-color: #1e2426;
   width: 100%;
 }
+
 .landing-section-no-border {
   border: 0;
 }
@@ -193,7 +194,7 @@ Landing columns
       i {
         color: white;
         font-size: 1.5em;
-        filter: drop-shadow(0px 0px 3px rgba(0,0,0,.5));
+        filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, .5));
       }
     }
     .landing-column-content {
@@ -280,4 +281,13 @@ landing start **/
 .landing-bottom {
   margin-bottom: 2em;
   box-shadow: 1px 1px 12px #000000;
+}
+
+.landing-error {
+  .error-content {
+    color: #FAFAFA !important;
+  }
+  border-top: 1px solid #bdc3c7;
+  background-color: #1e2426;
+  padding-bottom: 6vh;
 }

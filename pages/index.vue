@@ -151,6 +151,7 @@
     <Error
       :title="$t('coming-soon-video.title')"
       :description="$t('coming-soon-video.description')"
+      class="landing-error"
       icon="fab fa-youtube"
     />
 
