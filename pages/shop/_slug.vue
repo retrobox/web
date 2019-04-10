@@ -54,7 +54,7 @@
                         :class="{'selected': selectedStorage === storage}"
                         class="buy-custom-item"
                         @click="selectStorage(storage)">
-                        {{ storage }} GB
+                        {{ storage }} Go
                       </div>
                     </div>
                   </div>
@@ -74,6 +74,22 @@
                     </div>
                   </div>
                 </div>
+                <div class="buy-custom-type">
+                  <div class="buy-custom-title">{{$t('shop.item.custom.model')}}</div>
+                  <div class="buy-custom-mosaic">
+                        <ul class="list-reset" v-if="item.show_version">
+                          <!-- <li class="-mb-px mr-1">
+                            <a class="bg-white inline-block border-l border-t border-r rounded-t py-2 px-4 text-blue-dark font-semibold" href="#">Version kité</a>
+                          </li> -->
+                          <li class="mr-1" style="display: inline" v-for="link in item.category.items"
+                            v-bind:class="{'-mb-px': link.id == item.id }">
+                          <a class="model"
+                            v-bind:class="{'selected': link.id == item.id }"
+                            @click="$router.push({name: 'ShopItem', params: {slug:link.slug}})">{{link.version}}</a>
+                          </li>
+                        </ul>
+                      </div>
+                  </div>
                 <div class="buy-price">
                   <span>€ {{ price }}</span>
                 </div>
@@ -186,13 +202,14 @@
         ],
         //in hex
         colors: [
-          {color: "#ff0000", name: this.$t('shop.item.custom.colors.red')},
-          {color: "#ffff00", name: this.$t('shop.item.custom.colors.yellow')},
-          {color: "#00ff00", name: this.$t('shop.item.custom.colors.green')},
-          {color: "#0000ff", name: this.$t('shop.item.custom.colors.blue')},
-          {color: "#9400d3", name: this.$t('shop.item.custom.colors.purple')}
+          {color: "#ff4c4c", name: this.$t('shop.item.custom.colors.red')},
+          {color: "#ffff66", name: this.$t('shop.item.custom.colors.yellow')},
+          {color: "#68ff66", name: this.$t('shop.item.custom.colors.green')},
+          {color: "#6666ff"", name: this.$t('shop.item.custom.colors.blue')},
+          {color: "#ffffff", name: this.$t('shop.item.custom.colors.white')}
+          {color: "#4c4c4c", name: this.$t('shop.item.custom.colors.black')}
         ],
-        selectedColor: "#ff0000",
+        selectedColor: "#ff4c4c",
         main: [],
         not_main: [],
         //showed price
