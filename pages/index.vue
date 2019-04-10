@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="landing-back">
     <div class="landing-main-back"></div>
     <div class="landing-main">
       <div class="landing-main-content">
@@ -24,7 +24,7 @@
 
     <section
       id="go"
-      class="landing-section landing-about landing-section-no-border">
+      class="landing-section first-landing landing-about landing-section-no-border">
       <div class="landing-about-content">
         <div class="landing-about-text">
           <h2 class="landing-about-title">{{ $t('landing.about.title') }}</h2>
@@ -38,10 +38,24 @@
       </div>
     </section>
 
-    <section class="landing-divider-background-container">
+    <section class="landing-divider-background-container second-landing">
       <div class="landing-divider-background-image"></div>
-      <div class="landing-divider-background-filter"></div>
     </section>
+
+    <section
+      id="go"
+      class="landing-section thirth-landing landing-about landing-section-no-border">
+      <div class="landing-about-content">
+        <div class="landing-about-text">
+          <h2 class="landing-about-title">{{ $t('landing.about-us.title') }}</h2>
+          <p>
+            {{ $t('landing.about-us.description') }}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    
 
     <section class="landing-section landing-advantages landing-section-no-border">
       <div class="landing-advantages-content">

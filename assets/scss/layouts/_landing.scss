@@ -71,11 +71,13 @@ $landing-main-section-opacity: 0.5;
     }
   }
 }
-
+.landing-back {
+  background-color: #1e2426;
+}
 .landing-main-back {
   background-size: cover;
   height: $landing-main-section-height;
-  background-image: url(https://i.imgur.com/sb5ORZw.jpg);
+  background-image: url(https://static.retrobox.tech/img/marketing/marketing_3.png);
 }
 
 .landing-section {
@@ -88,11 +90,19 @@ $landing-main-section-opacity: 0.5;
   border: 0;
 }
 
+.second-landing {
+  clip-path: polygon(0 90%,100% 100%,100% 10%,0 0);
+}
+
+.thirth-landing {
+  background: linear-gradient(90deg,#93278f,#00a99d 95%);
+  clip-path: polygon(0 90%,100% 100%,100% 10%,0 0);
+}
+
 /**
 Landing about
 **/
 .landing-about {
-  clip-path: polygon(100% 0%, 0px 0px, 0px 100%, 100% 90%);
   margin-top: -.5em;
   margin-bottom: -4.5em;
   padding-top: 2em;
@@ -101,7 +111,10 @@ Landing about
   justify-content: center;
   align-items: center;
   box-shadow: 1px 1px 8px #000000;
-  background-color: #1e2426;
+
+  .first-landing {
+    background-color: #1e2426;
+  }
   .landing-about-content {
     color: #ecf0f1;
     margin-top: 6em;
@@ -128,13 +141,13 @@ Landing about
   }
 }
 
-$landing-divider-height: 30vh;
+$landing-divider-height: 70vh;
 
 .landing-divider-background-container {
   .landing-divider-background-image {
     background-size: cover;
     height: $landing-divider-height;
-    background-image: url(https://i.imgur.com/sb5ORZw.jpg)
+    background-image: url(https://static.retrobox.tech/img/marketing/marketing_1.png)
   }
   .landing-divider-background-filter {
     height: $landing-divider-height;
@@ -214,7 +227,6 @@ Landing columns
 Landing advantages
 **/
 .landing-advantages {
-  clip-path: polygon(100% 0%, 0px 85px, 0px 100%, 100.00% 100%);
   padding-top: 4em;
   margin-top: -6em;
   margin-bottom: 0;
