@@ -21,7 +21,7 @@
         </div>
       </transition>
     </div>
-    <div class="content-container-bottom"></div>
+    <!--<div class="content-container-bottom"></div>-->
     <Footer />
     <no-ssr>
       <modal
