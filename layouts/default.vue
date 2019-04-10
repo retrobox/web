@@ -21,7 +21,9 @@
         </div>
       </transition>
     </div>
-    <!--<div class="content-container-bottom"></div>-->
+    <div
+      v-if="$route.name !== 'index'"
+      class="content-container-bottom"></div>
     <Footer />
     <no-ssr>
       <modal
