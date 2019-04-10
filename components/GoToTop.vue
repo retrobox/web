@@ -3,7 +3,7 @@
     <transition
       name="main-transition">
       <div
-        :class="{ 'visible': show }"
+        :class="{ 'visible': show, 'bottom': atBottom }"
         class="go-to-top"
         @click="goToTop()">
         <Icon value="fas fa-arrow-up"/>
@@ -36,6 +36,10 @@
     opacity: 0.75;
     transition: opacity 0.5s;
   }
+
+  .go-to-top.bottom {
+    bottom: 6em;
+  }
 </style>
 <script>
   import Icon from "./Icon"
@@ -43,11 +47,14 @@
   export default {
     components: {Icon},
     data: () => ({
-      show: false
+      show: false,
+      atBottom: false
     }),
     mounted () {
       window.onscroll = () => {
         this.show = document.body.scrollTop > 20 || document.documentElement.scrollTop > 20;
+        let position = window.scrollY
+        this.atBottom = Math.ceil((position / (document.body.clientHeight - document.documentElement.clientHeight)) * 100) >= 98
       };
     },
     methods: {
