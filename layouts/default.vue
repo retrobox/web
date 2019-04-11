@@ -83,9 +83,6 @@
         } else {
           this.$modal.hide('modalAlert')
         }
-      },
-      '$store.state.hasNuxtError': function () {
-        console.log(this.$store.state.hasNuxtError)
       }
     },
     mounted () {
