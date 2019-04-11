@@ -1,57 +1,61 @@
 <template>
   <div>
-    <Header />
-    <div class="content-container">
-      <transition
-        name="main-transition">
-        <div
-          v-if="$store.state.isLoading"
-          :key="$store.state.isLoading"
-          class="loading-container">
-          <div class="loading">
-            <Icon
-              value="fas fa-sync"
-              spin />
-          </div>
+    <transition name="main-transition">
+      <div v-show="$store.state.showBody">
+        <Header />
+        <div class="content-container">
+          <transition
+            name="main-transition">
+            <div
+              v-if="$store.state.isLoading"
+              :key="$store.state.isLoading"
+              class="loading-container">
+              <div class="loading">
+                <Icon
+                  value="fas fa-sync"
+                  spin />
+              </div>
+            </div>
+            <div
+              v-if="$store.state.isLoading === false"
+              :key="$store.state.isLoading">
+              <nuxt/>
+            </div>
+          </transition>
         </div>
         <div
-          v-if="$store.state.isLoading === false"
-          :key="$store.state.isLoading">
-          <nuxt/>
-        </div>
-      </transition>
-    </div>
-    <div
-      v-if="$route.name !== 'index' || $store.state.hasNuxtError === true"
-      class="content-container-bottom"></div>
-    <Footer />
-    <no-ssr>
-      <modal
-        name="modalAlert"
-        class="modal alert-modal">
-        <div class="alert-container modal-container">
-          <div class="alert-content">
-            <Icon
-              v-if="$store.state.alert.type === 'error'"
-              class="text-red"
-              value="fas fa-exclamation-circle" />
-            <Icon
-              v-if="$store.state.alert.type === 'success'"
-              class="text-green"
-              value="fas fa-check-circle" />
-            <h3 class="alert-title">{{ $store.state.alert.title }}</h3>
-            <p>{{ $store.state.alert.description }}</p>
-          </div>
-        </div>
+          v-if="$route.name !== 'index' || $store.state.hasNuxtError === true"
+          class="content-container-bottom"></div>
+        <Footer />
+        <no-ssr>
+          <modal
+            name="modalAlert"
+            class="modal alert-modal">
+            <div class="alert-container modal-container">
+              <div class="alert-content">
+                <Icon
+                  v-if="$store.state.alert.type === 'error'"
+                  class="text-red"
+                  value="fas fa-exclamation-circle" />
+                <Icon
+                  v-if="$store.state.alert.type === 'success'"
+                  class="text-green"
+                  value="fas fa-check-circle" />
+                <h3 class="alert-title">{{ $store.state.alert.title }}</h3>
+                <p>{{ $store.state.alert.description }}</p>
+              </div>
+            </div>
 
-        <div
-          class="button bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 cancel-button"
-          @click="$store.commit('REMOVE_ALERT')">
-          {{ $t('close') }}
-        </div>
-      </modal>
-      <GoToTop />
-    </no-ssr>
+            <div
+              class="button bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 cancel-button"
+              @click="$store.commit('REMOVE_ALERT')">
+              {{ $t('close') }}
+            </div>
+          </modal>
+          <GoToTop />
+        </no-ssr>
+      </div>
+    </transition>
   </div>
 </template>
 <script>
@@ -101,6 +105,10 @@
       } else {
         this.$i18n.locale = this.$cookie.get('locale')
       }
+
+      setTimeout(() => {
+        this.$store.commit('SHOW_BODY', true)
+      }, 300)
     }
   }
 </script>
