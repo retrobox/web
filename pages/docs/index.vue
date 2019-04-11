@@ -20,23 +20,21 @@
       </div>
       <div class="container mx-auto">
         <div class="article">
-          <div class="docs-nav">
-            <nav>
+          <div class="docs-nav sidebar">
+            <nav class="sidebar-inner">
               <div class="nav-item active">
                 <nuxt-link to="/docs">{{ $t('home') }}</nuxt-link>
               </div>
-              <div v-if="item.is_divider === false">
-                <div
-                  v-for="item in items"
-                  :key="item.slug"
-                  :class="{'nav-item-divider':item.is_divider}"
-                  class="nav-item">
-                  <nuxt-link :to="'/docs/' + item.slug">{{ item.name }}</nuxt-link>
-                </div>
+              <div
+                v-for="item in items"
+                :key="item.slug"
+                :class="{'nav-item-divider':item.is_divider}"
+                class="nav-item">
+                <nuxt-link :to="'/docs/' + item.slug">{{ item.name }}</nuxt-link>
               </div>
             </nav>
           </div>
-          <div class="docs-content">
+          <div class="docs-content sidebar-main-content">
             <div
               class="content doc-page-content"
               v-html="content">
@@ -77,6 +75,7 @@
   import axios from "axios"
   import Icon from "../../components/Icon"
   import * as marked from "marked"
+
   export default {
     name: 'DocumentationHome',
     components: {Icon},
