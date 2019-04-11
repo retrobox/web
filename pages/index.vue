@@ -44,8 +44,11 @@
 
     <section
       id="divider"
-      class="landing-section thirth-landing landing-about landing-section-no-border">
+      class="landing-section thirth-landing landing-about landing-section-no-border  landing-about-2">
       <div class="landing-about-content">
+        <div class="landing-about-pic">
+          <img src="https://static.retrobox.tech/img/about/RETROBOX1.png">
+        </div>
         <div class="landing-about-text">
           <h2 class="landing-about-title">{{ $t('landing.about-us.title') }}</h2>
           <p>
