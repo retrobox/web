@@ -22,7 +22,7 @@
       </transition>
     </div>
     <div
-      v-if="$route.name !== 'index'"
+      v-if="$route.name !== 'index' || $store.state.hasNuxtError === true"
       class="content-container-bottom"></div>
     <Footer />
     <no-ssr>
@@ -83,6 +83,9 @@
         } else {
           this.$modal.hide('modalAlert')
         }
+      },
+      '$store.state.hasNuxtError': function () {
+        console.log(this.$store.state.hasNuxtError)
       }
     },
     mounted () {

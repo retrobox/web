@@ -25,7 +25,10 @@ export default {
     }
   },
   created () {
-    console.log(this.error)
+    this.$store.commit('SET_HAS_NUXT_ERROR', true)
+  },
+  destroyed () {
+    this.$store.commit('SET_HAS_NUXT_ERROR', false)
   }
 }
 </script>

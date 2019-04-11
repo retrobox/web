@@ -23,7 +23,8 @@ export const state = () => ({
   },
   cart: [],
   shipping_total_price: 0,
-  loginRedirectRoute: ''
+  loginRedirectRoute: '',
+  hasNuxtError: false
 });
 
 import jwtDecode from "jwt-decode"
@@ -100,6 +101,9 @@ export const mutations = {
   },
   SET_LOGIN_REDIRECT_ROUTE (state, payload) {
     state.loginRedirectRoute = payload
+  },
+  SET_HAS_NUXT_ERROR (state, payload) {
+    state.hasNuxtError = payload
   }
 };
 
