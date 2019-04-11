@@ -1,7 +1,5 @@
 html {
   scroll-behavior: smooth;
-  // temporary
-  overflow-x: hidden;
 }
 body,
 * {
@@ -10,8 +8,6 @@ body,
 body {
   margin-bottom: -20px;
   background-color: white;
-  // temporary
-  overflow-x: hidden;
 }
 
 pre {
