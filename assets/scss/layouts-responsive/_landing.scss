@@ -30,8 +30,18 @@ $landing-main-section-height: 80vh;
   clip-path: polygon(100% 0%, 0px 0px, 0px 100%, 100% 95%);
   //margin-top: -5.5em;
   margin-bottom: -5.5em;
-
+  .landing-about-content {
+    margin-top: 3em;
+  }
   .landing-about-pic {
+    margin-top: 2em;
+  }
+}
+
+.landing-about-2 {
+  margin-top: 2.5em;
+  margin-bottom: 3em;
+  .landing-about-content {
     margin-top: 2em;
   }
 }

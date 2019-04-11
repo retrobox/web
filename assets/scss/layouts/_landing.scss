@@ -144,7 +144,13 @@ Landing about
 
 .landing-about-2 {
   .landing-about-content {
-    grid-template-columns: 1fr 58%;
+    grid-template-columns: 40% 1fr;
+  }
+  .landing-about-pic {
+    img {
+      border-radius: 15%;
+      box-shadow: 1px 1px 20px 4px rgba(0, 0, 0, 0.4);
+    }
   }
 }
 
