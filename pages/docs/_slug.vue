@@ -25,12 +25,13 @@
                 <div class="nav-item">
                   <nuxt-link to="/docs">{{ $t('home') }}</nuxt-link>
                 </div>
-                <div
-                  v-for="item in items"
-                  v-if="item.is_divider === false"
-                  :key="item.slug"
-                  :class="{'active': item.slug === $route.params.slug, 'nav-item': true, 'nav-item-divider': item.is_divider}">
-                  <nuxt-link :to="'/docs/' + item.slug">{{ item.name }}</nuxt-link>
+                <div v-if="item.is_divider === false">
+                  <div
+                    v-for="item in items"
+                    :key="item.slug"
+                    :class="{'active': item.slug === $route.params.slug, 'nav-item': true, 'nav-item-divider': item.is_divider}">
+                    <nuxt-link :to="'/docs/' + item.slug">{{ item.name }}</nuxt-link>
+                  </div>
                 </div>
               </nav>
             </div>
