@@ -43,7 +43,7 @@
     </section>
 
     <section
-      id="go"
+      id="divider"
       class="landing-section thirth-landing landing-about landing-section-no-border">
       <div class="landing-about-content">
         <div class="landing-about-text">
