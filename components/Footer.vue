@@ -70,7 +70,7 @@
                   {{ $t('shop.title') }}
                 </LinkTo>
               </li>
-              
+
               <li>
                 <LinkTo to="/community">
                   {{ $t('community.title') }}
@@ -128,6 +128,9 @@
               </li>
               <li>
                 <nuxt-link to="/legals">{{ $t('legals') }}</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/credits">{{ $t('credits') }}</nuxt-link>
               </li>
             </ul>
           </div>
