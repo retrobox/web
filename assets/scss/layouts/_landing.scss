@@ -152,6 +152,10 @@ Landing about
       box-shadow: 1px 1px 20px 4px rgba(0, 0, 0, 0.4);
     }
   }
+  .landing-about-text {
+    display: flex;
+    align-items: center;    
+  }
 }
 
 $landing-divider-height: 70vh;

@@ -50,10 +50,12 @@
           <img src="https://static.retrobox.tech/img/about/hand.png">
         </div>
         <div class="landing-about-text">
-          <h2 class="landing-about-title">{{ $t('landing.about-us.title') }}</h2>
-          <p>
-            {{ $t('landing.about-us.description') }}
-          </p>
+          <div>
+            <h2 class="landing-about-title">{{ $t('landing.about-us.title') }}</h2>
+            <p>
+              {{ $t('landing.about-us.description') }}
+            </p>        
+          </div>
         </div>
       </div>
     </section>
