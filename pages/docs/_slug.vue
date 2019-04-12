@@ -26,7 +26,7 @@
                   <nuxt-link to="/docs">{{ $t('home') }}</nuxt-link>
                 </div>
                 <div
-                  v-for="item in items"
+                  v-for="item in tree"
                   :key="item.slug"
                   :class="{'active': item.slug === $route.params.slug, 'nav-item': true, 'nav-item-divider': item.is_divider}">
                   <nuxt-link :to="'/docs/' + item.slug">{{ item.name }}</nuxt-link>
@@ -42,18 +42,17 @@
               <div class="navigation">
                 <ul class="list-reset flex justify-between">
                   <li class="mr-3">
-                    <nuxt-link
-                      v-if="actual_index > 0"
-                      :to="'/docs/' + items[actual_index - 1].slug"
-                      class="inline-block flex border border-blue rounded py-2 px-4 bg-blue hover:bg-blue-dark text-white">
+                    <a
+                      v-if="previous == null"
+                      class="inline-block flex py-2 px-4 text-grey-light cursor-not-allowed disabled">
                       <Icon
                         left
                         value="fas fa-backward" />
                       {{ $t('previous') }}
-                    </nuxt-link>
+                    </a>
                     <nuxt-link
-                      v-if="actual_index === 0"
-                      :to="'/docs'"
+                      v-if="previous !== null"
+                      :to="/docs/ + previous.slug"
                       class="inline-block flex border border-blue rounded py-2 px-4 bg-blue hover:bg-blue-dark text-white">
                       <Icon
                         left
@@ -65,7 +64,7 @@
                   </li>
                   <li class="mr-3">
                     <a
-                      v-if="actual_index === items.length - 1"
+                      v-if="next === null"
                       class="inline-block flex py-2 px-4 text-grey-light cursor-not-allowed disabled">
                       {{ $t('next') }}
                       <Icon
@@ -73,8 +72,8 @@
                         value="fas fa-forward" />
                     </a>
                     <nuxt-link
-                      v-if="actual_index !== items.length - 1"
-                      :to="'/docs/' + items[actual_index + 1].slug"
+                      v-if="next !== null"
+                      :to="/docs/ + next.slug"
                       class="inline-block flex border border-blue rounded py-2 px-4 bg-blue hover:bg-blue-dark text-white">
                       {{ $t('next') }}
                       <Icon
@@ -96,7 +95,7 @@
   import marked from "marked"
   import Icon from "../../components/Icon"
   export default {
-    name: 'DocumentationHome',
+    name: 'DocumentationPage',
     components: {Icon},
     head () {
       return {
@@ -111,9 +110,12 @@
         content: '',
         loading: true,
         title: '',
-        items: [],
+        tree: [],
         actual_item: {},
-        actual_index: 0
+        actual_index: 0,
+        next: {},
+        previous: {},
+        slug: ''
       }
     },
     watch: {
@@ -127,30 +129,27 @@
     created () {
       // this.fetchData()
     },
-    async asyncData (context) {
-      let response = await context.$axios.get(context.app.$env.DOCS_ENDPOINT + '/config.json')
-      let locale = response.data.locales.filter((item) => {
-        return item.slug === context.app.i18n.locale
-      })[0]
-      let items = locale.tree.map((item) => {
-        item.is_divider = item.type === 'divider';
-        return item
+    asyncData (context) {
+      return new Promise((resolve) => {
+          let slug = context.params.slug == undefined ? 'home' : context.params.slug
+          context.$axios.get(context.app.$env.API_ENDPOINT + '/docs/' + context.app.i18n.locale + '/' + slug).then((response) => {
+            let result = {
+              content: marked(response.data.data.content),
+              loading: false,
+              slug: response.data.data.slug,
+              tree: response.data.data.tree,
+              next: response.data.data.next,
+              previous: response.data.data.previous,
+              title: response.data.data.title
+            }
+            return resolve(result)
+          })
       })
-      let title = locale.tree.filter((item) => {
-        return item.slug === context.params.slug
-      })[0].name
-      let actual_item = items.filter(item => {
-        return item.slug === context.params.slug
-      })[0]
-      let actual_index = items.indexOf(actual_item)
-      response = await context.$axios.get(context.app.$env.DOCS_ENDPOINT + '/content/' + context.app.i18n.locale + '/' + context.params.slug + '.md');
-      return {
-        content: marked(response.data),
-        loading: false,
-        items: items,
-        actual_index: actual_index,
-        actual_item: actual_item,
-        title: title
+      
+    },
+    methods: {
+      parseBody: function () {
+        
       }
     }
   }
