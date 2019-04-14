@@ -1,23 +1,25 @@
 $opacity: 0.9;
+$newsletterHeight: 18em;
 //noinspection ALL
 .newsletter-back {
   margin-top: 1.5em;
-  height: 258.6px;
+  height: $newsletterHeight;
   background: rgba(236, 240, 241, 0.7) url('../images/back.jpg');
   background-size: cover;
 }
 .newsletter-container {
-  height: 258.6px;
+  height: $newsletterHeight;
   width: 100%;
-  margin-top: -258.6px;
+  margin-top: -$newsletterHeight;
   background-color: rgba(44, 62, 80, 0.6);
+  display: flex;
+  align-items: center;
   .newsletter-content {
     display: flex;
     justify-content: center;
     text-align: center;
     padding-top: 4em;
     padding-bottom: 4em;
-    padding-left: 1em;
 
     .newsletter-title-container {
       color: #FFF;
@@ -28,11 +30,13 @@ $opacity: 0.9;
     }
     .newsletter-form {
       width: 100%;
-      display: flex;
+      display: grid;
+      grid-row-gap: .5em;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
       .newsletter-form-input {
-        margin-right: 1.1em;
+        margin-right: 0;
         input {
           @extend .bg-grey-lighter;
           transition: 0.2s background-color;
@@ -48,9 +52,12 @@ $opacity: 0.9;
           margin-right: 1em;
         }
       }
-      .newsletter-form-button .button {
-        padding-top: 0.6em;
-        padding-bottom: 0.6em;
+      .newsletter-form-button {
+        width: 100%;
+        .button {
+          padding-top: 0.6em;
+          padding-bottom: 0.6em;
+        }
       }
     }
   }
