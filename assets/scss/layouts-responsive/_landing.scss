@@ -39,10 +39,14 @@ $landing-main-section-height: 80vh;
 }
 
 .landing-about-2 {
-  margin-top: 2.5em;
+  margin-top: -2.5em;
   margin-bottom: 3em;
   .landing-about-content {
     margin-top: 2em;
+  }
+  .landing-about-pic {
+    margin-top: 0;
+    margin-bottom: 2em;
   }
 }
 
@@ -63,6 +67,7 @@ $landing-main-section-height: 80vh;
 }
 
 .landing-advantages .landing-advantages-content {
+  margin-top: 4em;
   width: 90%;
 }
 
