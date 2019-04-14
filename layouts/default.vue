@@ -63,6 +63,8 @@
   import Footer from "../components/Footer"
   import Icon from "../components/Icon"
   import GoToTop from "../components/GoToTop"
+  import Aos from 'aos'
+  import 'aos/dist/aos.css'
   export default {
     components: {GoToTop, Icon, Footer, Header},
     head () {
@@ -109,6 +111,13 @@
       setTimeout(() => {
         this.$store.commit('SHOW_BODY', true)
       }, 300)
+
+      if (!this.$isServer) {
+        Aos.init()
+        setTimeout(() => {
+          Aos.refresh()
+        }, 300)
+      }
     }
   }
 </script>

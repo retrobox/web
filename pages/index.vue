@@ -25,8 +25,11 @@
     <section
       id="go"
       class="landing-section first-landing landing-about landing-section-no-border">
-      <div class="landing-about-content">
-        <div class="landing-about-text">
+      <div
+        class="landing-about-content"
+        data-aos="zoom-in">
+        <div
+          class="landing-about-text">
           <h2 class="landing-about-title">{{ $t('landing.about.title') }}</h2>
           <p>
             {{ $t('landing.about.description') }}
@@ -45,7 +48,9 @@
     <section
       id="divider"
       class="landing-section thirth-landing landing-about landing-section-no-border  landing-about-2">
-      <div class="landing-about-content">
+      <div
+        class="landing-about-content"
+        data-aos="fade-left">
         <div class="landing-about-pic">
           <img src="https://static.retrobox.tech/img/about/hand.png">
         </div>
@@ -54,112 +59,124 @@
             <h2 class="landing-about-title">{{ $t('landing.about-us.title') }}</h2>
             <p>
               {{ $t('landing.about-us.description') }}
-            </p>        
+            </p>
           </div>
         </div>
       </div>
     </section>
-
-
 
     <section class="landing-section landing-advantages landing-section-no-border">
       <div class="landing-advantages-content">
         <h2 class="landing-advantages-title">
           {{ $t('landing.advantages.title') }}
         </h2>
-        <div class="landing-columns">
-          <div class="landing-column">
-            <div class="landing-column-icon">
-              <div class="type-game">
-                <Icon value="fas fa-gamepad"/>
-              </div>
-            </div>
-            <div class="landing-column-content max-w-sm rounded overflow-hidden shadow-lg">
-              <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2 title">{{ $t('landing.advantages.game.title') }}
+        <div>
+          <div class="landing-columns">
+            <div
+              class="landing-column"
+              data-aos="fade-in">
+              <div class="landing-column-icon">
+                <div class="type-game">
+                  <Icon value="fas fa-gamepad"/>
                 </div>
-                <p class="text-grey-darker text-base">
-                  {{ $t('landing.advantages.game.description') }}
-                </p>
               </div>
-            </div>
-          </div>
-          <div class="landing-column">
-            <div class="landing-column-icon">
-              <div class="type-custom">
-                <Icon value="fas fa-screwdriver"/>
-              </div>
-            </div>
-            <div class="landing-column-content max-w-sm rounded overflow-hidden shadow-lg">
-              <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2 title">{{ $t('landing.advantages.custom.title') }}</div>
-                <p class="text-grey-darker text-base">
-                  {{ $t('landing.advantages.custom.description') }}
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="landing-column">
-            <div class="landing-column-icon">
-              <div class="type-connected">
-                <Icon value="fas fa-tachometer-alt"/>
-              </div>
-            </div>
-            <div class="landing-column-content max-w-sm rounded overflow-hidden shadow-lg">
-              <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2 title">{{ $t('landing.advantages.connected.title') }}
+              <div class="landing-column-content max-w-sm rounded overflow-hidden shadow-lg">
+                <div class="px-6 py-4">
+                  <div class="font-bold text-xl mb-2 title">{{ $t('landing.advantages.game.title') }}
+                  </div>
+                  <p class="text-grey-darker text-base">
+                    {{ $t('landing.advantages.game.description') }}
+                  </p>
                 </div>
-                <p class="text-grey-darker text-base">
-                  {{ $t('landing.advantages.connected.description') }}
-                </p>
               </div>
             </div>
-          </div>
-          <div class="landing-column">
-            <div class="landing-column-icon">
-              <div class="type-switch">
-                <Icon value="fas fa-tv"/>
-              </div>
-            </div>
-            <div class="landing-column-content max-w-sm rounded overflow-hidden shadow-lg">
-              <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2 title">{{ $t('landing.advantages.switch.title') }}
+            <div
+              class="landing-column"
+              data-aos="fade-in">
+              <div class="landing-column-icon">
+                <div class="type-custom">
+                  <Icon value="fas fa-screwdriver"/>
                 </div>
-                <p class="text-grey-darker text-base">
-                  {{ $t('landing.advantages.switch.description') }}
-                </p>
               </div>
-            </div>
-          </div>
-          <div class="landing-column">
-            <div class="landing-column-icon">
-              <div class="type-easy">
-                <Icon value="fas fa-gamepad"/>
-              </div>
-            </div>
-            <div class="landing-column-content max-w-sm rounded overflow-hidden shadow-lg">
-              <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2 title">{{ $t('landing.advantages.easy.title') }}
+              <div class="landing-column-content max-w-sm rounded overflow-hidden shadow-lg">
+                <div class="px-6 py-4">
+                  <div class="font-bold text-xl mb-2 title">{{ $t('landing.advantages.custom.title') }}</div>
+                  <p class="text-grey-darker text-base">
+                    {{ $t('landing.advantages.custom.description') }}
+                  </p>
                 </div>
-                <p class="text-grey-darker text-base">
-                  {{ $t('landing.advantages.easy.description') }}
-                </p>
               </div>
             </div>
-          </div>
-          <div class="landing-column">
-            <div class="landing-column-icon">
-              <div class="type-opensource">
-                <Icon value="fab fa-osi"/>
-              </div>
-            </div>
-            <div class="landing-column-content max-w-sm rounded overflow-hidden shadow-lg">
-              <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2 title">{{ $t('landing.advantages.opensource.title') }}
+            <div
+              class="landing-column"
+              data-aos="fade-in">
+              <div class="landing-column-icon">
+                <div class="type-connected">
+                  <Icon value="fas fa-tachometer-alt"/>
                 </div>
-                <p class="text-grey-darker text-base">
-                  {{ $t('landing.advantages.opensource.description') }}
-                </p>
+              </div>
+              <div class="landing-column-content max-w-sm rounded overflow-hidden shadow-lg">
+                <div class="px-6 py-4">
+                  <div class="font-bold text-xl mb-2 title">{{ $t('landing.advantages.connected.title') }}
+                  </div>
+                  <p class="text-grey-darker text-base">
+                    {{ $t('landing.advantages.connected.description') }}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="landing-column"
+              data-aos="fade-in">
+              <div class="landing-column-icon">
+                <div class="type-switch">
+                  <Icon value="fas fa-tv"/>
+                </div>
+              </div>
+              <div class="landing-column-content max-w-sm rounded overflow-hidden shadow-lg">
+                <div class="px-6 py-4">
+                  <div class="font-bold text-xl mb-2 title">{{ $t('landing.advantages.switch.title') }}
+                  </div>
+                  <p class="text-grey-darker text-base">
+                    {{ $t('landing.advantages.switch.description') }}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="landing-column"
+              data-aos="fade-in">
+              <div class="landing-column-icon">
+                <div class="type-easy">
+                  <Icon value="fas fa-gamepad"/>
+                </div>
+              </div>
+              <div class="landing-column-content max-w-sm rounded overflow-hidden shadow-lg">
+                <div class="px-6 py-4">
+                  <div class="font-bold text-xl mb-2 title">{{ $t('landing.advantages.easy.title') }}
+                  </div>
+                  <p class="text-grey-darker text-base">
+                    {{ $t('landing.advantages.easy.description') }}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="landing-column"
+              data-aos="fade-in">
+              <div class="landing-column-icon">
+                <div class="type-opensource">
+                  <Icon value="fab fa-osi"/>
+                </div>
+              </div>
+              <div class="landing-column-content max-w-sm rounded overflow-hidden shadow-lg">
+                <div class="px-6 py-4">
+                  <div class="font-bold text-xl mb-2 title">{{ $t('landing.advantages.opensource.title') }}
+                  </div>
+                  <p class="text-grey-darker text-base">
+                    {{ $t('landing.advantages.opensource.description') }}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -176,8 +193,12 @@
 
     <section class="landing-section landing-startnow">
       <div class="landing-startnow-content container mx-auto">
-        <h2 class="landing-startnow-title">{{ $t('landing.start_now.title') }}</h2>
-        <div class="landing-columns">
+        <h2
+          class="landing-startnow-title"
+          data-aos="fade-in">{{ $t('landing.start_now.title') }}</h2>
+        <div
+          class="landing-columns"
+          data-aos="fade-in">
           <div class="landing-column type-kited">
             <div class="landing-column-icon">
               <div>

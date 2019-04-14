@@ -80,6 +80,7 @@ module.exports = {
   plugins: [
     '~/plugins/i18n.js',
     '~/plugins/apitator.js',
+    {src: '~/plugins/aos.js', ssr: false},
     {src: '~/plugins/cookie.js', ssr: false},
     {src: '~/plugins/transition.js', ssr: false},
     {src: '~/plugins/modal.js', ssr: false},

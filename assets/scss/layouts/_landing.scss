@@ -72,6 +72,7 @@ $landing-main-section-opacity: 0.5;
   }
 }
 .landing-back {
+  overflow-x: hidden;
   padding-bottom: 1em;
   background-color: #1e2426;
 }
@@ -154,7 +155,7 @@ Landing about
   }
   .landing-about-text {
     display: flex;
-    align-items: center;    
+    align-items: center;
   }
 }
 
