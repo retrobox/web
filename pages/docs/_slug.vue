@@ -118,20 +118,9 @@
         slug: ''
       }
     },
-    watch: {
-      '$route' () {
-        // this.fetchData()
-      },
-      '$i18n.locale' () {
-        // this.fetchData()
-      }
-    },
-    created () {
-      // this.fetchData()
-    },
     asyncData (context) {
       return new Promise((resolve) => {
-          let slug = context.params.slug == undefined ? 'home' : context.params.slug
+          let slug = context.params.slug === undefined ? 'home' : context.params.slug
           context.$axios.get(context.app.$env.API_ENDPOINT + '/docs/' + context.app.i18n.locale + '/' + slug).then((response) => {
             let result = {
               content: marked(response.data.data.content),
@@ -145,12 +134,6 @@
             return resolve(result)
           })
       })
-      
-    },
-    methods: {
-      parseBody: function () {
-        
-      }
     }
   }
 </script>
