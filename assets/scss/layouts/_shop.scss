@@ -211,36 +211,39 @@
         margin-bottom: 0.9em;
       }
       .buy-custom-mosaic {
-          display: flex;
-          margin-left: 0.1em;
+        display: flex;
       }
       .buy-custom-item:hover {
         cursor: pointer;
       }
 
       .buy-custom-mosaic.button-colors {
-        .buy-custom-item {   
+        .buy-custom-item {
           margin-right: 0.5em;
           width: 2em;
           height: 2em;
           border-radius: 7px;
-          border-width: medium;
-          border-color: #0000004d;
-
+          border: medium solid #0000004d;
         }
         .buy-custom-item.selected {
         }
       }
       .buy-custom-mosaic.storage {
         .buy-custom-item {
-          border-color: #34495e;
-          border-width: 2px;
-          border-style: solid;
+          border: 2px solid #34495e;
           border-radius: 15px;
           padding: 8px;
           margin-right: 0.5em;
         }
+      }
 
+      .buy-custom-mosaic.model {
+        .buy-custom-item {
+          border: 2px solid #34495e;
+          border-radius: 15px;
+          padding: 8px;
+          margin-right: 0.5em;
+        }
       }
 
       .buy-custom-item {
@@ -257,31 +260,11 @@
         transition: 0.2s opacity;
       }
 
-
       margin-bottom: 1.5em;
     }
   }
 }
 
-.model {
-  border-color: #34495e;
-  border-width: 2px;
-  border-style: solid;
-  border-radius: 15px;
-  padding: 8px;
-  margin-right: 0.5em;
-  opacity: 0.6;
-  transition: 0.2s opacity;
-  display: inline;
-
-  .model.selected {
-  opacity: 1;
-  }
-}
-.model:hover {
-  opacity: 1;
-  transition: 0.2s opacity;
-}
 .quantity {
   width: 2.25em;
   border: 2px solid #34495ecc;
