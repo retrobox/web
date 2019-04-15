@@ -269,5 +269,9 @@
   "cookie-law": {
     "message": "This website uses cookies to ensure you get the best experience on our website.",
     "accept": "Got It!"
+  },
+  "menu": {
+    "open": "Open",
+    "close": "Close"
   }
 }

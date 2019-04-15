@@ -20,16 +20,36 @@
         </div>
         <div class="container mx-auto">
           <div class="article">
-            <div class="docs-nav">
+            <div
+              :class="{ 'docs-mobile-nav' : $store.state.isMobile }"
+              class="docs-nav">
               <nav>
-                <div class="nav-item">
-                  <nuxt-link to="/docs">{{ $t('home') }}</nuxt-link>
+                <div
+                  v-if="$store.state.isMobile && !docMobileMenu"
+                  class="nav-item"
+                  @click="docMobileMenu = !docMobileMenu">
+                  <a>
+                    <Icon value="fas fa-angle-double-down" /> {{ $t('menu.open') }}
+                  </a>
                 </div>
                 <div
-                  v-for="item in tree"
-                  :key="item.slug"
-                  :class="{'active': item.slug === $route.params.slug, 'nav-item': true, 'nav-item-divider': item.is_divider}">
-                  <nuxt-link :to="'/docs/' + item.slug">{{ item.name }}</nuxt-link>
+                  v-if="$store.state.isMobile && docMobileMenu"
+                  class="nav-item"
+                  @click="docMobileMenu = false">
+                  <a>
+                    <Icon value="fas fa-times-circle" /> {{ $t('menu.close') }}
+                  </a>
+                </div>
+                <div v-if="!$store.state.isMobile || docMobileMenu">
+                  <div class="nav-item">
+                    <nuxt-link to="/docs">{{ $t('home') }}</nuxt-link>
+                  </div>
+                  <div
+                    v-for="item in tree"
+                    :key="item.slug"
+                    :class="{'active': item.slug === $route.params.slug, 'nav-item': true, 'nav-item-divider': item.is_divider}">
+                    <nuxt-link :to="'/docs/' + item.slug">{{ item.name }}</nuxt-link>
+                  </div>
                 </div>
               </nav>
             </div>
@@ -115,7 +135,8 @@
         actual_index: 0,
         next: {},
         previous: {},
-        slug: ''
+        slug: '',
+        docMobileMenu: false
       }
     },
     asyncData (context) {

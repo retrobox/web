@@ -268,5 +268,9 @@
   "cookie-law": {
     "message": "Ce site web utilise des cookies pour fonctionner.",
     "accept": "Compris !"
+  },
+  "menu": {
+    "open": "Ouvrir",
+    "close": "Fermer"
   }
 }

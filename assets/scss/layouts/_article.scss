@@ -86,12 +86,22 @@
           }
         }
       }
-      :last-child {
-        border-bottom: 0;
-      }
     }
   }
 
+  .docs-nav.docs-mobile-nav {
+    margin-bottom: 0;
+    margin-top: 1em;
+
+    nav .nav-item a {
+      display: flex;
+      justify-content: center;
+
+      .icon {
+        margin-right: 1em;
+      }
+    }
+  }
 
   .doc-page-content {
     margin-top: 2em;
