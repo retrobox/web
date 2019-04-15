@@ -82,6 +82,11 @@
         }
       }
     },
+    data () {
+      return {
+        windowWidth: 0
+      }
+    },
     watch: {
       '$store.state.alert.enabled': function (status) {
         if (status) {
@@ -89,6 +94,9 @@
         } else {
           this.$modal.hide('modalAlert')
         }
+      },
+      'windowWidth': function (windowWidth) {
+        this.computeIsMobile(windowWidth)
       }
     },
     mounted () {
@@ -117,6 +125,20 @@
         setTimeout(() => {
           Aos.refresh()
         }, 300)
+
+        this.windowWidth = window.innerWidth
+        window.addEventListener('resize', () => {
+          this.windowWidth = window.innerWidth
+        })
+      }
+
+    },
+    methods: {
+      computeIsMobile: function (windowWidth) {
+        let isMobile = (windowWidth <= 700)
+        if (this.$store.state.isMobile !== isMobile) {
+          this.$store.commit('SET_IS_MOBILE', isMobile)
+        }
       }
     }
   }

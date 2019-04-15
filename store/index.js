@@ -25,7 +25,8 @@ export const state = () => ({
   shipping_total_price: 0,
   loginRedirectRoute: '',
   hasNuxtError: false,
-  showBody: false
+  showBody: false,
+  isMobile: false
 });
 
 import jwtDecode from "jwt-decode"
@@ -108,6 +109,9 @@ export const mutations = {
   },
   SHOW_BODY (state, payload) {
     state.showBody = payload
+  },
+  SET_IS_MOBILE: (state, value) => {
+    state.isMobile = value
   }
 };
 
