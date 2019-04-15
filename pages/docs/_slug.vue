@@ -25,32 +25,35 @@
               class="docs-nav">
               <nav>
                 <div
-                  v-if="$store.state.isMobile && !docMobileMenu"
+                  v-if="$store.state.isMobile"
                   class="nav-item"
                   @click="docMobileMenu = !docMobileMenu">
                   <a>
-                    <Icon value="fas fa-angle-double-down" /> {{ $t('menu.open') }}
+                    <span
+                      v-if="!docMobileMenu"
+                      :key="'1'">
+                      <Icon value="fas fa-angle-double-down" /> {{ $t('menu.open') }}
+                    </span>
+                    <span
+                      v-if="docMobileMenu"
+                      :key="'2'">
+                      <Icon value="fas fa-times-circle" /> {{ $t('menu.close') }}
+                    </span>
                   </a>
                 </div>
-                <div
-                  v-if="$store.state.isMobile && docMobileMenu"
-                  class="nav-item"
-                  @click="docMobileMenu = false">
-                  <a>
-                    <Icon value="fas fa-times-circle" /> {{ $t('menu.close') }}
-                  </a>
-                </div>
-                <div v-if="!$store.state.isMobile || docMobileMenu">
-                  <div class="nav-item">
-                    <nuxt-link to="/docs">{{ $t('home') }}</nuxt-link>
+                <transition name="main-transition">
+                  <div v-if="!$store.state.isMobile || docMobileMenu">
+                    <div class="nav-item">
+                      <nuxt-link to="/docs">{{ $t('home') }}</nuxt-link>
+                    </div>
+                    <div
+                      v-for="item in tree"
+                      :key="item.slug"
+                      :class="{'active': item.slug === $route.params.slug, 'nav-item': true, 'nav-item-divider': item.is_divider}">
+                      <nuxt-link :to="'/docs/' + item.slug">{{ item.name }}</nuxt-link>
+                    </div>
                   </div>
-                  <div
-                    v-for="item in tree"
-                    :key="item.slug"
-                    :class="{'active': item.slug === $route.params.slug, 'nav-item': true, 'nav-item-divider': item.is_divider}">
-                    <nuxt-link :to="'/docs/' + item.slug">{{ item.name }}</nuxt-link>
-                  </div>
-                </div>
+                </transition>
               </nav>
             </div>
             <div class="docs-content">
