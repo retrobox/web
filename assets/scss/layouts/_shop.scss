@@ -122,13 +122,19 @@
   @extend .max-w-sm;
   @extend .rounded;
   @extend .overflow-hidden;
-  @extend .shadow-lg;
+
   .shop-card-thumb {
+    @extend .overflow-hidden;
+  }
+  .shop-card-image {
     width: 100%;
     height: 13em;
     background-size: cover;
     background-position-y: 50%;
     @extend .w-full;
+  }
+  .shop-card-image:hover {
+    transform: scale(1.25);
   }
   .shop-card-content {
     width: 18em;
@@ -137,6 +143,9 @@
 
     .shop-card-title {
       margin-left: 3px;
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: #34495e;
     }
     .shop-card-footer {
       display: flex;
@@ -146,14 +155,9 @@
       @extend .pt-4;
       .price {
         @extend .inline-block;
-        @extend .bg-grey-lighter;
-        @extend .rounded-full;
-        @extend .px-3;
-        @extend .py-1;
-        @extend .text-sm;
-        @extend .font-semibold;
-        @extend .text-grey-darker;
-        @extend .mr-2;
+        color: #2779bd;
+        font-weight: 500;
+        font-size: 1.5rem;
       }
     }
   }
