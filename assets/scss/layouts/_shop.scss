@@ -131,6 +131,7 @@
     height: 13em;
     background-size: cover;
     background-position-y: 50%;
+    transition: all 1s ease;
     @extend .w-full;
   }
   .shop-card-image:hover {
