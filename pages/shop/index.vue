@@ -45,8 +45,7 @@
                   :key="item.id"
                   class="shop-card"
                   @click="$router.push('/shop/' + item.slug)">
-                  <div 
-                  class="shop-card-thumb">
+                  <div class="shop-card-thumb">
                     <div
                       :style="'background-image: url(' + item.image + ')'"
                       class="shop-card-image"></div>
