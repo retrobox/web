@@ -7,9 +7,9 @@
       @mouseleave="anchorVisible = false"
     >
       <a
-        :href="'#' + id"
         :class="{'anchor-heading-visible': anchorVisible}"
-        class="anchor-heading">#</a>
+        class="anchor-heading"
+        @click="setAs()">#</a>
       {{ label }}
     </h2>
   </div>
@@ -47,10 +47,14 @@
     mounted() {
       if (window.location.hash === '#' + this.id) {
         setTimeout(() => {
-          console.log('match!')
           this.$scrollTo('#' + this.id)
-          console.log('scrolled to !')
         }, 1000)
+      }
+    },
+    methods: {
+      setAs: function () {
+        this.$scrollTo('#' + this.id)
+        window.location.hash = this.id
       }
     }
   }
