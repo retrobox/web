@@ -17,7 +17,14 @@ L’idée est apparu en classe de 4e (il y a 3 ans) au collège des Alpes Mancel
 
 Nous faisons plusieurs petites conventions pour promouvoir notre projet, dans notre lycée ou même dans de grand rassemblement ! Nous amenons tout le matériel nécessaire pour faire la présentation, diapo, discours, consoles etc. C'est toujours agréable d'apprendre aux personnes, de faire connaitre ce genre de projet ! Si vous aussi vous êtes intéressé, nous mettons souvent sur les réseaux sociaux les dates/emplacements des regroupements !
 
-<center style="margin-top:7em; margin-bottom: 7em">
+<center style="
+     margin-top: 1em;
+    margin-bottom: 1em;
+    align-self: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;">
   <img src="https://static.retrobox.tech/img/about/conventionalain1.jpg" width="30%">
-  <img src="https://static.retrobox.tech/img/about/conventionalain2.jpg" width="30%" style="transform: rotate(90deg);">
+  <img src="https://i.imgur.com/Nw0X49x.png">
 </center>
