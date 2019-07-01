@@ -1,0 +1,41 @@
+{
+  "tree": [
+    {
+      "slug": "home",
+      "name": "Documentation"
+    },
+    {
+      "slug": "getting-started",
+      "name": "Start with Retrobox"
+    },
+    {
+      "slug": "assemblage",
+      "name": "Soldering the composants"
+    },
+    {
+      "slug": "finishing",
+      "name": "Finishing"
+    },
+    {
+      "type": "page",
+      "slug": "installation",
+      "name": "Installation"
+    },
+    {
+      "slug": "questions",
+      "name": "Questions"
+    },
+    {
+      "slug": "troubleshouting",
+      "name": "Troubleshouting"
+    },
+    {
+      "slug": "manual-installation",
+      "name": "Manual installation"
+    },
+    {
+      "slug": "technical-specification",
+      "name": "Technical specification"
+    }
+  ]
+}

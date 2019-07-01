@@ -57,8 +57,12 @@ module.exports = {
 
   router: {
     middleware: ['i18n'],
-    scrollBehavior: function () {
-      return {x: 0, y: 0}
+    scrollBehavior: function (from, to) {
+      if (to.hash) {
+        return { selector: to.hash }
+      } else {
+        return { x: 0, y: 0 }
+      }
     }
   },
 
@@ -86,7 +90,8 @@ module.exports = {
     {src: '~/plugins/scrollTo.js', ssr: false},
     {src: '~/plugins/tooltip.js', ssr: false},
     {src: '~/plugins/stripe.js', ssr: false},
-    {src: '~/plugins/persistedState.js', ssr: false}
+    {src: '~/plugins/persistedState.js', ssr: false},
+    {src: '~/plugins/lazyLoad.js', ssr: false}
   ],
 
   /*

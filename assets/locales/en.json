@@ -273,5 +273,9 @@
   "menu": {
     "open": "Open",
     "close": "Close"
+  },
+  "components-explorer": {
+    "search": "Search in components list",
+    "empty": "No components..."
   }
 }

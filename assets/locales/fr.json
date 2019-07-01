@@ -272,5 +272,9 @@
   "menu": {
     "open": "Ouvrir",
     "close": "Fermer"
+  },
+  "components-explorer": {
+    "search": "Rechercher dans la liste des composants",
+    "empty": "Pas de composants..."
   }
 }

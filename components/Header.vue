@@ -23,7 +23,7 @@
                   </a>
                 </li>
                 <li>
-                  <a @click="mobileNavigate('/docs')">{{ $t('docs') }}</a>
+                  <a @click="mobileNavigate('/docs/home')">{{ $t('docs') }}</a>
                 </li>
                 <li>
                   <a @click="mobileNavigate('/downloads')">
@@ -139,7 +139,7 @@
             <nuxt-link to="/">{{ $t('home') }}</nuxt-link>
           </div>
           <div class="nav-item with-link">
-            <nuxt-link to="/docs">{{ $t('docs') }}</nuxt-link>
+            <nuxt-link to="/docs/home">{{ $t('docs') }}</nuxt-link>
           </div>
           <div class="nav-item with-link downloads-link">
             <nuxt-link to="/downloads">{{ $t('downloads.title') }}</nuxt-link>

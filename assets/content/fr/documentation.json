@@ -1,0 +1,41 @@
+{
+  "tree": [
+    {
+      "slug": "home",
+      "name": "Accueil"
+    },
+    {
+      "slug": "getting-started",
+      "name": "Démarrer avec la Retrobox"
+    },
+    {
+      "slug": "assemblage",
+      "name": "Souder les composants"
+    },
+    {
+      "slug": "finishing",
+      "name": "Finition"
+    },
+    {
+      "type": "page",
+      "slug": "installation",
+      "name": "Installation"
+    },
+    {
+      "slug": "questions",
+      "name": "Questions"
+    },
+    {
+      "slug": "troubleshouting",
+      "name": "Dépannage"
+    },
+    {
+      "slug": "manual-installation",
+      "name": "Installation manuelle"
+    },
+    {
+      "slug": "technical-specification",
+      "name": "Caractéristiques techniques"
+    }
+  ]
+}
