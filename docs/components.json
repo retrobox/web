@@ -1,0 +1,290 @@
+[
+  {
+    "name": {
+      "fr": "Ecran 3,2 pouces",
+      "en": ""
+    },
+    "quantity": 1,
+    "label": "3.2inch Screen"
+  },
+  {
+    "name": {
+      "fr": "Joystick avec le capuchon",
+      "en": ""
+    },
+    "quantity": 1,
+    "label": "JOY1"
+  },
+  {
+    "name": {
+      "fr": "DD06CVSA Charger Circuit (Le truc vert pour la gestion de la batterie)",
+      "en": ""
+    },
+    "quantity": 1,
+    "label": "Lipo Boost & Charger"
+  },
+  {
+    "name": {
+      "fr": "Mini HDMI vers HDMI + USB OTG",
+      "en": ""
+    },
+    "quantity": 1,
+    "label": false
+  },
+  {
+    "name": {
+      "fr": "Boutons 6x6x12mm",
+      "en": ""
+    },
+    "quantity": 3,
+    "label": "S3, S8, S9"
+  },
+  {
+    "name": {
+      "fr": "Jack 3,5mm",
+      "en": ""
+    },
+    "quantity": 1,
+    "label": "J1"
+  },
+  {
+    "name": {
+      "fr": "Bouton On/Off SK12D07",
+      "en": ""
+    },
+    "quantity": 1,
+    "label": "BTN_POWER"
+  },
+  {
+    "name": {
+      "fr": "MCP23017 GPIO",
+      "en": ""
+    },
+    "quantity": 1,
+    "label": "IC1"
+  },
+  {
+    "name": {
+      "fr": "Resistance de 10K",
+      "en": ""
+    },
+    "quantity": 4,
+    "label": "R8, R1, R2, R3"
+  },
+  {
+    "name": {
+      "fr": "LM339 Comparateur",
+      "en": ""
+    },
+    "quantity": 1,
+    "label": "U1"
+  },
+  {
+    "name": {
+      "fr": "Potentiometre 10k",
+      "en": ""
+    },
+    "quantity": 1,
+    "label": "B103"
+  },
+  {
+    "name": {
+      "fr": "Batterie de 3,7v 3000mAh",
+      "en": ""
+    },
+    "quantity": 1,
+    "label": false
+  },
+  {
+    "name": {
+      "fr": "Condensateur de 0,01µf",
+      "en": ""
+    },
+    "quantity": 2,
+    "label": "C16, C17"
+  },
+  {
+    "name": {
+      "fr": "Condensateur de 10µf",
+      "en": ""
+    },
+    "quantity": 2,
+    "label": "C4, C5"
+  },
+  {
+    "name": {
+      "fr": "Resistance de 270 Ohm",
+      "en": ""
+    },
+    "quantity": 2,
+    "label": "R18, R19"
+  },
+  {
+    "name": {
+      "fr": "Resistance de 150 Ohm",
+      "en": ""
+    },
+    "quantity": 2,
+    "label": "R16, R17"
+  },
+  {
+    "name": {
+      "fr": "Carte SD Sandisk 16go",
+      "en": ""
+    },
+    "quantity": 1,
+    "label": false
+  },
+  {
+    "name": {
+      "fr": "PAM8403 Amplificateur (3W)",
+      "en": ""
+    },
+    "quantity": 1,
+    "label": "AMP"
+  },
+  {
+    "name": {
+      "fr": "Prise micro USB",
+      "en": ""
+    },
+    "quantity": 1,
+    "label": "X3"
+  },
+  {
+    "name": {
+      "fr": "Dissipateur thermique",
+      "en": ""
+    },
+    "quantity": 1,
+    "label": false
+  },
+  {
+    "name": {
+      "fr": "USB Female Type A (Le plus gros USB)",
+      "en": ""
+    },
+    "quantity": 1,
+    "label": "X2"
+  },
+  {
+    "name": {
+      "fr": "Led 3mm (Verte de préference)",
+      "en": ""
+    },
+    "quantity": 1,
+    "label": "LED1"
+  },
+  {
+    "name": {
+      "fr": "Enceinte 8 Ohm 1W",
+      "en": ""
+    },
+    "quantity": 1,
+    "label": "SPEAKER"
+  },
+  {
+    "name": {
+      "fr": "12x12 Boutons",
+      "en": ""
+    },
+    "quantity": 4,
+    "label": "S6, S12, S13, S14"
+  },
+  {
+    "name": {
+      "fr": "Boutons angles droits 12x12",
+      "en": ""
+    },
+    "quantity": 2,
+    "label": "BTN_R, BTN_L"
+  },
+  {
+    "name": {
+      "fr": "Capuchons pour bouton 6x6",
+      "en": ""
+    },
+    "quantity": 3,
+    "label": false
+  },
+  {
+    "name": {
+      "fr": "Entretoises en nylon",
+      "en": ""
+    },
+    "quantity": 8,
+    "label": false
+  },
+  {
+    "name": {
+      "fr": "Chargeur 5V micro USB",
+      "en": ""
+    },
+    "quantity": 1,
+    "label": false
+  },
+  {
+    "name": {
+      "fr": "RetroBox PCB",
+      "en": ""
+    },
+    "quantity": 1,
+    "label": false
+  },
+  {
+    "name": {
+      "fr": "Plexiglass",
+      "en": ""
+    },
+    "quantity": 2,
+    "label": false
+  },
+  {
+    "name": {
+      "fr": "Une boîte, c'est plus pratique",
+      "en": ""
+    },
+    "quantity": 1,
+    "label": false
+  },
+  {
+    "name": {
+      "fr": "Raspberry Pi 0 W",
+      "en": ""
+    },
+    "quantity": 1,
+    "label": "RPI"
+  },
+  {
+    "name": {
+      "fr": "Deux petits support plaqué OR",
+      "en": ""
+    },
+    "quantity": 1,
+    "label": false
+  },
+  {
+    "name": {
+      "fr": "Un bout de scotch double faces de 3 cm",
+      "en": ""
+    },
+    "quantity": 1,
+    "label": false
+  },
+  {
+    "name": {
+      "fr": "Trois bouts de scotch double faces de 5 cm",
+      "en": ""
+    },
+    "quantity": 1,
+    "label": false
+  },
+  {
+    "name": {
+      "fr": "Flyers",
+      "en": ""
+    },
+    "quantity": 1,
+    "label": false
+  }
+]
