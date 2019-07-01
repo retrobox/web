@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>
+    <div v-if="!notFound">
       <div class="cover-title">
         <div class="cover-title-content container mx-auto">
           <h1>{{ title }}</h1>
@@ -95,15 +95,24 @@
         </div>
       </div>
     </div>
+    <div v-else>
+      <Error
+        :title="$t('not-found.title')"
+        :description="$t('not-found.description')"
+      />
+    </div>
   </div>
 </template>
 
 <script>
   import Icon from "../../components/Icon"
+  import Error from "../../components/Error"
 
   export default {
     name: 'DocumentationPage',
     components: {
+      Error,
+      Icon,
       'EnglishHome': () => import('../../docs/en/home'),
       'EnglishGettingStarted': () => import('../../docs/en/getting-started'),
       'FrenchHome': () => import('../../docs/fr/home'),
@@ -115,8 +124,7 @@
       'FrenchQuestions': () => import('../../docs/fr/questions'),
       'FrenchTroubleshooting': () => import('../../docs/fr/troubleshooting'),
       'FrenchManualInstallation': () => import('../../docs/fr/manual-installation'),
-      'FrenchTechnicalSpecification': () => import('../../docs/fr/technical-specification'),
-      Icon
+      'FrenchTechnicalSpecification': () => import('../../docs/fr/technical-specification')
     },
     head() {
       return {
@@ -138,7 +146,8 @@
         previous: null,
         slug: '',
         docMobileMenu: false,
-        currentComponent: ''
+        currentComponent: '',
+        notFound: false
       }
     },
     async asyncData(context) {
@@ -148,6 +157,11 @@
         slug = 'home'
       }
       let page = docsConfig.tree.filter((page) => page.slug === slug)[0]
+      if (page === undefined) {
+        return {
+          notFound: true
+        }
+      }
       let indexOf = docsConfig.tree.indexOf(page)
       let componentNameLetters = slug.split('')
       componentNameLetters = componentNameLetters.map((letter, index) => {
