@@ -65,7 +65,7 @@
   }
 
   .anchor-heading {
-    opacity: 0;
+    opacity: 0.8;
     float: left;
     margin-right: 0.5em;
     transition: .1s opacity !important;

@@ -9,8 +9,12 @@
       "name": "Start with Retrobox"
     },
     {
-      "slug": "assemblage",
-      "name": "Soldering the composants"
+      "slug": "tools",
+      "name": "Tools"
+    },
+    {
+      "slug": "assembly",
+      "name": "Assembly"
     },
     {
       "slug": "finishing",
@@ -26,8 +30,8 @@
       "name": "Questions"
     },
     {
-      "slug": "troubleshouting",
-      "name": "Troubleshouting"
+      "slug": "troubleshooting",
+      "name": "Troubleshooting"
     },
     {
       "slug": "manual-installation",

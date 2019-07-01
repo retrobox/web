@@ -108,6 +108,14 @@
       'EnglishGettingStarted': () => import('../../docs/en/getting-started'),
       'FrenchHome': () => import('../../docs/fr/home'),
       'FrenchGettingStarted': () => import('../../docs/fr/getting-started'),
+      'FrenchTools': () => import('../../docs/fr/tools'),
+      'FrenchAssembly': () => import('../../docs/fr/assembly'),
+      'FrenchFinishing': () => import('../../docs/fr/finishing'),
+      'FrenchInstallation': () => import('../../docs/fr/installation'),
+      'FrenchQuestions': () => import('../../docs/fr/questions'),
+      'FrenchTroubleshooting': () => import('../../docs/fr/troubleshooting'),
+      'FrenchManualInstallation': () => import('../../docs/fr/manual-installation'),
+      'FrenchTechnicalSpecification': () => import('../../docs/fr/technical-specification'),
       Icon
     },
     head() {

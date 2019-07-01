@@ -91,7 +91,8 @@ module.exports = {
     {src: '~/plugins/tooltip.js', ssr: false},
     {src: '~/plugins/stripe.js', ssr: false},
     {src: '~/plugins/persistedState.js', ssr: false},
-    {src: '~/plugins/lazyLoad.js', ssr: false}
+    {src: '~/plugins/lazyLoad.js', ssr: false},
+    {src: '~/plugins/highlight.js', ssr: false}
   ],
 
   /*

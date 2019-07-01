@@ -6,11 +6,15 @@
     },
     {
       "slug": "getting-started",
-      "name": "Démarrer avec la Retrobox"
+      "name": "Pour commencer"
     },
     {
-      "slug": "assemblage",
-      "name": "Souder les composants"
+      "slug": "tools",
+      "name": "Les outils nécessaires"
+    },
+    {
+      "slug": "assembly",
+      "name": "Assemblage"
     },
     {
       "slug": "finishing",
@@ -23,10 +27,10 @@
     },
     {
       "slug": "questions",
-      "name": "Questions"
+      "name": "Questions récurrentes"
     },
     {
-      "slug": "troubleshouting",
+      "slug": "troubleshooting",
       "name": "Dépannage"
     },
     {
