@@ -5,6 +5,8 @@ if (process.env.NODE_ENV !== 'production' || process.env.ENV_FILE == 'local') {
 
 const marked = require('marked')
 const renderer = new marked.Renderer();
+const join = require('path').join
+const tailwindJS = join(__dirname, 'tailwind.js')
 
 module.exports = {
   mode: 'universal',
@@ -147,6 +149,12 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
+      }
+    },
+    postcss: {
+      plugins: {
+        'tailwindcss': tailwindJS,
+        'autoprefixer': {}
       }
     }
   }
