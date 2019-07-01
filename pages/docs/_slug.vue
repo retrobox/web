@@ -159,7 +159,8 @@
       let page = docsConfig.tree.filter((page) => page.slug === slug)[0]
       if (page === undefined) {
         return {
-          notFound: true
+          notFound: true,
+          title: 'Not Found'
         }
       }
       let indexOf = docsConfig.tree.indexOf(page)
