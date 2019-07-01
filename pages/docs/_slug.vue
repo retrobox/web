@@ -143,9 +143,13 @@
     },
     async asyncData(context) {
       let docsConfig = require('../../assets/content/' + context.app.i18n.locale + '/documentation.json')
-      let page = docsConfig.tree.filter((page) => page.slug === context.params.slug)[0]
+      let slug = context.params.slug
+      if (slug === '' || slug === undefined) {
+        slug = 'home'
+      }
+      let page = docsConfig.tree.filter((page) => page.slug === slug)[0]
       let indexOf = docsConfig.tree.indexOf(page)
-      let componentNameLetters = context.params.slug.split('')
+      let componentNameLetters = slug.split('')
       componentNameLetters = componentNameLetters.map((letter, index) => {
         if (letter === '-') {
           return null;
