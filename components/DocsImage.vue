@@ -44,21 +44,13 @@
       }
     },
     data: () => ({
-      id: '',
-      width: 0,
-      height: 0
+      id: ''
     }),
     created() {
       this.id = Math.ceil(Math.random() * 10000);
     },
     methods: {
       onClick() {
-        let image = document.getElementById('image-' + this.id);
-        this.width = image.width + "px";
-        this.height = image.height;
-
-        console.log(this.width, this.height)
-
         this.$modal.show('imageModal' + this.id)
       }
     }
@@ -67,16 +59,13 @@
 
 <style lang="scss">
   .doc-image {
-
     .show-image-container {
       display: flex;
       justify-content: center;
       img {
         height: auto !important;
-
       }
     }
-
   }
 
   img[lazy='loaded'] {
