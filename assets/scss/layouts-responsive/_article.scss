@@ -31,6 +31,16 @@
     }
   }
 
+  .content {
+    .team-mosaic {
+      flex-wrap: wrap;
+      .team-item {
+        margin-right: 0;
+        margin-bottom: 1.5em;
+      }
+    }
+  }
+
   img {
     width: 100%;
     max-width: 100%;
