@@ -127,6 +127,12 @@
       });
       this.$store.commit('SET_TITLE', this.$t('shop.cart.title'))
     },
+    mounted () {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('checkout') === 'yes') {
+        this.checkout()
+      }
+    },
     methods: {
       toggleCart: function (item) {
         this.$store.commit('CART_TOGGLE', item);
@@ -146,9 +152,8 @@
       },
       checkout: function () {
         if (this.$cookie.get('user_token') == null) {
-          //call login function
-          let url = this.$router.resolve('/shop/shipping-details').href
-          this.$store.commit('SET_LOGIN_REDIRECT_ROUTE', window.location.origin + url)
+          // register a checkout flag for redirection after login
+          this.$router.push({ query: { checkout: 'yes' }})
           this.$modal.show('loginOrRegister')
         } else {
           this.$router.push('/shop/shipping-details')

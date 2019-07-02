@@ -27,14 +27,14 @@
         title: this.$t('shop.checkout.success.thanks')
       }
     },
-    created () {
-      this.$store.commit('EMPTY_CART');
+    mounted () {
       setTimeout(() => {
         this.$store.commit('ADD_ALERT', {
           type: 'success',
           title: this.$t('shop.checkout.success.title'),
           description: this.$t('shop.checkout.success.description')
         });
+        this.$store.commit('EMPTY_CART');
       }, 100)
     }
   }
