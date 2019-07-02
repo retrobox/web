@@ -3,7 +3,8 @@ EXPOSE 80
 RUN mkdir -p /app
 COPY . /app
 WORKDIR /app
-RUN npm install
+RUN npm i -g yarn
+RUN yarn
 RUN npm run build
 ENV HOST 0.0.0.0
 ENV PORT 80
