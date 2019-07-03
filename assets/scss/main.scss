@@ -33,6 +33,7 @@
 @import "layouts/_modal.scss";
 @import "layouts/_login.scss";
 @import "layouts/_contact-us.scss";
+@import "layouts/_account.scss";
 
 @media (max-width: 700px) {
   @import 'layouts-responsive/_article.scss';
@@ -49,5 +50,5 @@
   @import "layouts-responsive/_shop.scss";
   @import "layouts-responsive/_locales-selector.scss";
   @import "layouts-responsive/_login.scss";
-  //qdsdsq
+  @import "layouts-responsive/account.scss";
 }

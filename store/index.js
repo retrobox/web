@@ -75,6 +75,9 @@ export const mutations = {
       state.showRouterView = true
     }
   },
+  SET_IS_LOADING(state, payload) {
+    state.isLoading = payload
+  },
   ADD_ALERT(state, payload) {
     state.alert = {
       type: payload.type,

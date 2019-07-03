@@ -37,6 +37,8 @@
       </modal>
       <modal
         name="loginOrRegister"
+        height="auto"
+        adaptive
         class="modal login-or-register-modal">
         <div class="modal-container">
           <h3
@@ -132,8 +134,9 @@
       },
       goToDashboard: function () {
         this.$modal.hide('loginOrRegister');
-        this.$modal.show('login');
-        window.location = this.$env.USER_DASHBOARD_ENDPOINT
+        //this.$modal.show('login');
+        this.$router.push('/dashboard')
+        // window.location = this.$env.USER_DASHBOARD_ENDPOINT
       },
       goToAdminDashboard: function () {
         this.$modal.hide('loginOrRegister');

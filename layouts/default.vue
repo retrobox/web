@@ -1,27 +1,22 @@
 <template>
   <div>
     <transition name="main-transition">
-      <div v-show="$store.state.showBody">
+      <div>
         <Header />
         <div class="content-container">
-          <transition
-            name="main-transition">
-            <div
-              v-if="$store.state.isLoading"
-              :key="$store.state.isLoading"
-              class="loading-container">
-              <div class="loading">
-                <Icon
-                  value="fas fa-sync"
-                  spin />
-              </div>
+          <div
+            v-show="$store.state.isLoading"
+            class="loading-container">
+            <div class="loading">
+              <Icon
+                value="fas fa-sync"
+                spin />
             </div>
-            <div
-              v-if="$store.state.isLoading === false"
-              :key="$store.state.isLoading">
-              <nuxt/>
-            </div>
-          </transition>
+          </div>
+          <div
+            v-show="$store.state.isLoading === false">
+            <nuxt/>
+          </div>
         </div>
         <div
           v-if="$route.name !== 'index' || $store.state.hasNuxtError === true"
@@ -115,10 +110,6 @@
       } else {
         this.$i18n.locale = this.$cookie.get('locale')
       }
-
-      setTimeout(() => {
-        this.$store.commit('SHOW_BODY', true)
-      }, 300)
 
       if (!this.$isServer) {
         Aos.init()
