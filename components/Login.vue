@@ -24,6 +24,7 @@
     <no-ssr>
       <modal
         name="login"
+        adaptive
         class="modal login-modal">
         <div class="modal-container">
           <div class="login-loading-container">

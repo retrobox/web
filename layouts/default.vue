@@ -25,6 +25,7 @@
         <no-ssr>
           <modal
             name="modalAlert"
+            adaptive
             class="modal alert-modal">
             <div class="alert-container modal-container">
               <div class="alert-content">
