@@ -21,6 +21,7 @@
                 id="first_name"
                 v-model="user.first_name"
                 :placeholder="$t('shop.shipping_details.form.first_name_placeholder')"
+                autofocus
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
                 type="text">
             </div>
@@ -163,7 +164,7 @@
     },
     methods: {
       fetchDetails: function () {
-        console.log(this.$apitator.getAuthorizationToken())
+        //console.log(this.$apitator.getAuthorizationToken())
         this.$apitator.graphQL(
           `query ($id: String!){
             getOneUser(id: $id) {
