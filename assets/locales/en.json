@@ -219,7 +219,9 @@
           "yellow": "Yellow",
           "green": "Green",
           "blue": "Blue",
-          "purple": "Purple"
+          "purple": "Purple",
+          "white": "White",
+          "black": "Black"
         },
         "color": "Choose the color of the circuit board",
         "storage": "Size of internal storage"

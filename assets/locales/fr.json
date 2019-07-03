@@ -217,7 +217,9 @@
           "yellow": "Jaune",
           "green": "Vert",
           "blue": "Bleu",
-          "purple": "Violet"
+          "purple": "Violet",
+          "white": "Blanc",
+          "black": "Noir"
         },
         "color": "Couleur du circuit imprimé",
         "storage": "Taille du stockage interne",
