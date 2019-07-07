@@ -112,7 +112,7 @@
         if (this.$store.state.login_redirect_route !== '' && this.$store.state.login_redirect_route !== undefined) {
           url = this.$store.state.login_redirect_route
         }
-        this.$cookie.set('login_redirection_url', url);
+        this.$cookie.set('login_redirection_url', url, {domain: this.$env.COOKIE_DOMAIN});
         //request the api
         this.$apitator.get('/account/' + type).then((response) => {
           window.location = response.data.data.url
