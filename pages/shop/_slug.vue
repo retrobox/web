@@ -17,7 +17,7 @@
         <div class="shop-item-container">
           <div class="buy">
             <div class="buy-content">
-            <div class="buy-images-container">
+              <div class="buy-images-container">
                 <div class="buy-images-content">
                   <div class="buy-image-main">
                     <img
@@ -88,17 +88,17 @@
                         v-for="link in item.category.items"
                         :key="link.id"
                         :class="{'-mb-px': link.id === item.id, 'selected': link.id === item.id }"
-                        class="buy-custom-item text-black">
+                        class="buy-custom-item">
                         <nuxt-link
                           :to="'/shop/' + link.slug"
-                          class="">{{ link.version }}
+                          class="text-black">{{ link.version }}
                         </nuxt-link>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="buy-price">
-                  <span class="price">€ {{ price }}</span>
+                  <span style="font-weight: 500" class="">€ {{ price }}</span>
                 </div>
                 <div class="buy-actions">
                   <button
@@ -109,28 +109,38 @@
                     <span v-else>{{ $t('shop.cart.remove') }}</span>
                   </button>
                 </div>
-                <div class="social-sharing" style="margin-top: 1.25em;">
-                  <span>{{$t('shop.item.share')}}</span>
+                <div 
+                  class="social-sharing" 
+                  style="margin-top: 1.25em">
+                  <span>{ {$t('shop.item.share')} }</span>
                   <div class="share">
                     <ul style="margin-top: 0.50em;">
                       <li class="facebook">
-                        <a :href="$t('facebook').link" :title="$t('facebook').title">
-                          <icon name="brands/facebook" class="icon"></icon>
+                        <a 
+                          :href="$t('facebook').link" 
+                          :title="$t('facebook').title">
+                          <Icon value="fab fa-facebook" />
                         </a>
                       </li>
                       <li class="twitter">
-                        <a :href="$t('twitter').link" :title="$t('twitter').title">
-                          <icon name="brands/twitter" class="icon"></icon>
+                        <a 
+                          :href="$t('twitter').link" 
+                          :title="$t('twitter').title">
+                          <Icon value="fab fa-twitter" />
                         </a>
                       </li>
                       <li class="github">
-                        <a :href="$t('github').link" :title="$t('github').title">
-                          <icon name="brands/github" class="icon"></icon>
+                        <a 
+                          :href="$t('github').link" 
+                          :title="$t('github').title">
+                          <Icon value="fab fa-github" />
                         </a>                                         
                       </li>
                       <li class="discord">
-                        <a :href="$t('discord').link" :title="$t('discord').title">
-                          <icon name="brands/discord" class="icon"></icon>
+                        <a 
+                          :href="$t('discord').link" 
+                          :title="$t('discord').title">
+                          <Icon value="fab fa-discord" />
                         </a>
                       </li>
                     </ul>
@@ -140,7 +150,6 @@
                   class="buy-description"
                   v-html="item.description_long">
                 </div>
-              </div>
               </div>
             </div>
           </div>
