@@ -44,10 +44,6 @@
               <div class="buy-description-container">
                 <!-- <h3 class="buy-title">Retrobox, console</h3> -->
                 <div
-                  class="buy-description"
-                  v-html="item.description_long">
-                </div>
-                <div
                   v-if="item.category.is_customizable"
                   class="buy-custom-container">
                   <!--custom sd size-->
@@ -113,21 +109,10 @@
                     <span v-else>{{ $t('shop.cart.remove') }}</span>
                   </button>
                 </div>
-                <div class="buy-ways-container">
-                  <!-- <div class="hint">Nous suportons ces moyens de payements :</div> -->
-                  <div class="buy-ways-mosaic">
-                    <div class="buy-way">
-                      <i class="fab fa-cc-paypal"></i>
-                    </div>
-                    <div class="buy-way">
-                      <i class="fab fa-cc-visa"></i>
-                    </div>
-                    <div class="buy-way">
-                      <i class="fab fa-cc-stripe"></i>
-                    </div>
-                  </div>
+                <div
+                  class="buy-description"
+                  v-html="item.description_long">
                 </div>
-
               </div>
               </div>
             </div>
