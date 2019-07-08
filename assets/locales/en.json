@@ -216,6 +216,7 @@
       "title": "Item",
       "version": "Version",
       "price": "Price",
+      "share": "Share",
       "custom": {
         "colors": {
           "red": "Red",

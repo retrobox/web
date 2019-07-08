@@ -17,12 +17,32 @@
         <div class="shop-item-container">
           <div class="buy">
             <div class="buy-content">
+              <div class="buy-images-container">
+                <div class="buy-images-content">
+                  <div class="buy-image-main">
+                    <img
+                      v-if="main !== undefined"
+                      :src="main.url"
+                      alt="Image alt"
+                      @click="showImage(main.url)">
+                  </div>
+                  <div
+                    v-if="not_main !== undefined"
+                    class="buy-images-mosaic">
+                    <div
+                      v-for="image in not_main"
+                      :key="image.id"
+                      class="buy-image-item">
+                      <img
+                        :src="image.url"
+                        alt="Image alt"
+                        @click="showImage(image.url)">
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="buy-description-container">
                 <!-- <h3 class="buy-title">Retrobox, console</h3> -->
-                <div
-                  class="buy-description"
-                  v-html="item.description_long">
-                </div>
                 <div
                   v-if="item.category.is_customizable"
                   class="buy-custom-container">
@@ -71,62 +91,64 @@
                         class="buy-custom-item">
                         <nuxt-link
                           :to="'/shop/' + link.slug"
-                          class="">{{ link.version }}
+                          class="text-black">{{ link.version }}
                         </nuxt-link>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="buy-price">
-                  <span>€ {{ price }}</span>
+                  <span style="font-weight: 500" class="">€ {{ price }}</span>
                 </div>
                 <div class="buy-actions">
                   <button
-                    class="action-buy bg-blue hover:bg-blue-light text-white font-bold py-2 px-4 rounded inline-flex items-center button"
+                    class="button bg-red-light hover:bg-red text-white font-bold py-4 px-8 rounded-full"
                     @click="toggleCart(item)">
                     <span><i class="fas fa-shopping-cart"></i></span>
                     <span v-if="$store.state.cart.filter(_item => _item.id === item.id).length === 0">{{ $t('shop.cart.add') }}</span>
                     <span v-else>{{ $t('shop.cart.remove') }}</span>
                   </button>
                 </div>
-                <div class="buy-ways-container">
-                  <!-- <div class="hint">Nous suportons ces moyens de payements :</div> -->
-                  <div class="buy-ways-mosaic">
-                    <div class="buy-way">
-                      <i class="fab fa-cc-paypal"></i>
-                    </div>
-                    <div class="buy-way">
-                      <i class="fab fa-cc-visa"></i>
-                    </div>
-                    <div class="buy-way">
-                      <i class="fab fa-cc-stripe"></i>
-                    </div>
+                <div 
+                  class="social-sharing" 
+                  style="margin-top: 1.25em; margin-bottom: 1.25em">
+                  <span>{{$t ('shop.item.share') }}</span>
+                  <div class="share">
+                    <ul style="margin-top: 0.50em;">
+                      <li class="facebook">
+                        <a 
+                          :href="$t('facebook').link" 
+                          :title="$t('facebook').title">
+                          <Icon value="fab fa-facebook" />
+                        </a>
+                      </li>
+                      <li class="twitter">
+                        <a 
+                          :href="$t('twitter').link" 
+                          :title="$t('twitter').title">
+                          <Icon value="fab fa-twitter" />
+                        </a>
+                      </li>
+                      <li class="github">
+                        <a 
+                          :href="$t('github').link" 
+                          :title="$t('github').title">
+                          <Icon value="fab fa-github" />
+                        </a>                                         
+                      </li>
+                      <li class="discord">
+                        <a 
+                          :href="$t('discord').link" 
+                          :title="$t('discord').title">
+                          <Icon value="fab fa-discord" />
+                        </a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
-
-              </div>
-              <div class="buy-images-container">
-                <div class="buy-images-content">
-                  <div class="buy-image-main">
-                    <img
-                      v-if="main !== undefined"
-                      :src="main.url"
-                      alt="Image alt"
-                      @click="showImage(main.url)">
-                  </div>
-                  <div
-                    v-if="not_main !== undefined"
-                    class="buy-images-mosaic">
-                    <div
-                      v-for="image in not_main"
-                      :key="image.id"
-                      class="buy-image-item">
-                      <img
-                        :src="image.url"
-                        alt="Image alt"
-                        @click="showImage(image.url)">
-                    </div>
-                  </div>
+                <div
+                  class="buy-description"
+                  v-html="item.description_long">
                 </div>
               </div>
             </div>
