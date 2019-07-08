@@ -43,6 +43,11 @@
         "lin": "Linux",
         "coming-soon": "Bientôt sur Android et iOS"
       }
+    },
+    "modal": {
+      "title": "Votre téléchargement est en cours...",
+      "description": "Si votre téléchargement ne démarre pas d'ici peux, vous pouvez le relancer",
+      "download": "Télécharger"
     }
   },
   "buy": "Acheter",

@@ -16,7 +16,20 @@
         &:last-of-type {
           margin-right: 0;
         }
-    }
+        cursor: pointer;
+        transition: color 0.3s ease-in-out;
+        &:hover {
+          cursor: pointer;
+          color: #2779bd;
+          transition: color 0.3s ease-in-out;
+        }
+        &.disabled {
+          cursor: default !important;
+          &:hover {
+            color: inherit;
+          }
+        }
+     }
     padding-top: 2em;
     display: flex;
     flex-wrap: wrap;
@@ -30,11 +43,6 @@
     .icon {
       font-size: 4em;
       padding: 0.25em;
-      &:hover {
-        cursor: pointer;
-        color: #2779bd;
-        transition: color 0.3s ease-in-out;
-      }
     }
   }
 
@@ -71,4 +79,28 @@
     margin-top: 1em;
   }
 
+}
+
+.download-modal {
+  .download-modal-content {
+    @extend .py-6;
+    @extend .px-3;
+    text-align: center;
+    .download-modal-title {
+      @extend .mb-6;
+      @extend .pb-3;
+    }
+    .download-modal-icon {
+      @extend .pt-3;
+      @extend .mb-6;
+      @extend .mt-6;
+      @extend .pb-3;
+      font-size: 3em;
+      color: #27ae60;
+    }
+    .download-modal-description {
+      @extend .mb-6;
+      @extend .mt-6;
+    }
+  }
 }

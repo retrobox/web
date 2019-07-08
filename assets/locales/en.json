@@ -45,6 +45,11 @@
         "lin": "Linux",
         "coming-soon": "Coming soon on Android et iOS"
       }
+    },
+    "modal": {
+      "title": "Your downloading is beginning...",
+      "description": "If your downloading does not start soon enough you can restart it",
+      "download": "Download"
     }
   },
   "newsletter": {
