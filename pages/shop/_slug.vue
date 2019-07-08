@@ -17,6 +17,30 @@
         <div class="shop-item-container">
           <div class="buy">
             <div class="buy-content">
+            <div class="buy-images-container">
+                <div class="buy-images-content">
+                  <div class="buy-image-main">
+                    <img
+                      v-if="main !== undefined"
+                      :src="main.url"
+                      alt="Image alt"
+                      @click="showImage(main.url)">
+                  </div>
+                  <div
+                    v-if="not_main !== undefined"
+                    class="buy-images-mosaic">
+                    <div
+                      v-for="image in not_main"
+                      :key="image.id"
+                      class="buy-image-item">
+                      <img
+                        :src="image.url"
+                        alt="Image alt"
+                        @click="showImage(image.url)">
+                    </div>
+                  </div>
+                </div>
+                
               <div class="buy-description-container">
                 <!-- <h3 class="buy-title">Retrobox, console</h3> -->
                 <div
@@ -105,29 +129,6 @@
                 </div>
 
               </div>
-              <div class="buy-images-container">
-                <div class="buy-images-content">
-                  <div class="buy-image-main">
-                    <img
-                      v-if="main !== undefined"
-                      :src="main.url"
-                      alt="Image alt"
-                      @click="showImage(main.url)">
-                  </div>
-                  <div
-                    v-if="not_main !== undefined"
-                    class="buy-images-mosaic">
-                    <div
-                      v-for="image in not_main"
-                      :key="image.id"
-                      class="buy-image-item">
-                      <img
-                        :src="image.url"
-                        alt="Image alt"
-                        @click="showImage(image.url)">
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
