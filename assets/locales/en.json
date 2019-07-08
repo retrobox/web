@@ -283,5 +283,29 @@
   "components-explorer": {
     "search": "Search in components list",
     "empty": "No components..."
+  },
+  "user-dash": {
+    "title": "Account",
+    "refresh": "Refresh",
+    "destroy": "Delete my account",
+    "admin-panel": "Admin panel",
+    "disconnect": "Disconnect",
+    "table-title":"Your last order",
+    "no-command": "You have not ordered anything yet",
+    "first-column": "Total amount",
+    "second-column": "Payment method",
+    "third-column": "Status",
+    "modal-account-delete-title": "Are you sure you want to delete your account?",
+    "modal-account-delete-desc": "Warning, this is not an action without consequence, by removing the account you will lose the use of online services related to RetroBox that belong to your account. This is an irreversible action.",
+    "modal-account-delete-confirm": "I understand that this action is irreversible",
+    "modal-account-delete-cancel": "Cancel",
+    "modal-account-delete-cancel-confirm": "Yes, delete my account",
+    "modal-order-subtotal": "Sub-total : € ",
+    "modal-account-shipping": "Shipping cost : € ",
+    "modal-account-total": "Total amount : € ",
+    "modal-account-payement": "Payment method used : ",
+    "modal-account-external-id": "External payement ID : ",
+    "modal-account-delete-confirm-2": "Are you **really** sure what you are doing ?",
+    "table-details": "See in details"
   }
 }
