@@ -211,6 +211,7 @@
       "title": "Article",
       "version": "Version",
       "price": "Prix",
+      "share": "Partager",
       "custom": {
         "colors": {
           "red": "Rouge",

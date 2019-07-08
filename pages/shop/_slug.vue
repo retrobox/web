@@ -88,7 +88,7 @@
                         v-for="link in item.category.items"
                         :key="link.id"
                         :class="{'-mb-px': link.id === item.id, 'selected': link.id === item.id }"
-                        class="buy-custom-item">
+                        class="buy-custom-item text-black">
                         <nuxt-link
                           :to="'/shop/' + link.slug"
                           class="">{{ link.version }}
@@ -98,7 +98,7 @@
                   </div>
                 </div>
                 <div class="buy-price">
-                  <span>€ {{ price }}</span>
+                  <span class="price">€ {{ price }}</span>
                 </div>
                 <div class="buy-actions">
                   <button
@@ -108,6 +108,33 @@
                     <span v-if="$store.state.cart.filter(_item => _item.id === item.id).length === 0">{{ $t('shop.cart.add') }}</span>
                     <span v-else>{{ $t('shop.cart.remove') }}</span>
                   </button>
+                </div>
+                <div class="social-sharing" style="margin-top: 1.25em;">
+                  <span>{{$t('shop.item.share')}}</span>
+                  <div class="share">
+                    <ul style="margin-top: 0.50em;">
+                      <li class="facebook">
+                        <a :href="$t('facebook').link" :title="$t('facebook').title">
+                          <icon name="brands/facebook" class="icon"></icon>
+                        </a>
+                      </li>
+                      <li class="twitter">
+                        <a :href="$t('twitter').link" :title="$t('twitter').title">
+                          <icon name="brands/twitter" class="icon"></icon>
+                        </a>
+                      </li>
+                      <li class="github">
+                        <a :href="$t('github').link" :title="$t('github').title">
+                          <icon name="brands/github" class="icon"></icon>
+                        </a>                                         
+                      </li>
+                      <li class="discord">
+                        <a :href="$t('discord').link" :title="$t('discord').title">
+                          <icon name="brands/discord" class="icon"></icon>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
                 <div
                   class="buy-description"
