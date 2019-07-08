@@ -102,7 +102,7 @@
                 </div>
                 <div class="buy-actions">
                   <button
-                    class="action-buy bg-blue hover:bg-blue-light text-white font-bold py-2 px-4 rounded inline-flex items-center button"
+                    class="button bg-red-light hover:bg-red text-white font-bold py-4 px-8 rounded-full"
                     @click="toggleCart(item)">
                     <span><i class="fas fa-shopping-cart"></i></span>
                     <span v-if="$store.state.cart.filter(_item => _item.id === item.id).length === 0">{{ $t('shop.cart.add') }}</span>
@@ -111,8 +111,8 @@
                 </div>
                 <div 
                   class="social-sharing" 
-                  style="margin-top: 1.25em">
-                  <span>{ {$t('shop.item.share')} }</span>
+                  style="margin-top: 1.25em; margin-bottom: 1.25em">
+                  <span>{{$t ('shop.item.share') }}</span>
                   <div class="share">
                     <ul style="margin-top: 0.50em;">
                       <li class="facebook">
