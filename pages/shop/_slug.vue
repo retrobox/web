@@ -40,7 +40,7 @@
                     </div>
                   </div>
                 </div>
-                
+              </div>
               <div class="buy-description-container">
                 <!-- <h3 class="buy-title">Retrobox, console</h3> -->
                 <div
