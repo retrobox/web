@@ -2,7 +2,7 @@
   <div v-if="fetched">
     <div class="cover-title">
       <div class="cover-title-content container mx-auto">
-        <h1>{{ $t('user-dash.') }}</h1>
+        <h1>{{ $t('user-dash.title') }}</h1>
       </div>
     </div>
     <div class="container mx-auto account-dashboard">
@@ -159,7 +159,7 @@
   export default {
     head() {
       return {
-        title: 'Account'
+        title: this.$t('user-dash.titletitle')
       }
     },
     components: {
