@@ -98,7 +98,11 @@
                   </div>
                 </div>
                 <div class="buy-price">
-                  <span style="font-weight: 500" class="">€ {{ price }}</span>
+                  <span
+                    style="font-weight: 500"
+                    class="">
+                    € {{ price }}
+                  </span>
                 </div>
                 <div class="buy-actions">
                   <button
@@ -112,7 +116,7 @@
                 <div 
                   class="social-sharing" 
                   style="margin-top: 1.25em; margin-bottom: 1.25em">
-                  <span>{{$t ('shop.item.share') }}</span>
+                  <span>{{ $t('shop.item.share') }}</span>
                   <div class="share">
                     <ul style="margin-top: 0.50em;">
                       <li class="facebook">
