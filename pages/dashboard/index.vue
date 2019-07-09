@@ -2,7 +2,7 @@
   <div v-if="fetched">
     <div class="cover-title">
       <div class="cover-title-content container mx-auto">
-        <h1>Account</h1>
+        <h1>{{ $t('user-dash.') }}</h1>
       </div>
     </div>
     <div class="container mx-auto account-dashboard">
@@ -26,32 +26,32 @@
               class="with-link account-action"
               @click="fetchData()">
               <Icon value="fas fa-sync-alt"/>
-              Refresh
+              {{ $t('user-dash.refresh') }}
             </a>
             <a
               class="with-link account-action"
               @click="openDestroyAccount()">
               <Icon value="fas fa-trash"/>
-              Delete my account
+              {{ $t('user-dash.destroy') }}
             </a>
             <a
               v-if="user.is_admin"
               class="with-link account-action"
               @click="adminDashboard()">
               <Icon value="fas fa-shield-alt"/>
-              Panel d'administration
+              {{ $t('user-dash.admin-panel') }}
             </a>
             <a
               class="with-link account-action"
               @click="logout()">
               <Icon value="fas fa-sign-out-alt"/>
-              Déconnexion
+              {{ $t('user-dash.disconnect') }}
             </a>
           </div>
         </div>
       </div>
       <div class="account-orders-container mt-4 mb-3 pt-4 pb-4">
-        <h3 class="dividing mb-4">Vos dernières commandes</h3>
+        <h3 class="dividing mb-4">{{ $t('user-dash.table-title') }}</h3>
         <div class="shop-cart-container">
           <div
             v-if="orders.length === 0"
@@ -61,16 +61,16 @@
             </div>
             <div class="shop-empty-title">
               <h3>
-                Vous n'avez rien encore commandé
+                {{ $t('user-dash.no-command') }}
               </h3>
             </div>
           </div>
           <div v-if="orders.length > 0">
             <div class="shop-cart-list list">
               <div class="list-head">
-                <div>Montant total</div>
-                <div>Moyen de paiment</div>
-                <div>Status</div>
+                <div>{{ $t('user-dash.first-column') }}</div>
+                <div>{{ $t('user-dash.second-column') }}</div>
+                <div>{{ $t('user-dash.third-column') }}</div>
                 <div></div>
               </div>
               <div
@@ -100,17 +100,16 @@
           height="auto"
           name="destroyAccount">
           <div class="p-4">
-            <h3 class="mb-6 mt-3">Voulez vous vraiment supprimer le compte ?</h3>
+            <h3 class="mb-6 mt-3">{{ $t('user-dash.modal-account-delete-title') }}</h3>
             <p>
-              Attention, ceci n'est pas une action sans conséquence, en supprimant le compte vous allez perdre l'utilisation des services en ligne
-              liées aux consoles retrobox qui appartienent à votre compte. Ceci est une action irréversible.
+              {{ $t('user-dash.modal-account-delete-desc') }}
             </p>
             <br>
             <input
               id="destroy-confirmation"
               v-model="destroyAccountConfirmation"
               type="checkbox" />
-            <label for="destroy-confirmation">Je comprends que cette action est irréversible</label>
+            <label for="destroy-confirmation">{{ $t('user-dash.modal-account-delete-confirm') }}</label>
             <br>
             <br>
           </div>
@@ -118,12 +117,12 @@
             <div
               class="w-full md:w-1/2 button bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 text-center cancel-button"
               @click="$modal.hide('destroyAccount')">
-              Annuler
+              {{ $t('user-dash.modal-account-delete-cancel') }}
             </div>
             <div
               class="w-full md:w-1/2 button bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 text-center cancel-button"
               @click="destroyAccount()">
-              Oui, Supprimer mon compte
+              {{ $t('user-dash.modal-account-delete-cancel-confirm') }}
             </div>
           </div>
 
@@ -134,13 +133,13 @@
           height="auto"
           name="orderView">
           <div class="p-4">
-            <h3 class="mb-6 mt-3">Détails sur la commande #{{ orderToView.id }}</h3>
+            <h3 class="mb-6 mt-3">{{ $t('user-dash.') }}Détails sur la commande #{{ orderToView.id }}</h3>
             <ul class="mb-2">
-              <li class="mb-1">Sous total : € {{ orderToView.sub_total_price }}</li>
-              <li class="mb-1">Frais de livraisons : € {{ orderToView.total_shipping_price }}</li>
-              <li class="mb-1">Montant total : € {{ orderToView.total_price }}</li>
-              <li class="mb-1">Moyen de paiment utilisé : {{ orderToView.way }}</li>
-              <li>Id externe de paiment : <code>{{ orderToView.on_way_id }}</code></li>
+              <li class="mb-1">{{ $t('user-dash.modal-order-subtotal') }}{{ orderToView.sub_total_price }}</li>
+              <li class="mb-1">{{ $t('user-dash.modal-order-shipping') }}{{ orderToView.total_shipping_price }}</li>
+              <li class="mb-1">{{ $t('user-dash.modal-order-total') }}{{ orderToView.total_price }}</li>
+              <li class="mb-1">{{ $t('user-dash.modal-order-payment') }}{{ orderToView.way }}</li>
+              <li>{{ $t('user-dash.external-id') }}<code>{{ orderToView.on_way_id }}</code></li>
             </ul>
           </div>
           <div

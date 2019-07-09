@@ -284,5 +284,29 @@
   "components-explorer": {
     "search": "Rechercher dans la liste des composants",
     "empty": "Pas de composants..."
+  },
+  "user-dash": {
+    "title": "Compte",
+    "refresh": "Rafraîchir",
+    "destroy": "Supprimer mon compte",
+    "admin-panel": "Panel d'administration",
+    "disconnect": "Déconnexion",
+    "table-title":"Vos dernières commandes",
+    "no-command": "Vous n'avez rien encore commandé",
+    "first-column": "Montant total",
+    "second-column": "Moyen de paiment",
+    "third-column": "Statut",
+    "modal-account-delete-title": "Voulez vous vraiment supprimer le compte ?",
+    "modal-account-delete-desc": "Attention, ceci n'est pas une action sans conséquence, en supprimant le compte vous allez perdre l'utilisation des services en ligne liés aux consoles retrobox qui appartienent à votre compte. Ceci est une action irréversible.",
+    "modal-account-delete-confirm": "Je comprends que cette action est irréversible",
+    "modal-account-delete-cancel": "Annuler",
+    "modal-account-delete-cancel-confirm": "Oui, Supprimer mon compte",
+    "modal-order-subtotal": "Sous total : € ",
+    "modal-account-shipping": "Frais de livraisons : € ",
+    "modal-account-total": "Montant total : € ",
+    "modal-account-payement": "Moyen de paiement utilisé : ",
+    "modal-account-external-id": "Id externe de paiment : ",
+    "modal-account-delete-confirm-2": "Etes vous **vraiment** sur de ce que vous faites ?",
+    "table-details": "Voir en détail"
   }
 }
