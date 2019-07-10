@@ -90,7 +90,9 @@
   .shop-index-category {
     margin-bottom: 2em;
     .shop-index-category-title {
-      font-weight: 400;
+      font-weight: 700;
+      color: #525252;
+      font-size: 1.5em;
     }
     .shop-category-empty {
       width: 100%;
@@ -120,7 +122,7 @@
   margin-right: 3em;
   margin-bottom: 1.5em;
   @extend .max-w-sm;
-  @extend .rounded;
+  border-radius: 10px;
   @extend .overflow-hidden;
 
   .shop-card-thumb {
@@ -133,6 +135,7 @@
     background-position-y: 50%;
     transition: all 1s ease;
     @extend .w-full;
+    background-color: #e4e3e1;
   }
   .shop-card-image:hover {
     transform: scale(1.25);
@@ -166,7 +169,6 @@
   transition: 0.2s all;
   &:hover {
     cursor: pointer;
-    box-shadow: 0 0 40px 0 rgba(0, 0, 0, .3);
     transition: 0.2s all;
   }
 }
