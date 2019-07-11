@@ -26,7 +26,9 @@ export const state = () => ({
   loginRedirectRoute: '',
   hasNuxtError: false,
   showBody: false,
-  isMobile: false
+  isMobile: false,
+  userToken: '',
+  mustBeAuthenticated: false
 });
 
 import jwtDecode from "jwt-decode"
@@ -43,6 +45,7 @@ export const mutations = {
   },
   LOAD_USER (state, token) {
     let user = jwtDecode(token).user
+    state.userToken = token
     state.isAuthenticated = true
     state.user = {
       id: user.id,
@@ -115,7 +118,20 @@ export const mutations = {
   },
   SET_IS_MOBILE: (state, value) => {
     state.isMobile = value
+  },
+  SET_MUST_BE_AUTHENTICATED: (state, value) => {
+    state.mustBeAuthenticated = value
   }
 };
 
-export const actions = {};
+export const actions = {
+  nuxtServerInit({ commit }, { req }) {
+    if (
+      req.cookies !== undefined &&
+      req.cookies.user_token !== undefined &&
+      req.cookies.user_token !== null
+    ) {
+        commit('LOAD_USER', req.cookies.user_token)
+    }
+  }
+};

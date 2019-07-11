@@ -58,7 +58,7 @@ module.exports = {
   },
 
   router: {
-    middleware: ['i18n'],
+    middleware: ['i18n', 'session'],
     scrollBehavior: function (from, to) {
       if (to.hash) {
         return { selector: to.hash }

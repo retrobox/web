@@ -1,0 +1,15 @@
+.navigation-container {
+  .navigation {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 100%;
+    margin-bottom: 1em;
+    nav {
+      position: relative;
+      top: 0px;
+      .nav-item {
+        width: 100%;
+      }
+    }
+  }
+}

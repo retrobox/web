@@ -97,12 +97,12 @@
     },
     mounted () {
       // load user
-      if (!this.$isServer) {
-        if (this.$cookie.get('user_token') !== null) {
-          this.$store.commit('LOAD_USER', this.$cookie.get('user_token'))
-          this.$apitator.setAuthorizationToken(this.$cookie.get('user_token'))
-        }
-      }
+      // if (!this.$isServer) {
+      //   if (this.$cookie.get('user_token') !== null) {
+      //     this.$store.commit('LOAD_USER', this.$cookie.get('user_token'))
+      //     this.$apitator.setAuthorizationToken(this.$cookie.get('user_token'))
+      //   }
+      // }
 
       let locale = navigator.language.substring(0, 2);
       if (this.$cookie.get('locale') === undefined || this.$cookie.get('locale') === null) {

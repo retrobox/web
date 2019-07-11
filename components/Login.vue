@@ -132,6 +132,9 @@
           title: this.$i18n.t('account.logout.success.title'),
           description: this.$i18n.t('account.logout.success.description')
         })
+        if (this.$store.state.mustBeAuthenticated) {
+          this.$router.push('/')
+        }
       },
       goToDashboard: function () {
         this.$modal.hide('loginOrRegister');

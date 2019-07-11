@@ -1,0 +1,16 @@
+.dashboard-page-container {
+  @extend .mx-auto; @extend .container;
+  @extend .pt-4;
+  padding-bottom: 2em;
+  .dashboard-page {
+    width: 100%;
+    display: flex;
+    margin-top: 2em;
+  }
+  .dashboard-page-content {
+    width: 100%;
+  }
+}
+.dashboard-nav-container {
+  margin-right: 2.5em;
+}
