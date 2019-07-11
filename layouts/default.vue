@@ -13,8 +13,7 @@
                 spin />
             </div>
           </div>
-          <div
-            v-show="$store.state.isLoading === false">
+          <div v-show="!$store.state.isLoading">
             <nuxt/>
           </div>
         </div>
@@ -94,6 +93,9 @@
       'windowWidth': function (windowWidth) {
         this.computeIsMobile(windowWidth)
       }
+    },
+    created () {
+      this.$apitator.setAuthorizationToken(this.$store.state.userToken)
     },
     mounted () {
       // load user

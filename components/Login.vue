@@ -109,8 +109,8 @@
         this.$modal.hide('loginOrRegister');
         this.$modal.show('login');
         let url = window.location;
-        if (this.$store.state.login_redirect_route !== '' && this.$store.state.login_redirect_route !== undefined) {
-          url = this.$store.state.login_redirect_route
+        if (this.$store.state.loginRedirectRoute !== '' && this.$store.state.loginRedirectRoute !== undefined) {         
+          url = window.location.origin + this.$store.state.loginRedirectRoute
         }
         this.$cookie.set('login_redirection_url', url, {domain: this.$env.COOKIE_DOMAIN});
         //request the api
