@@ -14,7 +14,7 @@
         context.redirect('/dashboard/console/' + consoles[0].id)
       } else {
         // have no consoles or many -> go to the list
-        context.redirect('/dashboard/consoles')
+        context.redirect('/dashboard/console')
       }
     }
   }
