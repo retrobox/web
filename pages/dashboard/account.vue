@@ -43,6 +43,25 @@
         </div>
       </div>
     </div>
+    <div class="mt-6 pt-3">
+      <h3 class="dividing mb-4">Edit your Shipping Details</h3>
+    </div>
+    <ShippingDetailsForm
+      ref="shippingDetailsForm"
+      @saved="shippingDetailsSaved()" />
+    <div class="flex items-center justify-end">
+      <button
+        class="button bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        type="button"
+        @click="saveShippingDetails()"
+      >
+        <Icon
+          v-if="saving"
+          value="fas fa-sync"
+          spin />
+        Save
+      </button>
+    </div>
     <no-ssr>
       <modal 
         adaptive 
@@ -86,14 +105,16 @@
 </template>
 
 <script>
-import Icon from "../../components/Icon";
-import DashboardPage from "../../components/DashboardPage";
+import Icon from "~/components/Icon";
+import DashboardPage from "~/components/DashboardPage";
+import ShippingDetailsForm from "~/components/ShippingDetailsForm";
 
 export default {
   middleware: "authenticated",
   components: {
     Icon,
-    DashboardPage
+    DashboardPage,
+    ShippingDetailsForm
   },
   head() {
     return {
@@ -105,7 +126,8 @@ export default {
       user: {},
       orderToView: {},
       consoles: [],
-      destroyAccountConfirmation: false
+      destroyAccountConfirmation: false,
+      saving: false
     };
   },
   async asyncData(context) {
@@ -116,6 +138,7 @@ export default {
           last_username
           last_avatar
           last_email
+          is_admin
         }
         getManyConsoles {
           id
@@ -157,6 +180,18 @@ export default {
     adminDashboard() {
       this.$store.commit("SET_IS_LOADING", true);
       window.location = this.$env.ADMIN_DASHBOARD_ENDPOINT;
+    },
+    saveShippingDetails() {
+      this.$refs.shippingDetailsForm.save()
+      this.saving = true
+    },
+    shippingDetailsSaved() {      
+      this.saving = false
+      this.$store.commit("ADD_ALERT", {
+        type: "success",
+        title: "Shipping details saved",
+        description: "All your shipping details are now saved"
+      });
     }
   }
 };
