@@ -8,7 +8,10 @@
       </div>
       <div class="container mx-auto">
         <div class="article">
-          <div
+          <Navigation
+            :tree="tree"
+            class="docs-nav" />
+          <!-- <div
             :class="{ 'docs-mobile-nav' : $store.state.isMobile }"
             class="docs-nav">
             <nav>
@@ -40,14 +43,15 @@
                 </div>
               </transition>
             </nav>
-          </div>
+          </div> -->
           <div class="docs-content">
             <!-- <a @click="fetchData()">Refresh</a> -->
             <div
               class="content doc-page-content">
               <component :is="currentComponent"></component>
             </div>
-            <div class="navigation">
+            <!-- Doc bottom navigation -->
+            <div class="doc-bottom-navigation">
               <ul class="list-reset flex justify-between">
                 <li class="mr-3">
                   <a
@@ -107,12 +111,14 @@
 <script>
   import Icon from "../../components/Icon"
   import Error from "../../components/Error"
+  import Navigation from "../../components/Navigation"
 
   export default {
     name: 'DocumentationPage',
     components: {
       Error,
       Icon,
+      Navigation,
       'EnglishHome': () => import('../../docs/en/home'),
       'EnglishGettingStarted': () => import('../../docs/en/getting-started'),
       'FrenchHome': () => import('../../docs/fr/home'),
@@ -176,9 +182,17 @@
       })
       let componentName = componentNameLetters.join('')
       componentName = (context.app.i18n.locale === 'fr' ? 'French' : 'English') + componentName
+      
+      let tree = docsConfig.tree.map((item) => {
+        return {
+          path: '/docs/' + item.slug,
+          name: item.name
+        }
+      })
+      console.log(tree)
       return {
         title: page.name,
-        tree: docsConfig.tree,
+        tree,
         currentComponent: componentName,
         previous: docsConfig.tree[indexOf - 1] === undefined ? null : docsConfig.tree[indexOf - 1],
         next: docsConfig.tree[indexOf + 1] === undefined ? null : docsConfig.tree[indexOf + 1]
