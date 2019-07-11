@@ -35,8 +35,10 @@
     padding: 2rem;
     width: 100%;
     @extend .flex;
+    @extend .flex-wrap;
     .console-card-left {
-      @extend .w-1\/3;
+      @extend .w-full;
+      @extend .md\:w-1\/3;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -72,7 +74,8 @@
       }
     }
     .console-card-right {
-      @extend .w-2\/3;
+      @extend .w-full;
+      @extend .md\:w-2\/3;
       padding-left: 2em;
       .console-card-fields {
         &:first-child {

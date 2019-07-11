@@ -10,3 +10,23 @@
   width: 100%;
   margin-right: 0 !important;
 }
+
+.console-card {
+  width: 98%;
+  .console-card-content {
+    padding: .7rem;
+    .console-card-left {
+      .console-card-id {
+        padding-top: .5em;
+        padding-bottom: 0.5em;
+      }
+      .console-card-status {
+        padding-top: 0.5em;
+      }
+    }
+    .console-card-right {
+      padding-top: 2rem;
+      padding-left: 0;
+    }
+  }
+}
