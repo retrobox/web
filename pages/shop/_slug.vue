@@ -163,6 +163,7 @@
     <no-ssr>
       <modal
         name="show_image"
+        adaptive
         class="modal show-image-modal">
         <div class="modal-container">
           <div class="show-image-container">
