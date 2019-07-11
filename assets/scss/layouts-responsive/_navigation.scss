@@ -4,12 +4,10 @@
     margin-left: 20px;
     width: 100%;
     margin-bottom: 1em;
-    nav {
-      position: relative;
-      top: 0px;
-      .nav-item {
-        width: 100%;
-      }
+    position: relative;
+    top: 0px;
+    .nav-item {
+      width: 100% !important;
     }
   }
 }
