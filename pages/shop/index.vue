@@ -27,7 +27,7 @@
             v-for="category in items"
             :key="category.id"
             class="shop-index-category">
-            <h3 class="dividing shop-index-category-title">{{ category.title }}</h3>
+            <h3 class="shop-index-category-title">{{ category.title }}</h3>
             <div>
               <div
                 v-if="category.items.length === 0"
