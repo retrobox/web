@@ -1,23 +1,18 @@
 <template>
-  <div class="dashboard-page-container">
-    <div class="dashboard-page">
-      <DashboardNav />
-      <div class="dashboard-page-content">
-        <h1 class="dashboard-page-title">
-          WIP [one console]
-        </h1>
-      </div>
-    </div>
-  </div>
+  <DashboardPage>
+    <h1 class="dashboard-page-title">
+      WIP [one console]
+    </h1>
+  </DashboardPage>
 </template>
 
 <script>
-import DashboardNav from "../../../components/DashboardNav"
+import DashboardPage from "../../../components/DashboardPage"
 
 export default {
   middleware: 'authenticated',
   components: {
-    DashboardNav
+    DashboardPage
   },
   head() {
     return {
