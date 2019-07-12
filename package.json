@@ -25,6 +25,7 @@
     "html-loader": "^0.5.5",
     "jwt-decode": "^2.2.0",
     "lefuturiste-vue-directive-tooltip": "0.0.2",
+    "lodash": "4.5",
     "markdown-loader": "^5.0.0",
     "nuxt": "^2.8.1",
     "nuxt-env": "0.0.4",
