@@ -1,4 +1,5 @@
 .dashboard-page-container {
+  padding-top: 0;
   .dashboard-page {
     margin-top: 0;
     flex-wrap: wrap;
@@ -8,6 +9,7 @@
 
 .dashboard-nav-container {
   width: 100%;
+  margin-bottom: .5em;
   margin-right: 0 !important;
 }
 
