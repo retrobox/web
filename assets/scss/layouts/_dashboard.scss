@@ -202,5 +202,106 @@
   }
   .game-store-items {
     margin-top: 2em;
+    .game-store-category-title{
+      font-weight: 700;
+      color: #525252;
+      font-size: 1.5em;
+      margin-bottom: 1em;
+    }
+  }
+}
+
+
+.game-store-mosaic {  
+  margin-top: .5em;
+  .game-card {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+.game-card {
+  margin-bottom: .5em;
+  @extend .max-w-sm;
+  @extend .w-full;
+  @extend .lg\:max-w-full;
+  @extend .lg\:flex;
+  @extend .shadow;
+  .game-card-image {
+    background-position: center;
+    background-size: contain;
+    @extend .h-48;
+    @extend .md\:w-1\/2;
+    @extend .lg\:h-auto;
+    @extend .lg\:w-48;
+    @extend .flex-none;
+    @extend .bg-cover;
+    @extend .rounded-t;
+    @extend .lg\:rounded-t-none;
+    @extend .lg\:rounded-l;
+    @extend .text-center;
+    @extend .overflow-hidden;
+  }
+  .game-card-right {
+    width: 100%;
+    @extend .md\:w-1\/2;
+    @extend .border-r;
+    @extend .border-b;
+    @extend .border-l;
+    @extend .lg\:border-l-0;
+    @extend .lg\:border-t;
+    @extend .bg-white;
+    @extend .rounded-b;
+    @extend .lg\:rounded-b-none;
+    @extend .lg\:rounded-r;
+    @extend .p-4;
+    @extend .flex;
+    @extend .flex-col;
+    @extend .justify-between;
+    @extend .leading-normal;
+    .game-card-content {
+      margin-bottom: 1em;
+      .game-card-title {
+        @extend .font-bold;
+        @extend .text-xl;
+        @extend .mb-2;
+      }
+      .game-card-description {
+        @extend .text-base;
+        margin-bottom: .5em;
+      }
+    }
+  }
+}
+
+.item-fields {
+  &:first-child {
+    border-top: 1px solid rgba(128, 128, 128, .4);
+  }
+  .item-field {
+    display: flex;
+    justify-content: space-between;
+    padding-top: .6em;
+    padding-bottom: .6em;
+    border-bottom: 1px solid rgba(128, 128, 128, .4);
+    .item-field-name {
+      display: flex;
+      .item-field-icon {
+        color: #2c3e50;
+        font-size: 1.2em;
+        opacity: 0.8;
+        margin-right: 0.5em;
+        width: 2em;
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .item-field-value {
+      .data {
+        font-weight: 600;
+      }
+      .data-afer {
+        opacity: 0.8;
+      }
+    }
   }
 }

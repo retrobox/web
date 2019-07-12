@@ -30,3 +30,34 @@
     }
   }
 }
+
+.game-store {
+  .game-store-top {
+    justify-content: center;
+    .game-store-import {
+      margin-left: 0;
+      margin-bottom: .5em;
+      width: 100%;
+      text-align: center;
+    }
+    .game-store-search {
+      width: 100%;
+    }
+  }
+}
+
+.game-store-mosaic {  
+  margin-top: 1em;
+  .game-card {
+    width: 100%;
+  }
+}
+
+.game-card {
+  .game-card-image {
+    background-size: cover;
+  }
+  .game-card-content {
+    margin-bottom: 0;
+  }
+}
