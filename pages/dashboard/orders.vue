@@ -31,6 +31,14 @@
                 <div>{{ order.status }}</div>
                 <div class="shop-cart-actions">
                   <a
+                    v-if="order.bill_url != null"
+                    :title="'Voir la facture'"
+                    class="bg-grey hover:bg-grey-dark text-white font-bold py-1 px-2 rounded button"
+                    @click="viewBill(order)"
+                  >
+                    <i class="fas fa-file-alt"></i>
+                  </a>
+                  <a
                     :title="'Voir en détail'"
                     class="bg-grey hover:bg-grey-dark text-white font-bold py-1 px-2 rounded button"
                     @click="viewOrder(order)"
@@ -120,7 +128,8 @@ export default {
           total_shipping_price,
           total_price,
           on_way_id,
-          way
+          way,
+          bill_url
         }
       }`, {}, { withAuth: true });
     let data = res.data.data;
@@ -139,6 +148,11 @@ export default {
     viewOrder(order) {
       this.orderToView = order;
       this.$modal.show("orderView");
+    },
+    viewBill(order) {
+      if (order.bill_url != null) {
+        window.open(order.bill_url)
+      }
     }
   }
 };
