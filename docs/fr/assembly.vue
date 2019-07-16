@@ -26,7 +26,7 @@
       <DocsImage src="https://static.retrobox.tech/img/assemblage/soldering.jpg"/>
     </div>
     <br>
-    Voici une image sur la façon de souder :
+    Quelques façon de souder, soyez minutieux ! :
 
     <DocsImage src="https://static.retrobox.tech/img/assemblage/solderingtips_fr.png" />
 

@@ -14,15 +14,15 @@
       <li><b>Dimensions</b> : 177.15x66.53x30 mm (6.96x2.59x1.18″)</li>
     </ul>
     <br>
-    <DocsHeading label="Schémas / modèle 3D" />
+    <DocsHeading label="Schéma / modèles 3D" />
 
     <DocsImage src="https://static.retrobox.tech/img/pcb/schematics.png"></DocsImage>
 
-    <DocsImage src="https://static.retrobox.tech/img/pcb/schematics.png"></DocsImage>
+    <DocsImage src="https://static.retrobox.tech/img/pcb/board.png"></DocsImage>
 
     <div class="docs-alert info">
       <i class="icon fas fa-question-circle"></i>
-      <p>Les fichiers Eagles ne sont pas disponibles au téléchargements.</p>
+      <p>Les fichiers Eagles ne sont pas disponibles en téléchargements.</p>
     </div>
 
     <hr>
@@ -43,9 +43,9 @@
     </p>
 
     <ul>
-      <li>Rendu 3d: <a href="https://github.com/RetroBox/misc/tree/master/3d">https://github.com/RetroBox/misc/tree/master/3d</a></li>
+      <li>Rendu 3d: <a href="https://github.com/retrobox/misc/tree/master/3d/Assemblage">https://github.com/retrobox/misc/tree/master/3d/Assemblage</a></li>
 
-      <li>Plexiglass version : <a href="https://github.com/RetroBox/misc/tree/master/3d">https://github.com/RetroBox/misc/tree/master/3d</a></li>
+      <li>Protection acrylique : <a href="https://github.com/retrobox/misc/tree/master/3d/v2.02%20march%2019">https://github.com/retrobox/misc/tree/master/3d/v2.02%20march%2019</a></li>
     </ul>
     <br>
 

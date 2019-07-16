@@ -128,7 +128,7 @@
       'FrenchFinishing': () => import('../../docs/fr/finishing'),
       'FrenchInstallation': () => import('../../docs/fr/installation'),
       'FrenchQuestions': () => import('../../docs/fr/questions'),
-      'FrenchTroubleshooting': () => import('../../docs/fr/troubleshooting'),
+      'FrenchSchematic': () => import('../../docs/fr/schematic'),
       'FrenchManualInstallation': () => import('../../docs/fr/manual-installation'),
       'FrenchTechnicalSpecification': () => import('../../docs/fr/technical-specification')
     },

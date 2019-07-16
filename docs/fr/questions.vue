@@ -17,7 +17,7 @@
 
     <p>Appuyez simplement sur Démarrer et allez dans "Quit" et cliquez sur "Power Off"!</p>
 
-    <div>
+    <div class="flex justify-center md:justify-between flex-wrap w-3/4 m-auto">
       <DocsImage src="https://static.retrobox.tech/img/getting-started/RetroPie/image_16.png"/>
       <DocsImage src="https://static.retrobox.tech/img/getting-started/RetroPie/image_17.png"/>
     </div>
@@ -26,7 +26,7 @@
 
     <p>Appuyez simplement sur Démarrer et naviguez avec le joystick pour modifier les paramètres.</p>
 
-    <div>
+    <div class="flex justify-center md:justify-between flex-wrap w-3/4 m-auto">
       <DocsImage src="https://static.retrobox.tech/img/getting-started/RetroPie/image_14.png"/>
       <DocsImage src="https://static.retrobox.tech/img/getting-started/RetroPie/image_15.png"/>
     </div>

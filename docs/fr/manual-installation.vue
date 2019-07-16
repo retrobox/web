@@ -34,7 +34,7 @@
       <li>
         WinSCP:
         <a href="https://winscp.net/eng/download.php](https://winscp.net/eng/download.php">
-          Télécharger surwinscp.net</a>
+          Télécharger sur winscp.net</a>
       </li>
     </ul>
 
@@ -89,18 +89,18 @@
       <li>Vous avez plusieurs façon de configurer un réseau wifi :</li>
     </ul>
 
-    <!--image gallery-->
-    <DocsImage src="https://static.retrobox.tech/img/manual/RetroPie/FR/image_6.png"/>
-    <DocsImage src="https://static.retrobox.tech/img/manual/RetroPie/FR/image_4.png"/>
-    <DocsImage src="https://static.retrobox.tech/img/manual/RetroPie/FR/image_5.png"/>
-
+    <div class="flex justify-center md:justify-between flex-wrap w-3/4 m-auto">
+      <DocsImage src="https://static.retrobox.tech/img/manual/RetroPie/FR/image_6.png"/>
+      <DocsImage src="https://static.retrobox.tech/img/manual/RetroPie/FR/image_4.png"/>
+      <DocsImage src="https://static.retrobox.tech/img/manual/RetroPie/FR/image_5.png"/>
+    </div>
     <ul>
       <li>
-        Avec le fichier "wifikeyfile.txt" que vous avez créé juste avant, importez le en selectionnant "Import wifi
-        credentials...".
+        Avec le fichier <code>wifikeyfile.txt</code> que vous avez créé juste avant, importez le en selectionnant <code>Import wifi
+        credentials...</code>.
       </li>
       <li>
-        Notez l'adresse ip pour vous connecter plus tard avec putty.
+        Notez l'adresse ip pour vous connecter plus tard avec Putty.
       </li>
     </ul>
 
@@ -112,7 +112,8 @@
         Se connecter en ssh sur l’adresse ip de la RetroBox avec le logiciel Putty, puis, tapez ceci :
         <ul>
           <li><b>En login :</b> pi</li>
-          <li><b>En login :</b> raspberry</li>
+          <li><b>En mot de passe :</b> raspberry</li>
+          <li><b>Port :</b> 21</li>
         </ul>
       </li>
     </ul>
@@ -121,7 +122,7 @@
 
     <DocsHeading label="Configuration principale de la RetroBox" />
 
-    <p>Pour pouvoir utiliser l’écran, il vous faut exécuter certaine commandes en SSH:</p>
+    <p>Pour pouvoir utiliser l’écran, il vous faut exécuter certaines commandes en SSH:</p>
 
     <ol>
       <li>
@@ -137,16 +138,14 @@
 
     <hr>
 
-    <p>Ajoutez:</p>
+    <p>Ajoutez :</p>
 
     <DocsCode
       :code="`
       # CONFIG RETROBOX
+
       # Enable audio (loads snd_bcm2835)
       dtparam=audio=on
-      gpu_mem_256=128
-      gpu_mem_512=256
-      gpu_mem_1024=256
       overscan_scale=1
 
       dtparam=spi=on
@@ -183,7 +182,7 @@
 
     <hr>
 
-    <p>Continuer les commandes avec:</p>
+    <p>Continuer les commandes avec :</p>
 
     <DocsCode
       stacked
@@ -270,20 +269,21 @@
 
     <h3>Installation de "mk_arcade_joystick_rpi"</h3>
 
-    <DocsImage src="https://static.retrobox.tech/img/manual/RetroPie/FR/image_17.png" />
-    <DocsImage src="https://static.retrobox.tech/img/manual/RetroPie/FR/image_19.png" />
-    <DocsImage src="https://static.retrobox.tech/img/manual/RetroPie/FR/image_20.png" />
-    <DocsImage src="https://static.retrobox.tech/img/manual/RetroPie/FR/image_24.png" />
-    <DocsImage src="https://static.retrobox.tech/img/manual/RetroPie/FR/image_23.png" />
-    <DocsImage src="https://static.retrobox.tech/img/manual/RetroPie/FR/image_22.png" />
-    <DocsImage src="https://static.retrobox.tech/img/manual/RetroPie/FR/image_21.png" />
-
+    <div class="flex justify-center md:justify-between flex-wrap w-3/4 m-auto">
+      <DocsImage src="https://static.retrobox.tech/img/manual/RetroPie/FR/image_17.png" />
+      <DocsImage src="https://static.retrobox.tech/img/manual/RetroPie/FR/image_19.png" />
+      <DocsImage src="https://static.retrobox.tech/img/manual/RetroPie/FR/image_20.png" />
+      <DocsImage src="https://static.retrobox.tech/img/manual/RetroPie/FR/image_24.png" />
+      <DocsImage src="https://static.retrobox.tech/img/manual/RetroPie/FR/image_23.png" />
+      <DocsImage src="https://static.retrobox.tech/img/manual/RetroPie/FR/image_22.png" />
+      <DocsImage src="https://static.retrobox.tech/img/manual/RetroPie/FR/image_21.png" />
+    </div>
     <ul>
       <li>Puis redémarrez la console.</li>
       <li>Reconnectez vous sur le PI avec Putty puis exécuter les commandes suivantes :</li>
     </ul>
 
-    <h3>Continuer les commandes avec</h3>
+    <h3>Continuer les commandes avec :</h3>
 
     <DocsCode
       stacked
@@ -311,7 +311,7 @@
     <DocsCode
       code="sudo apt-get install i2c-tools" />
 
-    <b>Puis regardez l’adresse du chip:</b>
+    <b>Puis regardez l’adresse du chip :</b>
 
     <DocsCode
       code="sudo i2cdetect -y 1" />
@@ -335,8 +335,8 @@
 
     <DocsHeading label="Conclusion"/>
 
-    Après avoir réussi l'installation manuelle de RetroPie, vous pouvez désormais suivre ce manuel [ici](installation)
-    pour installer des jeux, si vous avez des problèmes qui ne sont pas listés contactez nous !
+    <p>Après avoir réussi l'installation manuelle de RetroPie, vous pouvez désormais suivre ce <nuxt-link to="/docs/installation">manuel</nuxt-link>
+      pour installer des jeux, si vous avez des problèmes qui ne sont pas listés contactez nous !</p>
 
     <br>
 

@@ -4,7 +4,7 @@
     <DocsHeading label="Quelques notions avant de commencer..."/>
 
     <p>
-      Vous avez tout lu, bon travail!
+      Vous avez tout lu, bon travail !
     </p>
 
     <p>Certains outils et équipements sont nécessaires pour l'assemblage et ils ne sont pas inclus dans le kit.</p>
@@ -26,7 +26,7 @@
         Et oui pour souder, il faut un....... fer à souder ! Un des plus basiques suffit, comme par exemple celui :
 
         <a
-          href="https://www.amazon.fr/Electrique-R%C3%A9gulateur-Temp%C3%A9rature-Diff%C3%A9rents-Dessouder/dp/B072XFQS18/ref=sr_1_9?ie=UTF8&qid=1529872099&sr=8-9&keywords=fer+%C3%A0+souder">
+          href="https://www.amazon.fr/ETEPON-Temp%C3%A9rature-Interrupteur-Multim%C3%A8tre-Electronique/dp/B07DWZNRW4/ref=sr_1_1_sspa?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=fer+%C3%A0+souder&qid=1563281645&s=gateway&sr=8-1-spons&psc=1">
           Kit de fer à souder
         </a><br>
 

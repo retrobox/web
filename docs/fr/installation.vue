@@ -90,7 +90,7 @@
       <p>Pour accéder au serveur SAMBA de la console : Taper <code>\\RETROPIE</code> dans la barre de recherche de windows, ou l'adresse IP de la machine.</p>
       <br>
       <p>Sur Max OSX, ouvrez un explorateur, selectionner <code>Aller</code> et <code>Se connecter à un serveur</code>, tapez : <code>smb://retropie</code>.</p>
-
+      <br>
       <p>Il suffit d'aller dans le dossier <code>roms</code> et glisser déposer vos roms !</p>
       <br>
       <li>

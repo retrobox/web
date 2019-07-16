@@ -1,6 +1,6 @@
 <template>
   <div>
-    <DocsHeading label="Dépannage" />
+    <DocsHeading label="Le schéma de la console" />
 
     <p>Travail en cours ici aussi :)</p>
   </div>
