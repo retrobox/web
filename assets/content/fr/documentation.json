@@ -30,6 +30,10 @@
       "name": "Explication du schéma"
     },
     {
+      "slug": "infrastructure",
+      "name": "Explication de l'infrastructure"
+    },
+    {
       "slug": "questions",
       "name": "Questions récurrentes"
     },
