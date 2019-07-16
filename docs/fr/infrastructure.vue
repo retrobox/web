@@ -24,7 +24,6 @@
     <DocsImage src="https://static.retrobox.tech/img/docs/architecture/requete%20console_dash.png" />
     <br>
     <p>Il existe plusieurs routes dans cette application, par exemple la methode GET est utilisée dans le cas ou la commande <code>GET /console/:id</code> est executée, une requête est réalisée sur l'api, le serveur web-socket, puis sur la console pour ensuite transferer la réponse sur le dashboard (Cette commande proviendra essentielement du dashboard).</p>
-    <p>Exemple avec le serveur qui envoie cette requête (Pour installer un jeu sur la console):</p>
     <br>
     <h3>Notre surcouche, elle correspond à quoi ?</h3>
     <br>
