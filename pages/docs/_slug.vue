@@ -189,7 +189,6 @@
           name: item.name
         }
       })
-      console.log(tree)
       return {
         title: page.name,
         tree,
