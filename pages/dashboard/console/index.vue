@@ -7,7 +7,7 @@
           WIP [consoles]
         </h1> -->
         <div 
-          v-if="consoles.length !== 0" 
+          v-if="consoles.length === 0" 
           class="shop-empty-container no-top-margin">
           <div class="shop-empty-icon">
             <Icon value="fas fa-times-circle" />
