@@ -76,13 +76,13 @@
       <li>
         <h3>Le dashboard en ligne (<a
           href="https://retrobox.tech/dashboard/console">https://retrobox.tech/dashboard/console</a>)</h3>
-      </li> 
-    
+      </li>
+
       [APP PICTURES GOES HERE]
 
       <li>
         <h3>Avec windows/mac [Samba] (oui c’est possible, aucun login est requis)</h3>
-      </li> 
+      </li>
 
       <DocsImage src="https://static.retrobox.tech/img/getting-started/RetroPie/image_10.png" />
       <DocsImage src="https://static.retrobox.tech/img/getting-started/RetroPie/image_11.png" />
@@ -95,8 +95,8 @@
       <br>
       <li>
         <h3>Avec WinSCP</h3>
-      </li> 
-    </ol> 
+      </li>
+    </ol>
     <br>
     <p>Connectez-vous simplement sur la console en sftp, et ajoutez vos propres jeux</p>
     <p>Accéder au chemin de fichier suivant : <code>~/RetroPie/roms/</code></p>
@@ -116,8 +116,12 @@
       </li>
     </ul>
     <br>
-    <DocsImage src="https://static.retrobox.tech/img/getting-started/RetroPie/image_8.png" />
-    <DocsImage src="https://static.retrobox.tech/img/getting-started/RetroPie/image_9.png" />
+    <DocsImage
+      margin="3/4"
+      src="https://static.retrobox.tech/img/getting-started/RetroPie/image_8.png" />
+    <DocsImage
+      margin="3/4"
+      src="https://static.retrobox.tech/img/getting-started/RetroPie/image_9.png" />
 
     <ul>
       <li>
@@ -128,8 +132,10 @@
     <br>
     <h4>Yay ! Vous avez réussi à installer RetroPie sur la RetroBox, amusez-vous bien !</h4>
 
-    <DocsImage src="https://static.retrobox.tech/img/getting-started/RetroPie/image_12.png" />
-    <DocsImage src="https://static.retrobox.tech/img/getting-started/RetroPie/image_13.png" />
+    <div class="flex justify-center md:justify-between flex-wrap w-3/4 m-auto">
+      <DocsImage src="https://static.retrobox.tech/img/getting-started/RetroPie/image_12.png" />
+      <DocsImage src="https://static.retrobox.tech/img/getting-started/RetroPie/image_13.png" />
+    </div>
 
     (Crash bandicoot 3 Warped sur PS1)
 

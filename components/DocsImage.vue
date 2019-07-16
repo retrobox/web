@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div style="text-align: center">
+    <div
+      :class="'docs-image-container ' + customClass"
+      style="text-align: center">
       <img
         v-lazy="src"
         :id="'image-' + id"
@@ -41,13 +43,21 @@
       alt: {
         default: '',
         type: String
+      },
+      margin: {
+        default: '',
+        type: String
       }
     },
     data: () => ({
-      id: ''
+      id: '',
+      customClass: 'lel'
     }),
     created() {
       this.id = Math.ceil(Math.random() * 10000);
+      if (this.margin != '') {
+        this.customClass = 'w-full md:w-' + this.margin
+      }
     },
     methods: {
       onClick() {
@@ -58,6 +68,11 @@
 </script>
 
 <style lang="scss">
+  .docs-image-container {
+    text-align: center;
+    margin: 0 auto;
+  }
+
   .doc-image {
     .show-image-container {
       display: flex;
