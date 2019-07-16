@@ -77,6 +77,17 @@
       @extend .w-full;
       @extend .md\:w-2\/3;
       padding-left: 2em;
+      .console-card-fields-loading {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 3.2em;
+        padding-bottom: 3.2em;
+        .icon {
+          font-size: 1.6em;
+        }
+      }
       .console-card-fields {
         &:first-child {
           border-top: 1px solid rgba(128, 128, 128, .4);
@@ -125,14 +136,15 @@
             @extend .text-red;
             @extend .border-red;
             @extend .hover\:bg-red-dark;
+            @extend .hover\:text-white;
             @extend .bg-transparent;
           }
-          &.add {
-            @extend .text-white;
-            @extend .border-blue;
-            @extend .bg-blue;
-            @extend .hover\:bg-transparent;
-            @extend .hover\:text-blue;
+          &.reboot {
+            @extend .text-green;
+            @extend .border-green;
+            @extend .bg-transparent;
+            @extend .hover\:bg-green-dark;
+            @extend .hover\:text-white;
           }
           .icon {
             margin-right: 0.5em;
