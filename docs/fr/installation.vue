@@ -113,8 +113,12 @@
       </li>
     </ul>
     <br>
-    <DocsImage src="https://static.retrobox.tech/img/getting-started/RetroPie/image_8.png" />
-    <DocsImage src="https://static.retrobox.tech/img/getting-started/RetroPie/image_9.png" />
+    <DocsImage
+      margin="3/4"
+      src="https://static.retrobox.tech/img/getting-started/RetroPie/image_8.png" />
+    <DocsImage 
+      margin="3/4"
+      src="https://static.retrobox.tech/img/getting-started/RetroPie/image_9.png" />
 
     <ul>
       <li>
@@ -125,8 +129,10 @@
     <br>
     <h4>Yay ! Vous avez réussi à installer RetroPie sur la RetroBox, amusez-vous bien !</h4>
 
-    <DocsImage src="https://static.retrobox.tech/img/getting-started/RetroPie/image_12.png" />
-    <DocsImage src="https://static.retrobox.tech/img/getting-started/RetroPie/image_13.png" />
+    <div class="flex justify-center md:justify-between flex-wrap w-3/4 m-auto">
+      <DocsImage src="https://static.retrobox.tech/img/getting-started/RetroPie/image_12.png" />  
+      <DocsImage src="https://static.retrobox.tech/img/getting-started/RetroPie/image_13.png" />
+    </div>
 
     (Crash bandicoot 3 Warped sur PS1)
 
