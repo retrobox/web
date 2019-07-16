@@ -7,10 +7,10 @@
 
     <ul>
       <li>
-        Si vous voulez installez manuellement recalbox: <nuxt-link to="/docs/manual-installation"></nuxt-link>
+        Si vous voulez installez manuellement recalbox: <nuxt-link to="/docs/manual-installation">(plus supporté)</nuxt-link>
       </li>
       <li>
-        Si vous voulez installez manuellement retropie: <nuxt-link to="/docs/manual-installation"></nuxt-link>
+        Si vous voulez installez manuellement retropie: <nuxt-link to="/docs/manual-installation">ici</nuxt-link>
       </li>
       <li>
         Si vous voulez juste graver l'image sur la carte SD, aucune configuration est nécessaire, suivez juste ce guide...
@@ -35,7 +35,7 @@
 
     <p>Une fois connecté, l'application identifie automatiquement votre console et synchronise le n° de série enregistré sur le compte sur la console.</p>
 
-    <p>Pour l'instant vous êtes obligé de vous connecter, plus tard il sera falcutif mais vous aurez aucun accès à tous les services que Thingmill propose avec la console.</p>
+    <p>Pour l'instant vous êtes obligé de vous connecter, plus tard il sera falcutatif mais vous aurez aucun accès à tous les services que Thingmill propose avec la console.</p>
 
     <DocsImage src="https://static.retrobox.tech/img/docs/installation/bESX83ll6a.png" />
 
@@ -43,7 +43,7 @@
 
     <p>Pour commencer assurer vous d'être connecté à un réseau wifi (le même que celui de la console utilise).</p>
 
-    <p>Une fois cela fait, vous pouvez choisir votre périphérique sur lequel vous voulez graver RetroBox OS, faite attention a bien choisir votre périphérique car les actions qui vont suivre sont irréversibles.</p>
+    <p>Une fois cela fait, vous pouvez choisir votre périphérique sur lequel vous voulez graver RetroBox OS, faite attention à bien choisir votre périphérique car les actions qui vont suivre sont irréversibles.</p>
 
     <DocsImage src="https://static.retrobox.tech/img/docs/installation/Retrobox_Desktop_App_t8iNt7ZV2B.png" />
 
@@ -53,15 +53,15 @@
 
     <h3>Quatrième étape: Téléchargement de l'image & gravure sur la carte</h3>
 
-    <p>Le téléchargement de l'image peut paraitre long mais il se fait qu'une fait et on parle d'unsystème d'exploitation ! Rassurer vous cela ne prend pas plus de 30min (Sous ADSL).</p>
+    <p>Le téléchargement de l'image peut paraitre long mais il est nécessaire qu'ne seule fois, on parle d'un système d'exploitation ! Rassurez-vous cela ne prend pas plus de 30min (Sous ADSL).</p>
 
     <DocsImage src="https://static.retrobox.tech/img/docs/installation/Retrobox_Desktop_App_OtCt3O2Bm0.png" />
 
-    <p>Une fois le  téléchargement effectué, le plus gros de l'installation est fait, il reste seulement la gravure, qui peut prendre 5 à 10 minutes, tout dépend de la vitesse de la carte SD.</p>
+    <p>Une fois le téléchargement effectué, le plus gros de l'installation est fait, il reste seulement la gravure, qui peut prendre 5 à 10 minutes, tout dépend de la vitesse de la carte SD.</p>
 
     <DocsImage src="https://static.retrobox.tech/img/docs/installation/Retrobox_Desktop_App_SJTNePwVKr.png" />
 
-    <p>L'installation est donc terminée, vous pouvez maintenant ajouter des jeux sur votre console ! Vous retrouvez aussi votre console et tous les paramètres disponibles la concernant dans votre dashboard.</p>
+    <p>L'installation est donc terminée, vous pouvez maintenant ajouter des jeux sur votre console ! Vous retrouvez aussi votre console et tous les paramètres disponibles la concernant, dans votre dashboard.</p>
 
     <DocsImage src="https://static.retrobox.tech/img/docs/installation/Retrobox_Desktop_App_bx5hY2OTGl.png" />
 
@@ -74,7 +74,8 @@
     <br>
     <ol>
       <li>
-        <h3>Le dashboard en ligne (<nuxt-link to="dashboard/console">https://retrobox.tech/dashboard/console</nuxt-link>)</h3>
+        <h3>Le dashboard en ligne (<a
+          href="https://retrobox.tech/dashboard/console">https://retrobox.tech/dashboard/console</a>)</h3>
       </li> 
     
       [APP PICTURES GOES HERE]
@@ -87,9 +88,10 @@
       <DocsImage src="https://static.retrobox.tech/img/getting-started/RetroPie/image_11.png" />
 
       <p>Pour accéder au serveur SAMBA de la console : Taper <code>\\RETROPIE</code> dans la barre de recherche de windows, ou l'adresse IP de la machine.</p>
+      <br>
       <p>Sur Max OSX, ouvrez un explorateur, selectionner <code>Aller</code> et <code>Se connecter à un serveur</code>, tapez : <code>smb://retropie</code>.</p>
 
-      <p>Il suffit d'aller dans le dossier roms et faites glisser déposer vos roms!</p>
+      <p>Il suffit d'aller dans le dossier <code>roms</code> et glisser déposer vos roms !</p>
       <br>
       <li>
         <h3>Avec WinSCP</h3>
@@ -98,6 +100,7 @@
     <br>
     <p>Connectez-vous simplement sur la console en sftp, et ajoutez vos propres jeux</p>
     <p>Accéder au chemin de fichier suivant : <code>~/RetroPie/roms/</code></p>
+    <br>
     <ul>
       <li>
         Login : <code>pi</code>
@@ -106,7 +109,7 @@
         Password : <code>raspberry</code>
       </li>
       <li>
-        IP : L'ip de votre console sur le réseau local
+        IP : L'ip de votre console sur le réseau local (Peux être obtenue dans le dashboard)
       </li>
       <li>
         Protocol : <code>SFTP</code> (Port <code>22</code>)
