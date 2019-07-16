@@ -74,7 +74,7 @@
     <br>
     <ol>
       <li>
-        <h3>Le dashboard en ligne (<nuxt-link to="dashboard/console">https://retrobox.tech/dashboard/console</nuxt-link>)</h3>
+        <h3><nuxt-link to="/dashboard">Le dashboard en ligne</nuxt-link></h3>
       </li> 
     
       [APP PICTURES GOES HERE]
