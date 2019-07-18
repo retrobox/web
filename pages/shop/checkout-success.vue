@@ -29,6 +29,7 @@
     },
     mounted () {
       setTimeout(() => {
+        // TODO: fix: alert doesn't launch when navigating directly via history mode
         this.$store.commit('ADD_ALERT', {
           type: 'success',
           title: this.$t('shop.checkout.success.title'),

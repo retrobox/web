@@ -39,31 +39,11 @@
               </div>
               <div
                 v-if="category.items.length > 0"
-                class="shop-index-category-items">
-                <div
+                class="shop-card-mosaic">
+                <ShopCard 
                   v-for="item in category.items"
                   :key="item.id"
-                  class="shop-card"
-                  @click="$router.push('/shop/' + item.slug)">
-                  <div class="shop-card-thumb">
-                    <div
-                      :style="'background-image: url(' + item.image + ')'"
-                      class="shop-card-image"></div>
-                  </div>
-                  <div class="shop-card-content">
-                    <h4 class="shop-card-title">{{ item.title }}</h4>
-                    <p class="shop-card-description">{{ item.description }}</p>
-                    <div class="shop-card-footer">
-                      <span class="price">€ {{ item.price }}</span>
-                      <LinkTo
-                        :to="'/shop/' + item.slug"
-                        class="button bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded-full">
-                        <Icon value="fas fa-shopping-cart"/>
-                        {{ $t('buy') }}
-                      </LinkTo>
-                    </div>
-                  </div>
-                </div>
+                  :item="item" />
               </div>
             </div>
           </div>
@@ -77,9 +57,10 @@
   import Icon from "../../components/Icon"
   import ShopHeader from "../../components/ShopHeader"
   import LinkTo from "../../components/LinkTo"
+  import ShopCard from "../../components/ShopCard"
 
   export default {
-    components: {LinkTo, ShopHeader, Icon},
+    components: {LinkTo, ShopHeader, Icon, ShopCard},
     head() {
       return {
         title: this.$t('shop.title')

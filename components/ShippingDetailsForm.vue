@@ -113,22 +113,42 @@
         </div>
       </div>
       <!-- country -->
-      <div class="mb-6">
+      <div>
         <label
           class="block text-grey-darker text-sm font-bold mb-2"
           for="address_country"
         >
           {{ $t("shop.shipping_details.form.address_country") }}
         </label>
-        <input
-          id="address_country"
-          v-model="user.address_country"
-          :placeholder="
-            $t('shop.shipping_details.form.address_country_placeholder')
-          "
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight  focus:outline-none focus:shadow-outline"
-          type="text"
-        />
+
+        <div class="relative w-full">
+          <select 
+            id="address_country"
+            v-model="user.address_country"
+            class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+            <option value="">
+              Choose your country
+            </option>
+            <option
+              v-for="country in countries"
+              :key="country.code"
+              :value="country.code">
+              {{ country.name }}
+            </option>
+          </select>
+          <div 
+            class="pointer-events-none absolute flex items-center px-2 text-gray-700"
+            style="
+              top: 0!important;
+              bottom: 0!important;
+              right: 0!important;
+              pointer-events: none!important;">
+            <svg 
+              class="fill-current h-4 w-4" 
+              xmlns="http://www.w3.org/2000/svg" 
+              viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+          </div>
+        </div>
       </div>
     </form>
   </div>
@@ -146,12 +166,20 @@ export default {
         address_second_line: "",
         address_city: "",
         address_postal_code: "",
-        address_country: ""
-      }
+        address_country: ''
+      },
+      countries: []
     };
   },
+  watch: {
+    'user.address_country': function (value) {
+      this.$emit('country', value)
+    }
+  },
   created() {
-    this.fetchDetails()
+    if (!this.$isServer) {
+      this.fetchLocales()
+    }
   },
   methods: {
     fetchDetails: function() {
@@ -175,8 +203,21 @@ export default {
         )
         .then(response => {
           this.user = response.data.data.getOneUser;
+          if (this.user.address_country === null || this.user.address_country.length === 0) {
+            if (this.countries.filter(c => c.code === this.$i18n.locale.toUpperCase()).length === 1) {
+              this.user.address_country = this.$i18n.locale.toUpperCase()
+            } else {
+              this.user.address_country = ''
+            }
+          }
           this.$emit('fetched')
         });
+    },
+    fetchLocales: function() {
+      this.$apitator.get('/countries/' + this.$i18n.locale).then(res => {
+        this.countries = res.data.data.countries
+        this.fetchDetails()
+      })
     },
     save: function() {
       this.saving = true
@@ -218,12 +259,16 @@ export default {
               this.$emit('saved')
           });
       } else {
+        this.$emit('invalid')
         this.$store.commit("ADD_ALERT", {
           type: "error",
           title: this.$t("shop.shipping_details.form.error.title"),
           description: this.$t("shop.shipping_details.form.error.description")
         });
       }
+    },
+    getDetails: function() {
+      return this.user
     }
   }
 };

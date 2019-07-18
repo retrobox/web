@@ -38,6 +38,7 @@
 @import "layouts/_account.scss";
 @import "layouts/_dashboard.scss";
 @import "layouts/_navigation.scss";
+@import "layouts/_checkout.scss";
 
 @media (max-width: 700px) {
   @import 'layouts-responsive/_article.scss';
@@ -57,4 +58,5 @@
   @import "layouts-responsive/_account.scss";
   @import "layouts-responsive/_navigation.scss";
   @import "layouts-responsive/_dashboard.scss";
+  @import 'layouts-responsive/_checkout.scss';
 }

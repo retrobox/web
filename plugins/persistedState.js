@@ -5,7 +5,8 @@ export default ({store}) => {
     createPersistedState({
       key: 'retrobox_store',
       paths: [
-        'cart'
+        'cart',
+        'checkout'
       ]
     })(store)
   })

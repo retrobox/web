@@ -110,12 +110,13 @@
         margin-bottom: 1em;
       }
     }
-    .shop-index-category-items {
-      margin-top: 1.5em;
-      display: flex;
-      flex-wrap: wrap;
-    }
   }
+}
+
+.shop-card-mosaic {
+  margin-top: 1.5em;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .shop-card {
@@ -151,6 +152,12 @@
       font-weight: 500;
       color: #34495e;
     }
+    .shop-card-description {
+      margin-top: .5em;
+      margin-left: 3px;
+      opacity: 0.8;
+      font-size: 1rem;
+    }
     .shop-card-footer {
       display: flex;
       //margin-top: 1em;
@@ -163,6 +170,33 @@
         font-weight: 500;
         font-size: 1.5rem;
       }
+    }
+    .shop-card-buy-button {
+      @extend .button;
+      @extend .bg-blue;
+      @extend .hover\:bg-blue-dark;
+      @extend .text-white;
+      @extend .font-bold;
+      @extend .py-2;
+      @extend .px-4;
+      @extend .rounded-full;
+    }
+    .shop-card-remove-button {
+      @extend .button;
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+      }
+      @extend .bg-transparent;
+      @extend .hover\:bg-blue;
+      @extend .text-blue;
+      @extend .hover\:text-white;
+      @extend .border;
+      @extend .border-blue;
+      @extend .font-bold;
+      @extend .py-2;
+      @extend .px-4;
+      @extend .rounded-full;
     }
   }
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, .1);

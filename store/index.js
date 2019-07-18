@@ -28,7 +28,15 @@ export const state = () => ({
   showBody: false,
   isMobile: false,
   userToken: '',
-  mustBeAuthenticated: false
+  mustBeAuthenticated: false,
+  checkout: {
+    subTotal: 0,
+    country: '',
+    shippingMethod: 'colissimo',
+    shippingPrice: 0,
+    total: 0,
+    totalWeight: 0
+  }
 });
 
 import jwtDecode from "jwt-decode"
@@ -121,6 +129,22 @@ export const mutations = {
   },
   SET_MUST_BE_AUTHENTICATED: (state, value) => {
     state.mustBeAuthenticated = value
+  },
+  SET_CHECKOUT: (state, payload) => {
+    state.checkout = payload
+  },
+  SET_CHECKOUT_ITEMS: (state, payload) => {
+    state.checkout.subTotal = payload[0]
+    state.checkout.total = payload[0]
+    state.checkout.totalWeight = payload[1]
+  },
+  SET_CHECKOUT_COUNTRY: (state, payload) => {
+    state.checkout.country = payload
+  },
+  SET_CHECKOUT_SHIPPING_METHOD: (state, payload) => {
+    state.checkout.shippingMethod = payload[0]
+    state.checkout.shippingPrice = payload[1]
+    state.checkout.total = (state.checkout.subTotal + payload[1]).toFixed(2)
   }
 };
 

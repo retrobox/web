@@ -287,7 +287,7 @@
         } else {
           let storage_prices = []
           if (item.category.is_customizable) {
-            let response = await context.app.apitator.get('/shop/prices')
+            let response = await context.app.apitator.get('/shop/storage-prices')
             storage_prices = response.data.data.storage_prices;
           }
           item.description_long = marked(item.description_long)
