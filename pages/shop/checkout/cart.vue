@@ -8,7 +8,7 @@
     <div class="container mx-auto">
       <CheckoutPage
         :step="1"
-        @next="$router.push('/shop/checkout/shipping')">
+        @next="next()">
         <div class="shop-card-mosaic justify-center">
           <ShopCard 
             v-for="item in $store.state.cart"
@@ -49,8 +49,8 @@ export default {
   },
   mounted() {
     const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('checkout') === 'yes') {
-      this.checkout()
+    if (urlParams.get('next') === 'yes') {
+      this.next()
     }
   },
   methods: {
@@ -59,12 +59,12 @@ export default {
     },
     next() {
       if (this.$cookie.get('user_token') == null) {
-          // register a checkout flag for redirection after login
-          this.$router.push({ query: { next: 'yes' }})
-          this.$modal.show('loginOrRegister')
-        } else {
-          this.$router.push('/shop/checkout/shipping')
-        }
+        // register a checkout flag for redirection after login
+        this.$router.push({ query: { next: 'yes' }})
+        this.$modal.show('loginOrRegister')
+      } else {
+        this.$router.push('/shop/checkout/shipping')
+      }
     },
     toggleCart: function (item) {
       this.$store.commit('CART_TOGGLE', item);

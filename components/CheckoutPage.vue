@@ -105,7 +105,10 @@ export default {
       }
     },
     shipping() {
-      if (this.step === 1 || this.step === 3) {
+      if (this.step === 1) {
+        this.$emit('next')
+      }
+      if (this.step === 3) {
         this.$router.push('/shop/checkout/shipping')
       }
     },
