@@ -189,6 +189,11 @@
     },
     "shipping_details": {
       "title": "Vos détails de livraisons",
+      "method": "Moyen de libraison",
+      "methods": {
+        "colissimo": "Livraison en 2 jours ouvré",
+        "dhl": "Livraison DHL express"
+      },
       "form": {
         "first_name": "Prénom",
         "first_name_placeholder": "John",

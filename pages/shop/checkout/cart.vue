@@ -19,7 +19,7 @@
         </div>
         <div class="checkout-sub-total">
           <div class="checkout-sub-total-text">
-            Sous total
+            {{ $t('shop.cart.sub_total') }}
           </div>
           <div class="checkout-sub-total-price">
             <span class="currency">€</span> {{ $store.state.checkout.subTotal }}
@@ -41,10 +41,6 @@ export default {
   head() {
     return {
       title: this.$t("shop.cart.title")
-    };
-  },
-  data() {
-    return {
     };
   },
   mounted() {

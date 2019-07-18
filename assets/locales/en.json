@@ -189,6 +189,11 @@
     },
     "shipping_details": {
       "title": "Your delivery details",
+      "method": "Shipping method",
+      "methods": {
+        "colissimo": "2 days shipping",
+        "dhl": "DHL express shipping"
+      },
       "form": {
         "first_name": "First name",
         "first_name_placeholder": "John",

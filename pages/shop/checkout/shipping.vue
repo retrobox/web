@@ -15,7 +15,9 @@
         <div class="checkout-shipping">
           <div class="shipping-details">
             <div class="shipping-details-title-container">
-              <h3 class="shipping-details-title">Your Shipping Details</h3>
+              <h3 class="shipping-details-title">
+                {{ $t('shop.shipping_details.title') }}
+              </h3>
             </div>
             <ShippingDetailsForm
               ref="shippingDetailsForm"
@@ -25,7 +27,9 @@
           </div>
           <div class="shipping-methods">
             <div class="shipping-methods-title-container">
-              <h3 class="shipping-methods-title">Your shipping method</h3>
+              <h3 class="shipping-methods-title">
+                {{ $t('shop.shipping_details.method') }}
+              </h3>
             </div>
             <div class="shipping-method-selector">
               <div 
@@ -47,7 +51,7 @@
                   </div>
                   <div class="shipping-method-right">
                     <div class="shipping-method-description">
-                      Livraison en 2 ans ouvré
+                      {{ $t('shop.shipping_details.methods.colissimo') }}
                     </div>
                     <div class="shipping-method-price">
                       <span class="currency">€</span>
@@ -75,7 +79,7 @@
                   </div>
                   <div class="shipping-method-right">
                     <div class="shipping-method-description">
-                      Livraison en 4 décénnies ouvré
+                      {{ $t('shop.shipping_details.methods.dhl') }}
                     </div>
                     <div class="shipping-method-price">
                       <span class="currency">€</span>
@@ -91,7 +95,7 @@
         <div class="checkout-bill mt-4">
           <div class="checkout-price-container checkout-small-price">
             <div class="checkout-text">
-              Sous total
+              {{ $t('shop.cart.sub_total') }}
             </div>
             <div class="checkout-price">
               <span class="currency">€</span> {{ $store.state.checkout.subTotal }}
@@ -99,7 +103,7 @@
           </div>
           <div class="checkout-price-container checkout-small-price">
             <div class="checkout-text">
-              Shipping
+              {{ $t('shop.cart.shipping_price') }}
             </div>
             <div class="checkout-price">
               <span class="currency">€</span> {{ $store.state.checkout.shippingPrice }}
@@ -107,7 +111,7 @@
           </div>
           <div class="checkout-price-container checkout-big-price">
             <div class="checkout-text">
-              Total
+              {{ $t('shop.cart.total') }}
             </div>
             <div class="checkout-price">
               <span class="currency">€</span> {{ $store.state.checkout.total }}
@@ -133,14 +137,12 @@ export default {
       title: this.$t('shop.shipping_details.title')
     };
   },
-  data() {
-    return {
-      show: false,
-      shippingMethod: 'colissimo',
-      colissimoPrice: 0,
-      dhlPrice: 0
-    };
-  },
+  data: () => ({
+    show: false,
+    shippingMethod: 'colissimo',
+    colissimoPrice: 0,
+    dhlPrice: 0
+  }),
   watch: {
     'shippingMethod': function() {
       this.updateShippingPrice()

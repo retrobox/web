@@ -2,7 +2,9 @@
   <DashboardPage>
     <div class="game-store">
       <div class="game-store-top">
-        <button class="game-store-import">
+        <button
+          class="game-store-import"
+          @click="$modal.show('importRomModal')">
           <Icon value="fas fa-upload" />
           Import a ROM
         </button>
@@ -72,6 +74,47 @@
         </div>
       </div>
     </div>
+    <no-ssr>      
+      <modal 
+        adaptive 
+        class="modal" 
+        height="auto" 
+        name="importRomModal">
+        <div class="p-4">
+          <h3 class="mb-6 mt-3">
+            Import a ROM
+          </h3>
+          <div
+            v-if="loading"
+            class="loading-container">
+            <div class="loading">
+              <Icon
+                value="fas fa-sync"
+                spin />
+            </div>
+          </div>
+          <div v-else>
+            <br />
+            <input
+              id="romInput"
+              ref="romInput"
+              accept=".zip,.n64,.nes,.bin" 
+              type="file"
+              @change="handleRomUpload" />
+            <br />
+            <br />
+          </div>
+        </div>
+        <div class="">
+          <div
+            class="w-full button bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 text-center cancel-button"
+            @click="$modal.hide('importRomModal')"
+          >
+            Close
+          </div>
+        </div>
+      </modal>
+    </no-ssr>
   </DashboardPage>
 </template>
 
@@ -91,7 +134,25 @@ export default {
     }
   },
   data: () => ({
-    searchInput: ''
-  })
+    searchInput: '',
+    uploadedRom: null,
+    loading: false
+  }),
+  methods: {
+    handleRomUpload: function () {
+      this.uploadedRom = this.$refs.romInput.files[0]
+      let formData = new FormData();
+      formData.append('file', this.uploadedRom)
+      this.loading = true
+      this.$apitator.post('/dashboard/upload', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        },
+        withAuth: true
+      }).then(() => {
+        this.loading = false
+      })
+    }
+  }
 }
 </script>
