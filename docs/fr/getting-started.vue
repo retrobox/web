@@ -18,14 +18,14 @@
 
     Bienvenue dans le monde de <b>Retrobox</b> !
 
-    Une fois que vous avez reçu votre colis, il est possible que nous avons oublié un composant, (nous sommes humains, mais je vous rassure cela n'arrive pratiquement jamais) si c'est le cas, contactez nous, nous vous réexpidrons le composant manquant gratuitement, contactez nous : [mail](mailto:support@retrobox.tech)
+    Une fois que vous avez reçu votre colis, il est possible que nous avons oublié un composant, (nous sommes humains, mais je vous rassure cela n'arrive pratiquement jamais) si c'est le cas, contactez nous, nous vous réexpidrons le composant manquant gratuitement, contactez nous : <a href="mailto:support@retrobox.tech">support@retrobox.tech</a>
 
     <DocsImage src="https://static.retrobox.tech/img/box.jpg"/>
 
     <DocsImage src="https://static.retrobox.tech/img/getting-started/RetroPie/all-composants.jpg" />
 
     <DocsHeading
-      label="Quelques images"
+      label="Le schéma de la console"
     />
 
     Voici donc le schéma de votre console, si vous ne comprenez pas grand chose, pas d'inquiétude vous allez tout apprendre en montant votre console !
@@ -59,7 +59,7 @@
 
     <div class="docs-section">
       <div>
-        La PCB est une plaque qui a elle seule supporte tous les composants !
+        La PCB est une plaque qui à elle seule supporte tous les composants !
 
         C'est juste une plaque avec des fils en cuivres pré-intégrés.
         Cela permet d'avoir un beau rendu de qualité.

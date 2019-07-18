@@ -2,11 +2,11 @@
   "tree": [
     {
       "slug": "home",
-      "name": "Documentation"
+      "name": "Home"
     },
     {
       "slug": "getting-started",
-      "name": "Start with Retrobox"
+      "name": "Getting Started"
     },
     {
       "slug": "tools",
@@ -26,12 +26,16 @@
       "name": "Installation"
     },
     {
-      "slug": "questions",
-      "name": "Questions"
+      "slug": "schematic",
+      "name": "Explained schematic"
     },
     {
-      "slug": "troubleshooting",
-      "name": "Troubleshooting"
+      "slug": "infrastructure",
+      "name": "The infrastructure"
+    },
+    {
+      "slug": "questions",
+      "name": "Questions"
     },
     {
       "slug": "manual-installation",

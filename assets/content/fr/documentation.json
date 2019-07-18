@@ -26,12 +26,16 @@
       "name": "Installation"
     },
     {
-      "slug": "questions",
-      "name": "Questions récurrentes"
+      "slug": "schematic",
+      "name": "Explication du schéma"
     },
     {
-      "slug": "troubleshooting",
-      "name": "Dépannage"
+      "slug": "infrastructure",
+      "name": "Explication de l'infrastructure"
+    },
+    {
+      "slug": "questions",
+      "name": "Questions récurrentes"
     },
     {
       "slug": "manual-installation",

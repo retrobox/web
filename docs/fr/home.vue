@@ -55,7 +55,7 @@
 
       </div>
       <DocsImage
-        src="https://makerbuino.com/wp-content/uploads/2016/11/PCB-front.png" />
+        src="https://static.retrobox.tech/img/docs/home/pcb_render_top.png" />
     </div>
     <br>
 

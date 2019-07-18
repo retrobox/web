@@ -44,11 +44,11 @@
         })
         this.columns = [
           {
-            label: 'Name',
+            label: 'Nom',
             field: 'name',
           },
           {
-            label: 'Quantity',
+            label: 'Quantité',
             field: 'quantity',
             type: 'number',
           },

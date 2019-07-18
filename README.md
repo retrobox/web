@@ -4,6 +4,10 @@
 
 [![CircleCI](https://circleci.com/gh/retrobox/web.svg?style=svg)](https://circleci.com/gh/retrobox/web)
 
+## Preview
+
+![alt text](https://static.retrobox.tech/img/firefox_h6GDEeX8FJ.png)
+
 ## Build Setup
 
 ``` bash
