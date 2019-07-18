@@ -19,7 +19,7 @@
 </template>
 
 <script>
-  import Icon from "../../components/Icon"
+  import Icon from "~/components/Icon"
   export default {
     components: {Icon},
     head () {
