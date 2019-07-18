@@ -114,7 +114,7 @@
           shipping_country: this.$store.state.checkout.country
         }, { withAuth: true }).then(() => {
           console.log("stripe: success");
-          this.$router.push('/shop/checkout-success')
+          this.$router.push('/shop/checkout/success')
         }).catch((error) => {
           this.way = '';
           this.stripeLoading = false;
