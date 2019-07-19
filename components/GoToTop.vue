@@ -26,11 +26,23 @@
         this.show = document.body.scrollTop > 20 || document.documentElement.scrollTop > 20;
         let position = window.scrollY
         this.atBottom = Math.ceil((position / (document.body.clientHeight - document.documentElement.clientHeight)) * 100) >= 98
+        if (position === 0) {
+          setTimeout(() => {
+            document
+              .querySelector('html')
+              .setAttribute('style', 'scroll-behavior: auto;')
+          }, 200)
+        }
       };
     },
     methods: {
       goToTop: function () {
-        window.scrollTo(0, 0)
+        document
+          .querySelector('html')
+          .setAttribute('style', 'scroll-behavior: smooth;')
+        setTimeout(() => {
+          window.scrollTo(0, 0)
+        }, 10)
       }
     }
   }
