@@ -2,7 +2,9 @@
   <div class="landing-back">
     <div class="landing-main-back"></div>
     <div class="landing-main">
-      <div class="landing-main-content">
+      <div 
+        class="landing-main-content"
+        data-aos="fade-up">
         <h1 class="landing-main-title">{{ $t('landing.title') }}</h1>
         <p class="landing-main-subtitle">{{ $t('landing.sub_title') }}</p>
         <div class="landing-main-actions">
