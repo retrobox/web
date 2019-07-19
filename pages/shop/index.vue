@@ -43,7 +43,8 @@
                 <ShopCard 
                   v-for="item in category.items"
                   :key="item.id"
-                  :item="item" />
+                  :item="item"
+                  data-aos="fade-in" />
               </div>
             </div>
           </div>
