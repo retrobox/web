@@ -11,22 +11,25 @@
     }
   }
   .buy-content {
-    padding-left: 10px;
-    padding-right: 10px;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-column-gap: 0.5em;
     // .buy-title {
     //   margin-bottom: 1em;
     //   font-size: 1.6em;
     //   font-weight: lighter;
     // }
+    @extend .flex;
+    @extend .flex-wrap;
     .buy-description-container {
+      @extend .lg\:w-2\/5;
+      @extend .md\:w-1\/2;
+      @extend .w-full;
+      @extend .pl-0;
+      @extend .md\:pl-6;
+      @extend .lg\:pl-8;
       margin-top: 0.6em;
       font-weight: 500;
       font-size: 1em;
       .buy-description {
-        width: 90%;
+        text-align: justify;
         margin-bottom: 1.2em;
         line-height: 1.5em;
         ul {
@@ -35,21 +38,34 @@
         }
       }
 
-      .buy-price {
-        font-size: 2.3em;
-        font-weight: 100;
-        margin-bottom: 0.7em;
+      .buy-price-container {
+        margin-bottom: 1.2em;
+        display: flex;
+        align-items: center;
         opacity: 0.8;
+        .buy-price-currency {
+          font-weight: 400;
+          font-size: 1.5em;
+          margin-right: .5em;
+        }
+        .buy-price-price {
+          font-weight: 500;
+          font-size: 2.3em;
+        }
       }
 
       .buy-actions {
-        .action-buy {
-          padding: 10px 15px 10px 15px;
-          font-size: 1.3em;
-          font-weight: 400;
-          i {
-            margin-right: 1em;
-          }
+        .buy-main-button {
+          @extend .button;
+          @extend .bg-red-light;
+          @extend .hover\:bg-red;
+          @extend .text-white;
+          @extend .font-bold;
+          @extend .py-4;
+          @extend .px-8;
+          @extend .rounded-full;
+          @extend .w-full;
+          @extend .md\:w-auto;
         }
       }
 
@@ -74,8 +90,30 @@
           }
         }
       }
+
+      .buy-social-share-container {
+        margin-top: 1.5em;
+        margin-bottom: 1.25em;
+        .buy-social-share-text {
+          margin-bottom: .9em;
+        }
+
+        .buy-social-share-mosaic {
+          @extend .socials;
+          margin-top: 0.50em;
+          li a {
+            color: #34495e !important;
+          }
+          li .icon:hover {
+            color: #333333 !important;
+          }
+        }
+      }
     }
     .buy-images-container {
+      @extend .lg\:w-3\/5;
+      @extend .md\:w-1\/2;
+      @extend .w-full;
       .buy-images-mosaic {
 
         display: grid;

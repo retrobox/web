@@ -8,8 +8,17 @@
 
     .buy-description-container {
 
-      .buy-ways-container {
+      .buy-custom-type {
+        .buy-custom-title {
+          display: flex;
+          justify-content: center;
+        }
+        .buy-custom-mosaic {
+          justify-content: space-around;
+        }
+      }
 
+      .buy-ways-container {
         .buy-ways-mosaic {
           flex-wrap: wrap;
           width: 100%;
@@ -17,6 +26,17 @@
           .buy-way {
             margin-right: .3em;
           }
+        }
+      }
+
+      .buy-social-share-container {
+        .buy-social-share-text {
+          display: flex;
+          justify-content: center;
+        }
+        .buy-social-share-mosaic ul {
+          display: flex;
+          justify-content: center;
         }
       }
     }

@@ -97,28 +97,25 @@
                     </div>
                   </div>
                 </div>
-                <div class="buy-price">
-                  <span
-                    style="font-weight: 500"
-                    class="">
-                    € {{ price }}
-                  </span>
+                <div class="buy-price-container">
+                  <div class="buy-price-currency">€</div>
+                  <div class="buy-price-price">{{ price }}</div>
                 </div>
                 <div class="buy-actions">
                   <button
-                    class="button bg-red-light hover:bg-red text-white font-bold py-4 px-8 rounded-full"
+                    class="buy-main-button"
                     @click="toggleCart(item)">
-                    <span><i class="fas fa-shopping-cart"></i></span>
+                    <Icon value="fas fa-shopping-cart" />
                     <span v-if="$store.state.cart.filter(_item => _item.id === item.id).length === 0">{{ $t('shop.cart.add') }}</span>
                     <span v-else>{{ $t('shop.cart.remove') }}</span>
                   </button>
                 </div>
-                <div 
-                  class="social-sharing" 
-                  style="margin-top: 1.25em; margin-bottom: 1.25em">
-                  <span>{{ $t('shop.item.share') }}</span>
-                  <div class="share">
-                    <ul style="margin-top: 0.50em;">
+                <div class="buy-social-share-container">
+                  <div class="buy-social-share-text">
+                    {{ $t('shop.item.share') }}
+                  </div>
+                  <div class="buy-social-share-mosaic">
+                    <ul>
                       <li class="facebook">
                         <a 
                           :href="$t('facebook').link" 
@@ -154,33 +151,46 @@
                   class="buy-description"
                   v-html="item.description_long">
                 </div>
+                <div class="buy-ways-container">
+                  <!-- <div class="hint">Nous suportons ces moyens de payements :</div> -->
+                  <div class="buy-ways-mosaic">
+                    <div class="buy-way">
+                      <i class="fab fa-cc-paypal"></i>
+                    </div>
+                    <div class="buy-way">
+                      <i class="fab fa-cc-visa"></i>
+                    </div>
+                    <div class="buy-way">
+                      <i class="fab fa-cc-stripe"></i>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <no-ssr>
-      <modal
-        name="show_image"
-        adaptive
-        class="modal show-image-modal">
-        <div class="modal-container">
-          <div class="show-image-container">
-            <img
-              :src="to_show"
-              alt="An shop item image">
+      <no-ssr>
+        <modal
+          name="show_image"
+          adaptive
+          class="modal show-image-modal">
+          <div class="modal-container">
+            <div class="show-image-container">
+              <img
+                :src="to_show"
+                alt="An shop item image">
+            </div>
           </div>
-        </div>
-        <div
-          class="button bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 cancel-button"
-          @click="$modal.hide('show_image')">
-          {{ $t('close') }}
-        </div>
-      </modal>
-    </no-ssr>
-  </div>
-</template>
+          <div
+            class="button bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 cancel-button"
+            @click="$modal.hide('show_image')">
+            {{ $t('close') }}
+          </div>
+        </modal>
+      </no-ssr>
+    </div>
+</div></template>
 
 <script>
   import marked from "marked"
