@@ -12,6 +12,30 @@
   </div>
 </template>
 
+<script>
+  import Icon from "./Icon"
+
+  export default {
+    components: {Icon},
+    data: () => ({
+      show: false,
+      atBottom: false
+    }),
+    mounted () {
+      window.onscroll = () => {
+        this.show = document.body.scrollTop > 20 || document.documentElement.scrollTop > 20;
+        let position = window.scrollY
+        this.atBottom = Math.ceil((position / (document.body.clientHeight - document.documentElement.clientHeight)) * 100) >= 98
+      };
+    },
+    methods: {
+      goToTop: function () {
+        window.scrollTo(0, 0)
+      }
+    }
+  }
+</script>
+
 <style>
   .go-to-top {
     position: fixed;
@@ -41,26 +65,3 @@
     bottom: 6em;
   }
 </style>
-<script>
-  import Icon from "./Icon"
-
-  export default {
-    components: {Icon},
-    data: () => ({
-      show: false,
-      atBottom: false
-    }),
-    mounted () {
-      window.onscroll = () => {
-        this.show = document.body.scrollTop > 20 || document.documentElement.scrollTop > 20;
-        let position = window.scrollY
-        this.atBottom = Math.ceil((position / (document.body.clientHeight - document.documentElement.clientHeight)) * 100) >= 98
-      };
-    },
-    methods: {
-      goToTop: function () {
-        window.scrollTo(0, 0)
-      }
-    }
-  }
-</script>
