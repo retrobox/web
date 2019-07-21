@@ -7,6 +7,7 @@ const marked = require('marked')
 const renderer = new marked.Renderer();
 const join = require('path').join
 const tailwindJS = join(__dirname, 'tailwind.js')
+const getAppRoutes = require('./getRoutes.js');
 
 module.exports = {
   mode: 'universal',
@@ -66,6 +67,15 @@ module.exports = {
         return { x: 0, y: 0 }
       }
     }
+  },
+
+  sitemap: {
+    routes: [
+      '/',
+      '/about',
+      '/downloads',
+      '/contact-us'
+    ]
   },
 
   /*
