@@ -1,0 +1,102 @@
+.footer {
+  margin-top: 1.5em;
+  .footer-container {
+    margin-top: 0em;
+    .footer-content {
+      padding-top: 3em;
+      padding-bottom: 3em;
+      background-color: white;
+      a {
+        text-decoration: none;
+        color: #2c3e50;
+        transition: color 0.2s ease-in-out;
+      }
+      a:hover {
+        color: rgba(44, 62, 80, 0.8);
+        text-decoration: none;
+        transition: color 0.2s ease-in-out;
+      }
+      .footer-socials {
+        // .footer-socials-title {
+        //   color: #95a5a6;
+        // }
+        ul {
+          display: flex;
+          justify-content: center;
+          padding-left: 10px;
+          li {
+            a {
+              font-size: 2em;
+              margin-right: 10px;
+            }
+            list-style-type: none;
+          }
+        }
+      }
+      .footer-logo {
+        display: flex;
+        justify-content: center;
+        img {
+          height: 4em;
+          width: auto;
+        }
+      }
+      .footer-links {
+        ul {
+          padding-left: 0;
+        }
+        li {
+          list-style-type: none;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .colored-divider-container {
+      border-top: 0;
+      div {
+        border-bottom-width: 4px;
+      }
+    }
+
+    .footer-content-bottom {
+      background: linear-gradient(90deg,#93278f,#00a99d 95%);
+      padding-top: 2em;
+      padding-bottom: 2em;
+      box-shadow: 1px 1px 8px #000000;
+      a {
+        text-decoration: none;
+        color: white;
+        opacity: 0.7;
+        transition: opacity 0.2s ease-in-out;
+      }
+      a:hover {
+        opacity: 1;
+        transition: 0.2s opacity;
+        text-decoration: none;
+        transition: opacity 0.2s ease-in-out;
+      }
+      .footer-inline-links {
+        ul {
+          list-style-type: none;
+          display: flex;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          li {
+            margin-right: 1em;
+          }
+          .copyright a {
+            opacity: 1.0;
+          }
+        }
+      }
+
+    }
+    .container {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+    }
+  }
+}

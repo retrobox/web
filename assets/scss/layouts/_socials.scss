@@ -1,0 +1,44 @@
+.socials {
+  ul {
+    display: flex;
+    list-style-type: none;
+    margin-right: 0;
+    font-size: 1.6em;
+    padding: 0;
+
+    li {
+      margin-right: 25px;
+      .icon {
+        width: auto;
+        height: 1.2em;
+        max-width: 100%;
+        max-height: 100%;
+      }
+      a {
+        color: white;
+        opacity: 0.8;
+        transition: 0.2s opacity;
+        i {
+          display: flex;
+          align-items: center;
+        }
+      }
+      a:hover {
+        opacity: 1;
+        transition: 0.2s opacity;
+      }
+    }
+    li:last-of-type {
+      margin-right: 5px;
+    }
+    li {
+      .icon:hover {
+        transition: 0.2s filter,color;
+        color: #ffffff;
+      }
+      .icon {
+        transition: 0.2s filter,color;
+      }
+    }
+  }
+}

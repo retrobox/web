@@ -1,0 +1,49 @@
+{
+  "tree": [
+    {
+      "slug": "home",
+      "name": "Accueil"
+    },
+    {
+      "slug": "getting-started",
+      "name": "Pour commencer"
+    },
+    {
+      "slug": "tools",
+      "name": "Les outils nécessaires"
+    },
+    {
+      "slug": "assembly",
+      "name": "Assemblage"
+    },
+    {
+      "slug": "finishing",
+      "name": "Finition"
+    },
+    {
+      "type": "page",
+      "slug": "installation",
+      "name": "Installation"
+    },
+    {
+      "slug": "schematic",
+      "name": "Explication du schéma"
+    },
+    {
+      "slug": "infrastructure",
+      "name": "Explication de l'infrastructure"
+    },
+    {
+      "slug": "questions",
+      "name": "Questions récurrentes"
+    },
+    {
+      "slug": "manual-installation",
+      "name": "Installation manuelle"
+    },
+    {
+      "slug": "technical-specification",
+      "name": "Caractéristiques techniques"
+    }
+  ]
+}

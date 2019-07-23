@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Valentin Derouet",
+    "description": "17 ans, Concepteur électronique, développeur web, aime les pâtes.",
+    "image": "https://static.retrobox.tech/img/about/valentin.png",
+    "link": "https://stoneset.me"
+  },
+  {
+    "name": "Etienne Chevrollier",
+    "description": "16 ans, photoshopeur, idéaste, et absent quand il ne le faut pas",
+    "image": "https://static.retrobox.tech/img/about/etienne.jpg",
+    "link": "https://wabfall.me"
+  },
+  {
+    "name": "Matthieu Bessat",
+    "description": "16 ans, développeur web full stack, php, js rien ne lui échappe !",
+    "image": "https://static.retrobox.tech/img/about/matthieu.jpg",
+    "link": "https://lefuturiste.fr"
+  }
+]

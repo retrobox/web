@@ -1,0 +1,15 @@
+.loading {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
+  color: #2c3e50;
+  .icon {
+    font-size: 3em;
+  }
+}
+
+.loading-container .loading {
+  height: 45vh;
+}

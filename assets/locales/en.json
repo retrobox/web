@@ -1,0 +1,317 @@
+{
+  "id": "en",
+  "actual_lang": "English",
+  "french": "French",
+  "french_flag": "French flag",
+  "english": "English",
+  "english_flag": "English flag",
+  "login": "Login",
+  "register": "Register",
+  "login-or-register": "Login or register",
+  "home": "Home",
+  "docs": "Documentation",
+  "buy": "Buy",
+  "close": "Close",
+  "previous": "Previous",
+  "next": "Next",
+  "title": "Retrobox, a diy open-source console",
+  "description": "The RetroBox is an open source DIY console created by young people, replay the games of your childhood!",
+  "partnership": {
+    "lyceealain": {
+      "title": "In partner ship with Lycée Alain"
+    },
+    "cci": {
+      "title": "Supported by the CCI Normandie"
+    },
+    "creative-commons": {
+      "title": "This work is licensed under a Creative Commons."
+    }
+  },
+  "community": {
+    "title": "Our community",
+    "page": {
+      "title": "Join our community",
+      "description": "Come ask your questions, share your experiences, exchanges with the creators of the console!"
+    }
+  },
+  "downloads": {
+    "title": "Downloads",
+    "page": {
+      "title": "Downloads our software !",
+      "description": "Find the desktop application to flash your sd card to use it with your RetroBox!",
+      "os-text": {
+        "win": "Windows 7/8/10",
+        "mac": "Mac OS",
+        "lin": "Linux",
+        "coming-soon": "Coming soon on Android et iOS"
+      }
+    },
+    "modal": {
+      "title": "Your downloading is beginning...",
+      "description": "If your downloading does not start soon enough you can restart it",
+      "download": "Download"
+    }
+  },
+  "newsletter": {
+    "title": "Receive our newsletter",
+    "description": "Sign up to receive the latest information ...",
+    "form": {
+      "submit": "Ok",
+      "email": "Your email",
+      "email_placeholder": "john@example.com"
+    },
+    "success": {
+      "title": "Congratulations !",
+      "description": "You have subscribed to the newsletter"
+    },
+    "error": {
+      "title": "An error has occurred",
+      "description": "We can not validate this email address",
+      "missing_description": "You did not provide an email",
+      "invalid_description": "The email you provided does not correspond to an email",
+      "api_description": "The API does not respond as expected",
+      "member_exists": "You are already register !"
+    }
+  },
+  "breadcrumb": {
+    "title": "You are here:"
+  },
+  "twitter": {
+    "title": "Our twitter account",
+    "link": "https://twitter.com/RetroBoxSP"
+  },
+  "facebook": {
+    "title": "Our facebook page",
+    "link": "https://facebook.com/RetroBoxSP"
+  },
+  "github": {
+    "title": "Our github organisation",
+    "link": "https://github.com/retrobox"
+  },
+  "discord": {
+    "title": "Our discord guild",
+    "link": "https://discord.gg/TzNNQnP"
+  },
+  "landing": {
+    "title": "A console, 20 years of games, 35 years of technology",
+    "sub_title": "With the RetroBox, play your favorite retro games in a simple and accessible way",
+    "go": "More",
+    "about": {
+      "title": "Simplicity, Nostalgia, Sharing ...",
+      "description": "The Retrobox is a portable console for emulating all games up to the PS1, it was never as accessible to play your old favorite games. The console embeds modern technologies such as wifi to connect to your computer or smartphone and bluetooth to connect a headset or a joystick. The console has an HDMI output to play even on your TV! With 8 hours of autonomy, hours and hours of fun in your pocket"
+    },
+    "about-us": {
+      "title": "Imagined, Prototyped and Assembly in Normandy",
+      "description": "The Retrobox is a project of young Norman who are always listening to you, your feedback is important and we improve our console and services included with the purchase to better satisfy you."
+    },
+    "advantages": {
+      "title": "Many advantages ...",
+      "game": {
+        "title": "An exceptional library",
+        "description": "More than 25,000 free games available for free, discover more than 25,000 installable games in just a few clicks thanks to our library"
+      },
+      "custom": {
+        "title": "A customizable thing",
+        "description": "Have you ever wanted to have a unique console? With the purchase choose the console which corresponds to you without supplements!"
+      },
+      "connected": {
+        "title": "A connected console",
+        "description": "A connected console, view the status of your console remotely and control it down to the smallest detail (even from your smartphone)"
+      },
+      "switch": {
+        "title": "A flexible console",
+        "description": "A maximum of possibility, push further the principle of the portable console, connect it to your TV and play without problem in your sofa from your smartphone)"
+      },
+      "easy": {
+        "title": "A easly handling console",
+        "description": "Do not take the lead with the setup, all has been prepared for you!"
+      },
+      "opensource": {
+        "title": "An opensource console",
+        "description": "This console is opensource, which means you can see the sources of the website, the diagrams etc. for no surprises "
+      }
+    },
+    "start_now": {
+      "title": "Start now",
+      "kited": {
+        "title": "Kit version",
+        "description": "You like electronics, build your own console with this version and customize it!"
+      },
+      "non_kited": {
+        "title": "Assembled version",
+        "description": "Start the adventure directly, without worrying about the technical side!"
+      }
+    }
+  },
+  "not-found": {
+    "title": "Not found",
+    "description": "You came across the wrong page because it does not exist or it has been deleted."
+  },
+  "coming-soon-video": {
+    "title": "Video Coming Soon",
+    "description": "We will create a video"
+  },
+  "about": "About",
+  "terms-of-use": "Conditions of use",
+  "terms-of-sale": "Conditions of sale",
+  "privacy": "Privacy",
+  "get-help": "Need help ?",
+  "status": "Status of services",
+  "developers": "Developers",
+  "legals": "Legals terms",
+  "credits": "Credits",
+  "our-team-members": "Our team members",
+  "account": {
+    "title": "My account",
+    "logout": {
+      "title": "Sign Out",
+      "success": {
+        "title": "And voila !",
+        "description": "You have been disconnected"
+      }
+    },
+    "dashboard": "My dashboard",
+    "admin": "Panel admin"
+  },
+  "shop": {
+    "checkout": {
+      "title": "Pay",
+      "choise": "Choose a payment method...",
+      "pay": "Pay {{amount}}",
+      "paypal": "Paypal",
+      "card": "Credit card",
+      "wait": "Loading...",
+      "success": {
+        "title": "Congratulations !",
+        "description": "Your order has been accepted, we keep you informed for the future !",
+        "thanks": "Thanks you for your order !"
+      }
+    },
+    "shipping_details": {
+      "title": "Your delivery details",
+      "method": "Shipping method",
+      "methods": {
+        "colissimo": "2 days shipping",
+        "dhl": "DHL express shipping"
+      },
+      "form": {
+        "first_name": "First name",
+        "first_name_placeholder": "John",
+        "last_name": "Last name",
+        "last_name_placeholder": "Doe",
+        "address_first_line": "Adress",
+        "address_first_line_placeholder": "",
+        "address_second_line": "Second line",
+        "address_second_line_placeholder": "",
+        "address_city": "City",
+        "address_city_placeholder": "Tokyo",
+        "address_postal_code": "Postal code",
+        "address_postal_code_placeholder": "27950",
+        "address_country": "Country",
+        "address_country_placeholder": "Japan",
+        "error": {
+          "title": "Error",
+          "description": "Your address is not complete"
+        }
+      },
+      "next": "Next",
+      "previous": "Previous"
+    },
+    "item": {
+      "title": "Item",
+      "version": "Version",
+      "price": "Price",
+      "share": "Share",
+      "custom": {
+        "colors": {
+          "red": "Red",
+          "yellow": "Yellow",
+          "green": "Green",
+          "blue": "Blue",
+          "purple": "Purple",
+          "white": "White",
+          "black": "Black"
+        },
+        "color": "Choose the color of the circuit board",
+        "storage": "Size of internal storage",
+        "model": "Model"
+      }
+    },
+    "title": "Shop",
+    "cart": {
+      "title": "Cart",
+      "items": "No article | One item | {count} articles",
+      "empty": "Empty card",
+      "add": "Add",
+      "remove": "Removed",
+      "total": "Total",
+      "show": "Show",
+      "sub_total": "Sub total",
+      "shipping_price": "Shipping price",
+      "added": {
+        "title": "Article added!",
+        "description": "An item has just been added to your cart"
+      },
+      "removed": {
+        "title": "Article removed!",
+        "description": "An item has just been removed from your cart"
+      }
+    },
+    "category": {
+      "empty": "No articles in this category"
+    },
+    "index": {
+      "empty": "No items available"
+    }
+  },
+  "contact-us": {
+    "title": "How to contact us ?"
+  },
+  "blog": {
+    "title": "Blog",
+    "posts": "Articles"
+  },
+  "loading": "Loading",
+  "api": {
+    "error": {
+      "title": "Error while connecting to the API",
+      "description": "Network error: we could not communicate with the API"
+    }
+  },
+  "cookie-law": {
+    "message": "This website uses cookies to ensure you get the best experience on our website.",
+    "accept": "Got It!"
+  },
+  "menu": {
+    "open": "Open",
+    "close": "Close"
+  },
+  "components-explorer": {
+    "search": "Search in components list",
+    "empty": "No components..."
+  },
+  "user-dash": {
+    "title": "My account",
+    "refresh": "Refresh",
+    "destroy": "Delete my account",
+    "admin-panel": "Admin panel",
+    "disconnect": "Disconnect",
+    "table-title":"Your last order",
+    "no-command": "You have not ordered anything yet",
+    "first-column": "Total amount",
+    "second-column": "Payment method",
+    "third-column": "Status",
+    "modal-account-delete-title": "Are you sure you want to delete your account?",
+    "modal-account-delete-desc": "Warning, this is not an action without consequence, by removing the account you will lose the use of online services related to RetroBox that belong to your account. This is an irreversible action.",
+    "modal-account-delete-confirm": "I understand that this action is irreversible",
+    "modal-account-delete-cancel": "Cancel",
+    "modal-account-delete-cancel-confirm": "Yes, delete my account",
+    "modal-order-subtotal": "Sub-total : € ",
+    "modal-account-shipping": "Shipping cost : € ",
+    "modal-account-total": "Total amount : € ",
+    "modal-account-payement": "Payment method used : ",
+    "modal-account-external-id": "External payement ID : ",
+    "modal-account-delete-confirm-2": "Are you **really** sure what you are doing ?",
+    "table-details": "See in details"
+  }
+}

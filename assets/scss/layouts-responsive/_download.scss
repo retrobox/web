@@ -1,0 +1,29 @@
+.downloads {
+  .downloads-content {
+    .downloads-title-container {
+      margin-bottom: 1.2em;
+      padding-right: 0;
+      text-align: center;
+      width: 100%;
+      div {
+        justify-content: center;
+        width: 90%;
+        margin: 0 auto;
+      }
+    }
+    .os-desktop, .os-mobile {
+      justify-content: center;
+      .os-desktop-item {
+        margin-right: 0;
+        width: 100%;
+      }
+      .os-mobile-item {
+        margin-right: 0;
+        width: 100%;
+      }
+      .os-desktop-item {
+        margin-bottom: 2em;
+      }
+    }
+  }
+}

@@ -1,0 +1,199 @@
+$opacity: 0.8;
+.header-container {
+  .mobile {
+    display: none !important;
+  }
+  .header-top {
+    // background-color: #c8d6e5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .header-top-content {
+      display: flex;
+      justify-content: space-between;
+
+      .account{
+        display: flex;
+        align-items: center;
+      }
+
+      a, .button {
+        color: rgba(34, 47, 62, 0.7) !important;
+        font-weight: 400;
+      }
+      a:hover, .button:hover {
+        transition: color 0.1s ease-in-out;
+        color: rgba(34, 47, 62, 1) !important;
+      }
+      .locale_selection {
+        padding-left: 5px;
+      }
+      .account {
+        a:first-of-type {
+          padding-right: 1.2em;
+          border-right: 1px solid rgba(87, 101, 116, 0.5);
+        }
+        a:last-of-type {
+          padding-left: 1.2em;
+        }
+        a {
+          display: flex;
+          align-content: center;
+          align-items: center;
+          text-decoration: none;
+          font-size: 1em;
+          transition: color 0.1s ease-in-out;
+
+          .icon {
+            opacity: 0.8;
+            margin-right: 0.5em;
+          }
+        }
+        .account-mobile {
+          a {
+            border-right: 0 !important;
+          }
+        }
+      }
+    }
+  }
+  //noinspection ALL
+  .header-background-back {
+    background: rgba(236, 240, 241, 0.8) url('../images/back.jpg');
+    background-size: cover;
+    height: 84px;
+  }
+  .header-background {
+    height: 84px;
+    overflow: hidden;
+    margin-top: -84px;
+    background-image: linear-gradient(90deg,hsla(0,0%,95%,.2),hsla(0,0%,73%,.2),hsla(0,0%,47%,.2),rgba(59,59,59,.2),rgba(44,62,80,.8));
+
+    //background-color: rgba(44, 62, 80, 0.6);
+  }
+  .header-content {
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+    .with-link {
+      a {
+        transition: opacity 0.2s ease-in-out;
+      }
+      a:hover {
+        // margin-bottom: 2px;
+        // border-bottom: 2px solid black;
+        // border-bottom-left-radius: 5px;
+        // border-bottom-right-radius: 5px;
+
+        opacity: 0.8;
+        transition: opacity 0.2s ease-in-out;
+      }
+    }
+    .with-button {
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+    padding-top: 1.1em;
+    padding-bottom: 1.1em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .header-title-container {
+      height: 48px;
+      display: flex;
+      align-items: center;
+      .header-title a {
+        color: black;
+      }
+      img {
+        margin-top: 1px;
+      }
+    }
+    .header-title-logo {
+      margin-right: 1em;
+      width: 15em;
+
+      a {
+        display: flex;
+      }
+    }
+    .header-nav-container {
+      .nav-toggle {
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        .icon {
+          width: 20px;
+          height: 20px;
+          margin: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      display: flex;
+      align-content: center;
+      line-height: 3em;
+
+      .nav-item {
+        margin-left: 2em;
+      }
+      .nav-item:first-of-type {
+        margin-left: 0;
+      }
+    }
+  }
+  .colored-divider-container {
+    border-top: 0;
+  }
+  .header-breadcrumb {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 100%;
+    color: white;
+    background-color: rgba(52, 73, 94, 1);
+    box-shadow: 1px 1px 8px #000000;
+
+    .container {
+      justify-content: space-between;
+      display: flex;
+    }
+    .breadcrumb-location {
+      padding-left: 5px;
+      display: flex;
+      align-items: center;
+      color: #ecf0f1;
+      font-weight: 400;
+      ul {
+        display: flex;
+        padding-left: 8px;
+        li {
+          list-style-type: none;
+          margin-right: 5px;
+        }
+        .item {
+          color: white;
+        }
+        .divider {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .downloads-link {
+    display: none;
+  }
+}

@@ -1,0 +1,43 @@
+.article {
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  .docs-nav {
+    margin-top: 1em;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: -1em;
+    width: 100%;
+  }
+  
+  .doc-page-content {
+    .image-header {
+      display: none;
+    }
+
+    .docs-section {
+      display: grid;
+      grid-column-gap: 0;
+      grid-template-columns: 100%;
+      img {
+        margin: 2em auto 0;
+        width: 80%;
+      }
+    }
+  }
+
+  .content {
+    .team-mosaic {
+      flex-wrap: wrap;
+      .team-item {
+        margin-right: 0;
+        margin-bottom: 1.5em;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    max-width: 100%;
+  }
+}

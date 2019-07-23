@@ -1,0 +1,40 @@
+.button {
+  align-items: center;
+  transition: 0.2s background-color;
+
+  .icon {
+    margin-right: 0.5em;
+    position: relative;
+    top: 0.5px;
+  }
+}
+
+.button:hover {
+  cursor: pointer;
+  transition: 0.2s background-color;
+}
+
+.button.button-primary {
+  @extend .bg-blue;
+  @extend .hover\:bg-blue-dark;
+  @extend .text-white;
+  @extend .font-bold;
+  @extend .py-2;
+  @extend .px-4;
+  @extend .rounded;
+}
+
+.button.button-big {
+  @extend .py-4;
+  @extend .px-8;
+} 
+
+.button.button-secondary {
+  @extend .bg-transparent;
+  @extend .text-blue;
+  @extend .font-bold;
+  @extend .hover\:text-blue-dark;
+  @extend .border;
+  @extend .border-blue;
+} 
+

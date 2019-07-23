@@ -1,0 +1,49 @@
+{
+  "tree": [
+    {
+      "slug": "home",
+      "name": "Home"
+    },
+    {
+      "slug": "getting-started",
+      "name": "Getting Started"
+    },
+    {
+      "slug": "tools",
+      "name": "Tools"
+    },
+    {
+      "slug": "assembly",
+      "name": "Assembly"
+    },
+    {
+      "slug": "finishing",
+      "name": "Finishing"
+    },
+    {
+      "type": "page",
+      "slug": "installation",
+      "name": "Installation"
+    },
+    {
+      "slug": "schematic",
+      "name": "Explained schematic"
+    },
+    {
+      "slug": "infrastructure",
+      "name": "The infrastructure"
+    },
+    {
+      "slug": "questions",
+      "name": "Questions"
+    },
+    {
+      "slug": "manual-installation",
+      "name": "Manual installation"
+    },
+    {
+      "slug": "technical-specification",
+      "name": "Technical specification"
+    }
+  ]
+}

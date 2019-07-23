@@ -1,0 +1,317 @@
+{
+  "id": "fr",
+  "actual_lang": "Français",
+  "french": "Français",
+  "french_flag": "Drapeau français",
+  "english": "Anglais",
+  "english_flag": "Drapeau anglais",
+  "login": "Connexion",
+  "register": "Inscription",
+  "login-or-register": "Connectez-vous ou inscrivez-vous",
+  "home": "Accueil",
+  "docs": "Documentation",
+  "previous": "Chapitre précédent",
+  "next": "Chapitre suivant",
+  "title": "Retrobox, une console diy open-source",
+  "description": "La RetroBox est une console DIY open source créée par des jeunes, rejouez aux jeux de votre enfance !",
+  "partnership": {
+    "lyceealain": {
+      "title": "En partenariat avec le Lycée Alain"
+    },
+    "cci": {
+      "title": "Soutenu par la CCI Normandie"
+    },
+    "creative-commons": {
+      "title": "Ce projet est sous la licence Creative Commons"
+    }
+  },
+  "community": {
+    "title": "Notre communauté",
+    "page": {
+      "title": "Rejoignez notre communauté",
+      "description": "Venez poser vos questions, partagez vos éxpériences, échangez avec les créateurs de la console !"
+    }
+  },
+  "downloads": {
+    "title": "Téléchargements",
+    "page": {
+      "title": "Téléchargez les logiciels pour la RetroBox",
+      "description": "Téléchargez ici l'application pour flasher votre carte sd et l'utiliser avec votre RetroBox !",
+      "os-text": {
+        "win": "Windows 7/8/10",
+        "mac": "Mac OS",
+        "lin": "Linux",
+        "coming-soon": "Bientôt sur Android et iOS"
+      }
+    },
+    "modal": {
+      "title": "Votre téléchargement est en cours...",
+      "description": "Si votre téléchargement ne démarre pas d'ici peux, vous pouvez le relancer",
+      "download": "Télécharger"
+    }
+  },
+  "buy": "Acheter",
+  "close": "Fermer",
+  "breadcrumb": {
+    "title": "Vous êtes ici :"
+  },
+  "newsletter": {
+    "title": "Recevez notre newsletter",
+    "description": "Inscrivez vous pour recevoir les dernières informations...",
+    "form": {
+      "submit": "Valider",
+      "email": "Votre email",
+      "email_placeholder": "john@example.com"
+    },
+    "success": {
+      "title": "Félicitations !",
+      "description": "Vous vous êtes inscrit à la newsletter"
+    },
+    "error": {
+      "title": "Une erreur est survenue",
+      "description": "Il nous est impossible de valider cet adresse email",
+      "missing_description": "Vous n'avez pas fourni d'email",
+      "invalid_description": "L'email que vous avez fournis ne corespond pas à un email",
+      "api_description": "L'api n'a pas répondu comme il fallait",
+      "member_exists": "Vous êtes déjà incrit(e) dans notre liste"
+    }
+  },
+  "twitter": {
+    "title": "Notre compte twitter",
+    "link": "https://twitter.com/RetroBoxSP"
+  },
+  "facebook": {
+    "title": "Notre page facebook",
+    "link": "https://www.facebook.com/RetroBoxSP/"
+  },
+  "github": {
+    "title": "Notre organisation github",
+    "link": "https://github.com/retrobox/"
+  },
+  "discord": {
+    "title": "Notre serveur discord",
+    "link": "https://discord.gg/TzNNQnP"
+  },
+  "landing": {
+    "title": "Une console, 20 ans de jeux, 35 ans de technologies",
+    "sub_title": "Avec la Retrobox, jouez à vos jeux rétro préférés de façon simple et accessible",
+    "go": "En savoir plus",
+    "about": {
+      "title": "Simplicité, Nostalgie, Modernité ...",
+      "description": "La Retrobox est une console portable permettant d'émuler tout les jeux jusqu'à la PS1, cela n'a jamais étais aussi accessible pour jouer à vos anciens jeux favoris. La console embarque les technologies modernes comme le wifi pour se connecter à votre ordinateur ou votre smartphone et le bluetooth pour connecter un casque ou une manette. La console est dôté d'une sortie HDMI pour jouer même sur votre TV ! Avec ses 8h d'autonomie, des heures et des heures de plaisir dans votre poche"
+    },
+    "about-us": {
+      "title": "Imaginée, Prototypée et Assemblée en Normandie",
+      "description": "La Retrobox est un projet de jeunes normands qui sont toujours à votre écoute, vos retours sont importants et nous améliorons notre console et les services inclus à l'achat pour mieux vous satisfaire."
+    },
+    "advantages": {
+      "title": "Plein d'advantages...",
+      "game": {
+        "title": "Une bibliothèque exeptionnelle",
+        "description": "Des dizaines de milliers de jeux développés en 20 ans, des centaines de jeux originaux créés par des fans à portée de clics !"
+      },
+      "custom": {
+        "title": "Une console personnalisable",
+        "description": "Avez-vous déjà voulu avoir une console unique ? A l'achat choisissez la console qui vous correspond sans suppléments ! "
+      },
+      "connected": {
+        "title": "Une console connectée",
+        "description": "Une console connectée, visionnez l’état de votre console à distance et contrôlez-la dans les moindres détails (même depuis votre smartphone)"
+      },
+      "switch": {
+        "title": "Une console qui s'adapte",
+        "description": "Un maximum de possibilités, poussez plus loin le principe de la console portable, branchez-la à votre TV et jouez dans votre canapé avec ceux que vous aimez !"
+      },
+      "easy": {
+        "title": "Une console accessible",
+        "description": "Ne vous prenez pas la tête avec la configuration, tous a été préparé pour vous !"
+      },
+      "opensource": {
+        "title": "Une console opensource",
+        "description": "La console est opensource c'est à dire que vous pouvez jetter un coup d'oeil au site web, aux schémas ect. pour aucune mauvaises surprises."
+      }
+    },
+    "start_now": {
+      "title": "Commence dès maintenant",
+      "kited": {
+        "title": "Version kit",
+        "description": "Vous aimez l'électronique et voulez apprendre à souder ? Rien de plus facile, commandez la version kit avec tout ses manuels explicatifs !"
+      },
+      "non_kited": {
+        "title": "Version pré-assemblée",
+        "description": "Commencez l'aventure directement, sans se soucier du coté technique. Plus qu'à allumez la console ! (soudée par nos soins dans l'Orne)"
+      }
+    }
+  },
+  "not-found": {
+    "title": "Page non trouvé",
+    "description": "Vous êtes tombé sur la mauvaise page, car elle n'existe pas ou elle a été supprimé."
+  },
+  "coming-soon-video": {
+    "title": "Vidéo en Attente",
+    "description": "Bientôt une vidéo présentant en détails la retrobox"
+  },
+  "about": "A propos",
+  "terms-of-use": "Conditions d'utilisations",
+  "privacy": "Confidentialité",
+  "terms-of-sale": "Conditions générale de vente",
+  "get-help": "Obtenir de l'aide",
+  "status": "Status des services",
+  "developers": "Développeurs",
+  "legals": "Mentions légales",
+  "credits": "Credits",
+  "our-team-members": "Nos membres d'équipe",
+  "account": {
+    "title": "Mon compte",
+    "logout": {
+      "title": "Déconnexion",
+      "success": {
+        "title": "Et hop !",
+        "description": "Vous avez bien été déconnecté"
+      }
+    },
+    "dashboard": "Mon dashboard",
+    "admin": "Panel admin"
+  },
+  "shop": {
+    "checkout": {
+      "title": "Payer",
+      "choise": "Choisissez un moyen de payment...",
+      "pay": "Payer {{amount}}",
+      "paypal": "Paypal",
+      "card": "Carte bancaire",
+      "wait": "Chargement...",
+      "success": {
+        "title": "Félicitations !",
+        "description": "Votre commande à bien été accepté, nous vous tenons au courant pour la suite !",
+        "thanks": "Merci pour votre commande"
+      }
+    },
+    "shipping_details": {
+      "title": "Vos détails de livraisons",
+      "method": "Moyen de libraison",
+      "methods": {
+        "colissimo": "Livraison en 2 jours ouvré",
+        "dhl": "Livraison DHL express"
+      },
+      "form": {
+        "first_name": "Prénom",
+        "first_name_placeholder": "John",
+        "last_name": "Nom",
+        "last_name_placeholder": "Doe",
+        "address_first_line": "Adresse",
+        "address_first_line_placeholder": "",
+        "address_second_line": "Seconde ligne (optionelle)",
+        "address_second_line_placeholder": "",
+        "address_city": "Ville",
+        "address_city_placeholder": "Paris",
+        "address_postal_code": "Code postal",
+        "address_postal_code_placeholder": "27950",
+        "address_country": "Pays",
+        "address_country_placeholder": "France",
+        "error": {
+          "title": "Erreur",
+          "description": "Votre adresse n'est pas complète"
+        }
+      },
+      "next": "Suivant",
+      "previous": "Précédent"
+    },
+    "item": {
+      "title": "Article",
+      "version": "Version",
+      "price": "Prix",
+      "share": "Partager",
+      "custom": {
+        "colors": {
+          "red": "Rouge",
+          "yellow": "Jaune",
+          "green": "Vert",
+          "blue": "Bleu",
+          "purple": "Violet",
+          "white": "Blanc",
+          "black": "Noir"
+        },
+        "color": "Couleur du circuit imprimé",
+        "storage": "Taille du stockage interne",
+        "model": "Modèle"
+      }
+    },
+    "title": "Boutique",
+    "cart": {
+      "title": "Panier",
+      "items": "Aucun article | Un article | {count} articles",
+      "empty": "Panier vide",
+      "add": "Ajouter",
+      "remove": "Retirer",
+      "total": "Total",
+      "show": "Voir",
+      "sub_total": "Sous total",
+      "shipping_price": "Prix de livraison",
+      "added": {
+        "title": "Article ajouté!",
+        "description": "Un article vient d'être ajouté à votre panier"
+      },
+      "removed": {
+        "title": "Article retiré!",
+        "description": "Un article vient d'être retiré de votre panier"
+      }
+    },
+    "category": {
+      "empty": "Aucun articles dans cette catégorie"
+    },
+    "index": {
+      "empty": "Aucun articles disponibles"
+    }
+  },
+  "contact-us": {
+    "title": "Comment nous contacter ?"
+  },
+  "blog": {
+    "title": "Blog",
+    "posts": "Articles"
+  },
+  "loading": "Chargement",
+  "api": {
+    "error": {
+      "title": "Erreur pendant la connexion à l'API",
+      "description": "Erreur réseau : nous n'avons pas pu communiquer avec l'API"
+    }
+  },
+  "cookie-law": {
+    "message": "Ce site web utilise des cookies pour fonctionner.",
+    "accept": "Compris !"
+  },
+  "menu": {
+    "open": "Ouvrir",
+    "close": "Fermer"
+  },
+  "components-explorer": {
+    "search": "Rechercher dans la liste des composants",
+    "empty": "Pas de composants..."
+  },
+  "user-dash": {
+    "title": "Mon compte",
+    "refresh": "Rafraîchir",
+    "destroy": "Supprimer mon compte",
+    "admin-panel": "Panel d'administration",
+    "disconnect": "Déconnexion",
+    "table-title":"Vos dernières commandes",
+    "no-command": "Vous n'avez rien encore commandé",
+    "first-column": "Montant total",
+    "second-column": "Moyen de paiment",
+    "third-column": "Statut",
+    "modal-account-delete-title": "Voulez vous vraiment supprimer le compte ?",
+    "modal-account-delete-desc": "Attention, ceci n'est pas une action sans conséquence, en supprimant le compte vous allez perdre l'utilisation des services en ligne liés aux consoles retrobox qui appartienent à votre compte. Ceci est une action irréversible.",
+    "modal-account-delete-confirm": "Je comprends que cette action est irréversible",
+    "modal-account-delete-cancel": "Annuler",
+    "modal-account-delete-cancel-confirm": "Oui, Supprimer mon compte",
+    "modal-order-subtotal": "Sous total : € ",
+    "modal-account-shipping": "Frais de livraisons : € ",
+    "modal-account-total": "Montant total : € ",
+    "modal-account-payement": "Moyen de paiement utilisé : ",
+    "modal-account-external-id": "Id externe de paiment : ",
+    "modal-account-delete-confirm-2": "Etes vous **vraiment** sur de ce que vous faites ?",
+    "table-details": "Voir en détail"
+  }
+}

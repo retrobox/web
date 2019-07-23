@@ -1,0 +1,62 @@
+//@import "~tailwindcss/preflight.css";
+//@import "~tailwindcss/components.css";
+//@import "~tailwindcss/utilities.css";
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,800');
+@import url('https://use.fontawesome.com/releases/v5.9.0/css/all.css');
+
+@import "extends/_tailwind.scss";
+
+@import "~/node_modules/animate.css/animate.css";
+
+@import "helpers/_button.scss";
+@import "helpers/_link.scss";
+
+@import "layouts/_transition.scss";
+@import "layouts/_article.scss";
+@import "layouts/_header.scss";
+@import "layouts/_locales-selector.scss";
+@import "layouts/_body.scss";
+@import "layouts/_buy.scss";
+@import "layouts/_colored-divider.scss";
+@import "layouts/_cover.scss";
+@import "layouts/_footer.scss";
+@import "layouts/_landing.scss";
+@import "layouts/_socials.scss";
+@import "layouts/_mobile-nav.scss";
+@import "layouts/_error.scss";
+@import "layouts/_newsletter.scss";
+@import "layouts/_download.scss";
+@import "layouts/_community.scss";
+@import "layouts/_loading.scss";
+@import "layouts/_partnership.scss";
+@import "layouts/_shop.scss";
+@import "layouts/_alert.scss";
+@import "layouts/_modal.scss";
+@import "layouts/_login.scss";
+@import "layouts/_contact-us.scss";
+@import "layouts/_account.scss";
+@import "layouts/_dashboard.scss";
+@import "layouts/_navigation.scss";
+@import "layouts/_checkout.scss";
+
+@media (max-width: 700px) {
+  @import 'layouts-responsive/_article.scss';
+  @import 'layouts-responsive/_container.scss';
+  @import 'layouts-responsive/_cover.scss';
+  @import "layouts-responsive/_buy.scss";
+  @import 'layouts-responsive/_footer.scss';
+  @import 'layouts-responsive/_header.scss';
+  @import 'layouts-responsive/_landing.scss';
+  @import "layouts-responsive/_download.scss";
+  @import "layouts-responsive/_community.scss";
+  @import "layouts-responsive/_partnership.scss";
+  @import "layouts-responsive/_modal.scss";
+  @import "layouts-responsive/_shop.scss";
+  @import "layouts-responsive/_locales-selector.scss";
+  @import "layouts-responsive/_login.scss";
+  @import "layouts-responsive/_account.scss";
+  @import "layouts-responsive/_navigation.scss";
+  @import "layouts-responsive/_dashboard.scss";
+  @import 'layouts-responsive/_checkout.scss';
+}

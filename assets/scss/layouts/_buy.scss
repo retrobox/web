@@ -1,0 +1,153 @@
+.buy {
+  .buy-nav {
+    margin-top: -1.6em;
+    margin-bottom: 1em;
+
+    a {
+      transition: 0.2s color;
+    }
+    a:hover {
+      transition: 0.2s color;
+    }
+  }
+  .buy-content {
+    // .buy-title {
+    //   margin-bottom: 1em;
+    //   font-size: 1.6em;
+    //   font-weight: lighter;
+    // }
+    @extend .flex;
+    @extend .flex-wrap;
+    .buy-description-container {
+      @extend .lg\:w-2\/5;
+      @extend .md\:w-1\/2;
+      @extend .w-full;
+      @extend .pl-0;
+      @extend .md\:pl-6;
+      @extend .lg\:pl-8;
+      margin-top: 0.6em;
+      font-weight: 500;
+      font-size: 1em;
+      .buy-description {
+        text-align: justify;
+        margin-bottom: 1.2em;
+        line-height: 1.5em;
+        ul {
+          margin-top: 1em;
+          margin-bottom: 2em;
+        }
+      }
+
+      .buy-price-container {
+        margin-bottom: 1.2em;
+        display: flex;
+        align-items: center;
+        opacity: 0.8;
+        .buy-price-currency {
+          font-weight: 400;
+          font-size: 1.5em;
+          margin-right: .5em;
+        }
+        .buy-price-price {
+          font-weight: 500;
+          font-size: 2.3em;
+        }
+      }
+
+      .buy-actions {
+        .buy-main-button {
+          @extend .button;
+          @extend .bg-red-light;
+          @extend .hover\:bg-red;
+          @extend .text-white;
+          @extend .font-bold;
+          @extend .py-4;
+          @extend .px-8;
+          @extend .rounded-full;
+          @extend .w-full;
+          @extend .md\:w-auto;
+        }
+      }
+
+      .buy-ways-container {
+        margin-top: 1.4em;
+        .hint {
+          opacity: 0.8;
+          margin-bottom: 0.2em;
+        }
+        .buy-ways-mosaic {
+          display: flex;
+          font-size: 3.2em;
+          color: #34495e;
+          .buy-way {
+            margin-right: 0.4em;
+            opacity: 0.5;
+            transition: 0.2s opacity;
+          }
+          .buy-way:hover {
+            transition: 0.2s opacity;
+            opacity: 0.9;
+          }
+        }
+      }
+
+      .buy-social-share-container {
+        margin-top: 1.5em;
+        margin-bottom: 1.25em;
+        .buy-social-share-text {
+          margin-bottom: .9em;
+        }
+
+        .buy-social-share-mosaic {
+          @extend .socials;
+          margin-top: 0.50em;
+          li a {
+            color: #34495e !important;
+          }
+          li .icon:hover {
+            color: #333333 !important;
+          }
+        }
+      }
+    }
+    .buy-images-container {
+      @extend .lg\:w-3\/5;
+      @extend .md\:w-1\/2;
+      @extend .w-full;
+      .buy-images-mosaic {
+
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+
+        .buy-image-item {
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+//on shop buy page an modal to see bigger the images
+.show-image-modal {
+    .modal-container {
+      height: 86%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+
+      .show-image-container {
+        height: 100%;
+        img {
+          height: 100%;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+    .button {
+      text-align: center;
+    }
+}
