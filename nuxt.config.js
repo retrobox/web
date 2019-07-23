@@ -7,7 +7,7 @@ const marked = require('marked')
 const renderer = new marked.Renderer();
 const join = require('path').join
 const tailwindJS = join(__dirname, 'tailwind.js')
-const getAppRoutes = require('./getRoutes.js');
+const getRoutes = require('./getRoutes.js');
 
 module.exports = {
   mode: 'universal',
@@ -70,12 +70,12 @@ module.exports = {
   },
 
   sitemap: {
-    routes: [
-      '/',
-      '/about',
-      '/downloads',
-      '/contact-us'
-    ]
+    routes() {
+      return getRoutes();
+    },
+    path: '/sitemap.xml',
+    gzip: true,
+    generate: false
   },
 
   /*
@@ -113,6 +113,7 @@ module.exports = {
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
+    '@nuxtjs/sitemap',
     ['nuxt-env', {
       keys: [
         'API_ENDPOINT',
