@@ -69,6 +69,16 @@
       <DocsImage src="https://static.retrobox.tech/img/getting-started/RetroPie/pcblayer.png" />
     </div>
 
+    <h3 class="dividing">L'acrylique</h3>
+
+    <div class="docs-section">
+      <div>
+        Les deux plaques d'acryliques servent de protection pour la console et permet aussi une visibilité sur l'électronique !
+
+      </div>
+      <DocsImage src="https://static.retrobox.tech/img/composants/acrylique.jpg" />
+    </div>
+
     <h3 class="dividing">Bouton 6x6mm</h3>
 
     <div class="docs-section">
@@ -120,7 +130,7 @@
       <div>
         Pour avoir la meilleure autonomie (~6 h-7 h), nous vous avons concocté une batterie de 3000 Mah ! Vous ne saurez plus vous arrêter....
       </div>
-      <DocsImage src="https://static.retrobox.tech/img/composants/BATTERY.png" />
+      <DocsImage src="https://static.retrobox.tech/img/composants/battery.jpg" />
     </div>
 
     <h3 class="dividing">Prise jack 3.5mm</h3>
@@ -201,7 +211,7 @@
       <div>
         Cette petite plaque gère toute la partie puissance de la console, elle indique le statut de la batterie et la protège des courts circuits ou de décharges profondes !
       </div>
-      <DocsImage src="https://static.retrobox.tech/img/composants/DD06CVSA.png" />
+      <DocsImage src="https://static.retrobox.tech/img/composants/DD06CVSA.jpg" />
     </div>
 
     <h3 class="dividing">ISP MCP23017</h3>
@@ -343,6 +353,26 @@
 
       </div>
       <DocsImage src="https://static.retrobox.tech/img/composants/pinheaderspring.jpg" />
+    </div>
+
+    <h3 class="dividing">Le double face</h3>
+
+    <div class="docs-section">
+      <div>
+        Il y a deux types de double faces sur la consoles (dont un de prêt collé), un sert de calle pour l'écran et l'autre pour coller la batterie sur l'acrylique.
+
+      </div>
+      <DocsImage src="https://static.retrobox.tech/img/composants/scotchs.jpg" />
+    </div>
+
+    <h3 class="dividing">La dragonne</h3>
+
+    <div class="docs-section">
+      <div>
+        Elle n'est pas obligatoire mais elle peut être utile en cas de chute !
+
+      </div>
+      <DocsImage src="https://static.retrobox.tech/img/composants/dragonne.jpg" />
     </div>
 
     <div class="docs-alert info">
