@@ -97,7 +97,7 @@
 </template>
 
 <script>
-  import DocsImage from "../../components/DocsImage"
+  import DocsImage from "~/components/Docs/Image"
   export default {
     name: 'FrenchHome',
     components: {DocsImage}

@@ -343,10 +343,10 @@
   </div>
 </template>
 <script>
-  import DocsHeading from "../../components/DocsHeading"
-  import DocsImage from "../../components/DocsImage"
-  import DocsMarkdown from "../../components/DocsMarkdown"
-  import DocsCode from "../../components/DocsCode"
+  import DocsHeading from "~/components/Docs/Heading"
+  import DocsImage from "~/components/Docs/Image"
+  import DocsMarkdown from "~/components/Docs/Markdown"
+  import DocsCode from "~/components/Docs/Code"
 
   export default {
     name: 'FrenchManualInstallation',

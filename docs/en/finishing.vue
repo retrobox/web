@@ -7,8 +7,8 @@
   </div>
 </template>
 <script>
-  import DocsHeading from "../../components/DocsHeading"
-  import DocsImage from "../../components/DocsImage"
+  import DocsHeading from "~/components/Docs/Heading"
+  import DocsImage from "~/components/Docs/Image"
   export default {
     name: 'FrenchFinishing',
     components: {DocsImage, DocsHeading}

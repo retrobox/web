@@ -354,9 +354,9 @@
 </template>
 
 <script>
-  import DocsImage from "../../components/DocsImage"
+  import DocsImage from "~/components/Docs/Image"
   import ComponentsExplorer from "../../components/ComponentsExplorer"
-  import DocsHeading from "../../components/DocsHeading"
+  import DocsHeading from "~/components/Docs/Heading"
   export default {
     name: 'FrenchGettingStarted',
     components: {DocsHeading, ComponentsExplorer, DocsImage}
