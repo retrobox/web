@@ -13,7 +13,8 @@
             v-show="image.selected"
             :alt="image.alt"
             :src="image.src" 
-            class="image-item-compo"/>
+            class="image-item-compo"
+            @loaded="handleLoaded" />
         </div>
         <!-- <div
           class="image-item">
@@ -66,7 +67,8 @@
       selectedImage: {},
       height: 0,
       hidden: false,
-      listHeight: 'auto'
+      listHeight: 'auto',
+      isLoaded: false
     }),
     created() {
       this.id = Math.ceil(Math.random() * 10000)
@@ -84,8 +86,15 @@
       })[0]
     },
     mounted() {
+      if (!this.$isServer) {
+        this.newTick()
+      }
     },
     methods: {
+      handleLoaded() {
+        this.isLoaded = true
+        this.listHeight = "auto"
+      },
       left() {
         if (this.selected > 0) {
           this.selected = this.selected - 1
@@ -113,7 +122,18 @@
           return el
         })
       },
-      start() {
+      newTick() {
+        setTimeout(() => {
+          if (this.isLoaded) {
+            if (this.selected === this.images.length - 1) {
+              this.selected = 0
+            } else {
+              this.selected = this.selected + 1
+            }
+            this.render()
+          }
+          this.newTick()
+        }, 3000)
       }
     }
   }
