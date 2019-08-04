@@ -4,7 +4,9 @@
       <div
         :id="'image-list-' + id"
         :style="'height:' + listHeight + ';'"
-        class="image-list">
+        class="image-list"
+        @mouseover="handleMouseOver"
+        @mouseleave="handleMouseLeave">
         <div 
           v-for="(image) in renderedImages"
           :key="image.id"
@@ -14,7 +16,9 @@
             :alt="image.alt"
             :src="image.src" 
             class="image-item-compo"
-            @loaded="handleLoaded" />
+            @loaded="handleLoaded"
+            @enter="pause = true"
+            @exit="pause = false" />
         </div>
         <!-- <div
           class="image-item">
@@ -68,7 +72,8 @@
       height: 0,
       hidden: false,
       listHeight: 'auto',
-      isLoaded: false
+      isLoaded: false,
+      pause: false
     }),
     created() {
       this.id = Math.ceil(Math.random() * 10000)
@@ -94,6 +99,12 @@
       handleLoaded() {
         this.isLoaded = true
         this.listHeight = "auto"
+      },
+      handleMouseOver() {
+        this.pause = true
+      },
+      handleMouseLeave() {
+        this.pause = false
       },
       left() {
         if (this.selected > 0) {
@@ -124,7 +135,7 @@
       },
       newTick() {
         setTimeout(() => {
-          if (this.isLoaded) {
+          if (this.isLoaded && !this.pause) {
             if (this.selected === this.images.length - 1) {
               this.selected = 0
             } else {

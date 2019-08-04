@@ -24,7 +24,7 @@
         </div>
         <div
           class="button bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 cancel-button"
-          @click="$modal.hide('imageModal' + id)">
+          @click="exitModal">
           {{ $t('close') }}
         </div>
       </modal>
@@ -69,6 +69,11 @@
     methods: {
       onClick() {
         this.$modal.show('imageModal' + this.id)
+        this.$emit('enter')
+      },
+      exitModal() {
+        this.$modal.hide('imageModal' + id)
+        this.$emit('exit')
       }
     }
   }
