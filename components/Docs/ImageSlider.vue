@@ -10,7 +10,7 @@
           :key="image.id"
           class="image-item">
           <DocsImage
-            v-if="image.selected"
+            v-show="image.selected"
             :alt="image.alt"
             :src="image.src" 
             class="image-item-compo"/>
@@ -21,6 +21,7 @@
       </div>
       <div class="image-slider-actions">
         <div 
+          :class="{'disabled': selected === 0}"
           class="left"
           @click="left()">
           <i class="icon fas fa-chevron-left" />
@@ -31,6 +32,7 @@
           <span>{{ selectedImage.alt }}</span>
         </div>
         <div 
+          :class="{'disabled': selected === renderedImages.length - 1}"
           class="right"
           @click="right()">
           <i class="icon fas fa-chevron-right" />
@@ -110,7 +112,6 @@
           el.selected = this.renderedImages.indexOf(el) === this.selected
           return el
         })
-
       },
       start() {
       }
@@ -120,27 +121,16 @@
 
 <style lang="scss">
   .image-slider-container {
-    .image-list {
-      .active {
-        opacity: 1;
-      }
-      .not-active {
-        opacity: 0;
-      }
-    } 
     .image-item {
-      .image-item-compo {
-      }
-      .image-item-non-visible {
-        opacity: 0;
-      }
-      .image-item-visible {
-      }
+      transition: all 0.2s;
     }
     .image-slider-actions {
       display: grid;
       grid-template-columns: 20% 60% 20%;
-      
+      .disabled {
+        opacity: 0.5;
+        cursor: pointer !important;
+      }
       .page {
         display: flex;
         align-items: center;
@@ -155,25 +145,4 @@
       }
     }
   }
-
-  /* Just some minimal styling for demo purposes */
-.imgbox {
-  position: relative;
-  width: 640px;
-  height: 480px;
-  border: 1px solid black;
-}
-
-.imgbox img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-img {
-  transition: opacity .5s;
-}
-
 </style>
