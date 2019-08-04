@@ -58,6 +58,13 @@
       if (this.margin != '') {
         this.customClass = 'w-full md:w-' + this.margin
       }
+      if (!this.$isServer) {
+        this.$Lazyload.$on('loaded', (image, formCache) => {
+          if (this.src === image.src) {
+            this.$emit('loaded')
+          }
+        })
+      }
     },
     methods: {
       onClick() {
