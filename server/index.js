@@ -24,6 +24,16 @@ async function start() {
     await builder.build()
   }
 
+  /**
+   * Shortcuts
+   */
+  app.get('/discord', (req, res) => {
+    return res.redirect('https://discord.gg/bmKnEaK')
+  })
+  app.get('/twitter', (req, res) => {
+    return res.redirect('https://twitter.com/RetroBoxSP')
+  })
+
   // Give nuxt middleware to express
   app.use(nuxt.render)
 
