@@ -72,7 +72,7 @@
         this.$emit('enter')
       },
       exitModal() {
-        this.$modal.hide('imageModal' + id)
+        this.$modal.hide('imageModal' + this.id)
         this.$emit('exit')
       }
     }
