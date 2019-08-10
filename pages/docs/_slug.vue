@@ -64,7 +64,7 @@
                   </a>
                   <nuxt-link
                     v-if="previous !== null"
-                    :to="/docs/ + previous.slug"
+                    :to="localePath({name: 'docs-slug', params: {slug: previous.slug}})"
                     class="inline-block flex border border-blue rounded py-2 px-4 bg-blue hover:bg-blue-dark text-white">
                     <Icon
                       left
@@ -85,7 +85,7 @@
                   </a>
                   <nuxt-link
                     v-if="next !== null"
-                    :to="/docs/ + next.slug"
+                    :to="localePath({name: 'docs-slug', params: {slug: next.slug}})"
                     class="inline-block flex border border-blue rounded py-2 px-4 bg-blue hover:bg-blue-dark text-white">
                     {{ $t('next') }}
                     <Icon
@@ -196,6 +196,7 @@
       let tree = docsConfig.tree.map((item) => {
         return {
           path: '/docs/' + item.slug,
+          route: {name: 'docs-slug', params: {slug: item.slug}},
           name: item.name
         }
       })

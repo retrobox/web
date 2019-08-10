@@ -11,10 +11,17 @@
       consoles = consoles.data.data.getManyConsoles
       if(consoles.length === 1){
         // have only one console -> redirect to console managing page
-        context.redirect('/dashboard/console/' + consoles[0].id)
+        context.redirect(
+          context.app.localePath({
+            name:'dashboard-console',
+            params: {
+              id: consoles[0].id
+            }
+          })
+        )
       } else {
         // have no consoles or many -> go to the list
-        context.redirect('/dashboard/console')
+        context.redirect(context.app.localePath('dashboard-console'))
       }
     }
   }

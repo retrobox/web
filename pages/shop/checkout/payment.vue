@@ -10,23 +10,23 @@
       <CheckoutPage
         ref="checkoutPage"
         :step="3"
-        @previous="$router.push('/shop/checkout/shipping')">
+        @previous="$router.push(localePath('shop-checkout-shipping'))">
         <div
           v-show="way === ''"
           class="shop-checkout">
           <div class="shop-checkout-mosaic">
-            <div
+            <button
               class="shop-checkout-item"
               @click="stripe()">
               <i class="fas fa-credit-card icon"></i>
               <span>{{ $t('shop.checkout.card') }}</span>
-            </div>
-            <div
+            </button>
+            <button
               class="shop-checkout-item"
               @click="paypal()">
               <Icon value="fab fa-cc-paypal"/>
               <span>{{ $t('shop.checkout.paypal') }}</span>
-            </div>
+            </button>
           </div>
         </div>
         <div
@@ -114,7 +114,7 @@
           shipping_country: this.$store.state.checkout.country
         }, { withAuth: true }).then(() => {
           console.log("stripe: success");
-          this.$router.push('/shop/checkout/success')
+          this.$router.push(this.localePath('shop-checkout-success'))
         }).catch((error) => {
           this.way = '';
           this.stripeLoading = false;

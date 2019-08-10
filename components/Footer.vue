@@ -50,31 +50,31 @@
       <div class="flex footer-content container mx-auto">
         <div class="w-1/3">
           <div class="footer-logo">
-            <LinkTo>
+            <nuxt-link :to="localePath('index')">
               <img
                 src="../assets/images/footer.png" />
-            </LinkTo>
+            </nuxt-link>
           </div>
         </div>
         <div class="w-1/3">
           <div class="footer-links">
             <ul>
               <li>
-                <LinkTo to="/about">
+                <nuxt-link :to="localePath('about')">
                   {{ $t('about') }}
-                </LinkTo>
+                </nuxt-link>
               </li>
 
               <li>
-                <LinkTo to="/shop">
+                <nuxt-link :to="localePath('shop')">
                   {{ $t('shop.title') }}
-                </LinkTo>
+                </nuxt-link>
               </li>
 
               <li>
-                <LinkTo to="/community">
+                <nuxt-link :to="localePath('community')">
                   {{ $t('community.title') }}
-                </LinkTo>
+                </nuxt-link>
               </li>
 
               <li>
@@ -82,7 +82,6 @@
                   {{ $t('blog.title') }}
                 </a>
               </li>
-
 
             </ul>
           </div>
@@ -92,27 +91,27 @@
             <ul>
 
               <li>
-                <LinkTo to="/contact-us">
+                <nuxt-link :to="localePath('contact-us')">
                   {{ $t('contact-us.title') }}
-                </LinkTo>
+                </nuxt-link>
               </li>
 
               <li>
-                <LinkTo to="/terms">
+                <nuxt-link :to="localePath('terms')">
                   {{ $t('terms-of-use') }}
-                </LinkTo>
+                </nuxt-link>
               </li>
 
               <li>
-                <LinkTo to="/terms-of-sale">
+                <nuxt-link :to="localePath('terms-of-sale')">
                   {{ $t('terms-of-sale') }}
-                </LinkTo>
+                </nuxt-link>
               </li>
 
               <li>
-                <LinkTo to="/privacy">
+                <nuxt-link :to="localePath('privacy')">
                   {{ $t('privacy') }}
-                </LinkTo>
+                </nuxt-link>
               </li>
             </ul>
           </div>
@@ -127,10 +126,14 @@
                 <a href="#">© Copyright 2019 Thingmill</a>
               </li>
               <li>
-                <nuxt-link to="/legals">{{ $t('legals') }}</nuxt-link>
+                <nuxt-link :to="localePath('legals')">
+                  {{ $t('legals') }}
+                </nuxt-link>
               </li>
               <li>
-                <nuxt-link to="/credits">{{ $t('credits') }}</nuxt-link>
+                <nuxt-link :to="localePath('credits')">
+                  {{ $t('credits') }}
+                </nuxt-link>
               </li>
             </ul>
           </div>
@@ -148,10 +151,10 @@ import Icon from "./Icon"
 import Socials from "./Socials"
 import Newsletter from "./Newsletter"
 import Tooltip from "./Tooltip"
-import LinkTo from "./LinkTo"
+
 export default {
   name: 'Footer',
-  components: {LinkTo, Tooltip, Newsletter, Socials, Icon},
+  components: {Tooltip, Newsletter, Socials, Icon},
   data: () => ({}),
   methods: {}
 }

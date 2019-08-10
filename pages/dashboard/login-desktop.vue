@@ -24,7 +24,7 @@
         <div class="flex justify-center mt-2 mb-3 pb-3">
           <a
             class="shop-checkout-thanks-button bg-blue hover:bg-blue-light text-white font-bold py-4 px-8 rounded inline-flex items-center button"
-            @click="$router.push('/')">
+            @click="$router.push(localePath('index'))">
             <Icon value="fas fa-home" />
             {{ $t('home') }}
           </a>

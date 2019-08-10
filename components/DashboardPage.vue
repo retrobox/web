@@ -21,23 +21,23 @@ export default {
   data: () => ({
     tree: [
       {
-        path: '/dashboard',
+        route: { name: 'dashboard-console' },
         beginWith: '/dashboard/console',
         name: 'Gérer ma console',
         icon: 'fas fa-gamepad'
       },
       {
-        path: '/dashboard/game',
+        route: { name: 'dashboard-game' },
         name: 'Jeux rétros',
         icon: 'fas fa-store'
       },
       {
-        path: '/dashboard/account',
+        route: { name: 'dashboard-account' },
         name: 'Mon profile',
         icon: 'fas fa-user-circle'
       },
       {
-        path: '/dashboard/orders',
+        route: { name: 'dashboard-orders' },
         name: 'Mes commandes',
         icon: 'fas fa-dollar-sign'
       }

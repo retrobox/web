@@ -59,7 +59,7 @@ export default {
         this.$router.push({ query: { next: 'yes' }})
         this.$modal.show('loginOrRegister')
       } else {
-        this.$router.push('/shop/checkout/shipping')
+        this.$router.push(this.localePath('shop-checkout-shipping'))
       }
     },
     toggleCart: function (item) {

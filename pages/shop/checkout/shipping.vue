@@ -10,7 +10,7 @@
         ref="checkoutPage"
         :step="2"
         :margin="false"
-        @previous="$router.push('/shop/checkout/cart')"
+        @previous="$router.push(localePath('shop-checkout-cart'))"
         @next="onNext()">
         <div class="checkout-shipping">
           <div class="shipping-details">
@@ -155,7 +155,7 @@ export default {
     },
     onShippingDetailsSaved() {
       this.$refs.checkoutPage.disableNextLoading()
-      this.$router.push('/shop/checkout/payment')
+      this.$router.push(this.localePath('shop-checkout-payment'))
     },
     onShippingDetailsInvalid() {
       this.$refs.checkoutPage.disableNextLoading()

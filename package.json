@@ -31,6 +31,7 @@
     "moment": "^2.24.0",
     "nuxt": "^2.8.1",
     "nuxt-env": "0.0.4",
+    "nuxt-i18n": "^6.0.0",
     "scrollreveal": "^4.0.5",
     "socket.io-client": "^2.2.0",
     "v-tooltip": "^2.0.0-rc.33",

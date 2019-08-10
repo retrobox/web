@@ -101,7 +101,7 @@ export default {
   methods: {
     goToCart() {
       if (this.step === 2 || this.step === 3) {
-        this.$router.push('/shop/checkout/cart')
+        this.$router.push(this.localePath('shop-checkout-cart'))
       }
     },
     shipping() {
@@ -109,7 +109,7 @@ export default {
         this.$emit('next')
       }
       if (this.step === 3) {
-        this.$router.push('/shop/checkout/shipping')
+        this.$router.push(this.localePath('shop-checkout-shipping'))
       }
     },
     previous() {

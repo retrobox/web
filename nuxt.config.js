@@ -9,6 +9,9 @@ const join = require('path').join
 const tailwindJS = join(__dirname, 'tailwind.js')
 const getRoutes = require('./getRoutes.js');
 
+const FrMessages = require('./assets/locales/fr.json')
+const EnMessages = require('./assets/locales/en.json')
+
 module.exports = {
   mode: 'universal',
 
@@ -59,7 +62,7 @@ module.exports = {
   },
 
   router: {
-    middleware: ['i18n', 'session'],
+    middleware: ['session'],
     scrollBehavior: function (from, to) {
       if (to.hash) {
         return { selector: to.hash }
@@ -78,9 +81,19 @@ module.exports = {
     generate: false
   },
 
-  /*
-  ** Customize the progress-bar color
-  */
+  i18n: {
+    locales: ['en', 'fr'],
+    defaultLocale: 'en',
+    strategy: 'prefix_and_default',
+    vueI18n: {
+      fallbackLocale: 'en',
+      messages: {
+        en: EnMessages,
+        fr: FrMessages
+      }
+    }
+  },
+
   loading: {color: '#000'},
 
   /*
@@ -94,7 +107,6 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~/plugins/i18n.js',
     '~/plugins/apitator.js',
     {src: '~/plugins/cookie.js', ssr: false},
     {src: '~/plugins/transition.js', ssr: false},
@@ -107,13 +119,10 @@ module.exports = {
     {src: '~/plugins/highlight.js', ssr: false}
   ],
 
-  /*
-  ** Nuxt.js modules
-  */
   modules: [
-    // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
     '@nuxtjs/sitemap',
+    'nuxt-i18n',
     ['nuxt-env', {
       keys: [
         'API_ENDPOINT',

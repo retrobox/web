@@ -33,7 +33,7 @@
               'nav-item-divider': item.isDivider
             }"
           >
-            <nuxt-link :to="item.path">
+            <nuxt-link :to="localePath(item.route)">
               <Icon 
                 v-if="item.icon !== undefined"
                 :value="item.icon" />

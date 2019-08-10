@@ -62,7 +62,10 @@ export default {
   },
   methods: {
     goTo() {
-      this.$router.push('/shop/' + this.item.slug)
+      this.$router.push(this.localePath({
+        name: 'shop-slug',
+        params: {slug: this.item.slug}
+      }))
     }
   }
 }

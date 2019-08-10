@@ -18,25 +18,27 @@
             <div class="mobile-nav-nav">
               <ul>
                 <li>
-                  <a @click="mobileNavigate('/')">
+                  <a @click="mobileNavigate('index')">
                     {{ $t('home') }}
                   </a>
                 </li>
                 <li>
-                  <a @click="mobileNavigate('/docs/home')">{{ $t('docs') }}</a>
+                  <a @click="mobileNavigate('docs-slug')">
+                    {{ $t('docs') }}
+                  </a>
                 </li>
                 <li>
-                  <a @click="mobileNavigate('/downloads')">
+                  <a @click="mobileNavigate('downloads')">
                     {{ $t('downloads.title') }}
                   </a>
                 </li>
                 <li>
-                  <a @click="mobileNavigate('/shop')">
+                  <a @click="mobileNavigate('shop')">
                     {{ $t('shop.title') }}
                   </a>
                 </li>
                 <li>
-                  <a @click="mobileNavigate('/shop/retrobox-kit')">
+                  <a @click="mobileNavigate('shop-slug', {slug: 'retrobox-kit'})">
                     {{ $t('buy') }}
                   </a>
                 </li>
@@ -53,9 +55,10 @@
           <div
             v-show="!localeLoading"
             class="flex locales">
-            <div
+            <nuxt-link
+              :to="switchLocalePath('fr')"
               class="w-1/2 h-12 locale"
-              @click="setLocale('fr')">
+              @click="$modal.hide('localeSelection')">
               <div class="locale-image">
                 <img
                   :alt="$t('french_flag')"
@@ -64,10 +67,11 @@
               <div class="locale-title">
                 {{ $t('french') }}
               </div>
-            </div>
-            <div
+            </nuxt-link>
+            <nuxt-link
+              :to="switchLocalePath('en')"
               class="w-1/2 h-12 locale"
-              @click="setLocale('en')">
+              @click="$modal.hide('localeSelection')">
               <div class="locale-image">
                 <img
                   :alt="$t('english_flag')"
@@ -76,7 +80,7 @@
               <div class="locale-title">
                 {{ $t('english') }}
               </div>
-            </div>
+            </nuxt-link>
           </div>
           <div v-show="localeLoading">
             <div class="loading">
@@ -96,14 +100,24 @@
     <!--HEADER CONTENT -->
     <div class="header-top">
       <div class="container mx-auto header-top-content">
-        <div
-          class="locale_selection font-bold py-2 px-4 button flex"
-          @click="localeSelection()">
+        <nuxt-link
+          v-if="$i18n.locale === 'en'"
+          :to="switchLocalePath('fr')"
+          class="locale_selection font-bold py-2 px-4 button flex">
           <Icon
             style="margin-right: 8px"
             value="fas fa-flag" />
-          <span>{{ $t('actual_lang') }}</span>
-        </div>
+          <span>{{ $t('french') }}</span>
+        </nuxt-link>
+        <nuxt-link
+          v-if="$i18n.locale === 'fr'"
+          :to="switchLocalePath('en')"
+          class="locale_selection font-bold py-2 px-4 button flex">
+          <Icon
+            style="margin-right: 8px"
+            value="fas fa-flag" />
+          <span>{{ $t('english') }}</span>
+        </nuxt-link>
         <div class="account">
           <Login />
         </div>
@@ -121,7 +135,7 @@
     <div class="header-background">
       <div class="container mx-auto header-content">
         <div class="header-title-container">
-          <nuxt-link to="/">
+          <nuxt-link :to="localePath('index')">
             <img
               src="../assets/images/nav.png"
               class="header-title-logo">
@@ -136,20 +150,28 @@
         </div>
         <nav class="header-nav-container desktop">
           <div class="nav-item with-link">
-            <nuxt-link to="/">{{ $t('home') }}</nuxt-link>
+            <nuxt-link :to="localePath('index')">
+              {{ $t('home') }}
+            </nuxt-link>
           </div>
           <div class="nav-item with-link">
-            <nuxt-link to="/docs/home">{{ $t('docs') }}</nuxt-link>
+            <nuxt-link :to="localePath('docs-slug')">
+              {{ $t('docs') }}
+            </nuxt-link>
           </div>
           <div class="nav-item with-link downloads-link">
-            <nuxt-link to="/downloads">{{ $t('downloads.title') }}</nuxt-link>
+            <nuxt-link :to="localePath('downloads')">
+              {{ $t('downloads.title') }}
+            </nuxt-link>
           </div>
           <div class="nav-item with-link">
-            <nuxt-link to="/shop">{{ $t('shop.title') }}</nuxt-link>
+            <nuxt-link :to="localePath('shop')">
+              {{ $t('shop.title') }}
+            </nuxt-link>
           </div>
           <div class="nav-item with-button">
             <nuxt-link
-              to="/shop/retrobox-kit"
+              :to="localePath({name: 'shop-slug', params: {slug: 'retrobox-kit'}})"
               class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded button">
               <Icon value="fas fa-shopping-cart" />
               {{ $t('buy') }}
@@ -196,14 +218,10 @@ export default {
     localeSelection: function () {
       this.$modal.show('localeSelection')
     },
-    setLocale: function (locale) {
-      this.$cookie.set('locale', locale, { expires: '365D' })
-      this.localeLoading = true
-      window.location.reload()
-    },
-    mobileNavigate: function (target) {
+    mobileNavigate: function (name, params = {}) {
+      let path = this.localePath({name, params})
+      this.$router.push(path)
       this.$store.commit('TOGGLE_NAV')
-      this.$router.push(target)
     }
   }
 }

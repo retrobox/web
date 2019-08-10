@@ -167,7 +167,7 @@ export default {
     },
     logout(alert = true) {
       this.$cookie.delete("user_token", { domain: this.$env.COOKIE_DOMAIN });
-      this.$router.push("/");
+      this.$router.push(this.localePath('index'));
       this.$store.commit("SET_AUTH", false);
       if (alert) {
         this.$store.commit("ADD_ALERT", {

@@ -133,13 +133,13 @@
           description: this.$i18n.t('account.logout.success.description')
         })
         if (this.$store.state.mustBeAuthenticated) {
-          this.$router.push('/')
+          this.$router.push(this.localePath('index'))
         }
       },
       goToDashboard: function () {
         this.$modal.hide('loginOrRegister');
         //this.$modal.show('login');
-        this.$router.push('/dashboard')
+        this.$router.push(this.localePath('dashboard'))
         // window.location = this.$env.USER_DASHBOARD_ENDPOINT
       },
       goToAdminDashboard: function () {

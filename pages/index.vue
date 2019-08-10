@@ -15,7 +15,7 @@
             {{ $t('landing.go') }}
           </a>
           <nuxt-link
-            to="/shop/retrobox-kit"
+            :to="localePath({name: 'shop-slug', params: {slug: 'retrobox-kit'}})"
             class="landing-main-button-shop button">
             <Icon value="fas fa-shopping-cart"/>
             {{ $t('buy') }}
@@ -219,12 +219,12 @@
                 <span
                   class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">EUR 61.99</span>
 
-                <LinkTo
-                  class="button bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded-full"
-                  to="/shop/retrobox-kit">
+                <nuxt-link
+                  :to="localePath({name: 'shop-slug', params: {slug: 'retrobox-kit'}})"
+                  class="button bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded-full">
                   <Icon value="fas fa-shopping-cart"/>
                   {{ $t('buy') }}
-                </LinkTo>
+                </nuxt-link>
               </div>
             </div>
           </div>
@@ -246,12 +246,12 @@
                 <span
                   class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">EUR 70.99</span>
 
-                <LinkTo
-                  class="button bg-transparent hover:bg-blue text-blue font-semibold hover:text-white py-2 px-4 border border-blue hover:border-transparent rounded-full"
-                  to="/shop/retrobox-non-kit">
+                <nuxt-link
+                  :to="localePath({name: 'shop-slug', params: {slug: 'retrobox-non-kit'}})"
+                  class="button bg-transparent hover:bg-blue text-blue font-semibold hover:text-white py-2 px-4 border border-blue hover:border-transparent rounded-full">
                   <Icon value="fas fa-shopping-cart"/>
                   {{ $t('buy') }}
-                </LinkTo>
+                </nuxt-link>
               </div>
             </div>
           </div>
