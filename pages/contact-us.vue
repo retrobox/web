@@ -52,7 +52,7 @@
     },
     methods: {
       fetchData: function () {
-        this.content = require('../assets/content/' + this.$i18n.locale + '/contact-us.md')
+        this.content = require('~/assets/content/' + this.$i18n.locale + '/contact-us.md')
       }
     }
   }

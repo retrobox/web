@@ -28,12 +28,12 @@ export default {
   },
   data () {
     return {
-      content: require('../assets/content/' + this.$i18n.locale + '/terms-of-sale.md')
+      content: require('~/assets/content/' + this.$i18n.locale + '/terms-of-sale.md')
     }
   },
   watch: {
     '$i18n.locale': function () {
-      this.content = require('../assets/content/' + this.$i18n.locale + '/terms-of-sale.md')
+      this.content = require('~/assets/content/' + this.$i18n.locale + '/terms-of-sale.md')
     }
   }
 }

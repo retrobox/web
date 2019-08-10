@@ -56,7 +56,7 @@
     },
     methods: {
       fetchData: function () {
-        let team = require('../assets/content/' + this.$i18n.locale + '/team.json')
+        let team = require('~/assets/content/' + this.$i18n.locale + '/team.json')
         //shuffle the team
         let i = team.length;
         while (--i) {
@@ -66,7 +66,7 @@
           team[j] = temp;
         }
         this.members = team
-        this.content = require('../assets/content/' + this.$i18n.locale + '/about.md')
+        this.content = require('~/assets/content/' + this.$i18n.locale + '/about.md')
       }
     }
   }

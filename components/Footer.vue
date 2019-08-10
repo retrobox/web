@@ -9,7 +9,7 @@
             :value="$t('partnership.lyceealain.title')"
             class="partnership-lyceealain-image partnership-image">
             <img
-              src="../assets/images/lyceealain.png"
+              src="~/assets/images/lyceealain.png"
               alt="Logo Lycée Alain">
           </Tooltip>
         </a>
@@ -20,7 +20,7 @@
             :value="$t('partnership.cci.title')"
             class="partnership-cci-image partnership-image">
             <img
-              src="../assets/images/ccinormandie.png"
+              src="~/assets/images/ccinormandie.png"
               alt="Logo CCI Normandie">
           </Tooltip>
         </a>
@@ -31,7 +31,7 @@
             :value="$t('partnership.creative-commons.title')"
             class="partnership-creative-commons-image partnership-image">
             <img
-              src="../assets/images/creative-commons.png"
+              src="~/assets/images/creative-commons.png"
               alt="Logo Creative Commons">
           </Tooltip>
         </a>
@@ -52,7 +52,7 @@
           <div class="footer-logo">
             <nuxt-link :to="localePath('index')">
               <img
-                src="../assets/images/footer.png" />
+                src="~/assets/images/footer.png" />
             </nuxt-link>
           </div>
         </div>

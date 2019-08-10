@@ -22,9 +22,9 @@
 </template>
 
 <script>
-import DashboardNav from "../../../components/DashboardNav"
-import Icon from "../../../components/Icon"
-import Error from "../../../components/Error"
+import DashboardNav from "~/components/DashboardNav"
+import Icon from "~/components/Icon"
+import Error from "~/components/Error"
 
 export default {
   middleware: 'authenticated',

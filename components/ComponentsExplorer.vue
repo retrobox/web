@@ -17,7 +17,7 @@
 <script>
   import 'vue-good-table/dist/vue-good-table.css'
   import {VueGoodTable} from 'vue-good-table';
-  import Components from '../docs/components';
+  import Components from '~/docs/components';
 
   export default {
     name: 'ComponentsExplorer',

@@ -54,10 +54,10 @@
   </div>
 </template>
 <script>
-  import Header from "../components/Header"
-  import Footer from "../components/Footer"
-  import Icon from "../components/Icon"
-  import GoToTop from "../components/GoToTop"
+  import Header from "~/components/Header"
+  import Footer from "~/components/Footer"
+  import Icon from "~/components/Icon"
+  import GoToTop from "~/components/GoToTop"
   import Aos from 'aos'
   import 'aos/dist/aos.css'
   export default {

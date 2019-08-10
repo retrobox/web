@@ -62,7 +62,7 @@
               <div class="locale-image">
                 <img
                   :alt="$t('french_flag')"
-                  src="../assets/images/fr.png">
+                  src="~/assets/images/fr.png">
               </div>
               <div class="locale-title">
                 {{ $t('french') }}
@@ -75,7 +75,7 @@
               <div class="locale-image">
                 <img
                   :alt="$t('english_flag')"
-                  src="../assets/images/en.png">
+                  src="~/assets/images/en.png">
               </div>
               <div class="locale-title">
                 {{ $t('english') }}
@@ -137,7 +137,7 @@
         <div class="header-title-container">
           <nuxt-link :to="localePath('index')">
             <img
-              src="../assets/images/nav.png"
+              src="~/assets/images/nav.png"
               class="header-title-logo">
           </nuxt-link>
         </div>

@@ -262,9 +262,9 @@
 </template>
 
 <script>
-  import Icon from "../components/Icon"
-  import Error from "../components/Error"
-  import LinkTo from "../components/LinkTo"
+  import Icon from "~/components/Icon"
+  import Error from "~/components/Error"
+  import LinkTo from "~/components/LinkTo"
 
   export default {
     components: {LinkTo, Error, Icon},

@@ -109,9 +109,9 @@
 </template>
 
 <script>
-  import Icon from "../../components/Icon"
-  import Error from "../../components/Error"
-  import Navigation from "../../components/Navigation"
+  import Icon from "~/components/Icon"
+  import Error from "~/components/Error"
+  import Navigation from "~/components/Navigation"
 
   export default {
     name: 'DocumentationPage',
@@ -119,28 +119,28 @@
       Error,
       Icon,
       Navigation,
-      'EnglishHome': () => import('../../docs/en/home'),
-      'EnglishGettingStarted': () => import('../../docs/en/getting-started'),
-      'EnglishTools': () => import('../../docs/en/tools'),
-      'EnglishAssembly': () => import('../../docs/en/assembly'),
-      'EnglishFinishing': () => import('../../docs/en/finishing'),
-      'EnglishInstallation': () => import('../../docs/en/installation'),
-      'EnglishQuestions': () => import('../../docs/en/questions'),
-      'EnglishSchematic': () => import('../../docs/en/schematic'),
-      'EnglishInfrastructure': () => import('../../docs/en/infrastructure'),
-      'EnglishManualInstallation': () => import('../../docs/en/manual-installation'),
-      'EnglishTechnicalSpecification': () => import('../../docs/en/technical-specification'),
-      'FrenchHome': () => import('../../docs/fr/home'),
-      'FrenchGettingStarted': () => import('../../docs/fr/getting-started'),
-      'FrenchTools': () => import('../../docs/fr/tools'),
-      'FrenchAssembly': () => import('../../docs/fr/assembly'),
-      'FrenchFinishing': () => import('../../docs/fr/finishing'),
-      'FrenchInstallation': () => import('../../docs/fr/installation'),
-      'FrenchQuestions': () => import('../../docs/fr/questions'),
-      'FrenchSchematic': () => import('../../docs/fr/schematic'),
-      'FrenchInfrastructure': () => import('../../docs/fr/infrastructure'),
-      'FrenchManualInstallation': () => import('../../docs/fr/manual-installation'),
-      'FrenchTechnicalSpecification': () => import('../../docs/fr/technical-specification')
+      'EnglishHome': () => import('~/docs/en/home'),
+      'EnglishGettingStarted': () => import('~/docs/en/getting-started'),
+      'EnglishTools': () => import('~/docs/en/tools'),
+      'EnglishAssembly': () => import('~/docs/en/assembly'),
+      'EnglishFinishing': () => import('~/docs/en/finishing'),
+      'EnglishInstallation': () => import('~/docs/en/installation'),
+      'EnglishQuestions': () => import('~/docs/en/questions'),
+      'EnglishSchematic': () => import('~/docs/en/schematic'),
+      'EnglishInfrastructure': () => import('~/docs/en/infrastructure'),
+      'EnglishManualInstallation': () => import('~/docs/en/manual-installation'),
+      'EnglishTechnicalSpecification': () => import('~/docs/en/technical-specification'),
+      'FrenchHome': () => import('~/docs/fr/home'),
+      'FrenchGettingStarted': () => import('~/docs/fr/getting-started'),
+      'FrenchTools': () => import('~/docs/fr/tools'),
+      'FrenchAssembly': () => import('~/docs/fr/assembly'),
+      'FrenchFinishing': () => import('~/docs/fr/finishing'),
+      'FrenchInstallation': () => import('~/docs/fr/installation'),
+      'FrenchQuestions': () => import('~/docs/fr/questions'),
+      'FrenchSchematic': () => import('~/docs/fr/schematic'),
+      'FrenchInfrastructure': () => import('~/docs/fr/infrastructure'),
+      'FrenchManualInstallation': () => import('~/docs/fr/manual-installation'),
+      'FrenchTechnicalSpecification': () => import('~/docs/fr/technical-specification')
     },
     head() {
       return {
@@ -167,7 +167,7 @@
       }
     },
     async asyncData(context) {
-      let docsConfig = require('../../assets/content/' + context.app.i18n.locale + '/documentation.json')
+      let docsConfig = require('~/assets/content/' + context.app.i18n.locale + '/documentation.json')
       let slug = context.params.slug
       if (slug === '' || slug === undefined) {
         slug = 'home'

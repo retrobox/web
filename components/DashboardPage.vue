@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import Icon from "../components/Icon"
-import Navigation from "../components/Navigation"
+import Icon from "~/components/Icon"
+import Navigation from "~/components/Navigation"
 
 export default {
   layout: "default",
@@ -33,6 +33,7 @@ export default {
       },
       {
         route: { name: 'dashboard-account' },
+        path: '/dashboard/account',
         name: 'Mon profile',
         icon: 'fas fa-user-circle'
       },

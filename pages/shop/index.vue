@@ -55,10 +55,10 @@
 </template>
 
 <script>
-  import Icon from "../../components/Icon"
-  import ShopHeader from "../../components/ShopHeader"
-  import LinkTo from "../../components/LinkTo"
-  import ShopCard from "../../components/ShopCard"
+  import Icon from "~/components/Icon"
+  import ShopHeader from "~/components/ShopHeader"
+  import LinkTo from "~/components/LinkTo"
+  import ShopCard from "~/components/ShopCard"
 
   export default {
     components: {LinkTo, ShopHeader, Icon, ShopCard},

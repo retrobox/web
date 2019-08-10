@@ -58,7 +58,7 @@
 <script>
   import DocsHeading from "~/components/Docs/Heading"
   import DocsImage from "~/components/Docs/Image"
-  import ComponentsExplorer from "../../components/ComponentsExplorer"
+  import ComponentsExplorer from "~/components/ComponentsExplorer"
   export default {
     name: 'FrenchTechnicalSpecification',
     components: {ComponentsExplorer, DocsImage, DocsHeading}

@@ -194,9 +194,9 @@
 
 <script>
   import marked from "marked"
-  import ShopHeader from "../../components/ShopHeader"
-  import Icon from "../../components/Icon"
-  import Error from "../../components/Error"
+  import ShopHeader from "~/components/ShopHeader"
+  import Icon from "~/components/Icon"
+  import Error from "~/components/Error"
 
   export default {
     name: 'ShopIndex',

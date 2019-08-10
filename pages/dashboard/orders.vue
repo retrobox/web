@@ -99,8 +99,8 @@
 </template>
 
 <script>
-import DashboardPage from "../../components/DashboardPage";
-import Icon from "../../components/Icon";
+import DashboardPage from "~/components/DashboardPage";
+import Icon from "~/components/Icon";
 
 export default {
   middleware: "authenticated",

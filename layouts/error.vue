@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import Icon from "../components/Icon"
-import Error from "../components/Error"
+import Icon from "~/components/Icon"
+import Error from "~/components/Error"
 export default {
   components: {Icon, Error},
   layout: 'default',

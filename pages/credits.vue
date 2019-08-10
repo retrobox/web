@@ -28,12 +28,12 @@ export default {
   },
   data () {
     return {
-      content: require('../assets/content/' + this.$i18n.locale + '/credits.md')
+      content: require('~/assets/content/' + this.$i18n.locale + '/credits.md')
     }
   },
   watch: {
     '$i18n.locale': function () {
-      this.content = require('../assets/content/' + this.$i18n.locale + '/credits.md')
+      this.content = require('~/assets/content/' + this.$i18n.locale + '/credits.md')
     }
   }
 }
