@@ -67,10 +67,7 @@
         titleTemplate: '%s - Retrobox',
         meta: [
           {name: 'description', content: this.$t('description')},
-          {property: 'og:description', content: this.$t('description')},
-          {property: 'og:locale', content: this.$i18n.locale},
-          {property: 'og:locale:alternate', content: 'fr'},
-          {property: 'og:locale:alternate', content: 'en'}
+          {property: 'og:description', content: this.$t('description')}
         ],
         htmlAttrs: {
           lang: this.$i18n.locale
