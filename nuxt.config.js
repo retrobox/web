@@ -12,8 +12,39 @@ const getRoutes = require('./getRoutes.js');
 const FrMessages = require('./assets/locales/fr.json')
 const EnMessages = require('./assets/locales/en.json')
 
+const baseUrl = 'https://retrobox.tech'
+
 module.exports = {
   mode: 'universal',
+
+  modules: [
+    '@nuxtjs/axios',
+    'nuxt-i18n',
+    ['nuxt-env', {
+      keys: [
+        'API_ENDPOINT',
+        'DOCS_ENDPOINT',
+        'USER_DASHBOARD_ENDPOINT',
+        'ADMIN_DASHBOARD_ENDPOINT',
+        'COOKIE_DOMAIN',
+        'STRIPE_PUBLIC'
+      ]
+    }],
+    '@nuxtjs/sitemap'
+  ],
+
+  plugins: [
+    '~/plugins/apitator.js',
+    {src: '~/plugins/cookie.js', ssr: false},
+    {src: '~/plugins/transition.js', ssr: false},
+    {src: '~/plugins/modal.js', ssr: false},
+    {src: '~/plugins/scrollTo.js', ssr: false},
+    {src: '~/plugins/tooltip.js', ssr: false},
+    {src: '~/plugins/stripe.js', ssr: false},
+    {src: '~/plugins/persistedState.js', ssr: false},
+    {src: '~/plugins/lazyLoad.js', ssr: false},
+    {src: '~/plugins/highlight.js', ssr: false}
+  ],
 
   head: {
     title: "Retrobox",
@@ -69,19 +100,26 @@ module.exports = {
     }
   },
 
-  sitemap: {
-    routes() {
-      return getRoutes();
-    },
-    path: '/sitemap.xml',
-    gzip: true,
-    generate: false
-  },
-
   i18n: {
-    locales: ['en', 'fr'],
+    baseUrl,
+    seo: true,
+    locales: [
+      {
+        code: 'en',
+        iso: 'en-US'
+      },
+      {
+        code: 'fr',
+        iso: 'fr-FR'
+      }
+    ],
     defaultLocale: 'en',
     strategy: 'prefix_and_default',
+    detectBrowserLanguage: {
+      useCookie: true,
+      alwaysRedirect: true,
+      cookieKey: 'i18n_redirected'
+    },
     vueI18n: {
       fallbackLocale: 'en',
       messages: {
@@ -91,41 +129,22 @@ module.exports = {
     }
   },
 
+  sitemap: {
+    hostname: baseUrl,
+    routes() {
+      return getRoutes();
+    },
+    path: '/sitemap.xml',
+    gzip: true,
+    generate: false
+  },
+
   loading: {color: '#000'},
 
   css: [
     '~/assets/scss/main.scss'
   ],
 
-  plugins: [
-    '~/plugins/apitator.js',
-    {src: '~/plugins/cookie.js', ssr: false},
-    {src: '~/plugins/transition.js', ssr: false},
-    {src: '~/plugins/modal.js', ssr: false},
-    {src: '~/plugins/scrollTo.js', ssr: false},
-    {src: '~/plugins/tooltip.js', ssr: false},
-    {src: '~/plugins/stripe.js', ssr: false},
-    {src: '~/plugins/persistedState.js', ssr: false},
-    {src: '~/plugins/lazyLoad.js', ssr: false},
-    {src: '~/plugins/highlight.js', ssr: false}
-  ],
-
-  modules: [
-    '@nuxtjs/axios',
-    '@nuxtjs/sitemap',
-    'nuxt-i18n',
-    ['nuxt-env', {
-      keys: [
-        'API_ENDPOINT',
-        'DOCS_ENDPOINT',
-        'USER_DASHBOARD_ENDPOINT',
-        'ADMIN_DASHBOARD_ENDPOINT',
-        'COOKIE_DOMAIN',
-        'STRIPE_PUBLIC'
-      ]
-    }]
-  ],
-  
   build: {
     extend(config, ctx) {
       // Run ESLint on save
