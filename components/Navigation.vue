@@ -75,8 +75,8 @@ export default {
     checkIsActive: function () {
       this.parsedTree = this.tree.map(item => {
         item.isActive =
-          item.path === this.$route.path ||
-          this.$route.path.indexOf(item.beginWith) !== -1
+          '/' + this.$i18n.locale + item.path === this.$route.path ||
+          this.$route.path.indexOf('/' + this.$i18n.locale + item.beginWith) !== -1
         return item
       })
     }

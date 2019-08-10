@@ -28,6 +28,7 @@ export default {
       },
       {
         route: { name: 'dashboard-game' },
+        path: '/dashboard/game',
         name: 'Jeux rétros',
         icon: 'fas fa-store'
       },
@@ -39,6 +40,7 @@ export default {
       },
       {
         route: { name: 'dashboard-orders' },
+        path: '/dashboard/orders',
         name: 'Mes commandes',
         icon: 'fas fa-dollar-sign'
       }
