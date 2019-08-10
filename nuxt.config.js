@@ -15,9 +15,6 @@ const EnMessages = require('./assets/locales/en.json')
 module.exports = {
   mode: 'universal',
 
-  /*
-  ** Headers of the page
-  */
   head: {
     title: "Retrobox",
     meta: [
@@ -96,16 +93,10 @@ module.exports = {
 
   loading: {color: '#000'},
 
-  /*
-  ** Global CSS
-  */
   css: [
     '~/assets/scss/main.scss'
   ],
 
-  /*
-  ** Plugins to load before mounting the App
-  */
   plugins: [
     '~/plugins/apitator.js',
     {src: '~/plugins/cookie.js', ssr: false},
@@ -134,16 +125,7 @@ module.exports = {
       ]
     }]
   ],
-  /*
-  ** Axios module configuration
-  */
-  axios: {
-    // See https://github.com/nuxt-community/axios-module#options
-  },
-
-  /*
-  ** Build configuration
-  */
+  
   build: {
     extend(config, ctx) {
       // Run ESLint on save
