@@ -90,14 +90,7 @@ module.exports = {
   },
 
   router: {
-    middleware: ['session'],
-    scrollBehavior: function (from, to) {
-      if (to.hash) {
-        return { selector: to.hash }
-      } else {
-        return { x: 0, y: 0 }
-      }
-    }
+    middleware: ['session']
   },
 
   i18n: {
@@ -117,7 +110,7 @@ module.exports = {
     strategy: 'prefix_and_default',
     detectBrowserLanguage: {
       useCookie: true,
-      alwaysRedirect: true,
+      alwaysRedirect: false,
       cookieKey: 'i18n_redirected'
     },
     vueI18n: {
