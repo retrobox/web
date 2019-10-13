@@ -25,6 +25,17 @@
           </Tooltip>
         </a>
         <a
+          class="partnership-pcbway partnership-item"
+          href="https://www.pcbway.com">
+          <Tooltip
+            :value="$t('partnership.pcbway.title')"
+            class="partnership-pcbway-image partnership-image">
+            <img
+              src="https://media.discordapp.net/attachments/372328193216217089/632553699448848404/pcbway.png"
+              alt="Logo Pcbway">
+          </Tooltip>
+        </a>
+        <a
           class="partnership-creative-commons partnership-item"
           href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
           <Tooltip
