@@ -50,6 +50,7 @@
         ref="stripe"
         :billing-address="false"
         :amount="$store.state.checkout.total * 100"
+        :email="$store.state.user.email"
         image="https://i.imgur.com/sEtYLqg.png"
         name="Retrobox"
         currency="EUR"

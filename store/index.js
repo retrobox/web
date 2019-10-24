@@ -10,6 +10,7 @@ export const state = () => ({
   user: {
     id: '',
     username: '',
+    email: '',
     isAdmin: false
   },
   isLoading: false,
@@ -58,6 +59,7 @@ export const mutations = {
     state.user = {
       id: user.id,
       username: user.username,
+      email: user.email,
       isAdmin: !!user.is_admin
     }
   },
