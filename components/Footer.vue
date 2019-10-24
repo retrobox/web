@@ -31,7 +31,7 @@
             :value="$t('partnership.pcbway.title')"
             class="partnership-pcbway-image partnership-image">
             <img
-              src="https://media.discordapp.net/attachments/372328193216217089/632553699448848404/pcbway.png"
+              src="https://static.retrobox.tech/img/logo/pcbway.png"
               alt="Logo Pcbway">
           </Tooltip>
         </a>
