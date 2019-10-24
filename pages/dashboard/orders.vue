@@ -122,7 +122,7 @@ export default {
   async asyncData(context) {
     let res = await context.app.apitator.graphQL(
       `query {
-        getManyShopOrders {
+        getManyShopOrders(all: false) {
           id,
           sub_total_price,
           total_shipping_price,
