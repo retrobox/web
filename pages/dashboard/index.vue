@@ -10,15 +10,23 @@
         `query {getManyConsoles {id}}`, {}, {withAuth: true}))
       consoles = consoles.data.data.getManyConsoles
       if(consoles.length === 1){
+        // console.log(consoles[0].id)
+        // console.log(context.app.localePath({
+        //     name:'dashboard-console',
+        //     params: {
+        //       id: consoles[0].id
+        //     }
+        //   }))
         // have only one console -> redirect to console managing page
-        context.redirect(
-          context.app.localePath({
+        /*
+        context.app.localePath({
             name:'dashboard-console',
             params: {
               id: consoles[0].id
             }
           })
-        )
+        */
+        context.redirect('/dashboard/console/' + consoles[0].id)
       } else {
         // have no consoles or many -> go to the list
         context.redirect(context.app.localePath('dashboard-console'))
