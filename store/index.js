@@ -136,8 +136,8 @@ export const mutations = {
     state.checkout = payload
   },
   SET_CHECKOUT_ITEMS: (state, payload) => {
-    state.checkout.subTotal = payload[0]
-    state.checkout.total = payload[0]
+    state.checkout.subTotal = (payload[0]).toFixed(2)
+    state.checkout.total = (payload[0]).toFixed(2)
     state.checkout.totalWeight = payload[1]
   },
   SET_CHECKOUT_COUNTRY: (state, payload) => {
