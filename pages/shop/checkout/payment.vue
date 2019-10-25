@@ -116,7 +116,7 @@
         }, { withAuth: true }).then((response) => {
           console.log("stripe: success");
           console.log(response)
-          //this.$router.push(this.localePath('shop-checkout-success'))
+          this.$router.push(this.localePath('shop-checkout-success'))
         }).catch((error) => {
           this.way = '';
           this.stripeLoading = false;
