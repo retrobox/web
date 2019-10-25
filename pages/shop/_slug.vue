@@ -217,10 +217,9 @@
         },
         //url of image to show in modal
         to_show: '',
-        selectedStorage: 8,
+        selectedStorage: 16,
         //in gb
         storages: [
-          8,
           16,
           32
         ],
