@@ -51,14 +51,15 @@
           <button
             v-if="step > 1"
             class="button button-secondary button-big"
-            @click="previous()">
+            @click="goToPrevious()">
             <Icon value="fas fa-backward" />
             {{ $t("shop.shipping_details.previous") }}
           </button>
           <button
             v-if="step < 3"
+            :class="{'disabled': !next}"
             class="button button-primary button-big"
-            @click="next()">
+            @click="goToNext()">
             <Icon
               v-if="nextLoading"
               spin
@@ -81,7 +82,8 @@ export default {
   components: { Icon },
   props: {
     step: { type: Number, default: 0 },
-    margins: { type: Boolean, default: true }
+    margins: { type: Boolean, default: true },
+    next: { type: Boolean, default: true }
   },
   data: () => ({
     show: false,
@@ -112,11 +114,13 @@ export default {
         this.$router.push(this.localePath('shop-checkout-shipping'))
       }
     },
-    previous() {
+    goToPrevious() {
       this.$emit('previous')
     },
-    next() {
-      this.$emit('next')
+    goToNext() {
+      if (this.next === true) {
+        this.$emit('next')
+      }
     },
     enableNextLoading() {
       this.nextLoading = true

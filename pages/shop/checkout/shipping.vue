@@ -10,6 +10,7 @@
         ref="checkoutPage"
         :step="2"
         :margin="false"
+        :next="$store.state.checkout.shippingPrice !== 0"
         @previous="$router.push(localePath('shop-checkout-cart'))"
         @next="onNext()">
         <div class="checkout-shipping">
@@ -53,7 +54,9 @@
                     <div class="shipping-method-description">
                       {{ $t('shop.shipping_details.methods.colissimo') }}
                     </div>
-                    <div class="shipping-method-price">
+                    <div
+                      v-if="colissimoPrice !== 0"
+                      class="shipping-method-price">
                       <span class="currency">€</span>
                       {{ colissimoPrice }}
                     </div>
@@ -81,7 +84,9 @@
                     <div class="shipping-method-description">
                       {{ $t('shop.shipping_details.methods.dhl') }}
                     </div>
-                    <div class="shipping-method-price">
+                    <div
+                      v-if="dhlPrice !== 0"
+                      class="shipping-method-price">
                       <span class="currency">€</span>
                       {{ dhlPrice }}
                     </div>
@@ -147,6 +152,9 @@ export default {
     'shippingMethod': function() {
       this.updateShippingPrice()
     }
+  },
+  created() {
+    this.$store.commit('SET_CHECKOUT_SHIPPING_METHOD', ['', 0])
   },
   methods: {
     onNext() {
