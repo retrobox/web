@@ -113,9 +113,10 @@
           items: this.$store.state.cart,
           shipping_method: this.$store.state.checkout.shippingMethod,
           shipping_country: this.$store.state.checkout.country
-        }, { withAuth: true }).then(() => {
+        }, { withAuth: true }).then((response) => {
           console.log("stripe: success");
-          this.$router.push(this.localePath('shop-checkout-success'))
+          console.log(response)
+          //this.$router.push(this.localePath('shop-checkout-success'))
         }).catch((error) => {
           this.way = '';
           this.stripeLoading = false;
