@@ -26,6 +26,7 @@ module.exports = {
         'DOCS_ENDPOINT',
         'USER_DASHBOARD_ENDPOINT',
         'ADMIN_DASHBOARD_ENDPOINT',
+        'WS_ENDPOINT',
         'COOKIE_DOMAIN',
         'STRIPE_PUBLIC'
       ]
@@ -114,7 +115,7 @@ module.exports = {
     strategy: 'prefix_and_default',
     detectBrowserLanguage: {
       useCookie: true,
-      alwaysRedirect: true,
+      alwaysRedirect: false,
       cookieKey: 'i18n_redirected'
     },
     vueI18n: {

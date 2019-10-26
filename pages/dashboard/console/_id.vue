@@ -249,8 +249,9 @@ export default {
       }
     },
     connectWebSocket: function () {
+      console.log("WS_ENDPOINT: ", this.$env.WS_ENDPOINT)
       // connect web socket to wait for update on console status
-      var socket = io('https://ws.retrobox.tech', {
+      var socket = io(this.$env.WS_ENDPOINT, {
         transportOptions: {
           polling: {
             extraHeaders: {
