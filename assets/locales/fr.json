@@ -320,13 +320,18 @@
       "total-amount": "Montant total",
       "payment-method": "Moyen de paiment",
       "payment-method-details": "Moyen de paiment :",
-      "status": "Status",
       "details": "Détails sur la commande",
       "subtotal": "Sous-total :",
       "shipping": "Frais de port :",
       "total": "Total :",
       "payment": "Type de paiement :",
-      "external-id": "ID de paiement externe :"
+      "external-id": "ID de paiement externe :",
+      "status": {
+        "title": "Status",
+        "shipped": "Envoyée",
+        "payed": "Payée",
+        "cancel": "Annulé"
+      }
     },
     "navigation": {
       "console": "Gérer ma console",

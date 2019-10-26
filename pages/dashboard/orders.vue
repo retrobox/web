@@ -21,7 +21,7 @@
               <div class="list-head">
                 <div>{{ $t("user-dash.orders.total-amount") }}</div>
                 <div>{{ $t("user-dash.orders.payment-method") }}</div>
-                <div>{{ $t("user-dash.orders.status") }}</div>
+                <div>{{ $t("user-dash.orders.status.title") }}</div>
                 <div></div>
               </div>
               <div 
@@ -136,8 +136,12 @@ export default {
       }`, {}, { withAuth: true });
     let data = res.data.data;
     let orders = data.getManyShopOrders.map(order => {
-      console.log(order.status)
-      order.status = order.status === "payed" ? "Payée" : "Annulé";
+      order.status = 
+        order.status === 'payed' ? 
+          context.app.i18n.t('user-dash.orders.status.payed') :
+        order.status === 'shipped' ? 
+          context.app.i18n.t('user-dash.orders.status.shipped') :
+          context.app.i18n.t('user-dash.orders.status.cancel');
       order.way =
         order.way.substr(0, 1).toUpperCase() +
         order.way.substr(1).toLowerCase();
