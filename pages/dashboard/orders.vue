@@ -41,7 +41,7 @@
                     <i class="fas fa-file-alt"></i>
                   </a>
                   <a
-                    :title="$t('user-dash.orders.view-order')"
+                    :title="$t('user-dash.orders.view-details')"
                     class="bg-grey hover:bg-grey-dark text-white font-bold py-1 px-2 rounded button"
                     @click="viewOrder(order)"
                   >
@@ -124,17 +124,19 @@ export default {
     let res = await context.app.apitator.graphQL(
       `query {
         getManyShopOrders(all: false) {
-          id,
-          sub_total_price,
-          total_shipping_price,
-          total_price,
-          on_way_id,
-          way,
+          id
+          sub_total_price
+          total_shipping_price
+          total_price
+          on_way_id
+          way
+          status
           bill_url
         }
       }`, {}, { withAuth: true });
     let data = res.data.data;
     let orders = data.getManyShopOrders.map(order => {
+      console.log(order.status)
       order.status = order.status === "payed" ? "Payée" : "Annulé";
       order.way =
         order.way.substr(0, 1).toUpperCase() +
