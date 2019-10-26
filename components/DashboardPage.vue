@@ -22,7 +22,7 @@ export default {
     return {
       tree: [
         {
-          route: { name: 'dashboard-console' },
+          route: { name: 'dashboard' },
           beginWith: '/dashboard/console',
           name: this.$i18n.t('user-dash.navigation.console'),
           icon: 'fas fa-gamepad'
