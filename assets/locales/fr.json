@@ -315,6 +315,8 @@
     },
     "orders": {
       "title": "Dernières commandes",
+      "view-details": "Voir les details",
+      "view-bills": "Voir la facture",
       "total-amount": "Montant total",
       "payment-method": "Moyen de paiment",
       "payment-method-details": "Moyen de paiment :",
