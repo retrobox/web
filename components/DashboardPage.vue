@@ -18,34 +18,36 @@ import Navigation from "~/components/Navigation"
 export default {
   layout: "default",
   components: {Icon, Navigation},
-  data: () => ({
-    tree: [
-      {
-        route: { name: 'dashboard-console' },
-        beginWith: '/dashboard/console',
-        name: 'Gérer ma console',
-        icon: 'fas fa-gamepad'
-      },
-      {
-        route: { name: 'dashboard-game' },
-        path: '/dashboard/game',
-        name: 'Jeux rétros',
-        icon: 'fas fa-store'
-      },
-      {
-        route: { name: 'dashboard-account' },
-        path: '/dashboard/account',
-        name: 'Mon profile',
-        icon: 'fas fa-user-circle'
-      },
-      {
-        route: { name: 'dashboard-orders' },
-        path: '/dashboard/orders',
-        name: 'Mes commandes',
-        icon: 'fas fa-dollar-sign'
-      }
-    ]
-  })
+  data() {
+    return {
+      tree: [
+        {
+          route: { name: 'dashboard-console' },
+          beginWith: '/dashboard/console',
+          name: this.$i18n.t('user-dash.navigation.console'),
+          icon: 'fas fa-gamepad'
+        },
+        {
+          route: { name: 'dashboard-game' },
+          path: '/dashboard/game',
+          name: this.$i18n.t('user-dash.navigation.games'),
+          icon: 'fas fa-store'
+        },
+        {
+          route: { name: 'dashboard-account' },
+          path: '/dashboard/account',
+          name: this.$i18n.t('user-dash.navigation.account'),
+          icon: 'fas fa-user-circle'
+        },
+        {
+          route: { name: 'dashboard-orders' },
+          path: '/dashboard/orders',
+          name: this.$i18n.t('user-dash.navigation.orders'),
+          icon: 'fas fa-dollar-sign'
+        }
+      ]
+    }
+  }
 }
 </script>
 

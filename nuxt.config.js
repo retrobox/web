@@ -99,26 +99,26 @@ module.exports = {
     locales: [
       {
         code: 'en',
-        iso: 'en-US'
+        iso: 'en-US',
+        file: 'en-US.js'
       },
       {
         code: 'fr',
-        iso: 'fr-FR'
+        iso: 'fr-FR',
+        file: 'fr-FR.js'
       }
     ],
-    defaultLocale: 'en',
+    lazy: true,
+    langDir: 'lang/',
+    defaultLocale: 'fr',
     strategy: 'prefix_and_default',
     detectBrowserLanguage: {
       useCookie: true,
-      alwaysRedirect: false,
+      alwaysRedirect: true,
       cookieKey: 'i18n_redirected'
     },
     vueI18n: {
-      fallbackLocale: 'en',
-      messages: {
-        en: EnMessages,
-        fr: FrMessages
-      }
+      fallbackLocale: 'en'
     }
   },
 

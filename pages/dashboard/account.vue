@@ -24,7 +24,7 @@
             class="with-link account-action" 
             @click="openDestroyAccount()">
             <Icon value="fas fa-trash" />
-            {{ $t("user-dash.destroy") }}
+            {{ $t("user-dash.destroy.title") }}
           </a>
           <a
             v-if="user.is_admin"
@@ -38,13 +38,15 @@
             class="with-link account-action" 
             @click="logout()">
             <Icon value="fas fa-sign-out-alt" />
-            {{ $t("user-dash.disconnect") }}
+            {{ $t("user-dash.logout") }}
           </a>
         </div>
       </div>
     </div>
     <div class="mt-6 pt-3">
-      <h3 class="dividing mb-4">Edit your Shipping Details</h3>
+      <h3 class="dividing mb-4">
+        {{ $t("user-dash.shipping-details.title") }}
+      </h3>
     </div>
     <ShippingDetailsForm
       ref="shippingDetailsForm"
@@ -59,7 +61,7 @@
           v-if="saving"
           value="fas fa-sync"
           spin />
-        Save
+        {{ $t("save") }}
       </button>
     </div>
     <no-ssr>
@@ -70,18 +72,18 @@
         name="destroyAccount">
         <div class="p-4">
           <h3 class="mb-6 mt-3">
-            {{ $t("user-dash.modal-account-delete-title") }}
+            {{ $t("user-dash.destroy.confirmation.title") }}
           </h3>
-          <p>{{ $t("user-dash.modal-account-delete-desc") }}</p>
+          <p>{{ $t("user-dash.destroy.confirmation.description") }}</p>
           <br />
           <input
             id="destroy-confirmation"
             v-model="destroyAccountConfirmation"
             type="checkbox"
           />
-          <label for="destroy-confirmation">{{
-            $t("user-dash.modal-account-delete-confirm")
-          }}</label>
+          <label for="destroy-confirmation">
+            {{ $t("user-dash.destroy.confirmation.checkbox") }}
+          </label>
           <br />
           <br />
         </div>
@@ -90,13 +92,13 @@
             class="w-full md:w-1/2 button bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 text-center cancel-button"
             @click="$modal.hide('destroyAccount')"
           >
-            {{ $t("user-dash.modal-account-delete-cancel") }}
+            {{ $t("cancel") }}
           </div>
           <div
             class="w-full md:w-1/2 button bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 text-center cancel-button"
             @click="destroyAccount()"
           >
-            {{ $t("user-dash.modal-account-delete-cancel-confirm") }}
+            {{ $t("user-dash.destroy.confirmation.action") }}
           </div>
         </div>
       </modal>
@@ -158,7 +160,7 @@ export default {
     destroyAccount() {
       if (
         this.destroyAccountConfirmation &&
-        confirm("Are you *really* sure of what your are doing?")
+        confirm(this.$i18n.t("user-dash.destroy.last-confirmation"))
       ) {
         this.$apitator.get("/dashboard/delete", { withAuth: true }).then(() => {
           this.logout(alert);

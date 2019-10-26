@@ -2,7 +2,9 @@
   <DashboardPage>
     <div class="account-dashboard">
       <div class="account-orders-container">
-        <h3 class="dividing mb-4">{{ $t("user-dash.table-title") }}</h3>
+        <h3 class="dividing mb-4">
+          {{ $t("user-dash.orders.title") }}
+        </h3>
         <div class="shop-cart-container">
           <div 
             v-if="orders.length === 0" 
@@ -11,15 +13,15 @@
               <Icon value="fas fa-times-circle" />
             </div>
             <div class="shop-empty-title">
-              <h3>{{ $t("user-dash.no-command") }}</h3>
+              <h3>{{ $t("user-dash.orders.empty") }}</h3>
             </div>
           </div>
           <div v-if="orders.length > 0">
             <div class="shop-cart-list list">
               <div class="list-head">
-                <div>{{ $t("user-dash.first-column") }}</div>
-                <div>{{ $t("user-dash.second-column") }}</div>
-                <div>{{ $t("user-dash.third-column") }}</div>
+                <div>{{ $t("user-dash.orders.total-amount") }}</div>
+                <div>{{ $t("user-dash.orders.payment-method") }}</div>
+                <div>{{ $t("user-dash.orders.status") }}</div>
                 <div></div>
               </div>
               <div 
@@ -32,14 +34,14 @@
                 <div class="shop-cart-actions">
                   <a
                     v-if="order.bill_url != null"
-                    :title="'Voir la facture'"
+                    :title="$t('user-dash.orders.view-bill')"
                     class="bg-grey hover:bg-grey-dark text-white font-bold py-1 px-2 rounded button"
                     @click="viewBill(order)"
                   >
                     <i class="fas fa-file-alt"></i>
                   </a>
                   <a
-                    :title="'Voir en détail'"
+                    :title="$t('user-dash.orders.view-order')"
                     class="bg-grey hover:bg-grey-dark text-white font-bold py-1 px-2 rounded button"
                     @click="viewOrder(order)"
                   >
@@ -59,29 +61,28 @@
           name="orderView">
           <div class="p-4">
             <h3 class="mb-6 mt-3">
-              {{ $t("user-dash.") }}Détails sur la commande #{{
-                orderToView.id
-              }}
+              {{ $t("user-dash.orders.details") }}  
+              #{{ orderToView.id }}
             </h3>
             <ul class="mb-2">
               <li class="mb-1">
-                {{ $t("user-dash.modal-order-subtotal")
-                }}{{ orderToView.sub_total_price }}
+                {{ $t("user-dash.orders.subtotal") }}
+                € {{ orderToView.sub_total_price }}
               </li>
               <li class="mb-1">
-                {{ $t("user-dash.modal-order-shipping")
-                }}{{ orderToView.total_shipping_price }}
+                {{ $t("user-dash.orders.shipping") }}
+                € {{ orderToView.total_shipping_price }}
               </li>
               <li class="mb-1">
-                {{ $t("user-dash.modal-order-total")
-                }}{{ orderToView.total_price }}
+                {{ $t("user-dash.orders.total") }}
+                € {{ orderToView.total_price }}
               </li>
               <li class="mb-1">
-                {{ $t("user-dash.modal-order-payment")
-                }}{{ orderToView.way }}
+                {{ $t("user-dash.orders.payment-method-details") }}
+                {{ orderToView.way }}
               </li>
               <li>
-                {{ $t("user-dash.external-id") }}
+                {{ $t("user-dash.orders.external-id") }}
                 <code>{{ orderToView.on_way_id }}</code>
               </li>
             </ul>

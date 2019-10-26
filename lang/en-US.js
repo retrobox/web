@@ -1,0 +1,1 @@
+export default require('../assets/locales/en.json')
