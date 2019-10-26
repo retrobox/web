@@ -14,7 +14,7 @@ export default {
   data: () => ({
     tree: [
       {
-        route: { name: 'dashboard-console' },
+        route: { name: 'dashboard' },
         beginWith: '/dashboard/console',
         name: 'Gérer ma console',
         icon: 'fas fa-gamepad'
