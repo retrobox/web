@@ -250,7 +250,7 @@ export default {
     },
     connectWebSocket: function () {
       // connect web socket to wait for update on console status
-      var socket = io('http://localhost:3008', {
+      var socket = io('https://ws.retrobox.tech', {
         transportOptions: {
           polling: {
             extraHeaders: {
