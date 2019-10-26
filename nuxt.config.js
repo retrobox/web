@@ -110,7 +110,7 @@ module.exports = {
     strategy: 'prefix_and_default',
     detectBrowserLanguage: {
       useCookie: true,
-      alwaysRedirect: false,
+      alwaysRedirect: true,
       cookieKey: 'i18n_redirected'
     },
     vueI18n: {
