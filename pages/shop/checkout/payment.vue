@@ -45,7 +45,7 @@
         </div>
       </CheckoutPage>
     </div>
-    <no-ssr>
+    <client-only>
       <vue-stripe-checkout
         ref="stripe"
         :billing-address="false"
@@ -59,7 +59,7 @@
         @closed="stripeClosed"
         @canceled="stripeClosed"
       ></vue-stripe-checkout>
-    </no-ssr>
+    </client-only>
   </div>
 </template>
 

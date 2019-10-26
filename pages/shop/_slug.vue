@@ -170,7 +170,7 @@
           </div>
         </div>
       </div>
-      <no-ssr>
+      <client-only>
         <modal
           name="show_image"
           adaptive
@@ -188,7 +188,7 @@
             {{ $t('close') }}
           </div>
         </modal>
-      </no-ssr>
+      </client-only>
     </div>
 </div></template>
 

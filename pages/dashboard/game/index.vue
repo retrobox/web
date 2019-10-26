@@ -74,7 +74,7 @@
         </div>
       </div>
     </div>
-    <no-ssr>      
+    <client-only>      
       <modal 
         adaptive 
         class="modal" 
@@ -114,7 +114,7 @@
           </div>
         </div>
       </modal>
-    </no-ssr>
+    </client-only>
   </DashboardPage>
 </template>
 

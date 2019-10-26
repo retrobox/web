@@ -53,7 +53,7 @@
           </div>
         </div>
       </div>
-      <no-ssr>            
+      <client-only>            
         <modal 
           adaptive 
           class="modal" 
@@ -94,7 +94,7 @@
             {{ $t("close") }}
           </div>
         </modal>
-      </no-ssr>
+      </client-only>
     </div>
   </DashboardPage>
 </template>

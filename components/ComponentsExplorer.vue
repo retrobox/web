@@ -1,6 +1,6 @@
 <template>
   <div>
-    <no-ssr>
+    <client-only>
       <VueGoodTable
         :columns="columns"
         :rows="rows"
@@ -10,7 +10,7 @@
           {{ $t('components-explorer.empty') }}
         </div>
       </VueGoodTable>
-    </no-ssr>
+    </client-only>
   </div>
 </template>
 

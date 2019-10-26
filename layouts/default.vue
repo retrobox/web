@@ -21,7 +21,7 @@
           v-if="$route.name !== 'index' || $store.state.hasNuxtError === true"
           class="content-container-bottom"></div>
         <Footer />
-        <no-ssr>
+        <client-only>
           <modal
             name="modalAlert"
             adaptive
@@ -48,7 +48,7 @@
             </div>
           </modal>
           <GoToTop />
-        </no-ssr>
+        </client-only>
       </div>
     </transition>
   </div>

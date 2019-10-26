@@ -1,6 +1,6 @@
 <template>
   <div class="header-container">
-    <no-ssr>
+    <client-only>
       <!-- NAV MOBILE -->
       <scale-transition>
         <div
@@ -96,7 +96,7 @@
           {{ $t('close') }}
         </div>
       </modal>
-    </no-ssr>
+    </client-only>
     <!--HEADER CONTENT -->
     <div class="header-top">
       <div class="container mx-auto header-top-content">

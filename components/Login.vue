@@ -21,7 +21,7 @@
         {{ $t('account.title') }}
       </div>
     </div>
-    <no-ssr>
+    <client-only>
       <modal
         name="login"
         adaptive
@@ -89,7 +89,7 @@
           {{ $t('close') }}
         </div>
       </modal>
-    </no-ssr>
+    </client-only>
   </div>
 </template>
 

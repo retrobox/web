@@ -44,7 +44,7 @@
         </div>
       </div>
     </div>
-    <no-ssr>
+    <client-only>
       <modal
         :width="'720px'"
         name="download_modal"
@@ -75,7 +75,7 @@
           {{ $t('close') }}
         </div>
       </modal>
-    </no-ssr>
+    </client-only>
   </div>
 </template>
 

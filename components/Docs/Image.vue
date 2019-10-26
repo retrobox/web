@@ -10,7 +10,7 @@
         @click="onClick"/>
     </div>
 
-    <no-ssr>
+    <client-only>
       <modal
         :name="'imageModal' + id"
         :width="'920px'"
@@ -28,7 +28,7 @@
           {{ $t('close') }}
         </div>
       </modal>
-    </no-ssr>
+    </client-only>
   </div>
 </template>
 
