@@ -38,7 +38,9 @@
           </p>
         </div>
         <div class="landing-about-pic">
-          <img src="https://static.retrobox.tech/img/about/RETROBOX1.png" alt="Retrobox console image">
+          <img
+            v-lazy="'https://static.retrobox.tech/website/landing-1.webp'"
+            alt="Retrobox console image">
         </div>
       </div>
     </section>
@@ -54,7 +56,9 @@
         class="landing-about-content"
         data-aos="fade-left">
         <div class="landing-about-pic">
-          <img src="https://static.retrobox.tech/img/about/hand.png" alt="Retrobox console in hands">
+          <img
+            v-lazy="'https://static.retrobox.tech/website/landing-2.webp'"
+            alt="Retrobox console in hands">
         </div>
         <div class="landing-about-text">
           <div>
