@@ -91,7 +91,7 @@ module.exports = {
   },
 
   router: {
-    middleware: ['session']
+    middleware: ['session', 'i18n-check']
   },
 
   i18n: {
@@ -112,7 +112,7 @@ module.exports = {
     lazy: true,
     langDir: 'lang/',
     defaultLocale: 'fr',
-    strategy: 'prefix_and_default',
+    strategy: 'prefix',
     detectBrowserLanguage: {
       useCookie: true,
       alwaysRedirect: false,
