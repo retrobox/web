@@ -101,30 +101,29 @@
         <div class="w-1/3">
           <div class="footer-links">
             <ul>
-
-              <li>
-                <nuxt-link :to="localePath('contact-us')">
+              <nuxt-link :to="localePath('contact-us')">
+                <li>
                   {{ $t('contact-us.title') }}
-                </nuxt-link>
-              </li>
+                </li>
+              </nuxt-link>
 
-              <li>
-                <nuxt-link :to="localePath('terms')">
+              <nuxt-link :to="localePath('terms')">
+                <li>
                   {{ $t('terms-of-use') }}
-                </nuxt-link>
-              </li>
+                </li>
+              </nuxt-link>
 
-              <li>
-                <nuxt-link :to="localePath('terms-of-sale')">
+              <nuxt-link :to="localePath('terms-of-sale')">
+                <li>
                   {{ $t('terms-of-sale') }}
-                </nuxt-link>
-              </li>
-
-              <li>
-                <nuxt-link :to="localePath('privacy')">
+                </li>
+              </nuxt-link>
+              
+              <nuxt-link :to="localePath('privacy')">
+                <li>
                   {{ $t('privacy') }}
-                </nuxt-link>
-              </li>
+                </li>
+              </nuxt-link>
             </ul>
           </div>
         </div>
@@ -134,18 +133,18 @@
           <div class="footer-inline-links">
             <ul>
               <li class="copyright">
-                <a href="#">© Copyright 2019 Thingmill</a>
+                <a href="https://thingmill.fr">© Copyright 2019 Thingmill</a>
               </li>
-              <li>
-                <nuxt-link :to="localePath('legals')">
+              <nuxt-link :to="localePath('legals')">
+                <li>
                   {{ $t('legals') }}
-                </nuxt-link>
-              </li>
-              <li>
-                <nuxt-link :to="localePath('credits')">
+                </li>
+              </nuxt-link>
+              <nuxt-link :to="localePath('credits')">
+                <li>
                   {{ $t('credits') }}
-                </nuxt-link>
-              </li>
+                </li>
+              </nuxt-link>
             </ul>
           </div>
           <div class="footer-socials">
