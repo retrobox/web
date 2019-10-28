@@ -25,7 +25,7 @@ export default {
   },
   mounted() {
     let urlSearchParams = new URLSearchParams(window.location.search)
-    this.$store.commit('SET_LOGIN_REDIRECT_ROUTE', urlSearchParams.get('redirect'))
+    this.$store.commit('SET_LOGIN_REDIRECT_ROUTE', decodeURI(urlSearchParams.get('redirect')))
     setTimeout(() => {
         this.$modal.show("loginOrRegister");    
     }, 400)
