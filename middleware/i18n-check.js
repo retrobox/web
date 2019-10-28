@@ -1,7 +1,7 @@
 const acceptLanguageParser = require('accept-language-parser');
 
 export default function ({ req, route, redirect }) {
-    if (req !== undefined && route.fullPath.substring(3, 4) !== '/') {
+    if (req !== undefined && (route.fullPath.substring(3, 4) !== '/' && route.fullPath.length !== 3)) {
         let locale = 'en'
         if (req.headers !== undefined && req.headers['accept-language'] !== undefined) {
             
