@@ -63,6 +63,7 @@
           <div class="footer-logo">
             <nuxt-link :to="localePath('index')">
               <img
+                alt="Retrobox logo"
                 src="~/assets/images/footer.png" />
             </nuxt-link>
           </div>
@@ -128,7 +129,6 @@
           </div>
         </div>
       </div>
-
       <div class="footer-content-bottom">
         <div class="container mx-auto">
           <div class="footer-inline-links">

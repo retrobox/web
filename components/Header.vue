@@ -138,6 +138,7 @@
           <nuxt-link :to="localePath('index')">
             <img
               src="~/assets/images/nav.png"
+              alt="Retrobox logo"
               class="header-title-logo">
           </nuxt-link>
         </div>

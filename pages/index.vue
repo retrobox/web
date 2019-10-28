@@ -38,7 +38,7 @@
           </p>
         </div>
         <div class="landing-about-pic">
-          <img src="https://static.retrobox.tech/img/about/RETROBOX1.png">
+          <img src="https://static.retrobox.tech/img/about/RETROBOX1.png" alt="Retrobox console image">
         </div>
       </div>
     </section>
@@ -54,7 +54,7 @@
         class="landing-about-content"
         data-aos="fade-left">
         <div class="landing-about-pic">
-          <img src="https://static.retrobox.tech/img/about/hand.png">
+          <img src="https://static.retrobox.tech/img/about/hand.png" alt="Retrobox console in hands">
         </div>
         <div class="landing-about-text">
           <div>
