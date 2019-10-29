@@ -86,7 +86,7 @@ module.exports = {
       {rel: 'manifest', href: '/manifest.json'}
     ],
     script: [
-      {src: '/analytics.js'}
+      {type: 'text/javascript', src: '/analytics.js', async: true, body: true, defer: true}
     ]
   },
 
