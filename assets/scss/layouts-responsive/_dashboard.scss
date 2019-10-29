@@ -63,3 +63,35 @@
     margin-bottom: 0;
   }
 }
+
+
+.shop-orders-mosaic {
+  .shop-order-card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .shop-order-card-content {
+      padding-top: 2em;
+      padding-left: 0;
+      .shop-order-card-actions {
+        margin-top: 1em;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+
+        .shop-order-card-button {
+          &.shop-order-card-list {
+            margin-bottom: 0;
+            margin-left: 0;
+          }
+          &.shop-order-card-bill {
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

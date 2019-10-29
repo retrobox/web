@@ -17,75 +17,134 @@
             </div>
           </div>
           <div v-if="orders.length > 0">
-            <div class="shop-cart-list list">
-              <div class="list-head">
-                <div>{{ $t("user-dash.orders.total-amount") }}</div>
-                <div>{{ $t("user-dash.orders.payment-method") }}</div>
-                <div>{{ $t("user-dash.orders.status.title") }}</div>
-                <div></div>
-              </div>
-              <div 
-                v-for="order in orders" 
-                :key="order.id" 
-                class="list-row">
-                <div>€ {{ order.total_price }}</div>
-                <div>{{ order.way }}</div>
-                <div>{{ order.status }}</div>
-                <div class="shop-cart-actions">
-                  <a
-                    v-if="order.bill_url != null"
-                    :title="$t('user-dash.orders.view-bill')"
-                    class="bg-grey hover:bg-grey-dark text-white font-bold py-1 px-2 rounded button"
-                    @click="viewBill(order)"
-                  >
-                    <i class="fas fa-file-alt"></i>
-                  </a>
-                  <a
-                    :title="$t('user-dash.orders.view-details')"
-                    class="bg-grey hover:bg-grey-dark text-white font-bold py-1 px-2 rounded button"
-                    @click="viewOrder(order)"
-                  >
-                    <i class="fas fa-eye"></i>
-                  </a>
+            <div class="shop-orders-mosaic">
+              <div
+                v-for="order in orders"
+                :key="order.id"
+                class="shop-order-card">
+                <div class="shop-order-card-image-mosaic">
+                  <div 
+                    v-for="image in order.images"
+                    :style="image.style"
+                    :key="image.id"
+                    class="shop-order-card-image">
+                  </div>
+                  <!-- 'background-image: url(\'' + image.url + ''\'); width: ' + image.width + 'em' -->
+                </div>
+                <div class="shop-order-card-content">
+                  <div class="shop-order-card-description">
+                    <h4 class="shop-order-card-id">
+                      Commande N°{{ order.id.toUpperCase() }}
+                    </h4>
+                    <div class="shop-order-card-fields">
+                      <div class="shop-order-card-field">
+                        <div class="shop-order-card-field-icon">
+                          <Icon value="fas fa-truck" />
+                        </div>
+                        <div class="shop-order-card-field-content">
+                          {{ order.status }}
+                        </div>
+                      </div>
+                      <div 
+                        :title="order.created_at"
+                        class="shop-order-card-field">
+                        <div class="shop-order-card-field-icon">
+                          <Icon value="fas fa-clock" />
+                        </div>
+                        <div class="shop-order-card-field-content">
+                          {{ $t('user-dash.orders.at', {date: order.created_at_from_now}) }}
+                        </div>
+                      </div>
+                      <div class="shop-order-card-field">
+                        <div class="shop-order-card-field-icon">
+                          <Icon value="fas fa-euro-sign" />
+                        </div>
+                        <div class="shop-order-card-field-content">
+                          {{ $t('user-dash.orders.total', {total: order.total_price}) }}
+                        </div>
+                      </div>
+                      <div class="shop-order-card-field">
+                        <div class="shop-order-card-field-icon">
+                          <Icon value="fab fa-cc-paypal" />
+                        </div>
+                        <div class="shop-order-card-field-content">
+                          {{ $t('user-dash.orders.way', {method: order.way}) }}
+                        </div>
+                      </div>
+                      <div class="shop-order-card-field">
+                        <div class="shop-order-card-field-icon">
+                          <Icon value="fas fa-shopping-cart" />
+                        </div>
+                        <div class="shop-order-card-field-content">
+                          <span v-if="order.items.length === 1">
+                            {{ $t('user-dash.orders.item') }}
+                          </span>
+                          <span v-if="order.items.length > 1">
+                            {{ $t('user-dash.orders.items', {items: order.items.length}) }}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="shop-order-card-actions">
+                    <button
+                      class="shop-order-card-button shop-order-card-list"
+                      @click="viewOrder(order)">
+                      <Icon value="fas fa-list" />
+                      {{ $t('user-dash.orders.details') }}
+                    </button>
+                    <button
+                      v-if="order.bill_url !== null"
+                      class="shop-order-card-button shop-order-card-bill"
+                      @click="viewBill(order)">
+                      <Icon value="fas fa-file-invoice" />
+                      {{ $t('user-dash.orders.bill') }}
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <client-only>            
+      <client-only>
         <modal 
           adaptive 
           class="modal" 
-          height="auto" 
+          height="auto"
           name="orderView">
           <div class="p-4">
-            <h3 class="mb-6 mt-3">
-              {{ $t("user-dash.orders.details") }}  
-              #{{ orderToView.id }}
-            </h3>
-            <ul class="mb-2">
-              <li class="mb-1">
-                {{ $t("user-dash.orders.subtotal") }}
-                € {{ orderToView.sub_total_price }}
-              </li>
-              <li class="mb-1">
-                {{ $t("user-dash.orders.shipping") }}
-                € {{ orderToView.total_shipping_price }}
-              </li>
-              <li class="mb-1">
-                {{ $t("user-dash.orders.total") }}
-                € {{ orderToView.total_price }}
-              </li>
-              <li class="mb-1">
-                {{ $t("user-dash.orders.payment-method-details") }}
-                {{ orderToView.way }}
-              </li>
-              <li>
-                {{ $t("user-dash.orders.external-id") }}
-                <code>{{ orderToView.on_way_id }}</code>
-              </li>
-            </ul>
+            <h4 class="mb-3 mt-3">
+              {{ $t("user-dash.orders.details-title", {id: orderToView.id.toUpperCase()}) }}
+            </h4>
+            <div class="shop-order-item-card-mosaic">
+              <div 
+                v-for="item in orderToView.items"
+                :key="item.id"
+                class="shop-order-item-card">
+                <div
+                  :style="item.style"
+                  class="shop-order-item-card-image">
+                </div>
+                <div class="shop-order-item-card-content">
+                  <div class="shop-order-item-card-title">
+                    <h3>{{ item.title }}</h3>
+                  </div>
+                  <div class="shop-order-item-card-description">
+                    {{ item.description_short }} <br>
+                    <ul style="margin-top: .5em">
+                      <li>Version : {{ item.version }}</li>
+                      <span v-if="item.pivot.shop_item_custom_option_storage !== null">
+                        <li>Stockage : {{ item.pivot.shop_item_custom_option_storage }} Gb</li>
+                      </span>
+                      <span v-if="item.pivot.shop_item_custom_option_color !== null">
+                        <li :style="'color: ' + item.pivot.shop_item_custom_option_color">Couleur : {{ item.pivot.shop_item_custom_option_color }}</li>
+                      </span>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div
             class="button bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 text-center cancel-button"
@@ -102,6 +161,7 @@
 <script>
 import DashboardPage from "~/components/DashboardPage";
 import Icon from "~/components/Icon";
+import moment from 'moment'
 
 export default {
   middleware: "authenticated",
@@ -117,7 +177,9 @@ export default {
   data() {
     return {
       orders: [],
-      orderToView: {}
+      orderToView: {
+        id: ''
+      }
     };
   },
   async asyncData(context) {
@@ -132,19 +194,63 @@ export default {
           way
           status
           bill_url
+          created_at
+          items {
+            id
+            title
+            description_short
+            image
+            price,
+            version,
+            pivot {
+              shop_item_custom_option_storage
+              shop_item_custom_option_color
+            }
+          }
         }
       }`, {}, { withAuth: true });
     let data = res.data.data;
     let orders = data.getManyShopOrders.map(order => {
       order.status = 
         order.status === 'payed' ? 
-          context.app.i18n.t('user-dash.orders.status.payed') :
+          context.app.i18n.t('user-dash.orders.status.processing') :
         order.status === 'shipped' ? 
-          context.app.i18n.t('user-dash.orders.status.shipped') :
+          context.app.i18n.t('user-dash.orders.status.being-shipped') :
           context.app.i18n.t('user-dash.orders.status.cancel');
+      order.raw_way = order.way
       order.way =
         order.way.substr(0, 1).toUpperCase() +
         order.way.substr(1).toLowerCase();
+
+      let imagesToShow = order.items.slice(0, 4)
+      let widths = []
+      switch (imagesToShow.length) {
+        case 1:
+          widths = [10]
+          break;
+        case 2:
+          widths = [5, 5]
+          break;
+        case 3:
+          widths = [5, 5, 10]
+          break;
+        case 4:
+          widths = [5, 5, 5, 5]
+          break;
+      }
+      moment.locale(context.app.i18n.locale)
+      order.created_at_from_now = moment(order.created_at).fromNow()
+      order.images = imagesToShow.map(item => {
+        return {
+          id: item.id,
+          style: `background-image: url('${item.image}'); width: ${widths[imagesToShow.indexOf(item)]}em`
+        }
+      })
+      order.items = order.items.map(item => {
+        item.style = `background-image: url('${item.image}')`
+        return item
+      })
+
       return order;
     });
     return {

@@ -317,3 +317,137 @@
     }
   }
 }
+
+.shop-orders-mosaic {
+  .shop-order-card {
+    display: flex;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    border-top: 2px solid #ecf0f1;
+    border-bottom: 2px solid #ecf0f1;
+    .shop-order-card-content {
+      padding-left: 3em;
+    }
+    .shop-order-card-image-mosaic {
+      display: grid;
+      grid-template-columns: 5em 5em;
+      width: 10em;
+      height: 10em;
+      .shop-order-card-image {
+        display: flex;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+    .shop-order-card-content {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .shop-order-card-description {
+        .shop-order-card-fields {
+          margin-top: .6em;
+          .shop-order-card-field {
+            display: flex;
+            align-items: center;
+            padding-top: .2em;
+            padding-bottom: .2em;
+            .shop-order-card-field-icon {
+              width: 1.5em;
+              font-size: 1.2em;
+              opacity: 0.8;
+            }
+            .shop-order-card-field-content {
+              margin-left: 1em;
+            }
+          }
+        }
+      }
+
+      .shop-order-card-actions {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+        .shop-order-card-button {
+          @extend .border;
+          @extend .rounded;
+          @extend .py-2;
+          @extend .px-4;
+          @extend .ml-2;
+          transition: all 0.2s;
+          &:hover {
+            transition: all 0.2s;
+          }
+          .icon {
+            margin-right: .5em;
+          }
+          &.shop-order-card-list {
+            margin-bottom: 1em;
+            @extend .text-blue;
+            @extend .bg-transparent;
+            @extend .border-blue;
+            @extend .hover\:bg-blue;
+            @extend .hover\:text-white;
+          }
+          &.shop-order-card-bill {
+            @extend .bg-green;
+            @extend .text-white;
+            @extend .border-green;
+            @extend .hover\:bg-transparent;
+            @extend .hover\:text-green;
+            @extend .py-4;
+            @extend .px-8;
+          }
+        }
+    
+      }
+    }
+
+  }
+}
+
+.shop-order-item-card-mosaic {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1em;
+
+  .shop-order-item-card {
+    width: 100%;
+    display: flex;
+    margin-top: 1em;
+    border-top: 2px solid #ecf0f1;
+    border-bottom: 2px solid #ecf0f1;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    .shop-order-item-card-image {
+      width: 6em;
+      height: 6em;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-left: 1em;
+    }
+    .shop-order-item-card {
+      width: 9em;
+      height: 9em;
+      background-position: center;
+      background-size: contain;
+    }
+    .shop-order-item-card-content {
+      padding-left: 2em;
+
+      li {
+        margin-bottom: 0.2em;
+      }
+    }
+    .shop-order-item-card-title {
+      font-weight: 600;
+      padding-bottom: .5em;
+    }
+  }
+}
