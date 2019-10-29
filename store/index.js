@@ -146,7 +146,7 @@ export const mutations = {
   SET_CHECKOUT_SHIPPING_METHOD: (state, payload) => {
     state.checkout.shippingMethod = payload[0]
     state.checkout.shippingPrice = payload[1]
-    state.checkout.total = (state.checkout.subTotal + payload[1]).toFixed(2)
+    state.checkout.total = (parseFloat(state.checkout.subTotal) + payload[1]).toFixed(2)
   }
 };
 

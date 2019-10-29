@@ -97,7 +97,7 @@ export default {
   mounted() {
     if (!this.$isServer) {
       this.show = true;
-      this.computePrices()
+      //this.computePrices()
     }
   },
   methods: {
@@ -132,10 +132,10 @@ export default {
       let subTotal = 0
       let totalWeight = 0
       this.$store.state.cart.forEach(item => {
-        subTotal += item.price
-        totalWeight += item.weight.toFixed(0)
+        subTotal = subTotal + item.price
+        totalWeight = totalWeight + item.weight
       })
-      this.$store.commit('SET_CHECKOUT_ITEMS', [subTotal, totalWeight])
+      this.$store.commit('SET_CHECKOUT_ITEMS', [subTotal.toFixed(2), totalWeight.toFixed(2)])
     }
   }
 };
