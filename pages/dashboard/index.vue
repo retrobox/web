@@ -26,7 +26,7 @@
             }
           })
         */
-        context.redirect('/dashboard/console/' + consoles[0].id)
+        context.redirect(context.app.localePath({name: 'dashboard-console-id', params: {id: consoles[0].id}}))
       } else {
         // have no consoles or many -> go to the list
         context.redirect(context.app.localePath('dashboard-console'))
