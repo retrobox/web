@@ -3,15 +3,16 @@
     <h2 class="dashboard-page-title">
       Gérer ma console
     </h2>
-    <div class="console-mosaic">
+    <div class="console-details">
       <div class="console-card">
         <div class="console-card-content">
           <div class="console-card-left">
             <div class="console-card-id">
               <span class="console-card-id-pre">#</span><span>{{ console.id }}</span>
             </div>
-            <div class="console-card-image">              
+            <div class="console-card-image">
               <img
+                :class="{'console-image-offline': !console.is_online }"
                 src="~/assets/images/console.png"
                 class="header-title-logo">
             </div>
