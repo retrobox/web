@@ -118,30 +118,65 @@
               class="console-card-actions">
               <div
                 v-if="console.is_online"
-                class="button console-card-action shutdown"
-                @click="shutdown()">
-                <Icon 
-                  v-if="!shutdownLoading"
-                  value="fas fa-power-off" />
-                <Icon
-                  v-else
-                  value="fas fa-sync"
-                  spin />
-                Shutdown
+                class="button console-card-action ssh"
+                @click="openSshSession()">
+                <Icon value="fas fa-terminal" />
+                {{ $t('user-dash.console.terminal') }}
               </div>
-              <div
-                v-if="console.is_online || rebootLoading"
-                class="button console-card-action reboot"
-                @click="reboot()">
-                <Icon
-                  :spin="rebootLoading"
-                  value="fas fa-sync" />
-                Reboot
+              <div class="console-card-actions-power no-text">
+                <div
+                  v-if="console.is_online"
+                  class="button console-card-action shutdown"
+                  @click="shutdown()">
+                  <Icon 
+                    v-if="!shutdownLoading"
+                    value="fas fa-power-off" />
+                  <Icon
+                    v-else
+                    value="fas fa-sync"
+                    spin />
+                </div>
+                <div
+                  v-if="console.is_online || rebootLoading"
+                  class="button console-card-action reboot"
+                  @click="reboot()">
+                  <Icon
+                    :spin="rebootLoading"
+                    value="fas fa-sync" />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <client-only>
+        <modal
+          adaptive 
+          class="modal" 
+          height="75%"
+          width="70%"
+          name="sshSession">
+          <div class="p-0">
+            <!-- <h4 class="mb-3 mt-3">
+              SSH Session
+            </h4> -->
+            <div class="ssh-session-modal-content">
+              <!-- {{ sshSessionUrl }} -->
+              <iframe
+                id="gotty-iframe"
+                :src="sshSessionUrl"
+                style="width: 100%;height: 70vh" >
+              </iframe>
+            </div>
+          </div>
+          <div
+            class="button bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 text-center cancel-button"
+            @click="$modal.hide('sshSession')"
+          >
+            {{ $t("close") }}
+          </div>
+        </modal>
+      </client-only>
     </div>
   </DashboardPage>
 </template>
@@ -169,7 +204,11 @@ export default {
     },
     loading: true,
     shutdownLoading: false,
-    rebootLoading: false
+    rebootLoading: false,
+    webSocketSessionId: '',
+    socket: null,
+    sshSessionUrl: '',
+    sshSessionStatus: 'asking'
   }),
   async asyncData({ app: { apitator }, params }) {
     let res = await apitator.graphQL(
@@ -252,9 +291,9 @@ export default {
       }
     },
     connectWebSocket: function () {
-      console.log("WS_ENDPOINT: ", this.$env.WS_ENDPOINT)
+      console.log("WS_ENDPOINT: ", this.$env.WS_ENDPOINT);
       // connect web socket to wait for update on console status
-      var socket = io(this.$env.WS_ENDPOINT, {
+      this.socket = io(this.$env.WS_ENDPOINT, {
         transportOptions: {
           polling: {
             extraHeaders: {
@@ -264,19 +303,53 @@ export default {
           }
         }
       });
-      socket.on('connect', () => {
+      this.socket.on('connect', () => {
         console.log('Connected with socket server')
       });
-      socket.on('console_status', (data) => {
-        console.log('Console status update', data)
-        console.log(this.console)
-        this.console.is_online = data.isOnline
+      
+      this.socket.off('console_status');
+      this.socket.off('socket-id');
+      this.socket.off('gotty-installed');
+      this.socket.off('ssh-opened');
+      this.socket.on('socket-id', (data) => {
+        this.webSocketSessionId = data;
+        console.log('> SOCKET: Received socket session id: ' + this.webSocketSessionId)
+      });
+      this.socket.on('console_status', (data) => {
+        console.log('Console status update', data);
+        console.log(this.console);
+        this.console.is_online = data.isOnline;
         if (data.isOnline) {
-          this.shutdownLoading = false
-          this.rebootLoading = false
-          this.fetchStatus()
+          this.shutdownLoading = false;
+          this.rebootLoading = false;
+          this.fetchStatus();
         }
       });
+      this.socket.on('gotty-installed', () => {
+        console.log('Gotty installed');
+        this.sshSessionStatus = 'gotty-installed'; //now trying to launch gotty and locatunnel
+      });
+      this.socket.on('ssh-opened', (data) => {
+        console.log('SSH opened');
+        console.log(data);
+        this.sshSessionUrl = data;
+        this.sshSessionStatus = 'opened';
+      });
+    },
+    openSshSession: function () {
+      this.$modal.show('sshSession');
+      if (this.sshSessionUrl === '') {
+        console.log('Open ssh session...');
+        this.$apitator.graphQL(`
+          query ($id: String!, $webSessionId: String!){
+            openConsoleSshSession(id: $id, webSessionId: $webSessionId)
+          }`, {
+          id: this.$route.params.id,
+          webSessionId: this.webSocketSessionId
+        }, {
+          withAuth: true
+        })
+      }
     }
   }
 }
