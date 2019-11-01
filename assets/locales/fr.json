@@ -318,7 +318,7 @@
       "item": "Un seul objet",
       "at": "Fait {date}",
       "total": "Total de {total} €",
-      "order": "Commande",
+      "order": "Commande N°{id}",
       "items": "{items} objets commandés",
       "way": "Payement avec {method}",
       "details": "Details",

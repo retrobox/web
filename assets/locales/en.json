@@ -315,7 +315,7 @@
     },
     "orders": {
       "title": "Last orders",
-      "order": "Order",
+      "order": "Order #{id}",
       "item": "One item",
       "at": "At {date}",
       "total": "Total of {total} €",
@@ -340,7 +340,7 @@
       }
     },
     "navigation": {
-      "console": "Manage my console",
+      "console": "My consoles",
       "games": "Retro Games",
       "account": "My profile",
       "orders": "My orders"

@@ -34,7 +34,7 @@
                 <div class="shop-order-card-content">
                   <div class="shop-order-card-description">
                     <h4 class="shop-order-card-id">
-                      {{ $t("user-dash.orders.order") }} N°{{ order.id.toUpperCase() }}
+                      {{ $t("user-dash.orders.order", { id: order.id.toUpperCase() }) }}
                     </h4>
                     <div class="shop-order-card-fields">
                       <div class="shop-order-card-field">
