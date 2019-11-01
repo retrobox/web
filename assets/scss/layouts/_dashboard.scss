@@ -396,13 +396,18 @@
 }
 
 .shop-orders-mosaic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .shop-order-card {
+    width: 80%;
     display: flex;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding: 2rem;
     margin-bottom: 1em;
     border-top: 2px solid #ecf0f1;
     border-bottom: 2px solid #ecf0f1;
+    @extend .rounded;
+    @extend .shadow-lg;
     .shop-order-card-content {
       padding-left: 3em;
     }
@@ -424,7 +429,11 @@
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
-
+      .shop-order-card-id {
+        font-size: 1.2em;
+        opacity: 0.5;
+        margin-bottom: 1em;
+      }
       .shop-order-card-description {
         .shop-order-card-fields {
           margin-top: .6em;
@@ -455,7 +464,6 @@
           @extend .rounded;
           @extend .py-2;
           @extend .px-4;
-          @extend .ml-2;
           transition: all 0.2s;
           &:hover {
             transition: all 0.2s;
@@ -464,7 +472,6 @@
             margin-right: .5em;
           }
           &.shop-order-card-list {
-            margin-bottom: 1em;
             @extend .text-blue;
             @extend .bg-transparent;
             @extend .border-blue;
