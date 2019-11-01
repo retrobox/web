@@ -122,26 +122,30 @@
                 <span class="button-text">{{ $t('user-dash.console.terminal') }}</span>
               </div>
               <div class="console-card-actions-power no-text">
-                <div
-                  v-if="console.is_online"
-                  class="button console-card-action shutdown"
-                  @click="shutdown()">
-                  <Icon
-                    v-if="!shutdownLoading"
-                    value="fas fa-power-off" />
-                  <Icon
-                    v-else
-                    value="fas fa-sync"
-                    spin />
-                </div>
-                <div
-                  v-if="console.is_online || rebootLoading"
-                  class="button console-card-action reboot"
-                  @click="reboot()">
-                  <Icon
-                    :spin="rebootLoading"
-                    value="fas fa-sync" />
-                </div>
+                <Tooltip :value="$t('user-dash.console.shutdown')">
+                  <div
+                    v-if="console.is_online"
+                    class="button console-card-action shutdown"
+                    @click="shutdown()">
+                    <Icon
+                      v-if="!shutdownLoading"
+                      value="fas fa-power-off" />
+                    <Icon
+                      v-else
+                      value="fas fa-sync"
+                      spin />
+                  </div>
+                </Tooltip>
+                <Tooltip :value="$t('user-dash.console.reboot')">
+                  <div
+                    v-if="console.is_online || rebootLoading"
+                    class="button console-card-action reboot"
+                    @click="reboot()">
+                    <Icon
+                      :spin="rebootLoading"
+                      value="fas fa-sync" />
+                  </div>
+                </Tooltip>
               </div>
             </div>
           </div>
@@ -184,10 +188,12 @@ import DashboardPage from "~/components/DashboardPage"
 import Icon from "~/components/Icon"
 import Moment from "moment"
 import io from 'socket.io-client'
+import Tooltip from "../../../components/Tooltip";
 
 export default {
   middleware: 'authenticated',
   components: {
+      Tooltip,
     DashboardPage,
     Icon
   },
