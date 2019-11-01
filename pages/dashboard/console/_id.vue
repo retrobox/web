@@ -17,14 +17,14 @@
                 class="header-title-logo">
             </div>
             <div>
-              <div 
+              <div
                 v-if="loading"
                 class="console-card-status">
                 <div class="status-text">
                   {{ $t('user-dash.console.connecting') }}
                 </div>
               </div>
-              <div 
+              <div
                 v-if="!loading && console.is_online"
                 class="console-card-status">
                 <div class="status green"></div>
@@ -42,10 +42,10 @@
               </div>
             </div>
           </div>
-          <div class="console-card-right">
-            <div 
-              v-if="!loading"
-              class="console-card-fields">
+          <div
+            v-if="!loading"
+            class="console-card-right">
+            <div class="console-card-fields">
               <div v-if="console.is_online">
                 <div class="console-card-field storage">
                   <div class="console-card-field-name">
@@ -106,16 +106,7 @@
                 </div>
               </div>
             </div>
-            <div 
-              v-else
-              class="console-card-fields-loading">
-              <Icon
-                value="fas fa-sync"
-                spin />
-            </div>
-            <div
-              v-if="!isLoading"
-              class="console-card-actions">
+            <div class="console-card-actions">
               <div
                 v-if="console.is_online"
                 class="button console-card-action ssh"
@@ -128,7 +119,7 @@
                   v-if="console.is_online"
                   class="button console-card-action shutdown"
                   @click="shutdown()">
-                  <Icon 
+                  <Icon
                     v-if="!shutdownLoading"
                     value="fas fa-power-off" />
                   <Icon
@@ -147,12 +138,19 @@
               </div>
             </div>
           </div>
+          <div
+            v-else
+            class="console-card-fields-loading">
+            <Icon
+              value="fas fa-sync"
+              spin />
+          </div>
         </div>
       </div>
       <client-only>
         <modal
-          adaptive 
-          class="modal" 
+          adaptive
+          class="modal"
           height="75%"
           width="70%"
           name="sshSession">
@@ -306,7 +304,7 @@ export default {
       this.socket.on('connect', () => {
         console.log('Connected with socket server')
       });
-      
+
       this.socket.off('console_status');
       this.socket.off('socket-id');
       this.socket.off('gotty-installed');

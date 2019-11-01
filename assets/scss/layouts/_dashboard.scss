@@ -122,24 +122,23 @@
         }
       }
     }
+    .console-card-fields-loading {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 3.2em;
+      padding-bottom: 3.2em;
+      .icon {
+        font-size: 1.6em;
+      }
+    }
     .console-card-right {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       @extend .w-full;
       @extend .md\:w-2\/3;
       padding-left: 2em;
-      .console-card-fields-loading {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 3.2em;
-        padding-bottom: 3.2em;
-        .icon {
-          font-size: 1.6em;
-        }
-      }
       .console-card-fields {
         &:first-child {
           border-top: 1px solid rgba(128, 128, 128, .4);
