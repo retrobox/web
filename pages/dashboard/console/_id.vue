@@ -113,7 +113,9 @@
                 value="fas fa-sync"
                 spin />
             </div>
-            <div class="console-card-actions">
+            <div
+              v-if="!isLoading"
+              class="console-card-actions">
               <div
                 v-if="console.is_online"
                 class="button console-card-action shutdown"
