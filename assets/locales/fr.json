@@ -345,8 +345,15 @@
       "account": "Mon profile",
       "orders": "Mes commandes"
     },
+    "consoles": {
+      "empty": "Vous ne possédez pas de consoles"
+    },
     "console": {
       "title": "Gérer ma console",
+      "manage": "Gérer",
+      "storage": "Stockage",
+      "version": "Version",
+      "color": "Couleur",
       "connecting": "Connexion...",
       "status": {
         "online": "En ligne",

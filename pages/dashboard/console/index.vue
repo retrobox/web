@@ -13,7 +13,7 @@
             <Icon value="fas fa-times-circle" />
           </div>
           <div class="shop-empty-title">
-            <h3>Vous n'avez pas encore de consoles</h3>
+            <h3>{{ $t('user-dash.consoles.empty') }}</h3>
           </div>
         </div>
         <div 
@@ -40,7 +40,7 @@
                     class="console-card-status">
                     <div class="status green"></div>
                     <div class="status-text">
-                      Online
+                      {{ $t('user-dash.console.status.online') }}
                     </div>
                   </div>
                   <div
@@ -48,7 +48,7 @@
                     class="console-card-status">
                     <div class="status red"></div>
                     <div class="status-text">
-                      Offline
+                      {{ $t('user-dash.console.status.offline') }}
                     </div>
                   </div>
                 </div>
@@ -61,7 +61,7 @@
                         <div class="console-card-field-icon">
                           <Icon value="fas fa-database" />
                         </div>
-                        <span>Storage</span>
+                        <span>{{ $t('user-dash.console.storage') }}</span>
                       </div>
                       <div class="console-card-field-value">
                         <span class="data">{{ _console.storage }}</span>
@@ -73,7 +73,7 @@
                         <div class="console-card-field-icon">
                           <Icon value="fas fa-tint" />
                         </div>
-                        <span>Color</span>
+                        <span>{{ $t('user-dash.console.color') }}</span>
                       </div>
                       <div class="console-card-field-value">
                         <span
@@ -86,7 +86,7 @@
                         <div class="console-card-field-icon">
                           <Icon value="fas fa-code-branch" />
                         </div>
-                        <span>Version</span>
+                        <span>{{ $t('user-dash.console.version') }}</span>
                       </div>
                       <div class="console-card-field-value">
                         <span class="data">{{ _console.version }}</span>
@@ -99,7 +99,7 @@
                     class="button console-card-action details"
                     @click="$router.push(localePath({name: 'dashboard-console-id', params: {id: _console.id}}))">
                     <Icon value="fas fa-cog" />
-                    Manage
+                    {{ $t('user-dash.console.manage') }}
                   </button>
                 </div>
               </div>

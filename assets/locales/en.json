@@ -344,6 +344,29 @@
       "games": "Retro Games",
       "account": "My profile",
       "orders": "My orders"
+    },
+    "consoles": {
+      "empty": "You don't own any consoles"
+    },
+    "console": {
+      "title": "Manage my console",
+      "manage": "Gérer",
+      "storage": "Storage",
+      "version": "Version",
+      "color": "Couleur",
+      "connecting": "Connecting...",
+      "status": {
+        "online": "Online",
+        "offline": "Offline"
+      },
+      "free-space": "Free space",
+      "cpu-temp": "CPU Temp.",
+      "uptime": "Uptime",
+      "wifi-network": "WiFi network",
+      "installed-games": "Installed games",
+      "terminal": "Open terminal",
+      "reboot": "Reboot",
+      "shutdown": "Shutdown"
     }
   }
 }
