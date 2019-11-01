@@ -318,6 +318,7 @@
       "item": "Un seul objet",
       "at": "Fait {date}",
       "total": "Total de {total} €",
+      "order": "Commande",
       "items": "{items} objets commandés",
       "way": "Payement avec {method}",
       "details": "Details",
@@ -325,12 +326,17 @@
       "details-title": "Details de la commande N°{id}",
       "empty": "Aucune commandes",
       "status": {
-        "title": "Status",
+        "title": "Statut",
         "shipped": "Envoyée",
         "being-shipped": "En cours de livraison...",
         "processing": "En cours de traitement...",
         "payed": "Payée",
         "cancel": "Annulé"
+      },
+      "detail": {
+        "version": "Version",
+        "size": "Stockage",
+        "color": "Couleur"
       }
     },
     "navigation": {

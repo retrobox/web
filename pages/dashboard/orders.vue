@@ -34,7 +34,7 @@
                 <div class="shop-order-card-content">
                   <div class="shop-order-card-description">
                     <h4 class="shop-order-card-id">
-                      Commande N°{{ order.id.toUpperCase() }}
+                      {{ $t("user-dash.orders.order") }} N°{{ order.id.toUpperCase() }}
                     </h4>
                     <div class="shop-order-card-fields">
                       <div class="shop-order-card-field">
@@ -133,12 +133,12 @@
                   <div class="shop-order-item-card-description">
                     {{ item.description_short }} <br>
                     <ul style="margin-top: .5em">
-                      <li>Version : {{ item.version }}</li>
+                      <li>{{ $t("user-dash.orders.detail.version") }} : {{ item.version }}</li>
                       <span v-if="item.pivot.shop_item_custom_option_storage !== null">
-                        <li>Stockage : {{ item.pivot.shop_item_custom_option_storage }} Gb</li>
+                        <li>{{ $t("user-dash.orders.detail.size") }} : {{ item.pivot.shop_item_custom_option_storage }} Gb</li>
                       </span>
                       <span v-if="item.pivot.shop_item_custom_option_color !== null">
-                        <li :style="'color: ' + item.pivot.shop_item_custom_option_color">Couleur : {{ item.pivot.shop_item_custom_option_color }}</li>
+                        <li :style="'color: ' + item.pivot.shop_item_custom_option_color">{{ $t("user-dash.orders.detail.color") }} : {{ item.pivot.shop_item_custom_option_color }}</li>
                       </span>
                     </ul>
                   </div>
