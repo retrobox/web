@@ -232,6 +232,21 @@
   }
 }
 
+@media (max-width: 400px) {
+  .console-card {
+    .console-card-content {
+      .console-card-right .console-card-action.ssh {
+        .icon {
+          margin-right: 0;
+        }
+        .button-text {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
 .game-store {
   .game-store-top {
     display: flex;

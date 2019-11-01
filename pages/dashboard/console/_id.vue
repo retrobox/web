@@ -119,7 +119,7 @@
                 class="button console-card-action ssh"
                 @click="openSshSession()">
                 <Icon value="fas fa-terminal" />
-                {{ $t('user-dash.console.terminal') }}
+                <span class="button-text">{{ $t('user-dash.console.terminal') }}</span>
               </div>
               <div class="console-card-actions-power no-text">
                 <div
