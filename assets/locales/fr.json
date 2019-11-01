@@ -338,6 +338,22 @@
       "games": "Jeux rétros",
       "account": "Mon profile",
       "orders": "Mes commandes"
+    },
+    "console": {
+      "title": "Gérer ma console",
+      "connecting": "Connexion...",
+      "status": {
+        "online": "En ligne",
+        "offline": "Hors ligne"
+      },
+      "free-space": "Espace libre",
+      "cpu-temp": "Température du CPU",
+      "uptime": "Uptime",
+      "wifi-network": "Réseau WiFi",
+      "installed-games": "Jeux installés",
+      "terminal": "Ouvrir un terminal",
+      "reboot": "Redémarrer",
+      "shutdown": "Eteindre"
     }
   }
 }

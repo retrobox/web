@@ -1,7 +1,7 @@
 <template>
   <DashboardPage>
     <h2 class="dashboard-page-title">
-      Gérer ma console
+      {{ $t('user-dash.console.title') }}
     </h2>
     <div class="console-details">
       <div class="console-card">
@@ -21,7 +21,7 @@
                 v-if="loading"
                 class="console-card-status">
                 <div class="status-text">
-                  Connecting...
+                  {{ $t('user-dash.console.connecting') }}
                 </div>
               </div>
               <div 
@@ -29,7 +29,7 @@
                 class="console-card-status">
                 <div class="status green"></div>
                 <div class="status-text">
-                  Online
+                  {{ $t('user-dash.console.status.online') }}
                 </div>
               </div>
               <div
@@ -37,7 +37,7 @@
                 class="console-card-status">
                 <div class="status red"></div>
                 <div class="status-text">
-                  Offline
+                  {{ $t('user-dash.console.status.offline') }}
                 </div>
               </div>
             </div>
@@ -52,7 +52,7 @@
                     <div class="console-card-field-icon">
                       <Icon value="fas fa-database" />
                     </div>
-                    <span>Storage remaining</span>
+                    <span>{{ $t('user-dash.console.free-space') }}</span>
                   </div>
                   <div class="console-card-field-value">
                     <span class="data">{{ console.free_disk_space }}</span>
@@ -64,7 +64,7 @@
                     <div class="console-card-field-icon">
                       <Icon value="fas fa-thermometer-half" />
                     </div>
-                    <span>CPU temp</span>
+                    <span>{{ $t('user-dash.console.cpu-temp') }}</span>
                   </div>
                   <div class="console-card-field-value">
                     <span class="data">{{ console.cpu_temp }}</span>
@@ -76,7 +76,7 @@
                     <div class="console-card-field-icon">
                       <Icon value="fas fa-clock" />
                     </div>
-                    <span>Up time</span>
+                    <span>{{ $t('user-dash.console.uptime') }}</span>
                   </div>
                   <div class="console-card-field-value">
                     {{ console.up_time }}
@@ -87,7 +87,7 @@
                     <div class="console-card-field-icon">
                       <Icon value="fas fa-wifi" />
                     </div>
-                    <span>Wifi network</span>
+                    <span>{{ $t('user-dash.console.wifi-network') }}</span>
                   </div>
                   <div class="console-card-field-value">
                     {{ console.wifi }}
@@ -99,7 +99,7 @@
                   <div class="console-card-field-icon">
                     <Icon value="fas fa-gamepad" />
                   </div>
-                  <span>Installed games</span>
+                  <span>{{ $t('user-dash.console.installed-games') }}</span>
                 </div>
                 <div class="console-card-field-value">
                   <span class="data">14</span>
