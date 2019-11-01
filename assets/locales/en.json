@@ -346,6 +346,7 @@
       "orders": "My orders"
     },
     "consoles": {
+      "title": "Your consoles",
       "empty": "You don't own any consoles"
     },
     "console": {

@@ -346,6 +346,7 @@
       "orders": "Mes commandes"
     },
     "consoles": {
+      "title": "Vos consoles",
       "empty": "Vous ne possédez pas de consoles"
     },
     "console": {
