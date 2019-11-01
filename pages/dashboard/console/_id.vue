@@ -126,7 +126,7 @@
                   <div
                     v-if="console.is_online"
                     class="button console-card-action shutdown"
-                    @click="shutdown()">
+                    @click="$modal.show('shutdown')">
                     <Icon
                       v-if="!shutdownLoading"
                       value="fas fa-power-off" />
@@ -140,7 +140,7 @@
                   <div
                     v-if="console.is_online || rebootLoading"
                     class="button console-card-action reboot"
-                    @click="reboot()">
+                    @click="$modal.show('reboot')">
                     <Icon
                       :spin="rebootLoading"
                       value="fas fa-sync" />
@@ -176,6 +176,60 @@
             @click="$modal.hide('sshSession')"
           >
             {{ $t("close") }}
+          </div>
+        </modal>
+        <modal
+          adaptive
+          class="modal"
+          height="auto"
+          name="shutdown">
+          <div class="p-4">
+            <h3 class="mb-6 mt-3">
+              {{ $t("user-dash.console.shutdown-confirmation.title") }}
+            </h3>
+            <p>{{ $t("user-dash.console.shutdown-confirmation.description") }}</p>
+            <br />
+          </div>
+          <div class="flex flex-wrap">
+            <div
+              class="modal-button"
+              @click="$modal.hide('shutdown')"
+            >
+              {{ $t("cancel") }}
+            </div>
+            <div
+              class="modal-button"
+              @click="shutdown()"
+            >
+              {{ $t("user-dash.console.shutdown") }}
+            </div>
+          </div>
+        </modal>
+        <modal
+          adaptive
+          class="modal"
+          height="auto"
+          name="reboot">
+          <div class="p-4">
+            <h3 class="mb-6 mt-3">
+              {{ $t("user-dash.console.reboot-confirmation.title") }}
+            </h3>
+            <p>{{ $t("user-dash.console.reboot-confirmation.description") }}</p>
+            <br />
+          </div>
+          <div class="flex flex-wrap">
+            <div
+              class="modal-button"
+              @click="$modal.hide('reboot')"
+            >
+              {{ $t("cancel") }}
+            </div>
+            <div
+              class="modal-button"
+              @click="reboot()"
+            >
+              {{ $t("user-dash.console.reboot") }}
+            </div>
           </div>
         </modal>
       </client-only>
@@ -265,6 +319,7 @@ export default {
       })
     },
     shutdown: function () {
+      this.$modal.hide('shutdown');
       if (!this.shutdownLoading) {
         this.shutdownLoading = true
         this.$apitator.graphQL(`
@@ -280,6 +335,7 @@ export default {
       }
     },
     reboot: function () {
+      this.$modal.hide('reboot');
       if (!this.rebootLoading) {
         this.rebootLoading = true
         this.$apitator.graphQL(`

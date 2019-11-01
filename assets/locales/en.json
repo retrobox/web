@@ -367,7 +367,15 @@
       "installed-games": "Installed games",
       "terminal": "Open terminal",
       "reboot": "Reboot",
-      "shutdown": "Shutdown"
+      "shutdown": "Shutdown",
+      "shutdown-confirmation": {
+        "title": "Power off is a good thing ?",
+        "description": "Do you really want to do this kind of thing to your poor little happy console ? She doesn't like to be alone in the dark. I hope she will be back soon."
+      },
+      "reboot-confirmation": {
+        "title": "You are about to reboot your happy little console",
+        "description": "Thanks to the great technology we built. You can just click the button and 'voilà!' the console will immediately reboot. It's a kind of magic doesn't it ?"
+      }
     }
   }
 }

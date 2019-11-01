@@ -3,3 +3,16 @@
     top: 0;
   }
 }
+
+.modal-button {
+  @extend .w-full;
+  @extend .md\:w-1\/2;
+  @extend .button;
+  @extend .bg-grey-lighter;
+  @extend .hover\:bg-grey-light;
+  //@extend .text-gray-darker;
+  @extend .font-bold;
+  @extend .py-3;
+  //@extend .px-5;
+  @extend .text-center;
+}
