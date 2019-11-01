@@ -313,7 +313,8 @@ export default {
       }).then(res => {
         this.loading = false
         let data = res.data.data.getOneConsole
-        data.up_time = Moment.duration(data.up_time * 1000).humanize()
+        Moment.locale(this.$i18n.locale);
+        data.up_time = Moment.duration(data.up_time * 1000).humanize();
         this.console = {...this.console, ...data}
         console.log(this.console)
       })
