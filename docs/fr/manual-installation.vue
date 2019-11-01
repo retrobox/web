@@ -10,7 +10,7 @@
       <li>Mini HDMI to HDMI</li>
       <li>Chargeur 5V</li>
       <li>Manette (Liste de compatibilité sur le <a
-        href="https://github.com/RetroPie/RetroPie-Setup/wiki/Controller-Configuration">wiki retropie</a>))
+        href="https://github.com/RetroPie/RetroPie-Setup/wiki/Controller-Configuration">wiki retropie</a>)
       </li>
       <li>Un réseau wifi WPA/WEP</li>
     </ul>

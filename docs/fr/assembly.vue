@@ -31,7 +31,7 @@
     <DocsImage src="https://static.retrobox.tech/img/assemblage/solderingtips_fr.png" />
     <div class="docs-alert info">
       <i class="icon fas fa-exclamation-triangle"></i>
-      <p>Attention, il est nécessaire de suivre l'odre des étapes pour construire correctement votre console !</p>
+      <p>Attention, il est nécessaire de suivre l'ordre des étapes pour construire correctement votre console !</p>
     </div>
     <!-- PUCES -->
     <h3 class="dividing"><DocsHeading label="Les puces"/></h3>
@@ -70,7 +70,7 @@
 
     <div class="docs-section">
       <div>
-        Il s'agit maintenant de souder les condensateurs chimiques et ceramique de 100µF (les cylindriques noirs) et de 10nF (les verts). Ceux ci servent pour le traitement du son (filtre passe bas). Il y aura tout de même quelques impuretées au niveau du son, c'est normal, la raspberry pi n'est pas doté de carte son. Ce bruit désagréable n'est plus présent lorsque un son est joué.
+        Il s'agit maintenant de souder les condensateurs chimiques et ceramique de 10µF (les cylindriques noirs) et de 10nF (les verts). Ceux ci servent pour le traitement du son (filtre passe bas). Il y aura tout de même quelques impuretées au niveau du son, c'est normal, la raspberry pi n'est pas doté de carte son. Ce bruit désagréable n'est plus présent lorsque un son est joué.
       </div>  
       <DocsImageSlider
         :images="[

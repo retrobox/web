@@ -1,6 +1,6 @@
 <template>
   <div>
-    <DocsHeading label="Caractéristiques" />
+    <DocsHeading label="Caractéristiques (v2.02)" />
 
     <ul>
       <li><b>CPU</b> : 1GHz monocœur CPU (BCM2835)</li>

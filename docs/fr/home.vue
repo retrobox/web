@@ -11,9 +11,11 @@
 
         <h3>Age requis</h3>
 
-        Selon nos estimations un enfant de 13 ans avec un peu d'aide d'un adulte peut être capable de comprendre, de monter soit même sa console. Mais en moyenne cela reste <b>13 ans et plus</b>.
-
-        Temps de construction estimé : entre <b>5 heures et 5h30</b> Le temps de construction varie entre les personnes
+        Selon nos estimations un enfant de 13 ans avec un peu d'aide d'un adulte peut être capable de comprendre, de monter soi-même sa console. Mais en moyenne cela reste <b>13 ans et plus</b>.
+        <br>
+        Temps de construction estimé : entre <b>5 heures et 5h30</b>
+        <br>
+        Le temps de construction varie entre les personnes
 
       </div>
 
@@ -39,18 +41,18 @@
 
         <br>
 
-        Si vous n'avez pas ses compétences, pas de problèmes ! Vous apprendrez déjà pas mal de choses ici, mais le si vous les avez vous irez bien plus vite !
+        Si vous n'avez pas ses compétences, pas de problèmes ! Vous apprendrez déjà pas mal de choses ici, mais si vous les avez vous irez bien plus vite !
 
         <h3>Qu'apprenez-vous avec Retrobox ?</h3>
 
-        RetroBox existe pour les personnes ayant envie d'apprendre les bases d'électronique, de leur donner envie de faire des projets, mais avec RetroBox vos apprenez essentiellement :
+        RetroBox existe pour les personnes ayant envie d'apprendre les bases de l'électronique, de leur donner envie de faire des projets, mais avec RetroBox vous apprendrez essentiellement :
 
         <ul>
           <li>Comment souder</li>
-          <li>La base de l'électronique et les fonctions des composants</li>
-          <li>Des notions Linux</li>
+          <li>La base de l'électronique et les fonctions de certain composant</li>
+          <li>Des notions dans Linux</li>
           <li>La création de vos propres jeux</li>
-          <li>L'existence de certains jeux... inconnue au grand public</li>
+          <li>L'existence de certains jeux... inconnus au grand public</li>
         </ul>
 
       </div>
@@ -66,7 +68,7 @@
         Possibilité d'installer NOOBS ou Raspbian, avec le support tactile.
       </li>
       <li>
-        Émulez jusqu'à 55 consoles avec RetroPie
+        Émuler jusqu'à 55 consoles avec RetroPie
       </li>
       <li>
         Une grande autonomie et chargement rapide
