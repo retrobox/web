@@ -16,6 +16,7 @@
 .console-card {
   width: 98%;
   .console-card-content {
+    flex-wrap: wrap;
     padding: .7rem;
     .console-card-id {
       padding-top: .5em;
