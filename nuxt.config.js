@@ -48,25 +48,31 @@ module.exports = {
   ],
 
   head: {
-    title: "Retrobox",
+    title: "RetroBox",
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-      {hid: 'description', name: 'description', content: "Retrobox"},
-      {name: 'msapplication-TileColor', content: '#FF4C4C'},
+      {hid: 'description', name: 'description', content: "RetroBox is the first console to build by your own."},
+      {name: 'msapplication-TileColor', content: '#ff0000'},
       {name: 'msapplication-TileImage', content: '/ms-icon-144x144.png'},
-      {name: 'theme-color', content: '#FF4C4C'},
+      {name: 'theme-color', content: '#ff0000'},
       {name: 'author', content: 'Thingmill'},
+      {name: 'copyright', content: '© 2019 Thingmill'},
+      {name: 'robots', content: 'All'},
+      {name: 'keywords', content: 'retrobox, retro, box, thingmill, valentin derouet, etienne chevrollier, matthieu bessat, raspberry pi zero, diy, kit, rpi, rétrobox'},
+      //facebook og
       {property: 'og:title', content: 'RetroBox - A diy open-source console'},
+      {property: 'og:description', content: 'RetroBox is the first console to build by your own.'},
       {property: 'og:type', content: 'website'},
       {property: 'og:url', content: 'https://www.retrobox.tech/'},
-      {property: 'og:image', content: 'https://static.retrobox.tech/img/logo/logo.png'},
-      {name: 'keywords', content: 'retrobox, retro, box, thingmill, valentin derouet, etienne chevrollier, matthieu bessat, raspberry pi zero, diy, kit, rpi, rétrobox'},
+      {property: 'og:image', content: 'https://static.retrobox.tech/img/logo/logo_alone_square.png'},
+      //twitter og
       {name: 'twitter:card', content: 'summary'},
       {name: 'twitter:title', content: 'RetroBox - A diy open-source console'},
       {name: 'twitter:url', content: 'https://www.retrobox.tech/'},
-      {name: 'twitter:description', content: 'RetroBox is the first open-source console, based on a Raspberry-Pi Zero.'},
-      {name: 'twitter:image', content: 'https://static.retrobox.tech/img/logo/logo.png'}
+      {name: 'twitter:description', content: 'RetroBox is the first console to build by your own.'},
+      {name: 'twitter:image:src', content: 'https://static.retrobox.tech/img/logo/logo_alone_square.png'},
+      {name: 'twitter:site', content: '@thingmill'}
     ],
     link: [
       {rel: 'icon', type: 'image/png', href: '/favicon.png'},
