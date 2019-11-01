@@ -122,21 +122,23 @@
         }
       }
     }
+    .console-card-fields-loading {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 3.2em;
+      padding-bottom: 3.2em;
+      .icon {
+        font-size: 1.6em;
+      }
+    }
     .console-card-right {
+      display: flex;
+      flex-direction: column;
       @extend .w-full;
       @extend .md\:w-2\/3;
       padding-left: 2em;
-      .console-card-fields-loading {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 3.2em;
-        padding-bottom: 3.2em;
-        .icon {
-          font-size: 1.6em;
-        }
-      }
       .console-card-fields {
         &:first-child {
           border-top: 1px solid rgba(128, 128, 128, .4);
@@ -176,6 +178,14 @@
         margin-top: 2em;
         display:flex;
         justify-content: space-between;
+        .console-card-actions-power {
+          display: flex;
+        }
+        .no-text {
+          .icon {
+            margin-right: 0;
+          }
+        }
         .console-card-action {
           @extend .border;
           @extend .rounded;
@@ -194,6 +204,10 @@
             @extend .hover\:bg-red-dark;
             @extend .hover\:text-white;
             @extend .bg-transparent;
+
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-right-color: #7f8c8d;
           }
           &.reboot {
             @extend .text-green;
@@ -201,9 +215,17 @@
             @extend .bg-transparent;
             @extend .hover\:bg-green-dark;
             @extend .hover\:text-white;
+
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-left: 0px;
           }
-          .icon {
-            margin-right: 0.5em;
+          &.ssh {
+            @extend .text-orange;
+            @extend .border-orange;
+            @extend .bg-transparent;
+            @extend .hover\:bg-orange-dark;
+            @extend .hover\:text-white;
           }
         }
       }
