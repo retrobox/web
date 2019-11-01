@@ -31,6 +31,19 @@
   }
 }
 
+.console-mosaic {
+  .console-card {
+    .console-card-content {
+      .console-card-right {
+        .console-card-actions {
+          justify-content: center;
+          margin-top: 1em;
+        }
+      }
+    }
+  }
+}
+
 .game-store {
   .game-store-top {
     justify-content: center;

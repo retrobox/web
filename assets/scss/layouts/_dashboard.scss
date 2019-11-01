@@ -76,7 +76,6 @@
     padding: 2rem;
     width: 100%;
     @extend .flex;
-    @extend .flex-wrap;
     .console-card-id {
       padding-bottom: 1.5em;
       .console-card-id-pre {

@@ -43,6 +43,13 @@
             </div>
           </div>
           <div
+            v-if="loading"
+            class="console-card-fields-loading">
+            <Icon
+              value="fas fa-sync"
+              spin />
+          </div>
+          <div
             v-if="!loading"
             class="console-card-right">
             <div class="console-card-fields">
@@ -137,13 +144,6 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            v-else
-            class="console-card-fields-loading">
-            <Icon
-              value="fas fa-sync"
-              spin />
           </div>
         </div>
       </div>
