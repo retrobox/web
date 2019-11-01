@@ -72,6 +72,7 @@ $opacity: 0.8;
     //background-color: rgba(44, 62, 80, 0.6);
   }
   .header-content {
+    height: 100%;
     a {
       color: white;
       text-decoration: none;
@@ -106,20 +107,17 @@ $opacity: 0.8;
     display: flex;
     justify-content: space-between;
     .header-title-container {
-      height: 48px;
+      //height: 48px;
       display: flex;
       align-items: center;
       .header-title a {
         color: black;
       }
-      img {
-        margin-top: 1px;
-      }
     }
-    .header-title-logo {
-      margin-right: 1em;
-      width: 15em;
-
+    .header-title-container {
+      img {
+        width: 15em;
+      }
       a {
         display: flex;
       }
