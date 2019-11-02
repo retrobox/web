@@ -4,7 +4,7 @@ import Client from '../node_modules/vue-apitator/dist/client.js';
 
 export default ({ app }) => {
   let config = {
-    baseUrl: app.$env.API_ENDPOINT,
+    baseUrl: app.$env.API_PROXY_ENDPOINT,
     graphQLPath: '/graphql'
   }
   Vue.use(VueApitator, config);

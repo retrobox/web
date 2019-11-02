@@ -28,10 +28,12 @@ module.exports = {
         'ADMIN_DASHBOARD_ENDPOINT',
         'WS_ENDPOINT',
         'COOKIE_DOMAIN',
-        'STRIPE_PUBLIC'
+        'STRIPE_PUBLIC',
+        'API_PROXY_ENDPOINT'
       ]
     }],
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/proxy'
   ],
 
   plugins: [
@@ -137,6 +139,32 @@ module.exports = {
     path: '/sitemap.xml',
     gzip: true,
     generate: false
+  },
+
+
+  proxy: {
+      '/api': {
+          changeOrigin: true,
+          target: process.env.API_ENDPOINT,
+          pathRewrite: {
+              '^/api/': ''
+          },
+          onProxyReq: (proxyReq, req, res) => {
+              proxyReq.removeHeader('x-forwarded-for');
+              proxyReq.removeHeader('x-forwarded-host');
+              proxyReq.removeHeader('x-forwarded-server');
+              proxyReq.removeHeader('cf-ipcountry');
+              proxyReq.removeHeader('cf-ray');
+              proxyReq.removeHeader('cf-connecting-ip');
+              proxyReq.removeHeader('cf-visitor');
+              proxyReq.removeHeader('dnt');
+          },
+          onError: (err) => {
+              console.log('---- PROXY ERROR ----');
+              console.log(err);
+              console.log('---- END OF PROXY ERROR ----');
+          }
+      }
   },
 
   loading: {color: '#000'},
