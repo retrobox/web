@@ -97,7 +97,7 @@ export default {
   mounted() {
     if (!this.$isServer) {
       this.show = true;
-      //this.computePrices()
+      this.computePrices()
     }
   },
   methods: {
