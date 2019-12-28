@@ -269,8 +269,8 @@
       "empty": "No items available"
     },
     "order-note": {
-      "title": "Note au préparateur de la commande",
-      "description": "Vous pouvez ici inclure une note afin de décrire d'éventuelle spécifitées liées à votre commande"
+      "title": "Note to the order preparator",
+      "description": "You can include here a note to describe some specific things about your order"
     }
   },
   "contact-us": {
