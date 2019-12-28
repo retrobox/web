@@ -107,7 +107,8 @@
     @extend .md\:pt-0;
   }
   .shipping-methods-title-container,
-  .shipping-details-title-container {
+  .shipping-details-title-container,
+  .order-note-title-container {
     @extend .mb-4;
     @extend .dividing;
   }

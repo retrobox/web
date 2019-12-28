@@ -95,11 +95,15 @@
               </div>
             </div>
             <div class="order-note-container">
+              <div class="order-note-title-container">
+                <h3 class="order-note-title">
+                  {{ $t('shop.order-note.title') }}
+                </h3>
+              </div>
               <div class="order-note-textarea">
                 <textarea 
                   v-model="orderNote"
-                  :title="$t('shop.order-note.description')"
-                  :placeholder="$t('shop.order-note.placeholder')"
+                  :placeholder="$t('shop.order-note.description')"
                   class="input-textarea"></textarea>
               </div>
             </div>

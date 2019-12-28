@@ -269,8 +269,8 @@
       "empty": "Aucun articles disponibles"
     },
     "order-note": {
-      "description": "Vous pouvez ici inclure une note afin de décrire d'éventuelle spécifitées liées à votre commande",
-      "placeholder": "Note au préparateur de la commande"
+      "title": "Note au préparateur de la commande",
+      "description": "Vous pouvez ici inclure une note afin de décrire d'éventuelle spécifitées liées à votre commande"
     }
   },
   "contact-us": {
