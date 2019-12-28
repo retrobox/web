@@ -37,7 +37,8 @@ export const state = () => ({
     shippingPrice: 0,
     total: 0,
     totalWeight: 0
-  }
+  },
+  orderNote: ''
 });
 
 import jwtDecode from "jwt-decode"
@@ -116,6 +117,7 @@ export const mutations = {
   },
   EMPTY_CART (state) {
     state.cart = []
+    state.orderNote = ""
   },
   SET_LOGIN_REDIRECT_ROUTE (state, payload) {
     state.loginRedirectRoute = payload
@@ -147,6 +149,9 @@ export const mutations = {
     state.checkout.shippingMethod = payload[0]
     state.checkout.shippingPrice = payload[1]
     state.checkout.total = (parseFloat(state.checkout.subTotal) + payload[1]).toFixed(2)
+  },
+  SET_ORDER_NOTE: (state, payload) => {
+    state.orderNote = payload
   }
 };
 

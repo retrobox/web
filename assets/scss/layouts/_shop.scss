@@ -343,3 +343,13 @@
     }
   }
 }
+
+.order-note-container {
+  margin-top: 2em;
+  color: gray;
+  textarea {
+    color: #2c3e50;
+    min-height: 4em;
+    height: 4em !important;
+  }
+}

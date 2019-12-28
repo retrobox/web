@@ -1,0 +1,12 @@
+.input-textarea {
+    @extend .bg-white;
+    @extend .border;
+    @extend .bg-grey-lighter;
+    @extend .rounded-lg;
+    @extend .py-2;
+    @extend .px-4;
+    @extend .block;
+    @extend .w-full;
+    @extend .appearance-none;
+    @extend .leading-normal;
+}

@@ -267,6 +267,10 @@
     },
     "index": {
       "empty": "Aucun articles disponibles"
+    },
+    "order-note": {
+      "description": "Vous pouvez ici inclure une note afin de décrire d'éventuelle spécifitées liées à votre commande",
+      "placeholder": "Note au préparateur de la commande"
     }
   },
   "contact-us": {

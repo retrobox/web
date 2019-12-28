@@ -92,7 +92,8 @@
         this.$apitator.post('/paypal/get-url', {
           items: this.$store.state.cart,
           shipping_method: this.$store.state.checkout.shippingMethod,
-          shipping_country: this.$store.state.checkout.country
+          shipping_country: this.$store.state.checkout.country,
+          order_note: this.$store.state.orderNote
         }, {withAuth: true}).then((response) => {
           console.log('paypal Backend response', response.data)
           window.location = response.data.data.url
@@ -112,7 +113,8 @@
           email: token.email,
           items: this.$store.state.cart,
           shipping_method: this.$store.state.checkout.shippingMethod,
-          shipping_country: this.$store.state.checkout.country
+          shipping_country: this.$store.state.checkout.country,
+          order_note: this.$store.state.orderNote
         }, { withAuth: true }).then((response) => {
           console.log("stripe: success");
           console.log(response)

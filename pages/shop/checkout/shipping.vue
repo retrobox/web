@@ -94,6 +94,15 @@
                 </div>
               </div>
             </div>
+            <div class="order-note-container">
+              <div class="order-note-textarea">
+                <textarea 
+                  v-model="orderNote"
+                  :title="$t('shop.order-note.description')"
+                  :placeholder="$t('shop.order-note.placeholder')"
+                  class="input-textarea"></textarea>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -146,7 +155,8 @@ export default {
     show: false,
     shippingMethod: 'colissimo',
     colissimoPrice: 0,
-    dhlPrice: 0
+    dhlPrice: 0,
+    orderNote: ''
   }),
   watch: {
     'shippingMethod': function() {
@@ -155,11 +165,13 @@ export default {
   },
   created() {
     this.$store.commit('SET_CHECKOUT_SHIPPING_METHOD', ['', 0])
+    this.orderNote = this.$store.state.orderNote
   },
   methods: {
     onNext() {
       this.$refs.checkoutPage.enableNextLoading()
       this.$refs.shippingDetailsForm.save()
+      this.$store.commit('SET_ORDER_NOTE', this.orderNote)
     },
     onShippingDetailsSaved() {
       this.$refs.checkoutPage.disableNextLoading()
