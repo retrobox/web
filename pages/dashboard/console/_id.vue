@@ -114,12 +114,20 @@
               </div>
             </div>
             <div class="console-card-actions">
-              <div
-                v-if="console.is_online"
-                class="button console-card-action ssh"
-                @click="openSshSession()">
-                <Icon value="fas fa-terminal" />
-                <span class="button-text">{{ $t('user-dash.console.terminal') }}</span>
+              <div class="console-card-actions-no-power">
+                <div
+                  class="button console-card-action token"
+                  @click="openTokenModal()">
+                  <Icon value="fas fa-key" />
+                  <span class="button-text">{{ $t('user-dash.console.token') }}</span>
+                </div>
+                <div
+                  v-if="console.is_online"
+                  class="button console-card-action ssh"
+                  @click="openTerminalSession()">
+                  <Icon value="fas fa-terminal" />
+                  <span class="button-text">{{ $t('user-dash.console.terminal') }}</span>
+                </div>
               </div>
               <div class="console-card-actions-power no-text">
                 <Tooltip :value="$t('user-dash.console.shutdown')">
@@ -154,26 +162,41 @@
       <client-only>
         <modal
           adaptive
+          class="console-token-modal modal"
+          height="auto"
+          name="tokenModal">
+          <div class="modal-container">
+            <h3 class="modal-title">
+              Token of console #{{ console.id }}
+            </h3>
+            <div class="modal-content text-center">
+              <input 
+                v-model="console.token"
+                class="token-input"
+                type="text" />
+            </div>
+          </div>
+          <div
+            class="button bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 cancel-button text-center"
+            @click="$modal.hide('tokenModal')"
+          >
+            {{ $t("close") }}
+          </div>
+        </modal>
+        <modal
+          adaptive
           class="modal"
           height="75%"
           width="70%"
-          name="sshSession">
+          name="terminalSession">
           <div class="p-0">
-            <!-- <h4 class="mb-3 mt-3">
-              SSH Session
-            </h4> -->
-            <div class="ssh-session-modal-content">
-              <!-- {{ sshSessionUrl }} -->
-              <iframe
-                id="gotty-iframe"
-                :src="sshSessionUrl"
-                style="width: 100%;height: 70vh" >
-              </iframe>
+            <div class="terminal-session-modal-content">
+              <div id="terminal"></div>
             </div>
           </div>
           <div
             class="button bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 text-center cancel-button"
-            @click="$modal.hide('sshSession')"
+            @click="$modal.hide('terminalSession')"
           >
             {{ $t("close") }}
           </div>
@@ -243,11 +266,12 @@ import Icon from "~/components/Icon"
 import Moment from "moment"
 import io from 'socket.io-client'
 import Tooltip from "../../../components/Tooltip";
+import 'xterm/css/xterm.css'
 
 export default {
   middleware: 'authenticated',
   components: {
-      Tooltip,
+    Tooltip,
     DashboardPage,
     Icon
   },
@@ -266,14 +290,17 @@ export default {
     webSocketSessionId: '',
     socket: null,
     sshSessionUrl: '',
-    sshSessionStatus: 'asking'
+    sshSessionStatus: 'asking',
+    terminalSession: null,
+    terminal: null
   }),
   async asyncData({ app: { apitator }, params }) {
     let res = await apitator.graphQL(
       `query ($id: String!){
           getOneConsole(id: $id) {
             id,
-            created_at
+            created_at,
+            token
           }
         }`, {id: params.id}, {withAuth: true})
     return {
@@ -284,6 +311,7 @@ export default {
     if (!this.$isServer) {
       this.fetchStatus()
       this.connectWebSocket()
+      console.log('Console token: ', this.console.token)
     }
   },
   methods: {
@@ -316,7 +344,6 @@ export default {
         Moment.locale(this.$i18n.locale);
         data.up_time = Moment.duration(data.up_time * 1000).humanize();
         this.console = {...this.console, ...data}
-        console.log(this.console)
       })
     },
     shutdown: function () {
@@ -370,13 +397,16 @@ export default {
 
       this.socket.off('console_status');
       this.socket.off('socket-id');
-      this.socket.off('gotty-installed');
-      this.socket.off('ssh-opened');
+      this.socket.off('terminal-ready');
+      this.socket.off('terminal-output');
+      this.terminal = null
+      //this.socket.off('gotty-installed');
+      //this.socket.off('ssh-opened');
       this.socket.on('socket-id', (data) => {
         this.webSocketSessionId = data;
         console.log('> SOCKET: Received socket session id: ' + this.webSocketSessionId)
       });
-      this.socket.on('console_status', (data) => {
+      this.socket.on('console-status', (data) => {
         console.log('Console status update', data);
         console.log(this.console);
         this.console.is_online = data.isOnline;
@@ -386,31 +416,83 @@ export default {
           this.fetchStatus();
         }
       });
-      this.socket.on('gotty-installed', () => {
-        console.log('Gotty installed');
-        this.sshSessionStatus = 'gotty-installed'; //now trying to launch gotty and locatunnel
-      });
-      this.socket.on('ssh-opened', (data) => {
-        console.log('SSH opened');
-        console.log(data);
-        this.sshSessionUrl = data;
-        this.sshSessionStatus = 'opened';
-      });
+      // this.socket.on('gotty-installed', () => {
+      //   console.log('Gotty installed');
+      //   this.sshSessionStatus = 'gotty-installed'; //now trying to launch gotty and locatunnel
+      // });
+      // this.socket.on('ssh-opened', (data) => {
+      //   console.log('SSH opened');
+      //   console.log(data);
+      //   this.sshSessionUrl = data;
+      //   this.sshSessionStatus = 'opened';
+      // });
     },
-    openSshSession: function () {
-      this.$modal.show('sshSession');
-      if (this.sshSessionUrl === '') {
-        console.log('Open ssh session...');
-        this.$apitator.graphQL(`
-          query ($id: String!, $webSessionId: String!){
-            openConsoleSshSession(id: $id, webSessionId: $webSessionId)
-          }`, {
-          id: this.$route.params.id,
-          webSessionId: this.webSocketSessionId
-        }, {
-          withAuth: true
+    // openSshSession: function () {
+    //   this.$modal.show('sshSession');
+    //   if (this.sshSessionUrl === '') {
+    //     console.log('Open ssh session...');
+    //     this.$apitator.graphQL(`
+    //       query ($id: String!, $webSessionId: String!){
+    //         openConsoleSshSession(id: $id, webSessionId: $webSessionId)
+    //       }`, {
+    //       id: this.$route.params.id,
+    //       webSessionId: this.webSocketSessionId
+    //     }, {
+    //       withAuth: true
+    //     })
+    //   }
+    // },
+    openTerminalSession: function () {
+      this.$modal.show('terminalSession')
+      let resize = () => {
+        this.socket.emit('terminal-resize', {
+          consoleId: this.console.id,
+          data: {
+            cols: this.terminal.cols,
+            rows: this.terminal.rows
+          }
         })
       }
+      if (this.terminal === null) {
+        this.socket.emit('open-terminal', {id: this.console.id})
+        this.socket.on('terminal-ready', (data) => {
+          let fitAddon = new FitAddon()
+          this.terminal = new Terminal({
+            cursorBlink: true
+          });
+          this.terminal.loadAddon(fitAddon)
+          fitAddon.fit()
+          window.addEventListener('resize', () => {
+            fitAddon.fit()
+          })
+          this.terminal.onResize(data => {
+            resize()
+          })
+          resize()
+          this.terminal.open(document.getElementById('terminal'));
+          this.terminal.focus()
+          this.socket.on('terminal-output', data => {
+            this.terminal.write(data)
+          })
+          this.terminal.onData(data => {
+            this.socket.emit('terminal-input', { 
+              consoleId: this.console.id,
+              data
+            })
+          })
+          console.log('Terminal READY')
+        })
+      } else {
+        setTimeout(() => {
+          this.terminal.open(document.getElementById('terminal'));
+          fitAddon.fit()
+          this.terminal.focus()
+          resize()
+        }, 300)
+      }
+    },
+    openTokenModal: function () {
+      this.$modal.show('tokenModal')
     }
   }
 }

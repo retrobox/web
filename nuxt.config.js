@@ -46,7 +46,8 @@ module.exports = {
     {src: '~/plugins/stripe.js', ssr: false},
     {src: '~/plugins/persistedState.js', ssr: false},
     {src: '~/plugins/lazyLoad.js', ssr: false},
-    {src: '~/plugins/highlight.js', ssr: false}
+    {src: '~/plugins/highlight.js', ssr: false},
+    {src: '~/plugins/xterm.js', ssr: false}
   ],
 
   head: {

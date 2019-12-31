@@ -67,6 +67,37 @@
     }
   }
 }
+
+
+.console-token-modal {
+  .modal-container {
+    height: 86%;
+  }
+  .modal-title {
+    padding-top: 1.9em;
+    @extend .text-center;
+  }
+  .modal-content {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+    @extend .text-center;
+  }
+  .token-input {
+    @extend .bg-white;
+    @extend .border;
+    @extend .bg-grey-lighter;
+    @extend .rounded-lg;
+    @extend .py-2;
+    @extend .px-4;
+    @extend .block;
+    @extend .w-full;
+    @extend .appearance-none;
+    @extend .leading-normal;
+  }
+}
+
 .console-card {
   margin: 0 auto;
   width: 80%;
@@ -185,6 +216,10 @@
             margin-right: 0;
           }
         }
+        .console-card-actions-no-power {
+          display: flex;
+          flex-wrap: wrap;
+        }
         .console-card-action {
           @extend .border;
           @extend .rounded;
@@ -219,11 +254,20 @@
             border-bottom-left-radius: 0;
             border-left: 0px;
           }
+          
           &.ssh {
             @extend .text-orange;
             @extend .border-orange;
             @extend .bg-transparent;
             @extend .hover\:bg-orange-dark;
+            @extend .hover\:text-white;
+            margin-top: .5em;
+          }
+          &.token {
+            @extend .text-blue;
+            @extend .border-blue;
+            @extend .bg-transparent;
+            @extend .hover\:bg-blue-dark;
             @extend .hover\:text-white;
           }
         }
