@@ -292,7 +292,8 @@ export default {
     sshSessionUrl: '',
     sshSessionStatus: 'asking',
     terminalSession: null,
-    terminal: null
+    terminal: null,
+    fitAddon: null
   }),
   async asyncData({ app: { apitator }, params }) {
     let res = await apitator.graphQL(
@@ -400,6 +401,10 @@ export default {
       this.socket.off('terminal-ready');
       this.socket.off('terminal-output');
       this.terminal = null
+      this.fitAddon = null
+      if (document.getElementById('terminal') !== null) {
+        document.getElementById('terminal').innerHTML = '';
+      }
       //this.socket.off('gotty-installed');
       //this.socket.off('ssh-opened');
       this.socket.on('socket-id', (data) => {
@@ -456,21 +461,19 @@ export default {
       if (this.terminal === null) {
         this.socket.emit('open-terminal', {id: this.console.id})
         this.socket.on('terminal-ready', (data) => {
-          let fitAddon = new FitAddon()
+          this.fitAddon = new FitAddon()
           this.terminal = new Terminal({
             cursorBlink: true
           });
-          this.terminal.loadAddon(fitAddon)
-          fitAddon.fit()
+          this.terminal.loadAddon(this.fitAddon)
           window.addEventListener('resize', () => {
-            fitAddon.fit()
+            this.fitAddon.fit()
           })
           this.terminal.onResize(data => {
             resize()
           })
           resize()
           this.terminal.open(document.getElementById('terminal'));
-          this.terminal.focus()
           this.socket.on('terminal-output', data => {
             this.terminal.write(data)
           })
@@ -481,11 +484,13 @@ export default {
             })
           })
           console.log('Terminal READY')
+          this.fitAddon.fit()
+          this.terminal.focus()
         })
       } else {
         setTimeout(() => {
           this.terminal.open(document.getElementById('terminal'));
-          fitAddon.fit()
+          this.fitAddon.fit()
           this.terminal.focus()
           resize()
         }, 300)
