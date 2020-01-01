@@ -98,6 +98,15 @@
   }
 }
 
+.console-terminal-session-modal {
+  .modal-container {
+    height: 86%;
+    #terminal {
+      height: 100%;
+    }
+  }
+}
+
 .console-card {
   margin: 0 auto;
   width: 80%;

@@ -185,14 +185,11 @@
         </modal>
         <modal
           adaptive
-          class="modal"
-          height="75%"
-          width="70%"
+          class="console-terminal-session-modal modal"
+          height="auto"
           name="terminalSession">
-          <div class="p-0">
-            <div class="terminal-session-modal-content">
-              <div id="terminal"></div>
-            </div>
+          <div class="modal-container">
+            <div id="terminal"></div>
           </div>
           <div
             class="button bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 text-center cancel-button"
@@ -381,6 +378,7 @@ export default {
     },
     connectWebSocket: function () {
       console.log("WS_ENDPOINT: ", this.$env.WS_ENDPOINT);
+      this.resetTerminalSession()
       // connect web socket to wait for update on console status
       this.socket = io(this.$env.WS_ENDPOINT, {
         transportOptions: {
@@ -400,11 +398,6 @@ export default {
       this.socket.off('socket-id');
       this.socket.off('terminal-ready');
       this.socket.off('terminal-output');
-      this.terminal = null
-      this.fitAddon = null
-      if (document.getElementById('terminal') !== null) {
-        document.getElementById('terminal').innerHTML = '';
-      }
       //this.socket.off('gotty-installed');
       //this.socket.off('ssh-opened');
       this.socket.on('socket-id', (data) => {
@@ -412,6 +405,7 @@ export default {
         console.log('> SOCKET: Received socket session id: ' + this.webSocketSessionId)
       });
       this.socket.on('console-status', (data) => {
+        this.resetTerminalSession()
         console.log('Console status update', data);
         console.log(this.console);
         this.console.is_online = data.isOnline;
@@ -447,6 +441,18 @@ export default {
     //     })
     //   }
     // },
+    resetTerminalSession: function () {
+      this.terminal = null
+      this.fitAddon = null
+      if (document.getElementById('terminal') !== null) {
+        document.getElementById('terminal').innerHTML = '';
+      }
+      // to throw a error at this point, we can use this.socket.off() when this.socket === null
+      if (this.socket !== null) {
+        this.socket.off('terminal-ready');
+        this.socket.off('terminal-output'); 
+      }
+    },
     openTerminalSession: function () {
       this.$modal.show('terminalSession')
       let resize = () => {
