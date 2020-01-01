@@ -52,7 +52,9 @@
     "vue-scrollto": "^2.13.0",
     "vue-stripe-checkout": "^1.2.1",
     "vue2-transitions": "^0.2.3",
-    "vuex-persistedstate": "^2.5.4"
+    "vuex-persistedstate": "^2.5.4",
+    "xterm": "^4.3.0",
+    "xterm-addon-fit": "^0.3.0"
   },
   "devDependencies": {
     "all-object-keys": "^1.1.1",
