@@ -378,8 +378,8 @@
         "description": "Cela va évidemment... bah éteindre la console. C'est fou la technologie non ?"
       },
       "reboot-confirmation": {
-        "title": "Voulez vous vraiment redémmarer votre console ?",
-        "description": "Alors en fait quand on clique sur le bouton ça va... bah redémmarer la console. C'est tout con."
+        "title": "Voulez vous vraiment redémarrer votre console ?",
+        "description": "Alors en fait quand on clique sur le bouton ça va... bah redémarrer la console. C'est tout con."
       }
     }
   }
