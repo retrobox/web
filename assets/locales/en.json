@@ -355,10 +355,10 @@
     },
     "console": {
       "title": "Manage my console",
-      "manage": "Gérer",
+      "manage": "Manage",
       "storage": "Storage",
       "version": "Version",
-      "color": "Couleur",
+      "color": "Color",
       "connecting": "Connecting...",
       "status": {
         "online": "Online",
@@ -372,6 +372,7 @@
       "terminal": "Open terminal",
       "reboot": "Reboot",
       "shutdown": "Shutdown",
+      "token": "Token",
       "shutdown-confirmation": {
         "title": "Power off is a good thing ?",
         "description": "Do you really want to do this kind of thing to your poor little happy console ? She doesn't like to be alone in the dark. I hope she will be back soon."
