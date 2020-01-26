@@ -239,6 +239,6 @@ Repo du serveur websocket : [https://github.com/retrobox/websocket-server/](http
 <br>
 <p>RetroBox OS est basé sur un système déjà existant nommé [RetroPie](https://retropie.org.uk/download/), la vente de la console avec RetroPie pré-installé est prohibé par les licences qui protègent le logiciel, d’où la création d'une application qui vient installer en amont (après la commande/réception) notre système d'exploitation.</p>
 <br>
-<p>Des statistiques sont relevées lors de vos connexions sur nos services, nous utilisons un [Matomo](https://matomo.org/)pour y remédier. Des informations telles que votre ip, votre localisation sont enregistrées pour des fins d'analyses marketing, elles ne seront jamais commercialisées, toutes les données sont encryptées et sécurisées.<p>
+<p>Des statistiques sont relevées lors de vos connexions sur nos services, nous utilisons un [Matomo](https://matomo.org/) pour y remédier. Des informations telles que votre ip, votre localisation sont enregistrées pour des fins d'analyses marketing, elles ne seront jamais commercialisées, toutes les données sont encryptées et sécurisées.<p>
 <br>
 <p>Toutes les statistiques sont centralisées sur un seul et même serveur de [Thingmill](https://thingmill.fr).<p>

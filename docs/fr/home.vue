@@ -32,10 +32,10 @@
 
         <ul>
           <li>
-            Quelques bases en soudure (Si vous averz déjà fait quelques systèmes éléctroniques)
+            Quelques bases en soudure (Si vous avez déjà fait quelques systèmes éléctroniques)
           </li>
           <li>
-            Quelques connaissances pour reconnaitre la base des composants
+            Quelques connaissances pour reconnaître des composants
           </li>
         </ul>
 
