@@ -373,6 +373,7 @@
       "reboot": "Redémarrer",
       "shutdown": "Eteindre",
       "token": "Token",
+      "token-of": "Token de la console",
       "shutdown-confirmation": {
         "title": "Voulez vous vraiment éteindre votre console ?",
         "description": "Cela va évidemment... bah éteindre la console. C'est fou la technologie non ?"

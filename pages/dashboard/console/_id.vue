@@ -167,7 +167,7 @@
           name="tokenModal">
           <div class="modal-container">
             <h3 class="modal-title">
-              Token of console #{{ console.id }}
+              {{ $t("user-dash.orders.console.token-of") }} #{{ console.id }}
             </h3>
             <div class="modal-content text-center">
               <input 
