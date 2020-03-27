@@ -126,7 +126,7 @@
     },
     methods: {
       computeIsMobile: function (windowWidth) {
-        let isMobile = (windowWidth <= 700)
+        let isMobile = (windowWidth <= 900)
         if (this.$store.state.isMobile !== isMobile) {
           this.$store.commit('SET_IS_MOBILE', isMobile)
         }
