@@ -45,6 +45,21 @@
   }
 }
 
+.console-card .console-card-content .console-card-right {
+  .console-card-action.ssh {
+    margin-left: 0.5em;
+    margin-top: 0 !important;
+  }
+  .console-card-action.ssh, .console-card-action.token {
+    .icon {
+      margin-right: 0;
+    }
+    .button-text {
+      display: none;
+    }
+  }
+}
+
 .game-store {
   .game-store-top {
     justify-content: center;

@@ -193,7 +193,7 @@
           </div>
           <div
             class="button bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 text-center cancel-button"
-            @click="$modal.hide('terminalSession')"
+            @click="closeTerminalSession"
           >
             {{ $t("close") }}
           </div>
@@ -444,6 +444,7 @@ export default {
     resetTerminalSession: function () {
       this.terminal = null
       this.fitAddon = null
+      this.terminalIsOpen = false
       if (document.getElementById('terminal') !== null) {
         document.getElementById('terminal').innerHTML = '';
       }
@@ -453,7 +454,12 @@ export default {
         this.socket.off('terminal-output'); 
       }
     },
+    closeTerminalSession: function () {
+      this.terminalIsOpen = false
+      this.$modal.hide('terminalSession')
+    },
     openTerminalSession: function () {
+      this.terminalIsOpen = true
       this.$modal.show('terminalSession')
       let resize = () => {
         this.socket.emit('terminal-resize', {
@@ -465,15 +471,29 @@ export default {
         })
       }
       if (this.terminal === null) {
-        this.socket.emit('open-terminal', {id: this.console.id})
+        //this.socket.emit('open-terminal', {id: this.console.id})
+        this.$apitator.graphQL(`
+          query ($id: String!, $webSessionId: String!){
+            openConsoleTerminalSession(id: $id, webSessionId: $webSessionId)
+          }`, {
+          id: this.console.id,
+          webSessionId: this.socket.id
+        }, {
+          withAuth: true
+        }).then(res => {
+            console.log('Terminal ready ??')
+        })
         this.socket.on('terminal-ready', (data) => {
+          console.log('Terminal ready!!!')
           this.fitAddon = new FitAddon()
           this.terminal = new Terminal({
             cursorBlink: true
           });
           this.terminal.loadAddon(this.fitAddon)
           window.addEventListener('resize', () => {
-            this.fitAddon.fit()
+            if (this.fitAddon !== null && this.terminalIsOpen) {
+              this.fitAddon.fit()
+            }
           })
           this.terminal.onResize(data => {
             resize()
@@ -484,12 +504,12 @@ export default {
             this.terminal.write(data)
           })
           this.terminal.onData(data => {
+            console.log('onData', data)
             this.socket.emit('terminal-input', { 
               consoleId: this.console.id,
               data
             })
           })
-          console.log('Terminal READY')
           this.fitAddon.fit()
           this.terminal.focus()
         })
