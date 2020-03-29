@@ -23,20 +23,6 @@
     </div>
     <client-only>
       <modal
-        name="login"
-        adaptive
-        class="modal login-modal">
-        <div class="modal-container">
-          <div class="login-loading-container">
-            <div class="loading">
-              <Icon
-                value="fas fa-sync"
-                spin />
-            </div>
-          </div>
-        </div>
-      </modal>
-      <modal
         name="loginOrRegister"
         height="auto"
         adaptive
@@ -107,7 +93,7 @@
       login: function (type) {
         //where type is 'login' or 'register'
         this.$modal.hide('loginOrRegister');
-        this.$modal.show('login');
+        this.$store.commit('SET_IS_LOADING', true)
         let url = window.location;
         if (this.$store.state.loginRedirectRoute !== '' && this.$store.state.loginRedirectRoute !== undefined) {         
           url = window.location.origin + this.$store.state.loginRedirectRoute
@@ -117,7 +103,7 @@
         this.$apitator.get('/account/' + type).then((response) => {
           window.location = response.data.data.url
         }).catch(() => {
-          this.$modal.hide('login')
+          this.$store.commit('SET_IS_LOADING', false)
         })
       },
       logout: function () {
@@ -137,14 +123,13 @@
         }
       },
       goToDashboard: function () {
-        this.$modal.hide('loginOrRegister');
-        //this.$modal.show('login');
+        this.$store.commit('SET_IS_LOADING', false)
         this.$router.push(this.localePath('dashboard'))
         // window.location = this.$env.USER_DASHBOARD_ENDPOINT
       },
       goToAdminDashboard: function () {
         this.$modal.hide('loginOrRegister');
-        this.$modal.show('login');
+        this.$store.commit('SET_IS_LOADING', true)
         window.location = this.$env.ADMIN_DASHBOARD_ENDPOINT
       }
     }
