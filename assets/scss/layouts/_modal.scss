@@ -4,15 +4,62 @@
   }
 }
 
-.modal-button {
-  @extend .w-full;
-  @extend .md\:w-1\/2;
-  @extend .button;
-  @extend .bg-grey-lighter;
-  @extend .hover\:bg-grey-light;
-  //@extend .text-gray-darker;
-  @extend .font-bold;
-  @extend .py-3;
-  //@extend .px-5;
-  @extend .text-center;
+.custom-modal {
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-container {
+    width: 600px;
+    background-color: white;
+    z-index: 999;
+    border-radius: 3px;
+    box-shadow: 0 20px 60px -2px rgba(27, 33, 58, 0.4);
+  }
+  .modal-double-action {
+    @extend .flex;
+    @extend .flex-wrap;
+
+    .modal-button:first-of-type {
+      border-bottom-left-radius: 3px;
+    }
+    .modal-button:last-of-type {
+      border-bottom-right-radius: 3px;
+    }
+  }
+  .modal-single-action {
+    .modal-button {
+      width: 100%;
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+  }
+
+  .modal-button {
+    @extend .w-full;
+    @extend .md\:w-1\/2;
+    @extend .button;
+    @extend .bg-grey-lighter;
+    @extend .hover\:bg-grey-light;
+    //@extend .text-gray-darker;
+    @extend .font-bold;
+    @extend .py-3;
+    // /@extend .px-5;
+    @extend .text-center;
+  }
+}
+
+.modal-transition-enter-active, .modal-transition-leave-active {
+  transition: opacity .2s
+}
+
+.modal-transition-enter, .modal-transition-leave-active, .modal-transition-leave-to {
+  opacity: 0
 }
