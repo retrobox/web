@@ -97,6 +97,9 @@ export default {
     },
     primaryCallback() {
       this.$emit('primary')
+      if (this.primaryClosing) {
+        this.enabled = false
+      }
     },
     secondaryCallback() {
       this.$emit('secondary')

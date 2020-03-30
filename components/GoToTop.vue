@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <client-only>
     <transition
       name="main-transition">
       <div
@@ -9,7 +9,7 @@
         <Icon value="fas fa-arrow-up"/>
       </div>
     </transition>
-  </div>
+  </client-only>
 </template>
 
 <script>

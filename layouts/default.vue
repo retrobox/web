@@ -21,34 +21,27 @@
           v-if="$route.name !== 'index' || $store.state.hasNuxtError === true"
           class="content-container-bottom"></div>
         <Footer />
-        <client-only>
-          <modal
-            name="modalAlert"
-            adaptive
-            class="modal alert-modal">
-            <div class="alert-container modal-container">
-              <div class="alert-content">
-                <Icon
-                  v-if="$store.state.alert.type === 'error'"
-                  class="text-red"
-                  value="fas fa-exclamation-circle" />
-                <Icon
-                  v-if="$store.state.alert.type === 'success'"
-                  class="text-green"
-                  value="fas fa-check-circle" />
-                <h3 class="alert-title">{{ $store.state.alert.title }}</h3>
-                <p>{{ $store.state.alert.description }}</p>
-              </div>
+        <Modal
+          ref="alertModal"
+          class="alert-modal"
+          primary-closing
+          @primary="$store.commit('REMOVE_ALERT')">
+          <div class="alert-container">
+            <div class="alert-content">
+              <Icon
+                v-if="$store.state.alert.type === 'error'"
+                class="text-red"
+                value="fas fa-exclamation-circle" />
+              <Icon
+                v-if="$store.state.alert.type === 'success'"
+                class="text-green"
+                value="fas fa-check-circle" />
+              <h3 class="alert-title">{{ $store.state.alert.title }}</h3>
+              <p>{{ $store.state.alert.description }}</p>
             </div>
-
-            <div
-              class="button bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 cancel-button"
-              @click="$store.commit('REMOVE_ALERT')">
-              {{ $t('close') }}
-            </div>
-          </modal>
-          <GoToTop />
-        </client-only>
+          </div>
+        </Modal>
+        <GoToTop />
       </div>
     </transition>
   </div>
@@ -60,8 +53,9 @@
   import GoToTop from "~/components/GoToTop"
   import Aos from 'aos'
   import 'aos/dist/aos.css'
+  import Modal from '~/components/Modal'
   export default {
-    components: {GoToTop, Icon, Footer, Header},
+    components: {GoToTop, Icon, Footer, Header, Modal},
     head () {
       return {
         titleTemplate: '%s - Retrobox',
@@ -82,9 +76,9 @@
     watch: {
       '$store.state.alert.enabled': function (status) {
         if (status) {
-          this.$modal.show('modalAlert')
+          this.$refs.alertModal.show()
         } else {
-          this.$modal.hide('modalAlert')
+          this.$refs.alertModal.hide()
         }
       },
       'windowWidth': function (windowWidth) {
