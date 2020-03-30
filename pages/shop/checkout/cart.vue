@@ -57,7 +57,7 @@ export default {
       if (this.$cookie.get('user_token') == null) {
         // register a checkout flag for redirection after login
         this.$router.push({ query: { next: 'yes' }})
-        this.$modal.show('loginOrRegister')
+        this.$store.commit('SET_LOGIN_MODAL', true)
       } else {
         this.$router.push(this.localePath('shop-checkout-shipping'))
       }

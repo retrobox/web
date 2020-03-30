@@ -1,98 +1,100 @@
 <template>
-  <div>
-    <div
-      v-show="!$store.state.isAuthenticated"
-      class="account account-desktop">
-      <a @click="login('login')">
-        <Icon value="fas fa-sign-in-alt" />
-        <span class="text">{{ $t('login') }}</span>
-      </a>
-      <a @click="login('register')">
-        <Icon value="fas fa-pencil-alt" />
-        <span class="text">{{ $t('register') }}</span>
-      </a>
-    </div>
-    <div
-      :class="{'account-button': $store.state.isAuthenticated && !is_logout}"
-      class="account-mobile">
+  <div class="flex">
+    <div class="account">
       <div
-        class="bg-grey hover:bg-gray-dark text-white font-bold py-2 px-4 rounded button"
-        @click="$modal.show('loginOrRegister')">
-        {{ $t('account.title') }}
+        v-show="!$store.state.isAuthenticated"
+        class="account-desktop">
+        <a @click="login('login')">
+          <Icon value="fas fa-sign-in-alt" />
+          <span class="text">{{ $t('login') }}</span>
+        </a>
+        <a @click="login('register')">
+          <Icon value="fas fa-pencil-alt" />
+          <span class="text">{{ $t('register') }}</span>
+        </a>
+      </div>
+      <div
+        :class="{'account-button': $store.state.isAuthenticated && !is_logout}"
+        class="account-mobile">
+        <div
+          class="button header-top-button"
+          @click="$refs.loginOrRegisterModal.show()">
+          {{ $t('account.title') }}
+        </div>
       </div>
     </div>
-    <client-only>
-      <modal
-        name="loginOrRegister"
-        height="auto"
-        adaptive
-        class="modal login-or-register-modal">
-        <div class="modal-container">
-          <h3
-            v-if="!is_logout && $store.state.isAuthenticated"
-            class="login-or-register-title">
-            {{ $t('account.title') }}
-          </h3>
-          <h3
-            v-else
-            class="login-or-register-title">
-            {{ $t('login-or-register') }}
-          </h3>
-          <div class="login-or-register-container">
-            <div class="login-or-register">
-              <div v-if="$store.state.isAuthenticated">
-                <a @click="logout()">
-                  <Icon value="fas fa-sign-out-alt" />
-                  <span class="text">{{ $t('account.logout.title') }}</span>
-                </a>
-                <a @click="goToDashboard()">
-                  <Icon value="fas fa-user-circle" />
-                  <span class="text">{{ $t('account.dashboard') }}</span>
-                </a>
-                <a
-                  v-if="$store.state.user.isAdmin"
-                  @click="goToAdminDashboard()">
-                  <Icon value="fas fa-tachometer-alt" />
-                  <span class="text">{{ $t('account.admin') }}</span>
-                </a>
-              </div>
-              <div v-else>
-                <a @click="login('login')">
-                  <Icon value="fas fa-sign-in-alt" />
-                  <span class="text">{{ $t('login') }}</span>
-                </a>
-                <a @click="login('register')">
-                  <Icon value="fas fa-pencil-alt" />
-                  <span class="text">{{ $t('register') }}</span>
-                </a>
-              </div>
-            </div>
+    <Modal
+      ref="loginOrRegisterModal"
+      class="login-or-register-modal"
+      primary-closing>
+      <h3
+        v-if="!is_logout && $store.state.isAuthenticated"
+        class="login-or-register-title">
+        {{ $t('account.title') }}
+      </h3>
+      <h3
+        v-else
+        class="login-or-register-title">
+        {{ $t('login-or-register') }}
+      </h3>
+      <div class="login-or-register-container">
+        <div class="login-or-register">
+          <div v-if="$store.state.isAuthenticated">
+            <a @click="logout()">
+              <Icon value="fas fa-sign-out-alt" />
+              <span class="text">{{ $t('account.logout.title') }}</span>
+            </a>
+            <a @click="goToDashboard()">
+              <Icon value="fas fa-user-circle" />
+              <span class="text">{{ $t('account.dashboard') }}</span>
+            </a>
+            <a
+              v-if="$store.state.user.isAdmin"
+              @click="goToAdminDashboard()">
+              <Icon value="fas fa-tachometer-alt" />
+              <span class="text">{{ $t('account.admin') }}</span>
+            </a>
+          </div>
+          <div v-else>
+            <a @click="login('login')">
+              <Icon value="fas fa-sign-in-alt" />
+              <span class="text">{{ $t('login') }}</span>
+            </a>
+            <a @click="login('register')">
+              <Icon value="fas fa-pencil-alt" />
+              <span class="text">{{ $t('register') }}</span>
+            </a>
           </div>
         </div>
-        <div
-          class="button bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 cancel-button"
-          @click="$modal.hide('loginOrRegister')">
-          {{ $t('close') }}
-        </div>
-      </modal>
-    </client-only>
+      </div>
+    </Modal>
   </div>
 </template>
 
 <script>
   import Icon from "./Icon"
+  import Modal from "~/components/Modal"
   export default {
     name: 'Login',
-    components: {Icon},
+    components: {Icon, Modal},
     data() {
       return {
         is_logout: false
       }
     },
+    watch: {
+      '$store.state.loginModal': function (value) {
+        if (value) {
+          this.$refs.loginOrRegisterModal.show()
+        } else {
+          this.$refs.loginOrRegisterModal.hide()
+        }
+      }
+    },
     methods: {
       login: function (type) {
         //where type is 'login' or 'register'
-        this.$modal.hide('loginOrRegister');
+        this.$refs.loginOrRegisterModal.hide()
         this.$store.commit('SET_IS_LOADING', true)
         let url = window.location;
         if (this.$store.state.loginRedirectRoute !== '' && this.$store.state.loginRedirectRoute !== undefined) {         
@@ -107,7 +109,7 @@
         })
       },
       logout: function () {
-        this.$modal.hide('loginOrRegister');
+        this.$refs.loginOrRegisterModal.hide()
         this.$cookie.delete('user_token', {domain: this.$env.COOKIE_DOMAIN});
         this.is_logout = true;
         this.$store.commit('SET_AUTH', false)
@@ -123,12 +125,13 @@
         }
       },
       goToDashboard: function () {
+        this.$refs.loginOrRegisterModal.hide()
         this.$store.commit('SET_IS_LOADING', false)
         this.$router.push(this.localePath('dashboard'))
         // window.location = this.$env.USER_DASHBOARD_ENDPOINT
       },
       goToAdminDashboard: function () {
-        this.$modal.hide('loginOrRegister');
+        this.$refs.loginOrRegisterModal.hide()
         this.$store.commit('SET_IS_LOADING', true)
         window.location = this.$env.ADMIN_DASHBOARD_ENDPOINT
       }

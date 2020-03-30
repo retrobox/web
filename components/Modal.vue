@@ -1,9 +1,9 @@
 <template>
-  <div class="custom-modal">
+  <client-only>
     <transition name="modal-transition">
       <div
         v-if="enabled"
-        class="modal-overlay"
+        class="custom-modal modal-overlay"
         @click="backgroundClick">
         <div
           class="modal-container"
@@ -11,32 +11,20 @@
           @mouseleave="mouveLeave">
           <div class="modal-content">
             <div class="p-4">
-              <h3 class="mb-6 mt-3">
-                Title
-              </h3>
-              <p>Description</p>
-              <br />
-              <input
-                id="destroy-confirmation"
-                type="checkbox"
-              />
-              <label for="destroy-confirmation">
-                Confirmation
-              </label>
-              <br />
-              <br />
+              <slot/>
             </div>
           </div>
           <div
-            v-if="primaryLabel !== null || secondaryLabel !== null"
+            v-if="primaryLabel !== null || secondaryLabel !== null || primaryClosing"
             class="modal-actions">
             <div
-              v-if="secondaryLabel === null"
+              v-if="secondaryLabel === null || primaryClosing"
               class="modal-single-action">
               <div
                 class="modal-button"
                 @click="primaryCallback">
-                {{ primaryLabel }}
+                <span v-if="primaryClosing">{{ $t('close') }}</span>
+                <span v-else>{{ primaryLabel }}</span>
               </div>
             </div>
             <div
@@ -46,7 +34,8 @@
                 class="w-full md:w-1/2 modal-button"
                 @click="primaryCallback"
               >
-                {{ primaryLabel }}
+                <span v-if="primaryClosing">{{ primaryLabel }}</span>
+                <span v-else>{{ $t('close') }}</span>
               </div>
               <div
                 class="w-full md:w-1/2 modal-button"
@@ -59,7 +48,7 @@
         </div>
       </div>
     </transition>
-  </div>
+  </client-only>
 </template>
 
 <script>
@@ -75,14 +64,16 @@ export default {
       type: String,
       default: null,
       required: false
+    },
+    'primary-closing': {
+      type: Boolean,
+      default: false
     }
   },
   data: () => ({
     enabled: false,
     canBeClicked: true
   }),
-  mounted() {
-  },
   methods: {
     show() {
       //document.body.style = "overflow-y: hidden !important;"

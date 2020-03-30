@@ -12,31 +12,27 @@ $opacity: 0.8;
       display: flex;
       justify-content: space-between;
 
-      .account {
+      .account-desktop {
         display: flex;
         align-items: center;
       }
-
-      a, .button {
-        color: rgba(34, 47, 62, 0.7) !important;
-        font-weight: 400;
-      }
-      a:hover, .button:hover {
-        transition: color 0.1s ease-in-out;
-        color: rgba(34, 47, 62, 1) !important;
-      }
-      .locale_selection {
+      .locale-selection {
         padding-left: 5px;
       }
+      .header-top-button {
+        color: rgba(34, 47, 62, 0.7) !important;
+        font-weight: 400;
+        &:hover {
+          transition: color 0.1s ease-in-out;
+          color: rgba(34, 47, 62, 1) !important;
+        }
+      }
       .account {
-        a:first-of-type {
-          padding-right: 1.2em;
-          border-right: 1px solid rgba(87, 101, 116, 0.5);
-        }
-        a:last-of-type {
-          padding-left: 1.2em;
-        }
+        display: flex;
+        align-items: center;
         a {
+          color: rgba(34,47,62,.7)!important;
+          font-weight: 400;
           display: flex;
           align-content: center;
           align-items: center;
@@ -48,10 +44,27 @@ $opacity: 0.8;
             opacity: 0.8;
             margin-right: 0.5em;
           }
+
+          &:last-of-type {
+            padding-left: 1.2em;
+          }
+          &:hover {
+            transition: color 0.1s ease-in-out;
+            color: rgba(34, 47, 62, 1) !important;
+          }
+          &:first-of-type {
+            padding-right: 1.2em;
+            border-right: 1px solid rgba(87, 101, 116, 0.5);
+          }
         }
         .account-mobile {
-          a {
+          .button {
             border-right: 0 !important;
+            @extend .bg-grey;
+            @extend .text-white;
+            @extend .py-2;
+            @extend .px-4;
+            @extend .rounded;
           }
         }
       }

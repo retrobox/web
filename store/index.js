@@ -38,7 +38,8 @@ export const state = () => ({
     total: 0,
     totalWeight: 0
   },
-  orderNote: ''
+  orderNote: '',
+  loginModal: false
 });
 
 import jwtDecode from "jwt-decode"
@@ -152,6 +153,9 @@ export const mutations = {
   },
   SET_ORDER_NOTE: (state, payload) => {
     state.orderNote = payload
+  },
+  SET_LOGIN_MODAL: (state, payload) => {
+    state.loginModal = payload
   }
 };
 

@@ -103,7 +103,7 @@
         <nuxt-link
           v-if="$i18n.locale === 'en'"
           :to="switchLocalePath('fr')"
-          class="locale_selection font-bold py-2 px-4 button flex">
+          class="header-top-button locale-selection font-bold py-2 px-4 button flex">
           <Icon
             style="margin-right: 8px"
             value="fas fa-flag" />
@@ -112,15 +112,13 @@
         <nuxt-link
           v-if="$i18n.locale === 'fr'"
           :to="switchLocalePath('en')"
-          class="locale_selection font-bold py-2 px-4 button flex">
+          class="header-top-button locale-selection font-bold py-2 px-4 button flex">
           <Icon
             style="margin-right: 8px"
             value="fas fa-flag" />
           <span>{{ $t('english') }}</span>
         </nuxt-link>
-        <div class="account">
-          <Login />
-        </div>
+        <Login />
       </div>
     </div>
     <div class="colored-divider-container">
