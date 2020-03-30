@@ -64,45 +64,29 @@
         {{ $t("save") }}
       </button>
     </div>
-    <client-only>
-      <modal 
-        adaptive 
-        class="modal" 
-        height="auto" 
-        name="destroyAccount">
-        <div class="p-4">
-          <h3 class="mb-6 mt-3">
-            {{ $t("user-dash.destroy.confirmation.title") }}
-          </h3>
-          <p>{{ $t("user-dash.destroy.confirmation.description") }}</p>
-          <br />
-          <input
-            id="destroy-confirmation"
-            v-model="destroyAccountConfirmation"
-            type="checkbox"
-          />
-          <label for="destroy-confirmation">
-            {{ $t("user-dash.destroy.confirmation.checkbox") }}
-          </label>
-          <br />
-          <br />
-        </div>
-        <div class="flex flex-wrap">
-          <div
-            class="w-full md:w-1/2 button bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 text-center cancel-button"
-            @click="$modal.hide('destroyAccount')"
-          >
-            {{ $t("cancel") }}
-          </div>
-          <div
-            class="w-full md:w-1/2 button bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 text-center cancel-button"
-            @click="destroyAccount()"
-          >
-            {{ $t("user-dash.destroy.confirmation.action") }}
-          </div>
-        </div>
-      </modal>
-    </client-only>
+    <Modal
+      ref="destroyAccountConfirmationModal"
+      :primary-label="$t('cancel')"
+      :secondary-label="$t('user-dash.destroy.confirmation.action')"
+      width="large-width"
+      @primary="$refs.destroyAccountConfirmationModal.hide()"
+      @secondary="destroyAccount()">
+      <h3 class="mb-6 mt-3">
+        {{ $t("user-dash.destroy.confirmation.title") }}
+      </h3>
+      <p>{{ $t("user-dash.destroy.confirmation.description") }}</p>
+      <br />
+      <input
+        id="destroy-confirmation"
+        v-model="destroyAccountConfirmation"
+        type="checkbox"
+      />
+      <label for="destroy-confirmation">
+        {{ $t("user-dash.destroy.confirmation.checkbox") }}
+      </label>
+      <br />
+      <br />
+    </Modal>
   </DashboardPage>
 </template>
 
@@ -110,13 +94,15 @@
 import Icon from "~/components/Icon";
 import DashboardPage from "~/components/DashboardPage";
 import ShippingDetailsForm from "~/components/ShippingDetailsForm";
+import Modal from "~/components/Modal";
 
 export default {
   middleware: "authenticated",
   components: {
     Icon,
     DashboardPage,
-    ShippingDetailsForm
+    ShippingDetailsForm,
+    Modal
   },
   head() {
     return {
@@ -155,7 +141,7 @@ export default {
   },
   methods: {
     openDestroyAccount() {
-      this.$modal.show("destroyAccount");
+      this.$refs.destroyAccountConfirmationModal.show()
     },
     destroyAccount() {
       if (
@@ -163,6 +149,7 @@ export default {
         confirm(this.$i18n.t("user-dash.destroy.last-confirmation"))
       ) {
         this.$apitator.get("/dashboard/delete", { withAuth: true }).then(() => {
+          this.$refs.destroyAccountConfirmationModal.hide()
           this.logout(alert);
         });
       }
