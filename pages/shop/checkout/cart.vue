@@ -45,7 +45,7 @@ export default {
   },
   mounted() {
     const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('next') === 'yes') {
+    if (urlParams.get('next') === 'yes' && this.$cookie.get('user_token') !== null) {
       this.next()
     }
   },

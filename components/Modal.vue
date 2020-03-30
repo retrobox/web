@@ -87,10 +87,12 @@ export default {
     hide() {
       //document.body.style = "overflow-y: auto !important;"
       this.enabled = false
+      this.$emit('close')
     },
     backgroundClick() {
       if (this.canBeClicked) {
         this.enabled = false
+        this.$emit('close')
         //document.body.style = "overflow-y: auto !important;"
       }
     },

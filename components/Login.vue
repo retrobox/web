@@ -26,7 +26,8 @@
     <Modal
       ref="loginOrRegisterModal"
       class="login-or-register-modal"
-      primary-closing>
+      primary-closing
+      @close="$store.commit('SET_LOGIN_MODAL', false)">
       <h3
         v-if="!is_logout && $store.state.isAuthenticated"
         class="login-or-register-title">
@@ -84,9 +85,9 @@
     },
     watch: {
       '$store.state.loginModal': function (value) {
-        if (value) {
+        if (value === true) {
           this.$refs.loginOrRegisterModal.show()
-        } else {
+        } else if (value === false) {
           this.$refs.loginOrRegisterModal.hide()
         }
       }
