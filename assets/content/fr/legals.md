@@ -7,11 +7,11 @@ En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance
 **Responsable publication** : Thingmill – contact@thingmill.fr  
 Le responsable publication est une personne physique ou une personne morale.  
 **Webmaster** : Matthieu Bessat – contact@lefuturiste.fr  
-**Hébergeur** : Cloudflare - www.cloudflare.com
-**Autres**  : Enregistré dans le R.C.S Alençon sous le n°844 190 363 000 11
-
-Crédits : Matthieu Bessat, Etienne Chevrollier, Valentin Derouet
-
+**Hébergeur** : Cloudflare - www.cloudflare.com  
+**Autres**  : Enregistré dans le R.C.S Alençon sous le n°844 190 363 000 11  
+<br>
+**Crédits** : Matthieu Bessat, Etienne Chevrollier, Valentin Derouet
+<br>
 Thingmill est representé par Valentin Derouet, Matthieu Bessat, Etienne Chevrollier, entreprise enregistrée à la chambre de commerce.
 
 ### 2\. Conditions générales d’utilisation du site et des services proposés.

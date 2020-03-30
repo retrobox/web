@@ -26,7 +26,6 @@ We make several small conventions to promote our project, in our high school or 
     justify-content: center;
     flex-wrap: wrap;">
   <img src="https://static.retrobox.tech/img/about/conventionalain1.jpg" width="30%">
-  <img src="https://i.imgur.com/Nw0X49x.png">
 </center>
 
 <h2 class="dividing">Project structure</h2>
