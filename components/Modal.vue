@@ -6,6 +6,7 @@
         class="custom-modal modal-overlay"
         @click="backgroundClick">
         <div
+          :class="width"
           class="modal-container"
           @mouseover="mouseOver"
           @mouseleave="mouveLeave">
@@ -68,6 +69,10 @@ export default {
     'primary-closing': {
       type: Boolean,
       default: false
+    },
+    'width': {
+      type: String,
+      default: 'medium-width'
     }
   },
   data: () => ({

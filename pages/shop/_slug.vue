@@ -170,37 +170,30 @@
           </div>
         </div>
       </div>
-      <client-only>
-        <modal
-          name="show_image"
-          adaptive
-          class="modal show-image-modal">
-          <div class="modal-container">
-            <div class="show-image-container">
-              <img
-                :src="to_show"
-                alt="An shop item image">
-            </div>
-          </div>
-          <div
-            class="button bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 cancel-button"
-            @click="$modal.hide('show_image')">
-            {{ $t('close') }}
-          </div>
-        </modal>
-      </client-only>
+      <Modal
+        ref="imageModal"
+        width="large-width"
+        primary-closing>
+        <div class="show-image-container">
+          <img
+            :src="imageToShow"
+            alt="An shop item image">
+        </div>
+      </Modal>
     </div>
-</div></template>
+  </div>
+</template>
 
 <script>
   import marked from "marked"
   import ShopHeader from "~/components/ShopHeader"
   import Icon from "~/components/Icon"
   import Error from "~/components/Error"
+  import Modal from "~/components/Modal"
 
   export default {
     name: 'ShopIndex',
-    components: {Error, Icon, ShopHeader},
+    components: {Error, Icon, ShopHeader, Modal},
     head() {
       return {
         title: this.item == null ? 'Not found' : this.item.title,
@@ -216,7 +209,7 @@
           category: {}
         },
         //url of image to show in modal
-        to_show: '',
+        imageToShow: '',
         selectedStorage: 16,
         //in gb
         storages: [
@@ -250,8 +243,8 @@
     },
     methods: {
       showImage: function (url) {
-        this.to_show = url
-        this.$modal.show('show_image')
+        this.imageToShow = url
+        this.$refs.imageModal.show()
       },
       selectStorage: function (size) {
         this.selectedStorage = size

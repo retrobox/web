@@ -130,24 +130,23 @@
 }
 //on shop buy page an modal to see bigger the images
 .show-image-modal {
-    .modal-container {
-      height: 86%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
+  .modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 
-      .show-image-container {
+    .show-image-container {
+      height: 100%;
+      img {
         height: 100%;
-        img {
-          height: 100%;
-          display: flex;
-          justify-content: center;
-        }
+        display: flex;
+        justify-content: center;
       }
     }
-    .button {
-      text-align: center;
-    }
+  }
+  .button {
+    text-align: center;
+  }
 }

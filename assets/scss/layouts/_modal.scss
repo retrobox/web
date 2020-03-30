@@ -16,11 +16,19 @@
   justify-content: center;
   align-items: center;
   .modal-container {
-    width: 600px;
     background-color: white;
     z-index: 999;
     border-radius: 3px;
     box-shadow: 0 20px 60px -2px rgba(27, 33, 58, 0.4);
+  }
+  .modal-container.medium-width {
+    width: 60vh;
+  }
+  .modal-container.large-width {
+    width: 50em;
+  }
+  .modal-actions {
+    width: 100%;
   }
   .modal-double-action {
     @extend .flex;

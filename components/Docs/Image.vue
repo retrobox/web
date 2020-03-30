@@ -10,31 +10,27 @@
         @click="onClick"/>
     </div>
 
-    <client-only>
-      <modal
-        :name="'imageModal' + id"
-        :width="'920px'"
-        height="auto"
-        adaptive
-        class="modal show-image-modal">
-        <div style="text-align: center;">
-          <img
-            :src="src"
-            :alt="alt">
-        </div>
-        <div
-          class="button bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 cancel-button"
-          @click="exitModal">
-          {{ $t('close') }}
-        </div>
-      </modal>
-    </client-only>
+    <Modal
+      :ref="'imageModal-' + id"
+      width="large-width"
+      class="show-image-modal"
+      primary-closing>
+      <div class="text-center">
+        <img
+          :src="src"
+          :alt="alt">
+      </div>
+    </Modal>
   </div>
 </template>
 
 <script>
+  import Modal from '~/components/Modal'
   export default {
     name: 'DocsImage',
+    components: {
+      Modal
+    },
     props: {
       src: {
         default: '',
@@ -68,11 +64,11 @@
     },
     methods: {
       onClick() {
-        this.$modal.show('imageModal' + this.id)
+        this.$refs['imageModal-' + this.id].show()
         this.$emit('enter')
       },
       exitModal() {
-        this.$modal.hide('imageModal' + this.id)
+        this.$refs['imageModal-' + this.id].hide()
         this.$emit('exit')
       }
     }
