@@ -32,7 +32,7 @@
 
         <ul>
           <li>
-            Quelques bases en soudure (Si vous avez déjà fait quelques systèmes éléctroniques)
+            Quelques bases en soudure (Si vous avez déjà fait quelques systèmes électroniques)
           </li>
           <li>
             Quelques connaissances pour reconnaître des composants
@@ -41,7 +41,7 @@
 
         <br>
 
-        Si vous n'avez pas ses compétences, pas de problèmes ! Vous apprendrez déjà pas mal de choses ici, mais si vous les avez vous irez bien plus vite !
+        Si vous n'avez pas ses compétences, pas de problème ! Vous apprendrez déjà pas mal de choses ici, mais si vous les avez, vous irez bien plus vite !
 
         <h3>Qu'apprenez-vous avec Retrobox ?</h3>
 

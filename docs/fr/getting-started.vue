@@ -268,7 +268,7 @@
         <br />
 
       </div>
-      <DocsImage src="https://www.positron-libre.com/cours/electronique/resistances/images/code-couleur-resistance.png" />
+      <DocsImage src="https://static.retrobox.tech/img/getting-started/RetroPie/resistor-color-chart.png" />
       <DocsImage src="https://static.retrobox.tech/img/composants/ressitance2.jpg" />
     </div>
 

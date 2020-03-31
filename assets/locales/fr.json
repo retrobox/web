@@ -62,7 +62,7 @@
   },
   "newsletter": {
     "title": "Recevez notre newsletter",
-    "description": "Inscrivez vous pour recevoir les dernières informations...",
+    "description": "Inscrivez-vous pour recevoir les dernières informations...",
     "form": {
       "submit": "Valider",
       "email": "Votre email",
@@ -74,10 +74,10 @@
     },
     "error": {
       "title": "Une erreur est survenue",
-      "description": "Il nous est impossible de valider cet adresse email",
+      "description": "Il nous est impossible de valider cette adresse email",
       "missing_description": "Vous n'avez pas fourni d'email",
-      "invalid_description": "L'email que vous avez fournis ne corespond pas à un email",
-      "api_description": "L'api n'a pas répondu comme il fallait",
+      "invalid_description": "L'email que vous avez fournit ne correspond pas à un email",
+      "api_description": "L'api n'a pas répondue comme il fallait",
       "member_exists": "Vous êtes déjà incrit(e) dans notre liste"
     }
   },
@@ -103,7 +103,7 @@
     "go": "En savoir plus",
     "about": {
       "title": "Simplicité, Nostalgie, Modernité ...",
-      "description": "La Retrobox est une console portable permettant d'émuler tout les jeux jusqu'à la PS1, cela n'a jamais étais aussi accessible pour jouer à vos anciens jeux favoris. La console embarque les technologies modernes comme le wifi pour se connecter à votre ordinateur ou votre smartphone et le bluetooth pour connecter un casque ou une manette. La console est dôté d'une sortie HDMI pour jouer même sur votre TV ! Avec ses 8h d'autonomie, des heures et des heures de plaisir dans votre poche"
+      "description": "La Retrobox est une console portable permettant d'émuler tous les jeux jusqu'à la PS1, cela n'a jamais été aussi accessible pour jouer à vos anciens jeux favoris. La console embarque les technologies modernes comme le wifi pour se connecter à votre ordinateur ou votre smartphone et le bluetooth pour connecter un casque ou une manette. La console est dotée d'une sortie HDMI pour jouer même sur votre TV ! Avec ses 8h d'autonomie, des heures et des heures de plaisir dans votre poche."
     },
     "about-us": {
       "title": "Imaginée, Prototypée et Assemblée en Normandie",
@@ -112,7 +112,7 @@
     "advantages": {
       "title": "Plein d'advantages...",
       "game": {
-        "title": "Une bibliothèque exeptionnelle",
+        "title": "Une bibliothèque exceptionnelle",
         "description": "Des dizaines de milliers de jeux développés en 20 ans, des centaines de jeux originaux créés par des fans à portée de clics !"
       },
       "custom": {
@@ -125,47 +125,47 @@
       },
       "switch": {
         "title": "Une console qui s'adapte",
-        "description": "Un maximum de possibilités, poussez plus loin le principe de la console portable, branchez-la à votre TV et jouez dans votre canapé avec ceux que vous aimez !"
+        "description": "Un maximum de possibilités, poussez plus loin le principe de la console portable, branchez-la à votre TV et jouez dans votre canapé avec ce que vous aimez !"
       },
       "easy": {
         "title": "Une console accessible",
-        "description": "Ne vous prenez pas la tête avec la configuration, tous a été préparé pour vous !"
+        "description": "Ne vous prenez pas la tête avec la configuration, tout a été préparé pour vous !"
       },
       "opensource": {
-        "title": "Une console opensource",
-        "description": "La console est opensource c'est à dire que vous pouvez jetter un coup d'oeil au site web, aux schémas ect. pour aucune mauvaises surprises."
+        "title": "Une console open-source",
+        "description": "La console est open-source c'est-à-dire que vous pouvez jeter un coup d'oeil au site web, aux schémas ect. pour aucune mauvaises surprises."
       }
     },
     "start_now": {
       "title": "Commence dès maintenant",
       "kited": {
         "title": "Version kit",
-        "description": "Vous aimez l'électronique et voulez apprendre à souder ? Rien de plus facile, commandez la version kit avec tout ses manuels explicatifs !"
+        "description": "Vous aimez l'électronique et voulez apprendre à souder ? Rien de plus facile, commandez la version kit avec tous ses manuels explicatifs !"
       },
       "non_kited": {
         "title": "Version pré-assemblée",
-        "description": "Commencez l'aventure directement, sans se soucier du coté technique. Plus qu'à allumez la console ! (soudée par nos soins dans l'Orne)"
+        "description": "Commencez l'aventure directement, sans se soucier du coté technique. Plus qu'à allumer la console ! (soudée par nos soins dans l'Orne)"
       }
     }
   },
   "not-found": {
-    "title": "Page non trouvé",
-    "description": "Vous êtes tombé sur la mauvaise page, car elle n'existe pas ou elle a été supprimé."
+    "title": "Page non trouvée",
+    "description": "Vous êtes tombé sur la mauvaise page, car elle n'existe pas ou elle a été supprimée."
   },
   "coming-soon-video": {
     "title": "Vidéo en Attente",
-    "description": "Bientôt une vidéo présentant en détails la retrobox"
+    "description": "Bientôt une vidéo présentant en détails la RetroBox."
   },
   "about": "A propos",
   "terms-of-use": "Conditions d'utilisations",
   "privacy": "Confidentialité",
-  "terms-of-sale": "Conditions générale de vente",
+  "terms-of-sale": "Conditions générales de vente",
   "get-help": "Obtenir de l'aide",
-  "status": "Status des services",
+  "status": "Statut des services",
   "developers": "Développeurs",
   "legals": "Mentions légales",
-  "credits": "Credits",
-  "our-team-members": "Nos membres d'équipe",
+  "credits": "Crédits",
+  "our-team-members": "Notre équipe",
   "account": {
     "title": "Mon compte",
     "logout": {
@@ -188,7 +188,7 @@
       "wait": "Chargement...",
       "success": {
         "title": "Félicitations !",
-        "description": "Votre commande à bien été accepté, nous vous tenons au courant pour la suite !",
+        "description": "Votre commande a bien été acceptée, nous vous tenons au courant pour la suite !",
         "thanks": "Merci pour votre commande"
       }
     },
@@ -263,10 +263,10 @@
       }
     },
     "category": {
-      "empty": "Aucun articles dans cette catégorie"
+      "empty": "Aucun article dans cette catégorie"
     },
     "index": {
-      "empty": "Aucun articles disponibles"
+      "empty": "Aucun article disponible"
     },
     "order-note": {
       "title": "Note au préparateur de la commande",

@@ -9,8 +9,8 @@ The director of the publication is a natural person or a legal person.
 **Webmaster** : Matthieu Bessat - contact@lefuturiste.fr  
 **Host** : Cloudflare - www.cloudflare.com  
 **Others**  : Registered in the R.C.S Alençon with n°844 190 363 000 11
-
-Credits: Matthieu Bessat Etienne Chevrollier, Valentin Derouet
+<br>
+**Credits**  : Matthieu Bessat Etienne Chevrollier, Valentin Derouet
 
 ### 2 \. General conditions of use of the site and services offered.
 
