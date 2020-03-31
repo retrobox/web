@@ -107,67 +107,57 @@
           </div>
         </div>
       </div>
-      <client-only>
-        <modal 
-          adaptive 
-          class="modal" 
-          height="auto"
-          name="orderView">
-          <div class="p-4">
-            <h4 class="mb-3 mt-3">
-              {{ $t("user-dash.orders.details-title", {id: orderToView.id.toUpperCase()}) }}
-            </h4>
-            <div class="shop-order-item-card-mosaic">
-              <div 
-                v-for="item in orderToView.items"
-                :key="item.id"
-                class="shop-order-item-card">
-                <div
-                  :style="item.style"
-                  class="shop-order-item-card-image">
-                </div>
-                <div class="shop-order-item-card-content">
-                  <div class="shop-order-item-card-title">
-                    <h3>{{ item.title }}</h3>
-                  </div>
-                  <div class="shop-order-item-card-description">
-                    {{ item.description_short }} <br>
-                    <ul style="margin-top: .5em">
-                      <li>{{ $t("user-dash.orders.detail.version") }} : {{ item.version }}</li>
-                      <span v-if="item.pivot.shop_item_custom_option_storage !== null">
-                        <li>{{ $t("user-dash.orders.detail.size") }} : {{ item.pivot.shop_item_custom_option_storage }} Gb</li>
-                      </span>
-                      <span v-if="item.pivot.shop_item_custom_option_color !== null">
-                        <li :style="'color: ' + item.pivot.shop_item_custom_option_color">{{ $t("user-dash.orders.detail.color") }} : {{ item.pivot.shop_item_custom_option_color }}</li>
-                      </span>
-                    </ul>
-                  </div>
-                </div>
+      <Modal
+        ref="orderViewModal"
+        primary-closing>
+        <h4 class="mb-3 mt-3">
+          {{ $t("user-dash.orders.details-title", {id: orderToView.id.toUpperCase()}) }}
+        </h4>
+        <div class="shop-order-item-card-mosaic">
+          <div 
+            v-for="item in orderToView.items"
+            :key="item.id"
+            class="shop-order-item-card">
+            <div
+              :style="item.style"
+              class="shop-order-item-card-image">
+            </div>
+            <div class="shop-order-item-card-content">
+              <div class="shop-order-item-card-title">
+                <h3>{{ item.title }}</h3>
+              </div>
+              <div class="shop-order-item-card-description">
+                {{ item.description_short }} <br>
+                <ul style="margin-top: .5em">
+                  <li>{{ $t("user-dash.orders.detail.version") }} : {{ item.version }}</li>
+                  <span v-if="item.pivot.shop_item_custom_option_storage !== null">
+                    <li>{{ $t("user-dash.orders.detail.size") }} : {{ item.pivot.shop_item_custom_option_storage }} Gb</li>
+                  </span>
+                  <span v-if="item.pivot.shop_item_custom_option_color !== null">
+                    <li :style="'color: ' + item.pivot.shop_item_custom_option_color">{{ $t("user-dash.orders.detail.color") }} : {{ item.pivot.shop_item_custom_option_color }}</li>
+                  </span>
+                </ul>
               </div>
             </div>
           </div>
-          <div
-            class="button bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 text-center cancel-button"
-            @click="$modal.hide('orderView')"
-          >
-            {{ $t("close") }}
-          </div>
-        </modal>
-      </client-only>
+        </div>
+      </Modal>
     </div>
   </DashboardPage>
 </template>
 
 <script>
-import DashboardPage from "~/components/DashboardPage";
-import Icon from "~/components/Icon";
+import DashboardPage from "~/components/DashboardPage"
+import Icon from "~/components/Icon"
+import Modal from "~/components/Modal"
 import moment from 'moment'
 
 export default {
   middleware: "authenticated",
   components: {
     DashboardPage,
-    Icon
+    Icon,
+    Modal
   },
   head() {
     return {
@@ -259,8 +249,8 @@ export default {
   },
   methods: {
     viewOrder(order) {
-      this.orderToView = order;
-      this.$modal.show("orderView");
+      this.orderToView = order
+      this.$refs.orderViewModal.show()
     },
     viewBill(order) {
       if (order.bill_url != null) {
