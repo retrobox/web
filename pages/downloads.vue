@@ -44,43 +44,38 @@
         </div>
       </div>
     </div>
-    <client-only>
-      <modal
-        :width="'720px'"
-        name="download_modal"
-        height="auto"
-        adaptive
-        class="modal download-modal">
-        <div class="download-modal-content">
-          <h2 class="download-modal-title">
-            {{ $t('downloads.modal.title') }}
-          </h2>
-          <div class="download-modal-icon">
-            <i
-              id="download-icon"
-              class="icon fas fa-download"></i>
-          </div>
-          <p class="download-modal-description">
-            {{ $t('downloads.modal.description') }}
-          </p>
-          <a
-            class="bg-blue hover:bg-blue-light text-white font-bold py-2 px-4 rounded inline-flex items-center button"
-            @click="launchDownload()">
-            {{ $t('downloads.modal.download') }}
-          </a>
+    <Modal
+      ref="downloadModal"
+      class="download-modal"
+      primary-closing>
+      <div class="download-modal-content">
+        <h2 class="download-modal-title">
+          {{ $t('downloads.modal.title') }}
+        </h2>
+        <div class="download-modal-icon">
+          <i
+            id="download-icon"
+            class="icon fas fa-download"></i>
         </div>
-        <div
-          class="button text-center bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 cancel-button"
-          @click="$modal.hide('download_modal')">
-          {{ $t('close') }}
-        </div>
-      </modal>
-    </client-only>
+        <p class="download-modal-description">
+          {{ $t('downloads.modal.description') }}
+        </p>
+        <a
+          class="bg-blue hover:bg-blue-light text-white font-bold py-2 px-4 rounded inline-flex items-center button"
+          @click="launchDownload()">
+          {{ $t('downloads.modal.download') }}
+        </a>
+      </div>
+    </Modal>
   </div>
 </template>
 
 <script>
+  import Modal from "~/components/Modal"
   export default {
+    components: {
+      Modal
+    },
     head() {
       return {
         title: this.$t('downloads.page.title'),
@@ -104,7 +99,7 @@
     methods: {
       download (version) {
         this.toDownload = this.versions[version]
-        this.$modal.show('download_modal')
+        this.$refs.downloadModal.show()
         setTimeout(() => {
           this.launchDownload()
           this.animateIcon()
