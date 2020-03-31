@@ -3,7 +3,7 @@ EXPOSE 80
 RUN mkdir -p /app
 COPY . /app
 WORKDIR /app
-RUN npm i -g yarn
+RUN if [ ! -f /usr/local/bin/yarn ]; then echo "Installing yarn..." && npm i -g yarn; else echo "Yarn found"; fi
 RUN yarn
 ENV API_ENDPOINT https://api.retrobox.tech
 ENV DOCS_ENDPOINT https://docs.retrobox.tech
