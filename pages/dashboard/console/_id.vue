@@ -170,7 +170,7 @@
               {{ $t("user-dash.console.token-of") }} #{{ console.id }}
             </h3>
             <div class="modal-content text-center">
-              <input 
+              <input
                 v-model="console.token"
                 class="token-input"
                 type="text" />
@@ -309,7 +309,7 @@ export default {
     if (!this.$isServer) {
       this.fetchStatus()
       this.connectWebSocket()
-      console.log('Console token: ', this.console.token)
+      console.log('> Console token: ', this.console.token)
     }
   },
   methods: {
@@ -377,7 +377,7 @@ export default {
       }
     },
     connectWebSocket: function () {
-      console.log("WS_ENDPOINT: ", this.$env.WS_ENDPOINT);
+      console.log("> ENV: WS_ENDPOINT: ", this.$env.WS_ENDPOINT);
       this.resetTerminalSession()
       // connect web socket to wait for update on console status
       this.socket = io(this.$env.WS_ENDPOINT, {
@@ -391,7 +391,7 @@ export default {
         }
       });
       this.socket.on('connect', () => {
-        console.log('Connected with socket server')
+        console.log('> Websocket: Connected with socket server')
       });
 
       this.socket.off('console_status');
@@ -402,12 +402,11 @@ export default {
       //this.socket.off('ssh-opened');
       this.socket.on('socket-id', (data) => {
         this.webSocketSessionId = data;
-        console.log('> SOCKET: Received socket session id: ' + this.webSocketSessionId)
+        console.log('> Websocket: Received socket session id: ' + this.webSocketSessionId)
       });
       this.socket.on('console-status', (data) => {
         this.resetTerminalSession()
-        console.log('Console status update', data);
-        console.log(this.console);
+        console.log('> Console status update', data);
         this.console.is_online = data.isOnline;
         if (data.isOnline) {
           this.shutdownLoading = false;
@@ -442,6 +441,7 @@ export default {
     //   }
     // },
     resetTerminalSession: function () {
+      console.log('> Terminal: RESET')
       this.terminal = null
       this.fitAddon = null
       this.terminalIsOpen = false
@@ -451,7 +451,7 @@ export default {
       // to throw a error at this point, we can use this.socket.off() when this.socket === null
       if (this.socket !== null) {
         this.socket.off('terminal-ready');
-        this.socket.off('terminal-output'); 
+        this.socket.off('terminal-output');
       }
     },
     closeTerminalSession: function () {
@@ -471,24 +471,22 @@ export default {
         })
       }
       if (this.terminal === null) {
-        //this.socket.emit('open-terminal', {id: this.console.id})
+        console.log('> Terminal: Creating a new terminal...')
+        // we send a request to the api to open a terminal session
         this.$apitator.graphQL(`
           query ($id: String!, $webSessionId: String!){
             openConsoleTerminalSession(id: $id, webSessionId: $webSessionId)
           }`, {
-          id: this.console.id,
-          webSessionId: this.socket.id
-        }, {
-          withAuth: true
-        }).then(res => {
-            console.log('Terminal ready ??')
-        })
+            id: this.console.id,
+            webSessionId: this.socket.id
+          }, {withAuth: true})
+        // then we wait for the terminal-ready event
         this.socket.on('terminal-ready', (data) => {
-          console.log('Terminal ready!!!')
+          console.log('> Terminal: ready event received')
           this.fitAddon = new FitAddon()
           this.terminal = new Terminal({
             cursorBlink: true
-          });
+          })
           this.terminal.loadAddon(this.fitAddon)
           window.addEventListener('resize', () => {
             if (this.fitAddon !== null && this.terminalIsOpen) {
@@ -504,8 +502,7 @@ export default {
             this.terminal.write(data)
           })
           this.terminal.onData(data => {
-            console.log('onData', data)
-            this.socket.emit('terminal-input', { 
+            this.socket.emit('terminal-input', {
               consoleId: this.console.id,
               data
             })
@@ -514,6 +511,7 @@ export default {
           this.terminal.focus()
         })
       } else {
+        console.log('> Terminal: reusing a existing terminal')
         setTimeout(() => {
           this.terminal.open(document.getElementById('terminal'));
           this.fitAddon.fit()
