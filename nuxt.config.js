@@ -9,9 +9,6 @@ const join = require('path').join
 const tailwindJS = join(__dirname, 'tailwind.js')
 const getRoutes = require('./getRoutes.js');
 
-const FrMessages = require('./assets/locales/fr.json')
-const EnMessages = require('./assets/locales/en.json')
-
 const baseUrl = 'https://retrobox.tech'
 
 module.exports = {
