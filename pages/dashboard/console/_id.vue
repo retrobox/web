@@ -117,7 +117,7 @@
               <div class="console-card-actions-no-power">
                 <div
                   class="button console-card-action token"
-                  @click="openTokenModal()">
+                  @click="$refs.tokenModal.show()">
                   <Icon value="fas fa-key" />
                   <span class="button-text">{{ $t('user-dash.console.token') }}</span>
                 </div>
@@ -134,7 +134,7 @@
                   <div
                     v-if="console.is_online"
                     class="button console-card-action shutdown"
-                    @click="$modal.show('shutdown')">
+                    @click="$refs.shutdownConfirmModal.show()">
                     <Icon
                       v-if="!shutdownLoading"
                       value="fas fa-power-off" />
@@ -148,7 +148,7 @@
                   <div
                     v-if="console.is_online || rebootLoading"
                     class="button console-card-action reboot"
-                    @click="$modal.show('reboot')">
+                    @click="$refs.rebootConfirmModal.show()">
                     <Icon
                       :spin="rebootLoading"
                       value="fas fa-sync" />
@@ -159,100 +159,48 @@
           </div>
         </div>
       </div>
-      <client-only>
-        <modal
-          adaptive
-          class="console-token-modal modal"
-          height="auto"
-          name="tokenModal">
-          <div class="modal-container">
-            <h3 class="modal-title">
-              {{ $t("user-dash.console.token-of") }} #{{ console.id }}
-            </h3>
-            <div class="modal-content text-center">
-              <input
-                v-model="console.token"
-                class="token-input"
-                type="text" />
-            </div>
-          </div>
-          <div
-            class="button bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 cancel-button text-center"
-            @click="$modal.hide('tokenModal')"
-          >
-            {{ $t("close") }}
-          </div>
-        </modal>
-        <modal
-          adaptive
-          class="console-terminal-session-modal modal"
-          height="auto"
-          name="terminalSession">
-          <div class="modal-container">
-            <div id="terminal"></div>
-          </div>
-          <div
-            class="button bg-grey-lighter hover:bg-grey-light text-gray-darker font-bold py-3 px-5 text-center cancel-button"
-            @click="closeTerminalSession"
-          >
-            {{ $t("close") }}
-          </div>
-        </modal>
-        <modal
-          adaptive
-          class="modal"
-          height="auto"
-          name="shutdown">
-          <div class="p-4">
-            <h3 class="mb-6 mt-3">
-              {{ $t("user-dash.console.shutdown-confirmation.title") }}
-            </h3>
-            <p>{{ $t("user-dash.console.shutdown-confirmation.description") }}</p>
-            <br />
-          </div>
-          <div class="flex flex-wrap">
-            <div
-              class="modal-button"
-              @click="$modal.hide('shutdown')"
-            >
-              {{ $t("cancel") }}
-            </div>
-            <div
-              class="modal-button"
-              @click="shutdown()"
-            >
-              {{ $t("user-dash.console.shutdown") }}
-            </div>
-          </div>
-        </modal>
-        <modal
-          adaptive
-          class="modal"
-          height="auto"
-          name="reboot">
-          <div class="p-4">
-            <h3 class="mb-6 mt-3">
-              {{ $t("user-dash.console.reboot-confirmation.title") }}
-            </h3>
-            <p>{{ $t("user-dash.console.reboot-confirmation.description") }}</p>
-            <br />
-          </div>
-          <div class="flex flex-wrap">
-            <div
-              class="modal-button"
-              @click="$modal.hide('reboot')"
-            >
-              {{ $t("cancel") }}
-            </div>
-            <div
-              class="modal-button"
-              @click="reboot()"
-            >
-              {{ $t("user-dash.console.reboot") }}
-            </div>
-          </div>
-        </modal>
-      </client-only>
+      <Modal
+        ref="tokenModal"
+        class="console-token-modal"
+        primary-closing>
+        <h3 class="modal-title">
+          {{ $t("user-dash.console.token-of") }} #{{ console.id }}
+        </h3>
+        <input
+          v-model="console.token"
+          class="token-input"
+          type="text" />
+      </Modal>
+      <Modal
+        ref="terminalModal"
+        no-margin
+        width="large-width"
+        primary-closing
+        @primary="closeTerminalSession">
+        <div id="terminal"></div>
+      </Modal>
+      <Modal
+        ref="shutdownConfirmModal"
+        :secondary-label="$t('user-dash.console.shutdown')"
+        primary-closing
+        @secondary="shutdown">
+        <h3 class="mb-6 mt-3">
+          {{ $t("user-dash.console.shutdown-confirmation.title") }}
+        </h3>
+        <p>{{ $t("user-dash.console.shutdown-confirmation.description") }}</p>
+        <br />
+      </Modal>
+      <Modal
+        ref="rebootConfirmModal"
+        :secondary-label="$t('user-dash.console.reboot')"
+        primary-closing
+        @secondary="reboot">
+        <h3 class="mb-6 mt-3">
+          {{ $t("user-dash.console.reboot-confirmation.title") }}
+        </h3>
+        <p>{{ $t("user-dash.console.reboot-confirmation.description") }}</p>
+        <br />
+      </Modal>
     </div>
   </DashboardPage>
 </template>
@@ -264,13 +212,15 @@ import Moment from "moment"
 import io from 'socket.io-client'
 import Tooltip from "../../../components/Tooltip";
 import 'xterm/css/xterm.css'
+import Modal from "~/components/Modal"
 
 export default {
   middleware: 'authenticated',
   components: {
     Tooltip,
     DashboardPage,
-    Icon
+    Icon,
+    Modal
   },
   head() {
     return {
@@ -345,7 +295,7 @@ export default {
       })
     },
     shutdown: function () {
-      this.$modal.hide('shutdown');
+      this.$refs.shutdownConfirmModal.hide()
       if (!this.shutdownLoading) {
         this.shutdownLoading = true
         this.$apitator.graphQL(`
@@ -361,7 +311,7 @@ export default {
       }
     },
     reboot: function () {
-      this.$modal.hide('reboot');
+      this.$refs.rebootConfirmModal.hide()
       if (!this.rebootLoading) {
         this.rebootLoading = true
         this.$apitator.graphQL(`
@@ -445,7 +395,7 @@ export default {
       this.terminal = null
       this.fitAddon = null
       this.terminalIsOpen = false
-      this.$modal.hide('terminalSession')
+      this.$refs.terminalModal.hide()
       if (document.getElementById('terminal') !== null) {
         document.getElementById('terminal').innerHTML = '';
       }
@@ -456,12 +406,11 @@ export default {
       }
     },
     closeTerminalSession: function () {
-      this.$modal.hide('terminalSession')
       this.terminalIsOpen = false
     },
     openTerminalSession: function () {
       this.terminalIsOpen = true
-      this.$modal.show('terminalSession')
+      this.$refs.terminalModal.show()
       let resize = () => {
         this.socket.emit('terminal-resize', {
           consoleId: this.console.id,
@@ -519,9 +468,6 @@ export default {
           resize()
         }, 300)
       }
-    },
-    openTokenModal: function () {
-      this.$modal.show('tokenModal')
     }
   }
 }
