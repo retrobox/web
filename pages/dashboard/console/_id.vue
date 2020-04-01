@@ -394,7 +394,7 @@ export default {
         console.log('> Websocket: Connected with socket server')
       });
 
-      this.socket.off('console_status');
+      this.socket.off('console-status');
       this.socket.off('socket-id');
       this.socket.off('terminal-ready');
       this.socket.off('terminal-output');
@@ -445,6 +445,7 @@ export default {
       this.terminal = null
       this.fitAddon = null
       this.terminalIsOpen = false
+      this.$modal.hide('terminalSession')
       if (document.getElementById('terminal') !== null) {
         document.getElementById('terminal').innerHTML = '';
       }
@@ -455,8 +456,8 @@ export default {
       }
     },
     closeTerminalSession: function () {
-      this.terminalIsOpen = false
       this.$modal.hide('terminalSession')
+      this.terminalIsOpen = false
     },
     openTerminalSession: function () {
       this.terminalIsOpen = true
@@ -496,7 +497,6 @@ export default {
           this.terminal.onResize(data => {
             resize()
           })
-          resize()
           this.terminal.open(document.getElementById('terminal'));
           this.socket.on('terminal-output', data => {
             this.terminal.write(data)
