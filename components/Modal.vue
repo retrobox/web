@@ -11,7 +11,7 @@
           @mouseover="mouseOver"
           @mouseleave="mouveLeave">
           <div class="modal-content">
-            <div class="p-4">
+            <div :class="!noMargin ? 'p-4': ''">
               <slot/>
             </div>
           </div>
@@ -73,6 +73,10 @@ export default {
     'width': {
       type: String,
       default: 'medium-width'
+    },
+    'no-margin': {
+      type: Boolean,
+      default: false
     }
   },
   data: () => ({
