@@ -19,7 +19,7 @@
             v-if="primaryLabel !== null || secondaryLabel !== null || primaryClosing"
             class="modal-actions">
             <div
-              v-if="secondaryLabel === null || primaryClosing"
+              v-if="secondaryLabel === null || (primaryClosing && secondaryLabel === NULL)"
               class="modal-single-action">
               <div
                 class="modal-button"
@@ -35,8 +35,8 @@
                 class="w-full md:w-1/2 modal-button"
                 @click="primaryCallback"
               >
-                <span v-if="primaryClosing">{{ primaryLabel }}</span>
-                <span v-else>{{ $t('close') }}</span>
+                <span v-if="primaryClosing">{{ $t('close') }}</span>
+                <span v-else>{{ primaryLabel }}</span>
               </div>
               <div
                 class="w-full md:w-1/2 modal-button"
