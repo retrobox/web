@@ -8,17 +8,17 @@
         <Icon value="fas fa-times-circle" />
       </div>
       <div class="shop-empty-title">
-        <h3>Votre panier est vide</h3>
+        <h3>{{ $t("shop.cart.empty") }}</h3>
       </div>
     </div>
     <div v-if="$store.state.cart.length > 0 && show">
       <div class="checkout-steps">
-        <div 
+        <div
           :class="{actived: step === 1}"
           class="checkout-step"
           @click="goToCart()">
           <span class="checkout-step-number">1.</span>
-          Panier
+          {{ $t("shop.cart.title") }}
         </div>
         <div class="checkout-step-sep">
           <Icon
@@ -29,23 +29,23 @@
           class="checkout-step"
           @click="shipping()">
           <span class="checkout-step-number">2.</span>
-          Livraison
+          {{ $t("shop.shipping") }}
         </div>
         <div class="checkout-step-sep">
           <Icon
             value="fas fa-chevron-right" />
         </div>
-        <div 
+        <div
           :class="{actived: step === 3}"
           class="checkout-step disabled">
           <span class="checkout-step-number">3.</span>
-          Paiment
+          {{ $t("shop.payment") }}
         </div>
       </div>
       <div
         :class="{'checkout-cart': !margins}">
         <slot />
-        <div 
+        <div
           :class="{single: step === 1, double: step > 1}"
           class="checkout-buttons">
           <button

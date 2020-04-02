@@ -179,6 +179,9 @@
     "admin": "Panel admin"
   },
   "shop": {
+    "title": "Shop",
+    "shipping": "Shipment",
+    "payment": "Payment",
     "checkout": {
       "title": "Pay",
       "choise": "Choose a payment method...",
@@ -242,7 +245,6 @@
         "model": "Model"
       }
     },
-    "title": "Shop",
     "cart": {
       "title": "Cart",
       "items": "No article | One item | {count} articles",
