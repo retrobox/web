@@ -178,7 +178,17 @@
         width="large-width"
         primary-closing
         @primary="closeTerminalSession">
-        <div id="terminal"></div>
+        <div
+          v-if="terminalLoading"
+          class="loading-container">
+          <div class="loading">
+            <Icon
+              value="fas fa-sync"
+              spin />
+          </div>
+        </div>
+        <div
+          id="terminal"></div>
       </Modal>
       <Modal
         ref="shutdownConfirmModal"
@@ -241,7 +251,8 @@ export default {
     sshSessionStatus: 'asking',
     terminalSession: null,
     terminal: null,
-    fitAddon: null
+    fitAddon: null,
+    terminalLoading: false
   }),
   async asyncData({ app: { apitator }, params }) {
     let res = await apitator.graphQL(
@@ -381,6 +392,7 @@ export default {
       this.terminalIsOpen = true
       this.$refs.terminalModal.show()
       if (this.terminal === null) {
+        this.terminalLoading = true
         console.log('> Terminal: Creating a new terminal...')
         // we send a request to the api to open a terminal session
         this.$apitator.graphQL(`
@@ -391,7 +403,8 @@ export default {
             webSessionId: this.socket.id
           }, {withAuth: true})
         // then we wait for the terminal-ready event
-        this.socket.on('terminal-ready', (data) => {
+        this.socket.on('terminal-ready', () => {
+          this.terminalLoading = false
           console.log('> Terminal: ready event received')
           this.fitAddon = new FitAddon()
           this.terminal = new Terminal({
