@@ -17,6 +17,7 @@
           </div>
           <div
             v-if="primaryLabel !== null || secondaryLabel !== null || primaryClosing"
+            v-show="!hideActions"
             class="modal-actions">
             <div
               v-if="secondaryLabel === null || (primaryClosing && secondaryLabel === NULL)"
@@ -75,6 +76,10 @@ export default {
       default: 'medium-width'
     },
     'no-margin': {
+      type: Boolean,
+      default: false
+    },
+    'hide-actions': {
       type: Boolean,
       default: false
     }

@@ -174,6 +174,7 @@
       </Modal>
       <Modal
         ref="terminalModal"
+        :hide-actions="hideTerminalModalActions"
         no-margin
         width="large-width"
         primary-closing
@@ -252,7 +253,8 @@ export default {
     terminalSession: null,
     terminal: null,
     fitAddon: null,
-    terminalLoading: false
+    terminalLoading: false,
+    hideTerminalModalActions: true
   }),
   async asyncData({ app: { apitator }, params }) {
     let res = await apitator.graphQL(
@@ -390,6 +392,7 @@ export default {
     },
     openTerminalSession: function () {
       this.terminalIsOpen = true
+      this.hideTerminalModalActions = true
       this.$refs.terminalModal.show()
       if (this.terminal === null) {
         this.terminalLoading = true
@@ -405,6 +408,7 @@ export default {
         // then we wait for the terminal-ready event
         this.socket.on('terminal-ready', () => {
           this.terminalLoading = false
+          this.hideTerminalModalActions = false
           console.log('> Terminal: ready event received')
           this.fitAddon = new FitAddon()
           this.terminal = new Terminal({
@@ -447,6 +451,7 @@ export default {
       } else {
         console.log('> Terminal: reusing a existing terminal')
         setTimeout(() => {
+          this.hideTerminalModalActions = false
           this.terminal.open(document.getElementById('terminal'));
           this.fitAddon.fit()
           this.terminal.focus()
