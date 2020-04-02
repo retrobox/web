@@ -13,6 +13,7 @@
             <div class="console-card-image">
               <img
                 :class="{'console-image-offline': !console.is_online }"
+                alt="Console logo"
                 src="~/assets/images/console.png"
                 class="header-title-logo">
             </div>
@@ -206,13 +207,13 @@
 </template>
 
 <script>
-import DashboardPage from "~/components/DashboardPage"
-import Icon from "~/components/Icon"
-import Moment from "moment"
+import Moment from 'moment'
 import io from 'socket.io-client'
-import Tooltip from "../../../components/Tooltip";
 import 'xterm/css/xterm.css'
-import Modal from "~/components/Modal"
+import DashboardPage from '~/components/DashboardPage'
+import Icon from '~/components/Icon'
+import Tooltip from '~/components/Tooltip'
+import Modal from '~/components/Modal'
 
 export default {
   middleware: 'authenticated',
@@ -244,18 +245,18 @@ export default {
   }),
   async asyncData({ app: { apitator }, params }) {
     let res = await apitator.graphQL(
-      `query ($id: String!){
-          getOneConsole(id: $id) {
-            id,
-            created_at,
-            token
-          }
-        }`, {id: params.id}, {withAuth: true})
-    return {
-      console: res.data.data.getOneConsole
-    }
+      `query ($id: String!) {
+        getOneConsole(id: $id) {
+          id,
+          created_at,
+          token
+        }
+      }`,
+      {id: params.id}, {withAuth: true}
+    )
+    return { console: res.data.data.getOneConsole }
   },
-  mounted () {
+  mounted() {
     if (!this.$isServer) {
       this.fetchStatus()
       this.connectWebSocket()
@@ -265,8 +266,8 @@ export default {
   methods: {
     fetchStatus() {
       this.loading = true
-      this.$apitator.graphQL(`
-        query ($id: String!){
+      this.$apitator.graphQL(
+        `query ($id: String!) {
           getOneConsole(id: $id, with_status: true) {
             id,
             cpu_temp,
@@ -281,12 +282,9 @@ export default {
             disk_size,
             disk_usage
           }
-        }
-      `, {
-        id: this.$route.params.id
-      }, {
-        withAuth: true
-      }).then(res => {
+        }`,
+        { id: this.$route.params.id }, { withAuth: true }
+      ).then(res => {
         this.loading = false
         let data = res.data.data.getOneConsole
         Moment.locale(this.$i18n.locale);
@@ -298,14 +296,10 @@ export default {
       this.$refs.shutdownConfirmModal.hide()
       if (!this.shutdownLoading) {
         this.shutdownLoading = true
-        this.$apitator.graphQL(`
-          mutation ($id: String!){
-            shutdownConsole(id: $id)
-          }`, {
-          id: this.$route.params.id
-        }, {
-          withAuth: true
-        }).then(res => {
+        this.$apitator.graphQL(
+          `mutation ($id: String!){ shutdownConsole(id: $id) }`,
+          { id: this.$route.params.id }, { withAuth: true }
+        ).then(() => {
           this.shutdownLoading = false
         })
       }
@@ -314,14 +308,10 @@ export default {
       this.$refs.rebootConfirmModal.hide()
       if (!this.rebootLoading) {
         this.rebootLoading = true
-        this.$apitator.graphQL(`
-          mutation ($id: String!){
-            rebootConsole(id: $id)
-          }`, {
-          id: this.$route.params.id
-        }, {
-          withAuth: true
-        }).then(res => {
+        this.$apitator.graphQL(
+          `mutation ($id: String!){ rebootConsole(id: $id) }`,
+          { id: this.$route.params.id }, { withAuth: true }
+        ).then(() => {
           this.rebootLoading = false
         })
       }
@@ -364,32 +354,7 @@ export default {
           this.fetchStatus();
         }
       });
-      // this.socket.on('gotty-installed', () => {
-      //   console.log('Gotty installed');
-      //   this.sshSessionStatus = 'gotty-installed'; //now trying to launch gotty and locatunnel
-      // });
-      // this.socket.on('ssh-opened', (data) => {
-      //   console.log('SSH opened');
-      //   console.log(data);
-      //   this.sshSessionUrl = data;
-      //   this.sshSessionStatus = 'opened';
-      // });
     },
-    // openSshSession: function () {
-    //   this.$modal.show('sshSession');
-    //   if (this.sshSessionUrl === '') {
-    //     console.log('Open ssh session...');
-    //     this.$apitator.graphQL(`
-    //       query ($id: String!, $webSessionId: String!){
-    //         openConsoleSshSession(id: $id, webSessionId: $webSessionId)
-    //       }`, {
-    //       id: this.$route.params.id,
-    //       webSessionId: this.webSocketSessionId
-    //     }, {
-    //       withAuth: true
-    //     })
-    //   }
-    // },
     resetTerminalSession: function () {
       console.log('> Terminal: RESET')
       this.terminal = null
@@ -411,15 +376,6 @@ export default {
     openTerminalSession: function () {
       this.terminalIsOpen = true
       this.$refs.terminalModal.show()
-      let resize = () => {
-        this.socket.emit('terminal-resize', {
-          consoleId: this.console.id,
-          data: {
-            cols: this.terminal.cols,
-            rows: this.terminal.rows
-          }
-        })
-      }
       if (this.terminal === null) {
         console.log('> Terminal: Creating a new terminal...')
         // we send a request to the api to open a terminal session
@@ -443,8 +399,14 @@ export default {
               this.fitAddon.fit()
             }
           })
-          this.terminal.onResize(data => {
-            resize()
+          this.terminal.onResize(() => {
+            this.socket.emit('terminal-resize', {
+              consoleId: this.console.id,
+              data: {
+                cols: this.terminal.cols,
+                rows: this.terminal.rows
+              }
+            })
           })
           this.terminal.open(document.getElementById('terminal'));
           this.socket.on('terminal-output', data => {
