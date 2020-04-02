@@ -338,6 +338,7 @@ export default {
       this.socket.off('socket-id');
       this.socket.off('terminal-ready');
       this.socket.off('terminal-output');
+      this.socket.off('terminal-exit');
       //this.socket.off('gotty-installed');
       //this.socket.off('ssh-opened');
       this.socket.on('socket-id', (data) => {
@@ -355,19 +356,22 @@ export default {
         }
       });
     },
-    resetTerminalSession: function () {
+    resetTerminalSession: function (keepModal = false) {
       console.log('> Terminal: RESET')
       this.terminal = null
       this.fitAddon = null
       this.terminalIsOpen = false
-      this.$refs.terminalModal.hide()
-      if (document.getElementById('terminal') !== null) {
-        document.getElementById('terminal').innerHTML = '';
+      if (!keepModal) {
+        this.$refs.terminalModal.hide()
+        if (document.getElementById('terminal') !== null) {
+          document.getElementById('terminal').innerHTML = '';
+        }
       }
       // to throw a error at this point, we can use this.socket.off() when this.socket === null
       if (this.socket !== null) {
         this.socket.off('terminal-ready');
         this.socket.off('terminal-output');
+        this.socket.off('terminal-exit');
       }
     },
     closeTerminalSession: function () {
@@ -411,6 +415,12 @@ export default {
           this.terminal.open(document.getElementById('terminal'));
           this.socket.on('terminal-output', data => {
             this.terminal.write(data)
+          })
+          this.socket.on('terminal-exit', ({ exitCode, sig }) => {
+            console.log('> Terminal: Process exited with code:', exitCode, 'and sig:', sig)
+            this.terminal.write('Process exited with code: ' + exitCode + (sig !== undefined ? 'and with signal: ' + sig : '') + '.')
+            this.terminal.write(' The terminal session is over, you can now close this modal and reopen a terminal session to restart.')
+            this.resetTerminalSession(true)
           })
           this.terminal.onData(data => {
             this.socket.emit('terminal-input', {
