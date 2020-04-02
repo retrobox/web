@@ -68,20 +68,12 @@
   }
 }
 
-
 .console-token-modal {
-  .modal-container {
-    height: 86%;
-  }
   .modal-title {
     padding-top: 1.9em;
-    @extend .text-center;
+    padding-bottom: 2em;
   }
   .modal-content {
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-top: 2.5em;
-    padding-bottom: 2.5em;
     @extend .text-center;
   }
   .token-input {
@@ -95,6 +87,7 @@
     @extend .w-full;
     @extend .appearance-none;
     @extend .leading-normal;
+    margin-bottom: 2em;
   }
 }
 
@@ -149,7 +142,7 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      
+
       .console-card-image {
         width: 6em;
         padding-top: 0.5em;
@@ -263,14 +256,14 @@
             border-bottom-left-radius: 0;
             border-left: 0px;
           }
-          
+
           &.ssh {
             @extend .text-orange;
             @extend .border-orange;
             @extend .bg-transparent;
             @extend .hover\:bg-orange-dark;
             @extend .hover\:text-white;
-            margin-top: .5em;
+            margin-left: 0.5em;
           }
           &.token {
             @extend .text-blue;
@@ -278,10 +271,23 @@
             @extend .bg-transparent;
             @extend .hover\:bg-blue-dark;
             @extend .hover\:text-white;
+            .icon {
+              margin-right: 0;
+            }
+            .button-text {
+              display: none;
+            }
           }
         }
       }
     }
+  }
+}
+
+// Screen width xl breakpoint
+@media (max-width: 1200px) {
+  .console-card {
+    width: 100%;
   }
 }
 
@@ -354,7 +360,7 @@
 }
 
 
-.game-store-mosaic {  
+.game-store-mosaic {
   margin-top: .5em;
   .game-card {
     margin: 0 auto;
@@ -541,7 +547,7 @@
             @extend .px-8;
           }
         }
-    
+
       }
     }
 
