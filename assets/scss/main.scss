@@ -41,7 +41,8 @@
 @import "layouts/_navigation.scss";
 @import "layouts/_checkout.scss";
 
-@media (max-width: 900px) {
+// Screen width lg breakpoint
+@media (max-width: 992px) {
   @import 'layouts-responsive/_article.scss';
   @import 'layouts-responsive/_container.scss';
   @import 'layouts-responsive/_cover.scss';
