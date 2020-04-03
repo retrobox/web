@@ -537,9 +537,6 @@
           @extend .py-2;
           @extend .px-4;
           transition: all 0.2s;
-          &:hover {
-            transition: all 0.2s;
-          }
           .icon {
             margin-right: .5em;
           }
@@ -547,20 +544,23 @@
             @extend .text-blue;
             @extend .bg-transparent;
             @extend .border-blue;
-            @extend .hover\:bg-blue;
-            @extend .hover\:text-white;
+            &:hover, &:focus {
+              @extend .bg-blue;
+              @extend .text-white;
+            }
           }
           &.shop-order-card-bill {
             @extend .bg-green;
             @extend .text-white;
             @extend .border-green;
-            @extend .hover\:bg-transparent;
-            @extend .hover\:text-green;
             @extend .py-4;
             @extend .px-8;
+            &:hover, &:focus {
+              @extend .bg-transparent;
+              @extend .text-green;
+            }
           }
         }
-
       }
     }
 

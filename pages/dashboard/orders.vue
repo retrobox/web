@@ -6,8 +6,8 @@
           {{ $t("user-dash.orders.title") }}
         </h3>
         <div class="shop-cart-container">
-          <div 
-            v-if="orders.length === 0" 
+          <div
+            v-if="orders.length === 0"
             class="shop-empty-container">
             <div class="shop-empty-icon">
               <Icon value="fas fa-times-circle" />
@@ -23,7 +23,7 @@
                 :key="order.id"
                 class="shop-order-card">
                 <div class="shop-order-card-image-mosaic">
-                  <div 
+                  <div
                     v-for="image in order.images"
                     :style="image.style"
                     :key="image.id"
@@ -45,7 +45,7 @@
                           {{ order.status }}
                         </div>
                       </div>
-                      <div 
+                      <div
                         :title="order.created_at"
                         class="shop-order-card-field">
                         <div class="shop-order-card-field-icon">
@@ -114,7 +114,7 @@
           {{ $t("user-dash.orders.details-title", {id: orderToView.id.toUpperCase()}) }}
         </h4>
         <div class="shop-order-item-card-mosaic">
-          <div 
+          <div
             v-for="item in orderToView.items"
             :key="item.id"
             class="shop-order-item-card">
@@ -201,10 +201,10 @@ export default {
       }`, {}, { withAuth: true });
     let data = res.data.data;
     let orders = data.getManyShopOrders.map(order => {
-      order.status = 
-        order.status === 'payed' ? 
+      order.status =
+        order.status === 'payed' ?
           context.app.i18n.t('user-dash.orders.status.processing') :
-        order.status === 'shipped' ? 
+        order.status === 'shipped' ?
           context.app.i18n.t('user-dash.orders.status.being-shipped') :
           context.app.i18n.t('user-dash.orders.status.cancel');
       order.raw_way = order.way
