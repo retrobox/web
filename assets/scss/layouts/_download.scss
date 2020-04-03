@@ -18,14 +18,14 @@
         }
         cursor: pointer;
         transition: color 0.3s ease-in-out;
-        &:hover {
+        &:hover, &:focus {
           cursor: pointer;
           color: #2779bd;
           transition: color 0.3s ease-in-out;
         }
         &.disabled {
           cursor: default !important;
-          &:hover {
+          &:hover, &:focus {
             color: inherit;
           }
         }
@@ -52,7 +52,6 @@
     .os-mobile-item {
       margin-right: 2em;
     }
-
   }
 
   .coming-soon {

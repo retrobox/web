@@ -65,7 +65,7 @@
                   <nuxt-link
                     v-if="previous !== null"
                     :to="localePath({name: 'docs-slug', params: {slug: previous.slug}})"
-                    class="inline-block flex border border-blue rounded py-2 px-4 bg-blue hover:bg-blue-dark text-white">
+                    class="button button-primary">
                     <Icon
                       left
                       value="fas fa-backward"/>
@@ -86,7 +86,7 @@
                   <nuxt-link
                     v-if="next !== null"
                     :to="localePath({name: 'docs-slug', params: {slug: next.slug}})"
-                    class="inline-block flex border border-blue rounded py-2 px-4 bg-blue hover:bg-blue-dark text-white">
+                    class="button button-primary">
                     {{ $t('next') }}
                     <Icon
                       right
@@ -192,7 +192,7 @@
       })
       let componentName = componentNameLetters.join('')
       componentName = (context.app.i18n.locale === 'fr' ? 'French' : 'English') + componentName
-      
+
       let tree = docsConfig.tree.map((item) => {
         return {
           path: '/docs/' + item.slug,

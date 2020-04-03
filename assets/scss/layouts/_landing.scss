@@ -33,30 +33,23 @@ $landing-main-section-opacity: 0.5;
     margin-top: 3.5em;
     .landing-main-button-go {
       @extend .bg-transparent;
-      &:hover {
-        @extend .bg-blue;
-      }
       @extend .text-white;
       @extend .font-semibold;
-      &:hover {
-        @extend .text-white;
-      }
       @extend .py-4;
       @extend .px-8;
       @extend .mr-6;
       @extend .border;
       @extend .border-white;
-      &:hover {
-        @extend .border-transparent;
-      }
       @extend .rounded-full;
       @extend .text-lg;
+      &:hover, &:focus {
+        @extend .border-transparent;
+        @extend .bg-blue;
+        @extend .text-white;
+      }
     }
     .landing-main-button-shop {
       @extend .bg-blue;
-      &:hover {
-        @extend .bg-blue-dark;
-      }
       @extend .text-white;
       @extend .font-semibold;
       @extend .py-4;
@@ -64,6 +57,9 @@ $landing-main-section-opacity: 0.5;
       @extend .rounded-full;
       @extend .button;
       @extend .text-lg;
+      &:hover, &:focus {
+        @extend .bg-blue-dark;
+      }
     }
     a {
       margin-right: 15px;

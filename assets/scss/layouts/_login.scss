@@ -34,7 +34,7 @@
       flex-direction: column;
       justify-content: center;
     }
-    a {
+    button {
       display: flex;
       margin-top: 1.5em;
       font-size: 1.2em !important;
@@ -50,7 +50,7 @@
       .text {
         display: block !important;
       }
-      &:hover {
+      &:hover, &:focus {
         transition: color 0.1s ease-in-out;
         color: rgba(34, 47, 62, 1) !important;
       }

@@ -171,7 +171,7 @@
           <div class="nav-item with-button buy-nav-item">
             <nuxt-link
               :to="localePath({name: 'shop-slug', params: {slug: 'retrobox-kit'}})"
-              class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded button">
+              class="button button-primary">
               <Icon value="fas fa-shopping-cart" />
               {{ $t('buy') }}
             </nuxt-link>

@@ -14,26 +14,26 @@
         </div>
 
         <div class="os-desktop">
-          <div 
+          <button
             class="os-desktop-item win"
             @click="download('win')">
             <i class="icon fab fa-windows"></i>
             <div class="text">{{ $t('downloads.page.os-text.win') }}</div>
-          </div>
-          <div
+          </button>
+          <button
             class="os-desktop-item mac"
             @click="download('mac')">
             <i class="icon fab fa-apple"></i>
             <div class="text">{{ $t('downloads.page.os-text.mac') }}</div>
-          </div>
-          <div
+          </button>
+          <button
             class="os-desktop-item lin"
             @click="download('app_image')">
             <i class="icon fab fa-linux"></i>
             <div class="text">{{ $t('downloads.page.os-text.lin') }}</div>
-          </div>
+          </button>
         </div>
-        
+
         <div>
           <div class="os-mobile">
             <div class="os-mobile-item android disabled"><i class="fab fa-android icon"></i></div>
@@ -60,11 +60,11 @@
         <p class="download-modal-description">
           {{ $t('downloads.modal.description') }}
         </p>
-        <a
-          class="bg-blue hover:bg-blue-light text-white font-bold py-2 px-4 rounded inline-flex items-center button"
+        <button
+          class="inline-flex items-center button button-primary"
           @click="launchDownload()">
           {{ $t('downloads.modal.download') }}
-        </a>
+        </button>
       </div>
     </Modal>
   </div>

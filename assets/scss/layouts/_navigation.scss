@@ -20,9 +20,17 @@
       text-decoration: none;
       transition: color 0.1s ease-in-out;
     }
-    a:hover {
+    a:hover, a:focus {
       color: #3498db;
       transition: color 0.1s ease-in-out;
+    }
+    a:focus {
+      font-weight: 600;
+    }
+    &.active {
+      a:focus {
+        font-weight: bold !important;
+      }
     }
     .sub-nav {
       margin-top: 8px;

@@ -58,7 +58,6 @@
         .buy-main-button {
           @extend .button;
           @extend .bg-red-light;
-          @extend .hover\:bg-red;
           @extend .text-white;
           @extend .font-bold;
           @extend .py-4;
@@ -66,6 +65,9 @@
           @extend .rounded-full;
           @extend .w-full;
           @extend .md\:w-auto;
+          &:focus, &:hover {
+            @extend .bg-red;
+          }
         }
       }
 

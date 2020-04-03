@@ -172,14 +172,7 @@
       }
     }
     .shop-card-buy-button {
-      @extend .button;
-      @extend .bg-blue;
-      @extend .hover\:bg-blue-dark;
-      @extend .text-white;
-      @extend .font-bold;
-      @extend .py-2;
-      @extend .px-4;
-      @extend .rounded-full;
+      border-radius: 9999px !important;
     }
     .shop-card-remove-button {
       @extend .button;
@@ -241,7 +234,7 @@
     .shop-checkout-item:last-of-type {
       margin-right: 0;
     }
-    .shop-checkout-item:hover {
+    .shop-checkout-item:hover, .shop-checkout-item:focus {
       cursor: pointer;
       opacity: 0.8;
       transition: 0.2s opacity;
@@ -258,7 +251,7 @@
         margin-bottom: 0.9em;
       }
       .buy-custom-mosaic {
-        //overflow-x: hidden; 
+        //overflow-x: hidden;
         display: flex;
       }
       .buy-custom-item:hover {
@@ -337,11 +330,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  .shop-checkout-thanks-button {
-    .icon {
-      margin-right: 0.9em;
-    }
-  }
 }
 
 .order-note-container {

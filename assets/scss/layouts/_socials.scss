@@ -23,16 +23,17 @@
           align-items: center;
         }
       }
-      a:hover {
+      a:hover, a:focus {
         opacity: 1;
         transition: 0.2s opacity;
+        text-decoration: none !important;
       }
     }
     li:last-of-type {
       margin-right: 5px;
     }
     li {
-      .icon:hover {
+      .icon:hover, .icon:focus {
         transition: 0.2s filter,color;
         color: #ffffff;
       }

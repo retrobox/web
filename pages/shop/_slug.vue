@@ -50,14 +50,14 @@
                   <div class="buy-custom-type">
                     <div class="buy-custom-title">{{ $t('shop.item.custom.storage') }}</div>
                     <div class="buy-custom-mosaic storage">
-                      <div
+                      <button
                         v-for="storage in storages"
                         :key="storage"
                         :class="{'selected': selectedStorage === storage}"
                         class="buy-custom-item"
                         @click="selectStorage(storage)">
                         {{ storage }} Go
-                      </div>
+                      </button>
                     </div>
                   </div>
 
@@ -65,14 +65,14 @@
                   <div class="buy-custom-type">
                     <div class="buy-custom-title">{{ $t('shop.item.custom.color') }}</div>
                     <div class="buy-custom-mosaic button-colors">
-                      <div
+                      <button
                         v-for="color in colors"
                         :key="color.color"
                         :style="'background-color:' + color.color"
                         :class="{'selected': color.color === selectedColor}"
                         class="buy-custom-item"
                         @click="selectColor(color.color)">
-                      </div>
+                      </button>
                     </div>
                   </div>
 
@@ -117,29 +117,29 @@
                   <div class="buy-social-share-mosaic">
                     <ul>
                       <li class="facebook">
-                        <a 
-                          :href="$t('facebook').link" 
+                        <a
+                          :href="$t('facebook').link"
                           :title="$t('facebook').title">
                           <Icon value="fab fa-facebook" />
                         </a>
                       </li>
                       <li class="twitter">
-                        <a 
-                          :href="$t('twitter').link" 
+                        <a
+                          :href="$t('twitter').link"
                           :title="$t('twitter').title">
                           <Icon value="fab fa-twitter" />
                         </a>
                       </li>
                       <li class="github">
-                        <a 
-                          :href="$t('github').link" 
+                        <a
+                          :href="$t('github').link"
                           :title="$t('github').title">
                           <Icon value="fab fa-github" />
-                        </a>                                         
+                        </a>
                       </li>
                       <li class="discord">
-                        <a 
-                          :href="$t('discord').link" 
+                        <a
+                          :href="$t('discord').link"
                           :title="$t('discord').title">
                           <Icon value="fab fa-discord" />
                         </a>

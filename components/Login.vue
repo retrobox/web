@@ -16,11 +16,11 @@
       <div
         :class="{'account-button': $store.state.isAuthenticated && !is_logout}"
         class="account-mobile">
-        <div
+        <button
           class="button header-top-button"
           @click="$refs.loginOrRegisterModal.show()">
           {{ $t('account.title') }}
-        </div>
+        </button>
       </div>
     </div>
     <Modal
@@ -41,20 +41,20 @@
       <div class="login-or-register-container">
         <div class="login-or-register">
           <div v-if="$store.state.isAuthenticated">
-            <a @click="logout()">
+            <button @click="logout()">
               <Icon value="fas fa-sign-out-alt" />
               <span class="text">{{ $t('account.logout.title') }}</span>
-            </a>
-            <a @click="goToDashboard()">
+            </button>
+            <button @click="goToDashboard()">
               <Icon value="fas fa-user-circle" />
               <span class="text">{{ $t('account.dashboard') }}</span>
-            </a>
-            <a
+            </button>
+            <button
               v-if="$store.state.user.isAdmin"
               @click="goToAdminDashboard()">
               <Icon value="fas fa-tachometer-alt" />
               <span class="text">{{ $t('account.admin') }}</span>
-            </a>
+            </button>
           </div>
           <div v-else>
             <a @click="login('login')">
@@ -98,7 +98,7 @@
         this.$refs.loginOrRegisterModal.hide()
         this.$store.commit('SET_IS_LOADING', true)
         let url = window.location;
-        if (this.$store.state.loginRedirectRoute !== '' && this.$store.state.loginRedirectRoute !== undefined) {         
+        if (this.$store.state.loginRedirectRoute !== '' && this.$store.state.loginRedirectRoute !== undefined) {
           url = window.location.origin + this.$store.state.loginRedirectRoute
         }
         this.$cookie.set('login_redirection_url', url, {domain: this.$env.COOKIE_DOMAIN});

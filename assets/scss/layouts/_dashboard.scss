@@ -230,47 +230,60 @@
           &.details {
             @extend .text-blue;
             @extend .border-blue;
-            @extend .hover\:bg-blue-dark;
-            @extend .hover\:text-white;
             @extend .bg-transparent;
+            &:hover, &:focus {
+              @extend .bg-blue-dark;
+              @extend .text-white;
+            }
           }
           &.shutdown {
             @extend .text-red;
             @extend .border-red;
-            @extend .hover\:bg-red-dark;
-            @extend .hover\:text-white;
             @extend .bg-transparent;
 
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
             border-right-color: #7f8c8d;
+
+            &:hover, &:focus {
+              @extend .bg-red-dark;
+              @extend .text-white;
+            }
           }
           &.reboot {
             @extend .text-green;
             @extend .border-green;
             @extend .bg-transparent;
-            @extend .hover\:bg-green-dark;
-            @extend .hover\:text-white;
 
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
             border-left: 0px;
+
+            &:hover, &:focus {
+              @extend .bg-green-dark;
+              @extend .text-white;
+            }
           }
 
           &.ssh {
             @extend .text-orange;
             @extend .border-orange;
             @extend .bg-transparent;
-            @extend .hover\:bg-orange-dark;
-            @extend .hover\:text-white;
             margin-left: 0.5em;
+
+            &:hover, &:focus {
+              @extend .bg-orange-dark;
+              @extend .text-white;
+            }
           }
           &.token {
             @extend .text-blue;
             @extend .border-blue;
             @extend .bg-transparent;
-            @extend .hover\:bg-blue-dark;
-            @extend .hover\:text-white;
+            &:hover, &:focus {
+              @extend .bg-blue-dark;
+              @extend .text-white;
+            }
             .icon {
               margin-right: 0;
             }

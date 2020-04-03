@@ -20,31 +20,33 @@
             v-show="!hideActions"
             class="modal-actions">
             <div
-              v-if="secondaryLabel === null || (primaryClosing && secondaryLabel === NULL)"
+              v-if="secondaryLabel === null || (primaryClosing && secondaryLabel === null)"
               class="modal-single-action">
-              <div
+              <button
+                ref="primaryButton"
                 class="modal-button"
                 @click="primaryCallback">
                 <span v-if="primaryClosing">{{ $t('close') }}</span>
                 <span v-else>{{ primaryLabel }}</span>
-              </div>
+              </button>
             </div>
             <div
               v-if="secondaryLabel !== null"
               class="modal-double-action">
-              <div
+              <button
+                ref="primaryButton"
                 class="w-full md:w-1/2 modal-button"
                 @click="primaryCallback"
               >
                 <span v-if="primaryClosing">{{ $t('close') }}</span>
                 <span v-else>{{ primaryLabel }}</span>
-              </div>
-              <div
+              </button>
+              <button
                 class="w-full md:w-1/2 modal-button"
                 @click="secondaryCallback"
               >
                 {{ secondaryLabel }}
-              </div>
+              </button>
             </div>
           </div>
         </div>
@@ -82,21 +84,38 @@ export default {
     'hide-actions': {
       type: Boolean,
       default: false
+    },
+    'focus-primary': {
+      type: Boolean,
+      default: true
     }
   },
   data: () => ({
     enabled: false,
-    canBeClicked: true
+    canBeClicked: true,
+    previousFocusedElement: null
   }),
   methods: {
     show() {
       //document.body.style = "overflow-y: hidden !important;"
-      this.enabled = true
+      return new Promise((resolve) => {
+        this.enabled = true
+        this.previousFocusedElement = document.activeElement
+        this.$nextTick(() => {
+          if (this.focusPrimary) {
+            this.$refs.primaryButton.focus()
+          }
+          resolve()
+        })
+      })
     },
     hide() {
       //document.body.style = "overflow-y: auto !important;"
       this.enabled = false
       this.$emit('close')
+      if (this.focusPrimary && this.previousFocusedElement !== null) {
+        this.previousFocusedElement.focus()
+      }
     },
     backgroundClick() {
       if (this.canBeClicked) {
@@ -114,7 +133,7 @@ export default {
     primaryCallback() {
       this.$emit('primary')
       if (this.primaryClosing) {
-        this.enabled = false
+        this.hide()
       }
     },
     secondaryCallback() {

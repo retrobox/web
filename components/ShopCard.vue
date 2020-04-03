@@ -1,7 +1,7 @@
 <template>
   <div
     class="shop-card">
-    <div 
+    <div
       class="shop-card-thumb"
       @click="goTo()">
       <div
@@ -9,36 +9,36 @@
         class="shop-card-image"></div>
     </div>
     <div class="shop-card-content">
-      <h4 
-        class="shop-card-title" 
+      <h4
+        class="shop-card-title"
         @click="goTo()">
         {{ item.title }}
       </h4>
-      <p 
+      <p
         class="shop-card-description"
         @click="goTo()">
         {{ item.description_short }}
       </p>
       <div class="shop-card-footer">
-        <span 
+        <span
           class="price"
           @click="goTo()">
           € {{ item.price }}
         </span>
-        <div
+        <button
           v-if="removeMode"
-          class="shop-card-remove-button"
+          class="button button-secondary shop-card-remove-button"
           @click="$emit('removed')">
           <Icon value="fas fa-times-circle"/>
           Remove
-        </div>
-        <div
+        </button>
+        <button
           v-else
-          class="shop-card-buy-button"
+          class="button button-primary shop-card-buy-button"
           @click="goTo()">
           <Icon value="fas fa-shopping-cart"/>
           {{ $t('buy') }}
-        </div>        
+        </button>
       </div>
     </div>
   </div>

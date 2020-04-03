@@ -25,6 +25,7 @@
           ref="alertModal"
           class="alert-modal"
           primary-closing
+          focus-primary
           @primary="$store.commit('REMOVE_ALERT')">
           <div class="alert-container">
             <div class="alert-content">

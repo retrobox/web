@@ -22,8 +22,8 @@ $opacity: 0.8;
       .header-top-button {
         color: rgba(34, 47, 62, 0.7) !important;
         font-weight: 400;
-        &:hover {
-          transition: color 0.1s ease-in-out;
+        transition: color 0.1s ease-in-out;
+        &:hover, &:focus {
           color: rgba(34, 47, 62, 1) !important;
         }
       }
@@ -98,13 +98,8 @@ $opacity: 0.8;
       a {
         transition: opacity 0.2s ease-in-out;
       }
-      a:hover {
-        // margin-bottom: 2px;
-        // border-bottom: 2px solid black;
-        // border-bottom-left-radius: 5px;
-        // border-bottom-right-radius: 5px;
-
-        opacity: 0.8;
+      a:hover, a:focus {
+        opacity: 0.7;
         transition: opacity 0.2s ease-in-out;
       }
     }
@@ -123,8 +118,11 @@ $opacity: 0.8;
       //height: 48px;
       display: flex;
       align-items: center;
-      .header-title a {
-        color: black;
+      a {
+        transition: opacity 0.2s ease-in-out;
+        &:hover, &:focus {
+          opacity: 0.6;
+        }
       }
     }
     .header-title-container {
@@ -136,6 +134,11 @@ $opacity: 0.8;
       }
     }
     .header-nav-container {
+      .buy-nav-item {
+        a:hover, a:focus {
+          @extend .bg-blue-dark;
+        }
+      }
       .nav-toggle {
         display: flex;
         align-items: center;

@@ -7,12 +7,13 @@
     </div>
     <div class="shop-checkout-container container mx-auto">
       <div class="shop-checkout-thanks">
-        <a
-          class="shop-checkout-thanks-button bg-blue hover:bg-blue-light text-white font-bold py-4 px-8 rounded inline-flex items-center button"
+        <button
+          ref="homeButton"
+          class="button button-primary button-big"
           @click="$router.push(localePath('index'))">
           <Icon value="fas fa-home" />
           {{ $t('home') }}
-        </a>
+        </button>
       </div>
     </div>
   </div>
@@ -28,6 +29,7 @@
       }
     },
     mounted () {
+      this.$refs.homeButton.focus()
       setTimeout(() => {
         // TODO: fix: alert doesn't launch when navigating directly via history mode
         this.$store.commit('ADD_ALERT', {

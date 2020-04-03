@@ -55,7 +55,9 @@
     @extend .md\:w-1\/2;
     @extend .button;
     @extend .bg-grey-lighter;
-    @extend .hover\:bg-grey-light;
+    &:hover, &:focus {
+      @extend .bg-grey-light;
+    }
     //@extend .text-gray-darker;
     @extend .font-bold;
     @extend .py-3;

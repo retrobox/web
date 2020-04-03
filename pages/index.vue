@@ -2,18 +2,18 @@
   <div class="landing-back">
     <div class="landing-main-back"></div>
     <div class="landing-main">
-      <div 
+      <div
         class="landing-main-content"
         data-aos="fade-up">
         <h1 class="landing-main-title">{{ $t('landing.title') }}</h1>
         <p class="landing-main-subtitle">{{ $t('landing.sub_title') }}</p>
         <div class="landing-main-actions">
-          <a
-            href="#"
+          <button
+            ref="goButton"
             class="landing-main-button-go button"
             @click="scrollToDescription()">
             {{ $t('landing.go') }}
-          </a>
+          </button>
           <nuxt-link
             :to="localePath({name: 'shop-slug', params: {slug: 'retrobox-kit'}})"
             class="landing-main-button-shop button">
@@ -252,7 +252,7 @@
 
                 <nuxt-link
                   :to="localePath({name: 'shop-slug', params: {slug: 'retrobox-non-kit'}})"
-                  class="button bg-transparent hover:bg-blue text-blue font-semibold hover:text-white py-2 px-4 border border-blue hover:border-transparent rounded-full">
+                  class="button bg-transparent hover:bg-blue focus:bg-blue text-blue font-semibold hover:text-white focus:text-white py-2 px-4 border border-blue hover:border-transparent rounded-full">
                   <Icon value="fas fa-shopping-cart"/>
                   {{ $t('buy') }}
                 </nuxt-link>

@@ -116,23 +116,23 @@
             </div>
             <div class="console-card-actions">
               <div class="console-card-actions-no-power">
-                <div
+                <button
                   class="button console-card-action token"
-                  @click="$refs.tokenModal.show()">
+                  @click="openTokenModal()">
                   <Icon value="fas fa-key" />
                   <span class="button-text">{{ $t('user-dash.console.token') }}</span>
-                </div>
-                <div
+                </button>
+                <button
                   v-if="console.is_online"
                   class="button console-card-action ssh"
                   @click="openTerminalSession()">
                   <Icon value="fas fa-terminal" />
                   <span class="button-text">{{ $t('user-dash.console.terminal') }}</span>
-                </div>
+                </button>
               </div>
               <div class="console-card-actions-power no-text">
                 <Tooltip :value="$t('user-dash.console.shutdown')">
-                  <div
+                  <button
                     v-if="console.is_online"
                     class="button console-card-action shutdown"
                     @click="$refs.shutdownConfirmModal.show()">
@@ -143,17 +143,17 @@
                       v-else
                       value="fas fa-sync"
                       spin />
-                  </div>
+                  </button>
                 </Tooltip>
                 <Tooltip :value="$t('user-dash.console.reboot')">
-                  <div
+                  <button
                     v-if="console.is_online || rebootLoading"
                     class="button console-card-action reboot"
                     @click="$refs.rebootConfirmModal.show()">
                     <Icon
                       :spin="rebootLoading"
                       value="fas fa-sync" />
-                  </div>
+                  </button>
                 </Tooltip>
               </div>
             </div>
@@ -168,6 +168,7 @@
           {{ $t("user-dash.console.token-of") }} #{{ console.id }}
         </h3>
         <input
+          ref="tokenInput"
           v-model="console.token"
           class="token-input"
           type="text" />
@@ -458,6 +459,12 @@ export default {
           resize()
         }, 300)
       }
+    },
+    openTokenModal: function () {
+      this.$refs.tokenModal.show().then(() => {
+        this.$refs.tokenInput.focus()
+        this.$refs.tokenInput.select()
+      })
     }
   }
 }

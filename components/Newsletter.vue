@@ -24,8 +24,8 @@
                 type="text" />
             </div>
             <div class="newsletter-form-button">
-              <div
-                class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded button"
+              <button
+                class="button button-primary w-full"
                 @click="submit()">
                 <span v-if="loading === false">{{ $t('newsletter.form.submit') }}</span>
                 <div
@@ -36,7 +36,7 @@
                     spin />
                   {{ $t('loading') }}
                 </div>
-              </div>
+              </button>
             </div>
           </div>
         </div>

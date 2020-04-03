@@ -5,7 +5,9 @@
         <div class="account-card">
           <div class="account-card-content">
             <div class="account-card-avatar">
-              <img :src="user.last_avatar" />
+              <img
+                :src="user.last_avatar"
+                alt="avatar" />
             </div>
             <div class="account-card-details">
               <div class="account-card-item account-card-username">
@@ -20,26 +22,26 @@
       </div>
       <div class="w-full md:w-1/2">
         <div class="account-actions">
-          <a 
-            class="with-link account-action" 
+          <button
+            class="with-link account-action"
             @click="openDestroyAccount()">
             <Icon value="fas fa-trash" />
             {{ $t("user-dash.destroy.title") }}
-          </a>
-          <a
+          </button>
+          <button
             v-if="user.is_admin"
             class="with-link account-action"
             @click="adminDashboard()"
           >
             <Icon value="fas fa-shield-alt" />
             {{ $t("user-dash.admin-panel") }}
-          </a>
-          <a 
-            class="with-link account-action" 
+          </button>
+          <button
+            class="with-link account-action"
             @click="logout()">
             <Icon value="fas fa-sign-out-alt" />
             {{ $t("user-dash.logout") }}
-          </a>
+          </button>
         </div>
       </div>
     </div>
@@ -174,7 +176,7 @@ export default {
       this.$refs.shippingDetailsForm.save()
       this.saving = true
     },
-    shippingDetailsSaved() {      
+    shippingDetailsSaved() {
       this.saving = false
       this.$store.commit("ADD_ALERT", {
         type: "success",

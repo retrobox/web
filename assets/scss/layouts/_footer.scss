@@ -11,9 +11,9 @@
         color: #2c3e50;
         transition: color 0.2s ease-in-out;
       }
-      a:hover {
+      a:hover, a:focus {
         color: rgba(44, 62, 80, 0.8);
-        text-decoration: none;
+        text-decoration: underline;
         transition: color 0.2s ease-in-out;
       }
       .footer-socials {
@@ -39,6 +39,13 @@
         img {
           height: 4em;
           width: auto;
+        }
+        a {
+          transition: opacity 0.2s ease-in-out;
+          &:focus, &:hover {
+            text-underline: none;
+            opacity: 0.8;
+          }
         }
       }
       .footer-links {
@@ -71,11 +78,9 @@
         opacity: 0.7;
         transition: opacity 0.2s ease-in-out;
       }
-      a:hover {
+      a:hover, a:focus {
         opacity: 1;
-        transition: 0.2s opacity;
-        text-decoration: none;
-        transition: opacity 0.2s ease-in-out;
+        text-decoration: underline;
       }
       .footer-inline-links {
         ul {
@@ -98,7 +103,6 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-
     }
   }
 }
