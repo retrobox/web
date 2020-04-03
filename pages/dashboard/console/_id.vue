@@ -256,7 +256,8 @@ export default {
     terminal: null,
     fitAddon: null,
     terminalLoading: false,
-    hideTerminalModalActions: true
+    hideTerminalModalActions: true,
+    terminalWaitForExit: false
   }),
   async asyncData({ app: { apitator }, params }) {
     let res = await apitator.graphQL(
@@ -371,16 +372,15 @@ export default {
         }
       });
     },
-    resetTerminalSession: function (keepModal = false) {
+    resetTerminalSession: function () {
       console.log('> Terminal: RESET')
       this.terminal = null
       this.fitAddon = null
       this.terminalIsOpen = false
-      if (!keepModal) {
-        this.$refs.terminalModal.hide()
-        if (document.getElementById('terminal') !== null) {
-          document.getElementById('terminal').innerHTML = '';
-        }
+      this.terminalWaitForExit = false
+      this.$refs.terminalModal.hide()
+      if (document.getElementById('terminal') !== null) {
+        document.getElementById('terminal').innerHTML = '';
       }
       // to throw a error at this point, we can use this.socket.off() when this.socket === null
       if (this.socket !== null) {
@@ -391,6 +391,9 @@ export default {
     },
     closeTerminalSession: function () {
       this.terminalIsOpen = false
+      if (this.terminalWaitForExit) {
+        this.resetTerminalSession()
+      }
     },
     openTerminalSession: function () {
       this.terminalIsOpen = true
@@ -437,15 +440,19 @@ export default {
           })
           this.socket.on('terminal-exit', ({ exitCode, sig }) => {
             console.log('> Terminal: Process exited with code:', exitCode, 'and sig:', sig)
-            this.terminal.write('Process exited with code: ' + exitCode + (sig !== undefined ? 'and with signal: ' + sig : '') + '.')
-            this.terminal.write(' The terminal session is over, you can now close this modal and reopen a terminal session to restart.')
-            this.resetTerminalSession(true)
+            this.terminal.write('Terminal process exited with code: ' + exitCode + (sig !== undefined ? 'and with signal: ' + sig : '') + '.')
+            this.terminal.write(' To exit, press any key...')
+            this.terminalWaitForExit = true
           })
           this.terminal.onData(data => {
-            this.socket.emit('terminal-input', {
-              consoleId: this.console.id,
-              data
-            })
+            if (this.terminalWaitForExit) {
+              this.resetTerminalSession()
+            } else {
+              this.socket.emit('terminal-input', {
+                consoleId: this.console.id,
+                data
+              })
+            }
           })
           this.fitAddon.fit()
           this.terminal.focus()
@@ -457,7 +464,6 @@ export default {
           this.terminal.open(document.getElementById('terminal'));
           this.fitAddon.fit()
           this.terminal.focus()
-          resize()
         }, 300)
       }
     },
