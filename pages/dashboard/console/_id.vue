@@ -170,6 +170,7 @@
         <input
           ref="tokenInput"
           v-model="console.token"
+          readonly
           class="token-input"
           type="text" />
       </Modal>
