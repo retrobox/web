@@ -65,7 +65,7 @@
                   <nuxt-link
                     v-if="previous !== null"
                     :to="localePath({name: 'docs-slug', params: {slug: previous.slug}})"
-                    class="button button-primary">
+                    class="button button-primary flex">
                     <Icon
                       left
                       value="fas fa-backward"/>
@@ -74,7 +74,7 @@
                 </li>
                 <li class="mr-3">
                 </li>
-                <li class="mr-3">
+                <li class="">
                   <a
                     v-if="next === null"
                     class="inline-block flex py-2 px-4 text-grey-light cursor-not-allowed disabled">
@@ -86,7 +86,7 @@
                   <nuxt-link
                     v-if="next !== null"
                     :to="localePath({name: 'docs-slug', params: {slug: next.slug}})"
-                    class="button button-primary">
+                    class="button button-primary flex">
                     {{ $t('next') }}
                     <Icon
                       right
