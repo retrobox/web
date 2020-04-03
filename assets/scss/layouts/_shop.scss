@@ -296,7 +296,7 @@
         border-color: #ffffff;
       }
 
-      .buy-custom-item:hover {
+      .buy-custom-item:hover, .buy-custom-item:focus {
         opacity: 1;
         transition: 0.2s opacity;
       }
