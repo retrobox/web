@@ -25,6 +25,7 @@ export default {
     }
   },
   created () {
+    console.error(this.error.statusCode, this.error.message)
     this.$store.commit('SET_HAS_NUXT_ERROR', true)
   },
   destroyed () {
