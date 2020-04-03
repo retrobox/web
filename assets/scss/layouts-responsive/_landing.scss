@@ -11,14 +11,10 @@ $landing-main-section-height: 80vh;
     display: flex;
     flex-direction: column;
 
-    a {
+    button, a {
       margin-bottom: 0.9em;
-      margin-right: 0;
+      margin-right: 0 !important;
     }
-  }
-
-  .landing-main-actions a:first-of-type {
-    margin-right: 0;
   }
 }
 
