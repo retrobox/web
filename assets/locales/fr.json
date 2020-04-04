@@ -376,6 +376,13 @@
       "shutdown": "Eteindre",
       "token": "Token",
       "token-of": "Token de la console",
+      "reset-token": {
+        "title": "Réinitialiser le token",
+        "confirmation": "Réinitialiser le token est une action dangeureuse",
+        "confirmation-description": "Le token permet à l'overlay, donc à la console de se connecter, si vous réinitialisez le token, la console n'aurat plus la possibilité de se connecter. Pour rétablir la connexion vous devrez changer le token dans le fichier '/boot/overlay.json' dans la carte sd de votre console.",
+        "success": "Token réinitialisé !",
+        "success-description": "Voilà, c'est fait !"
+      },
       "shutdown-confirmation": {
         "title": "Voulez vous vraiment éteindre votre console ?",
         "description": "Cela va évidemment... bah éteindre la console. C'est fou la technologie non ?"

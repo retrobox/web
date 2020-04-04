@@ -118,7 +118,7 @@
               <div class="console-card-actions-no-power">
                 <button
                   class="button console-card-action token"
-                  @click="openTokenModal()">
+                  @click="showTokenModal">
                   <Icon value="fas fa-key" />
                   <span class="button-text">{{ $t('user-dash.console.token') }}</span>
                 </button>
@@ -162,8 +162,11 @@
       </div>
       <Modal
         ref="tokenModal"
+        :primary-label="$t('user-dash.console.reset-token.title')"
+        :focus="null"
         class="console-token-modal"
-        closing="primary">
+        closing="secondary"
+        @primary="showResetTokenModal">
         <h3 class="modal-title">
           {{ $t("user-dash.console.token-of") }} #{{ console.id }}
         </h3>
@@ -173,6 +176,19 @@
           readonly
           class="token-input"
           type="text" />
+      </Modal>
+      <Modal
+        ref="resetTokenConfirmModal"
+        :primary-label="$t('user-dash.console.reset-token.title')"
+        focus="secondary"
+        closing="secondary"
+        @secondary="showTokenModal"
+        @primary="resetToken">
+        <h3 class="mb-6 mt-3">
+          {{ $t("user-dash.console.reset-token.confirmation") }}
+        </h3>
+        <p>{{ $t("user-dash.console.reset-token.confirmation-description") }}</p>
+        <br />
       </Modal>
       <Modal
         ref="terminalModal"
@@ -470,11 +486,34 @@ export default {
         }, 300)
       }
     },
-    openTokenModal: function () {
+    showTokenModal: function () {
       this.$refs.tokenModal.show().then(() => {
         this.$refs.tokenInput.focus()
         this.$refs.tokenInput.select()
       })
+    },
+    resetToken: function () {
+      this.$refs.resetTokenConfirmModal.hide()
+      this.$apitator.graphQL(`
+          mutation ($id: String!) {
+            resetConsoleToken(id: $id) {
+              overlay_killed,
+              token
+            }
+          }`, {
+        id: this.console.id
+      }, {withAuth: true}).then(res => {
+        this.console.token = res.data.data.resetConsoleToken.token
+        this.$store.commit('ADD_ALERT', {
+          type: 'success',
+          title: this.$t('user-dash.console.reset-token.success'),
+          description: this.$t('user-dash.console.reset-token.success-description')
+        })
+      })
+    },
+    showResetTokenModal: function () {
+      this.$refs.tokenModal.hide()
+      this.$refs.resetTokenConfirmModal.show()
     }
   }
 }

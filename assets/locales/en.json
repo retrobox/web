@@ -376,6 +376,13 @@
       "shutdown": "Shutdown",
       "token": "Token",
       "token-of": "Token of console",
+      "reset-token": {
+        "title": "Reset token",
+        "confirmation": "The action of resetting the token is a dangerous one",
+        "confirmation-description": "The token enable the connexion between the server and the console overlay, if the token is reset the overlay (so the console) will be no longer able to connect to the world. To get back this connexion you will have to replace the token in the '/boot/overlay.json' file.",
+        "success": "The token was resetted!",
+        "success-description": "Now it's done!"
+      },
       "shutdown-confirmation": {
         "title": "Power off is a good thing ?",
         "description": "Do you really want to do this kind of thing to your poor little happy console ? She doesn't like to be alone in the dark. I hope she will be back soon."
