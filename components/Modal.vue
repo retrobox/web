@@ -4,6 +4,7 @@
       <div
         v-if="enabled"
         class="custom-modal modal-overlay"
+        @keydown.esc="hide"
         @click="backgroundClick">
         <div
           :class="width + '-width'"
