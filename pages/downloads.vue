@@ -47,7 +47,7 @@
     <Modal
       ref="downloadModal"
       class="download-modal"
-      primary-closing>
+      closing="primary">
       <div class="download-modal-content">
         <h2 class="download-modal-title">
           {{ $t('downloads.modal.title') }}

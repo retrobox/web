@@ -109,7 +109,7 @@
       </div>
       <Modal
         ref="orderViewModal"
-        primary-closing>
+        closing="primary">
         <h4 class="mb-3 mt-3">
           {{ $t("user-dash.orders.details-title", {id: orderToView.id.toUpperCase()}) }}
         </h4>

@@ -163,7 +163,7 @@
       <Modal
         ref="tokenModal"
         class="console-token-modal"
-        primary-closing>
+        closing="primary">
         <h3 class="modal-title">
           {{ $t("user-dash.console.token-of") }} #{{ console.id }}
         </h3>
@@ -177,9 +177,10 @@
       <Modal
         ref="terminalModal"
         :hide-actions="hideTerminalModalActions"
+        :focus="null"
         no-margin
-        width="large-width"
-        primary-closing
+        width="large"
+        closing="primary"
         @primary="closeTerminalSession">
         <div
           v-if="terminalLoading"
@@ -195,9 +196,10 @@
       </Modal>
       <Modal
         ref="shutdownConfirmModal"
-        :secondary-label="$t('user-dash.console.shutdown')"
-        primary-closing
-        @secondary="shutdown">
+        :primary-label="$t('user-dash.console.shutdown')"
+        focus="secondary"
+        closing="secondary"
+        @primary="shutdown">
         <h3 class="mb-6 mt-3">
           {{ $t("user-dash.console.shutdown-confirmation.title") }}
         </h3>
@@ -206,9 +208,10 @@
       </Modal>
       <Modal
         ref="rebootConfirmModal"
-        :secondary-label="$t('user-dash.console.reboot')"
-        primary-closing
-        @secondary="reboot">
+        :primary-label="$t('user-dash.console.reboot')"
+        focus="secondary"
+        closing="secondary"
+        @primary="reboot">
         <h3 class="mb-6 mt-3">
           {{ $t("user-dash.console.reboot-confirmation.title") }}
         </h3>

@@ -170,8 +170,8 @@
       </div>
       <Modal
         ref="imageModal"
-        width="large-width"
-        primary-closing>
+        width="large"
+        closing="primary">
         <div class="show-image-container">
           <img
             :src="imageToShow"

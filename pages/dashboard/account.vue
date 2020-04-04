@@ -68,11 +68,11 @@
     </div>
     <Modal
       ref="destroyAccountConfirmationModal"
-      :primary-label="$t('cancel')"
-      :secondary-label="$t('user-dash.destroy.confirmation.action')"
-      width="large-width"
-      @primary="$refs.destroyAccountConfirmationModal.hide()"
-      @secondary="destroyAccount()">
+      :primary-label="$t('user-dash.destroy.confirmation.action')"
+      width="large"
+      focus="secondary"
+      closing="secondary"
+      @primary="destroyAccount()">
       <h3 class="mb-6 mt-3">
         {{ $t("user-dash.destroy.confirmation.title") }}
       </h3>
@@ -143,6 +143,7 @@ export default {
   },
   methods: {
     openDestroyAccount() {
+      this.destroyAccountConfirmation = false
       this.$refs.destroyAccountConfirmationModal.show()
     },
     destroyAccount() {

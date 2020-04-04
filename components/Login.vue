@@ -26,7 +26,7 @@
     <Modal
       ref="loginOrRegisterModal"
       class="login-or-register-modal"
-      primary-closing
+      closing="primary"
       @close="$store.commit('SET_LOGIN_MODAL', false)">
       <h3
         v-if="!is_logout && $store.state.isAuthenticated"

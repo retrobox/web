@@ -12,9 +12,9 @@
 
     <Modal
       :ref="'imageModal-' + id"
-      width="large-width"
+      width="large"
       class="show-image-modal"
-      primary-closing>
+      closing="primary">
       <div class="text-center">
         <img
           :src="src"
