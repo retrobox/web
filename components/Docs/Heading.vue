@@ -59,20 +59,3 @@
     }
   }
 </script>
-
-<style lang="scss">
-  .heading {
-  }
-
-  .anchor-heading {
-    opacity: 0.8;
-    float: left;
-    margin-right: 0.5em;
-    transition: .1s opacity !important;
-  }
-
-  .anchor-heading-visible {
-    transition: .1s opacity !important;
-    opacity: 1 !important;
-  }
-</style>
