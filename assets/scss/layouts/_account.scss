@@ -58,10 +58,11 @@
     }
     transition: opacity .2s;
     cursor: pointer;
-    &:hover {
+    &:hover, &:focus {
       text-decoration: none;
       opacity: 0.8;
       transition: opacity .2s;
+      font-weight: 600;
     }
   }
 }
