@@ -84,16 +84,14 @@
                       <!-- <li class="-mb-px mr-1">
                         <a class="bg-white inline-block border-l border-t border-r rounded-t py-2 px-4 text-blue-dark font-semibold" href="#">Version kité</a>
                       </li> -->
-                      <div
+                      <nuxt-link
                         v-for="link in item.category.items"
                         :key="link.id"
+                        :to="localePath({name: 'shop-slug', params: {slug: link.slug}})"
                         :class="{'-mb-px': link.id === item.id, 'selected': link.id === item.id }"
-                        class="buy-custom-item">
-                        <nuxt-link
-                          :to="localePath({name: 'shop-slug', params: {slug: link.slug}})"
-                          class="text-black">{{ link.version }}
-                        </nuxt-link>
-                      </div>
+                        class="buy-custom-item text-black">
+                        {{ link.version }}
+                      </nuxt-link>
                     </div>
                   </div>
                 </div>
