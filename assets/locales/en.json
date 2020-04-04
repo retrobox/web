@@ -250,7 +250,7 @@
       "items": "No article | One item | {count} articles",
       "empty": "Empty card",
       "add": "Add",
-      "remove": "Removed",
+      "remove": "Remove",
       "total": "Total",
       "show": "Show",
       "sub_total": "Sub total",
