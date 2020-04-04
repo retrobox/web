@@ -90,7 +90,7 @@
                         :class="{'-mb-px': link.id === item.id, 'selected': link.id === item.id }"
                         class="buy-custom-item">
                         <nuxt-link
-                          :to="'/shop/' + link.slug"
+                          :to="localePath({name: 'shop-slug', params: {slug: link.slug}})"
                           class="text-black">{{ link.version }}
                         </nuxt-link>
                       </div>
