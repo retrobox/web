@@ -64,31 +64,31 @@
                 </div>
               </div>
               <div 
-                :class="{selected: shippingMethod === 'dhl'}"
-                class="shipping-method dhl" 
-                @click="shippingMethod = 'dhl'">
+                :class="{selected: shippingMethod === 'chronopost'}"
+                class="shipping-method chronopost" 
+                @click="shippingMethod = 'chronopost'">
                 <div class="shipping-method-radio">
                   <input 
                     v-model="shippingMethod"
-                    value="dhl"
+                    value="chronopost"
                     name="shipping" 
                     type="radio" />
                 </div>
                 <div class="shipping-method-content">
                   <div class="shipping-method-left">
                     <div class="shipping-method-image">
-                      <i class="icon fab fa-dhl"></i>
+                      <img src="~/assets/images/chronopost.png" />
                     </div>
                   </div>
                   <div class="shipping-method-right">
                     <div class="shipping-method-description">
-                      {{ $t('shop.shipping_details.methods.dhl') }}
+                      {{ $t('shop.shipping_details.methods.chronopost') }}
                     </div>
                     <div
-                      v-if="dhlPrice !== 0"
+                      v-if="chronopostPrice !== 0"
                       class="shipping-method-price">
                       <span class="currency">€</span>
-                      {{ dhlPrice }}
+                      {{ chronopostPrice }}
                     </div>
                   </div>
                 </div>
@@ -159,7 +159,7 @@ export default {
     show: false,
     shippingMethod: 'colissimo',
     colissimoPrice: 0,
-    dhlPrice: 0,
+    chronopostPrice: 0,
     orderNote: ''
   }),
   watch: {
@@ -194,7 +194,7 @@ export default {
       params.append('weight', this.$store.state.checkout.totalWeight)
       this.$apitator.get('/shop/shipping-prices?' + params.toString()).then(res => {
         this.colissimoPrice = res.data.data.colissimo
-        this.dhlPrice = res.data.data.dhl
+        this.chronopostPrice = res.data.data.chronopost
         this.updateShippingPrice()
       })
     },
@@ -204,8 +204,8 @@ export default {
         case 'colissimo':
           price = this.colissimoPrice
           break;
-        case 'dhl': 
-          price = this.dhlPrice
+        case 'chronopost': 
+          price = this.chronopostPrice
           break;
       }
       this.$store.commit('SET_CHECKOUT_SHIPPING_METHOD', [this.shippingMethod, price])

@@ -200,7 +200,7 @@
       "method": "Moyen de livraison",
       "methods": {
         "colissimo": "Livraison en 2 jours ouvré",
-        "dhl": "Livraison DHL express"
+        "chronopost": "Livraison le lendemain avant 13h (si commande effectuée avant midi)"
       },
       "form": {
         "first_name": "Prénom",
