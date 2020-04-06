@@ -55,3 +55,18 @@ When we are in a team, the work of debugging and communication is much simpler. 
   <img src="https://static.retrobox.tech/img/blog/photo-%c3%a9quipe.JPG" width="30%">
   <img src="https://static.retrobox.tech/img/marketing/marketing_1.jpg" width="30%">
 </center>
+
+<h2  class="dividing">Press</h2>
+
+You can find all our logos & videos concerning RetroBox on our <a  href="https://github.com/retrobox/artworks/">github</a>.
+
+<h3>Our press contact</h3>
+<br>
+Please add this in the subject line of your email: [PRESS] followed by your demand.
+<br><br>
+Our mail and our website : <a  href="mailto:contact@thingmill.fr">contact@thingmill.fr</a>/<a  href="https://thingmill.fr">thingmill.fr</a>
+<br><br>
+Thingmill  
+1 chemin de badoire  
+61250 HELOUP  
+FRANCE  
