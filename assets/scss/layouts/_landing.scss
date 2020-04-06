@@ -161,8 +161,10 @@ $landing-divider-height: 70vh;
   .landing-divider-background-image {
     background-size: cover;
     height: $landing-divider-height;
-    background-image: url(https://static.retrobox.tech/website/landing-background-2.webp);
     background-position: center;
+    &.with-background-image {
+      background-image: url(https://static.retrobox.tech/website/landing-background-2.webp);
+    }
   }
   .landing-divider-background-filter {
     height: $landing-divider-height;
