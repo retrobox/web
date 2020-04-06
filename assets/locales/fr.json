@@ -197,9 +197,9 @@
     },
     "shipping_details": {
       "title": "Vos détails de livraisons",
-      "method": "Moyen de livraison",
+      "method": "Mode de livraison",
       "methods": {
-        "colissimo": "Livraison en 2 jours ouvré",
+        "colissimo": "Livraison en 2 jours ouvrés",
         "chronopost": "Livraison le lendemain avant 13h (si commande effectuée avant midi)"
       },
       "form": {
@@ -254,7 +254,7 @@
       "total": "Total",
       "show": "Voir",
       "sub_total": "Sous total",
-      "shipping_price": "Prix de livraison",
+      "shipping_price": "Frais de port",
       "added": {
         "title": "Article ajouté!",
         "description": "Un article vient d'être ajouté à votre panier"
@@ -272,7 +272,7 @@
     },
     "order-note": {
       "title": "Note au préparateur de la commande",
-      "description": "Vous pouvez ici inclure une note afin de décrire d'éventuelle spécifitées liées à votre commande"
+      "description": "Vous pouvez ici inclure une note afin de décrire d'éventuelle spécifications liées à votre commande"
     }
   },
   "contact-us": {
