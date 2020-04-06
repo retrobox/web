@@ -10,18 +10,24 @@
   }
 
   .os-desktop, .os-mobile {
-
+    .win {
+      color: #2980b9;
+    }
+    .mac {
+      color: #7f8c8d;
+    }
+    .lin {
+      color: #d35400;
+    }
     .os-desktop-item, .os-mobile-item {
         margin-right: 3em;
         &:last-of-type {
           margin-right: 0;
         }
         cursor: pointer;
-        transition: color 0.3s ease-in-out;
+        transition: opacity 0.3s ease-in-out;
         &:hover, &:focus {
-          cursor: pointer;
-          color: #2779bd;
-          transition: color 0.3s ease-in-out;
+          opacity: 0.8;
         }
         &.disabled {
           cursor: default !important;
