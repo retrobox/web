@@ -9,8 +9,8 @@ const cookieParser = require('cookie-parser');
 
 // Redirect if www
 app.use((req, res, next) => {
-  if (req.hostname.indexOf('www.') > -1)
-    return res.redirect(req.protocol + '://' + req.hostname.replace('www.', '') + req.originalUrl)
+  if (req.headers['x-forwarded-host'] !== undefined && req.headers['x-forwarded-host'].indexOf('www.') > -1)
+    return res.redirect(req.protocol + '://' + req.headers['x-forwarded-host'].replace('www.', '') + req.originalUrl)
   next()
 })
 
