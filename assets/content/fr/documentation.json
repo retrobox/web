@@ -2,11 +2,13 @@
   "tree": [
     {
       "slug": "home",
-      "name": "Accueil"
+      "name": "Accueil",
+      "allow_indexing": true
     },
     {
       "slug": "getting-started",
-      "name": "Pour commencer"
+      "name": "Pour commencer",
+      "allow_indexing": true
     },
     {
       "slug": "tools",

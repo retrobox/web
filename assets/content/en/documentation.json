@@ -2,11 +2,13 @@
   "tree": [
     {
       "slug": "home",
-      "name": "Home"
+      "name": "Home",
+      "allow_indexing": true
     },
     {
       "slug": "getting-started",
-      "name": "Getting Started"
+      "name": "Getting Started",
+      "allow_indexing": true
     },
     {
       "slug": "tools",

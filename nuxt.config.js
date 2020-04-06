@@ -141,6 +141,17 @@ module.exports = {
     routes() {
       return getRoutes();
     },
+    filter ({ routes }) {
+        let excludedRoutes = [
+          'dashboard', 'checkout', 'terms-of-sale', 'terms', 'legals', 'privacy', 'credits', 'login', 'test'
+        ]
+        return routes.filter(route => {
+          for (let i = 0; i < excludedRoutes.length; i++)
+            if (route.url.indexOf(excludedRoutes[i]) > -1)
+              return false
+          return true
+        })
+    },
     path: '/sitemap.xml',
     gzip: true,
     generate: false

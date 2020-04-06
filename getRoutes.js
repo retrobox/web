@@ -11,7 +11,9 @@ module.exports = async function getAppRoutes() {
     let docsTree = fs.readFileSync(docConfigPath)
     docsTree = JSON.parse(docsTree).tree
     for (docPage of docsTree) {
-      routes.push('/' + locale + '/docs/' + docPage.slug)
+      if (docPage.allow_indexing) {
+        routes.push('/' + locale + '/docs/' + docPage.slug)
+      }
     }
 
     // generate shop routes from api
@@ -19,7 +21,10 @@ module.exports = async function getAppRoutes() {
     let categories = res.data.data.categories
     for (categorie of categories) {
       for (item of categorie.items) {
-        routes.push('/' + locale + '/shop/' + item.slug)
+        // only map the important shop items, ignore the rest of them
+        if (item.allow_indexing) {
+          routes.push('/' + locale + '/shop/' + item.slug)
+        }
       }
     }
   }
