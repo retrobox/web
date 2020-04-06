@@ -196,7 +196,7 @@
       "method": "Shipping method",
       "methods": {
         "colissimo": "2 days shipping",
-        "dhl": "DHL express shipping"
+        "chronopost": "Next day delivery before 1 p.m."
       },
       "form": {
         "first_name": "First name",
