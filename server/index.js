@@ -7,6 +7,13 @@ const host = process.env.HOST || '127.0.0.1'
 const port = process.env.PORT || 3000
 const cookieParser = require('cookie-parser');
 
+// Redirect if www
+app.use((req, res, next) => {
+  if (req.hostname.indexOf('www.') > -1)
+    return res.redirect(req.protocol + '://' + req.hostname.replace('www.', '') + req.originalUrl)
+  next()
+})
+
 app.set('port', port)
 app.use(cookieParser())
 
