@@ -30,7 +30,7 @@
           class="button button-secondary shop-card-remove-button"
           @click="$emit('removed')">
           <Icon value="fas fa-times-circle"/>
-          Remove
+          {{ $t('shop.cart.remove') }}
         </button>
         <button
           v-else
