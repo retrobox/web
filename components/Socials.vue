@@ -3,29 +3,29 @@
     <ul>
       <li class="facebook">
         <a
-          :href="$t('facebook').link"
-          :title="$t('facebook').title">
+          :href="$env.FACEBOOK_URL"
+          :title="$t('facebook.title')">
           <Icon value="fab fa-facebook" />
         </a>
       </li>
       <li class="twitter">
         <a
-          :href="$t('twitter').link"
-          :title="$t('twitter').title">
+          :href="$env.TWITTER_URL"
+          :title="$t('twitter.title')">
           <Icon value="fab fa-twitter" />
         </a>
       </li>
       <li class="github">
         <a
-          :href="$t('github').link"
-          :title="$t('github').title">
+          :href="$env.GITHUB_URL"
+          :title="$t('github.title')">
           <Icon value="fab fa-github" />
         </a>
       </li>
       <li class="discord">
         <a
-          :href="$t('discord').link"
-          :title="$t('discord').title">
+          :href="$env.DISCORD_URL"
+          :title="$t('discord.title')">
           <Icon value="fab fa-discord" />
         </a>
       </li>

@@ -4,7 +4,7 @@ By sending an email to: [contact@retrobox.tech](mailto:contact@retrobox.tech)
 
 <h2 class="dividing">By discord</h2>
 
-By joining our discord guild with: [this pretty discord link](https://discord.gg/TzNNQnP)
+By joining our discord guild with: [this pretty discord link](DISCORD_URL)
 
 <h2 class="dividing">By mail</h2>
 

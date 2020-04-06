@@ -4,7 +4,7 @@ En nous envoyant un email à: [contact@retrobox.tech](mailto:contact@retrobox.te
 
 <h2 class="dividing">Par Discord</h2>
 
-En rejoignant notre serveur discord par: [ce lien](https://discord.gg/TzNNQnP)
+En rejoignant notre serveur discord par: [ce lien](DISCORD_URL)
 
 <h2 class="dividing">Avec Laposte</h2>
 

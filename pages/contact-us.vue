@@ -53,6 +53,7 @@
     methods: {
       fetchData: function () {
         this.content = require('~/assets/content/' + this.$i18n.locale + '/contact-us.md')
+          .replace('DISCORD_URL', this.$env.DISCORD_URL)
       }
     }
   }

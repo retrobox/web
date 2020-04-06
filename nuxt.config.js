@@ -33,6 +33,13 @@ module.exports = {
     '@nuxtjs/proxy'
   ],
 
+  env: {
+    'FACEBOOK_URL': 'https://facebook.com/RetroBoxSP',
+    'TWITTER_URL': 'https://twitter.com/RetroBoxSP',
+    'GITHUB_URL': 'https://github.com/retrobox',
+    'DISCORD_URL': 'https://discord.gg/TzNNQnP'
+  },
+
   plugins: [
     '~/plugins/apitator.js',
     {src: '~/plugins/cookie.js', ssr: false},

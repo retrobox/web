@@ -27,11 +27,17 @@ async function start() {
   /**
    * Shortcuts
    */
-  app.get('/discord', (req, res) => {
-    return res.redirect('https://discord.gg/bmKnEaK')
+  app.get('/facebook', (req, res) => {
+    return res.redirect(config.env.FACEBOOK_URL)
   })
   app.get('/twitter', (req, res) => {
-    return res.redirect('https://twitter.com/RetroBoxSP')
+    return res.redirect(config.env.TWITTER_URL)
+  })
+  app.get('/github', (req, res) => {
+    return res.redirect(config.env.GITHUB_URL)
+  })
+  app.get('/discord', (req, res) => {
+    return res.redirect(config.env.DISCORD_URL)
   })
 
   // Give nuxt middleware to express

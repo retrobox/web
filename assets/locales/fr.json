@@ -82,20 +82,16 @@
     }
   },
   "twitter": {
-    "title": "Notre compte twitter",
-    "link": "https://twitter.com/RetroBoxSP"
+    "title": "Notre compte twitter"
   },
   "facebook": {
-    "title": "Notre page facebook",
-    "link": "https://www.facebook.com/RetroBoxSP/"
+    "title": "Notre page facebook"
   },
   "github": {
-    "title": "Notre organisation github",
-    "link": "https://github.com/retrobox/"
+    "title": "Notre organisation github"
   },
   "discord": {
-    "title": "Notre serveur discord",
-    "link": "https://discord.gg/TzNNQnP"
+    "title": "Notre serveur discord"
   },
   "landing": {
     "title": "Une console, 20 ans de jeux, 35 ans de technologies",
