@@ -116,6 +116,9 @@
         window.addEventListener('resize', () => {
           this.windowWidth = window.innerWidth
         })
+        window.getToken = () => {
+          return this.$store.state.userToken
+        }
       }
 
     },
