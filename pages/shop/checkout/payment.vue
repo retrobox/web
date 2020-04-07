@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="shop-checkout-container container mx-auto">
-      
+
       <CheckoutPage
         ref="checkoutPage"
         :step="3"
@@ -52,7 +52,7 @@
         :amount="$store.state.checkout.total * 100"
         :email="$store.state.user.email"
         image="https://i.imgur.com/sEtYLqg.png"
-        name="Retrobox"
+        name="RetroBox"
         currency="EUR"
         allow-remember-me
         @done="stripeHasFinished"
@@ -128,7 +128,7 @@
       },
       stripeClosed: function () {
         if (this.stripeLoading === false) {
-          this.way = ''; 
+          this.way = '';
         }
       }
     }

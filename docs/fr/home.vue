@@ -43,7 +43,7 @@
 
         Si vous n'avez pas ses compétences, pas de problème ! Vous apprendrez déjà pas mal de choses ici, mais si vous les avez, vous irez bien plus vite !
 
-        <h3>Qu'apprenez-vous avec Retrobox ?</h3>
+        <h3>Qu'apprenez-vous avec RetroBox ?</h3>
 
         RetroBox existe pour les personnes ayant envie d'apprendre les bases de l'électronique, de leur donner envie de faire des projets, mais avec RetroBox vous apprendrez essentiellement :
 

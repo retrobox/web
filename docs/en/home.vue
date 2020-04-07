@@ -43,7 +43,7 @@
 
         If you don't have his skills, no problem! You will already learn a lot here, but if you have it you will go much faster!
 
-        <h3>What will you learn with Retrobox?</h3>
+        <h3>What will you learn with RetroBox?</h3>
 
         RetroBox exists for people who want to learn the basics of electronics, to make them want to do projects, but with RetroBox you will essentially learn:
 

@@ -25,7 +25,7 @@
 
     <p>Pour le moment, la dernière version est: <code>0.02</code></p>
 
-    <p>Télécharger l'application Retrobox <nuxt-link to="/downloads">ici</nuxt-link></p>
+    <p>Télécharger l'application RetroBox <nuxt-link to="/downloads">ici</nuxt-link></p>
 
     <h3>Deuxième étape: Connexion à l'application </h3>
 

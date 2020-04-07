@@ -59,11 +59,8 @@
     components: {GoToTop, Icon, Footer, Header, Modal},
     head () {
       return {
-        titleTemplate: '%s - Retrobox',
-        meta: [
-          {name: 'description', content: this.$t('description')},
-          {property: 'og:description', content: this.$t('description')}
-        ],
+        titleTemplate: '%s - RetroBox',
+        meta: [],
         htmlAttrs: {
           lang: this.$i18n.locale
         }

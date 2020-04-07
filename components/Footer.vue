@@ -64,7 +64,7 @@
             <nuxt-link :to="localePath('index')">
               <img
                 v-lazy="'https://static.retrobox.tech/website/footer.webp'"
-                alt="Retrobox logo" />
+                alt="RetroBox logo" />
             </nuxt-link>
           </div>
         </div>
@@ -118,7 +118,7 @@
                   {{ $t('terms-of-sale') }}
                 </li>
               </nuxt-link>
-              
+
               <nuxt-link :to="localePath('privacy')">
                 <li>
                   {{ $t('privacy') }}

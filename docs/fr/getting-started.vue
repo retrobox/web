@@ -16,7 +16,7 @@
       label="Première étape: Ouverture de la boîte et vérification"
     />
 
-    Bienvenue dans le monde de <b>Retrobox</b> !
+    Bienvenue dans le monde de <b>RetroBox</b> !
 
     Une fois que vous avez reçu votre colis, il est possible que nous avons oublié un composant, (nous sommes humains, mais je vous rassure cela n'arrive pratiquement jamais) si c'est le cas, contactez nous, nous vous réexpidrons le composant manquant gratuitement, contactez nous : <a href="mailto:support@retrobox.tech">support@retrobox.tech</a>
 

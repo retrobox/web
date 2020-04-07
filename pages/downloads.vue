@@ -72,17 +72,16 @@
 
 <script>
   import Modal from "~/components/Modal"
+  import {generateMetas} from "../headHelper"
   export default {
     components: {
       Modal
     },
     head() {
-      return {
+      return generateMetas(this, {
         title: this.$t('downloads.page.title'),
-        meta: [
-          {property: 'og:title', content: this.$t('downloads.page.title')}
-        ]
-      }
+        description: this.$t('downloads.page.description')
+      })
     },
     data: () => ({
       tag: '',

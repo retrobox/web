@@ -16,8 +16,8 @@
   "save": "Save",
   "previous": "Previous",
   "next": "Next",
-  "title": "Retrobox, a diy open-source console",
-  "description": "The RetroBox is an open source DIY console created by young people, replay the games of your childhood!",
+  "title": "RetroBox, a diy open-source console",
+  "description": "The RetroBox is an open source DIY retrogaming console. With this connected and customizable console you can easily replay the game of your childhood while learning the basics of electronics!",
   "partnership": {
     "lyceealain": {
       "title": "In partner ship with Lycée Alain"
@@ -42,7 +42,7 @@
   "downloads": {
     "title": "Downloads",
     "page": {
-      "title": "Downloads our software !",
+      "title": "Downloads our software!",
       "description": "Find the desktop application to flash your sd card to use it with your RetroBox!",
       "os-text": {
         "win": "Windows 7/8/10",
@@ -99,11 +99,11 @@
     "go": "More",
     "about": {
       "title": "Simplicity, Nostalgia, Sharing...",
-      "description": "The Retrobox is a portable console for emulating all games up to the PS1, it was never as accessible to play your old favorite games. The console embeds modern technologies such as wifi to connect to your computer or smartphone and bluetooth to connect a headset or a joystick. The console has an HDMI output to play even on your TV! With 8 hours of autonomy, hours and hours of fun in your pocket"
+      "description": "The RetroBox is a portable console for emulating all games up to the PS1, it was never as accessible to play your old favorite games. The console embeds modern technologies such as wifi to connect to your computer or smartphone and bluetooth to connect a headset or a joystick. The console has an HDMI output to play even on your TV! With 8 hours of autonomy, hours and hours of fun in your pocket"
     },
     "about-us": {
       "title": "Imagined, Prototyped and Assembly in Normandy",
-      "description": "The Retrobox is a project of young Norman who are always listening to you, your feedback is important and we improve our console and services included with the purchase to better satisfy you."
+      "description": "The RetroBox is a project of young Norman who are always listening to you, your feedback is important and we improve our console and services included with the purchase to better satisfy you."
     },
     "advantages": {
       "title": "Many advantages...",

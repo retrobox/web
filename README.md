@@ -1,6 +1,6 @@
-# Retrobox Website
+# RetroBox Website
 
-> The retrobox website made with nuxt.js
+> The RetroBox website made with nuxt.js
 
 [![CircleCI](https://circleci.com/gh/retrobox/web.svg?style=svg)](https://circleci.com/gh/retrobox/web)
 

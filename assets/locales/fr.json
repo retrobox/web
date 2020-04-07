@@ -12,8 +12,8 @@
   "docs": "Documentation",
   "previous": "Chapitre précédent",
   "next": "Chapitre suivant",
-  "title": "Retrobox, une console diy open-source",
-  "description": "La RetroBox est une console DIY open source créée par des jeunes, rejouez aux jeux de votre enfance !",
+  "title": "RetroBox, une console diy open-source",
+  "description": "La RetroBox est une console retrogaming, DIY et open source. Avec cette console connectée et customizable, vous pouvez facilement rejouer aux jeux de votre enfance tout en apprenant les bases de l'électronique.",
   "cancel": "Annuler",
   "save": "Sauvegarder",
   "partnership": {
@@ -95,15 +95,15 @@
   },
   "landing": {
     "title": "Une console, 20 ans de jeux, 35 ans de technologies",
-    "sub_title": "Avec la Retrobox, jouez à vos jeux rétro préférés de façon simple et accessible",
+    "sub_title": "Avec la RetroBox, jouez à vos jeux rétro préférés de façon simple et accessible",
     "go": "En savoir plus",
     "about": {
       "title": "Simplicité, Nostalgie, Modernité ...",
-      "description": "La Retrobox est une console portable permettant d'émuler tous les jeux jusqu'à la PS1, cela n'a jamais été aussi accessible pour jouer à vos anciens jeux favoris. La console embarque les technologies modernes comme le wifi pour se connecter à votre ordinateur ou votre smartphone et le bluetooth pour connecter un casque ou une manette. La console est dotée d'une sortie HDMI pour jouer même sur votre TV ! Avec ses 8h d'autonomie, des heures et des heures de plaisir dans votre poche."
+      "description": "La RetroBox est une console portable permettant d'émuler tous les jeux jusqu'à la PS1, cela n'a jamais été aussi accessible pour jouer à vos anciens jeux favoris. La console embarque les technologies modernes comme le wifi pour se connecter à votre ordinateur ou votre smartphone et le bluetooth pour connecter un casque ou une manette. La console est dotée d'une sortie HDMI pour jouer même sur votre TV ! Avec ses 8h d'autonomie, des heures et des heures de plaisir dans votre poche."
     },
     "about-us": {
       "title": "Imaginée, Prototypée et Assemblée en Normandie",
-      "description": "La Retrobox est un projet de jeunes normands qui sont toujours à votre écoute, vos retours sont importants et nous améliorons notre console et les services inclus à l'achat pour mieux vous satisfaire."
+      "description": "La RetroBox est un projet de jeunes normands qui sont toujours à votre écoute, vos retours sont importants et nous améliorons notre console et les services inclus à l'achat pour mieux vous satisfaire."
     },
     "advantages": {
       "title": "Plein d'advantages...",

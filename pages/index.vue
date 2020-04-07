@@ -40,7 +40,7 @@
         <div class="landing-about-pic">
           <img
             v-lazy="'https://static.retrobox.tech/website/landing-1.webp'"
-            alt="Retrobox console image">
+            alt="RetroBox console image">
         </div>
       </div>
     </section>
@@ -62,7 +62,7 @@
         <div class="landing-about-pic">
           <img
             v-lazy="'https://static.retrobox.tech/website/landing-2.webp'"
-            alt="Retrobox console in hands">
+            alt="RetroBox console in hands">
         </div>
         <div class="landing-about-text">
           <div>
@@ -272,16 +272,17 @@
 <script>
   import Icon from "~/components/Icon"
   import Error from "~/components/Error"
+  import { generateMetas } from "../headHelper"
 
   export default {
     components: {Error, Icon},
     head() {
       return {
-        titleTemplate: '%s',
-        title: this.$t('title'),
-        meta: [
-          {property: 'og:title', content: this.$t('title')}
-        ]
+        ...{titleTemplate: '%s'},
+        ...generateMetas(this, {
+          title: this.$t('title'),
+          description: this.$t('description')
+        })
       }
     },
     data: () => ({
