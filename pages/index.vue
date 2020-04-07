@@ -288,18 +288,21 @@
       showSecondDivider: false
     }),
     mounted() {
+      window.removeEventListener('scroll', this.checkInView)
       window.addEventListener('scroll', this.checkInView)
       this.checkInView()
+    },
+    destroyed() {
+      window.removeEventListener('scroll', this.checkInView)
     },
     methods: {
       scrollToDescription: function () {
         this.$scrollTo('#go')
       },
       checkInView: function () {
-        if (this.showSecondDivider)
+        if (this.showSecondDivider || this.$refs.secondDivider === undefined)
           return
         let el = this.$refs.secondDivider
-        console.log(el)
         let bounding = el.getBoundingClientRect()
         let inView = (
           (bounding.top < Math.max(document.documentElement.clientHeight, window.innerHeight || 0) &&
