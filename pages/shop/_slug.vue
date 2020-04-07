@@ -146,6 +146,7 @@
                   </div>
                 </div>
                 <div
+                  v-if="!item.category.is_customizable || $store.state.isMobile"
                   class="buy-description"
                   v-html="item.description_long">
                 </div>
@@ -163,6 +164,14 @@
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+            <div
+              v-if="item.category.is_customizable && !$store.state.isMobile"
+              class="buy-extra-content buy-description-container">
+              <div
+                class="buy-description"
+                v-html="item.description_long">
               </div>
             </div>
           </div>
