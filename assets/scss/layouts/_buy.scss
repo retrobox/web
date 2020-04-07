@@ -129,6 +129,24 @@
       }
     }
   }
+
+  .buy-extra-content {
+    padding-bottom: 2em;
+    padding-top: 2em;
+    font-weight: 500;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    .buy-description {
+      @extend .w-4\/5;
+      text-align: justify;
+      line-height: 1.5em;
+      ul {
+        margin-top: 1em;
+        margin-bottom: 2em;
+      }
+    }
+  }
 }
 //on shop buy page an modal to see bigger the images
 .show-image-modal {
