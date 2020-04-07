@@ -152,7 +152,7 @@
     "title": "Vidéo en Attente",
     "description": "Bientôt une vidéo présentant en détails la RetroBox."
   },
-  "about": "A propos",
+  "about": "À propos & presse",
   "terms-of-use": "Conditions d'utilisations",
   "privacy": "Confidentialité",
   "terms-of-sale": "Conditions générales de vente",
@@ -249,7 +249,7 @@
       "remove": "Retirer",
       "total": "Total",
       "show": "Voir",
-      "sub_total": "Sous total",
+      "sub_total": "Sous-total",
       "shipping_price": "Frais de port",
       "added": {
         "title": "Article ajouté!",
