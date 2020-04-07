@@ -25,6 +25,7 @@ export function generateMetas(context, proprieties) {
 
       // opengraph
       {property: 'og:title', content: proprieties.title},
+      {property: 'og:description', content: proprieties.description},
       {property: 'og:type', content: proprieties.type},
       {property: 'og:url', content: proprieties.url},
       {property: 'og:image', content: proprieties.image},
@@ -34,6 +35,7 @@ export function generateMetas(context, proprieties) {
       {name: 'twitter:title', content: proprieties.title},
       {name: 'twitter:url', content: proprieties.url},
       {name: 'twitter:image:src', content: proprieties.image},
+      {name: 'twitter:description', content: proprieties.description},
       {name: 'twitter:site', content: '@thingmill'}
     ]
   }
