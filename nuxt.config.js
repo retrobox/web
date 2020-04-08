@@ -7,9 +7,8 @@ const marked = require('marked')
 const renderer = new marked.Renderer();
 const join = require('path').join
 const tailwindJS = join(__dirname, 'tailwind.js')
-const getRoutes = require('./getRoutes.js');
-
 const baseUrl = 'https://retrobox.tech'
+const routesHelper = require('./routesHelper')
 
 module.exports = {
   mode: 'universal',
@@ -30,7 +29,8 @@ module.exports = {
       ]
     }],
     '@nuxtjs/sitemap',
-    '@nuxtjs/proxy'
+    '@nuxtjs/proxy',
+    '@nuxtjs/robots'
   ],
 
   env: {
@@ -122,7 +122,7 @@ module.exports = {
   sitemap: {
     hostname: baseUrl,
     routes() {
-      return getRoutes();
+      return routesHelper.getAppRoutes();
     },
     filter ({ routes }) {
         let excludedRoutes = [
@@ -138,6 +138,14 @@ module.exports = {
     path: '/sitemap.xml',
     gzip: true,
     generate: false
+  },
+
+  robots: async () => {
+    return {
+      UserAgent: '*',
+      Sitemap: 'sitemap.xml',
+      Disallow: await routesHelper.getExcludedRoutes()
+    }
   },
 
   proxy: {
