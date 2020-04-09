@@ -46,19 +46,6 @@
       </CheckoutPage>
     </div>
     <client-only>
-      <vue-stripe-checkout
-        ref="stripe"
-        :billing-address="false"
-        :amount="$store.state.checkout.total * 100"
-        :email="$store.state.user.email"
-        image="https://i.imgur.com/sEtYLqg.png"
-        name="RetroBox"
-        currency="EUR"
-        allow-remember-me
-        @done="stripeHasFinished"
-        @closed="stripeClosed"
-        @canceled="stripeClosed"
-      ></vue-stripe-checkout>
     </client-only>
   </div>
 </template>
@@ -95,7 +82,6 @@
           shipping_country: this.$store.state.checkout.country,
           order_note: this.$store.state.orderNote
         }, {withAuth: true}).then((response) => {
-          console.log('paypal Backend response', response.data)
           window.location = response.data.data.url
         }).catch((error) => {
           console.log(error);
@@ -104,27 +90,48 @@
       },
       stripe: function () {
         this.way = 'stripe'
-        this.$refs.stripe.open()
-      },
-      stripeHasFinished: function ({token}) {
-        this.stripeLoading = true
-        this.$apitator.post('/stripe/execute', {
-          token: token.id,
-          email: token.email,
+        this.$apitator.post('/stripe/create', {
           items: this.$store.state.cart,
           shipping_method: this.$store.state.checkout.shippingMethod,
           shipping_country: this.$store.state.checkout.country,
           order_note: this.$store.state.orderNote
-        }, { withAuth: true }).then((response) => {
-          console.log("stripe: success");
-          console.log(response)
-          this.$router.push(this.localePath('shop-checkout-success'))
+        }, {withAuth: true}).then((response) => {
+          console.log('stripe session creation response', response.data)
+          let script = document.createElement('script')
+          script.src = "https://js.stripe.com/v3/"
+          script.onload = () => {
+            console.log('script load!')
+            let stripe = Stripe(this.$env.STRIPE_PUBLIC);
+            stripe.redirectToCheckout({
+              sessionId: response.data.data.stripe_session.id
+            }).then((result) => {
+              console.log('> Stripe checkout error', result)
+            })
+          }
+          document.body.append(script)
         }).catch((error) => {
-          this.way = '';
-          this.stripeLoading = false;
-          console.log(error);
-          console.log("stripe: error");
+          console.log("> Stripe session creation error", error);
         })
+      },
+      stripeHasFinished: function ({token}) {
+        // this.stripeLoading = true
+        // this.$apitator.post('/stripe/execute', {
+        //   token: token.id,
+        //   email: token.email,
+        //   items: this.$store.state.cart,
+        //   shipping_method: this.$store.state.checkout.shippingMethod,
+        //   shipping_country: this.$store.state.checkout.country,
+        //   order_note: this.$store.state.orderNote
+        // }, { withAuth: true }).then((response) => {
+        //   console.log("stripe: success");
+        //   console.log(response)
+        //   this.$router.push(this.localePath('shop-checkout-success'))
+        // }).catch((error) => {
+        //   this.way = '';
+        //   this.stripeLoading = false;
+        //   console.log(error);
+        //   console.log("stripe: error");
+        // })
       },
       stripeClosed: function () {
         if (this.stripeLoading === false) {
