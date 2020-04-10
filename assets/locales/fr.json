@@ -180,7 +180,7 @@
     "payment": "Paiment",
     "checkout": {
       "title": "Payer",
-      "choise": "Choisissez un moyen de payment...",
+      "choise": "Choisissez un moyen de paiement...",
       "pay": "Payer {{amount}}",
       "paypal": "Paypal",
       "card": "Carte bancaire",
