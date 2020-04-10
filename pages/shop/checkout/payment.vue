@@ -6,7 +6,6 @@
       </div>
     </div>
     <div class="shop-checkout-container container mx-auto">
-
       <CheckoutPage
         ref="checkoutPage"
         :step="3"
@@ -45,8 +44,6 @@
         </div>
       </CheckoutPage>
     </div>
-    <client-only>
-    </client-only>
   </div>
 </template>
 
@@ -96,14 +93,16 @@
           shipping_country: this.$store.state.checkout.country,
           order_note: this.$store.state.orderNote
         }, {withAuth: true}).then((response) => {
-          console.log('stripe session creation response', response.data)
+          let sessionId = response.data.data.stripe_session.id
+          let paymentIntent = response.data.data.stripe_session.payment_intent
+          console.log('> Stripe: session creation with id: ' + sessionId + ' and payment intent: ' + paymentIntent)
           let script = document.createElement('script')
           script.src = "https://js.stripe.com/v3/"
           script.onload = () => {
-            console.log('script load!')
+            console.log('> Stripe: script load!')
             let stripe = Stripe(this.$env.STRIPE_PUBLIC);
             stripe.redirectToCheckout({
-              sessionId: response.data.data.stripe_session.id
+              sessionId
             }).then((result) => {
               console.log('> Stripe checkout error', result)
             })
@@ -112,31 +111,6 @@
         }).catch((error) => {
           console.log("> Stripe session creation error", error);
         })
-      },
-      stripeHasFinished: function ({token}) {
-        // this.stripeLoading = true
-        // this.$apitator.post('/stripe/execute', {
-        //   token: token.id,
-        //   email: token.email,
-        //   items: this.$store.state.cart,
-        //   shipping_method: this.$store.state.checkout.shippingMethod,
-        //   shipping_country: this.$store.state.checkout.country,
-        //   order_note: this.$store.state.orderNote
-        // }, { withAuth: true }).then((response) => {
-        //   console.log("stripe: success");
-        //   console.log(response)
-        //   this.$router.push(this.localePath('shop-checkout-success'))
-        // }).catch((error) => {
-        //   this.way = '';
-        //   this.stripeLoading = false;
-        //   console.log(error);
-        //   console.log("stripe: error");
-        // })
-      },
-      stripeClosed: function () {
-        if (this.stripeLoading === false) {
-          this.way = '';
-        }
       }
     }
   }

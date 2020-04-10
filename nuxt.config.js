@@ -47,7 +47,6 @@ module.exports = {
     {src: '~/plugins/modal.js', ssr: false},
     {src: '~/plugins/scrollTo.js', ssr: false},
     {src: '~/plugins/tooltip.js', ssr: false},
-    {src: '~/plugins/stripe.js', ssr: false},
     {src: '~/plugins/persistedState.js', ssr: false},
     {src: '~/plugins/lazyLoad.js', ssr: false},
     {src: '~/plugins/highlight.js', ssr: false},
