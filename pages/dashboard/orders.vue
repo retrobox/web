@@ -32,10 +32,10 @@
                   <!-- 'background-image: url(\'' + image.url + ''\'); width: ' + image.width + 'em' -->
                 </div>
                 <div class="shop-order-card-content">
+                  <h4 class="shop-order-card-id">
+                    {{ $t("user-dash.orders.order", { id: order.id.toUpperCase() }) }}
+                  </h4>
                   <div class="shop-order-card-description">
-                    <h4 class="shop-order-card-id">
-                      {{ $t("user-dash.orders.order", { id: order.id.toUpperCase() }) }}
-                    </h4>
                     <div class="shop-order-card-fields">
                       <div class="shop-order-card-field">
                         <div class="shop-order-card-field-icon">
