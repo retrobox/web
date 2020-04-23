@@ -508,7 +508,6 @@
       }
       .shop-order-card-description {
         .shop-order-card-fields {
-          margin-top: .6em;
           .shop-order-card-field {
             display: flex;
             align-items: center;
@@ -528,9 +527,10 @@
 
       .shop-order-card-actions {
         display: flex;
-        justify-content: flex-end;
-        align-items: center;
+        align-items: flex-end;
         flex-direction: column;
+        justify-content: flex-end;
+
         .shop-order-card-button {
           @extend .border;
           @extend .rounded;
@@ -550,14 +550,13 @@
             }
           }
           &.shop-order-card-bill {
+            margin-top: 1em;
             @extend .bg-green;
             @extend .text-white;
-            @extend .border-green;
             @extend .py-4;
             @extend .px-8;
             &:hover, &:focus {
-              @extend .bg-transparent;
-              @extend .text-green;
+              @extend .bg-green-dark;
             }
           }
         }
