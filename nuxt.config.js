@@ -28,7 +28,8 @@ module.exports = {
     }],
     '@nuxtjs/sitemap',
     '@nuxtjs/proxy',
-    '@nuxtjs/robots'
+    '@nuxtjs/robots',
+    '@nuxtjs/sentry'
   ],
 
   env: {
@@ -168,6 +169,13 @@ module.exports = {
               console.log('---- END OF PROXY ERROR ----');
           }
       }
+  },
+
+  sentry: {
+    dsn: process.env.SENTRY_DSN,
+    config: {
+      disabled: !(process.env.SENTRY_ENABLE == '0' && process.env.SENTRY_ENABLE == 'false')
+    }
   },
 
   loading: {color: '#000'},
