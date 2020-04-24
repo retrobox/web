@@ -9,7 +9,6 @@ ENV API_ENDPOINT https://api.retrobox.tech
 ENV ADMIN_DASHBOARD_ENDPOINT https://admin.retrobox.tech
 ENV WS_ENDPOINT https://ws.retrobox.tech
 ENV COOKIE_DOMAIN .retrobox.tech
-ENV NEWSLETTER_ENDPOINT http://newsletter-api.retrobox.tech/
 RUN npm run build
 ENV HOST 0.0.0.0
 ENV PORT 80
