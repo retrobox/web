@@ -1,158 +1,188 @@
 <template>
-  <div>
-    <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-      <!-- First name and last name -->
-      <div class="flex flex-wrap mb-4">
-        <div class="w-full mb-4 md:w-1/2 md:pr-2 md:mb-0">
-          <label
-            for="first_name"
-            class="block text-grey-darker text-sm font-bold mb-2"
-          >
-            {{ $t("shop.shipping_details.form.first_name") }}
-          </label>
-          <input
-            id="first_name"
-            v-model="user.first_name"
-            :placeholder="
-              $t('shop.shipping_details.form.first_name_placeholder')
-            "
-            autofocus
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
-            type="text"
-          />
-        </div>
-        <div class="w-full md:w-1/2 md:pl-2">
-          <label
-            class="block text-grey-darker text-sm font-bold mb-2"
-            for="last_name"
-          >
-            {{ $t("shop.shipping_details.form.last_name") }}
-          </label>
-          <input
-            id="last_name"
-            v-model="user.last_name"
-            :placeholder="
-              $t('shop.shipping_details.form.last_name_placeholder')
-            "
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
-            type="text"
-          />
-        </div>
-      </div>
-      <!-- address_first_line -->
-      <div class="mb-4">
-        <label
-          class="block text-grey-darker text-sm font-bold mb-2"
-          for="address_first_line"
-        >
-          {{ $t("shop.shipping_details.form.address_first_line") }}
-        </label>
-        <input
-          id="address_first_line"
-          v-model="user.address_first_line"
-          :placeholder="
-            $t('shop.shipping_details.form.address_first_line_placeholder')
-          "
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
-          type="text"
-        />
-      </div>
-      <!-- address_second_line -->
-      <div class="mb-4">
-        <label
-          class="block text-grey-darker text-sm font-bold mb-2"
-          for="address_second_line"
-        >
-          {{ $t("shop.shipping_details.form.address_second_line") }}
-        </label>
-        <input
-          id="address_second_line"
-          v-model="user.address_second_line"
-          :placeholder="
-            $t('shop.shipping_details.form.address_second_line_placeholder')
-          "
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight  focus:outline-none focus:shadow-outline"
-          type="text"
-        />
-      </div>
-      <!-- Postal code and city -->
-      <div class="flex flex-wrap mb-4">
-        <div class="w-full mb-4 md:w-1/4 md:pr-2 md:mb-0">
-          <label
-            class="block text-grey-darker text-sm font-bold mb-2"
-            for="address_postal_code"
-          >
-            {{ $t("shop.shipping_details.form.address_postal_code") }}
-          </label>
-          <input
-            id="address_postal_code"
-            v-model="user.address_postal_code"
-            :placeholder="
-              $t('shop.shipping_details.form.address_postal_code_placeholder')
-            "
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
-            type="text"
-          />
-        </div>
-        <div class="w-full md:w-3/4 md:pl-2">
-          <label
-            class="block text-grey-darker text-sm font-bold mb-2"
-            for="address_city"
-          >
-            {{ $t("shop.shipping_details.form.address_city") }}
-          </label>
-          <input
-            id="address_city"
-            v-model="user.address_city"
-            :placeholder="
-              $t('shop.shipping_details.form.address_city_placeholder')
-            "
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
-            type="text"
-          />
-        </div>
-      </div>
-      <!-- country -->
+  <div class="mb-4">
+    <form 
+      ref="form"
+      :class="isLoading ? 'opacity-50' : ''"
+      :disabled="isLoading"
+      class="bg-white shadow-md rounded px-8 pt-8 pb-8">
       <div>
-        <label
-          class="block text-grey-darker text-sm font-bold mb-2"
-          for="address_country"
-        >
-          {{ $t("shop.shipping_details.form.address_country") }}
-        </label>
+        <!-- First name and last name -->
+        <div class="flex flex-wrap mb-4">
+          <div class="w-full mb-4 md:w-1/2 md:pr-2 md:mb-0">
+            <label
+              for="first_name"
+              class="block text-grey-darker text-sm font-bold mb-2"
+            >
+              {{ $t("shop.shipping_details.form.first_name") }}
+            </label>
+            <input
+              id="first_name"
+              v-model="user.first_name"
+              :placeholder="
+                $t('shop.shipping_details.form.first_name_placeholder')
+              "
+              :disabled="isLoading"
+              autofocus
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
+              type="text"
+            />
+          </div>
+          <div class="w-full md:w-1/2 md:pl-2">
+            <label
+              class="block text-grey-darker text-sm font-bold mb-2"
+              for="last_name"
+            >
+              {{ $t("shop.shipping_details.form.last_name") }}
+            </label>
+            <input
+              id="last_name"
+              v-model="user.last_name"
+              :placeholder="
+                $t('shop.shipping_details.form.last_name_placeholder')
+              "
+              :disabled="isLoading"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
+              type="text"
+            />
+          </div>
+        </div>
+        <!-- address_first_line -->
+        <div class="mb-4">
+          <label
+            class="block text-grey-darker text-sm font-bold mb-2"
+            for="address_first_line"
+          >
+            {{ $t("shop.shipping_details.form.address_first_line") }}
+          </label>
+          <input
+            id="address_first_line"
+            v-model="user.address_first_line"
+            :placeholder="
+              $t('shop.shipping_details.form.address_first_line_placeholder')
+            "
+            :disabled="isLoading"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
+            type="text"
+          />
+        </div>
+        <!-- address_second_line -->
+        <div class="mb-4">
+          <label
+            class="block text-grey-darker text-sm font-bold mb-2"
+            for="address_second_line"
+          >
+            {{ $t("shop.shipping_details.form.address_second_line") }}
+          </label>
+          <input
+            id="address_second_line"
+            v-model="user.address_second_line"
+            :placeholder="
+              $t('shop.shipping_details.form.address_second_line_placeholder')
+            "
+            :disabled="isLoading"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight  focus:outline-none focus:shadow-outline"
+            type="text"
+          />
+        </div>
+        <!-- Postal code and city -->
+        <div class="flex flex-wrap mb-4">
+          <div class="w-full mb-4 md:w-1/4 md:pr-2 md:mb-0">
+            <label
+              class="block text-grey-darker text-sm font-bold mb-2"
+              for="address_postal_code"
+            >
+              {{ $t("shop.shipping_details.form.address_postal_code") }}
+            </label>
+            <input
+              id="address_postal_code"
+              v-model="user.address_postal_code"
+              :placeholder="
+                $t('shop.shipping_details.form.address_postal_code_placeholder')
+              "
+              :disabled="isLoading"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
+              type="text"
+            />
+          </div>
+          <div class="w-full md:w-3/4 md:pl-2">
+            <label
+              class="block text-grey-darker text-sm font-bold mb-2"
+              for="address_city"
+            >
+              {{ $t("shop.shipping_details.form.address_city") }}
+            </label>
+            <input
+              id="address_city"
+              v-model="user.address_city"
+              :placeholder="
+                $t('shop.shipping_details.form.address_city_placeholder')
+              "
+              :disabled="isLoading"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
+              type="text"
+            />
+          </div>
+        </div>
+        <!-- country -->
+        <div>
+          <label
+            class="block text-grey-darker text-sm font-bold mb-2"
+            for="address_country"
+          >
+            {{ $t("shop.shipping_details.form.address_country") }}
+          </label>
 
-        <div class="relative w-full">
-          <select
-            id="address_country"
-            v-model="user.address_country"
-            class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
-            <option value="">
-              Choose your country
-            </option>
-            <option
-              v-for="country in countries"
-              :key="country.code"
-              :value="country.code">
-              {{ country.name }}
-            </option>
-          </select>
-          <div
-            class="pointer-events-none absolute flex items-center px-2 text-gray-700"
-            style="top: 0!important;bottom: 0!important;right: 0!important;pointer-events: none!important;">
-            <svg
-              class="fill-current h-4 w-4"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+          <div class="relative w-full">
+            <select
+              id="address_country"
+              :disabled="isLoading"
+              v-model="user.address_country"
+              class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+              <option
+                :disabled="isLoading"
+                value="" >
+                Choose your country
+              </option>
+              <option
+                v-for="country in countries"
+                :key="country.code"
+                :value="country.code">
+                {{ country.name }}
+              </option>
+            </select>
+            <div
+              class="pointer-events-none absolute flex items-center px-2 text-gray-700"
+              style="top: 0!important;bottom: 0!important;right: 0!important;pointer-events: none!important;">
+              <svg
+                class="fill-current h-4 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+            </div>
           </div>
         </div>
       </div>
     </form>
+    <div
+      v-if="isLoading"
+      ref="overlay"
+      class="loading-overlay">
+      <div class="loading mb-3">
+        <Icon
+          value="fas fa-sync"
+          spin />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import Icon from '~/components/Icon'
+
 export default {
   name: "ShippingDetailsForm",
+  components: {
+    Icon
+  },
   data() {
     return {
       user: {
@@ -164,7 +194,8 @@ export default {
         address_postal_code: "",
         address_country: ''
       },
-      countries: []
+      countries: [],
+      isLoading: true
     };
   },
   watch: {
@@ -172,12 +203,18 @@ export default {
       this.$emit('country', value)
     }
   },
-  created() {
+  mounted() {
     if (!this.$isServer) {
       this.fetchLocales()
     }
   },
   methods: {
+    showOverlay: function() {
+      this.isLoading = true
+      let offset = this.$refs.form.clientHeight
+      this.$refs.overlay.style =
+        'height: ' + offset + 'px; margin-top: -' + offset + 'px'
+    },
     fetchDetails: function() {
       this.$apitator
         .graphQL(
@@ -206,10 +243,12 @@ export default {
               this.user.address_country = ''
             }
           }
+          this.isLoading = false
           this.$emit('fetched')
         });
     },
     fetchLocales: function() {
+      this.showOverlay()
       this.$apitator.get('/countries/' + this.$i18n.locale).then(res => {
         this.countries = res.data.data.countries
         this.fetchDetails()

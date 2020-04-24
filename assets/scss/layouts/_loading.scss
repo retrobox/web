@@ -13,3 +13,13 @@
 .loading-container .loading {
   height: 45vh;
 }
+
+.loading-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .loading {
+    display: inherit;
+  }
+}
