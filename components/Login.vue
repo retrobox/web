@@ -129,7 +129,6 @@
         this.$refs.loginOrRegisterModal.hide()
         this.$store.commit('SET_IS_LOADING', false)
         this.$router.push(this.localePath('dashboard'))
-        // window.location = this.$env.USER_DASHBOARD_ENDPOINT
       },
       goToAdminDashboard: function () {
         this.$refs.loginOrRegisterModal.hide()

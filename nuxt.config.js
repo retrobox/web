@@ -19,8 +19,6 @@ module.exports = {
     ['nuxt-env', {
       keys: [
         'API_ENDPOINT',
-        'DOCS_ENDPOINT',
-        'USER_DASHBOARD_ENDPOINT',
         'ADMIN_DASHBOARD_ENDPOINT',
         'WS_ENDPOINT',
         'COOKIE_DOMAIN',

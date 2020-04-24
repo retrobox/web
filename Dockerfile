@@ -6,8 +6,6 @@ WORKDIR /app
 RUN if [ ! -f /usr/local/bin/yarn ]; then echo "Installing yarn..." && npm i -g yarn; else echo "Yarn found"; fi
 RUN yarn
 ENV API_ENDPOINT https://api.retrobox.tech
-ENV DOCS_ENDPOINT https://docs.retrobox.tech
-ENV USER_DASHBOARD_ENDPOINT https://user.retrobox.tech
 ENV ADMIN_DASHBOARD_ENDPOINT https://admin.retrobox.tech
 ENV WS_ENDPOINT https://ws.retrobox.tech
 ENV COOKIE_DOMAIN .retrobox.tech
