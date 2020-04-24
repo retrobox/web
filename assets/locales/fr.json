@@ -323,9 +323,9 @@
       "order": "Commande N°{id}",
       "items": "{items} objets commandés",
       "way": "Payement avec {method}",
-      "details": "Details",
+      "details": "Détails",
       "bill": "Facture",
-      "details-title": "Details de la commande N°{id}",
+      "details-title": "Détails de la commande N°{id}",
       "empty": "Aucune commandes",
       "status": {
         "title": "Statut",
