@@ -189,7 +189,8 @@
         "title": "Congratulations !",
         "description": "Your order has been accepted, we keep you informed for the future !",
         "thanks": "Thanks you for your order !"
-      }
+      },
+      "choose_country": "To compute the shipping prices you must first choose a country"
     },
     "shipping_details": {
       "title": "Your delivery details",

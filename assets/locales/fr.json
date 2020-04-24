@@ -189,7 +189,8 @@
         "title": "Félicitations !",
         "description": "Votre commande a bien été acceptée, nous vous tenons au courant pour la suite !",
         "thanks": "Merci pour votre commande"
-      }
+      },
+      "choose_country": "Pour calculer les prix de livraisons, vous devez choisir un pays"
     },
     "shipping_details": {
       "title": "Vos détails de livraisons",

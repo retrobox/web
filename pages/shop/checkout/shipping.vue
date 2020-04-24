@@ -32,7 +32,9 @@
                 {{ $t('shop.shipping_details.method') }}
               </h3>
             </div>
-            <div class="shipping-method-selector">
+            <div
+              v-show="!shippingMethodLoading && countrySelected"
+              class="shipping-method-selector">
               <div 
                 :class="{selected: shippingMethod === 'colissimo'}"
                 class="shipping-method colissimo" 
@@ -94,6 +96,32 @@
                 </div>
               </div>
             </div>
+            <div
+              v-show="shippingMethodLoading"
+              class="loading-overlay"
+              style="height: 272px;">
+              <div class="loading">
+                <Icon
+                  value="fas fa-sync"
+                  spin />
+              </div>
+            </div>
+            <div
+              v-show="!countrySelected"
+              class="loading-overlay"
+              style="height: 272px;">
+              <div class="text-center text-orange-dark">
+                <div class="text-3xl mb-3">
+                  <Icon value="fas fa-globe-europe" />
+                </div>
+                <div
+                  class="m-auto"
+                  style="width: 80%">
+                  {{ $t('shop.checkout.choose_country') }}
+                </div>
+              </div>
+            </div>
+
             <div class="order-note-container">
               <div class="order-note-title-container">
                 <h3 class="order-note-title">
@@ -160,7 +188,9 @@ export default {
     shippingMethod: 'colissimo',
     colissimoPrice: 0,
     chronopostPrice: 0,
-    orderNote: ''
+    orderNote: '',
+    shippingMethodLoading: false,
+    countrySelected: false
   }),
   watch: {
     'shippingMethod': function() {
@@ -185,6 +215,12 @@ export default {
       this.$refs.checkoutPage.disableNextLoading()
     },
     onCountryChanged(country) {
+      if (country == "") {
+        this.countrySelected = false
+        return
+      }
+      this.shippingMethodLoading = true
+      this.countrySelected = true
       this.$store.commit('SET_CHECKOUT_COUNTRY', country)
       this.fetchShippingPrices()
     },
@@ -196,6 +232,7 @@ export default {
         this.colissimoPrice = res.data.data.colissimo
         this.chronopostPrice = res.data.data.chronopost
         this.updateShippingPrice()
+        this.shippingMethodLoading = false
       })
     },
     updateShippingPrice() {
