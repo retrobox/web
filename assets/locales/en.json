@@ -162,6 +162,14 @@
   "legals": "Legals terms",
   "credits": "Credits",
   "our-team-members": "Our team members",
+  "login-execute": {
+    "title": "Your accout is loading",
+    "error": {
+      "title": "Login error",
+      "description-input": "Invalid URL",
+      "description-api": "We are not able to log you"
+    }
+  },
   "account": {
     "title": "My account",
     "logout": {

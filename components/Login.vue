@@ -94,15 +94,16 @@
     },
     methods: {
       login: function (type) {
-        //where type is 'login' or 'register'
+        // where type is 'login' or 'register'
         this.$refs.loginOrRegisterModal.hide()
         this.$store.commit('SET_IS_LOADING', true)
-        let url = window.location;
+        let url = window.location.href.toString()
+        url = url.replace(window.location.origin, '');
         if (this.$store.state.loginRedirectRoute !== '' && this.$store.state.loginRedirectRoute !== undefined) {
-          url = window.location.origin + this.$store.state.loginRedirectRoute
+          url = this.$store.state.loginRedirectRoute
         }
-        this.$cookie.set('login_redirection_url', url, {domain: this.$env.COOKIE_DOMAIN});
-        //request the api
+        window.localStorage.setItem('login_redirection', url)
+        // request the api
         this.$apitator.get('/account/' + type).then((response) => {
           window.location = response.data.data.url
         }).catch(() => {
@@ -114,8 +115,8 @@
         this.$cookie.delete('user_token', {domain: this.$env.COOKIE_DOMAIN});
         this.is_logout = true;
         this.$store.commit('SET_AUTH', false)
-        //close and refresh the state
-        //add a alert
+        // close and refresh the state
+        // add a alert
         this.$store.commit('ADD_ALERT', {
           type: 'success',
           title: this.$i18n.t('account.logout.success.title'),

@@ -162,6 +162,14 @@
   "legals": "Mentions légales",
   "credits": "Crédits",
   "our-team-members": "Notre équipe",
+  "login-execute": {
+    "title": "Chargement de votre compte",
+    "error": {
+      "title": "Erreur de connexion",
+      "description-input": "URL malformé",
+      "description-api": "Nous n'avons pas réussi à vous identifier"
+    }
+  },
   "account": {
     "title": "Mon compte",
     "logout": {
