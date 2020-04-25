@@ -16,6 +16,8 @@
   "save": "Save",
   "previous": "Previous",
   "next": "Next",
+  "error": "Error",
+  "invalid-url": "The URL provided is invalid",
   "title": "RetroBox, a diy open-source console",
   "description": "The RetroBox is an open source DIY retrogaming console. With this connected and customizable console you can easily replay the game of your childhood while learning the basics of electronics!",
   "partnership": {
@@ -278,6 +280,12 @@
     "order-note": {
       "title": "Note to the order preparator",
       "description": "You can include here a note to describe some specific things about your order"
+    },
+    "paypal-execute": {
+      "title": "Your order is loading",
+      "error": {
+        "description-api": "We were unable to process your order"
+      }
     }
   },
   "contact-us": {

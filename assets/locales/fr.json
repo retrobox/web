@@ -16,6 +16,8 @@
   "description": "La RetroBox est une console retrogaming, DIY et open source. Avec cette console connectée et customizable, vous pouvez facilement rejouer aux jeux de votre enfance tout en apprenant les bases de l'électronique.",
   "cancel": "Annuler",
   "save": "Sauvegarder",
+  "error": "Erreur",
+  "invalid-url": "L'URL fournis est invalide",
   "partnership": {
     "lyceealain": {
       "title": "En partenariat avec le Lycée Alain"
@@ -166,7 +168,6 @@
     "title": "Chargement de votre compte",
     "error": {
       "title": "Erreur de connexion",
-      "description-input": "URL malformé",
       "description-api": "Nous n'avons pas réussi à vous identifier"
     }
   },
@@ -278,6 +279,12 @@
     "order-note": {
       "title": "Note au préparateur de la commande",
       "description": "Vous pouvez ici inclure une note afin de décrire d'éventuelle spécifications liées à votre commande"
+    },
+    "paypal-execute": {
+      "title": "Chargement de votre commande",
+      "error": {
+        "description-api": "Nous n'avons pas pu traiter votre commande"
+      }
     }
   },
   "contact-us": {

@@ -2,13 +2,13 @@
   <div>
     <div v-if="hasError">
       <Error
-        :title="$t('login-execute.error.title')"
+        :title="$t('error')"
         :description="errorDescription"
       />
     </div>
     <div
       v-if="!hasError"
-      class="login-placeholder">
+      class="error-placeholder">
       <div></div>
     </div>
   </div>
@@ -20,7 +20,7 @@ export default {
   components: {Error},
   head () {
     return {
-      title: this.$t('login-execute.title')
+      title: this.$t('shop.paypal-execute.title')
     }
   },
   data: () => ({
@@ -33,32 +33,33 @@ export default {
       this.execute()
     }
   },
-  mounted () {
-    console.log("STAIL.EU code: " + this.$route.query.code)
-    console.log("Will redirect to: " + window.localStorage.getItem('login_redirection'))
-  },
   methods: {
     execute: function() {
-      if (this.$route.query.code === undefined) {
+      if (
+        this.$route.query.paymentId === undefined ||
+        this.$route.query.paymentId === '' ||
+        this.$route.query.PayerID === undefined ||
+        this.$route.query.PayerID === '' ||
+        this.$route.query.token === undefined ||
+        this.$route.query.token === ''
+      ) {
         this.$store.commit('SET_IS_LOADING', false)
         this.hasError = true
         this.errorDescription = this.$t('invalid-url')
-        
       } else {
-        this.$apitator.post('/account/execute', { code: this.$route.query.code }).then(res => {
-          let token = res.data.data.token
-          this.$cookie.set('user_token', token, {domain: this.$env.COOKIE_DOMAIN});
-          this.$store.commit('LOAD_USER', token)
-          this.$apitator.setAuthorizationToken(token)
-
+        this.$apitator.post('/paypal/execute', { 
+          token: this.$route.query.token,
+          payment_id: this.$route.query.paymentId,
+          payer_id: this.$route.query.PayerID
+        }).then(res => {
           this.$store.commit('SET_IS_LOADING', false)
-          this.$router.push(window.localStorage.getItem('login_redirection'))
+          this.$router.push(this.localePath('shop-checkout-success'))
         }).catch(err => {
           this.$store.commit('SET_IS_LOADING', false)
           this.hasError = true
-          this.errorDescription = this.$t('login-execute.error.description-api')
+          this.errorDescription = this.$t('shop.paypal-execute.error.description-api')
           console.log(err)
-          console.error("Can't execute the login intent")
+          console.error("Can't execute the paypal payment")
         })
       }
     }
