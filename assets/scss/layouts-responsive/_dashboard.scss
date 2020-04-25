@@ -98,8 +98,18 @@
     .shop-order-card-content {
       padding-top: 2em;
       padding-left: 0;
+      .shop-order-card-bottom {
+        flex-direction: column;
+      }
+      .shop-order-card-description {
+        width: auto;
+        margin: auto;
+      }
+      .shop-order-card-id {
+        text-align: center;
+      }
       .shop-order-card-actions {
-        margin-top: 1em;
+        margin-top: 1.5rem;
         flex-direction: row;
         width: 100%;
         justify-content: center;
@@ -114,6 +124,8 @@
             padding-bottom: .5rem;
             padding-left: 1rem;
             padding-right: 1rem;
+            margin-left: 1em;
+            margin-top: 0;
           }
         }
       }

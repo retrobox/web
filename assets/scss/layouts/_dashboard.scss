@@ -506,6 +506,11 @@
         opacity: 0.5;
         margin-bottom: 1em;
       }
+      .shop-order-card-bottom {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+      }
       .shop-order-card-description {
         .shop-order-card-fields {
           .shop-order-card-field {

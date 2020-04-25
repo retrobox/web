@@ -35,71 +35,73 @@
                   <h4 class="shop-order-card-id">
                     {{ $t("user-dash.orders.order", { id: order.id.toUpperCase() }) }}
                   </h4>
-                  <div class="shop-order-card-description">
-                    <div class="shop-order-card-fields">
-                      <div class="shop-order-card-field">
-                        <div class="shop-order-card-field-icon">
-                          <Icon value="fas fa-truck" />
+                  <div class="shop-order-card-bottom">
+                    <div class="shop-order-card-description">
+                      <div class="shop-order-card-fields">
+                        <div class="shop-order-card-field">
+                          <div class="shop-order-card-field-icon">
+                            <Icon value="fas fa-truck" />
+                          </div>
+                          <div class="shop-order-card-field-content">
+                            {{ order.status }}
+                          </div>
                         </div>
-                        <div class="shop-order-card-field-content">
-                          {{ order.status }}
+                        <div
+                          :title="order.created_at"
+                          class="shop-order-card-field">
+                          <div class="shop-order-card-field-icon">
+                            <Icon value="fas fa-clock" />
+                          </div>
+                          <div class="shop-order-card-field-content">
+                            {{ $t('user-dash.orders.at', {date: order.created_at_from_now}) }}
+                          </div>
                         </div>
-                      </div>
-                      <div
-                        :title="order.created_at"
-                        class="shop-order-card-field">
-                        <div class="shop-order-card-field-icon">
-                          <Icon value="fas fa-clock" />
+                        <div class="shop-order-card-field">
+                          <div class="shop-order-card-field-icon">
+                            <Icon value="fas fa-euro-sign" />
+                          </div>
+                          <div class="shop-order-card-field-content">
+                            {{ $t('user-dash.orders.total', {total: order.total_price}) }}
+                          </div>
                         </div>
-                        <div class="shop-order-card-field-content">
-                          {{ $t('user-dash.orders.at', {date: order.created_at_from_now}) }}
+                        <div class="shop-order-card-field">
+                          <div class="shop-order-card-field-icon">
+                            <Icon value="fab fa-cc-paypal" />
+                          </div>
+                          <div class="shop-order-card-field-content">
+                            {{ $t('user-dash.orders.way', {method: order.way}) }}
+                          </div>
                         </div>
-                      </div>
-                      <div class="shop-order-card-field">
-                        <div class="shop-order-card-field-icon">
-                          <Icon value="fas fa-euro-sign" />
-                        </div>
-                        <div class="shop-order-card-field-content">
-                          {{ $t('user-dash.orders.total', {total: order.total_price}) }}
-                        </div>
-                      </div>
-                      <div class="shop-order-card-field">
-                        <div class="shop-order-card-field-icon">
-                          <Icon value="fab fa-cc-paypal" />
-                        </div>
-                        <div class="shop-order-card-field-content">
-                          {{ $t('user-dash.orders.way', {method: order.way}) }}
-                        </div>
-                      </div>
-                      <div class="shop-order-card-field">
-                        <div class="shop-order-card-field-icon">
-                          <Icon value="fas fa-shopping-cart" />
-                        </div>
-                        <div class="shop-order-card-field-content">
-                          <span v-if="order.items.length === 1">
-                            {{ $t('user-dash.orders.item') }}
-                          </span>
-                          <span v-if="order.items.length > 1">
-                            {{ $t('user-dash.orders.items', {items: order.items.length}) }}
-                          </span>
+                        <div class="shop-order-card-field">
+                          <div class="shop-order-card-field-icon">
+                            <Icon value="fas fa-shopping-cart" />
+                          </div>
+                          <div class="shop-order-card-field-content">
+                            <span v-if="order.items.length === 1">
+                              {{ $t('user-dash.orders.item') }}
+                            </span>
+                            <span v-if="order.items.length > 1">
+                              {{ $t('user-dash.orders.items', {items: order.items.length}) }}
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="shop-order-card-actions">
-                    <button
-                      class="shop-order-card-button shop-order-card-list"
-                      @click="viewOrder(order)">
-                      <Icon value="fas fa-list" />
-                      {{ $t('user-dash.orders.details') }}
-                    </button>
-                    <button
-                      v-if="order.bill_url !== null"
-                      class="shop-order-card-button shop-order-card-bill"
-                      @click="viewBill(order)">
-                      <Icon value="fas fa-file-invoice" />
-                      {{ $t('user-dash.orders.bill') }}
-                    </button>
+                    <div class="shop-order-card-actions">
+                      <button
+                        class="shop-order-card-button shop-order-card-list"
+                        @click="viewOrder(order)">
+                        <Icon value="fas fa-list" />
+                        {{ $t('user-dash.orders.details') }}
+                      </button>
+                      <button
+                        v-if="order.bill_url !== null"
+                        class="shop-order-card-button shop-order-card-bill"
+                        @click="viewBill(order)">
+                        <Icon value="fas fa-file-invoice" />
+                        {{ $t('user-dash.orders.bill') }}
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
