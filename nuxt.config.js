@@ -174,7 +174,7 @@ module.exports = {
   sentry: {
     dsn: process.env.SENTRY_DSN,
     config: {
-      disabled: !(process.env.SENTRY_ENABLE == '0' && process.env.SENTRY_ENABLE == 'false')
+      disabled: !(process.env.SENTRY_ENABLE == '0' || process.env.SENTRY_ENABLE == 'false')
     }
   },
 
