@@ -77,7 +77,7 @@
       "missing_description": "You did not provide an email",
       "invalid_description": "The email you provided does not correspond to an email",
       "api_description": "The API does not respond as expected",
-      "member_exists": "You are already register !"
+      "member_exists": "You are already registered!"
     }
   },
   "breadcrumb": {

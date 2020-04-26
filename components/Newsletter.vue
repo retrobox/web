@@ -75,7 +75,7 @@ export default {
           this.loading = false
         }).catch(error => {
           if (error.response) {
-            if (error.response.data.errors.title === 'Member Exists') {
+            if (error.response.data.errors[0].title === 'Member Exists') {
               this.$store.commit('ADD_ALERT', {
                 type: 'error',
                 title:  this.$t('newsletter.error.title'),
