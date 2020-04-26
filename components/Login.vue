@@ -57,14 +57,14 @@
             </button>
           </div>
           <div v-else>
-            <a @click="login('login')">
+            <button @click="login('login')">
               <Icon value="fas fa-sign-in-alt" />
               <span class="text">{{ $t('login') }}</span>
-            </a>
-            <a @click="login('register')">
+            </button>
+            <button @click="login('register')">
               <Icon value="fas fa-pencil-alt" />
               <span class="text">{{ $t('register') }}</span>
-            </a>
+            </button>
           </div>
         </div>
       </div>
