@@ -184,6 +184,13 @@
     "dashboard": "My dashboard",
     "admin": "Panel admin"
   },
+  "login-required": {
+    "title": "To access this page, you must be logged in",
+    "error": {
+      "title": "Authentification required",
+      "description": "You must login into your account to access this page"
+    }
+  },
   "shop": {
     "title": "Shop",
     "shipping": "Shipment",

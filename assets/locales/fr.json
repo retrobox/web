@@ -183,6 +183,13 @@
     "dashboard": "Mon dashboard",
     "admin": "Panel admin"
   },
+  "login-required": {
+    "title": "Pour accéder à cette page, vous devez vous connecter",
+    "error": {
+      "title": "Authentification requise",
+      "description": "Vous devez vous connecter à votre compte pour accéder à cette page"
+    }
+  },
   "shop": {
     "title": "Boutique",
     "shipping": "Livraison",

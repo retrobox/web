@@ -4,8 +4,8 @@
       class="container mx-auto"
     >
       <Error
-        :title="`Authentification requise`"
-        :description="`Vous devez vous connecter à votre compte pour accéder à cette page`"
+        :title="$t('login-required.error.title')"
+        :description="$t('login-required.error.description')"
         icon="fas fa-lock"
       />
     </div>
@@ -20,7 +20,7 @@ export default {
   },
   head() {
     return {
-      title: "Pour accéder à cette page, vous devez vous connecter"
+      title: this.$t('login-required.title')
     };
   },
   mounted() {
