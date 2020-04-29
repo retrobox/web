@@ -119,56 +119,40 @@ module.exports = {
 
   sitemap: {
     hostname: baseUrl,
-    routes() {
-      return routesHelper.getAppRoutes();
-    },
-    filter ({ routes }) {
-        let excludedRoutes = [
-          'dashboard', 'checkout', 'terms-of-sale', 'terms', 'legals', 'privacy', 'credits', 'login', 'test'
-        ]
-        return routes.filter(route => {
-          for (let i = 0; i < excludedRoutes.length; i++)
-            if (route.url.indexOf(excludedRoutes[i]) > -1)
-              return false
-          return true
-        })
-    },
+    routes: () => routesHelper.getRoutes(),
+    filter: ({routes}) => routesHelper.filterRoutes(routes),
     path: '/sitemap.xml',
     gzip: true,
     generate: false
   },
 
-  robots: async () => {
-    return {
-      UserAgent: '*',
-      Sitemap: 'sitemap.xml',
-      Disallow: await routesHelper.getExcludedRoutes()
-    }
-  },
+  robots: async () => ({
+    UserAgent: '*',
+    Sitemap: 'sitemap.xml',
+    Disallow: await routesHelper.getExcludedRoutes()
+  }),
 
   proxy: {
-      '/api': {
-          changeOrigin: true,
-          target: process.env.API_ENDPOINT,
-          pathRewrite: {
-              '^/api/': ''
-          },
-          onProxyReq: (proxyReq, req, res) => {
-              proxyReq.removeHeader('x-forwarded-for');
-              proxyReq.removeHeader('x-forwarded-host');
-              proxyReq.removeHeader('x-forwarded-server');
-              proxyReq.removeHeader('cf-ipcountry');
-              proxyReq.removeHeader('cf-ray');
-              proxyReq.removeHeader('cf-connecting-ip');
-              proxyReq.removeHeader('cf-visitor');
-              proxyReq.removeHeader('dnt');
-          },
-          onError: (err) => {
-              console.log('---- PROXY ERROR ----');
-              console.log(err);
-              console.log('---- END OF PROXY ERROR ----');
-          }
+    '/api': {
+      changeOrigin: true,
+      target: process.env.API_ENDPOINT,
+      pathRewrite: {'^/api/': ''},
+      onProxyReq: proxyReq => {
+        proxyReq.removeHeader('x-forwarded-for');
+        proxyReq.removeHeader('x-forwarded-host');
+        proxyReq.removeHeader('x-forwarded-server');
+        proxyReq.removeHeader('cf-ipcountry');
+        proxyReq.removeHeader('cf-ray');
+        proxyReq.removeHeader('cf-connecting-ip');
+        proxyReq.removeHeader('cf-visitor');
+        proxyReq.removeHeader('dnt');
+      },
+      onError: err => {
+        console.log('---- PROXY ERROR ----');
+        console.log(err);
+        console.log('---- END OF PROXY ERROR ----');
       }
+    }
   },
 
   sentry: {
