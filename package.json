@@ -32,7 +32,7 @@
     "lodash": "^4.17.15",
     "markdown-loader": "^5.0.0",
     "moment": "^2.24.0",
-    "nuxt": "^2.8.1",
+    "nuxt": "2.12.2",
     "nuxt-env": "0.0.4",
     "nuxt-i18n": "^6.0.0",
     "scrollreveal": "^4.0.5",
