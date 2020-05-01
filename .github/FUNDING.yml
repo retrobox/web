@@ -9,4 +9,4 @@ community_bridge: # Replace with a single Community Bridge project-name e.g., cl
 liberapay: # Replace with a single Liberapay username
 issuehunt: # Replace with a single IssueHunt username
 otechie: # Replace with a single Otechie username
-custom: ["https://www.kickstarter.com/projects/thingmill/549296153?ref=34wlle&token=c7f8bbc8", Our kickstarter page]
+custom: https://www.kickstarter.com/projects/thingmill/549296153?ref=34wlle&token=c7f8bbc8
