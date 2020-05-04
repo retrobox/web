@@ -205,7 +205,7 @@ export default {
   },
   mounted() {
     if (!this.$isServer) {
-      this.fetchLocales()
+      this.fetchData()
     }
   },
   methods: {
@@ -215,23 +215,28 @@ export default {
       this.$refs.overlay.style =
         'height: ' + offset + 'px; margin-top: -' + offset + 'px'
     },
-    fetchDetails: function() {
+    fetchData: function() {
+      this.showOverlay()
       this.$apitator
         .graphQL(
-          `query ($id: String!){
+          `query ($id: String!, $locale: String!){
             getOneUser(id: $id) {
-                id,
-                last_username,
-                first_name,
-                last_name,
-                address_first_line,
-                address_second_line,
-                address_postal_code,
-                address_city,
-                address_country
+              id,
+              last_username,
+              first_name,
+              last_name,
+              address_first_line,
+              address_second_line,
+              address_postal_code,
+              address_city,
+              address_country
+            }
+            getCountries(locale: $locale) {
+              code,
+              name
             }
         }`,
-          { id: this.$store.state.user.id },
+          { id: this.$store.state.user.id, locale: this.$i18n.locale },
           { withAuth: true }
         )
         .then(response => {
@@ -243,16 +248,10 @@ export default {
               this.user.address_country = ''
             }
           }
+          this.countries = response.data.data.getCountries
           this.isLoading = false
           this.$emit('fetched')
         });
-    },
-    fetchLocales: function() {
-      this.showOverlay()
-      this.$apitator.get('/countries/' + this.$i18n.locale).then(res => {
-        this.countries = res.data.data.countries
-        this.fetchDetails()
-      })
     },
     save: function() {
       this.saving = true
