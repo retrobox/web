@@ -1,7 +1,7 @@
 <template>
   <DashboardPage>
     <div class="flex flex-wrap">
-      <div class="w-full md:w-1/2">
+      <div class="w-full pr-0 md:w-1/2 md:pr-4 lg:pr-6">
         <div class="account-card">
           <div class="account-card-content">
             <div class="account-card-avatar">
@@ -21,7 +21,7 @@
         </div>
       </div>
       <div class="w-full md:w-1/2">
-        <div class="account-actions">
+        <div class="account-actions mt-6 md:m-0">
           <button
             class="with-link account-action"
             @click="openDestroyAccount()">
