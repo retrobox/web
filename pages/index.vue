@@ -1,6 +1,12 @@
 <template>
   <div class="landing-back">
-    <div class="landing-main-back"></div>
+    <div
+      :style="$imageAdapter(
+        'https://static.retrobox.tech/website/landing-background-1',
+        { css: true, fallback: '.jpg' }
+      )"
+      class="landing-main-back"
+    ></div>
     <div class="landing-main">
       <div
         class="landing-main-content"
@@ -39,7 +45,7 @@
         </div>
         <div class="landing-about-pic">
           <img
-            v-lazy="'https://static.retrobox.tech/website/landing-1.webp'"
+            v-lazy="$imageAdapter('https://static.retrobox.tech/website/landing-1')"
             alt="RetroBox console image">
         </div>
       </div>
@@ -49,8 +55,12 @@
       ref="secondDivider"
       class="landing-divider-background-container second-landing">
       <div
-        :class="showSecondDivider ? 'with-background-image': ''"
-        class="landing-divider-background-image"></div>
+        :style="showSecondDivider ? $imageAdapter(
+          'https://static.retrobox.tech/website/landing-background-2',
+          { css: true, fallback: '.jpg' }
+        ) : ''"
+        class="landing-divider-background-image"
+      ></div>
     </section>
 
     <section
@@ -61,7 +71,7 @@
         data-aos="fade-left">
         <div class="landing-about-pic">
           <img
-            v-lazy="'https://static.retrobox.tech/website/landing-2.webp'"
+            v-lazy="$imageAdapter('https://static.retrobox.tech/website/landing-2')"
             alt="RetroBox console in hands">
         </div>
         <div class="landing-about-text">

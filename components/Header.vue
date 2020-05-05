@@ -129,13 +129,16 @@
       <div></div>
       <div></div>
     </div>
-    <div class="header-background-back"></div>
+    <div
+      :style="$imageAdapter('https://static.retrobox.tech/website/back', { css: true })"
+      class="header-background-back"
+    ></div>
     <div class="header-background">
       <div class="container mx-auto header-content">
         <div class="header-title-container">
           <nuxt-link :to="localePath('index')">
             <img
-              src="https://static.retrobox.tech/website/nav.webp"
+              :src="$imageAdapter('https://static.retrobox.tech/website/nav')"
               alt="RetroBox logo"
               class="header-title-logo">
           </nuxt-link>

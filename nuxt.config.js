@@ -41,6 +41,7 @@ module.exports = {
 
   plugins: [
     '~/plugins/apitator.js',
+    '~/plugins/imageAdaptor.js',
     {src: '~/plugins/cookie.js', ssr: false},
     {src: '~/plugins/transition.js', ssr: false},
     {src: '~/plugins/modal.js', ssr: false},

@@ -75,7 +75,6 @@ $landing-main-section-opacity: 0.5;
 .landing-main-back {
   background-size: cover;
   height: $landing-main-section-height;
-  background-image: url(https://static.retrobox.tech/website/landing-background-1.webp);
 }
 
 .landing-section {
@@ -162,9 +161,6 @@ $landing-divider-height: 70vh;
     background-size: cover;
     height: $landing-divider-height;
     background-position: center;
-    &.with-background-image {
-      background-image: url(https://static.retrobox.tech/website/landing-background-2.webp);
-    }
   }
   .landing-divider-background-filter {
     height: $landing-divider-height;

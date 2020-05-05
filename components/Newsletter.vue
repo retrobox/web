@@ -1,7 +1,9 @@
 <template>
   <div>
-    <div class="newsletter-back">
-    </div>
+    <div
+      :style="$imageAdapter('https://static.retrobox.tech/website/back', { css: true })"
+      class="newsletter-back"
+    ></div>
     <div class="newsletter-container">
       <div class="newsletter-content container mx-auto">
         <div class="newsletter-center">

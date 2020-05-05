@@ -9,7 +9,7 @@
             :value="$t('partnership.lyceealain.title')"
             class="partnership-lyceealain-image partnership-image">
             <img
-              v-lazy="'https://static.retrobox.tech/website/lyceealain.webp'"
+              v-lazy="$imageAdapter('https://static.retrobox.tech/website/lyceealain')"
               alt="Logo Lycée Alain">
           </Tooltip>
         </a>
@@ -20,7 +20,7 @@
             :value="$t('partnership.cci.title')"
             class="partnership-cci-image partnership-image">
             <img
-              v-lazy="'https://static.retrobox.tech/website/ccinormandie.webp'"
+              v-lazy="$imageAdapter('https://static.retrobox.tech/website/ccinormandie')"
               alt="Logo CCI Normandie">
           </Tooltip>
         </a>
@@ -31,7 +31,7 @@
             :value="$t('partnership.pcbway.title')"
             class="partnership-pcbway-image partnership-image">
             <img
-              v-lazy="'https://static.retrobox.tech/website/pcbway.webp'"
+              v-lazy="$imageAdapter('https://static.retrobox.tech/website/pcbway')"
               alt="Logo Pcbway">
           </Tooltip>
         </a>
@@ -42,7 +42,7 @@
             :value="$t('partnership.creative-commons.title')"
             class="partnership-creative-commons-image partnership-image">
             <img
-              v-lazy="'https://static.retrobox.tech/website/creative-commons.webp'"
+              v-lazy="$imageAdapter('https://static.retrobox.tech/website/creative-commons')"
               alt="Logo Creative Commons">
           </Tooltip>
         </a>
@@ -63,7 +63,7 @@
           <div class="footer-logo">
             <nuxt-link :to="localePath('index')">
               <img
-                v-lazy="'https://static.retrobox.tech/website/footer.webp'"
+                v-lazy="$imageAdapter('https://static.retrobox.tech/website/footer')"
                 alt="RetroBox logo" />
             </nuxt-link>
           </div>
