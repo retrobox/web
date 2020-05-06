@@ -115,7 +115,7 @@
       },
       "custom": {
         "title": "Une console personnalisable",
-        "description": "Avez-vous déjà voulu avoir une console unique ? A l'achat choisissez la console qui vous correspond sans suppléments ! "
+        "description": "Avez-vous déjà voulu avoir une console unique ? A l'achat choisissez la console qui vous correspond sans supplément ! "
       },
       "connected": {
         "title": "Une console connectée",
@@ -131,11 +131,11 @@
       },
       "opensource": {
         "title": "Une console open-source",
-        "description": "La console est open-source c'est-à-dire que vous pouvez jeter un coup d'oeil au site web, aux schémas ect. pour aucune mauvaises surprises."
+        "description": "La console est open-source c'est-à-dire que vous pouvez jeter un coup d'oeil au site web, aux schémas etc. pour aucune mauvaises surprises."
       }
     },
     "start_now": {
-      "title": "Commence dès maintenant",
+      "title": "Commence dès maintenant !",
       "kited": {
         "title": "Version kit",
         "description": "Vous aimez l'électronique et voulez apprendre à souder ? Rien de plus facile, commandez la version kit avec tous ses manuels explicatifs !"
