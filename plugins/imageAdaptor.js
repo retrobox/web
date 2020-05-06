@@ -4,10 +4,11 @@ export default function (context) {
   let userAgent = process.server ? context.req.headers['user-agent'] : navigator.userAgent
   Vue.use({
     install: (context) => {
+      let isSafari = () => /^((?!chrome|android).)*safari/i.test(userAgent)
+      context.prototype.$isSafari = isSafari
       context.prototype.$imageAdapter = (url, options = {}) => {
-        let isSafari = /^((?!chrome|android).)*safari/i.test(userAgent)
         options = { fallback: '.png', ...options }
-        let result = url + (isSafari ? options.fallback : '.webp')
+        let result = url + (isSafari() ? options.fallback : '.webp')
         if (options.css) {
           return `background-image: url('${result}');`
         }

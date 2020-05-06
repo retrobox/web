@@ -299,9 +299,15 @@
       showSecondDivider: false
     }),
     mounted() {
-      window.removeEventListener('scroll', this.checkInView)
-      window.addEventListener('scroll', this.checkInView)
-      this.checkInView()
+      if (!this.$isServer) {
+        if (!this.$isSafari) {
+          window.removeEventListener('scroll', this.checkInView)
+          window.addEventListener('scroll', this.checkInView)
+          this.checkInView()
+        } else {
+          this.showSecondDivider = true
+        }
+      }
     },
     destroyed() {
       window.removeEventListener('scroll', this.checkInView)
