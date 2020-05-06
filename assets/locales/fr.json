@@ -168,6 +168,7 @@
     "title": "Chargement de votre compte",
     "error": {
       "title": "Erreur de connexion",
+      "description-input": "URL invalide",
       "description-api": "Nous n'avons pas réussi à vous identifier"
     }
   },
