@@ -135,7 +135,7 @@ export default {
         subTotal = subTotal + item.price
         totalWeight = totalWeight + item.weight
       })
-      this.$store.commit('SET_CHECKOUT_ITEMS', [subTotal.toFixed(2), totalWeight.toFixed(2)])
+      this.$store.commit('SET_CHECKOUT_ITEMS', [subTotal.toFixed(2), totalWeight])
     }
   }
 };

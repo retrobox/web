@@ -213,7 +213,8 @@
       "method": "Mode de livraison",
       "methods": {
         "colissimo": "Livraison en 2 jours ouvrés",
-        "chronopost": "Livraison le lendemain avant 13h (si commande effectuée avant midi)"
+        "chronopost": "Livraison le lendemain avant 13h (si commande effectuée avant midi)",
+        "disabled": "Mode de livraison non disponible"
       },
       "form": {
         "first_name": "Prénom",

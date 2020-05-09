@@ -22,7 +22,8 @@
             </div>
             <ShippingDetailsForm
               ref="shippingDetailsForm"
-              @country="onCountryChanged"
+              @detailsChanged="onDetailsChanged"
+              @fetched="onDetailsChanged"
               @saved="onShippingDetailsSaved()"
               @invalid="onShippingDetailsInvalid()" />
           </div>
@@ -66,11 +67,12 @@
                 </div>
               </div>
               <div 
-                :class="{selected: shippingMethod === 'chronopost'}"
-                class="shipping-method chronopost" 
-                @click="shippingMethod = 'chronopost'">
+                :class="{selected: shippingMethod === 'chronopost' && chronopostPrice !== 0, disabled: chronopostPrice === 0}"
+                class="shipping-method chronopost"
+                @click="chronopostPrice !== 0 ? shippingMethod = 'chronopost' : null">
                 <div class="shipping-method-radio">
-                  <input 
+                  <input
+                    :disabled="chronopostPrice === 0"
                     v-model="shippingMethod"
                     value="chronopost"
                     name="shipping" 
@@ -83,7 +85,14 @@
                     </div>
                   </div>
                   <div class="shipping-method-right">
-                    <div class="shipping-method-description">
+                    <div
+                      v-if="chronopostPrice === 0"
+                      class="shipping-method-description">
+                      {{ $t('shop.shipping_details.methods.disabled') }}
+                    </div>
+                    <div
+                      v-else
+                      class="shipping-method-description">
                       {{ $t('shop.shipping_details.methods.chronopost') }}
                     </div>
                     <div
@@ -214,23 +223,28 @@ export default {
     onShippingDetailsInvalid() {
       this.$refs.checkoutPage.disableNextLoading()
     },
-    onCountryChanged(country) {
-      if (country == "") {
+    onDetailsChanged(details) {
+      if (details.country == "") {
         this.countrySelected = false
         return
       }
       this.shippingMethodLoading = true
       this.countrySelected = true
-      this.$store.commit('SET_CHECKOUT_COUNTRY', country)
+      this.$store.commit('SET_CHECKOUT_SHIPPING_DETAILS', details)
       this.fetchShippingPrices()
     },
     fetchShippingPrices() {
       let params = new URLSearchParams()
       params.append('country', this.$store.state.checkout.country)
       params.append('weight', this.$store.state.checkout.totalWeight)
+      params.append('postal_code', this.$store.state.checkout.postalCode)
       this.$apitator.get('/shop/shipping-prices?' + params.toString()).then(res => {
-        this.colissimoPrice = res.data.data.colissimo
-        this.chronopostPrice = res.data.data.chronopost
+        // prices fetched are in cents, so we need to convert those in common price unit
+        this.colissimoPrice = parseFloat((res.data.data.colissimo / 100).toFixed(2))
+        this.chronopostPrice = parseFloat((res.data.data.chronopost / 100).toFixed(2))
+        if (this.chronopostPrice === 0) {
+          this.shippingMethod = 'colissimo'
+        }
         this.updateShippingPrice()
         this.shippingMethodLoading = false
       })

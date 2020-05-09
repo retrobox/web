@@ -102,6 +102,7 @@
               :disabled="isLoading"
               class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
               type="text"
+              @input="postalCodeChanged"
             />
           </div>
           <div class="w-full md:w-3/4 md:pl-2">
@@ -177,6 +178,7 @@
 
 <script>
 import Icon from '~/components/Icon'
+import lodash from 'lodash'
 
 export default {
   name: "ShippingDetailsForm",
@@ -195,13 +197,12 @@ export default {
         address_country: ''
       },
       countries: [],
-      isLoading: true
+      isLoading: true,
+      watchInputs: false
     };
   },
   watch: {
-    'user.address_country': function (value) {
-      this.$emit('country', value)
-    }
+    'user.address_country' () { this.onDetailsChanged() }
   },
   mounted() {
     if (!this.$isServer) {
@@ -250,8 +251,14 @@ export default {
           }
           this.countries = response.data.data.getCountries
           this.isLoading = false
-          this.$emit('fetched')
-        });
+          this.$emit('fetched', {
+            country: this.user.address_country,
+            postalCode: this.user.address_postal_code
+          })
+          setTimeout(() => {
+            this.watchInputs = true
+          }, 100)
+        })
     },
     save: function() {
       this.saving = true
@@ -290,7 +297,7 @@ export default {
             { withAuth: true }
           )
           .then(() => {
-              this.$emit('saved')
+            this.$emit('saved')
           });
       } else {
         this.$emit('invalid')
@@ -303,6 +310,22 @@ export default {
     },
     getDetails: function() {
       return this.user
+    },
+    postalCodeChanged: function() {
+      if (this.watchInputs) {
+        this.debouncePostalCode()
+      }
+    },
+    debouncePostalCode: lodash.debounce(function () {
+      this.onDetailsChanged()
+    }, 1500),
+    onDetailsChanged: function() {
+      if (this.watchInputs) {
+        this.$emit('detailsChanged', {
+          country: this.user.address_country,
+          postalCode: this.user.address_postal_code
+        })
+      }
     }
   }
 };

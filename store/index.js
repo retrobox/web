@@ -143,8 +143,9 @@ export const mutations = {
     state.checkout.total = payload[0]
     state.checkout.totalWeight = payload[1]
   },
-  SET_CHECKOUT_COUNTRY: (state, payload) => {
-    state.checkout.country = payload
+  SET_CHECKOUT_SHIPPING_DETAILS: (state, payload) => {
+    state.checkout.country = payload.country
+    state.checkout.postalCode = payload.postalCode
   },
   SET_CHECKOUT_SHIPPING_METHOD: (state, payload) => {
     state.checkout.shippingMethod = payload[0]

@@ -214,7 +214,8 @@
       "method": "Shipping method",
       "methods": {
         "colissimo": "2 days shipping",
-        "chronopost": "Next day delivery before 1 p.m."
+        "chronopost": "Next day delivery before 1 p.m.",
+        "disabled": "Shipping method not available"
       },
       "form": {
         "first_name": "First name",

@@ -267,7 +267,17 @@
             color: this.selectedColor
           }
         }
-        this.$store.commit('CART_TOGGLE', item)
+        this.$store.commit('CART_TOGGLE', {
+          id: item.id,
+          description_short: item.description_short,
+          custom_options: item.custom_options,
+          price: item.price,
+          version: item.version,
+          title: item.title,
+          image: item.image,
+          identifier: item.identifier,
+          weight: item.weight
+        })
         if (this.$store.state.cart.filter(_item => _item.id === item.id).length === 0) {
           this.$store.commit('ADD_ALERT', {
             type: 'success',
