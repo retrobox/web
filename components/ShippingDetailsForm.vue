@@ -1,17 +1,16 @@
 <template>
-  <div class="mb-4">
+  <div class="shipping-form">
     <form 
       ref="form"
       :class="isLoading ? 'opacity-50' : ''"
-      :disabled="isLoading"
-      class="bg-white shadow-md rounded px-8 pt-8 pb-8">
+      :disabled="isLoading">
       <div>
         <!-- First name and last name -->
         <div class="flex flex-wrap mb-4">
           <div class="w-full mb-4 md:w-1/2 md:pr-2 md:mb-0">
             <label
               for="first_name"
-              class="block text-grey-darker text-sm font-bold mb-2"
+              class="label"
             >
               {{ $t("shop.shipping_details.form.first_name") }}
             </label>
@@ -22,14 +21,15 @@
                 $t('shop.shipping_details.form.first_name_placeholder')
               "
               :disabled="isLoading"
+              required
               autofocus
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
+              class="text-field"
               type="text"
             />
           </div>
           <div class="w-full md:w-1/2 md:pl-2">
             <label
-              class="block text-grey-darker text-sm font-bold mb-2"
+              class="label"
               for="last_name"
             >
               {{ $t("shop.shipping_details.form.last_name") }}
@@ -41,7 +41,8 @@
                 $t('shop.shipping_details.form.last_name_placeholder')
               "
               :disabled="isLoading"
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
+              required
+              class="text-field"
               type="text"
             />
           </div>
@@ -49,7 +50,7 @@
         <!-- address_first_line -->
         <div class="mb-4">
           <label
-            class="block text-grey-darker text-sm font-bold mb-2"
+            class="label"
             for="address_first_line"
           >
             {{ $t("shop.shipping_details.form.address_first_line") }}
@@ -61,14 +62,15 @@
               $t('shop.shipping_details.form.address_first_line_placeholder')
             "
             :disabled="isLoading"
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
+            required
+            class="text-field"
             type="text"
           />
         </div>
         <!-- address_second_line -->
         <div class="mb-4">
           <label
-            class="block text-grey-darker text-sm font-bold mb-2"
+            class="label"
             for="address_second_line"
           >
             {{ $t("shop.shipping_details.form.address_second_line") }}
@@ -80,7 +82,7 @@
               $t('shop.shipping_details.form.address_second_line_placeholder')
             "
             :disabled="isLoading"
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight  focus:outline-none focus:shadow-outline"
+            class="text-field"
             type="text"
           />
         </div>
@@ -88,7 +90,7 @@
         <div class="flex flex-wrap mb-4">
           <div class="w-full mb-4 md:w-1/4 md:pr-2 md:mb-0">
             <label
-              class="block text-grey-darker text-sm font-bold mb-2"
+              class="label"
               for="address_postal_code"
             >
               {{ $t("shop.shipping_details.form.address_postal_code") }}
@@ -100,14 +102,15 @@
                 $t('shop.shipping_details.form.address_postal_code_placeholder')
               "
               :disabled="isLoading"
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
-              type="text"
+              required
+              class=" text-field"
+              type="number"
               @input="postalCodeChanged"
             />
           </div>
           <div class="w-full md:w-3/4 md:pl-2">
             <label
-              class="block text-grey-darker text-sm font-bold mb-2"
+              class="label"
               for="address_city"
             >
               {{ $t("shop.shipping_details.form.address_city") }}
@@ -119,7 +122,8 @@
                 $t('shop.shipping_details.form.address_city_placeholder')
               "
               :disabled="isLoading"
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
+              required
+              class="text-field"
               type="text"
             />
           </div>
@@ -127,7 +131,7 @@
         <!-- country -->
         <div>
           <label
-            class="block text-grey-darker text-sm font-bold mb-2"
+            class="label"
             for="address_country"
           >
             {{ $t("shop.shipping_details.form.address_country") }}
@@ -138,7 +142,7 @@
               id="address_country"
               :disabled="isLoading"
               v-model="user.address_country"
-              class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+              class="selection">
               <option
                 :disabled="isLoading"
                 value="" >
@@ -157,7 +161,9 @@
               <svg
                 class="fill-current h-4 w-4"
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                viewBox="0 0 20 20">
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+              </svg>
             </div>
           </div>
         </div>
