@@ -133,7 +133,7 @@
           <div class="footer-inline-links">
             <ul>
               <li class="copyright">
-                <a href="https://thingmill.fr">© Copyright 2020 Thingmill</a>
+                <a href="https://thingmill.fr">© Copyright 2021 Thingmill</a>
               </li>
               <nuxt-link :to="localePath('legals')">
                 <li>
