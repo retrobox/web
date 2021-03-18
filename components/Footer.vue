@@ -26,7 +26,7 @@
         </a>
         <a
           class="partnership-pcbway partnership-item"
-          href="https://www.pcbway.com">
+          href="https://www.pcbway.com/setinvite.aspx?inviteid=317110">
           <Tooltip
             :value="$t('partnership.pcbway.title')"
             class="partnership-pcbway-image partnership-image">
