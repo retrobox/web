@@ -270,6 +270,7 @@
           custom_options: item.custom_options,
           price: item.price,
           version: item.version,
+          slug: item.slug,
           title: item.title,
           image: item.image,
           identifier: item.identifier,
