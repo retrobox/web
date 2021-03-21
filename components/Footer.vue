@@ -26,7 +26,7 @@
         </a>
         <a
           class="partnership-pcbway partnership-item"
-          href="https://www.pcbway.com">
+          href="https://www.pcbway.com/setinvite.aspx?inviteid=317110">
           <Tooltip
             :value="$t('partnership.pcbway.title')"
             class="partnership-pcbway-image partnership-image">
@@ -133,7 +133,7 @@
           <div class="footer-inline-links">
             <ul>
               <li class="copyright">
-                <a href="https://thingmill.fr">© Copyright 2020 Thingmill</a>
+                <a href="https://thingmill.fr">© Copyright 2021 Thingmill</a>
               </li>
               <nuxt-link :to="localePath('legals')">
                 <li>
