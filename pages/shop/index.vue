@@ -1,10 +1,6 @@
 <template>
   <div>
-    <div class="cover-title">
-      <div class="cover-title-content container mx-auto">
-        <h1>{{ $t('shop.title') }}</h1>
-      </div>
-    </div>
+    <ShopCoverTitle :title="$t('shop.title')" />
     <div class="container mx-auto">
       <ShopHeader/>
       <div class="shop-index-container">
@@ -58,9 +54,10 @@
   import Icon from "~/components/Icon"
   import ShopHeader from "~/components/ShopHeader"
   import ShopCard from "~/components/ShopCard"
+  import ShopCoverTitle from "~/components/ShopCoverTitle"
 
   export default {
-    components: {ShopHeader, Icon, ShopCard},
+    components: { ShopCoverTitle, ShopHeader, Icon, ShopCard },
     head() {
       return {
         title: this.$t('shop.title')

@@ -1,10 +1,6 @@
 <template>
   <div>
-    <div class="cover-title">
-      <div class="cover-title-content container mx-auto">
-        <h1>{{ $t("shop.cart.title") }}</h1>
-      </div>
-    </div>
+    <ShopCoverTitle :title="$t('shop.cart.title')" />
     <div class="container mx-auto">
       <CheckoutPage
         ref="checkoutPage"
@@ -179,14 +175,15 @@
 </template>
 
 <script>
-import Icon from "~/components/Icon";
-import CheckoutPage from "~/components/CheckoutPage";
-import ShopCard from "~/components/ShopCard";
-import ShippingDetailsForm from "~/components/ShippingDetailsForm";
+import Icon from "~/components/Icon"
+import CheckoutPage from "~/components/CheckoutPage"
+import ShopCard from "~/components/ShopCard"
+import ShippingDetailsForm from "~/components/ShippingDetailsForm"
+import ShopCoverTitle from "~/components/ShopCoverTitle"
 
 export default {
   middleware: "authenticated",
-  components: { CheckoutPage, ShopCard, Icon, ShippingDetailsForm },
+  components: { ShopCoverTitle, CheckoutPage, ShopCard, Icon, ShippingDetailsForm },
   head() {
     return {
       title: this.$t('shop.shipping_details.title')

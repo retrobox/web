@@ -195,9 +195,13 @@
     "title": "Shop",
     "shipping": "Shipment",
     "payment": "Payment",
+    "preview": {
+      "short": "Preview",
+      "long": "Preview mode"
+    },
     "checkout": {
       "title": "Pay",
-      "choise": "Choose a payment method...",
+      "choice": "Choose a payment method...",
       "pay": "Pay {{amount}}",
       "paypal": "Paypal",
       "card": "Credit card",

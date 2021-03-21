@@ -7,11 +7,7 @@
       />
     </div>
     <div v-else>
-      <div class="cover-title">
-        <div class="cover-title-content container mx-auto">
-          <h1>{{ item.title }}</h1>
-        </div>
-      </div>
+      <ShopCoverTitle :title="item.title" />
       <div class="container mx-auto">
         <ShopHeader/>
         <div class="shop-item-container">
@@ -197,10 +193,11 @@
   import Icon from "~/components/Icon"
   import Error from "~/components/Error"
   import Modal from "~/components/Modal"
+  import ShopCoverTitle from "~/components/ShopCoverTitle"
 
   export default {
     name: 'ShopIndex',
-    components: {Error, Icon, ShopHeader, Modal},
+    components: { ShopCoverTitle, Error, Icon, ShopHeader, Modal },
     head() {
       return {
         title: this.item == null ? 'Not found' : this.item.title,

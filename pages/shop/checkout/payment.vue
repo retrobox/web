@@ -1,10 +1,6 @@
 <template>
   <div>
-    <div class="cover-title">
-      <div class="cover-title-content container mx-auto">
-        <h1>{{ $t('shop.checkout.choise') }}</h1>
-      </div>
-    </div>
+    <ShopCoverTitle :title="$t('shop.checkout.choice')" />
     <div class="shop-checkout-container container mx-auto">
       <CheckoutPage
         ref="checkoutPage"
@@ -50,10 +46,12 @@
 <script>
   import Icon from "~/components/Icon"
   import CheckoutPage from "~/components/CheckoutPage"
+  import ShopCoverTitle from "~/components/ShopCoverTitle"
 
   export default {
     middleware: "authenticated",
     components: {
+      ShopCoverTitle,
       CheckoutPage,
       Icon
     },
@@ -67,7 +65,7 @@
     watch: {},
     head () {
       return {
-        title: this.$t('shop.checkout.choise')
+        title: this.$t('shop.checkout.choice')
       }
     },
     methods: {
