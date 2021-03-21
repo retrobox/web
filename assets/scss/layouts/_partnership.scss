@@ -1,4 +1,7 @@
 .partnership-container {
+  // fixed height to remove overflow
+  height: 128px;
+
   padding-top: 2em;
   padding-bottom: 2em;
   box-shadow: inset 0px 0px 9px 0px rgba(0, 0, 0, 0.25);

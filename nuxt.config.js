@@ -12,6 +12,7 @@ const routesHelper = require('./routesHelper')
 
 module.exports = {
   mode: 'universal',
+  telemetry: false,
 
   modules: [
     '@nuxtjs/axios',

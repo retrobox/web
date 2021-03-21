@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "serve": "npm run dev",
     "build": "cross-env ENV_FILE=local nuxt build",
     "start": "cross-env PORT=3456 NODE_ENV=production ENV_FILE=local node server/index.js",
     "generate": "nuxt generate",
@@ -64,7 +65,7 @@
     "eslint-loader": "^2.0.0",
     "eslint-plugin-vue": "^4.0.0",
     "marked": "^0.7.0",
-    "node-sass": "^4.10.0",
+    "node-sass": "^4.14.1",
     "nodemon": "^1.11.0",
     "sass-loader": "^7.1.0",
     "tailwindcss": "~0.6.6"
