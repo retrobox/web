@@ -233,7 +233,7 @@ export default {
     fetchShippingPrices() {
       let params = new URLSearchParams()
       params.append('country', this.$store.state.checkout.country)
-      params.append('weight', this.$store.state.checkout.totalWeight)
+      params.append('weight', parseInt(this.$store.state.checkout.totalWeight)) // we force to an int
       params.append('postal_code', this.$store.state.checkout.postalCode)
       this.$apitator.get('/shop/shipping-prices?' + params.toString()).then(res => {
         // prices fetched are in cents, so we need to convert those in common price unit
